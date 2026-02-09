@@ -78,6 +78,25 @@
       margin-top: 6px;
     }
 
+    .header-actions .action-button {
+      width: auto;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      box-shadow: none;
+    }
+
+    .header-actions .action-button:hover {
+      color: var(--ink);
+      border-color: rgba(56, 189, 248, 0.6);
+      background: rgba(56, 189, 248, 0.12);
+    }
+
     .chips {
       display: flex;
       flex-wrap: wrap;
@@ -690,6 +709,7 @@
           </div>
         </div>
         <div class="header-actions">
+          <button id="resetAll" class="action-button" type="button">Reset</button>
           <div class="toggle-wrap">
             <span>Debug</span>
             <label class="switch">
@@ -781,8 +801,15 @@
   </div>
 
   <script>
-    const DEFAULT_LEAGUE = localStorage.getItem('poeBossLeague') || 'phrecia2.0';
-    const DEFAULT_PRICE_MODE = localStorage.getItem('poeBossPriceMode') || 'min';
+    const BASE_LEAGUE = 'phrecia2.0';
+    const BASE_PRICE_MODE = 'min';
+    const BASE_DISPLAY_CURRENCY = 'chaos';
+    const BASE_MIN_VALUE_ENABLED = false;
+    const BASE_MIN_VALUE_CHAOS = 10;
+    const BASE_DEBUG = false;
+
+    const DEFAULT_LEAGUE = localStorage.getItem('poeBossLeague') || BASE_LEAGUE;
+    const DEFAULT_PRICE_MODE = localStorage.getItem('poeBossPriceMode') || BASE_PRICE_MODE;
     const manualPriceKey = 'poeBossManualPrices';
     const manualCostKey = 'poeBossManualCosts';
     const ignoreDropsKey = 'poeBossIgnoreDrops';
@@ -1493,6 +1520,7 @@
     const priceModeInput = document.getElementById('priceMode');
     const currencyInput = document.getElementById('displayCurrency');
     const refreshButton = document.getElementById('refresh');
+    const resetButton = document.getElementById('resetAll');
     const statusEl = document.getElementById('status');
     const debugToggle = document.getElementById('debugToggle');
     const debugEl = document.getElementById('debug');
@@ -1604,6 +1632,52 @@
         state.leagueText = leagueTextFor(state.leagueId);
         localStorage.setItem('poeBossLeague', state.leagueId);
         fetchPrices(true);
+      });
+    }
+
+    function clearObject(obj) {
+      Object.keys(obj).forEach((key) => delete obj[key]);
+    }
+
+    if (resetButton) {
+      resetButton.addEventListener('click', () => {
+        const previousLeague = state.leagueId;
+
+        clearObject(MANUAL_PRICES);
+        clearObject(MANUAL_COSTS);
+        clearObject(IGNORED_DROPS);
+
+        localStorage.removeItem(manualPriceKey);
+        localStorage.removeItem(manualCostKey);
+        localStorage.removeItem(ignoreDropsKey);
+        localStorage.removeItem('poeBossLeague');
+        localStorage.removeItem('poeBossPriceMode');
+        localStorage.removeItem(displayCurrencyKey);
+        localStorage.removeItem('poeBossMinValueEnabled');
+        localStorage.removeItem('poeBossMinValueChaos');
+        localStorage.removeItem('poeBossDebug');
+
+        state.leagueId = BASE_LEAGUE;
+        state.leagueText = leagueTextFor(state.leagueId);
+        state.priceMode = BASE_PRICE_MODE;
+        state.displayCurrency = BASE_DISPLAY_CURRENCY;
+        state.minValueFilter = BASE_MIN_VALUE_ENABLED;
+        state.minValueThresholdChaos = BASE_MIN_VALUE_CHAOS;
+        state.debug = BASE_DEBUG;
+
+        leagueSelect.value = state.leagueId;
+        priceModeInput.value = state.priceMode;
+        currencyInput.value = state.displayCurrency;
+        minValueToggle.checked = state.minValueFilter;
+        debugToggle.checked = state.debug;
+        updateMinValueInput();
+
+        if (previousLeague !== state.leagueId) {
+          fetchPrices();
+        } else {
+          safeRender();
+          setStatus('Custom values and selections reset.');
+        }
       });
     }
 
