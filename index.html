@@ -140,6 +140,9 @@
 
     .control-grid > div {
       flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
 
     .control-compact {
@@ -161,6 +164,29 @@
 
     .control-compact .button-wide {
       min-width: 0;
+    }
+
+    .control-grid label {
+      margin-bottom: 0;
+    }
+
+    .control-grid .label-row {
+      margin-bottom: 0;
+    }
+
+    .control-grid select,
+    .control-grid button,
+    .control-grid input[type="number"] {
+      height: 40px;
+    }
+
+    .control-grid select,
+    .control-grid input[type="number"] {
+      padding: 0 12px;
+    }
+
+    .control-grid button {
+      padding: 0 14px;
     }
 
     label {
@@ -326,7 +352,8 @@
     }
 
     .min-filter input[type="number"] {
-      width: 120px;
+      flex: 1 1 auto;
+      width: auto;
     }
 
     .boss-list {
