@@ -43,9 +43,7 @@ function proxyRequest(req, res, host) {
     headers.host = targetUrl.host;
     delete headers.origin;
     delete headers.referer;
-    if (!headers['user-agent']) {
-      headers['user-agent'] = 'Mozilla/5.0 (Local Proxy)';
-    }
+    headers['user-agent'] = 'Path of Profits (https://pathofprofits.com)';
 
     const options = {
       method: req.method,
@@ -117,7 +115,7 @@ const server = http.createServer((req, res) => {
   }
 
   let filePath = req.url.split('?')[0];
-  if (filePath === '/') filePath = '/boss-profit.html';
+  if (filePath === '/') filePath = '/index.html';
   filePath = path.join(ROOT, decodeURIComponent(filePath));
 
   if (!filePath.startsWith(ROOT)) {
