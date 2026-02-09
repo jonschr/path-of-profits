@@ -35,7 +35,11 @@
     const IGNORED_DROPS = JSON.parse(localStorage.getItem(ignoreDropsKey) || '{}');
 
     const IS_FILE_ORIGIN = window.location.protocol === 'file:';
-    const WATCH_API_BASE = IS_FILE_ORIGIN ? 'https://api.poe.watch' : '/api/poewatch';
+    const STATIC_DATA_BASE = 'data';
+    const STATIC_LEAGUES_URL = `${STATIC_DATA_BASE}/leagues.json`;
+    const STATIC_PRICES_URL = `${STATIC_DATA_BASE}/prices.json`;
+    const USE_STATIC_DATA = true;
+    const WATCH_API_BASE = USE_STATIC_DATA ? '' : (IS_FILE_ORIGIN ? 'https://api.poe.watch' : '/api/poewatch');
     const WATCH_DETAILS_BASE = 'https://poe.watch/detailed';
     const WATCH_GAME = 'poe1';
 
@@ -142,6 +146,21 @@
           );
         }) || null
       );
+    }
+
+    function findStaticLeagueKey(leaguesById, candidates) {
+      if (!leaguesById || typeof leaguesById !== 'object') return null;
+      const keys = Object.keys(leaguesById);
+      if (!keys.length) return null;
+      const normalized = new Map(
+        keys.map((key) => [normalizeLeagueCompare(normalizeLeagueKey(key)), key])
+      );
+      for (const candidate of candidates) {
+        const key = normalizeLeagueCompare(normalizeLeagueKey(candidate));
+        if (!key) continue;
+        if (normalized.has(key)) return normalized.get(key);
+      }
+      return keys[0];
     }
 
     function applyLeagueSelection(preferred, { persist = false, allowFallback = true } = {}) {
@@ -262,7 +281,29 @@
       return [`${root}/leagues`];
     }
 
-    async function loadLeagues() {
+    async function loadLeagues(forceRefresh = false) {
+      if (USE_STATIC_DATA) {
+        try {
+          const url = withCacheBust(STATIC_LEAGUES_URL, forceRefresh);
+          const resp = await fetch(url, { cache: forceRefresh ? 'no-store' : 'default' });
+          if (!resp.ok) throw new Error(String(resp.status));
+          const data = await resp.json();
+          const raw = data?.leagues ?? data?.items ?? data?.data ?? data;
+          const groups = normalizeLeagueGroups(raw);
+          if (!groups) throw new Error('empty');
+          LEAGUES = groups;
+          state.leagueSource = 'static';
+          state.leagueUpdatedAt = parseTimestamp(data?.generatedAt || data?.updatedAt || data?.fetchedAt);
+          buildLeagueSelect();
+          applyLeagueSelection(state.leagueId || DEFAULT_LEAGUE, { persist: true, allowFallback: false });
+          return true;
+        } catch (err) {
+          state.leagueSource = 'static';
+          state.leagueUpdatedAt = null;
+          return false;
+        }
+      }
+
       if (IS_FILE_ORIGIN) return false;
       const cached = loadLeagueCache();
       if (leagueCacheIsFresh(cached)) {
@@ -477,6 +518,12 @@
         .replace(/^the\\s+/, '')
         .replace(/[’']/g, '')
         .replace(/[^a-z0-9]/g, '');
+    }
+
+    function withCacheBust(url, enabled) {
+      if (!enabled) return url;
+      const separator = url.includes('?') ? '&' : '?';
+      return `${url}${separator}t=${Date.now()}`;
     }
 
     function parseTimestamp(value) {
@@ -1310,7 +1357,7 @@
     }
 
     async function fetchPrices(forceRefresh = false) {
-      setStatus('Fetching poe.watch prices…');
+      setStatus(USE_STATIC_DATA ? 'Loading cached prices…' : 'Fetching poe.watch prices…');
       state.priceData = null;
       state.fallbackHits = new Map();
       state.fetchResults = [];
@@ -1319,90 +1366,121 @@
 
       const leagueCandidates = Array.from(new Set([state.leagueWatchId, state.leagueText, state.leagueId].filter(Boolean)));
       let pricingLeague = leagueCandidates[0] || state.leagueId;
-      if (!forceRefresh) {
-        const cache = loadPriceCache();
-        for (const leagueValue of leagueCandidates) {
-          const entry = cache[leagueValue];
-          if (cacheEntryIsFresh(entry)) {
-            state.priceData = indexWatchData(entry.items);
-            state.pricingLeague = leagueValue;
-            state.watchBase = 'cache';
-            state.priceUpdatedAt = parseTimestamp(entry.updatedAt);
-            state.fetchResults.push({ status: 'cache', source: 'cache', items: entry.items.length, league: leagueValue });
-            const divine = state.priceData.byLower.get('divine orb')?.[0];
-            state.divineChaos = divine ? safeNumber(divine.mean ?? divine.min ?? divine.max) : null;
-            updateMinValueInput();
-            const updatedLabel = state.priceUpdatedAt ? ` Updated ${formatUpdatedAt(state.priceUpdatedAt)}.` : '';
-            setStatus(`Prices loaded for ${leagueValue}.${updatedLabel}`);
-            safeRender();
-            return;
+
+      if (USE_STATIC_DATA) {
+        try {
+          const url = withCacheBust(STATIC_PRICES_URL, forceRefresh);
+          const resp = await fetch(url, { cache: forceRefresh ? 'no-store' : 'default' });
+          if (!resp.ok) throw new Error(`${resp.status}`);
+          const data = await resp.json();
+          const leaguesById = data?.leagues || {};
+          const leagueKey = findStaticLeagueKey(leaguesById, leagueCandidates);
+          if (!leagueKey) throw new Error('missing league data');
+          const entry = leaguesById[leagueKey] || {};
+          const items = Array.isArray(entry.items) ? entry.items : extractWatchItems(entry);
+          if (!items.length) throw new Error('empty');
+          state.priceData = indexWatchData(items);
+          state.pricingLeague = leagueKey;
+          state.watchBase = 'static';
+          state.priceUpdatedAt = parseTimestamp(entry.updatedAt) || parseTimestamp(data?.generatedAt);
+          state.fetchResults.push({ status: 'ok', source: 'static', items: items.length, league: leagueKey });
+          pricingLeague = leagueKey;
+        } catch (err) {
+          state.fetchResults.push({
+            status: 'error',
+            source: 'static',
+            error: err?.message || 'unknown'
+          });
+        }
+      } else {
+        if (!forceRefresh) {
+          const cache = loadPriceCache();
+          for (const leagueValue of leagueCandidates) {
+            const entry = cache[leagueValue];
+            if (cacheEntryIsFresh(entry)) {
+              state.priceData = indexWatchData(entry.items);
+              state.pricingLeague = leagueValue;
+              state.watchBase = 'cache';
+              state.priceUpdatedAt = parseTimestamp(entry.updatedAt);
+              state.fetchResults.push({ status: 'cache', source: 'cache', items: entry.items.length, league: leagueValue });
+              const divine = state.priceData.byLower.get('divine orb')?.[0];
+              state.divineChaos = divine ? safeNumber(divine.mean ?? divine.min ?? divine.max) : null;
+              updateMinValueInput();
+              const updatedLabel = state.priceUpdatedAt ? ` Updated ${formatUpdatedAt(state.priceUpdatedAt)}.` : '';
+              setStatus(`Prices loaded for ${leagueValue}.${updatedLabel}`);
+              safeRender();
+              return;
+            }
           }
         }
-      }
-      const base = WATCH_API_BASE;
-      const categoriesEndpoint = buildWatchCategoriesEndpoint(base);
-      const getEndpoint = buildWatchGetEndpoint(base);
-      for (const leagueValue of leagueCandidates) {
-        if (categoriesEndpoint && getEndpoint) {
-          try {
-            const resp = await fetch(categoriesEndpoint);
-            if (!resp.ok) throw new Error(`${resp.status}`);
-            const data = await resp.json();
-            const categories = extractWatchCategories(data)
-              .map(normalizeCategorySlug)
-              .filter(Boolean);
-            if (!categories.length) throw new Error('empty');
-            state.fetchResults.push({ status: 'ok', source: 'categories', items: categories.length, url: categoriesEndpoint });
-            const items = [];
-            let updatedAt = null;
-            for (const category of categories) {
-              const url = getEndpoint
-                .replace('{LEAGUE}', encodeURIComponent(leagueValue))
-                .replace('{CATEGORY}', encodeURIComponent(category));
-              try {
-                const catResp = await fetch(url);
-                if (!catResp.ok) throw new Error(`${catResp.status}`);
-                const catData = await catResp.json();
-                const catItems = extractWatchItems(catData).map((item) => {
-                  if (item && item.category == null && category) {
-                    return { ...item, category };
-                  }
-                  return item;
-                });
-                if (catItems.length) items.push(...catItems);
-                updatedAt = pickLatestTimestamp(updatedAt, findUpdatedAt(catData, catResp));
-                state.fetchResults.push({
-                  status: 'ok',
-                  source: `get:${category}`,
-                  items: catItems.length,
-                  url
-                });
-              } catch (err) {
-                state.fetchResults.push({
-                  status: 'error',
-                  source: `get:${category}`,
-                  error: err?.message || 'unknown',
-                  url
-                });
+        const base = WATCH_API_BASE;
+        const categoriesEndpoint = buildWatchCategoriesEndpoint(base);
+        const getEndpoint = buildWatchGetEndpoint(base);
+        for (const leagueValue of leagueCandidates) {
+          if (categoriesEndpoint && getEndpoint) {
+            try {
+              const resp = await fetch(categoriesEndpoint);
+              if (!resp.ok) throw new Error(`${resp.status}`);
+              const data = await resp.json();
+              const categories = extractWatchCategories(data)
+                .map(normalizeCategorySlug)
+                .filter(Boolean);
+              if (!categories.length) throw new Error('empty');
+              state.fetchResults.push({ status: 'ok', source: 'categories', items: categories.length, url: categoriesEndpoint });
+              const items = [];
+              let updatedAt = null;
+              for (const category of categories) {
+                const url = getEndpoint
+                  .replace('{LEAGUE}', encodeURIComponent(leagueValue))
+                  .replace('{CATEGORY}', encodeURIComponent(category));
+                try {
+                  const catResp = await fetch(url);
+                  if (!catResp.ok) throw new Error(`${catResp.status}`);
+                  const catData = await catResp.json();
+                  const catItems = extractWatchItems(catData).map((item) => {
+                    if (item && item.category == null && category) {
+                      return { ...item, category };
+                    }
+                    return item;
+                  });
+                  if (catItems.length) items.push(...catItems);
+                  updatedAt = pickLatestTimestamp(updatedAt, findUpdatedAt(catData, catResp));
+                  state.fetchResults.push({
+                    status: 'ok',
+                    source: `get:${category}`,
+                    items: catItems.length,
+                    url
+                  });
+                } catch (err) {
+                  state.fetchResults.push({
+                    status: 'error',
+                    source: `get:${category}`,
+                    error: err?.message || 'unknown',
+                    url
+                  });
+                }
               }
+              if (!items.length) throw new Error('empty');
+              commitWatchData(items, leagueValue, base, updatedAt);
+              pricingLeague = leagueValue;
+              break;
+            } catch (err) {
+              state.fetchResults.push({
+                status: 'error',
+                source: 'categories',
+                error: err?.message || 'unknown',
+                url: categoriesEndpoint
+              });
             }
-            if (!items.length) throw new Error('empty');
-            commitWatchData(items, leagueValue, base, updatedAt);
-            pricingLeague = leagueValue;
-            break;
-          } catch (err) {
-            state.fetchResults.push({
-              status: 'error',
-              source: 'categories',
-              error: err?.message || 'unknown',
-              url: categoriesEndpoint
-            });
           }
         }
       }
 
       if (!state.priceData) {
-        setStatus('Failed to load poe.watch prices. Check the league name and try again.', true);
+        const message = USE_STATIC_DATA
+          ? 'Failed to load cached prices. Check data/prices.json.'
+          : 'Failed to load poe.watch prices. Check the league name and try again.';
+        setStatus(message, true);
         safeRender();
         return;
       }
@@ -1439,7 +1517,7 @@
 
     async function init() {
       if (IS_FILE_ORIGIN) {
-        setStatus('Open this page via the local server (node server.js) to avoid CORS errors.', true);
+        setStatus('Open this page via a local server so the data files can be fetched.', true);
       }
       try {
         localStorage.removeItem('poeBossLeagueCacheV1');
@@ -1454,7 +1532,7 @@
       if (leaguesLoaded) {
         selectMostRecentLeague();
       } else {
-        setStatus('Unable to load leagues from poe.watch.', true);
+        setStatus('Unable to load league data.', true);
       }
       safeRender();
       fetchPrices();
