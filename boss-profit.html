@@ -1,0 +1,2509 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PoE Bossing Profits per Run</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+    :root {
+      color-scheme: dark;
+      --bg: #0b0f14;
+      --panel: #111827;
+      --panel-2: #0f172a;
+      --ink: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --accent-3: #f59e0b;
+      --border: #1f2937;
+      --shadow: 0 14px 30px rgba(2, 6, 23, 0.4);
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --display: "Space Grotesk", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--display);
+      font-size: 17px;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 32px auto 90px;
+      padding: 0 20px;
+    }
+
+    header {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .header-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .header-left {
+      display: grid;
+      gap: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(28px, 4vw, 38px);
+      letter-spacing: -0.4px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 720px;
+      line-height: 1.6;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: transparent;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      color: var(--muted);
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .control-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      align-items: end;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .label-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .label-row label {
+      margin-bottom: 0;
+    }
+
+
+    input, select, button {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #0b1220;
+      color: var(--ink);
+      font-size: 15px;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: rgba(56, 189, 248, 0.6);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    }
+
+    button {
+      cursor: pointer;
+      background: var(--accent);
+      border: none;
+      font-weight: 600;
+      color: #082f49;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 12px 28px rgba(14, 165, 233, 0.25);
+    }
+
+    button:hover { transform: translateY(-1px); }
+
+    .status {
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .status.error { color: #fda4af; }
+
+    .debug {
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #0b1220;
+      font-family: var(--mono);
+      font-size: 13px;
+      white-space: pre-wrap;
+      color: var(--muted);
+      display: none;
+    }
+
+    .debug-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .debug-content {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--muted);
+      white-space: pre-wrap;
+    }
+
+    .icon-button {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: transparent;
+      border: 1px solid var(--border);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+    }
+
+    .icon-button:hover {
+      border-color: rgba(56, 189, 248, 0.6);
+      color: var(--ink);
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    .toggle-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.6);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+    }
+
+    .switch {
+      position: relative;
+      width: 42px;
+      height: 22px;
+      display: inline-block;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #111827;
+      border: 1px solid var(--border);
+      transition: 0.2s;
+      border-radius: 999px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 3px;
+      bottom: 2px;
+      background: #64748b;
+      transition: 0.2s;
+      border-radius: 999px;
+    }
+
+    .switch input:checked + .slider {
+      background: rgba(56, 189, 248, 0.25);
+      border-color: rgba(56, 189, 248, 0.6);
+    }
+
+    .switch input:checked + .slider:before {
+      transform: translateX(18px);
+      background: var(--accent);
+    }
+
+    .min-filter {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .min-filter input[type="number"] {
+      width: 120px;
+    }
+
+    .min-unit {
+      font-size: 13px;
+      color: var(--muted);
+      min-width: 24px;
+    }
+
+    .boss-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    details {
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      padding: 0;
+      overflow: visible;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 12px 14px;
+      display: block;
+      background: var(--summary-gradient, #0b1220);
+      border-left: 3px solid var(--summary-accent, #fbbf24);
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .boss-summary {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) minmax(260px, 1.2fr) minmax(180px, 0.6fr);
+      align-items: center;
+      gap: 14px;
+    }
+
+    .boss-top {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .boss-name {
+      font-family: var(--display);
+      font-size: 24px;
+    }
+
+
+    .boss-tags span {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(76, 163, 163, 0.12);
+      border: 1px solid rgba(76, 163, 163, 0.3);
+    }
+
+    .boss-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+      gap: 8px;
+      margin-top: 0;
+    }
+
+    .metric {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 12px;
+      color: var(--muted);
+      background: transparent;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 15px;
+      color: var(--ink);
+      margin-top: 2px;
+    }
+
+    .metric-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .info-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--muted);
+      cursor: help;
+      background: rgba(15, 23, 42, 0.6);
+    }
+
+    .has-tooltip {
+      position: relative;
+    }
+
+    .has-tooltip::before,
+    .has-tooltip::after {
+      position: absolute;
+      left: 50%;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 120ms ease, transform 120ms ease;
+      z-index: 20;
+    }
+
+    .has-tooltip::before {
+      content: '';
+      bottom: calc(100% + 4px);
+      transform: translate(-50%, 6px);
+      border-width: 6px 6px 0 6px;
+      border-style: solid;
+      border-color: rgba(15, 23, 42, 0.98) transparent transparent transparent;
+    }
+
+    .has-tooltip::after {
+      content: attr(data-tooltip);
+      bottom: calc(100% + 10px);
+      transform: translate(-50%, 6px);
+      background: rgba(15, 23, 42, 0.98);
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      border-radius: 10px;
+      padding: 8px 10px;
+      width: max-content;
+      max-width: 260px;
+      white-space: normal;
+      font-size: 12px;
+      line-height: 1.35;
+      text-align: left;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.35);
+    }
+
+    .has-tooltip:hover::before,
+    .has-tooltip:hover::after,
+    .has-tooltip:focus::before,
+    .has-tooltip:focus::after {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .profit-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .detail-body {
+      padding: 16px 18px 18px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 17px;
+      margin: 0 0 8px 0;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      table-layout: fixed;
+    }
+
+    .table th,
+    .table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .table th:not(:first-child),
+    .table td:not(:first-child) {
+      text-align: right;
+    }
+
+    .table th:last-child,
+    .table td:last-child {
+      text-align: left;
+    }
+
+    .drop-table th:nth-child(5),
+    .drop-table td:nth-child(5) {
+      text-align: center;
+    }
+
+    .entry-table th:nth-child(5),
+    .entry-table td:nth-child(5) {
+      text-align: center;
+    }
+
+    .table th {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+    }
+
+    .item-cell {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .item-cell span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    .drop-table col.col-item { width: 44%; }
+    .drop-table col.col-prob { width: 10%; }
+    .drop-table col.col-price { width: 12%; }
+    .drop-table col.col-ev { width: 12%; }
+    .drop-table col.col-include { width: 8%; }
+    .drop-table col.col-manual { width: 14%; }
+
+    .entry-table col.col-item { width: 44%; }
+    .entry-table col.col-qty { width: 10%; }
+    .entry-table col.col-price { width: 12%; }
+    .entry-table col.col-subtotal { width: 12%; }
+    .entry-table col.col-include { width: 8%; }
+    .entry-table col.col-override { width: 14%; }
+
+    .item-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: #0b1220;
+      object-fit: cover;
+    }
+
+    .row-missing {
+      opacity: 0.55;
+    }
+
+    .row-ignored {
+      opacity: 0.45;
+    }
+
+    .include-toggle {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .include-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(230, 196, 106, 0.15);
+      border: 1px solid rgba(230, 196, 106, 0.35);
+      font-size: 12px;
+      color: var(--accent-3);
+    }
+
+    .muted { color: var(--muted); }
+
+    .price-input {
+      width: 110px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #0f121a;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .group-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      background: rgba(12, 14, 20, 0.6);
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .link {
+      color: var(--accent-3);
+      text-decoration: none;
+    }
+
+    .link:hover { text-decoration: underline; }
+
+    .item-link {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .item-link:hover { text-decoration: underline; }
+
+    .warning {
+      color: #ffbfa8;
+    }
+
+    .flex-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .expected-return {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+      justify-self: end;
+    }
+
+    .expected-return span {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+    }
+
+    .expected-return strong {
+      font-size: clamp(18px, 2.6vw, 28px);
+      font-weight: 700;
+      color: var(--profit-accent, var(--ink));
+      transition: color 0.2s ease;
+    }
+
+    .missing-note {
+      font-size: 15px;
+      color: var(--muted);
+      opacity: 0.6;
+    }
+
+    @media (max-width: 720px) {
+      summary { padding: 14px; }
+      .detail-body { padding: 14px; }
+      .metric strong { font-size: 16px; }
+    }
+
+    @media (max-width: 980px) {
+      .boss-summary {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+      }
+      .boss-metrics {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+      .expected-return {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="header-row">
+        <div class="header-left">
+          <h1>PoE Bossing Profits per Run</h1>
+          <div class="subtitle">
+            Estimate expected profit per run and volatility for endgame bosses using community drop-rate tables and live poe.watch prices. This model only includes entry items and boss-specific drops; it does not include mapping/rolling costs or generic loot.
+          </div>
+          <div class="chips">
+            <span class="chip">Prices: poe.watch</span>
+            <span class="chip">Drops: PoE Wiki estimates</span>
+          </div>
+        </div>
+        <div class="header-actions">
+          <div class="toggle-wrap">
+            <span>Debug</span>
+            <label class="switch">
+              <input type="checkbox" id="debugToggle" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="control-grid">
+        <div>
+          <label for="leagueSelect">League</label>
+          <select id="leagueSelect"></select>
+        </div>
+        <div>
+          <label for="displayCurrency">Display Currency</label>
+          <select id="displayCurrency">
+            <option value="chaos" selected>Chaos</option>
+            <option value="divine">Divine</option>
+          </select>
+        </div>
+        <div>
+          <div class="label-row">
+            <label for="priceMode">Variant Pricing</label>
+            <span class="info-dot has-tooltip" data-tooltip="Chooses min, average, or max price for items with multiple variants. Example: Atziri's Splendour has 9 variants, so avg takes the mean across them." tabindex="0" aria-label="Chooses min, average, or max price for items with multiple variants. Example: Atziri's Splendour has 9 variants, so avg takes the mean across them.">i</span>
+          </div>
+          <select id="priceMode">
+            <option value="min" selected>Min (Conservative)</option>
+            <option value="avg">Average</option>
+            <option value="max">Max (Optimistic)</option>
+          </select>
+        </div>
+        <div>
+          <div class="label-row">
+            <label for="minValueInput">Ignore Drops Below</label>
+            <span class="info-dot has-tooltip" data-tooltip="Drops below this value are treated as zero." tabindex="0" aria-label="Drops below this value are treated as zero.">i</span>
+          </div>
+          <div class="min-filter">
+            <label class="switch">
+              <input type="checkbox" id="minValueToggle" />
+              <span class="slider"></span>
+            </label>
+            <input id="minValueInput" type="number" min="0" step="0.1" />
+            <span id="minValueUnit" class="min-unit">c</span>
+          </div>
+        </div>
+        <div>
+          <label aria-hidden="true">&nbsp;</label>
+          <button id="refresh">Refresh Prices</button>
+        </div>
+        <div>
+        </div>
+      </div>
+      <div id="status" class="status">Ready.</div>
+      <div id="debug" class="debug">
+        <div class="debug-header">
+          <span>Debug Output</span>
+          <button id="copyDebug" class="icon-button" title="Copy debug output" aria-label="Copy debug output">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="12" height="12" rx="2"></rect>
+              <rect x="3" y="3" width="12" height="12" rx="2"></rect>
+            </svg>
+          </button>
+        </div>
+        <pre id="debugContent" class="debug-content"></pre>
+      </div>
+    </section>
+
+    <section id="bossList" class="boss-list"></section>
+
+    <section class="footer panel">
+      <div class="flex-row">
+        <div>
+          <div class="section-title">Model Assumptions</div>
+          <div class="muted">
+            Drop rates are taken from PoE Wiki estimated tables (community data). Unique drops are modeled as exclusive pools when probabilities sum to 100, and additional drops are treated as independent rolls. Prices are from poe.watch and can be manually overridden.
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer panel">
+      <div class="muted">
+        Tweet questions and complaints to <a class="link" href="https://x.com/jonschr" target="_blank" rel="noreferrer">@jonschr</a>.
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const DEFAULT_LEAGUE = localStorage.getItem('poeBossLeague') || 'phrecia2.0';
+    const DEFAULT_PRICE_MODE = localStorage.getItem('poeBossPriceMode') || 'min';
+    const manualPriceKey = 'poeBossManualPrices';
+    const manualCostKey = 'poeBossManualCosts';
+    const ignoreDropsKey = 'poeBossIgnoreDrops';
+    const displayCurrencyKey = 'poeBossDisplayCurrency';
+    const priceCacheKey = 'poeBossPriceCacheV1';
+    const priceCacheTtlMs = 60 * 60 * 1000;
+
+    const LEAGUES = [
+      {
+        label: 'Current leagues',
+        options: [
+          { id: 'phrecia2.0', text: 'Phrecia 2.0' },
+          { id: 'keepers', text: 'Keepers' },
+          { id: 'keepershc', text: 'Hardcore Keepers' },
+          { id: 'standard', text: 'Standard' }
+        ]
+      },
+    ];
+
+    const MANUAL_PRICES = JSON.parse(localStorage.getItem(manualPriceKey) || '{}');
+    const MANUAL_COSTS = JSON.parse(localStorage.getItem(manualCostKey) || '{}');
+    const IGNORED_DROPS = JSON.parse(localStorage.getItem(ignoreDropsKey) || '{}');
+
+    const WATCH_API_BASE = 'https://api.poe.watch';
+    const WATCH_DETAILS_BASE = 'https://poe.watch/detailed';
+
+    const WATCH_CATEGORY_MAP = {
+      Currency: ['currency'],
+      Fragment: ['fragment'],
+      Invitations: ['maps'],
+      UniqueArmour: ['armour'],
+      UniqueWeapon: ['weapon'],
+      UniqueAccessory: ['accessory'],
+      UniqueJewel: ['jewels'],
+      UniqueFlask: ['flask'],
+      DivinationCard: ['card']
+    };
+
+    function buildWatchEndpoint(base) {
+      return `${base}/compact?league={LEAGUE}`;
+    }
+
+    const BOSS_DATA = [
+      {
+        id: 'exarch',
+        name: 'The Searing Exarch',
+        tier: 'Pinnacle',
+        entry: [
+          { name: 'Incandescent Invitation', qty: 1, types: ['Invitations'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool A)',
+            type: 'exclusive',
+            items: [
+              { name: 'Dawnbreaker', p: 0.63, types: ['UniqueArmour'] },
+              { name: 'Dawnstrider', p: 0.35, types: ['UniqueArmour'] },
+              { name: 'Dissolution of the Flesh', p: 0.02, types: ['UniqueJewel'] }
+            ]
+          },
+          {
+            label: 'Guaranteed Unique (Pool B)',
+            type: 'exclusive',
+            items: [
+              { name: 'The Annihilating Light', p: 0.455, types: ['UniqueWeapon'] },
+              { name: "Annihilation's Approach", p: 0.29, types: ['UniqueArmour'] },
+              { name: 'Crystallised Omniscience', p: 0.24, types: ['UniqueAccessory'] },
+              { name: 'The Celestial Brace', p: 0.015, types: ['UniqueArmour'] }
+            ]
+          },
+          {
+            label: 'Encounter-Specific',
+            type: 'independent',
+            items: [
+              { name: 'Archive Reliquary Key', p: 0.015, types: ['Fragment'] },
+              { name: 'Curio of Absorption', p: 0.05, types: ['Fragment'] }
+            ]
+          },
+          {
+            label: 'Additional Drops',
+            type: 'independent',
+            items: [
+              { name: 'Forbidden Flame', p: 0.05, types: ['UniqueJewel'], note: 'Hidden Ascendancy Notable variant' },
+              { name: 'Exceptional Eldritch Ember', p: 0.15, types: ['Currency'] }
+            ]
+          }
+        ],
+        sources: ['https://www.poewiki.net/wiki/The_Searing_Exarch']
+      },
+      {
+        id: 'uber-exarch',
+        name: 'The Searing Exarch (Uber)',
+        tier: 'Uber Pinnacle',
+        note: 'Drop rates reflect a 66-run community sample; only observed drops are modeled.',
+        entry: [
+          { name: 'Blazing Fragment', qty: 5, types: ['Fragment'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool B)',
+            type: 'exclusive',
+            items: [
+              { name: 'The Annihilating Light', p: 0.5, types: ['UniqueWeapon'], approx: true },
+              { name: "Annihilation's Approach", p: 0.1364, types: ['UniqueArmour'], approx: true },
+              { name: 'Crystallised Omniscience', p: 0.0606, types: ['UniqueAccessory'], approx: true },
+              { name: 'The Celestial Brace', p: 0.303, types: ['UniqueArmour'], approx: true }
+            ]
+          },
+          {
+            label: 'Encounter-Specific',
+            type: 'independent',
+            items: [
+              { name: 'Curio of Absorption', p: 0.0303, types: ['Fragment'], approx: true }
+            ]
+          },
+          {
+            label: 'Additional Drops',
+            type: 'independent',
+            items: [
+              { name: 'Forbidden Flame', p: 0.0455, types: ['UniqueJewel'], note: 'Hidden Ascendancy Notable variant', approx: true }
+            ]
+          }
+        ],
+        sources: ['https://www.reddit.com/r/pathofexile/comments/1eniskx/330_blazing_fragments_66_uber_searing_exarchs/']
+      },
+      {
+        id: 'eater',
+        name: 'The Eater of Worlds',
+        tier: 'Pinnacle',
+        entry: [
+          { name: 'Screaming Invitation', qty: 1, types: ['Invitations'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool A)',
+            type: 'exclusive',
+            items: [
+              { name: 'Inextricable Fate', p: 0.55, types: ['UniqueArmour'] },
+              { name: 'The Gluttonous Tide', p: 0.43, types: ['UniqueWeapon'] },
+              { name: 'Melding of the Flesh', p: 0.02, types: ['UniqueJewel'] }
+            ]
+          },
+          {
+            label: 'Guaranteed Unique (Pool B)',
+            type: 'exclusive',
+            items: [
+              { name: 'Ravenous Passion', p: 0.68, types: ['UniqueArmour'] },
+              { name: 'Ashes of the Stars', p: 0.30, types: ['UniqueAccessory'] },
+              { name: 'Nimis', p: 0.02, types: ['UniqueAccessory'], approx: true }
+            ]
+          },
+          {
+            label: 'Encounter-Specific',
+            type: 'independent',
+            items: [
+              { name: 'Tangle Reliquary Key', p: 0.015, types: ['Fragment'] }
+            ]
+          },
+          {
+            label: 'Additional Drops',
+            type: 'independent',
+            items: [
+              { name: 'Forbidden Flesh', p: 0.05, types: ['UniqueJewel'], note: 'Hidden Ascendancy Notable variant' },
+              { name: 'Exceptional Eldritch Ichor', p: 0.15, types: ['Currency'] },
+              { name: 'Eldritch Orb of Annulment', p: 0.05, types: ['Currency'] },
+              { name: 'Eldritch Chaos Orb', p: 0.05, types: ['Currency'] }
+            ]
+          }
+        ],
+        sources: ['https://www.poewiki.net/wiki/The_Eater_of_Worlds']
+      },
+      {
+        id: 'uber-eater',
+        name: 'The Eater of Worlds (Uber)',
+        tier: 'Uber Pinnacle',
+        note: 'Using standard Eater drop rates; uber-specific adjustments not yet modeled.',
+        entry: [
+          { name: 'Devouring Fragment', qty: 5, types: ['Fragment'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool A)',
+            type: 'exclusive',
+            items: [
+              { name: 'Inextricable Fate', p: 0.55, types: ['UniqueArmour'] },
+              { name: 'The Gluttonous Tide', p: 0.43, types: ['UniqueWeapon'] },
+              { name: 'Melding of the Flesh', p: 0.02, types: ['UniqueJewel'] }
+            ]
+          },
+          {
+            label: 'Guaranteed Unique (Pool B)',
+            type: 'exclusive',
+            items: [
+              { name: 'Ravenous Passion', p: 0.68, types: ['UniqueArmour'] },
+              { name: 'Ashes of the Stars', p: 0.30, types: ['UniqueAccessory'] },
+              { name: 'Nimis', p: 0.02, types: ['UniqueAccessory'], approx: true }
+            ]
+          },
+          {
+            label: 'Encounter-Specific',
+            type: 'independent',
+            items: [
+              { name: 'Tangle Reliquary Key', p: 0.015, types: ['Fragment'] }
+            ]
+          },
+          {
+            label: 'Additional Drops',
+            type: 'independent',
+            items: [
+              { name: 'Forbidden Flesh', p: 0.05, types: ['UniqueJewel'], note: 'Hidden Ascendancy Notable variant' },
+              { name: 'Exceptional Eldritch Ichor', p: 0.15, types: ['Currency'] },
+              { name: 'Eldritch Orb of Annulment', p: 0.05, types: ['Currency'] },
+              { name: 'Eldritch Chaos Orb', p: 0.05, types: ['Currency'] }
+            ]
+          }
+        ],
+        sources: ['https://www.poewiki.net/wiki/The_Eater_of_Worlds']
+      },
+      {
+        id: 'maven',
+        name: 'The Maven',
+        tier: 'Pinnacle',
+        entry: [
+          { name: "The Maven's Writ", qty: 1, types: ['Fragment'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool A)',
+            type: 'exclusive',
+            items: [
+              { name: 'Legacy of Fury', p: 0.44, types: ['UniqueArmour'] },
+              { name: "Graven's Secret", p: 0.16, types: ['UniqueAccessory'] },
+              { name: "Arn's Anguish", p: 0.16, types: ['UniqueAccessory'] },
+              { name: "Olesya's Delight", p: 0.16, types: ['UniqueAccessory'] },
+              { name: 'Doppelgänger Guise', p: 0.07, types: ['UniqueArmour'] },
+              { name: 'Echoforge', p: 0.01, types: ['UniqueWeapon'] }
+            ]
+          },
+          {
+            label: 'Guaranteed Unique (Pool B)',
+            type: 'exclusive',
+            items: [
+              { name: "Viridi's Veil", p: 0.52, types: ['UniqueArmour'] },
+              { name: 'Impossible Escape', p: 0.33, types: ['UniqueJewel'], strategy: 'min', note: 'Variant-heavy' },
+              { name: 'Grace of the Goddess', p: 0.13, types: ['UniqueWeapon'] },
+              { name: 'Progenesis', p: 0.02, types: ['UniqueFlask'] }
+            ]
+          },
+          {
+            label: 'Encounter-Specific',
+            type: 'independent',
+            items: [
+              { name: 'Shiny Reliquary Key', p: 0.015, types: ['Fragment'] },
+              { name: 'Curio of Potential', p: 0.05, types: ['Fragment'] },
+              { name: 'Awakened Exceptional Support Gem', p: 0.0025, types: [], note: 'Prices vary widely', noPrice: true },
+              { name: 'Awakened Support Gem', p: 0.25, types: [], note: 'Prices vary widely', noPrice: true },
+              { name: 'Orb of Conflict', p: 0.35, types: ['Currency'] }
+            ]
+          }
+        ],
+        sources: ['https://www.poewiki.net/wiki/The_Maven']
+      },
+      {
+        id: 'uber-maven',
+        name: 'The Maven (Uber)',
+        tier: 'Uber Pinnacle',
+        note: 'Uber rates based on a 1,525-run sample; Pool A uses standard Maven rates.',
+        entry: [
+          { name: 'Reality Fragment', qty: 5, types: ['Fragment'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool A)',
+            type: 'exclusive',
+            items: [
+              { name: 'Legacy of Fury', p: 0.44, types: ['UniqueArmour'] },
+              { name: "Graven's Secret", p: 0.16, types: ['UniqueAccessory'] },
+              { name: "Arn's Anguish", p: 0.16, types: ['UniqueAccessory'] },
+              { name: "Olesya's Delight", p: 0.16, types: ['UniqueAccessory'] },
+              { name: 'Doppelgänger Guise', p: 0.07, types: ['UniqueArmour'] },
+              { name: 'Echoforge', p: 0.01, types: ['UniqueWeapon'] }
+            ]
+          },
+          {
+            label: 'Guaranteed Unique (Pool B)',
+            type: 'exclusive',
+            items: [
+              { name: "Viridi's Veil", p: 0.5672, types: ['UniqueArmour'] },
+              { name: 'Impossible Escape', p: 0.3364, types: ['UniqueJewel'], strategy: 'min', note: 'Variant-heavy' },
+              { name: 'Grace of the Goddess', p: 0.0033, types: ['UniqueWeapon'] },
+              { name: 'Progenesis', p: 0.0931, types: ['UniqueFlask'] }
+            ]
+          },
+          {
+            label: 'Encounter-Specific',
+            type: 'independent',
+            items: [
+              { name: 'Shiny Reliquary Key', p: 0.0105, types: ['Fragment'] },
+              { name: 'Curio of Potential', p: 0.0544, types: ['Fragment'] },
+              { name: 'Awakened Exceptional Support Gem', p: 0.0052, types: [], note: 'Prices vary widely', noPrice: true },
+              { name: 'Awakened Support Gem', p: 0.2446, types: [], note: 'Prices vary widely', noPrice: true },
+              { name: 'Orb of Conflict', p: 0.341, types: ['Currency'] }
+            ]
+          }
+        ],
+        sources: [
+          'https://www.poewiki.net/wiki/The_Maven',
+          'https://www.reddit.com/r/pathofexile/comments/1eudvji/loot_from_1525_uber_maven_3844_div_profit/'
+        ]
+      },
+      {
+        id: 'sirus',
+        name: 'Sirus, Awakener of Worlds',
+        tier: 'Pinnacle',
+        entry: [
+          { name: "Veritania's Crest", qty: 1, types: ['Fragment'] },
+          { name: "Drox's Crest", qty: 1, types: ['Fragment'] },
+          { name: "Baran's Crest", qty: 1, types: ['Fragment'] },
+          { name: "Al-Hezmin's Crest", qty: 1, types: ['Fragment'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool A)',
+            type: 'exclusive',
+            items: [
+              { name: 'Hands of the High Templar', p: 0.40, types: ['UniqueArmour'] },
+              { name: 'Crown of the Inward Eye', p: 0.35, types: ['UniqueArmour'] },
+              { name: 'The Burden of Truth', p: 0.20, types: ['UniqueAccessory'] },
+              { name: 'Thread of Hope', p: 0.05, types: ['UniqueJewel'], variantExclude: ['Massive'], strategy: 'avg', note: 'Non-massive ring sizes' }
+            ]
+          },
+          {
+            label: 'Guaranteed Unique (Pool B)',
+            type: 'exclusive',
+            items: [
+              { name: 'Thread of Hope', p: 0.55, types: ['UniqueJewel'], variant: 'Massive', strategy: 'min' },
+              { name: 'The Tempest Rising', p: 0.37, types: ['UniqueArmour'] },
+              { name: "Oriath's End", p: 0.075, types: ['UniqueFlask'] },
+              { name: 'The Saviour', p: 0.005, types: ['UniqueWeapon'], approx: true }
+            ]
+          },
+          {
+            label: 'Additional Drops',
+            type: 'independent',
+            items: [
+              { name: 'Oubliette Reliquary Key', p: 0.015, types: ['Fragment'] },
+              { name: 'Orb of Dominance', p: 0.10, types: ['Currency'] },
+              { name: "Awakener's Orb", p: 0.20, types: ['Currency'] },
+              { name: 'A Fate Worse Than Death', p: 0.04, types: ['DivinationCard'] }
+            ]
+          }
+        ],
+        sources: ['https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds']
+      },
+      {
+        id: 'uber-sirus',
+        name: 'Sirus, Awakener of Worlds (Uber)',
+        tier: 'Uber Pinnacle',
+        note: 'Using standard Sirus drop rates; uber-specific adjustments not yet modeled.',
+        entry: [
+          { name: 'Awakening Fragment', qty: 5, types: ['Fragment'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool A)',
+            type: 'exclusive',
+            items: [
+              { name: 'Hands of the High Templar', p: 0.40, types: ['UniqueArmour'] },
+              { name: 'Crown of the Inward Eye', p: 0.35, types: ['UniqueArmour'] },
+              { name: 'The Burden of Truth', p: 0.20, types: ['UniqueAccessory'] },
+              { name: 'Thread of Hope', p: 0.05, types: ['UniqueJewel'], variantExclude: ['Massive'], strategy: 'avg', note: 'Non-massive ring sizes' }
+            ]
+          },
+          {
+            label: 'Guaranteed Unique (Pool B)',
+            type: 'exclusive',
+            items: [
+              { name: 'Thread of Hope', p: 0.55, types: ['UniqueJewel'], variant: 'Massive', strategy: 'min' },
+              { name: 'The Tempest Rising', p: 0.37, types: ['UniqueArmour'] },
+              { name: "Oriath's End", p: 0.075, types: ['UniqueFlask'] },
+              { name: 'The Saviour', p: 0.005, types: ['UniqueWeapon'], approx: true }
+            ]
+          },
+          {
+            label: 'Additional Drops',
+            type: 'independent',
+            items: [
+              { name: 'Oubliette Reliquary Key', p: 0.015, types: ['Fragment'] },
+              { name: 'Orb of Dominance', p: 0.10, types: ['Currency'] },
+              { name: "Awakener's Orb", p: 0.20, types: ['Currency'] },
+              { name: 'A Fate Worse Than Death', p: 0.04, types: ['DivinationCard'] }
+            ]
+          }
+        ],
+        sources: ['https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds']
+      },
+      {
+        id: 'shaper',
+        name: 'The Shaper',
+        tier: 'Pinnacle',
+        entry: [
+          { name: 'Fragment of the Phoenix', qty: 1, types: ['Fragment'] },
+          { name: 'Fragment of the Hydra', qty: 1, types: ['Fragment'] },
+          { name: 'Fragment of the Minotaur', qty: 1, types: ['Fragment'] },
+          { name: 'Fragment of the Chimera', qty: 1, types: ['Fragment'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool A)',
+            type: 'exclusive',
+            items: [
+              { name: "Shaper's Touch", p: 0.56, types: ['UniqueArmour'] },
+              { name: 'Voidwalker', p: 0.26, types: ['UniqueArmour'] },
+              { name: 'Solstice Vigil', p: 0.15, types: ['UniqueAccessory'] },
+              { name: 'Dying Sun', p: 0.03, types: ['UniqueFlask'] }
+            ]
+          },
+          {
+            label: 'Guaranteed Unique (Pool B)',
+            type: 'exclusive',
+            items: [
+              { name: 'Echoes of Creation', p: 0.40, types: ['UniqueArmour'] },
+              { name: 'Entropic Devastation', p: 0.36, types: ['UniqueArmour'] },
+              { name: 'The Tides of Time', p: 0.22, types: ['UniqueAccessory'] },
+              { name: 'Starforge', p: 0.02, types: ['UniqueWeapon'] }
+            ]
+          },
+          {
+            label: 'Fragment Drop',
+            type: 'exclusive',
+            items: [
+              { name: 'Fragment of Knowledge', p: 0.50, types: ['Fragment'] },
+              { name: 'Fragment of Shape', p: 0.50, types: ['Fragment'] }
+            ]
+          },
+          {
+            label: 'Encounter-Specific',
+            type: 'independent',
+            items: [
+              { name: 'Sublime Vision', p: 0.02, types: ['UniqueJewel'], strategy: 'min', note: 'Variant-heavy' },
+              { name: 'Cosmic Reliquary Key', p: 0.01, types: ['Fragment'] }
+            ]
+          },
+          {
+            label: 'Additional Drops',
+            type: 'independent',
+            items: [
+              { name: "Shaper's Exalted Orb", p: 0.12, types: ['Currency'] },
+              { name: 'Orb of Dominance', p: 0.03, types: ['Currency'] }
+            ]
+          }
+        ],
+        sources: ['https://www.poewiki.net/wiki/The_Shaper']
+      },
+      {
+        id: 'uber-shaper',
+        name: 'The Shaper (Uber)',
+        tier: 'Uber Pinnacle',
+        note: 'Using standard Shaper drop rates; uber-specific adjustments not yet modeled.',
+        entry: [
+          { name: 'Cosmic Fragment', qty: 5, types: ['Fragment'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool A)',
+            type: 'exclusive',
+            items: [
+              { name: "Shaper's Touch", p: 0.56, types: ['UniqueArmour'] },
+              { name: 'Voidwalker', p: 0.26, types: ['UniqueArmour'] },
+              { name: 'Solstice Vigil', p: 0.15, types: ['UniqueAccessory'] },
+              { name: 'Dying Sun', p: 0.03, types: ['UniqueFlask'] }
+            ]
+          },
+          {
+            label: 'Guaranteed Unique (Pool B)',
+            type: 'exclusive',
+            items: [
+              { name: 'Echoes of Creation', p: 0.40, types: ['UniqueArmour'] },
+              { name: 'Entropic Devastation', p: 0.36, types: ['UniqueArmour'] },
+              { name: 'The Tides of Time', p: 0.22, types: ['UniqueAccessory'] },
+              { name: 'Starforge', p: 0.02, types: ['UniqueWeapon'] }
+            ]
+          },
+          {
+            label: 'Fragment Drop',
+            type: 'exclusive',
+            items: [
+              { name: 'Fragment of Knowledge', p: 0.50, types: ['Fragment'] },
+              { name: 'Fragment of Shape', p: 0.50, types: ['Fragment'] }
+            ]
+          },
+          {
+            label: 'Encounter-Specific',
+            type: 'independent',
+            items: [
+              { name: 'Sublime Vision', p: 0.02, types: ['UniqueJewel'], strategy: 'min', note: 'Variant-heavy' },
+              { name: 'Cosmic Reliquary Key', p: 0.01, types: ['Fragment'] }
+            ]
+          },
+          {
+            label: 'Additional Drops',
+            type: 'independent',
+            items: [
+              { name: "Shaper's Exalted Orb", p: 0.12, types: ['Currency'] },
+              { name: 'Orb of Dominance', p: 0.03, types: ['Currency'] }
+            ]
+          }
+        ],
+        sources: ['https://www.poewiki.net/wiki/The_Shaper']
+      },
+      {
+        id: 'elder',
+        name: 'The Elder',
+        tier: 'Pinnacle',
+        entry: [
+          { name: 'Fragment of Purification', qty: 1, types: ['Fragment'] },
+          { name: 'Fragment of Constriction', qty: 1, types: ['Fragment'] },
+          { name: 'Fragment of Enslavement', qty: 1, types: ['Fragment'] },
+          { name: 'Fragment of Eradication', qty: 1, types: ['Fragment'] }
+        ],
+        groups: [
+          {
+            label: 'Fragment Drop',
+            type: 'exclusive',
+            items: [
+              { name: 'Fragment of Terror', p: 0.50, types: ['Fragment'] },
+              { name: 'Fragment of Emptiness', p: 0.50, types: ['Fragment'] }
+            ]
+          },
+          {
+            label: 'Guaranteed Unique Pool',
+            type: 'exclusive',
+            items: [
+              { name: 'Cyclopean Coil', p: 0.30, types: ['UniqueAccessory'] },
+              { name: "Blasphemer's Grasp", p: 0.30, types: ['UniqueArmour'] },
+              { name: 'Nebuloch', p: 0.10, types: ['UniqueWeapon'] },
+              { name: 'Hopeshredder', p: 0.10, types: ['UniqueWeapon'] },
+              { name: 'Shimmeron', p: 0.10, types: ['UniqueWeapon'] },
+              { name: 'Impresence', p: 0.10, types: ['UniqueAccessory'], strategy: 'avg', note: 'Any curse variant' }
+            ]
+          },
+          {
+            label: 'Additional Drops',
+            type: 'independent',
+            items: [
+              { name: "Elder's Exalted Orb", p: 0.10, types: ['Currency'] },
+              { name: 'Orb of Dominance', p: 0.02, types: ['Currency'], approx: true },
+              { name: "Watcher's Eye", p: 0.40, types: ['UniqueJewel'], strategy: 'min', note: '2-mod Watcher\'s Eye; price varies' },
+              { name: 'Void of the Elements', p: 0.01, types: ['DivinationCard'], approx: true }
+            ]
+          }
+        ],
+        sources: ['https://www.poewiki.net/wiki/The_Elder']
+      },
+      {
+        id: 'uber-elder',
+        name: 'Uber Elder',
+        tier: 'Pinnacle',
+        entry: [
+          { name: 'Fragment of Knowledge', qty: 1, types: ['Fragment'] },
+          { name: 'Fragment of Shape', qty: 1, types: ['Fragment'] },
+          { name: 'Fragment of Terror', qty: 1, types: ['Fragment'] },
+          { name: 'Fragment of Emptiness', qty: 1, types: ['Fragment'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool A)',
+            type: 'exclusive',
+            items: [
+              { name: 'Mark of the Shaper', p: 0.35, types: ['UniqueAccessory'] },
+              { name: 'Mark of the Elder', p: 0.35, types: ['UniqueAccessory'] },
+              { name: 'Voidfletcher', p: 0.15, types: ['UniqueWeapon'], approx: true },
+              { name: 'Indigon', p: 0.12, types: ['UniqueArmour'], approx: true },
+              { name: 'Disintegrator', p: 0.03, types: ['UniqueWeapon'] }
+            ]
+          },
+          {
+            label: 'Guaranteed Unique (Pool B)',
+            type: 'exclusive',
+            items: [
+              { name: 'Call of the Void', p: 0.40, types: ['UniqueAccessory'] },
+              { name: 'The Devourer of Minds', p: 0.30, types: ['UniqueArmour'] },
+              { name: 'Soul Ascension', p: 0.10, types: ['UniqueArmour'] },
+              { name: 'Impresence', p: 0.10, types: ['UniqueAccessory'], strategy: 'avg', note: 'Full power (2 curse) variant' },
+              { name: 'The Eternity Shroud', p: 0.06, types: ['UniqueArmour'] },
+              { name: 'Voidforge', p: 0.04, types: ['UniqueWeapon'] }
+            ]
+          },
+          {
+            label: 'Encounter-Specific',
+            type: 'independent',
+            items: [
+              { name: 'Sublime Vision', p: 0.01, types: ['UniqueJewel'], strategy: 'min', note: 'Variant-heavy' },
+              { name: 'Decaying Reliquary Key', p: 0.015, types: ['Fragment'] },
+              { name: 'Curio of Decay', p: 0.05, types: ['Fragment'] }
+            ]
+          },
+          {
+            label: 'Additional Drops',
+            type: 'independent',
+            items: [
+              { name: "Watcher's Eye", p: 0.30, types: ['UniqueJewel'], strategy: 'min', note: '3-mod Watcher\'s Eye; price varies' }
+            ]
+          }
+        ],
+        sources: ['https://www.poewiki.net/wiki/Uber_Elder']
+      },
+      {
+        id: 'atziri',
+        name: 'Atziri, Queen of the Vaal',
+        tier: 'Endgame',
+        note: 'Apex of Sacrifice drop rates are listed without percentages on the wiki; probabilities not yet modeled.',
+        entry: [
+          { name: 'Sacrifice at Dusk', qty: 1, types: ['Fragment'] },
+          { name: 'Sacrifice at Noon', qty: 1, types: ['Fragment'] },
+          { name: 'Sacrifice at Midnight', qty: 1, types: ['Fragment'] },
+          { name: 'Sacrifice at Dawn', qty: 1, types: ['Fragment'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool)',
+            type: 'exclusive',
+            items: [
+              { name: "Atziri's Promise", p: null, types: ['UniqueFlask'] },
+              { name: "Atziri's Step", p: null, types: ['UniqueArmour'] },
+              { name: "Doryani's Catalyst", p: null, types: ['UniqueWeapon'] },
+              { name: 'Pledge of Hands', p: null, types: ['UniqueWeapon'] },
+              { name: 'Triumvirate Authority', p: null, types: ['UniqueAccessory'] },
+              { name: "Doryani's Invitation", p: null, types: ['UniqueAccessory'], strategy: 'avg', note: '4 variants' }
+            ]
+          },
+          {
+            label: 'Mortal Fragment (Chance)',
+            type: 'exclusive',
+            items: [
+              { name: 'Mortal Grief', p: null, types: ['Fragment'] },
+              { name: 'Mortal Hope', p: null, types: ['Fragment'] },
+              { name: 'Mortal Rage', p: null, types: ['Fragment'] },
+              { name: 'Mortal Ignorance', p: null, types: ['Fragment'] }
+            ]
+          },
+          {
+            label: 'Additional Drops',
+            type: 'independent',
+            items: [
+              { name: 'Sacrificial Garb', p: null, types: [], note: 'Base item (manual price)' }
+            ]
+          }
+        ],
+        sources: ['https://www.poewiki.net/wiki/Atziri%2C_Queen_of_the_Vaal']
+      },
+      {
+        id: 'uber-atziri',
+        name: 'Atziri, Queen of the Vaal (Uber)',
+        tier: 'Uber Endgame',
+        entry: [
+          { name: 'Mortal Grief', qty: 1, types: ['Fragment'] },
+          { name: 'Mortal Ignorance', qty: 1, types: ['Fragment'] },
+          { name: 'Mortal Rage', qty: 1, types: ['Fragment'] },
+          { name: 'Mortal Hope', qty: 1, types: ['Fragment'] }
+        ],
+        groups: [
+          {
+            label: 'Guaranteed Unique (Pool)',
+            type: 'exclusive',
+            items: [
+              { name: "Atziri's Splendour", p: 0.45, types: ['UniqueArmour'], strategy: 'avg', note: '9 variants' },
+              { name: 'The Vertex', p: 0.37, types: ['UniqueArmour'] },
+              { name: 'Triumvirate Authority', p: 0.06, types: ['UniqueAccessory'] },
+              { name: "Atziri's Acuity", p: 0.05, types: ['UniqueArmour'] },
+              { name: "Atziri's Reflection", p: 0.03, types: ['UniqueArmour'] },
+              { name: "Atziri's Rule", p: 0.02, types: ['UniqueWeapon'] },
+              { name: "Atziri's Disfavour", p: 0.02, types: ['UniqueWeapon'] }
+            ]
+          },
+          {
+            label: 'Additional Drops',
+            type: 'independent',
+            items: [
+              { name: 'Sacrificial Garb', p: 0.125, types: [], approx: true, note: 'Base item (manual price)' },
+              { name: 'Beauty', p: 0.125, types: [], approx: true, note: 'Vaal Aspect (manual price)' },
+              { name: 'Triskaidekaphobia', p: 0.25, types: ['DivinationCard'], approx: true, note: 'Divination card' },
+              { name: 'The Price of Devotion', p: 0.001, types: ['DivinationCard'], approx: true, note: '<0.1%' }
+            ]
+          }
+        ],
+        sources: ['https://www.poewiki.net/wiki/Atziri%2C_Queen_of_the_Vaal']
+      }
+    ];
+
+    const storedCurrency = localStorage.getItem(displayCurrencyKey) || 'chaos';
+    const state = {
+      leagueId: DEFAULT_LEAGUE,
+      leagueText: 'Phrecia 2.0',
+      priceMode: DEFAULT_PRICE_MODE,
+      displayCurrency: storedCurrency === 'divine' ? 'divine' : 'chaos',
+      priceData: null,
+      watchBase: null,
+      pricingLeague: null,
+      fetchResults: [],
+      priceUpdatedAt: null,
+      divineChaos: null,
+      minValueFilter: false,
+      minValueThresholdChaos: 10
+    };
+
+    const leagueSelect = document.getElementById('leagueSelect');
+    const priceModeInput = document.getElementById('priceMode');
+    const currencyInput = document.getElementById('displayCurrency');
+    const refreshButton = document.getElementById('refresh');
+    const statusEl = document.getElementById('status');
+    const debugToggle = document.getElementById('debugToggle');
+    const debugEl = document.getElementById('debug');
+    const debugContent = document.getElementById('debugContent');
+    const copyDebug = document.getElementById('copyDebug');
+    const bossList = document.getElementById('bossList');
+    const minValueToggle = document.getElementById('minValueToggle');
+    const minValueInput = document.getElementById('minValueInput');
+    const minValueUnit = document.getElementById('minValueUnit');
+
+    function buildLeagueSelect() {
+      leagueSelect.innerHTML = '';
+      LEAGUES.forEach((groupDef) => {
+        const group = document.createElement('optgroup');
+        group.label = groupDef.label;
+        groupDef.options.forEach((league) => {
+          const option = document.createElement('option');
+          option.value = league.id;
+          option.textContent = league.text;
+          group.appendChild(option);
+        });
+        leagueSelect.appendChild(group);
+      });
+    }
+
+    buildLeagueSelect();
+
+    priceModeInput.value = state.priceMode;
+    currencyInput.value = state.displayCurrency;
+    if (Array.from(leagueSelect.options).some((opt) => opt.value === state.leagueId)) {
+      leagueSelect.value = state.leagueId;
+    } else {
+      leagueSelect.value = 'phrecia2.0';
+      state.leagueId = 'phrecia2.0';
+    }
+
+    function leagueTextFor(id) {
+      for (const group of LEAGUES) {
+        const match = group.options.find((opt) => opt.id === id);
+        if (match) return match.text;
+      }
+      return id;
+    }
+
+    state.leagueText = leagueTextFor(state.leagueId);
+
+    const minPref = localStorage.getItem('poeBossMinValueEnabled') || 'off';
+    const minThresholdPref = Number(localStorage.getItem('poeBossMinValueChaos') || '10');
+    state.minValueFilter = minPref === 'on';
+    state.minValueThresholdChaos = Number.isFinite(minThresholdPref) ? minThresholdPref : 10;
+    minValueToggle.checked = state.minValueFilter;
+
+    function updateMinValueInput() {
+      const threshold = state.minValueThresholdChaos || 0;
+      if (state.displayCurrency === 'divine' && state.divineChaos) {
+        minValueInput.value = (threshold / state.divineChaos).toFixed(2);
+        minValueInput.step = '0.01';
+        minValueUnit.textContent = 'div';
+      } else {
+        minValueInput.value = threshold.toFixed(1);
+        minValueInput.step = '0.1';
+        minValueUnit.textContent = 'c';
+      }
+    }
+
+    updateMinValueInput();
+
+    minValueToggle.addEventListener('change', () => {
+      state.minValueFilter = minValueToggle.checked;
+      localStorage.setItem('poeBossMinValueEnabled', state.minValueFilter ? 'on' : 'off');
+      safeRender();
+    });
+
+    minValueInput.addEventListener('change', () => {
+      const raw = Number(minValueInput.value);
+      if (!Number.isFinite(raw)) return;
+      if (state.displayCurrency === 'divine' && state.divineChaos) {
+        state.minValueThresholdChaos = raw * state.divineChaos;
+      } else {
+        state.minValueThresholdChaos = raw;
+      }
+      localStorage.setItem('poeBossMinValueChaos', state.minValueThresholdChaos.toString());
+      safeRender();
+    });
+
+    leagueSelect.addEventListener('change', () => {
+      state.leagueId = leagueSelect.value;
+      state.leagueText = leagueTextFor(state.leagueId);
+      localStorage.setItem('poeBossLeague', state.leagueId);
+      fetchPrices();
+    });
+
+    currencyInput.addEventListener('change', () => {
+      state.displayCurrency = currencyInput.value;
+      localStorage.setItem(displayCurrencyKey, state.displayCurrency);
+      updateMinValueInput();
+      safeRender();
+    });
+
+    priceModeInput.addEventListener('change', () => {
+      state.priceMode = priceModeInput.value;
+      localStorage.setItem('poeBossPriceMode', state.priceMode);
+      safeRender();
+    });
+
+    if (refreshButton) {
+      refreshButton.addEventListener('click', () => {
+        state.leagueId = leagueSelect.value;
+        state.leagueText = leagueTextFor(state.leagueId);
+        localStorage.setItem('poeBossLeague', state.leagueId);
+        fetchPrices(true);
+      });
+    }
+
+
+    function setStatus(text, isError) {
+      statusEl.textContent = text;
+      statusEl.classList.toggle('error', Boolean(isError));
+    }
+
+    function setDebug(text) {
+      if (!state.debug) {
+        debugEl.style.display = 'none';
+        return;
+      }
+      debugEl.style.display = 'block';
+      debugContent.textContent = text;
+    }
+
+    function slugify(text) {
+      return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    }
+
+    function itemKey(item) {
+      const variant = item.variant ? `::${item.variant}` : '';
+      return `${item.name}${variant}`;
+    }
+
+    function costKey(item) {
+      const variant = item.variant ? `::${item.variant}` : '';
+      return `cost::${item.name}${variant}`;
+    }
+
+    function isExcluded(item) {
+      return Boolean(IGNORED_DROPS[itemKey(item)]);
+    }
+
+    function normalizeText(text) {
+      return String(text || '')
+        .toLowerCase()
+        .replace(/^the\\s+/, '')
+        .replace(/[’']/g, '')
+        .replace(/[^a-z0-9]/g, '');
+    }
+
+    function parseTimestamp(value) {
+      if (value == null) return null;
+      if (value instanceof Date && !Number.isNaN(value.valueOf())) return value;
+      if (typeof value === 'number' && Number.isFinite(value)) {
+        const ms = value < 1e12 ? value * 1000 : value;
+        const date = new Date(ms);
+        return Number.isNaN(date.valueOf()) ? null : date;
+      }
+      if (typeof value === 'string') {
+        const trimmed = value.trim();
+        if (!trimmed) return null;
+        const asNumber = Number(trimmed);
+        if (Number.isFinite(asNumber)) return parseTimestamp(asNumber);
+        const date = new Date(trimmed);
+        return Number.isNaN(date.valueOf()) ? null : date;
+      }
+      return null;
+    }
+
+    function findUpdatedAt(data, resp) {
+      const candidates = [
+        data?.updated,
+        data?.updatedAt,
+        data?.updated_at,
+        data?.lastUpdated,
+        data?.last_updated,
+        data?.timestamp,
+        data?.time,
+        data?.date,
+        data?.meta?.updated,
+        data?.meta?.updatedAt,
+        data?.meta?.updated_at,
+        data?.meta?.lastUpdated,
+        data?.meta?.last_updated,
+        data?.meta?.timestamp,
+        data?.meta?.time,
+        data?.meta?.date
+      ];
+      for (const candidate of candidates) {
+        const parsed = parseTimestamp(candidate);
+        if (parsed) return parsed;
+      }
+      const headerCandidates = [
+        resp?.headers?.get('last-modified')
+      ];
+      for (const candidate of headerCandidates) {
+        const parsed = parseTimestamp(candidate);
+        if (parsed) return parsed;
+      }
+      return null;
+    }
+
+    function formatUpdatedAt(date) {
+      if (!date) return '';
+      return date.toLocaleString(undefined, {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit'
+      });
+    }
+
+    function loadPriceCache() {
+      try {
+        const raw = localStorage.getItem(priceCacheKey);
+        if (!raw) return {};
+        const parsed = JSON.parse(raw);
+        return parsed && typeof parsed === 'object' ? parsed : {};
+      } catch (err) {
+        return {};
+      }
+    }
+
+    function savePriceCache(cache) {
+      try {
+        localStorage.setItem(priceCacheKey, JSON.stringify(cache));
+      } catch (err) {
+        // Ignore cache write failures (quota, privacy mode, etc.)
+      }
+    }
+
+    function cacheEntryIsFresh(entry) {
+      if (!entry || !entry.fetchedAt || !Array.isArray(entry.items)) return false;
+      return Date.now() - entry.fetchedAt < priceCacheTtlMs;
+    }
+
+    function slimWatchItems(items) {
+      return items.map((item) => ({
+        id: item.id,
+        name: item.name,
+        category: item.category,
+        icon: item.icon,
+        min: item.min,
+        mean: item.mean,
+        max: item.max
+      }));
+    }
+
+    function slugifyItem(text) {
+      return String(text || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[’']/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+    }
+
+    function indexWatchData(items) {
+      const byName = new Map();
+      const byLower = new Map();
+      const counts = {};
+
+      items.forEach((item) => {
+        const name = item?.name;
+        if (!name) return;
+        const lower = String(name).toLowerCase();
+        const normalized = normalizeText(name);
+        if (lower) {
+          if (!byLower.has(lower)) byLower.set(lower, []);
+          byLower.get(lower).push(item);
+        }
+        if (normalized) {
+          if (!byName.has(normalized)) byName.set(normalized, []);
+          byName.get(normalized).push(item);
+        }
+        const category = item.category || 'unknown';
+        counts[category] = (counts[category] || 0) + 1;
+      });
+
+      return { items, byName, byLower, counts };
+    }
+
+    function categoriesForTypes(types) {
+      const categories = new Set();
+      (types || []).forEach((type) => {
+        const mapped = WATCH_CATEGORY_MAP[type] || [];
+        mapped.forEach((category) => categories.add(category));
+      });
+      return Array.from(categories);
+    }
+
+    function findWatchMatches(item, useTypeFilter = true) {
+      if (!state.priceData || !state.priceData.byName) return [];
+      const rawName = item.alias || item.name;
+      const lower = rawName.toLowerCase();
+      const normalized = normalizeText(rawName);
+      const exactMatches = state.priceData.byLower.get(lower) || [];
+      const normalizedMatches = state.priceData.byName.get(normalized) || [];
+      let matches = exactMatches.length ? exactMatches.slice() : normalizedMatches.slice();
+
+      if (useTypeFilter) {
+        const categories = categoriesForTypes(item.types);
+        if (categories.length) {
+          matches = matches.filter((match) => categories.includes(match.category));
+        }
+      }
+
+      return matches;
+    }
+
+    function findWatchLine(item, useTypeFilter = true) {
+      const matches = findWatchMatches(item, useTypeFilter);
+      return matches.length ? matches[0] : null;
+    }
+
+    function itemPageUrl(item) {
+      const match = findWatchLine(item, true) || findWatchLine(item, false);
+      if (!match) return null;
+      const league = state.pricingLeague || state.leagueText || leagueTextFor(state.leagueId);
+      const leagueParam = league ? `?league=${encodeURIComponent(league)}` : '';
+      if (match.id != null) {
+        return `${WATCH_DETAILS_BASE}/${encodeURIComponent(match.id)}${leagueParam}`;
+      }
+      const slug = slugifyItem(item.alias || item.name);
+      if (!slug) return null;
+      return `${WATCH_DETAILS_BASE}/${slug}${leagueParam}`;
+    }
+
+    function itemLabelMarkup(item) {
+      const url = itemPageUrl(item);
+      const base = url
+        ? `<a class="item-link" href="${url}" target="_blank" rel="noreferrer">${item.name}</a>`
+        : `<span>${item.name}</span>`;
+      const variant = item.variant ? ` <span class="muted">(${item.variant})</span>` : '';
+      const note = item.note ? ` <span class="muted">${item.note}</span>` : '';
+      return `${base}${variant}${note}`;
+    }
+
+    function formatValue(value, chaosPerDivine) {
+      if (value == null || Number.isNaN(value)) return '—';
+      if (state.displayCurrency === 'divine' && chaosPerDivine) {
+        return `${(value / chaosPerDivine).toFixed(2)} div`;
+      }
+      return `${value.toFixed(1)} c`;
+    }
+
+    function formatPercent(value) {
+      if (value == null || Number.isNaN(value)) return '—';
+      return `${value.toFixed(1)}%`;
+    }
+
+    function clamp(value, min, max) {
+      return Math.min(Math.max(value, min), max);
+    }
+
+    function mixColor(from, to, t) {
+      return {
+        r: Math.round(from.r + (to.r - from.r) * t),
+        g: Math.round(from.g + (to.g - from.g) * t),
+        b: Math.round(from.b + (to.b - from.b) * t)
+      };
+    }
+
+    function rgbString(color) {
+      return `rgb(${color.r}, ${color.g}, ${color.b})`;
+    }
+
+    function rgbaString(color, alpha) {
+      return `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`;
+    }
+
+    function profitColor(value, maxProfit, minProfit) {
+      const yellow = { r: 251, g: 191, b: 36 };
+      const green = { r: 34, g: 197, b: 94 };
+      const red = { r: 239, g: 68, b: 68 };
+      if (!Number.isFinite(value)) return yellow;
+      if (value >= 0) {
+        const denom = maxProfit > 0 ? maxProfit : 1;
+        const t = clamp(value / denom, 0, 1);
+        return mixColor(yellow, green, t);
+      }
+      const denom = minProfit < 0 ? Math.abs(minProfit) : 1;
+      const t = clamp(Math.abs(value) / denom, 0, 1);
+      return mixColor(yellow, red, t);
+    }
+
+    function profitMagnitude(value, maxProfit, minProfit) {
+      if (!Number.isFinite(value)) return 0;
+      if (value >= 0) {
+        return maxProfit > 0 ? clamp(value / maxProfit, 0, 1) : 0;
+      }
+      return minProfit < 0 ? clamp(Math.abs(value) / Math.abs(minProfit), 0, 1) : 0;
+    }
+
+    function percentOf(numerator, denominator) {
+      if (!Number.isFinite(numerator) || !Number.isFinite(denominator) || denominator === 0) return null;
+      return (numerator / Math.abs(denominator)) * 100;
+    }
+
+    function safeNumber(value) {
+      if (value == null || Number.isNaN(value)) return null;
+      return Number(value);
+    }
+
+    function priceStrategy(item) {
+      return item.strategy || state.priceMode || 'min';
+    }
+
+    function priceFieldForStrategy(strategy) {
+      if (strategy === 'max') return 'max';
+      if (strategy === 'avg') return 'mean';
+      return 'min';
+    }
+
+    function pickWatchPrice(matches, item) {
+      if (!matches.length) return null;
+      const field = priceFieldForStrategy(priceStrategy(item));
+      const values = matches
+        .map((match) => safeNumber(match[field] ?? match.mean ?? match.min ?? match.max))
+        .filter((v) => v != null);
+      if (!values.length) return null;
+      if (field === 'max') return Math.max(...values);
+      if (field === 'mean') return values.reduce((a, b) => a + b, 0) / values.length;
+      return Math.min(...values);
+    }
+
+    function suggestCandidates(item) {
+      if (!state.priceData?.items) return [];
+      const normalized = normalizeText(item.alias || item.name);
+      if (!normalized) return [];
+      const candidates = state.priceData.items
+        .map((entry) => ({
+          name: entry.name || '',
+          norm: normalizeText(entry.name || '')
+        }))
+        .filter((entry) => entry.norm && (entry.norm.includes(normalized) || normalized.includes(entry.norm)))
+        .map((entry) => entry.name);
+      return Array.from(new Set(candidates)).slice(0, 3);
+    }
+
+    function getPrice(item) {
+      const key = itemKey(item);
+      const manual = MANUAL_PRICES[key];
+      if (manual != null && manual !== '') return Number(manual);
+
+      if (item.noPrice) return null;
+
+      if (isExcluded(item)) return 0;
+
+      const matches = findWatchMatches(item, true);
+      const price = pickWatchPrice(matches, item);
+      if (price != null) return price;
+
+      const fallback = searchAllTypes(item);
+      if (fallback != null) {
+        recordFallback(item, fallback.type, fallback.price, fallback.icon);
+        return fallback.price;
+      }
+
+      return null;
+    }
+
+    function getCostOverride(item) {
+      const manual = MANUAL_COSTS[costKey(item)];
+      if (manual != null && manual !== '') return Number(manual);
+      return null;
+    }
+
+    function searchAllTypes(item) {
+      const matches = findWatchMatches(item, false);
+      if (!matches.length) return null;
+      const price = pickWatchPrice(matches, item);
+      if (price == null) return null;
+      return { type: matches[0].category || 'unknown', price, icon: matches[0].icon };
+    }
+
+    function recordFallback(item, type, price, icon) {
+      if (!state.fallbackHits) state.fallbackHits = new Map();
+      const key = itemKey(item);
+      if (!state.fallbackHits.has(key)) {
+        state.fallbackHits.set(key, { name: item.name, type, price, icon });
+      }
+    }
+
+    function findIcon(item) {
+      const manual = MANUAL_PRICES[itemKey(item)];
+      const match = findWatchLine(item, true) || findWatchLine(item, false);
+      if (match?.icon) return match.icon;
+      if (manual && state.debug && state.fallbackHits?.has(itemKey(item))) {
+        const fallback = state.fallbackHits.get(itemKey(item));
+        if (fallback?.icon) return fallback.icon;
+      }
+      return null;
+    }
+
+    function computeGroup(group) {
+      const pricedItems = [];
+      const unpricedItems = [];
+
+      let expected = 0;
+      let variance = 0;
+
+      group.items.forEach((item) => {
+        const excluded = isExcluded(item);
+        const price = excluded ? 0 : getPrice(item);
+        const p = item.p;
+        if (p == null) {
+          unpricedItems.push({ ...item, price, reason: 'prob' });
+          return;
+        }
+        if (price == null) {
+          unpricedItems.push({ ...item, price, reason: item.noPrice ? 'manual' : 'price' });
+          return;
+        }
+        if (state.minValueFilter && price < state.minValueThresholdChaos) {
+          pricedItems.push({ ...item, price, value: 0, ignored: true });
+          return;
+        }
+        const value = price * (item.qty || 1);
+        if (group.type === 'exclusive') {
+          expected += p * value;
+          variance += p * value * value;
+        } else {
+          expected += p * value;
+          variance += p * (1 - p) * value * value;
+        }
+        pricedItems.push({ ...item, price, value, ignored: excluded });
+      });
+
+      if (group.type === 'exclusive') {
+        variance = variance - expected * expected;
+      }
+
+      return {
+        expected,
+        variance: Math.max(variance, 0),
+        pricedItems,
+        unpricedItems
+      };
+    }
+
+    function runCostTooltip() {
+      return 'Run Cost is the total cost of the entry items for one run. It uses any manual overrides you set.';
+    }
+
+    function dropEvTooltip() {
+      return 'Drop EV is the average value of all included drops for one run, after filters and excludes.';
+    }
+
+    function volatilityTooltip() {
+      return 'Volatility shows how much results swing compared to the average drop value. Higher percent means more variability.';
+    }
+
+    function expectedTooltip() {
+      return 'Expected Return is the average profit per run: drop value minus run cost.';
+    }
+
+    function dropFilterTooltip(chaosPerDivine) {
+      const thresholdLabel = formatValue(state.minValueThresholdChaos, chaosPerDivine);
+      return `This shows the average value for this group and how much it varies compared to that value. "Include" removes drops from the calculation. The filter sets any drop below ${thresholdLabel} to 0.`;
+    }
+
+    function computeBoss(boss) {
+      const entryItems = boss.entry.map((item) => ({
+        ...item,
+        price: getPrice(item),
+        value: getPrice(item) != null ? getPrice(item) * (item.qty || 1) : null,
+        icon: findIcon(item),
+        costOverride: getCostOverride(item)
+      }));
+
+      const entryCost = entryItems.reduce((sum, item) => {
+        if (item.costOverride != null) return sum + item.costOverride;
+        return sum + (item.value || 0);
+      }, 0);
+      const entryMissing = entryItems.filter((item) => item.value == null);
+
+      let expectedDrops = 0;
+      let variance = 0;
+      const groupResults = boss.groups.map((group) => {
+        const result = computeGroup(group);
+        expectedDrops += result.expected;
+        variance += result.variance;
+        return { ...group, result };
+      });
+
+      return {
+        entryItems,
+        entryCost,
+        entryMissing,
+        expectedDrops,
+        variance,
+        stdev: Math.sqrt(variance),
+        expectedProfit: expectedDrops - entryCost,
+        groupResults
+      };
+    }
+
+    function render() {
+      const openIds = new Set();
+      bossList.querySelectorAll('details[open]').forEach((detail) => {
+        if (detail.dataset.bossId) openIds.add(detail.dataset.bossId);
+      });
+      bossList.innerHTML = '';
+      const chaosPerDivine = state.divineChaos;
+      const missingItems = [];
+      state.fallbackHits = new Map();
+
+      const bossRows = BOSS_DATA.map((boss) => ({
+        boss,
+        computed: computeBoss(boss)
+      }));
+
+      const profitValues = bossRows
+        .map((row) => row.computed.expectedProfit)
+        .filter((value) => Number.isFinite(value));
+      const maxProfit = profitValues.length ? Math.max(...profitValues, 0) : 0;
+      const minProfit = profitValues.length ? Math.min(...profitValues, 0) : 0;
+
+      bossRows.sort((a, b) => {
+        const av = Number.isFinite(a.computed.expectedProfit) ? a.computed.expectedProfit : -Infinity;
+        const bv = Number.isFinite(b.computed.expectedProfit) ? b.computed.expectedProfit : -Infinity;
+        return bv - av;
+      });
+
+      bossRows.forEach(({ boss, computed }) => {
+        const missingCount = computed.groupResults.reduce((sum, group) => {
+          const priceMissing = group.result.unpricedItems.filter((item) => item.reason === 'price').length;
+          return sum + priceMissing;
+        }, 0);
+        const entryMissing = computed.entryMissing.length;
+        const volatilityPct = percentOf(computed.stdev, computed.expectedDrops);
+
+        computed.entryMissing.forEach((item) => {
+          missingItems.push({ boss: boss.name, group: 'Entry', item: item.name, types: item.types || [], reason: 'price' });
+        });
+        computed.groupResults.forEach((group) => {
+          group.result.unpricedItems.forEach((item) => {
+            if (item.reason === 'manual') return;
+            missingItems.push({
+              boss: boss.name,
+              group: group.label,
+              item: item.name,
+              types: item.types || [],
+              p: item.p,
+              reason: item.reason || 'price'
+            });
+          });
+        });
+
+        const details = document.createElement('details');
+        details.dataset.bossId = boss.id;
+        if (openIds.has(boss.id)) details.open = true;
+        const accentColor = profitColor(computed.expectedProfit, maxProfit, minProfit);
+        const accentRgb = rgbString(accentColor);
+        const gradientStrength = profitMagnitude(computed.expectedProfit, maxProfit, minProfit);
+        const gradientColor = rgbaString(accentColor, 0.08 + 0.32 * gradientStrength);
+        details.style.setProperty('--summary-accent', accentRgb);
+        details.style.setProperty('--profit-accent', accentRgb);
+        details.innerHTML = `
+          <summary>
+            <div class="boss-summary" style="--summary-gradient: linear-gradient(90deg, ${gradientColor} 0%, rgba(15, 23, 42, 0.0) 60%);">
+              <div class="boss-top">
+                <div class="boss-name">${boss.name}</div>
+                ${missingCount + entryMissing > 0 ? `<div class="missing-note">Missing prices: ${missingCount + entryMissing}</div>` : ''}
+              </div>
+              <div class="boss-metrics">
+                <div class="metric"><span class="metric-label">Run Cost <span class="info-dot has-tooltip" data-tooltip="${runCostTooltip()}" tabindex="0" aria-label="${runCostTooltip()}">i</span></span><strong>${formatValue(computed.entryCost, chaosPerDivine)}</strong></div>
+                <div class="metric"><span class="metric-label">Drop EV <span class="info-dot has-tooltip" data-tooltip="${dropEvTooltip()}" tabindex="0" aria-label="${dropEvTooltip()}">i</span></span><strong>${formatValue(computed.expectedDrops, chaosPerDivine)}</strong></div>
+                <div class="metric"><span class="metric-label">Volatility <span class="info-dot has-tooltip" data-tooltip="${volatilityTooltip()}" tabindex="0" aria-label="${volatilityTooltip()}">i</span></span><strong>${formatPercent(volatilityPct)}</strong></div>
+              </div>
+              <div class="expected-return">
+                <span>Expected Return <span class="info-dot has-tooltip" data-tooltip="${expectedTooltip()}" tabindex="0" aria-label="${expectedTooltip()}">i</span></span>
+                <strong>${formatValue(computed.expectedProfit, chaosPerDivine)}</strong>
+              </div>
+            </div>
+          </summary>
+          <div class="detail-body">
+            <div>
+              <div class="section-title">Entry Cost</div>
+              <table class="table entry-table">
+                <colgroup>
+                  <col class="col-item" />
+                  <col class="col-qty" />
+                  <col class="col-price" />
+                  <col class="col-subtotal" />
+                  <col class="col-include" />
+                  <col class="col-override" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Subtotal</th>
+                    <th>Include</th>
+                    <th>Override</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${computed.entryItems.map((item) => `
+                    <tr class="${item.value == null ? 'row-missing' : ''}">
+                      <td>
+                        <div class="item-cell">
+                          ${item.icon ? `<img class="item-icon" src="${item.icon}" alt="" />` : ''}
+                          ${itemLabelMarkup(item)}
+                        </div>
+                      </td>
+                      <td>${item.qty}</td>
+                      <td>${item.price == null ? '—' : formatValue(item.price, chaosPerDivine)}</td>
+                      <td>${item.costOverride != null ? formatValue(item.costOverride, chaosPerDivine) : (item.value == null ? '—' : formatValue(item.value, chaosPerDivine))}</td>
+                      <td class="include-note">—</td>
+                      <td><input class="price-input" data-cost-key="${costKey(item)}" value="${MANUAL_COSTS[costKey(item)] ?? ''}" placeholder="override" /></td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+            ${boss.note ? `<div class="muted warning">${boss.note}</div>` : ''}
+            ${computed.groupResults.map((group) => {
+              const groupExpected = group.result.expected;
+              const groupStdev = Math.sqrt(group.result.variance);
+              const groupVolPct = percentOf(groupStdev, groupExpected);
+              const missing = group.result.unpricedItems.length;
+              return `
+                <div class="group-card">
+                  <div class="flex-row">
+                    <div>
+                      <div class="section-title">${group.label}</div>
+                      <div class="muted">${group.type === 'exclusive' ? 'Exclusive roll' : 'Independent rolls'}</div>
+                    </div>
+                    <div class="pill has-tooltip" data-tooltip="${dropFilterTooltip(chaosPerDivine)}" tabindex="0" aria-label="${dropFilterTooltip(chaosPerDivine)}">EV ${formatValue(groupExpected, chaosPerDivine)} • Volatility ${formatPercent(groupVolPct)} • Missing ${missing}</div>
+                  </div>
+                  <table class="table drop-table">
+                    <colgroup>
+                      <col class="col-item" />
+                      <col class="col-prob" />
+                      <col class="col-price" />
+                      <col class="col-ev" />
+                      <col class="col-include" />
+                      <col class="col-manual" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Prob</th>
+                        <th>Price</th>
+                        <th>EV</th>
+                        <th>Include</th>
+                        <th>Manual</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${group.items.map((item) => {
+                        const price = getPrice(item);
+                        const icon = findIcon(item);
+                        const p = item.p;
+                        const value = price != null && p != null ? price * p * (item.qty || 1) : null;
+                        const approx = item.approx ? '~' : '';
+                        const probLabel = p == null ? '—' : `${approx}${(p * 100).toFixed(2)}%`;
+                        const key = itemKey(item);
+                        return `
+                      <tr class="${price == null ? 'row-missing' : (state.minValueFilter && price != null && price < state.minValueThresholdChaos ? 'row-ignored' : '')}">
+                        <td>
+                          <div class="item-cell">
+                            ${icon ? `<img class="item-icon" src="${icon}" alt="" />` : ''}
+                            ${itemLabelMarkup(item)}
+                          </div>
+                        </td>
+                        <td>${probLabel}</td>
+                        <td>${price == null ? '—' : formatValue(price, chaosPerDivine)}</td>
+                        <td>${value == null ? '—' : formatValue(value, chaosPerDivine)}</td>
+                        <td>
+                          <input class="include-toggle" type="checkbox" data-include-key="${key}" ${isExcluded(item) ? '' : 'checked'} />
+                        </td>
+                        <td><input class="price-input" data-price-key="${key}" value="${MANUAL_PRICES[key] ?? ''}" placeholder="override" /></td>
+                      </tr>
+                    `;
+                      }).join('')}
+                    </tbody>
+                  </table>
+                </div>
+              `;
+            }).join('')}
+            <div class="muted">
+              Sources: ${boss.sources.map((src) => `<a class="link" href="${src}" target="_blank" rel="noreferrer">PoE Wiki</a>`).join(', ')}
+            </div>
+          </div>
+        `;
+
+        bossList.appendChild(details);
+      });
+
+      if (state.debug) {
+        const counts = state.priceData?.counts || {};
+        const categoryOrder = ['currency', 'fragment', 'maps', 'armour', 'weapon', 'accessory', 'jewels', 'flask', 'card'];
+        const loadedTypes = categoryOrder
+          .filter((key) => counts[key])
+          .map((key) => `${key}: ${counts[key]}`);
+        const apiSummary = (state.fetchResults || []).map((result) => {
+          if (result.status === 'ok') return `compact: ok (${result.items || 0}) ${result.url}`;
+          if (result.status === 'cache') return `compact: cache (${result.items || 0}) ${result.league || ''}`.trim();
+          return `compact: error (${result.error}) ${result.url}`;
+        });
+        const missingPriceItems = missingItems.filter((m) => m.reason === 'price');
+        const missingProbItems = missingItems.filter((m) => m.reason === 'prob');
+        const missingPreview = missingPriceItems.slice(0, 50).map((m) => {
+          const prob = m.p == null ? '—' : `${(m.p * 100).toFixed(2)}%`;
+          const types = m.types.length ? m.types.join(', ') : 'none';
+          let suggestionText = '';
+          const suggestions = suggestCandidates({ name: m.item });
+          if (suggestions.length) {
+            suggestionText = ` | suggestions: ${suggestions.join(', ')}`;
+          }
+          return `${m.boss} | ${m.group} | ${m.item} | p=${prob} | types=${types}${suggestionText}`;
+        });
+        const fallbackList = Array.from(state.fallbackHits.values());
+        const debugLines = [
+          `League: ${state.leagueText} (id: ${state.leagueId})`,
+          `Pricing league: ${state.pricingLeague || 'unknown'}`,
+          `Pricing base: ${state.watchBase || 'unknown'}`,
+          `Price items loaded: ${state.priceData?.items?.length || 0}`,
+          `Category counts: ${loadedTypes.join(' | ') || 'none'}`,
+          apiSummary.length ? `API results: ${apiSummary.join(' | ')}` : 'API results: none',
+          `Missing price count: ${missingPriceItems.length}`,
+          `Missing probability count: ${missingProbItems.length}`,
+          `Fallback hits: ${fallbackList.length}`,
+          missingPreview.length ? 'Missing (first 50):' : 'Missing (first 50): none',
+          ...missingPreview
+        ];
+        if (fallbackList.length) {
+          debugLines.push('Fallback (first 25):');
+          debugLines.push(...fallbackList.slice(0, 25).map((f) => `${f.name} -> ${f.type} (${f.price.toFixed(1)}c)`));
+        }
+        setDebug(debugLines.join('\n'));
+        console.table?.(missingItems.slice(0, 50));
+        if (fallbackList.length) console.table?.(fallbackList.slice(0, 50));
+      } else {
+        setDebug('');
+      }
+
+      const applyManualValue = (target, shouldRender) => {
+        const priceKey = target.getAttribute('data-price-key');
+        const costKeyValue = target.getAttribute('data-cost-key');
+        const value = target.value.trim();
+        if (priceKey) {
+          if (value === '') {
+            delete MANUAL_PRICES[priceKey];
+          } else if (!Number.isNaN(Number(value))) {
+            MANUAL_PRICES[priceKey] = Number(value);
+          }
+          localStorage.setItem(manualPriceKey, JSON.stringify(MANUAL_PRICES));
+        }
+        if (costKeyValue) {
+          if (value === '') {
+            delete MANUAL_COSTS[costKeyValue];
+          } else if (!Number.isNaN(Number(value))) {
+            MANUAL_COSTS[costKeyValue] = Number(value);
+          }
+          localStorage.setItem(manualCostKey, JSON.stringify(MANUAL_COSTS));
+        }
+        if (shouldRender) safeRender();
+      };
+
+      bossList.querySelectorAll('.price-input').forEach((input) => {
+        input.addEventListener('input', (event) => {
+          applyManualValue(event.target, false);
+        });
+        input.addEventListener('change', (event) => {
+          applyManualValue(event.target, true);
+        });
+        input.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter') event.target.blur();
+        });
+      });
+
+      bossList.querySelectorAll('.include-toggle').forEach((input) => {
+        input.addEventListener('change', (event) => {
+          const key = event.target.getAttribute('data-include-key');
+          if (!key) return;
+          if (event.target.checked) {
+            delete IGNORED_DROPS[key];
+          } else {
+            IGNORED_DROPS[key] = true;
+          }
+          localStorage.setItem(ignoreDropsKey, JSON.stringify(IGNORED_DROPS));
+          safeRender();
+        });
+      });
+
+      bossList.querySelectorAll('input, select, button, a').forEach((el) => {
+        el.addEventListener('click', (event) => event.stopPropagation());
+        el.addEventListener('pointerdown', (event) => event.stopPropagation());
+      });
+    }
+
+    function safeRender() {
+      try {
+        render();
+      } catch (err) {
+        console.error(err);
+        setStatus(`Render error: ${err.message}`, true);
+      }
+    }
+
+    async function fetchPrices(forceRefresh = false) {
+      setStatus('Fetching poe.watch prices…');
+      state.priceData = null;
+      state.fallbackHits = new Map();
+      state.fetchResults = [];
+      state.watchBase = null;
+      state.priceUpdatedAt = null;
+
+      const leagueCandidates = Array.from(new Set([state.leagueText, state.leagueId].filter(Boolean)));
+      let pricingLeague = leagueCandidates[0] || state.leagueId;
+      if (!forceRefresh) {
+        const cache = loadPriceCache();
+        for (const leagueValue of leagueCandidates) {
+          const entry = cache[leagueValue];
+          if (cacheEntryIsFresh(entry)) {
+            state.priceData = indexWatchData(entry.items);
+            state.pricingLeague = leagueValue;
+            state.watchBase = 'cache';
+            state.priceUpdatedAt = parseTimestamp(entry.updatedAt);
+            state.fetchResults.push({ status: 'cache', items: entry.items.length, league: leagueValue });
+            const divine = state.priceData.byLower.get('divine orb')?.[0];
+            state.divineChaos = divine ? safeNumber(divine.mean ?? divine.min ?? divine.max) : null;
+            updateMinValueInput();
+            const updatedLabel = state.priceUpdatedAt ? ` Updated ${formatUpdatedAt(state.priceUpdatedAt)}.` : '';
+            setStatus(`Prices loaded for ${leagueValue}.${updatedLabel}`);
+            safeRender();
+            return;
+          }
+        }
+      }
+      const base = WATCH_API_BASE;
+      const endpoint = buildWatchEndpoint(base);
+      for (const leagueValue of leagueCandidates) {
+        const url = endpoint.replace('{LEAGUE}', encodeURIComponent(leagueValue));
+        try {
+          const resp = await fetch(url);
+          if (!resp.ok) throw new Error(`${resp.status}`);
+          const data = await resp.json();
+          const items = Array.isArray(data?.items) ? data.items : (Array.isArray(data) ? data : []);
+          if (!items.length) throw new Error('empty');
+          const slimItems = slimWatchItems(items);
+          state.priceData = indexWatchData(slimItems);
+          state.pricingLeague = leagueValue;
+          state.watchBase = base;
+          state.priceUpdatedAt = findUpdatedAt(data, resp);
+          state.fetchResults.push({ status: 'ok', items: items.length, url });
+          pricingLeague = leagueValue;
+          const cache = {
+            [pricingLeague]: {
+            fetchedAt: Date.now(),
+            updatedAt: state.priceUpdatedAt ? state.priceUpdatedAt.toISOString() : null,
+            items: slimItems
+            }
+          };
+          savePriceCache(cache);
+          break;
+        } catch (err) {
+          state.fetchResults.push({ status: 'error', error: err?.message || 'unknown', url });
+        }
+      }
+
+      if (!state.priceData) {
+        setStatus('Failed to load poe.watch prices. Check the league name and try again.', true);
+        safeRender();
+        return;
+      }
+
+      const divine = state.priceData.byLower.get('divine orb')?.[0];
+      const divineChaos = divine ? safeNumber(divine.mean ?? divine.min ?? divine.max) : null;
+      state.divineChaos = divineChaos;
+      updateMinValueInput();
+
+      const failures = state.fetchResults.filter((r) => r && r.status === 'error');
+      const updatedLabel = state.priceUpdatedAt ? ` Updated ${formatUpdatedAt(state.priceUpdatedAt)}.` : '';
+      setStatus(`Prices loaded for ${pricingLeague}.${updatedLabel}`);
+      if (failures.length && state.debug) console.table?.(failures);
+      safeRender();
+    }
+
+    const debugPref = localStorage.getItem('poeBossDebug') || 'off';
+    debugToggle.checked = debugPref === 'on';
+    state.debug = debugToggle.checked;
+    debugToggle.addEventListener('change', () => {
+      state.debug = debugToggle.checked;
+      localStorage.setItem('poeBossDebug', state.debug ? 'on' : 'off');
+      safeRender();
+    });
+
+    copyDebug.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(debugContent.textContent || '');
+        setStatus('Debug copied to clipboard.');
+      } catch (err) {
+        setStatus('Unable to copy debug output.', true);
+      }
+    });
+
+    safeRender();
+    fetchPrices();
+  </script>
+</body>
+</html>
