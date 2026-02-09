@@ -1,6 +1,6 @@
     const BASE_LEAGUE = '';
-    const BASE_PRICE_MODE = 'min';
-    const BASE_DISPLAY_CURRENCY = 'chaos';
+    const BASE_PRICE_MODE = 'avg';
+    const BASE_DISPLAY_CURRENCY = 'divine';
     const BASE_MIN_VALUE_ENABLED = false;
     const BASE_MIN_VALUE_CHAOS = 10;
     const BASE_DEBUG = false;
@@ -89,7 +89,7 @@
       }
     }
 
-    const storedCurrency = localStorage.getItem(displayCurrencyKey) || 'chaos';
+    const storedCurrency = localStorage.getItem(displayCurrencyKey) || BASE_DISPLAY_CURRENCY;
     const state = {
       leagueId: DEFAULT_LEAGUE,
       leagueText: DEFAULT_LEAGUE,
@@ -253,6 +253,7 @@
         if (!key || seen.has(key)) return false;
         seen.add(key);
         if (option.active === false) return false;
+        if (shouldIgnoreLeague(option)) return false;
         return true;
       });
       if (!options.length) return null;
@@ -349,6 +350,15 @@
       const raw = String(option?.text || option?.id || option?.watch || '');
       const normalized = raw.toLowerCase();
       return normalized.includes('hardcore') || /solo self[- ]found/.test(normalized);
+    }
+
+    function shouldIgnoreLeague(option) {
+      const raw = String(option?.text || option?.id || option?.watch || '');
+      const normalized = raw.toLowerCase();
+      if (normalized.includes('ruthless')) return true;
+      if (normalized.includes('hardcore') && normalized.includes('phrecia')) return true;
+      if (normalized.includes('solo self-found') || /\bssf\b/.test(normalized)) return true;
+      return false;
     }
 
     buildLeagueSelect();
@@ -456,14 +466,13 @@
         localStorage.removeItem(manualPriceKey);
         localStorage.removeItem(manualCostKey);
         localStorage.removeItem(ignoreDropsKey);
-        localStorage.removeItem('poeBossLeague');
         localStorage.removeItem('poeBossPriceMode');
         localStorage.removeItem(displayCurrencyKey);
         localStorage.removeItem('poeBossMinValueEnabled');
         localStorage.removeItem('poeBossMinValueChaos');
         localStorage.removeItem('poeBossDebug');
 
-        applyLeagueSelection(BASE_LEAGUE);
+        applyLeagueSelection(previousLeague, { persist: true });
         state.priceMode = BASE_PRICE_MODE;
         state.displayCurrency = BASE_DISPLAY_CURRENCY;
         state.minValueFilter = BASE_MIN_VALUE_ENABLED;
@@ -476,12 +485,8 @@
         debugToggle.checked = state.debug;
         updateMinValueInput();
 
-        if (previousLeague !== state.leagueId) {
-          fetchPrices();
-        } else {
-          safeRender();
-          setStatus('Custom values and selections reset.');
-        }
+        safeRender();
+        setStatus('Custom values reset (league preserved).');
       });
     }
 
@@ -937,8 +942,6 @@
 
       if (item.noPrice) return null;
 
-      if (isExcluded(item)) return 0;
-
       const matches = findWatchMatches(item, true);
       const price = pickWatchPrice(matches, item);
       if (price != null) return price;
@@ -994,8 +997,14 @@
 
       group.items.forEach((item) => {
         const excluded = isExcluded(item);
-        const price = excluded ? 0 : getPrice(item);
+        const price = getPrice(item);
         const p = item.p;
+
+        if (excluded) {
+          pricedItems.push({ ...item, price, value: 0, ignored: true });
+          return;
+        }
+
         if (p == null) {
           unpricedItems.push({ ...item, price, reason: 'prob' });
           return;
@@ -1016,7 +1025,7 @@
           expected += p * value;
           variance += p * (1 - p) * value * value;
         }
-        pricedItems.push({ ...item, price, value, ignored: excluded });
+        pricedItems.push({ ...item, price, value, ignored: false });
       });
 
       if (group.type === 'exclusive') {
@@ -1250,15 +1259,16 @@
                     </thead>
                     <tbody>
                       ${group.items.map((item) => {
+                        const excluded = isExcluded(item);
                         const price = getPrice(item);
                         const icon = findIcon(item);
                         const p = item.p;
-                        const value = price != null && p != null ? price * p * (item.qty || 1) : null;
+                        const value = !excluded && price != null && p != null ? price * p * (item.qty || 1) : null;
                         const approx = item.approx ? '~' : '';
                         const probLabel = p == null ? '—' : `${approx}${(p * 100).toFixed(2)}%`;
                         const key = itemKey(item);
                         return `
-                      <tr class="${price == null ? 'row-missing' : (state.minValueFilter && price != null && price < state.minValueThresholdChaos ? 'row-ignored' : '')}">
+                      <tr class="${price == null ? 'row-missing' : ((excluded || (state.minValueFilter && price != null && price < state.minValueThresholdChaos)) ? 'row-ignored' : '')}">
                         <td>
                           <div class="item-cell">
                             ${icon ? `<img class="item-icon" src="${icon}" alt="" />` : ''}
