@@ -75,26 +75,6 @@
         ]
       },
       {
-        "label": "Encounter-Specific",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Archive Reliquary Key",
-            "p": 0.015,
-            "types": [
-              "Fragment"
-            ]
-          },
-          {
-            "name": "Curio of Absorption",
-            "p": 0.05,
-            "types": [
-              "Fragment"
-            ]
-          }
-        ]
-      },
-      {
         "label": "Additional Drops",
         "type": "independent",
         "items": [
@@ -103,8 +83,7 @@
             "p": 0.05,
             "types": [
               "UniqueJewel"
-            ],
-            "note": "Hidden Ascendancy Notable variant"
+            ]
           },
           {
             "name": "Exceptional Eldritch Ember",
@@ -277,19 +256,6 @@
         ]
       },
       {
-        "label": "Encounter-Specific",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Tangle Reliquary Key",
-            "p": 0.015,
-            "types": [
-              "Fragment"
-            ]
-          }
-        ]
-      },
-      {
         "label": "Additional Drops",
         "type": "independent",
         "items": [
@@ -298,8 +264,7 @@
             "p": 0.05,
             "types": [
               "UniqueJewel"
-            ],
-            "note": "Hidden Ascendancy Notable variant"
+            ]
           },
           {
             "name": "Exceptional Eldritch Ichor",
@@ -406,7 +371,7 @@
         "type": "independent",
         "items": [
           {
-            "name": "Tangle Reliquary Key",
+            "name": "Visceral Reliquary Key",
             "p": 0.015,
             "types": [
               "Fragment"
@@ -798,13 +763,6 @@
             ]
           },
           {
-            "name": "Oriath's End",
-            "p": 0.075,
-            "types": [
-              "UniqueFlask"
-            ]
-          },
-          {
             "name": "The Saviour",
             "p": 0.005,
             "types": [
@@ -1053,40 +1011,6 @@
         ]
       },
       {
-        "label": "Guaranteed Unique (Pool B)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Echoes of Creation",
-            "p": 0.4,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Entropic Devastation",
-            "p": 0.36,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "The Tides of Time",
-            "p": 0.22,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Starforge",
-            "p": 0.02,
-            "types": [
-              "UniqueWeapon"
-            ]
-          }
-        ]
-      },
-      {
         "label": "Fragment Drop",
         "type": "exclusive",
         "items": [
@@ -1100,28 +1024,6 @@
           {
             "name": "Fragment of Shape",
             "p": 0.5,
-            "types": [
-              "Fragment"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Encounter-Specific",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Sublime Vision",
-            "p": 0.02,
-            "types": [
-              "UniqueJewel"
-            ],
-            "strategy": "min",
-            "note": "Variant-heavy"
-          },
-          {
-            "name": "Cosmic Reliquary Key",
-            "p": 0.01,
             "types": [
               "Fragment"
             ]

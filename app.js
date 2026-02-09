@@ -35,11 +35,12 @@
     const IGNORED_DROPS = JSON.parse(localStorage.getItem(ignoreDropsKey) || '{}');
 
     const IS_FILE_ORIGIN = window.location.protocol === 'file:';
+    const IS_LOCAL_HOST = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname);
     const STATIC_DATA_BASE = 'data';
     const STATIC_LEAGUES_URL = `${STATIC_DATA_BASE}/leagues.json`;
     const STATIC_PRICES_BASE = `${STATIC_DATA_BASE}/prices`;
-    const USE_STATIC_DATA = true;
-    const WATCH_API_BASE = USE_STATIC_DATA ? '' : (IS_FILE_ORIGIN ? 'https://api.poe.watch' : '/api/poewatch');
+    const USE_STATIC_DATA = !IS_LOCAL_HOST;
+    const WATCH_API_BASE = USE_STATIC_DATA ? '' : 'https://api.poe.watch';
     const WATCH_DETAILS_BASE = 'https://poe.watch/detailed';
     const WATCH_GAME = 'poe1';
 
