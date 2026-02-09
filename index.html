@@ -78,23 +78,33 @@
       margin-top: 6px;
     }
 
-    .header-actions .action-button {
-      width: auto;
-      padding: 8px 14px;
+    .header-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 10px;
       border-radius: 999px;
-      background: transparent;
       border: 1px solid var(--border);
-      color: var(--muted);
+      background: rgba(15, 23, 42, 0.6);
       font-size: 12px;
-      letter-spacing: 0.8px;
       text-transform: uppercase;
-      box-shadow: none;
+      letter-spacing: 0.8px;
+      color: var(--muted);
     }
 
-    .header-actions .action-button:hover {
+    .button-secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--ink);
+      box-shadow: none;
+      transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .button-secondary:hover {
       color: var(--ink);
       border-color: rgba(56, 189, 248, 0.6);
       background: rgba(56, 189, 248, 0.12);
+      transform: none;
     }
 
     .chips {
@@ -122,17 +132,41 @@
     }
 
     .control-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 16px;
       align-items: end;
+    }
+
+    .control-grid > div {
+      flex: 1 1 auto;
+    }
+
+    .control-compact {
+      flex: 0 1 auto;
+      min-width: 0;
+    }
+
+    .control-compact select,
+    .control-compact button {
+      width: 100%;
+      min-width: 0;
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+
+    .control-compact .button-secondary {
+      min-width: 0;
+    }
+
+    .control-compact .button-wide {
+      min-width: 0;
     }
 
     label {
       display: block;
       font-size: 13px;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
+      letter-spacing: 0.2px;
       color: var(--muted);
       margin-bottom: 6px;
     }
@@ -141,6 +175,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      margin-bottom: 6px;
     }
 
     .label-row label {
@@ -236,20 +271,6 @@
       background: rgba(56, 189, 248, 0.1);
     }
 
-    .toggle-wrap {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.6);
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--muted);
-    }
-
     .switch {
       position: relative;
       width: 42px;
@@ -308,12 +329,6 @@
       width: 120px;
     }
 
-    .min-unit {
-      font-size: 13px;
-      color: var(--muted);
-      min-width: 24px;
-    }
-
     .boss-list {
       display: grid;
       gap: 12px;
@@ -331,7 +346,7 @@
     summary {
       list-style: none;
       cursor: pointer;
-      padding: 12px 14px;
+      padding: 12px 18px;
       display: block;
       background: var(--summary-gradient, #0b1220);
       border-left: 3px solid var(--summary-accent, #fbbf24);
@@ -453,6 +468,28 @@
     .has-tooltip:hover::after,
     .has-tooltip:focus::before,
     .has-tooltip:focus::after {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .tooltip-bottom::before {
+      bottom: auto;
+      top: calc(100% + 4px);
+      transform: translate(-50%, -6px);
+      border-width: 0 6px 6px 6px;
+      border-color: transparent transparent rgba(15, 23, 42, 0.98) transparent;
+    }
+
+    .tooltip-bottom::after {
+      bottom: auto;
+      top: calc(100% + 10px);
+      transform: translate(-50%, -6px);
+    }
+
+    .tooltip-bottom:hover::before,
+    .tooltip-bottom:hover::after,
+    .tooltip-bottom:focus::before,
+    .tooltip-bottom:focus::after {
       opacity: 1;
       transform: translate(-50%, 0);
     }
@@ -675,6 +712,47 @@
     }
 
     @media (max-width: 720px) {
+      .wrap {
+        margin: 20px auto 70px;
+        padding: 0 16px;
+      }
+
+      .header-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .header-actions {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .control-grid {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .control-grid > div {
+        width: 100%;
+        flex: 1 1 auto;
+      }
+
+      .control-compact select,
+      .control-compact button {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .min-filter {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .min-filter input[type="number"] {
+        flex: 1 1 160px;
+        width: 100%;
+      }
+
       summary { padding: 14px; }
       .detail-body { padding: 14px; }
       .metric strong { font-size: 16px; }
@@ -692,6 +770,7 @@
         align-items: flex-start;
       }
     }
+
   </style>
 </head>
 <body>
@@ -709,8 +788,7 @@
           </div>
         </div>
         <div class="header-actions">
-          <button id="resetAll" class="action-button" type="button">Reset</button>
-          <div class="toggle-wrap">
+          <div class="header-chip">
             <span>Debug</span>
             <label class="switch">
               <input type="checkbox" id="debugToggle" />
@@ -723,11 +801,11 @@
 
     <section class="panel">
       <div class="control-grid">
-        <div>
+        <div class="control-compact">
           <label for="leagueSelect">League</label>
           <select id="leagueSelect"></select>
         </div>
-        <div>
+        <div class="control-compact">
           <label for="displayCurrency">Display Currency</label>
           <select id="displayCurrency">
             <option value="chaos" selected>Chaos</option>
@@ -756,14 +834,18 @@
               <span class="slider"></span>
             </label>
             <input id="minValueInput" type="number" min="0" step="0.1" />
-            <span id="minValueUnit" class="min-unit">c</span>
           </div>
         </div>
-        <div>
-          <label aria-hidden="true">&nbsp;</label>
-          <button id="refresh">Refresh Prices</button>
+        <div class="control-compact">
+          <div class="label-row">
+            <label for="resetAll">Reset</label>
+            <span class="info-dot has-tooltip" data-tooltip="Resets manual price overrides, include toggles, league/currency selections, filters, and debug back to defaults." tabindex="0" aria-label="Resets manual price overrides, include toggles, league/currency selections, filters, and debug back to defaults.">i</span>
+          </div>
+          <button id="resetAll" class="button-secondary" type="button">Reset</button>
         </div>
-        <div>
+        <div class="control-compact">
+          <label aria-hidden="true">&nbsp;</label>
+          <button id="refresh" class="button-wide has-tooltip" data-tooltip="Refresh forces a live API fetch (bypasses cache). Updated timestamps reflect when poe.watch last updated, not when you click refresh." aria-label="Refresh forces a live API fetch (bypasses cache). Updated timestamps reflect when poe.watch last updated, not when you click refresh.">Refresh Prices</button>
         </div>
       </div>
       <div id="status" class="status">Ready.</div>
@@ -1529,7 +1611,6 @@
     const bossList = document.getElementById('bossList');
     const minValueToggle = document.getElementById('minValueToggle');
     const minValueInput = document.getElementById('minValueInput');
-    const minValueUnit = document.getElementById('minValueUnit');
 
     function buildLeagueSelect() {
       leagueSelect.innerHTML = '';
@@ -1578,11 +1659,9 @@
       if (state.displayCurrency === 'divine' && state.divineChaos) {
         minValueInput.value = (threshold / state.divineChaos).toFixed(2);
         minValueInput.step = '0.01';
-        minValueUnit.textContent = 'div';
       } else {
         minValueInput.value = threshold.toFixed(1);
         minValueInput.step = '0.1';
-        minValueUnit.textContent = 'c';
       }
     }
 
@@ -2241,12 +2320,12 @@
                 ${missingCount + entryMissing > 0 ? `<div class="missing-note">Missing prices: ${missingCount + entryMissing}</div>` : ''}
               </div>
               <div class="boss-metrics">
-                <div class="metric"><span class="metric-label">Run Cost <span class="info-dot has-tooltip" data-tooltip="${runCostTooltip()}" tabindex="0" aria-label="${runCostTooltip()}">i</span></span><strong>${formatValue(computed.entryCost, chaosPerDivine)}</strong></div>
-                <div class="metric"><span class="metric-label">Drop EV <span class="info-dot has-tooltip" data-tooltip="${dropEvTooltip()}" tabindex="0" aria-label="${dropEvTooltip()}">i</span></span><strong>${formatValue(computed.expectedDrops, chaosPerDivine)}</strong></div>
-                <div class="metric"><span class="metric-label">Volatility <span class="info-dot has-tooltip" data-tooltip="${volatilityTooltip()}" tabindex="0" aria-label="${volatilityTooltip()}">i</span></span><strong>${formatPercent(volatilityPct)}</strong></div>
+                <div class="metric"><span class="metric-label">Run Cost <span class="info-dot has-tooltip" data-tooltip="${runCostTooltip()}">i</span></span><strong>${formatValue(computed.entryCost, chaosPerDivine)}</strong></div>
+                <div class="metric"><span class="metric-label">Drop EV <span class="info-dot has-tooltip" data-tooltip="${dropEvTooltip()}">i</span></span><strong>${formatValue(computed.expectedDrops, chaosPerDivine)}</strong></div>
+                <div class="metric"><span class="metric-label">Volatility <span class="info-dot has-tooltip" data-tooltip="${volatilityTooltip()}">i</span></span><strong>${formatPercent(volatilityPct)}</strong></div>
               </div>
               <div class="expected-return">
-                <span>Expected Return <span class="info-dot has-tooltip" data-tooltip="${expectedTooltip()}" tabindex="0" aria-label="${expectedTooltip()}">i</span></span>
+                <span>Expected Return <span class="info-dot has-tooltip" data-tooltip="${expectedTooltip()}">i</span></span>
                 <strong>${formatValue(computed.expectedProfit, chaosPerDivine)}</strong>
               </div>
             </div>
@@ -2286,7 +2365,7 @@
                       <td>${item.price == null ? '—' : formatValue(item.price, chaosPerDivine)}</td>
                       <td>${item.costOverride != null ? formatValue(item.costOverride, chaosPerDivine) : (item.value == null ? '—' : formatValue(item.value, chaosPerDivine))}</td>
                       <td class="include-note">—</td>
-                      <td><input class="price-input" data-cost-key="${costKey(item)}" value="${MANUAL_COSTS[costKey(item)] ?? ''}" placeholder="override" /></td>
+                      <td><input class="price-input" data-cost-key="${costKey(item)}" name="cost:${costKey(item)}" value="${MANUAL_COSTS[costKey(item)] ?? ''}" placeholder="override" /></td>
                     </tr>
                   `).join('')}
                 </tbody>
@@ -2347,9 +2426,9 @@
                         <td>${price == null ? '—' : formatValue(price, chaosPerDivine)}</td>
                         <td>${value == null ? '—' : formatValue(value, chaosPerDivine)}</td>
                         <td>
-                          <input class="include-toggle" type="checkbox" data-include-key="${key}" ${isExcluded(item) ? '' : 'checked'} />
+                          <input class="include-toggle" type="checkbox" data-include-key="${key}" name="include:${key}" ${isExcluded(item) ? '' : 'checked'} />
                         </td>
-                        <td><input class="price-input" data-price-key="${key}" value="${MANUAL_PRICES[key] ?? ''}" placeholder="override" /></td>
+                        <td><input class="price-input" data-price-key="${key}" name="price:${key}" value="${MANUAL_PRICES[key] ?? ''}" placeholder="override" /></td>
                       </tr>
                     `;
                       }).join('')}
