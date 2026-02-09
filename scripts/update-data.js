@@ -249,7 +249,17 @@ async function main() {
     const compactResp = await fetchJson(compactUrl);
     const compactItems = extractWatchItems(compactResp.data);
     if (!compactItems.length) {
-      throw new Error(`No compact items returned for league ${league.watch}`);
+      const errorPayload = {
+        generatedAt,
+        league: { watch: league.watch, text: league.text, slug },
+        errors: [{ step: 'compact', error: 'No compact items returned' }]
+      };
+      await fs.writeFile(
+        path.join(leagueDir, 'errors.json'),
+        `${JSON.stringify(errorPayload, null, 2)}\n`
+      );
+      console.warn(`Skipping league ${league.watch}: no compact items returned`);
+      continue;
     }
     const compactUpdatedAt = findUpdatedAt(compactResp.data, compactResp.headers);
     const compactPayload = {
