@@ -591,6 +591,11 @@
       text-align: left;
     }
 
+    .table tbody tr:last-child td {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
     .drop-table th:nth-child(5),
     .drop-table td:nth-child(5) {
       text-align: center;
@@ -638,12 +643,12 @@
     .entry-table col.col-override { width: 14%; }
 
     .item-icon {
-      width: 22px;
-      height: 22px;
+      width: 27px;
+      height: 27px;
       border-radius: 6px;
-      border: 1px solid var(--border);
-      background: #0b1220;
-      object-fit: cover;
+      border: none;
+      background: transparent;
+      object-fit: contain;
     }
 
     .row-missing {
