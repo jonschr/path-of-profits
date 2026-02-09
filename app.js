@@ -37,7 +37,7 @@
     const IS_FILE_ORIGIN = window.location.protocol === 'file:';
     const STATIC_DATA_BASE = 'data';
     const STATIC_LEAGUES_URL = `${STATIC_DATA_BASE}/leagues.json`;
-    const STATIC_PRICES_URL = `${STATIC_DATA_BASE}/prices.json`;
+    const STATIC_PRICES_BASE = `${STATIC_DATA_BASE}/prices`;
     const USE_STATIC_DATA = true;
     const WATCH_API_BASE = USE_STATIC_DATA ? '' : (IS_FILE_ORIGIN ? 'https://api.poe.watch' : '/api/poewatch');
     const WATCH_DETAILS_BASE = 'https://poe.watch/detailed';
@@ -148,20 +148,7 @@
       );
     }
 
-    function findStaticLeagueKey(leaguesById, candidates) {
-      if (!leaguesById || typeof leaguesById !== 'object') return null;
-      const keys = Object.keys(leaguesById);
-      if (!keys.length) return null;
-      const normalized = new Map(
-        keys.map((key) => [normalizeLeagueCompare(normalizeLeagueKey(key)), key])
-      );
-      for (const candidate of candidates) {
-        const key = normalizeLeagueCompare(normalizeLeagueKey(candidate));
-        if (!key) continue;
-        if (normalized.has(key)) return normalized.get(key);
-      }
-      return keys[0];
-    }
+
 
     function applyLeagueSelection(preferred, { persist = false, allowFallback = true } = {}) {
       const match = findLeagueByKey(preferred);
@@ -518,6 +505,16 @@
         .replace(/^the\\s+/, '')
         .replace(/[’']/g, '')
         .replace(/[^a-z0-9]/g, '');
+    }
+
+    function slugifyLeague(text) {
+      return String(text || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[’']/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
     }
 
     function withCacheBust(url, enabled) {
@@ -1368,29 +1365,35 @@
       let pricingLeague = leagueCandidates[0] || state.leagueId;
 
       if (USE_STATIC_DATA) {
-        try {
-          const url = withCacheBust(STATIC_PRICES_URL, forceRefresh);
-          const resp = await fetch(url, { cache: forceRefresh ? 'no-store' : 'default' });
-          if (!resp.ok) throw new Error(`${resp.status}`);
-          const data = await resp.json();
-          const leaguesById = data?.leagues || {};
-          const leagueKey = findStaticLeagueKey(leaguesById, leagueCandidates);
-          if (!leagueKey) throw new Error('missing league data');
-          const entry = leaguesById[leagueKey] || {};
-          const items = Array.isArray(entry.items) ? entry.items : extractWatchItems(entry);
-          if (!items.length) throw new Error('empty');
-          state.priceData = indexWatchData(items);
-          state.pricingLeague = leagueKey;
-          state.watchBase = 'static';
-          state.priceUpdatedAt = parseTimestamp(entry.updatedAt) || parseTimestamp(data?.generatedAt);
-          state.fetchResults.push({ status: 'ok', source: 'static', items: items.length, league: leagueKey });
-          pricingLeague = leagueKey;
-        } catch (err) {
-          state.fetchResults.push({
-            status: 'error',
-            source: 'static',
-            error: err?.message || 'unknown'
-          });
+        const candidates = leagueCandidates.length
+          ? leagueCandidates
+          : (LEAGUES?.[0]?.options?.[0]?.id ? [LEAGUES[0].options[0].id] : []);
+        for (const candidate of candidates) {
+          const slug = slugifyLeague(candidate);
+          if (!slug) continue;
+          const url = withCacheBust(`${STATIC_PRICES_BASE}/${slug}/compact.json`, forceRefresh);
+          try {
+            const resp = await fetch(url, { cache: forceRefresh ? 'no-store' : 'default' });
+            if (!resp.ok) throw new Error(`${resp.status}`);
+            const data = await resp.json();
+            const items = Array.isArray(data?.items) ? data.items : extractWatchItems(data);
+            if (!items.length) throw new Error('empty');
+            const leagueLabel = data?.league?.watch || data?.league?.id || candidate;
+            state.priceData = indexWatchData(items);
+            state.pricingLeague = leagueLabel;
+            state.watchBase = 'static';
+            state.priceUpdatedAt = parseTimestamp(data?.updatedAt) || parseTimestamp(data?.generatedAt);
+            state.fetchResults.push({ status: 'ok', source: 'static', items: items.length, league: leagueLabel, url });
+            pricingLeague = leagueLabel;
+            break;
+          } catch (err) {
+            state.fetchResults.push({
+              status: 'error',
+              source: 'static',
+              error: err?.message || 'unknown',
+              url
+            });
+          }
         }
       } else {
         if (!forceRefresh) {
@@ -1478,7 +1481,7 @@
 
       if (!state.priceData) {
         const message = USE_STATIC_DATA
-          ? 'Failed to load cached prices. Check data/prices.json.'
+          ? 'Failed to load cached prices. Check data/prices/<league>/compact.json.'
           : 'Failed to load poe.watch prices. Check the league name and try again.';
         setStatus(message, true);
         safeRender();

@@ -10,7 +10,7 @@ const REQUEST_DELAY_MS = 120;
 const ROOT = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data');
 const LEAGUES_PATH = path.join(DATA_DIR, 'leagues.json');
-const PRICES_PATH = path.join(DATA_DIR, 'prices.json');
+const PRICES_DIR = path.join(DATA_DIR, 'prices');
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -26,6 +26,16 @@ function parseTimestamp(value) {
   }
   const date = new Date(String(value));
   return Number.isNaN(date.valueOf()) ? null : date;
+}
+
+function slugifyLeague(text) {
+  return String(text || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[’']/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
 
 function parseLeagueDate(value) {
@@ -193,6 +203,7 @@ async function fetchJson(url) {
 async function main() {
   const generatedAt = new Date().toISOString();
   await fs.mkdir(DATA_DIR, { recursive: true });
+  await fs.mkdir(PRICES_DIR, { recursive: true });
 
   const leaguesResp = await fetchJson(`${WATCH_BASE}/leagues`);
   const rawLeagues = extractLeagueList(leaguesResp.data);
@@ -219,10 +230,54 @@ async function main() {
     throw new Error('No categories returned from poe.watch');
   }
 
-  const pricesByLeague = {};
+  const usedSlugs = new Set();
   for (const league of uniqueActive) {
-    const items = [];
-    let updatedAt = null;
+    let slug = slugifyLeague(league.watch);
+    if (!slug) continue;
+    if (usedSlugs.has(slug)) {
+      let suffix = 2;
+      while (usedSlugs.has(`${slug}-${suffix}`)) suffix += 1;
+      slug = `${slug}-${suffix}`;
+    }
+    usedSlugs.add(slug);
+
+    const leagueDir = path.join(PRICES_DIR, slug);
+    const categoryDir = path.join(leagueDir, 'category');
+    await fs.mkdir(categoryDir, { recursive: true });
+
+    const compactUrl = `${WATCH_BASE}/compact?league=${encodeURIComponent(league.watch)}&all=true&game=${encodeURIComponent(WATCH_GAME)}`;
+    const compactResp = await fetchJson(compactUrl);
+    const compactItems = extractWatchItems(compactResp.data);
+    if (!compactItems.length) {
+      throw new Error(`No compact items returned for league ${league.watch}`);
+    }
+    const compactUpdatedAt = findUpdatedAt(compactResp.data, compactResp.headers);
+    const compactPayload = {
+      generatedAt,
+      source: 'poe.watch',
+      league: {
+        watch: league.watch,
+        text: league.text,
+        slug
+      },
+      updatedAt: compactUpdatedAt ? compactUpdatedAt.toISOString() : null,
+      items: slimWatchItems(compactItems)
+    };
+    await fs.writeFile(path.join(leagueDir, 'compact.json'), `${JSON.stringify(compactPayload, null, 2)}\n`);
+
+    const categoriesPayload = {
+      generatedAt,
+      source: 'poe.watch',
+      league: {
+        watch: league.watch,
+        text: league.text,
+        slug
+      },
+      categories
+    };
+    await fs.writeFile(path.join(leagueDir, 'categories.json'), `${JSON.stringify(categoriesPayload, null, 2)}\n`);
+
+    let categoryUpdatedAt = null;
     const errors = [];
     for (const category of categories) {
       const url = `${WATCH_BASE}/get?league=${encodeURIComponent(league.watch)}&category=${encodeURIComponent(category)}&game=${encodeURIComponent(WATCH_GAME)}`;
@@ -234,21 +289,34 @@ async function main() {
           }
           return item;
         });
-        if (catItems.length) items.push(...catItems);
-        updatedAt = pickLatestTimestamp(updatedAt, findUpdatedAt(data, headers));
+        const catPayload = {
+          generatedAt,
+          source: 'poe.watch',
+          league: {
+            watch: league.watch,
+            text: league.text,
+            slug
+          },
+          category,
+          updatedAt: findUpdatedAt(data, headers)?.toISOString() || null,
+          items: slimWatchItems(catItems)
+        };
+        await fs.writeFile(path.join(categoryDir, `${category}.json`), `${JSON.stringify(catPayload, null, 2)}\n`);
+        categoryUpdatedAt = pickLatestTimestamp(categoryUpdatedAt, findUpdatedAt(data, headers));
       } catch (err) {
         errors.push({ category, error: err?.message || 'unknown' });
       }
       await sleep(REQUEST_DELAY_MS);
     }
 
-    const slimItems = slimWatchItems(items);
-    pricesByLeague[league.watch] = {
-      updatedAt: updatedAt ? updatedAt.toISOString() : null,
-      items: slimItems,
-      errors: errors.length ? errors : undefined
-    };
-    console.log(`League ${league.watch}: ${slimItems.length} items`);
+    if (errors.length) {
+      await fs.writeFile(
+        path.join(leagueDir, 'errors.json'),
+        `${JSON.stringify({ generatedAt, league: { watch: league.watch, text: league.text, slug }, errors }, null, 2)}\n`
+      );
+    }
+
+    console.log(`League ${league.watch}: compact ${compactItems.length} items, categories ${categories.length}`);
   }
 
   const leaguesPayload = {
@@ -257,18 +325,10 @@ async function main() {
     leagues: rawLeagues
   };
 
-  const pricesPayload = {
-    generatedAt,
-    source: 'poe.watch',
-    game: WATCH_GAME,
-    leagues: pricesByLeague
-  };
-
   await fs.writeFile(LEAGUES_PATH, `${JSON.stringify(leaguesPayload, null, 2)}\n`);
-  await fs.writeFile(PRICES_PATH, `${JSON.stringify(pricesPayload, null, 2)}\n`);
 
   console.log(`Wrote ${LEAGUES_PATH}`);
-  console.log(`Wrote ${PRICES_PATH}`);
+  console.log(`Wrote ${PRICES_DIR}`);
 }
 
 main().catch((err) => {
