@@ -105,7 +105,8 @@
       priceUpdatedAt: null,
       divineChaos: null,
       minValueFilter: false,
-      minValueThresholdChaos: 10
+      minValueThresholdChaos: 10,
+      searchQuery: ''
     };
 
     const leagueSelect = document.getElementById('leagueSelect');
@@ -121,6 +122,7 @@
     const bossList = document.getElementById('bossList');
     const minValueToggle = document.getElementById('minValueToggle');
     const minValueInput = document.getElementById('minValueInput');
+    const searchInput = document.getElementById('searchInput');
 
     function normalizeLeagueKey(value) {
       const raw = String(value || '').trim();
@@ -361,6 +363,22 @@
     state.minValueThresholdChaos = Number.isFinite(minThresholdPref) ? minThresholdPref : 10;
     minValueToggle.checked = state.minValueFilter;
 
+    if (searchInput) {
+      searchInput.value = state.searchQuery;
+      searchInput.addEventListener('input', (event) => {
+        state.searchQuery = event.target.value || '';
+        safeRender();
+      });
+      searchInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          searchInput.value = '';
+          state.searchQuery = '';
+          safeRender();
+        }
+      });
+    }
+
+
     function updateMinValueInput() {
       const threshold = state.minValueThresholdChaos || 0;
       if (state.displayCurrency === 'divine' && state.divineChaos) {
@@ -516,6 +534,32 @@
         .replace(/[’']/g, '')
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-+|-+$/g, '');
+    }
+
+    function bossMatchesQuery(boss, queryLower, queryNormalized) {
+      if (!queryLower) return true;
+      const parts = [
+        boss?.name,
+        boss?.id,
+        boss?.tier,
+        boss?.note
+      ];
+      (boss?.entry || []).forEach((item) => {
+        parts.push(item?.name, item?.note, item?.variant);
+        (item?.types || []).forEach((type) => parts.push(type));
+      });
+      (boss?.groups || []).forEach((group) => {
+        parts.push(group?.label, group?.type);
+        (group?.items || []).forEach((item) => {
+          parts.push(item?.name, item?.note, item?.variant);
+          (item?.types || []).forEach((type) => parts.push(type));
+        });
+      });
+      const raw = parts.filter(Boolean).join(' ').toLowerCase();
+      if (raw.includes(queryLower)) return true;
+      if (!queryNormalized) return false;
+      const normalized = normalizeText(raw);
+      return normalized.includes(queryNormalized);
     }
 
     function withCacheBust(url, enabled) {
@@ -1054,7 +1098,12 @@
       const missingItems = [];
       state.fallbackHits = new Map();
 
-      const bossRows = BOSS_DATA.map((boss) => ({
+      const query = state.searchQuery.trim();
+      const queryLower = query.toLowerCase();
+      const queryNormalized = query ? normalizeText(query) : '';
+      const filteredBosses = BOSS_DATA.filter((boss) => bossMatchesQuery(boss, queryLower, queryNormalized));
+
+      const bossRows = filteredBosses.map((boss) => ({
         boss,
         computed: computeBoss(boss)
       }));
@@ -1124,6 +1173,9 @@
             </div>
           </summary>
           <div class="detail-body">
+            <div class="muted">
+              Sources: ${boss.sources.map((src) => `<a class="link" href="${src}" target="_blank" rel="noreferrer">PoE Wiki</a>`).join(', ')}
+            </div>
             <div>
               <div class="section-title">Entry Cost</div>
               <table class="table entry-table">
@@ -1175,9 +1227,7 @@
                   <div class="flex-row">
                     <div>
                       <div class="section-title">${group.label}</div>
-                      <div class="muted">${group.type === 'exclusive' ? 'Exclusive roll' : 'Independent rolls'}</div>
                     </div>
-                    <div class="pill has-tooltip" data-tooltip="${dropFilterTooltip(chaosPerDivine)}" tabindex="0" aria-label="${dropFilterTooltip(chaosPerDivine)}">EV ${formatValue(groupExpected, chaosPerDivine)} • Volatility ${formatPercent(groupVolPct)} • Missing ${missing}</div>
                   </div>
                   <table class="table drop-table">
                     <colgroup>
@@ -1230,14 +1280,18 @@
                 </div>
               `;
             }).join('')}
-            <div class="muted">
-              Sources: ${boss.sources.map((src) => `<a class="link" href="${src}" target="_blank" rel="noreferrer">PoE Wiki</a>`).join(', ')}
-            </div>
           </div>
         `;
 
         bossList.appendChild(details);
       });
+
+      if (!bossRows.length) {
+        const empty = document.createElement('div');
+        empty.className = 'muted';
+        empty.textContent = query ? `No results for "${query}".` : 'No results.';
+        bossList.appendChild(empty);
+      }
 
       if (state.debug) {
         const counts = state.priceData?.counts || {};
