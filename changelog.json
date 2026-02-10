@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "version": "0.2.1",
+      "date": "2026-02-10",
+      "changes": [
+        "Adjusted Elder/Uber Elder/Uber Uber Elder drops and entry costs, and restored The Elder.",
+        "Added PoE Wiki sources for newly added bosses.",
+        "Refined boss tables for Sirus, Exarch/Eater, and Uber Shaper/Uber Maven."
+      ]
+    },
+    {
       "version": "0.2",
       "date": "2026-02-10",
       "changes": [
