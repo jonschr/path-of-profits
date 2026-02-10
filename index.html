@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PoE Bossing Profits per Run</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSY4V2LS0X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WSY4V2LS0X');
+  </script>
 </head>
 <body>
   <div class="wrap">
@@ -13,20 +22,12 @@
         <div class="header-left">
           <h1>PoE Bossing Profits per Run</h1>
           <div class="subtitle">
-            Estimate expected profit per run and volatility for endgame bosses using community drop-rate tables and live poe.watch prices. This model only includes entry items and boss-specific drops; it does not include mapping/rolling costs or generic loot.
+            Estimate boss-run value using community drop rates and live poe.watch prices. Focuses on entry items and boss-specific drops only.
           </div>
           <div class="chips">
+            <span class="chip">Version 0.1.13</span>
             <span class="chip">Prices: poe.watch</span>
             <span class="chip">Drops: PoE Wiki estimates</span>
-          </div>
-        </div>
-        <div class="header-actions">
-          <div class="header-chip">
-            <span>Debug</span>
-            <label class="switch">
-              <input type="checkbox" id="debugToggle" />
-              <span class="slider"></span>
-            </label>
           </div>
         </div>
       </div>
@@ -115,17 +116,18 @@
       </div>
     </section>
 
-    <section class="search-bar">
-      <input id="searchInput" type="search" placeholder="Search bosses, items, fragments, or currency…" autocomplete="off" />
-    </section>
-
-    <section class="sort-bar" aria-label="Sort bosses">
-      <div class="sort-label">Sort by</div>
-      <div class="sort-options">
-        <button class="sort-button" type="button" data-sort-key="entryCost" data-sort-label="Run Cost">Run Cost</button>
-        <button class="sort-button" type="button" data-sort-key="expectedDrops" data-sort-label="Drop EV">Drop EV</button>
-        <button class="sort-button" type="button" data-sort-key="dropVsCost" data-sort-label="Average return">Average return</button>
-        <button class="sort-button" type="button" data-sort-key="expectedProfit" data-sort-label="Expected Return">Expected Return</button>
+    <section class="sort-search" aria-label="Search and sort bosses">
+      <div class="search-bar">
+        <input id="searchInput" type="search" placeholder="Search bosses, items, fragments, or currency…" autocomplete="off" />
+      </div>
+      <div class="sort-bar" aria-label="Sort bosses">
+        <div class="sort-label">Sort by</div>
+        <div class="sort-options">
+          <button class="sort-button" type="button" data-sort-key="entryCost" data-sort-label="Run Cost">Run Cost</button>
+          <button class="sort-button" type="button" data-sort-key="expectedDrops" data-sort-label="Drop EV">Drop EV</button>
+          <button class="sort-button" type="button" data-sort-key="dropVsCost" data-sort-label="Average return">Average return</button>
+          <button class="sort-button" type="button" data-sort-key="expectedProfit" data-sort-label="Expected Return">Expected Return</button>
+        </div>
       </div>
     </section>
 
@@ -146,6 +148,13 @@
         Tweet questions and complaints to <a class="link" href="https://x.com/jonschr" target="_blank" rel="noreferrer">@jonschr</a>.
       </div>
     </section>
+    <div class="debug-footer">
+      <span>Debug</span>
+      <label class="switch switch-mini">
+        <input type="checkbox" id="debugToggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
   </div>
 
   <script src="app.js" defer></script>
