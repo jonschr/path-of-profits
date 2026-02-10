@@ -1,0 +1,14 @@
+{
+  "entries": [
+    {
+      "version": "0.1.14",
+      "date": "2026-02-10",
+      "changes": [
+        "Added Average return metric (multiplier) and sortable metrics; removed volatility column.",
+        "Added default drop filters (0.5 div min value, 10% min probability) with units and default-on toggles.",
+        "Refined layout and UI: centered header, combined search + sort row, updated info dots and metric cards, adjusted inputs and dropdown sizing.",
+        "Added footer actions (debug toggle + local hit counter) and installed Google tag."
+      ]
+    }
+  ]
+}

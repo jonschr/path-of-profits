@@ -143,6 +143,7 @@
     const minProbInput = document.getElementById('minProbInput');
     const searchInput = document.getElementById('searchInput');
     const sortButtons = document.querySelectorAll('.sort-button');
+    const hitCountEl = document.getElementById('hitCount');
 
     function normalizeLeagueKey(value) {
       const raw = String(value || '').trim();
@@ -490,6 +491,15 @@
       minProbInput.step = '0.01';
     }
 
+    function updateHitCounter() {
+      if (!hitCountEl) return;
+      const key = 'poeBossHitCount';
+      const current = Number(localStorage.getItem(key) || '0');
+      const next = Number.isFinite(current) ? current + 1 : 1;
+      localStorage.setItem(key, String(next));
+      hitCountEl.textContent = next.toLocaleString();
+    }
+
     function defaultSortDirFor(key) {
       if (key === 'entryCost') return 'asc';
       return 'desc';
@@ -518,6 +528,7 @@
     updateMinValueInput();
     updateMinProbabilityInput();
     updateSortButtons();
+    updateHitCounter();
 
     minValueToggle.addEventListener('change', () => {
       state.minValueFilter = minValueToggle.checked;
