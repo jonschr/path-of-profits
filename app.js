@@ -1,10 +1,11 @@
     const BASE_LEAGUE = '';
     const BASE_PRICE_MODE = 'avg';
     const BASE_DISPLAY_CURRENCY = 'divine';
-    const BASE_MIN_VALUE_ENABLED = false;
+    const BASE_MIN_VALUE_ENABLED = true;
+    const BASE_MIN_VALUE_DIVINE = 0.5;
     const BASE_MIN_VALUE_CHAOS = 10;
-    const BASE_MIN_PROBABILITY_ENABLED = false;
-    const BASE_MIN_PROBABILITY = 0.01;
+    const BASE_MIN_PROBABILITY_ENABLED = true;
+    const BASE_MIN_PROBABILITY = 0.1;
     const BASE_SORT_KEY = 'expectedProfit';
     const BASE_SORT_DIR = 'desc';
     const BASE_DEBUG = false;
@@ -116,6 +117,7 @@
       divineChaos: null,
       minValueFilter: false,
       minValueThresholdChaos: 10,
+      minValueWasDefault: false,
       minProbabilityFilter: false,
       minProbabilityThreshold: 0.01,
       sortKey: BASE_SORT_KEY,
@@ -136,6 +138,7 @@
     const bossList = document.getElementById('bossList');
     const minValueToggle = document.getElementById('minValueToggle');
     const minValueInput = document.getElementById('minValueInput');
+    const minValueUnit = document.getElementById('minValueUnit');
     const minProbToggle = document.getElementById('minProbToggle');
     const minProbInput = document.getElementById('minProbInput');
     const searchInput = document.getElementById('searchInput');
@@ -384,13 +387,17 @@
     currencyInput.value = state.displayCurrency;
     applyLeagueSelection(DEFAULT_LEAGUE, { allowFallback: false });
 
-    const minPref = localStorage.getItem('poeBossMinValueEnabled') || 'off';
-    const minThresholdPref = Number(localStorage.getItem('poeBossMinValueChaos') || '10');
+    const minPref = localStorage.getItem('poeBossMinValueEnabled') || (BASE_MIN_VALUE_ENABLED ? 'on' : 'off');
+    const minThresholdRaw = localStorage.getItem('poeBossMinValueChaos');
+    const minThresholdPref = Number(minThresholdRaw);
     state.minValueFilter = minPref === 'on';
-    state.minValueThresholdChaos = Number.isFinite(minThresholdPref) ? minThresholdPref : 10;
+    state.minValueWasDefault = !Number.isFinite(minThresholdPref);
+    state.minValueThresholdChaos = Number.isFinite(minThresholdPref)
+      ? minThresholdPref
+      : defaultMinValueThreshold();
     minValueToggle.checked = state.minValueFilter;
 
-    const minProbPref = localStorage.getItem('poeBossMinProbEnabled') || 'off';
+    const minProbPref = localStorage.getItem('poeBossMinProbEnabled') || (BASE_MIN_PROBABILITY_ENABLED ? 'on' : 'off');
     const minProbThresholdPref = Number(localStorage.getItem('poeBossMinProb') || String(BASE_MIN_PROBABILITY));
     state.minProbabilityFilter = minProbPref === 'on';
     state.minProbabilityThreshold = Number.isFinite(minProbThresholdPref)
@@ -423,6 +430,20 @@
       return state.divineChaos || (Number.isFinite(stored) && stored > 0 ? stored : null);
     }
 
+    function defaultMinValueThreshold() {
+      const rate = getChaosPerDivine();
+      return rate ? BASE_MIN_VALUE_DIVINE * rate : BASE_MIN_VALUE_CHAOS;
+    }
+
+    function ensureDefaultMinValueThreshold() {
+      if (!state.minValueWasDefault) return;
+      const rate = getChaosPerDivine();
+      if (!rate) return;
+      state.minValueThresholdChaos = BASE_MIN_VALUE_DIVINE * rate;
+      localStorage.setItem('poeBossMinValueChaos', state.minValueThresholdChaos.toString());
+      state.minValueWasDefault = false;
+    }
+
     function formatManualNumber(value) {
       if (!Number.isFinite(value)) return '';
       const rounded = Math.round(value * 10000) / 10000;
@@ -448,19 +469,24 @@
     }
 
     function updateMinValueInput() {
+      ensureDefaultMinValueThreshold();
       const threshold = state.minValueThresholdChaos || 0;
-      if (state.displayCurrency === 'divine' && state.divineChaos) {
-        minValueInput.value = (threshold / state.divineChaos).toFixed(2);
+      const rate = getChaosPerDivine();
+      if (state.displayCurrency === 'divine') {
+        const displayValue = rate ? threshold / rate : (state.minValueWasDefault ? BASE_MIN_VALUE_DIVINE : threshold);
+        minValueInput.value = formatInputNumber(displayValue, 2);
         minValueInput.step = '0.01';
+        if (minValueUnit) minValueUnit.textContent = 'div';
       } else {
-        minValueInput.value = threshold.toFixed(1);
+        minValueInput.value = formatInputNumber(threshold, 1);
         minValueInput.step = '0.1';
+        if (minValueUnit) minValueUnit.textContent = 'c';
       }
     }
 
     function updateMinProbabilityInput() {
       const thresholdPct = (state.minProbabilityThreshold || 0) * 100;
-      minProbInput.value = thresholdPct.toFixed(2);
+      minProbInput.value = formatInputNumber(thresholdPct, 2);
       minProbInput.step = '0.01';
     }
 
@@ -502,12 +528,14 @@
     minValueInput.addEventListener('change', () => {
       const raw = Number(minValueInput.value);
       if (!Number.isFinite(raw)) return;
-      if (state.displayCurrency === 'divine' && state.divineChaos) {
-        state.minValueThresholdChaos = raw * state.divineChaos;
+      const rate = getChaosPerDivine();
+      if (state.displayCurrency === 'divine' && rate) {
+        state.minValueThresholdChaos = raw * rate;
       } else {
         state.minValueThresholdChaos = raw;
       }
       localStorage.setItem('poeBossMinValueChaos', state.minValueThresholdChaos.toString());
+      state.minValueWasDefault = false;
       safeRender();
     });
 
@@ -522,7 +550,7 @@
       if (!Number.isFinite(raw)) return;
       const clamped = Math.min(Math.max(raw, 0), 100);
       state.minProbabilityThreshold = clamped / 100;
-      minProbInput.value = clamped.toFixed(2);
+      minProbInput.value = formatInputNumber(clamped, 2);
       localStorage.setItem('poeBossMinProb', state.minProbabilityThreshold.toString());
       safeRender();
     });
@@ -606,7 +634,8 @@
         state.priceMode = BASE_PRICE_MODE;
         state.displayCurrency = BASE_DISPLAY_CURRENCY;
         state.minValueFilter = BASE_MIN_VALUE_ENABLED;
-        state.minValueThresholdChaos = BASE_MIN_VALUE_CHAOS;
+        state.minValueWasDefault = true;
+        state.minValueThresholdChaos = defaultMinValueThreshold();
         state.minProbabilityFilter = BASE_MIN_PROBABILITY_ENABLED;
         state.minProbabilityThreshold = BASE_MIN_PROBABILITY;
         state.sortKey = BASE_SORT_KEY;
@@ -992,6 +1021,13 @@
       return `${value.toFixed(1)}%`;
     }
 
+    function formatInputNumber(value, maxDecimals) {
+      if (!Number.isFinite(value)) return '';
+      const factor = 10 ** maxDecimals;
+      const rounded = Math.round(value * factor) / factor;
+      return rounded.toFixed(maxDecimals).replace(/\.?0+$/, '');
+    }
+
     function formatMultiplier(value) {
       if (value == null || Number.isNaN(value)) return '—';
       const abs = Math.abs(value);
@@ -1372,12 +1408,12 @@
                 ${missingCount + entryMissing > 0 ? `<div class="missing-note">Missing prices: ${missingCount + entryMissing}</div>` : ''}
               </div>
               <div class="boss-metrics">
-                <div class="metric"><span class="metric-label">Run Cost <span class="info-dot has-tooltip" data-tooltip="${runCostTooltip()}">i</span></span><strong>${formatValue(computed.entryCost, chaosPerDivine)}</strong></div>
-                <div class="metric"><span class="metric-label">Drop EV <span class="info-dot has-tooltip" data-tooltip="${dropEvTooltip()}">i</span></span><strong>${formatValue(computed.expectedDrops, chaosPerDivine)}</strong></div>
-                <div class="metric metric-ratio"><span class="metric-label">Average return <span class="info-dot has-tooltip" data-tooltip="${dropVsCostTooltip()}">i</span></span><strong>${formatMultiplier(dropVsCost)}</strong></div>
+                <div class="metric"><span class="metric-label">Run Cost <span class="info-dot has-tooltip" data-tooltip="${runCostTooltip()}">?</span></span><strong>${formatValue(computed.entryCost, chaosPerDivine)}</strong></div>
+                <div class="metric"><span class="metric-label">Drop EV <span class="info-dot has-tooltip" data-tooltip="${dropEvTooltip()}">?</span></span><strong>${formatValue(computed.expectedDrops, chaosPerDivine)}</strong></div>
+                <div class="metric metric-ratio"><span class="metric-label">Average return <span class="info-dot has-tooltip" data-tooltip="${dropVsCostTooltip()}">?</span></span><strong>${formatMultiplier(dropVsCost)}</strong></div>
               </div>
               <div class="expected-return">
-                <span>Expected Return <span class="info-dot has-tooltip" data-tooltip="${expectedTooltip()}">i</span></span>
+                <span>Expected Return <span class="info-dot has-tooltip" data-tooltip="${expectedTooltip()}">?</span></span>
                 <strong>${formatValue(computed.expectedProfit, chaosPerDivine)}</strong>
               </div>
             </div>

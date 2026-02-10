@@ -265,6 +265,11 @@ h1 {
 	font-size: 14px;
 }
 
+.control-compact select {
+	width: 135px;
+	max-width: none;
+}
+
 .control-compact .button-secondary {
 	min-width: 0;
 }
@@ -469,10 +474,23 @@ button:hover {
 	gap: 10px;
 }
 
+.input-with-unit {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.input-unit {
+	font-size: 12px;
+	color: var(--muted);
+	letter-spacing: 0.4px;
+	text-transform: uppercase;
+}
+
 .min-filter input[type='number'] {
-	flex: 0 0 120px;
-	width: 120px;
-	max-width: 140px;
+	flex: 0 0 6em;
+	width: 6em;
+	max-width: 6em;
 }
 
 .boss-list {
@@ -561,6 +579,10 @@ details[open] summary {
 	background: transparent;
 }
 
+.boss-metrics .metric {
+	background: #0000004f;
+}
+
 .metric strong {
 	display: block;
 	font-size: 15px;
@@ -587,9 +609,11 @@ details[open] summary {
 	align-items: center;
 	justify-content: center;
 	font-size: 11px;
-	color: var(--muted);
+	font-weight: 700;
+	color: var(--ink);
 	cursor: help;
-	background: rgba(15, 23, 42, 0.6);
+	background: rgba(15, 23, 42, 0.85);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 .has-tooltip {
