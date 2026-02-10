@@ -723,6 +723,12 @@
 
     .item-link:hover { text-decoration: underline; }
 
+    .wiki-link {
+      margin-left: 6px;
+      color: var(--ink);
+      font-size: inherit;
+    }
+
     .warning {
       color: #ffbfa8;
     }

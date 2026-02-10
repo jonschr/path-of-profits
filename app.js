@@ -21,6 +21,7 @@
     const DEFAULT_PRICE_MODE = localStorage.getItem('poeBossPriceMode') || BASE_PRICE_MODE;
     const manualPriceKey = 'poeBossManualPrices';
     const manualCostKey = 'poeBossManualCosts';
+    const manualCurrencyKey = 'poeBossManualCurrency';
     const ignoreDropsKey = 'poeBossIgnoreDrops';
     const displayCurrencyKey = 'poeBossDisplayCurrency';
     const priceCacheKey = 'poeBossPriceCacheV1';
@@ -32,6 +33,9 @@
 
     const MANUAL_PRICES = JSON.parse(localStorage.getItem(manualPriceKey) || '{}');
     const MANUAL_COSTS = JSON.parse(localStorage.getItem(manualCostKey) || '{}');
+    if (!localStorage.getItem(manualCurrencyKey)) {
+      localStorage.setItem(manualCurrencyKey, 'chaos');
+    }
     const IGNORED_DROPS = JSON.parse(localStorage.getItem(ignoreDropsKey) || '{}');
 
     const IS_FILE_ORIGIN = window.location.protocol === 'file:';
@@ -388,6 +392,34 @@
       });
     }
 
+    function getChaosPerDivine() {
+      const stored = Number(localStorage.getItem('poeBossDivineChaos') || '');
+      return state.divineChaos || (Number.isFinite(stored) && stored > 0 ? stored : null);
+    }
+
+    function formatManualNumber(value) {
+      if (!Number.isFinite(value)) return '';
+      const rounded = Math.round(value * 10000) / 10000;
+      return String(rounded);
+    }
+
+    function manualToChaos(value) {
+      if (!Number.isFinite(value)) return null;
+      if (state.displayCurrency === 'divine') {
+        const rate = getChaosPerDivine();
+        return rate ? value * rate : value;
+      }
+      return value;
+    }
+
+    function manualFromChaos(value) {
+      if (!Number.isFinite(value)) return '';
+      if (state.displayCurrency === 'divine') {
+        const rate = getChaosPerDivine();
+        return formatManualNumber(rate ? value / rate : value);
+      }
+      return formatManualNumber(value);
+    }
 
     function updateMinValueInput() {
       const threshold = state.minValueThresholdChaos || 0;
@@ -823,14 +855,23 @@
       return `${WATCH_DETAILS_BASE}/${slug}${leagueParam}`;
     }
 
+    function wikiUrlForItem(item) {
+      const name = String(item?.name || '').trim();
+      if (!name) return null;
+      const slug = name.replace(/\s+/g, '_');
+      return `https://www.poewiki.net/wiki/${encodeURIComponent(slug)}`;
+    }
+
     function itemLabelMarkup(item) {
       const url = itemPageUrl(item);
+      const wikiUrl = wikiUrlForItem(item);
       const base = url
         ? `<a class="item-link" href="${url}" target="_blank" rel="noreferrer">${item.name}</a>`
         : `<span>${item.name}</span>`;
+      const wiki = wikiUrl ? `<a class="item-link wiki-link" href="${wikiUrl}" target="_blank" rel="noreferrer">(wiki)</a>` : '';
       const variant = item.variant ? ` <span class="muted">(${item.variant})</span>` : '';
       const note = item.note ? ` <span class="muted">${item.note}</span>` : '';
-      return `${base}${variant}${note}`;
+      return `${base}${wiki}${variant}${note}`;
     }
 
     function formatValue(value, chaosPerDivine) {
@@ -1104,6 +1145,7 @@
       });
       bossList.innerHTML = '';
       const chaosPerDivine = state.divineChaos;
+      const manualLocked = state.displayCurrency === 'divine' && !getChaosPerDivine();
       const missingItems = [];
       state.fallbackHits = new Map();
 
@@ -1219,7 +1261,7 @@
                       <td>${item.price == null ? '—' : formatValue(item.price, chaosPerDivine)}</td>
                       <td>${item.costOverride != null ? formatValue(item.costOverride, chaosPerDivine) : (item.value == null ? '—' : formatValue(item.value, chaosPerDivine))}</td>
                       <td class="include-note">—</td>
-                      <td><input class="price-input" data-cost-key="${costKey(item)}" name="cost:${costKey(item)}" value="${MANUAL_COSTS[costKey(item)] ?? ''}" placeholder="override" /></td>
+                      <td><input class="price-input" data-cost-key="${costKey(item)}" name="cost:${costKey(item)}" value="${manualFromChaos(MANUAL_COSTS[costKey(item)])}" placeholder="${manualLocked ? 'Waiting for prices' : 'override'}" ${manualLocked ? 'disabled title="Waiting for divine/chaos rate"' : ''} /></td>
                     </tr>
                   `).join('')}
                 </tbody>
@@ -1281,7 +1323,7 @@
                         <td>
                           <input class="include-toggle" type="checkbox" data-include-key="${key}" name="include:${key}" ${isExcluded(item) ? '' : 'checked'} />
                         </td>
-                        <td><input class="price-input" data-price-key="${key}" name="price:${key}" value="${MANUAL_PRICES[key] ?? ''}" placeholder="override" /></td>
+                        <td><input class="price-input" data-price-key="${key}" name="price:${key}" value="${manualFromChaos(MANUAL_PRICES[key])}" placeholder="${manualLocked ? 'Waiting for prices' : 'override'}" ${manualLocked ? 'disabled title="Waiting for divine/chaos rate"' : ''} /></td>
                       </tr>
                     `;
                       }).join('')}
@@ -1358,21 +1400,25 @@
         const priceKey = target.getAttribute('data-price-key');
         const costKeyValue = target.getAttribute('data-cost-key');
         const value = target.value.trim();
+        const numeric = value === '' ? null : Number(value);
+        const storedValue = numeric == null || Number.isNaN(numeric) ? null : manualToChaos(numeric);
         if (priceKey) {
           if (value === '') {
             delete MANUAL_PRICES[priceKey];
-          } else if (!Number.isNaN(Number(value))) {
-            MANUAL_PRICES[priceKey] = Number(value);
+          } else if (storedValue != null) {
+            MANUAL_PRICES[priceKey] = storedValue;
           }
           localStorage.setItem(manualPriceKey, JSON.stringify(MANUAL_PRICES));
+          localStorage.setItem(manualCurrencyKey, 'chaos');
         }
         if (costKeyValue) {
           if (value === '') {
             delete MANUAL_COSTS[costKeyValue];
-          } else if (!Number.isNaN(Number(value))) {
-            MANUAL_COSTS[costKeyValue] = Number(value);
+          } else if (storedValue != null) {
+            MANUAL_COSTS[costKeyValue] = storedValue;
           }
           localStorage.setItem(manualCostKey, JSON.stringify(MANUAL_COSTS));
+          localStorage.setItem(manualCurrencyKey, 'chaos');
         }
         if (shouldRender) safeRender();
       };
@@ -1469,15 +1515,18 @@
               state.priceData = indexWatchData(entry.items);
               state.pricingLeague = leagueValue;
               state.watchBase = 'cache';
-              state.priceUpdatedAt = parseTimestamp(entry.updatedAt);
-              state.fetchResults.push({ status: 'cache', source: 'cache', items: entry.items.length, league: leagueValue });
-              const divine = state.priceData.byLower.get('divine orb')?.[0];
-              state.divineChaos = divine ? safeNumber(divine.mean ?? divine.min ?? divine.max) : null;
-              updateMinValueInput();
-              const updatedLabel = state.priceUpdatedAt ? ` Updated ${formatUpdatedAt(state.priceUpdatedAt)}.` : '';
-              setStatus(`Prices loaded for ${leagueValue}.${updatedLabel}`);
-              safeRender();
-              return;
+            state.priceUpdatedAt = parseTimestamp(entry.updatedAt);
+            state.fetchResults.push({ status: 'cache', source: 'cache', items: entry.items.length, league: leagueValue });
+            const divine = state.priceData.byLower.get('divine orb')?.[0];
+            state.divineChaos = divine ? safeNumber(divine.mean ?? divine.min ?? divine.max) : null;
+            if (state.divineChaos) {
+              localStorage.setItem('poeBossDivineChaos', String(state.divineChaos));
+            }
+            updateMinValueInput();
+            const updatedLabel = state.priceUpdatedAt ? ` Updated ${formatUpdatedAt(state.priceUpdatedAt)}.` : '';
+            setStatus(`Prices loaded for ${leagueValue}.${updatedLabel}`);
+            safeRender();
+            return;
             }
           }
         }
@@ -1556,6 +1605,9 @@
       const divine = state.priceData.byLower.get('divine orb')?.[0];
       const divineChaos = divine ? safeNumber(divine.mean ?? divine.min ?? divine.max) : null;
       state.divineChaos = divineChaos;
+      if (state.divineChaos) {
+        localStorage.setItem('poeBossDivineChaos', String(state.divineChaos));
+      }
       updateMinValueInput();
 
       const failures = state.fetchResults.filter((r) => r && r.status === 'error');

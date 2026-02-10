@@ -1,1820 +1,1416 @@
 [
-  {
-    "id": "exarch",
-    "name": "The Searing Exarch",
-    "tier": "Pinnacle",
-    "entry": [
-      {
-        "name": "Incandescent Invitation",
-        "qty": 1,
-        "types": [
-          "Invitations"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool A)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Dawnbreaker",
-            "p": 0.63,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Dawnstrider",
-            "p": 0.35,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Dissolution of the Flesh",
-            "p": 0.02,
-            "types": [
-              "UniqueJewel"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Guaranteed Unique (Pool B)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "The Annihilating Light",
-            "p": 0.455,
-            "types": [
-              "UniqueWeapon"
-            ]
-          },
-          {
-            "name": "Annihilation's Approach",
-            "p": 0.29,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Crystallised Omniscience",
-            "p": 0.24,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "The Celestial Brace",
-            "p": 0.015,
-            "types": [
-              "UniqueArmour"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Additional Drops",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Forbidden Flame",
-            "p": 0.05,
-            "types": [
-              "UniqueJewel"
-            ]
-          },
-          {
-            "name": "Exceptional Eldritch Ember",
-            "p": 0.15,
-            "types": [
-              "Currency"
-            ]
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/The_Searing_Exarch"
-    ]
-  },
-  {
-    "id": "uber-exarch",
-    "name": "The Searing Exarch (Uber)",
-    "tier": "Uber Pinnacle",
-    "note": "Drop rates reflect a 66-run community sample; only observed drops are modeled.",
-    "entry": [
-      {
-        "name": "Blazing Fragment",
-        "qty": 5,
-        "types": [
-          "Fragment"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool B)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "The Annihilating Light",
-            "p": 0.5,
-            "types": [
-              "UniqueWeapon"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Annihilation's Approach",
-            "p": 0.1364,
-            "types": [
-              "UniqueArmour"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Crystallised Omniscience",
-            "p": 0.0606,
-            "types": [
-              "UniqueAccessory"
-            ],
-            "approx": true
-          },
-          {
-            "name": "The Celestial Brace",
-            "p": 0.303,
-            "types": [
-              "UniqueArmour"
-            ],
-            "approx": true
-          }
-        ]
-      },
-      {
-        "label": "Encounter-Specific",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Curio of Absorption",
-            "p": 0.0303,
-            "types": [
-              "Fragment"
-            ],
-            "approx": true
-          }
-        ]
-      },
-      {
-        "label": "Additional Drops",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Forbidden Flame",
-            "p": 0.0455,
-            "types": [
-              "UniqueJewel"
-            ],
-            "note": "Hidden Ascendancy Notable variant",
-            "approx": true
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.reddit.com/r/pathofexile/comments/1eniskx/330_blazing_fragments_66_uber_searing_exarchs/"
-    ]
-  },
-  {
-    "id": "eater",
-    "name": "The Eater of Worlds",
-    "tier": "Pinnacle",
-    "entry": [
-      {
-        "name": "Screaming Invitation",
-        "qty": 1,
-        "types": [
-          "Invitations"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool A)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Inextricable Fate",
-            "p": 0.55,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "The Gluttonous Tide",
-            "p": 0.43,
-            "types": [
-              "UniqueWeapon"
-            ]
-          },
-          {
-            "name": "Melding of the Flesh",
-            "p": 0.02,
-            "types": [
-              "UniqueJewel"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Guaranteed Unique (Pool B)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Ravenous Passion",
-            "p": 0.68,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Ashes of the Stars",
-            "p": 0.3,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Nimis",
-            "p": 0.02,
-            "types": [
-              "UniqueAccessory"
-            ],
-            "approx": true
-          }
-        ]
-      },
-      {
-        "label": "Additional Drops",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Forbidden Flesh",
-            "p": 0.05,
-            "types": [
-              "UniqueJewel"
-            ]
-          },
-          {
-            "name": "Exceptional Eldritch Ichor",
-            "p": 0.15,
-            "types": [
-              "Currency"
-            ]
-          },
-          {
-            "name": "Eldritch Orb of Annulment",
-            "p": 0.05,
-            "types": [
-              "Currency"
-            ]
-          },
-          {
-            "name": "Eldritch Chaos Orb",
-            "p": 0.05,
-            "types": [
-              "Currency"
-            ]
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/The_Eater_of_Worlds"
-    ]
-  },
-  {
-    "id": "uber-eater",
-    "name": "The Eater of Worlds (Uber)",
-    "tier": "Uber Pinnacle",
-    "note": "Uber drop rates estimated from community samples totaling 135 runs (91 + 44). Pool B helmet count in the 44-run sample inferred from pool B exclusivity; currency rates still from the 91-run subset. Pool A still uses standard Eater rates.",
-    "entry": [
-      {
-        "name": "Devouring Fragment",
-        "qty": 5,
-        "types": [
-          "Fragment"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool A)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Inextricable Fate",
-            "p": 0.55,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "The Gluttonous Tide",
-            "p": 0.43,
-            "types": [
-              "UniqueWeapon"
-            ]
-          },
-          {
-            "name": "Melding of the Flesh",
-            "p": 0.02,
-            "types": [
-              "UniqueJewel"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Guaranteed Unique (Pool B)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Ravenous Passion",
-            "p": 0.6148,
-            "types": [
-              "UniqueArmour"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Ashes of the Stars",
-            "p": 0.363,
-            "types": [
-              "UniqueAccessory"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Nimis",
-            "p": 0.0222,
-            "types": [
-              "UniqueAccessory"
-            ],
-            "approx": true
-          }
-        ]
-      },
-      {
-        "label": "Encounter-Specific",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Visceral Reliquary Key",
-            "p": 0.015,
-            "types": [
-              "Fragment"
-            ]
-          },
-          {
-            "name": "Curio of Consumption",
-            "p": 0.0148,
-            "types": [
-              "Fragment"
-            ],
-            "approx": true
-          }
-        ]
-      },
-      {
-        "label": "Additional Drops",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Forbidden Flesh",
-            "p": 0.0519,
-            "types": [
-              "UniqueJewel"
-            ],
-            "note": "Hidden Ascendancy Notable variant",
-            "approx": true
-          },
-          {
-            "name": "Exceptional Eldritch Ichor",
-            "p": 0.1538,
-            "types": [
-              "Currency"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Eldritch Orb of Annulment",
-            "p": 0.011,
-            "types": [
-              "Currency"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Eldritch Chaos Orb",
-            "p": 0.0769,
-            "types": [
-              "Currency"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Eldritch Exalted Orb",
-            "p": 0.0549,
-            "types": [
-              "Currency"
-            ],
-            "approx": true
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/The_Eater_of_Worlds",
-      "https://www.reddit.com/r/pathofexile/comments/1eonkdp/455_uber_eater_fragments_91_uber_eaters_again/"
-    ]
-  },
-  {
-    "id": "maven",
-    "name": "The Maven",
-    "tier": "Pinnacle",
-    "note": "Regular rates based on a 100-run community sample; only items observed in that dataset are modeled.",
-    "entry": [
-      {
-        "name": "The Maven's Writ",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool A)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Arn's Anguish",
-            "p": 0.07,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Doppelg\u00e4nger Guise",
-            "p": 0.08,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Olesya's Delight",
-            "p": 0.17,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Graven's Secret",
-            "p": 0.19,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Legacy of Fury",
-            "p": 0.49,
-            "types": [
-              "UniqueArmour"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Encounter-Specific",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Awakened Support Gem",
-            "p": 0.27,
-            "types": [],
-            "note": "Prices vary widely",
-            "noPrice": true
-          },
-          {
-            "name": "Orb of Conflict",
-            "p": 0.32,
-            "types": [
-              "Currency"
-            ]
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/The_Maven",
-      "https://www.reddit.com/r/pathofexile/comments/1c6p7df/loot_from_300_uber_maven_100_regular_maven_100/"
-    ]
-  },
-  {
-    "id": "uber-maven",
-    "name": "The Maven (Uber)",
-    "tier": "Uber Pinnacle",
-    "note": "Uber rates based on a 1,525-run sample; Pool A uses standard Maven rates.",
-    "entry": [
-      {
-        "name": "Reality Fragment",
-        "qty": 5,
-        "types": [
-          "Fragment"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool A)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Legacy of Fury",
-            "p": 0.44,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Graven's Secret",
-            "p": 0.16,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Arn's Anguish",
-            "p": 0.16,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Olesya's Delight",
-            "p": 0.16,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Doppelg\u00e4nger Guise",
-            "p": 0.07,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Echoforge",
-            "p": 0.01,
-            "types": [
-              "UniqueWeapon"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Guaranteed Unique (Pool B)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Viridi's Veil",
-            "p": 0.5672,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Impossible Escape",
-            "p": 0.3364,
-            "types": [
-              "UniqueJewel"
-            ],
-            "strategy": "min",
-            "note": "Variant-heavy"
-          },
-          {
-            "name": "Grace of the Goddess",
-            "p": 0.0033,
-            "types": [
-              "UniqueWeapon"
-            ]
-          },
-          {
-            "name": "Progenesis",
-            "p": 0.0931,
-            "types": [
-              "UniqueFlask"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Encounter-Specific",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Shiny Reliquary Key",
-            "p": 0.0105,
-            "types": [
-              "Fragment"
-            ]
-          },
-          {
-            "name": "Curio of Potential",
-            "p": 0.0544,
-            "types": [
-              "Fragment"
-            ]
-          },
-          {
-            "name": "Awakened Exceptional Support Gem",
-            "p": 0.0052,
-            "types": [],
-            "note": "Prices vary widely",
-            "noPrice": true
-          },
-          {
-            "name": "Awakened Support Gem",
-            "p": 0.2446,
-            "types": [],
-            "note": "Prices vary widely",
-            "noPrice": true
-          },
-          {
-            "name": "Orb of Conflict",
-            "p": 0.341,
-            "types": [
-              "Currency"
-            ]
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/The_Maven",
-      "https://www.reddit.com/r/pathofexile/comments/1eudvji/loot_from_1525_uber_maven_3844_div_profit/"
-    ]
-  },
-  {
-    "id": "sirus",
-    "name": "Sirus, Awakener of Worlds",
-    "tier": "Pinnacle",
-    "entry": [
-      {
-        "name": "Veritania's Crest",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Drox's Crest",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Baran's Crest",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Al-Hezmin's Crest",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool A)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Hands of the High Templar",
-            "p": 0.4,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Crown of the Inward Eye",
-            "p": 0.35,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "The Burden of Truth",
-            "p": 0.2,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Thread of Hope",
-            "p": 0.05,
-            "types": [
-              "UniqueJewel"
-            ],
-            "variantExclude": [
-              "Massive"
-            ],
-            "strategy": "avg",
-            "note": "Non-massive ring sizes"
-          }
-        ]
-      },
-      {
-        "label": "Guaranteed Unique (Pool B)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Thread of Hope",
-            "p": 0.55,
-            "types": [
-              "UniqueJewel"
-            ],
-            "variant": "Massive",
-            "strategy": "min"
-          },
-          {
-            "name": "The Tempest Rising",
-            "p": 0.37,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "The Saviour",
-            "p": 0.005,
-            "types": [
-              "UniqueWeapon"
-            ],
-            "approx": true
-          }
-        ]
-      },
-      {
-        "label": "Additional Drops",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Oubliette Reliquary Key",
-            "p": 0.015,
-            "types": [
-              "Fragment"
-            ]
-          },
-          {
-            "name": "Orb of Dominance",
-            "p": 0.1,
-            "types": [
-              "Currency"
-            ]
-          },
-          {
-            "name": "Awakener's Orb",
-            "p": 0.2,
-            "types": [
-              "Currency"
-            ]
-          },
-          {
-            "name": "A Fate Worse Than Death",
-            "p": 0.04,
-            "types": [
-              "DivinationCard"
-            ]
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
-    ]
-  },
-  {
-    "id": "uber-sirus",
-    "name": "Sirus, Awakener of Worlds (Uber)",
-    "tier": "Uber Pinnacle",
-    "note": "Using standard Sirus drop rates; uber-specific adjustments not yet modeled.",
-    "entry": [
-      {
-        "name": "Awakening Fragment",
-        "qty": 5,
-        "types": [
-          "Fragment"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool A)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Hands of the High Templar",
-            "p": 0.4,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Crown of the Inward Eye",
-            "p": 0.35,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "The Burden of Truth",
-            "p": 0.2,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Thread of Hope",
-            "p": 0.05,
-            "types": [
-              "UniqueJewel"
-            ],
-            "variantExclude": [
-              "Massive"
-            ],
-            "strategy": "avg",
-            "note": "Non-massive ring sizes"
-          }
-        ]
-      },
-      {
-        "label": "Guaranteed Unique (Pool B)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Thread of Hope",
-            "p": 0.55,
-            "types": [
-              "UniqueJewel"
-            ],
-            "variant": "Massive",
-            "strategy": "min"
-          },
-          {
-            "name": "The Tempest Rising",
-            "p": 0.37,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Oriath's End",
-            "p": 0.075,
-            "types": [
-              "UniqueFlask"
-            ]
-          },
-          {
-            "name": "The Saviour",
-            "p": 0.005,
-            "types": [
-              "UniqueWeapon"
-            ],
-            "approx": true
-          }
-        ]
-      },
-      {
-        "label": "Additional Drops",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Oubliette Reliquary Key",
-            "p": 0.015,
-            "types": [
-              "Fragment"
-            ]
-          },
-          {
-            "name": "Orb of Dominance",
-            "p": 0.1,
-            "types": [
-              "Currency"
-            ]
-          },
-          {
-            "name": "Awakener's Orb",
-            "p": 0.2,
-            "types": [
-              "Currency"
-            ]
-          },
-          {
-            "name": "A Fate Worse Than Death",
-            "p": 0.04,
-            "types": [
-              "DivinationCard"
-            ]
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
-    ]
-  },
-  {
-    "id": "shaper",
-    "name": "The Shaper",
-    "tier": "Pinnacle",
-    "entry": [
-      {
-        "name": "Fragment of the Phoenix",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Fragment of the Hydra",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Fragment of the Minotaur",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Fragment of the Chimera",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool A)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Shaper's Touch",
-            "p": 0.56,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Voidwalker",
-            "p": 0.26,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Solstice Vigil",
-            "p": 0.15,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Dying Sun",
-            "p": 0.03,
-            "types": [
-              "UniqueFlask"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Fragment Drop",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Fragment of Knowledge",
-            "p": 0.5,
-            "types": [
-              "Fragment"
-            ]
-          },
-          {
-            "name": "Fragment of Shape",
-            "p": 0.5,
-            "types": [
-              "Fragment"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Additional Drops",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Shaper's Exalted Orb",
-            "p": 0.12,
-            "types": [
-              "Currency"
-            ]
-          },
-          {
-            "name": "Orb of Dominance",
-            "p": 0.03,
-            "types": [
-              "Currency"
-            ]
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/The_Shaper"
-    ]
-  },
-  {
-    "id": "uber-shaper",
-    "name": "The Shaper (Uber)",
-    "tier": "Uber Pinnacle",
-    "note": "Using standard Shaper drop rates; uber-specific adjustments not yet modeled.",
-    "entry": [
-      {
-        "name": "Cosmic Fragment",
-        "qty": 5,
-        "types": [
-          "Fragment"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool A)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Shaper's Touch",
-            "p": 0.56,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Voidwalker",
-            "p": 0.26,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Solstice Vigil",
-            "p": 0.15,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Dying Sun",
-            "p": 0.03,
-            "types": [
-              "UniqueFlask"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Guaranteed Unique (Pool B)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Echoes of Creation",
-            "p": 0.4,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Entropic Devastation",
-            "p": 0.36,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "The Tides of Time",
-            "p": 0.22,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Starforge",
-            "p": 0.02,
-            "types": [
-              "UniqueWeapon"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Fragment Drop",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Fragment of Knowledge",
-            "p": 0.5,
-            "types": [
-              "Fragment"
-            ]
-          },
-          {
-            "name": "Fragment of Shape",
-            "p": 0.5,
-            "types": [
-              "Fragment"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Encounter-Specific",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Sublime Vision",
-            "p": 0.02,
-            "types": [
-              "UniqueJewel"
-            ],
-            "strategy": "min",
-            "note": "Variant-heavy"
-          },
-          {
-            "name": "Cosmic Reliquary Key",
-            "p": 0.01,
-            "types": [
-              "Fragment"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Additional Drops",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Shaper's Exalted Orb",
-            "p": 0.12,
-            "types": [
-              "Currency"
-            ]
-          },
-          {
-            "name": "Orb of Dominance",
-            "p": 0.03,
-            "types": [
-              "Currency"
-            ]
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/The_Shaper"
-    ]
-  },
-  {
-    "id": "elder",
-    "name": "The Elder",
-    "tier": "Pinnacle",
-    "entry": [
-      {
-        "name": "Fragment of Purification",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Fragment of Constriction",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Fragment of Enslavement",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Fragment of Eradication",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Fragment Drop",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Fragment of Terror",
-            "p": 0.5,
-            "types": [
-              "Fragment"
-            ]
-          },
-          {
-            "name": "Fragment of Emptiness",
-            "p": 0.5,
-            "types": [
-              "Fragment"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Guaranteed Unique Pool",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Cyclopean Coil",
-            "p": 0.3,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Blasphemer's Grasp",
-            "p": 0.3,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Nebuloch",
-            "p": 0.1,
-            "types": [
-              "UniqueWeapon"
-            ]
-          },
-          {
-            "name": "Hopeshredder",
-            "p": 0.1,
-            "types": [
-              "UniqueWeapon"
-            ]
-          },
-          {
-            "name": "Shimmeron",
-            "p": 0.1,
-            "types": [
-              "UniqueWeapon"
-            ]
-          },
-          {
-            "name": "Impresence",
-            "p": 0.1,
-            "types": [
-              "UniqueAccessory"
-            ],
-            "strategy": "avg",
-            "note": "Any curse variant"
-          }
-        ]
-      },
-      {
-        "label": "Additional Drops",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Elder's Exalted Orb",
-            "p": 0.1,
-            "types": [
-              "Currency"
-            ]
-          },
-          {
-            "name": "Orb of Dominance",
-            "p": 0.02,
-            "types": [
-              "Currency"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Watcher's Eye",
-            "p": 0.4,
-            "types": [
-              "UniqueJewel"
-            ],
-            "strategy": "min",
-            "note": "2-mod Watcher's Eye; price varies"
-          },
-          {
-            "name": "Void of the Elements",
-            "p": 0.01,
-            "types": [
-              "DivinationCard"
-            ],
-            "approx": true
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/The_Elder"
-    ]
-  },
-  {
-    "id": "uber-elder",
-    "name": "Uber Elder",
-    "tier": "Pinnacle",
-    "entry": [
-      {
-        "name": "Fragment of Knowledge",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Fragment of Shape",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Fragment of Terror",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Fragment of Emptiness",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool A)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Mark of the Shaper",
-            "p": 0.35,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Mark of the Elder",
-            "p": 0.35,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Voidfletcher",
-            "p": 0.15,
-            "types": [
-              "UniqueWeapon"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Indigon",
-            "p": 0.12,
-            "types": [
-              "UniqueArmour"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Disintegrator",
-            "p": 0.03,
-            "types": [
-              "UniqueWeapon"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Guaranteed Unique (Pool B)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Call of the Void",
-            "p": 0.4,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "The Devourer of Minds",
-            "p": 0.3,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Soul Ascension",
-            "p": 0.1,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Impresence",
-            "p": 0.1,
-            "types": [
-              "UniqueAccessory"
-            ],
-            "strategy": "avg",
-            "note": "Full power (2 curse) variant"
-          },
-          {
-            "name": "The Eternity Shroud",
-            "p": 0.06,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Voidforge",
-            "p": 0.04,
-            "types": [
-              "UniqueWeapon"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Encounter-Specific",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Sublime Vision",
-            "p": 0.01,
-            "types": [
-              "UniqueJewel"
-            ],
-            "strategy": "min",
-            "note": "Variant-heavy"
-          },
-          {
-            "name": "Decaying Reliquary Key",
-            "p": 0.015,
-            "types": [
-              "Fragment"
-            ]
-          },
-          {
-            "name": "Curio of Decay",
-            "p": 0.05,
-            "types": [
-              "Fragment"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Additional Drops",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Watcher's Eye",
-            "p": 0.3,
-            "types": [
-              "UniqueJewel"
-            ],
-            "strategy": "min",
-            "note": "3-mod Watcher's Eye; price varies"
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/Uber_Elder"
-    ]
-  },
-  {
-    "id": "atziri",
-    "name": "Atziri, Queen of the Vaal",
-    "tier": "Endgame",
-    "note": "Drop rates based on a 100-run community sample (Feb 24 2023); only reported items modeled.",
-    "entry": [
-      {
-        "name": "Sacrifice at Dusk",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Sacrifice at Noon",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Sacrifice at Midnight",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Sacrifice at Dawn",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Atziri's Promise",
-            "p": 0.54,
-            "types": [
-              "UniqueFlask"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Atziri's Step",
-            "p": 0.11,
-            "types": [
-              "UniqueArmour"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Doryani's Catalyst",
-            "p": 0.03,
-            "types": [
-              "UniqueWeapon"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Pledge of Hands",
-            "p": 0.01,
-            "types": [
-              "UniqueWeapon"
-            ],
-            "approx": true
-          },
-          {
-            "name": "Triumvirate Authority",
-            "p": null,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Doryani's Invitation",
-            "p": 0.16,
-            "types": [
-              "UniqueAccessory"
-            ],
-            "strategy": "avg",
-            "note": "4 variants",
-            "approx": true
-          }
-        ]
-      },
-      {
-        "label": "Mortal Fragment (Chance)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Mortal Grief",
-            "p": 0.25,
-            "types": [
-              "Fragment"
-            ],
-            "approx": true,
-            "note": "Assumed even split"
-          },
-          {
-            "name": "Mortal Hope",
-            "p": 0.25,
-            "types": [
-              "Fragment"
-            ],
-            "approx": true,
-            "note": "Assumed even split"
-          },
-          {
-            "name": "Mortal Rage",
-            "p": 0.25,
-            "types": [
-              "Fragment"
-            ],
-            "approx": true,
-            "note": "Assumed even split"
-          },
-          {
-            "name": "Mortal Ignorance",
-            "p": 0.25,
-            "types": [
-              "Fragment"
-            ],
-            "approx": true,
-            "note": "Assumed even split"
-          }
-        ]
-      },
-      {
-        "label": "Additional Drops",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Sacrificial Garb",
-            "p": 0.1,
-            "types": [],
-            "note": "Base item (manual price)",
-            "approx": true
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/Atziri%2C_Queen_of_the_Vaal",
-      "https://www.reddit.com/r/pathofexile/comments/11agg6r/small_sample_100_regular_atziri_runs/"
-    ]
-  },
-  {
-    "id": "uber-atziri",
-    "name": "Atziri, Queen of the Vaal (Uber)",
-    "tier": "Uber Endgame",
-    "entry": [
-      {
-        "name": "Mortal Grief",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Mortal Ignorance",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Mortal Rage",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Mortal Hope",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      }
-    ],
-    "groups": [
-      {
-        "label": "Guaranteed Unique (Pool)",
-        "type": "exclusive",
-        "items": [
-          {
-            "name": "Atziri's Splendour",
-            "p": 0.45,
-            "types": [
-              "UniqueArmour"
-            ],
-            "strategy": "avg",
-            "note": "9 variants"
-          },
-          {
-            "name": "The Vertex",
-            "p": 0.37,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Triumvirate Authority",
-            "p": 0.06,
-            "types": [
-              "UniqueAccessory"
-            ]
-          },
-          {
-            "name": "Atziri's Acuity",
-            "p": 0.05,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Atziri's Reflection",
-            "p": 0.03,
-            "types": [
-              "UniqueArmour"
-            ]
-          },
-          {
-            "name": "Atziri's Rule",
-            "p": 0.02,
-            "types": [
-              "UniqueWeapon"
-            ]
-          },
-          {
-            "name": "Atziri's Disfavour",
-            "p": 0.02,
-            "types": [
-              "UniqueWeapon"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Additional Drops",
-        "type": "independent",
-        "items": [
-          {
-            "name": "Sacrificial Garb",
-            "p": 0.125,
-            "types": [],
-            "approx": true,
-            "note": "Base item (manual price)"
-          },
-          {
-            "name": "Beauty",
-            "p": 0.125,
-            "types": [],
-            "approx": true,
-            "note": "Vaal Aspect (manual price)"
-          },
-          {
-            "name": "Triskaidekaphobia",
-            "p": 0.25,
-            "types": [
-              "DivinationCard"
-            ],
-            "approx": true,
-            "note": "Divination card"
-          },
-          {
-            "name": "The Price of Devotion",
-            "p": 0.001,
-            "types": [
-              "DivinationCard"
-            ],
-            "approx": true,
-            "note": "<0.1%"
-          }
-        ]
-      }
-    ],
-    "sources": [
-      "https://www.poewiki.net/wiki/Atziri%2C_Queen_of_the_Vaal"
-    ]
-  }
+	{
+		"id": "exarch",
+		"name": "The Searing Exarch",
+		"tier": "Pinnacle",
+		"entry": [
+			{
+				"name": "Incandescent Invitation",
+				"qty": 1,
+				"types": ["Invitations"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool A)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Dawnbreaker",
+						"p": 0.63,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Dawnstrider",
+						"p": 0.35,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Dissolution of the Flesh",
+						"p": 0.02,
+						"types": ["UniqueJewel"]
+					}
+				]
+			},
+			{
+				"label": "Guaranteed Unique (Pool B)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "The Annihilating Light",
+						"p": 0.455,
+						"types": ["UniqueWeapon"]
+					},
+					{
+						"name": "Annihilation's Approach",
+						"p": 0.29,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Crystallised Omniscience",
+						"p": 0.24,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "The Celestial Brace",
+						"p": 0.015,
+						"types": ["UniqueArmour"]
+					}
+				]
+			},
+			{
+				"label": "Additional Drops",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Forbidden Flame",
+						"p": 0.05,
+						"types": ["UniqueJewel"]
+					},
+					{
+						"name": "Exceptional Eldritch Ember",
+						"p": 0.15,
+						"types": ["Currency"]
+					}
+				]
+			}
+		],
+		"sources": ["https://www.poewiki.net/wiki/The_Searing_Exarch"]
+	},
+	{
+		"id": "uber-exarch",
+		"name": "The Searing Exarch (Uber)",
+		"tier": "Uber Pinnacle",
+		"note": "Drop rates reflect a 66-run community sample; only observed drops are modeled.",
+		"entry": [
+			{
+				"name": "Blazing Fragment",
+				"qty": 5,
+				"types": ["Fragment"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool B)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "The Annihilating Light",
+						"p": 0.5,
+						"types": ["UniqueWeapon"],
+						"approx": true
+					},
+					{
+						"name": "Annihilation's Approach",
+						"p": 0.1364,
+						"types": ["UniqueArmour"],
+						"approx": true
+					},
+					{
+						"name": "Crystallised Omniscience",
+						"p": 0.0606,
+						"types": ["UniqueAccessory"],
+						"approx": true
+					},
+					{
+						"name": "The Celestial Brace",
+						"p": 0.303,
+						"types": ["UniqueArmour"],
+						"approx": true
+					}
+				]
+			},
+			{
+				"label": "Encounter-Specific",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Curio of Absorption",
+						"p": 0.0303,
+						"types": ["Fragment"],
+						"approx": true
+					}
+				]
+			},
+			{
+				"label": "Additional Drops",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Forbidden Flame",
+						"p": 0.0455,
+						"types": ["UniqueJewel"],
+						"note": "Hidden Ascendancy Notable variant",
+						"approx": true
+					}
+				]
+			}
+		],
+		"sources": [
+			"https://www.reddit.com/r/pathofexile/comments/1eniskx/330_blazing_fragments_66_uber_searing_exarchs/"
+		]
+	},
+	{
+		"id": "eater",
+		"name": "The Eater of Worlds",
+		"tier": "Pinnacle",
+		"entry": [
+			{
+				"name": "Screaming Invitation",
+				"qty": 1,
+				"types": ["Invitations"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool A)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Inextricable Fate",
+						"p": 0.55,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "The Gluttonous Tide",
+						"p": 0.43,
+						"types": ["UniqueWeapon"]
+					},
+					{
+						"name": "Melding of the Flesh",
+						"p": 0.02,
+						"types": ["UniqueJewel"]
+					}
+				]
+			},
+			{
+				"label": "Additional Drops",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Forbidden Flesh",
+						"p": 0.05,
+						"types": ["UniqueJewel"]
+					},
+					{
+						"name": "Exceptional Eldritch Ichor",
+						"p": 0.15,
+						"types": ["Currency"]
+					},
+					{
+						"name": "Eldritch Orb of Annulment",
+						"p": 0.05,
+						"types": ["Currency"]
+					},
+					{
+						"name": "Eldritch Chaos Orb",
+						"p": 0.05,
+						"types": ["Currency"]
+					}
+				]
+			}
+		],
+		"sources": ["https://www.poewiki.net/wiki/The_Eater_of_Worlds"]
+	},
+	{
+		"id": "uber-eater",
+		"name": "The Eater of Worlds (Uber)",
+		"tier": "Uber Pinnacle",
+		"note": "Uber drop rates estimated from community samples totaling 135 runs (91 + 44). Pool B helmet count in the 44-run sample inferred from pool B exclusivity; currency rates still from the 91-run subset. Pool A still uses standard Eater rates.",
+		"entry": [
+			{
+				"name": "Devouring Fragment",
+				"qty": 5,
+				"types": ["Fragment"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool A)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Inextricable Fate",
+						"p": 0.55,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "The Gluttonous Tide",
+						"p": 0.43,
+						"types": ["UniqueWeapon"]
+					},
+					{
+						"name": "Melding of the Flesh",
+						"p": 0.02,
+						"types": ["UniqueJewel"]
+					}
+				]
+			},
+			{
+				"label": "Guaranteed Unique (Pool B)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Ravenous Passion",
+						"p": 0.6148,
+						"types": ["UniqueArmour"],
+						"approx": true
+					},
+					{
+						"name": "Ashes of the Stars",
+						"p": 0.363,
+						"types": ["UniqueAccessory"],
+						"approx": true
+					},
+					{
+						"name": "Nimis",
+						"p": 0.0222,
+						"types": ["UniqueAccessory"],
+						"approx": true
+					}
+				]
+			},
+			{
+				"label": "Encounter-Specific",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Visceral Reliquary Key",
+						"p": 0.015,
+						"types": ["Fragment"]
+					},
+					{
+						"name": "Curio of Consumption",
+						"p": 0.0148,
+						"types": ["Fragment"],
+						"approx": true
+					}
+				]
+			},
+			{
+				"label": "Additional Drops",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Forbidden Flesh",
+						"p": 0.0519,
+						"types": ["UniqueJewel"],
+						"note": "Hidden Ascendancy Notable variant",
+						"approx": true
+					},
+					{
+						"name": "Exceptional Eldritch Ichor",
+						"p": 0.1538,
+						"types": ["Currency"],
+						"approx": true
+					},
+					{
+						"name": "Eldritch Orb of Annulment",
+						"p": 0.011,
+						"types": ["Currency"],
+						"approx": true
+					},
+					{
+						"name": "Eldritch Chaos Orb",
+						"p": 0.0769,
+						"types": ["Currency"],
+						"approx": true
+					},
+					{
+						"name": "Eldritch Exalted Orb",
+						"p": 0.0549,
+						"types": ["Currency"],
+						"approx": true
+					}
+				]
+			}
+		],
+		"sources": [
+			"https://www.poewiki.net/wiki/The_Eater_of_Worlds",
+			"https://www.reddit.com/r/pathofexile/comments/1eonkdp/455_uber_eater_fragments_91_uber_eaters_again/"
+		]
+	},
+	{
+		"id": "maven",
+		"name": "The Maven",
+		"tier": "Pinnacle",
+		"note": "Regular rates based on a 100-run community sample; only items observed in that dataset are modeled.",
+		"entry": [
+			{
+				"name": "The Maven's Writ",
+				"qty": 1,
+				"types": ["Fragment"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool A)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Arn's Anguish",
+						"p": 0.07,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Doppelg\u00e4nger Guise",
+						"p": 0.08,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Olesya's Delight",
+						"p": 0.17,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Graven's Secret",
+						"p": 0.19,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Legacy of Fury",
+						"p": 0.49,
+						"types": ["UniqueArmour"]
+					}
+				]
+			},
+			{
+				"label": "Encounter-Specific",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Awakened Support Gem",
+						"p": 0.27,
+						"types": [],
+						"note": "Prices vary widely",
+						"noPrice": true
+					},
+					{
+						"name": "Orb of Conflict",
+						"p": 0.32,
+						"types": ["Currency"]
+					}
+				]
+			}
+		],
+		"sources": [
+			"https://www.poewiki.net/wiki/The_Maven",
+			"https://www.reddit.com/r/pathofexile/comments/1c6p7df/loot_from_300_uber_maven_100_regular_maven_100/"
+		]
+	},
+	{
+		"id": "uber-maven",
+		"name": "The Maven (Uber)",
+		"tier": "Uber Pinnacle",
+		"note": "Uber rates based on a 1,525-run sample; Pool A uses standard Maven rates.",
+		"entry": [
+			{
+				"name": "Reality Fragment",
+				"qty": 5,
+				"types": ["Fragment"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool A)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Legacy of Fury",
+						"p": 0.44,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Graven's Secret",
+						"p": 0.16,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Arn's Anguish",
+						"p": 0.16,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Olesya's Delight",
+						"p": 0.16,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Doppelg\u00e4nger Guise",
+						"p": 0.07,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Echoforge",
+						"p": 0.01,
+						"types": ["UniqueWeapon"]
+					}
+				]
+			},
+			{
+				"label": "Guaranteed Unique (Pool B)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Viridi's Veil",
+						"p": 0.5672,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Impossible Escape",
+						"p": 0.3364,
+						"types": ["UniqueJewel"],
+						"strategy": "min",
+						"note": "Variant-heavy"
+					},
+					{
+						"name": "Grace of the Goddess",
+						"p": 0.0033,
+						"types": ["UniqueWeapon"]
+					},
+					{
+						"name": "Progenesis",
+						"p": 0.0931,
+						"types": ["UniqueFlask"]
+					}
+				]
+			},
+			{
+				"label": "Encounter-Specific",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Shiny Reliquary Key",
+						"p": 0.0105,
+						"types": ["Fragment"]
+					},
+					{
+						"name": "Curio of Potential",
+						"p": 0.0544,
+						"types": ["Fragment"]
+					},
+					{
+						"name": "Awakened Exceptional Support Gem",
+						"p": 0.0052,
+						"types": [],
+						"note": "Prices vary widely",
+						"noPrice": true
+					},
+					{
+						"name": "Awakened Support Gem",
+						"p": 0.2446,
+						"types": [],
+						"note": "Prices vary widely",
+						"noPrice": true
+					},
+					{
+						"name": "Orb of Conflict",
+						"p": 0.341,
+						"types": ["Currency"]
+					}
+				]
+			}
+		],
+		"sources": [
+			"https://www.poewiki.net/wiki/The_Maven",
+			"https://www.reddit.com/r/pathofexile/comments/1eudvji/loot_from_1525_uber_maven_3844_div_profit/"
+		]
+	},
+	{
+		"id": "sirus",
+		"name": "Sirus, Awakener of Worlds",
+		"tier": "Pinnacle",
+		"entry": [
+			{
+				"name": "Veritania's Crest",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Drox's Crest",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Baran's Crest",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Al-Hezmin's Crest",
+				"qty": 1,
+				"types": ["Fragment"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool A)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Hands of the High Templar",
+						"p": 0.4,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Crown of the Inward Eye",
+						"p": 0.35,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "The Burden of Truth",
+						"p": 0.2,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Thread of Hope",
+						"p": 0.05,
+						"types": ["UniqueJewel"],
+						"variantExclude": ["Massive"],
+						"strategy": "avg",
+						"note": "Non-massive ring sizes"
+					}
+				]
+			},
+			{
+				"label": "Guaranteed Unique (Pool B)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Thread of Hope",
+						"p": 0.55,
+						"types": ["UniqueJewel"],
+						"variant": "Massive",
+						"strategy": "min"
+					},
+					{
+						"name": "The Tempest Rising",
+						"p": 0.37,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "The Saviour",
+						"p": 0.005,
+						"types": ["UniqueWeapon"],
+						"approx": true
+					}
+				]
+			},
+			{
+				"label": "Additional Drops",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Oubliette Reliquary Key",
+						"p": 0.015,
+						"types": ["Fragment"]
+					},
+					{
+						"name": "Orb of Dominance",
+						"p": 0.1,
+						"types": ["Currency"]
+					},
+					{
+						"name": "Awakener's Orb",
+						"p": 0.2,
+						"types": ["Currency"]
+					},
+					{
+						"name": "A Fate Worse Than Death",
+						"p": 0.04,
+						"types": ["DivinationCard"]
+					}
+				]
+			}
+		],
+		"sources": ["https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"]
+	},
+	{
+		"id": "uber-sirus",
+		"name": "Sirus, Awakener of Worlds (Uber)",
+		"tier": "Uber Pinnacle",
+		"note": "Using standard Sirus drop rates; uber-specific adjustments not yet modeled.",
+		"entry": [
+			{
+				"name": "Awakening Fragment",
+				"qty": 5,
+				"types": ["Fragment"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool A)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Hands of the High Templar",
+						"p": 0.4,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Crown of the Inward Eye",
+						"p": 0.35,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "The Burden of Truth",
+						"p": 0.2,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Thread of Hope",
+						"p": 0.05,
+						"types": ["UniqueJewel"],
+						"variantExclude": ["Massive"],
+						"strategy": "avg",
+						"note": "Non-massive ring sizes"
+					}
+				]
+			},
+			{
+				"label": "Guaranteed Unique (Pool B)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Thread of Hope",
+						"p": 0.55,
+						"types": ["UniqueJewel"],
+						"variant": "Massive",
+						"strategy": "min"
+					},
+					{
+						"name": "The Tempest Rising",
+						"p": 0.37,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Oriath's End",
+						"p": 0.075,
+						"types": ["UniqueFlask"]
+					},
+					{
+						"name": "The Saviour",
+						"p": 0.005,
+						"types": ["UniqueWeapon"],
+						"approx": true
+					}
+				]
+			},
+			{
+				"label": "Additional Drops",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Oubliette Reliquary Key",
+						"p": 0.015,
+						"types": ["Fragment"]
+					},
+					{
+						"name": "Orb of Dominance",
+						"p": 0.1,
+						"types": ["Currency"]
+					},
+					{
+						"name": "Awakener's Orb",
+						"p": 0.2,
+						"types": ["Currency"]
+					},
+					{
+						"name": "A Fate Worse Than Death",
+						"p": 0.04,
+						"types": ["DivinationCard"]
+					}
+				]
+			}
+		],
+		"sources": ["https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"]
+	},
+	{
+		"id": "shaper",
+		"name": "The Shaper",
+		"tier": "Pinnacle",
+		"entry": [
+			{
+				"name": "Fragment of the Phoenix",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Fragment of the Hydra",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Fragment of the Minotaur",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Fragment of the Chimera",
+				"qty": 1,
+				"types": ["Fragment"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool A)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Shaper's Touch",
+						"p": 0.56,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Voidwalker",
+						"p": 0.26,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Solstice Vigil",
+						"p": 0.15,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Dying Sun",
+						"p": 0.03,
+						"types": ["UniqueFlask"]
+					}
+				]
+			},
+			{
+				"label": "Fragment Drop",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Fragment of Knowledge",
+						"p": 0.5,
+						"types": ["Fragment"]
+					},
+					{
+						"name": "Fragment of Shape",
+						"p": 0.5,
+						"types": ["Fragment"]
+					}
+				]
+			},
+			{
+				"label": "Additional Drops",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Shaper's Exalted Orb",
+						"p": 0.12,
+						"types": ["Currency"]
+					},
+					{
+						"name": "Orb of Dominance",
+						"p": 0.03,
+						"types": ["Currency"]
+					}
+				]
+			}
+		],
+		"sources": ["https://www.poewiki.net/wiki/The_Shaper"]
+	},
+	{
+		"id": "uber-shaper",
+		"name": "The Shaper (Uber)",
+		"tier": "Uber Pinnacle",
+		"note": "Using standard Shaper drop rates; uber-specific adjustments not yet modeled.",
+		"entry": [
+			{
+				"name": "Cosmic Fragment",
+				"qty": 5,
+				"types": ["Fragment"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool A)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Shaper's Touch",
+						"p": 0.56,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Voidwalker",
+						"p": 0.26,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Solstice Vigil",
+						"p": 0.15,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Dying Sun",
+						"p": 0.03,
+						"types": ["UniqueFlask"]
+					}
+				]
+			},
+			{
+				"label": "Guaranteed Unique (Pool B)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Echoes of Creation",
+						"p": 0.4,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Entropic Devastation",
+						"p": 0.36,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "The Tides of Time",
+						"p": 0.22,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Starforge",
+						"p": 0.02,
+						"types": ["UniqueWeapon"]
+					}
+				]
+			},
+			{
+				"label": "Fragment Drop",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Fragment of Knowledge",
+						"p": 0.5,
+						"types": ["Fragment"]
+					},
+					{
+						"name": "Fragment of Shape",
+						"p": 0.5,
+						"types": ["Fragment"]
+					}
+				]
+			},
+			{
+				"label": "Encounter-Specific",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Sublime Vision",
+						"p": 0.02,
+						"types": ["UniqueJewel"],
+						"strategy": "min",
+						"note": "Variant-heavy"
+					},
+					{
+						"name": "Cosmic Reliquary Key",
+						"p": 0.01,
+						"types": ["Fragment"]
+					}
+				]
+			},
+			{
+				"label": "Additional Drops",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Shaper's Exalted Orb",
+						"p": 0.12,
+						"types": ["Currency"]
+					},
+					{
+						"name": "Orb of Dominance",
+						"p": 0.03,
+						"types": ["Currency"]
+					}
+				]
+			}
+		],
+		"sources": ["https://www.poewiki.net/wiki/The_Shaper"]
+	},
+	{
+		"id": "elder",
+		"name": "The Elder",
+		"tier": "Pinnacle",
+		"entry": [
+			{
+				"name": "Fragment of Purification",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Fragment of Constriction",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Fragment of Enslavement",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Fragment of Eradication",
+				"qty": 1,
+				"types": ["Fragment"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Fragment Drop",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Fragment of Terror",
+						"p": 0.5,
+						"types": ["Fragment"]
+					},
+					{
+						"name": "Fragment of Emptiness",
+						"p": 0.5,
+						"types": ["Fragment"]
+					}
+				]
+			},
+			{
+				"label": "Guaranteed Unique Pool",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Cyclopean Coil",
+						"p": 0.3,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Blasphemer's Grasp",
+						"p": 0.3,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Nebuloch",
+						"p": 0.1,
+						"types": ["UniqueWeapon"]
+					},
+					{
+						"name": "Hopeshredder",
+						"p": 0.1,
+						"types": ["UniqueWeapon"]
+					},
+					{
+						"name": "Shimmeron",
+						"p": 0.1,
+						"types": ["UniqueWeapon"]
+					},
+					{
+						"name": "Impresence",
+						"p": 0.1,
+						"types": ["UniqueAccessory"],
+						"strategy": "avg",
+						"note": "Any curse variant"
+					}
+				]
+			},
+			{
+				"label": "Additional Drops",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Elder's Exalted Orb",
+						"p": 0.1,
+						"types": ["Currency"]
+					},
+					{
+						"name": "Orb of Dominance",
+						"p": 0.02,
+						"types": ["Currency"],
+						"approx": true
+					},
+					{
+						"name": "Watcher's Eye",
+						"p": 0.4,
+						"types": ["UniqueJewel"],
+						"strategy": "min",
+						"note": "2-mod Watcher's Eye; price varies"
+					},
+					{
+						"name": "Void of the Elements",
+						"p": 0.01,
+						"types": ["DivinationCard"],
+						"approx": true
+					}
+				]
+			}
+		],
+		"sources": ["https://www.poewiki.net/wiki/The_Elder"]
+	},
+	{
+		"id": "uber-elder",
+		"name": "Uber Elder",
+		"tier": "Pinnacle",
+		"entry": [
+			{
+				"name": "Fragment of Knowledge",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Fragment of Shape",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Fragment of Terror",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Fragment of Emptiness",
+				"qty": 1,
+				"types": ["Fragment"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool A)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Mark of the Shaper",
+						"p": 0.35,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Mark of the Elder",
+						"p": 0.35,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Voidfletcher",
+						"p": 0.15,
+						"types": ["UniqueWeapon"],
+						"approx": true
+					},
+					{
+						"name": "Indigon",
+						"p": 0.12,
+						"types": ["UniqueArmour"],
+						"approx": true
+					},
+					{
+						"name": "Disintegrator",
+						"p": 0.03,
+						"types": ["UniqueWeapon"]
+					}
+				]
+			},
+			{
+				"label": "Guaranteed Unique (Pool B)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Call of the Void",
+						"p": 0.4,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "The Devourer of Minds",
+						"p": 0.3,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Soul Ascension",
+						"p": 0.1,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Impresence",
+						"p": 0.1,
+						"types": ["UniqueAccessory"],
+						"strategy": "avg",
+						"note": "Full power (2 curse) variant"
+					},
+					{
+						"name": "The Eternity Shroud",
+						"p": 0.06,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Voidforge",
+						"p": 0.04,
+						"types": ["UniqueWeapon"]
+					}
+				]
+			},
+			{
+				"label": "Encounter-Specific",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Sublime Vision",
+						"p": 0.01,
+						"types": ["UniqueJewel"],
+						"strategy": "min",
+						"note": "Variant-heavy"
+					},
+					{
+						"name": "Decaying Reliquary Key",
+						"p": 0.015,
+						"types": ["Fragment"]
+					},
+					{
+						"name": "Curio of Decay",
+						"p": 0.05,
+						"types": ["Fragment"]
+					}
+				]
+			},
+			{
+				"label": "Additional Drops",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Watcher's Eye",
+						"p": 0.3,
+						"types": ["UniqueJewel"],
+						"strategy": "min",
+						"note": "3-mod Watcher's Eye; price varies"
+					}
+				]
+			}
+		],
+		"sources": ["https://www.poewiki.net/wiki/Uber_Elder"]
+	},
+	{
+		"id": "atziri",
+		"name": "Atziri, Queen of the Vaal",
+		"tier": "Endgame",
+		"note": "Drop rates based on a 100-run community sample (Feb 24 2023); only reported items modeled.",
+		"entry": [
+			{
+				"name": "Sacrifice at Dusk",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Sacrifice at Noon",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Sacrifice at Midnight",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Sacrifice at Dawn",
+				"qty": 1,
+				"types": ["Fragment"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Atziri's Promise",
+						"p": 0.54,
+						"types": ["UniqueFlask"],
+						"approx": true
+					},
+					{
+						"name": "Atziri's Step",
+						"p": 0.11,
+						"types": ["UniqueArmour"],
+						"approx": true
+					},
+					{
+						"name": "Doryani's Catalyst",
+						"p": 0.03,
+						"types": ["UniqueWeapon"],
+						"approx": true
+					},
+					{
+						"name": "Pledge of Hands",
+						"p": 0.01,
+						"types": ["UniqueWeapon"],
+						"approx": true
+					},
+					{
+						"name": "Triumvirate Authority",
+						"p": null,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Doryani's Invitation",
+						"p": 0.16,
+						"types": ["UniqueAccessory"],
+						"strategy": "avg",
+						"note": "4 variants",
+						"approx": true
+					}
+				]
+			},
+			{
+				"label": "Mortal Fragment (Chance)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Mortal Grief",
+						"p": 0.25,
+						"types": ["Fragment"],
+						"approx": true,
+						"note": "Assumed even split"
+					},
+					{
+						"name": "Mortal Hope",
+						"p": 0.25,
+						"types": ["Fragment"],
+						"approx": true,
+						"note": "Assumed even split"
+					},
+					{
+						"name": "Mortal Rage",
+						"p": 0.25,
+						"types": ["Fragment"],
+						"approx": true,
+						"note": "Assumed even split"
+					},
+					{
+						"name": "Mortal Ignorance",
+						"p": 0.25,
+						"types": ["Fragment"],
+						"approx": true,
+						"note": "Assumed even split"
+					}
+				]
+			},
+			{
+				"label": "Additional Drops",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Sacrificial Garb",
+						"p": 0.1,
+						"types": [],
+						"note": "Base item (manual price)",
+						"approx": true
+					}
+				]
+			}
+		],
+		"sources": [
+			"https://www.poewiki.net/wiki/Atziri%2C_Queen_of_the_Vaal",
+			"https://www.reddit.com/r/pathofexile/comments/11agg6r/small_sample_100_regular_atziri_runs/"
+		]
+	},
+	{
+		"id": "uber-atziri",
+		"name": "Atziri, Queen of the Vaal (Uber)",
+		"tier": "Uber Endgame",
+		"entry": [
+			{
+				"name": "Mortal Grief",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Mortal Ignorance",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Mortal Rage",
+				"qty": 1,
+				"types": ["Fragment"]
+			},
+			{
+				"name": "Mortal Hope",
+				"qty": 1,
+				"types": ["Fragment"]
+			}
+		],
+		"groups": [
+			{
+				"label": "Guaranteed Unique (Pool)",
+				"type": "exclusive",
+				"items": [
+					{
+						"name": "Atziri's Splendour",
+						"p": 0.45,
+						"types": ["UniqueArmour"],
+						"strategy": "avg",
+						"note": "9 variants"
+					},
+					{
+						"name": "The Vertex",
+						"p": 0.37,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Triumvirate Authority",
+						"p": 0.06,
+						"types": ["UniqueAccessory"]
+					},
+					{
+						"name": "Atziri's Acuity",
+						"p": 0.05,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Atziri's Reflection",
+						"p": 0.03,
+						"types": ["UniqueArmour"]
+					},
+					{
+						"name": "Atziri's Rule",
+						"p": 0.02,
+						"types": ["UniqueWeapon"]
+					},
+					{
+						"name": "Atziri's Disfavour",
+						"p": 0.02,
+						"types": ["UniqueWeapon"]
+					}
+				]
+			},
+			{
+				"label": "Additional Drops",
+				"type": "independent",
+				"items": [
+					{
+						"name": "Sacrificial Garb",
+						"p": 0.125,
+						"types": [],
+						"approx": true,
+						"note": "Base item (manual price)"
+					},
+					{
+						"name": "Beauty",
+						"p": 0.125,
+						"types": [],
+						"approx": true,
+						"note": ""
+					},
+					{
+						"name": "Triskaidekaphobia",
+						"p": 0.25,
+						"types": ["DivinationCard"],
+						"approx": true,
+						"note": "Divination card"
+					},
+					{
+						"name": "The Price of Devotion",
+						"p": 0.001,
+						"types": ["DivinationCard"],
+						"approx": true,
+						"note": "<0.1%"
+					}
+				]
+			}
+		],
+		"sources": ["https://www.poewiki.net/wiki/Atziri%2C_Queen_of_the_Vaal"]
+	}
 ]
