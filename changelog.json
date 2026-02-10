@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "version": "0.2.3",
+      "date": "2026-02-10",
+      "changes": [
+        "Avoided six-link poe.watch prices by preferring unlinked entries when multiple variants exist.",
+        "Improved mobile tables with scrollable wrappers and overflow containment."
+      ]
+    },
+    {
       "version": "0.2.2",
       "date": "2026-02-10",
       "changes": [

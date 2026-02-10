@@ -218,6 +218,7 @@ function slimWatchItems(items) {
     name: item.name,
     category: item.category,
     icon: item.icon,
+    linkCount: item.linkCount,
     min: item.min,
     mean: item.mean,
     max: item.max

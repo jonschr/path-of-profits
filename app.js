@@ -1100,6 +1100,7 @@
         name: item.name,
         category: item.category,
         icon: item.icon,
+        linkCount: item.linkCount,
         min: item.min,
         mean: item.mean,
         max: item.max
@@ -1187,6 +1188,12 @@
           matches = matches.filter((match) => categories.includes(match.category));
         }
       }
+
+      const unlinked = matches.filter((match) => {
+        const links = Number(match?.linkCount);
+        return !Number.isFinite(links) || links === 0;
+      });
+      if (unlinked.length) matches = unlinked;
 
       return matches;
     }
