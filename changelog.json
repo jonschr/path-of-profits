@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "version": "0.2.4",
+      "date": "2026-02-10",
+      "changes": [
+        "Pinned poe.watch IDs for items with misleading 6-link prices (Gluttonous Tide, Atziri's Splendour).",
+        "Added support for explicit poe.watch IDs in boss drop definitions."
+      ]
+    },
+    {
       "version": "0.2.3",
       "date": "2026-02-10",
       "changes": [
