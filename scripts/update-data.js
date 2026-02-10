@@ -100,6 +100,13 @@ function normalizeCategorySlug(value) {
   return normalizeCategorySlug(String(value));
 }
 
+function normalizeCardCategory(category) {
+  if (!category) return category;
+  const normalized = String(category).toLowerCase();
+  if (normalized === 'card' || normalized.includes('divination')) return 'card';
+  return category;
+}
+
 function flattenWatchBuckets(buckets) {
   if (!buckets || typeof buckets !== 'object') return [];
   const items = [];
@@ -147,6 +154,26 @@ function slimWatchItems(items) {
     mean: item.mean,
     max: item.max
   }));
+}
+
+function mergeItems(primaryItems, secondaryItems) {
+  const merged = new Map();
+  const add = (item) => {
+    if (!item) return;
+    const key = item.id != null ? `id:${item.id}` : `name:${String(item.name || '').toLowerCase()}`;
+    if (!key || key === 'name:') return;
+    if (!merged.has(key)) {
+      merged.set(key, item);
+      return;
+    }
+    const existing = merged.get(key);
+    if (!existing.category && item.category) {
+      merged.set(key, { ...existing, category: item.category });
+    }
+  };
+  (primaryItems || []).forEach(add);
+  (secondaryItems || []).forEach(add);
+  return Array.from(merged.values());
 }
 
 function findUpdatedAt(data, headers) {
@@ -226,6 +253,9 @@ async function main() {
   const categories = extractWatchCategories(categoriesResp.data)
     .map(normalizeCategorySlug)
     .filter(Boolean);
+  if (!categories.includes('card')) {
+    categories.push('card');
+  }
   if (!categories.length) {
     throw new Error('No categories returned from poe.watch');
   }
@@ -262,18 +292,7 @@ async function main() {
       continue;
     }
     const compactUpdatedAt = findUpdatedAt(compactResp.data, compactResp.headers);
-    const compactPayload = {
-      generatedAt,
-      source: 'poe.watch',
-      league: {
-        watch: league.watch,
-        text: league.text,
-        slug
-      },
-      updatedAt: compactUpdatedAt ? compactUpdatedAt.toISOString() : null,
-      items: slimWatchItems(compactItems)
-    };
-    await fs.writeFile(path.join(leagueDir, 'compact.json'), `${JSON.stringify(compactPayload, null, 2)}\n`);
+    const slimCompactItems = slimWatchItems(compactItems);
 
     const categoriesPayload = {
       generatedAt,
@@ -288,17 +307,22 @@ async function main() {
     await fs.writeFile(path.join(leagueDir, 'categories.json'), `${JSON.stringify(categoriesPayload, null, 2)}\n`);
 
     let categoryUpdatedAt = null;
+    let cardItems = [];
+    let cardUpdatedAt = null;
     const errors = [];
     for (const category of categories) {
-      const url = `${WATCH_BASE}/get?league=${encodeURIComponent(league.watch)}&category=${encodeURIComponent(category)}&game=${encodeURIComponent(WATCH_GAME)}`;
+      const normalizedCategory = normalizeCardCategory(category);
+      const gameParam = normalizedCategory === 'card' ? '' : `&game=${encodeURIComponent(WATCH_GAME)}`;
+      const url = `${WATCH_BASE}/get?league=${encodeURIComponent(league.watch)}&category=${encodeURIComponent(category)}${gameParam}`;
       try {
         const { data, headers } = await fetchJson(url);
         const catItems = extractWatchItems(data).map((item) => {
-          if (item && item.category == null && category) {
-            return { ...item, category };
+          if (item && item.category == null && normalizedCategory) {
+            return { ...item, category: normalizedCategory };
           }
           return item;
         });
+        const slimCatItems = slimWatchItems(catItems);
         const catPayload = {
           generatedAt,
           source: 'poe.watch',
@@ -307,17 +331,36 @@ async function main() {
             text: league.text,
             slug
           },
-          category,
+          category: normalizedCategory || category,
           updatedAt: findUpdatedAt(data, headers)?.toISOString() || null,
-          items: slimWatchItems(catItems)
+          items: slimCatItems
         };
         await fs.writeFile(path.join(categoryDir, `${category}.json`), `${JSON.stringify(catPayload, null, 2)}\n`);
         categoryUpdatedAt = pickLatestTimestamp(categoryUpdatedAt, findUpdatedAt(data, headers));
+        if (normalizedCategory === 'card') {
+          cardItems = slimCatItems;
+          cardUpdatedAt = pickLatestTimestamp(cardUpdatedAt, findUpdatedAt(data, headers));
+        }
       } catch (err) {
         errors.push({ category, error: err?.message || 'unknown' });
       }
       await sleep(REQUEST_DELAY_MS);
     }
+
+    const mergedItems = mergeItems(slimCompactItems, cardItems);
+    const mergedUpdatedAt = pickLatestTimestamp(compactUpdatedAt, cardUpdatedAt);
+    const compactPayload = {
+      generatedAt,
+      source: 'poe.watch',
+      league: {
+        watch: league.watch,
+        text: league.text,
+        slug
+      },
+      updatedAt: mergedUpdatedAt ? mergedUpdatedAt.toISOString() : null,
+      items: mergedItems
+    };
+    await fs.writeFile(path.join(leagueDir, 'compact.json'), `${JSON.stringify(compactPayload, null, 2)}\n`);
 
     if (errors.length) {
       await fs.writeFile(

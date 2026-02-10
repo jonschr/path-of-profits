@@ -57,7 +57,7 @@
       UniqueAccessory: ['accessory'],
       UniqueJewel: ['jewels'],
       UniqueFlask: ['flask'],
-      DivinationCard: ['card']
+      DivinationCard: ['card', 'divinationcard', 'divination', 'divination-card']
     };
 
     function normalizeWatchBase(base) {
