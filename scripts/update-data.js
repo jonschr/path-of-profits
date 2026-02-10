@@ -8,7 +8,7 @@ const REQUEST_TIMEOUT_MS = 30000;
 const REQUEST_DELAY_MS = 120;
 
 const ROOT = path.resolve(__dirname, '..');
-const DATA_DIR = path.join(ROOT, 'data');
+const DATA_DIR = path.join(ROOT, 'data', 'poe-watch');
 const LEAGUES_PATH = path.join(DATA_DIR, 'leagues.json');
 const PRICES_DIR = path.join(DATA_DIR, 'prices');
 
@@ -144,6 +144,74 @@ function extractWatchCategories(data) {
   return [];
 }
 
+function normalizeRatioCategory(category) {
+  if (!category) return category;
+  const normalized = String(category).toLowerCase();
+  if (normalized === 'divination' || normalized === 'divinationcard' || normalized === 'divination-card') {
+    return 'card';
+  }
+  if (normalized === 'cards') return 'card';
+  if (normalized === 'map' || normalized === 'maps' || normalized === 'invitation' || normalized === 'invitations') {
+    return 'maps';
+  }
+  return normalized;
+}
+
+function extractRatioItems(data) {
+  if (Array.isArray(data)) return data;
+  if (!data || typeof data !== 'object') return [];
+  if (Array.isArray(data.items)) return data.items;
+  return [];
+}
+
+function ratioItemToPrice(item) {
+  const chaosValue = Number(item?.chaos?.value ?? item?.chaos?.chaosValue ?? item?.chaosValue ?? item?.value);
+  if (!Number.isFinite(chaosValue) || chaosValue <= 0) return null;
+  const name = item?.name;
+  if (!name) return null;
+  return {
+    id: item?.id ?? name,
+    name,
+    category: normalizeRatioCategory(item?.category),
+    icon: item?.icon,
+    min: chaosValue,
+    mean: chaosValue,
+    max: chaosValue,
+    updatedAt: parseTimestamp(item?.chaos?.timestamp ?? item?.divine?.timestamp ?? item?.timestamp)
+  };
+}
+
+function indexRatioItems(items) {
+  const seen = new Set();
+  const result = [];
+  let updatedAt = null;
+  (items || []).forEach((item) => {
+    const parsed = ratioItemToPrice(item);
+    if (!parsed) return;
+    const key = String(parsed.name || '').toLowerCase();
+    if (!key || seen.has(key)) return;
+    seen.add(key);
+    updatedAt = pickLatestTimestamp(updatedAt, parsed.updatedAt);
+    const { updatedAt: _ignored, ...rest } = parsed;
+    result.push(rest);
+  });
+  return { items: result, updatedAt };
+}
+
+function mergeRatioItems(ratioItems, fallbackItems) {
+  if (!ratioItems?.length) return fallbackItems || [];
+  const ratioNames = new Set(
+    ratioItems
+      .map((item) => String(item?.name || '').toLowerCase())
+      .filter(Boolean)
+  );
+  const mergedFallback = (fallbackItems || []).filter((item) => {
+    const key = String(item?.name || '').toLowerCase();
+    return !key || !ratioNames.has(key);
+  });
+  return [...ratioItems, ...mergedFallback];
+}
+
 function slimWatchItems(items) {
   return items.map((item) => ({
     id: item.id,
@@ -275,6 +343,19 @@ async function main() {
     const categoryDir = path.join(leagueDir, 'category');
     await fs.mkdir(categoryDir, { recursive: true });
 
+    const ratioUrl = `${WATCH_BASE}/exchange/ratios?league=${encodeURIComponent(league.watch)}&game=${encodeURIComponent(WATCH_GAME)}`;
+    let ratioItems = [];
+    let ratioUpdatedAt = null;
+    const errors = [];
+    try {
+      const ratioResp = await fetchJson(ratioUrl);
+      const ratio = indexRatioItems(extractRatioItems(ratioResp.data));
+      ratioItems = ratio.items;
+      ratioUpdatedAt = ratio.updatedAt;
+    } catch (err) {
+      errors.push({ step: 'ratios', error: err?.message || 'unknown' });
+    }
+
     const compactUrl = `${WATCH_BASE}/compact?league=${encodeURIComponent(league.watch)}&all=true&game=${encodeURIComponent(WATCH_GAME)}`;
     const compactResp = await fetchJson(compactUrl);
     const compactItems = extractWatchItems(compactResp.data);
@@ -309,7 +390,6 @@ async function main() {
     let categoryUpdatedAt = null;
     let cardItems = [];
     let cardUpdatedAt = null;
-    const errors = [];
     for (const category of categories) {
       const normalizedCategory = normalizeCardCategory(category);
       const gameParam = normalizedCategory === 'card' ? '' : `&game=${encodeURIComponent(WATCH_GAME)}`;
@@ -347,8 +427,9 @@ async function main() {
       await sleep(REQUEST_DELAY_MS);
     }
 
-    const mergedItems = mergeItems(slimCompactItems, cardItems);
-    const mergedUpdatedAt = pickLatestTimestamp(compactUpdatedAt, cardUpdatedAt);
+    const mergedFallback = mergeItems(slimCompactItems, cardItems);
+    const mergedItems = mergeRatioItems(ratioItems, mergedFallback);
+    const mergedUpdatedAt = pickLatestTimestamp(ratioUpdatedAt, pickLatestTimestamp(compactUpdatedAt, cardUpdatedAt));
     const compactPayload = {
       generatedAt,
       source: 'poe.watch',

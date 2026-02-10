@@ -6,6 +6,7 @@
     const BASE_MIN_VALUE_CHAOS = 10;
     const BASE_MIN_PROBABILITY_ENABLED = true;
     const BASE_MIN_PROBABILITY = 0.1;
+    const BASE_PRICE_SOURCE = 'poe-watch';
     const BASE_SORT_KEY = 'expectedProfit';
     const BASE_SORT_DIR = 'desc';
     const BASE_DEBUG = false;
@@ -24,13 +25,17 @@
     const DEFAULT_LEAGUE_RAW = localStorage.getItem('poeBossLeague') || BASE_LEAGUE;
     const DEFAULT_LEAGUE = normalizeLeagueKey(DEFAULT_LEAGUE_RAW) || BASE_LEAGUE;
     const DEFAULT_PRICE_MODE = localStorage.getItem('poeBossPriceMode') || BASE_PRICE_MODE;
+    const DEFAULT_PRICE_SOURCE = BASE_PRICE_SOURCE;
     const manualPriceKey = 'poeBossManualPrices';
     const manualCostKey = 'poeBossManualCosts';
     const manualCurrencyKey = 'poeBossManualCurrency';
     const ignoreDropsKey = 'poeBossIgnoreDrops';
     const displayCurrencyKey = 'poeBossDisplayCurrency';
+    const priceSourceKey = 'poeBossPriceSource';
     const sortKeyStorage = 'poeBossSortKey';
     const sortDirStorage = 'poeBossSortDir';
+    const searchKeyStorage = 'poeBossSearch';
+    const DEFAULT_SEARCH_QUERY = localStorage.getItem(searchKeyStorage) || '';
     const priceCacheKey = 'poeBossPriceCacheV1';
     const priceCacheTtlMs = 60 * 60 * 1000;
     const leagueCacheKey = 'poeBossLeagueCacheV2';
@@ -48,12 +53,12 @@
     const IS_FILE_ORIGIN = window.location.protocol === 'file:';
     const IS_LOCAL_HOST = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname);
     const STATIC_DATA_BASE = 'data';
-    const STATIC_LEAGUES_URL = `${STATIC_DATA_BASE}/leagues.json`;
-    const STATIC_PRICES_BASE = `${STATIC_DATA_BASE}/prices`;
-    const USE_STATIC_DATA = !IS_LOCAL_HOST;
-    const WATCH_API_BASE = USE_STATIC_DATA ? '' : 'https://api.poe.watch';
+    const WATCH_API_BASE = 'https://api.poe.watch';
     const WATCH_DETAILS_BASE = 'https://poe.watch/detailed';
     const WATCH_GAME = 'poe1';
+    const NINJA_API_BASE = IS_LOCAL_HOST
+      ? '/api/poeninja/poe1/api/economy/stash/current'
+      : 'https://poe.ninja/poe1/api/economy/stash/current';
 
     const WATCH_CATEGORY_MAP = {
       Currency: ['currency'],
@@ -66,6 +71,21 @@
       UniqueFlask: ['flask'],
       DivinationCard: ['card', 'divinationcard', 'divination', 'divination-card']
     };
+
+    const NINJA_CURRENCY_TYPES = [
+      { type: 'Currency', category: 'currency' },
+      { type: 'Fragment', category: 'fragment' },
+      { type: 'Invitation', category: 'maps' }
+    ];
+
+    const NINJA_ITEM_TYPES = [
+      { type: 'UniqueArmour', category: 'armour' },
+      { type: 'UniqueWeapon', category: 'weapon' },
+      { type: 'UniqueAccessory', category: 'accessory' },
+      { type: 'UniqueJewel', category: 'jewels' },
+      { type: 'UniqueFlask', category: 'flask' },
+      { type: 'DivinationCard', category: 'card' }
+    ];
 
     function normalizeWatchBase(base) {
       return String(base || '').replace(/\/$/, '');
@@ -83,6 +103,13 @@
       if (!root) return '';
       const suffix = WATCH_GAME ? `&game=${encodeURIComponent(WATCH_GAME)}` : '';
       return `${root}/get?league={LEAGUE}&category={CATEGORY}${suffix}`;
+    }
+
+    function buildWatchExchangeEndpoint(base, league) {
+      const root = normalizeWatchBase(base);
+      if (!root || !league) return '';
+      const gameParam = WATCH_GAME ? `&game=${encodeURIComponent(WATCH_GAME)}` : '';
+      return `${root}/exchange/ratios?league=${encodeURIComponent(league)}${gameParam}`;
     }
 
     let BOSS_DATA = [];
@@ -108,6 +135,7 @@
       leagueSource: 'fallback',
       leagueUpdatedAt: null,
       priceMode: DEFAULT_PRICE_MODE,
+      priceSource: normalizePriceSource(DEFAULT_PRICE_SOURCE),
       displayCurrency: storedCurrency === 'divine' ? 'divine' : 'chaos',
       priceData: null,
       watchBase: null,
@@ -122,12 +150,13 @@
       minProbabilityThreshold: 0.01,
       sortKey: BASE_SORT_KEY,
       sortDir: BASE_SORT_DIR,
-      searchQuery: ''
+      searchQuery: DEFAULT_SEARCH_QUERY
     };
 
     const leagueSelect = document.getElementById('leagueSelect');
     const priceModeInput = document.getElementById('priceMode');
     const currencyInput = document.getElementById('displayCurrency');
+    const priceSourceInput = document.getElementById('priceSource');
     const refreshButton = document.getElementById('refresh');
     const resetButton = document.getElementById('resetAll');
     const statusEl = document.getElementById('status');
@@ -153,6 +182,28 @@
 
     function normalizeLeagueCompare(value) {
       return String(value || '').trim().toLowerCase();
+    }
+
+    function normalizePriceSource(value) {
+      const raw = String(value || '').trim().toLowerCase();
+      if (raw === 'poe-ninja' || raw === 'poe.ninja') return 'poe-ninja';
+      return 'poe-watch';
+    }
+
+    function usingStaticData() {
+      return !IS_LOCAL_HOST;
+    }
+
+    function getStaticDataRoot() {
+      return `${STATIC_DATA_BASE}/${state.priceSource}`;
+    }
+
+    function getStaticLeaguesUrl() {
+      return `${STATIC_DATA_BASE}/poe-watch/leagues.json`;
+    }
+
+    function getStaticPricesBase() {
+      return `${getStaticDataRoot()}/prices`;
     }
 
     function flattenLeagues(groups = LEAGUES) {
@@ -293,9 +344,9 @@
     }
 
     async function loadLeagues(forceRefresh = false) {
-      if (USE_STATIC_DATA) {
+      if (usingStaticData()) {
         try {
-          const url = withCacheBust(STATIC_LEAGUES_URL, forceRefresh);
+          const url = withCacheBust(getStaticLeaguesUrl(), forceRefresh);
           const resp = await fetch(url, { cache: forceRefresh ? 'no-store' : 'default' });
           if (!resp.ok) throw new Error(String(resp.status));
           const data = await resp.json();
@@ -383,8 +434,15 @@
 
     buildLeagueSelect();
 
+    try {
+      localStorage.setItem(priceSourceKey, BASE_PRICE_SOURCE);
+    } catch (err) {
+      // Ignore storage failures.
+    }
+
     priceModeInput.value = state.priceMode;
     currencyInput.value = state.displayCurrency;
+    if (priceSourceInput) priceSourceInput.value = state.priceSource;
     applyLeagueSelection(DEFAULT_LEAGUE, { allowFallback: false });
 
     const minPref = localStorage.getItem('poeBossMinValueEnabled') || (BASE_MIN_VALUE_ENABLED ? 'on' : 'off');
@@ -414,12 +472,18 @@
       searchInput.value = state.searchQuery;
       searchInput.addEventListener('input', (event) => {
         state.searchQuery = event.target.value || '';
+        if (state.searchQuery) {
+          localStorage.setItem(searchKeyStorage, state.searchQuery);
+        } else {
+          localStorage.removeItem(searchKeyStorage);
+        }
         safeRender();
       });
       searchInput.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
           searchInput.value = '';
           state.searchQuery = '';
+          localStorage.removeItem(searchKeyStorage);
           safeRender();
         }
       });
@@ -589,6 +653,22 @@
       safeRender();
     });
 
+    if (priceSourceInput) {
+      priceSourceInput.addEventListener('change', async () => {
+        state.priceSource = normalizePriceSource(priceSourceInput.value);
+        localStorage.setItem(priceSourceKey, state.priceSource);
+        if (priceSourceInput.value !== state.priceSource) {
+          priceSourceInput.value = state.priceSource;
+        }
+        const leaguesLoaded = await loadLeagues(true);
+        if (!leaguesLoaded) {
+          setStatus('Failed to load leagues for selected price source.', true);
+          return;
+        }
+        fetchPrices(true);
+      });
+    }
+
     priceModeInput.addEventListener('change', () => {
       state.priceMode = priceModeInput.value;
       localStorage.setItem('poeBossPriceMode', state.priceMode);
@@ -628,6 +708,7 @@
         localStorage.removeItem('poeBossMinProb');
         localStorage.removeItem(sortKeyStorage);
         localStorage.removeItem(sortDirStorage);
+        localStorage.removeItem(searchKeyStorage);
         localStorage.removeItem('poeBossDebug');
 
         applyLeagueSelection(previousLeague, { persist: true });
@@ -640,6 +721,7 @@
         state.minProbabilityThreshold = BASE_MIN_PROBABILITY;
         state.sortKey = BASE_SORT_KEY;
         state.sortDir = BASE_SORT_DIR;
+        state.searchQuery = '';
         state.debug = BASE_DEBUG;
 
         priceModeInput.value = state.priceMode;
@@ -647,6 +729,7 @@
         minValueToggle.checked = state.minValueFilter;
         minProbToggle.checked = state.minProbabilityFilter;
         debugToggle.checked = state.debug;
+        if (searchInput) searchInput.value = '';
         updateMinValueInput();
         updateMinProbabilityInput();
         updateSortButtons();
@@ -859,6 +942,143 @@
       return [];
     }
 
+    function normalizeRatioCategory(category) {
+      if (!category) return category;
+      const normalized = String(category).toLowerCase();
+      if (normalized === 'divination' || normalized === 'divinationcard' || normalized === 'divination-card') {
+        return 'card';
+      }
+      if (normalized === 'cards') return 'card';
+      if (normalized === 'map' || normalized === 'maps' || normalized === 'invitation' || normalized === 'invitations') {
+        return 'maps';
+      }
+      return normalized;
+    }
+
+    function extractRatioItems(data) {
+      if (Array.isArray(data)) return data;
+      if (!data || typeof data !== 'object') return [];
+      if (Array.isArray(data.items)) return data.items;
+      return [];
+    }
+
+    function parseRatioPrice(item) {
+      const chaosValue = Number(item?.chaos?.value ?? item?.chaos?.chaosValue ?? item?.chaosValue ?? item?.value);
+      if (!Number.isFinite(chaosValue) || chaosValue <= 0) return null;
+      const name = item?.name;
+      if (!name) return null;
+      return {
+        id: item?.id ?? name,
+        name,
+        category: normalizeRatioCategory(item?.category),
+        icon: item?.icon,
+        min: chaosValue,
+        mean: chaosValue,
+        max: chaosValue,
+        updatedAt: parseTimestamp(item?.chaos?.timestamp ?? item?.divine?.timestamp ?? item?.timestamp)
+      };
+    }
+
+    function indexRatioItems(items) {
+      const seen = new Set();
+      const result = [];
+      let updatedAt = null;
+      (items || []).forEach((item) => {
+        const parsed = parseRatioPrice(item);
+        if (!parsed) return;
+        const key = normalizeText(parsed.name);
+        if (!key || seen.has(key)) return;
+        seen.add(key);
+        updatedAt = pickLatestTimestamp(updatedAt, parsed.updatedAt);
+        const { updatedAt: _ignored, ...rest } = parsed;
+        result.push(rest);
+      });
+      return { items: result, updatedAt };
+    }
+
+    function mergeRatioItems(ratioItems, fallbackItems) {
+      if (!ratioItems?.length) return fallbackItems || [];
+      const ratioNames = new Set(
+        ratioItems
+          .map((item) => normalizeText(item?.name))
+          .filter(Boolean)
+      );
+      const mergedFallback = (fallbackItems || []).filter((item) => {
+        const key = normalizeText(item?.name);
+        return !key || !ratioNames.has(key);
+      });
+      return [...ratioItems, ...mergedFallback];
+    }
+
+    function toNinjaItem({ name, value, category, icon, id }) {
+      if (!name || !Number.isFinite(value)) return null;
+      const rounded = Math.round(value * 10000) / 10000;
+      return {
+        id: id || name,
+        name,
+        category,
+        icon,
+        min: rounded,
+        mean: rounded,
+        max: rounded
+      };
+    }
+
+    function ninjaEndpointPath(isCurrency) {
+      return isCurrency ? 'currency/overview' : 'item/overview';
+    }
+
+    async function fetchNinjaOverview(leagueValue, entry, isCurrency) {
+      const endpoint = ninjaEndpointPath(isCurrency);
+      const url = `${NINJA_API_BASE}/${endpoint}?league=${encodeURIComponent(leagueValue)}&type=${encodeURIComponent(entry.type)}`;
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error(String(resp.status));
+      const data = await resp.json();
+      const lines = Array.isArray(data?.lines) ? data.lines : [];
+      const items = [];
+      lines.forEach((line) => {
+        const value = Number(isCurrency ? line.chaosEquivalent : line.chaosValue);
+        const name = isCurrency ? (line.currencyTypeName || line.name) : (line.name || line.baseType);
+        const icon = line.icon;
+        const id = line.detailsId || name;
+        const item = toNinjaItem({ name, value, category: entry.category, icon, id });
+        if (item) items.push(item);
+      });
+      return { items, updatedAt: parseTimestamp(data?.updated), url };
+    }
+
+    async function fetchNinjaPricesForLeague(leagueValue) {
+      let items = [];
+      let updatedAt = null;
+      const results = [];
+
+      for (const entry of NINJA_CURRENCY_TYPES) {
+        try {
+          const result = await fetchNinjaOverview(leagueValue, entry, true);
+          if (result.items.length) items = items.concat(result.items);
+          updatedAt = pickLatestTimestamp(updatedAt, result.updatedAt);
+          results.push({ status: 'ok', source: `currency:${entry.type}`, items: result.items.length, url: result.url });
+        } catch (err) {
+          const url = `${NINJA_API_BASE}/${ninjaEndpointPath(true)}?league=${encodeURIComponent(leagueValue)}&type=${encodeURIComponent(entry.type)}`;
+          results.push({ status: 'error', source: `currency:${entry.type}`, error: err?.message || 'unknown', url });
+        }
+      }
+
+      for (const entry of NINJA_ITEM_TYPES) {
+        try {
+          const result = await fetchNinjaOverview(leagueValue, entry, false);
+          if (result.items.length) items = items.concat(result.items);
+          updatedAt = pickLatestTimestamp(updatedAt, result.updatedAt);
+          results.push({ status: 'ok', source: `item:${entry.type}`, items: result.items.length, url: result.url });
+        } catch (err) {
+          const url = `${NINJA_API_BASE}/${ninjaEndpointPath(false)}?league=${encodeURIComponent(leagueValue)}&type=${encodeURIComponent(entry.type)}`;
+          results.push({ status: 'error', source: `item:${entry.type}`, error: err?.message || 'unknown', url });
+        }
+      }
+
+      return { items, updatedAt, results };
+    }
+
     function normalizeCategorySlug(value) {
       if (value == null) return '';
       if (typeof value === 'string') {
@@ -977,6 +1197,7 @@
     }
 
     function itemPageUrl(item) {
+      if (state.priceSource !== 'poe-watch') return null;
       const match = findWatchLine(item, true) || findWatchLine(item, false);
       if (!match) return null;
       const league = state.pricingLeague || state.leagueText || leagueTextFor(state.leagueId);
@@ -1424,7 +1645,8 @@
             </div>
             <div>
               <div class="section-title">Entry Cost</div>
-              <table class="table entry-table">
+              <div class="table-wrap">
+                <table class="table entry-table">
                 <colgroup>
                   <col class="col-item" />
                   <col class="col-qty" />
@@ -1461,6 +1683,7 @@
                   `).join('')}
                 </tbody>
               </table>
+              </div>
             </div>
             ${boss.note ? `<div class="muted warning">${boss.note}</div>` : ''}
             ${computed.groupResults.map((group) => {
@@ -1475,6 +1698,7 @@
                       <div class="section-title">${group.label}</div>
                     </div>
                   </div>
+                  <div class="table-wrap">
                   <table class="table drop-table">
                     <colgroup>
                       <col class="col-item" />
@@ -1524,6 +1748,7 @@
                       }).join('')}
                     </tbody>
                   </table>
+                  </div>
                 </div>
               `;
             }).join('')}
@@ -1570,6 +1795,7 @@
           `League: ${state.leagueText} (id: ${state.leagueId})`,
           `Leagues source: ${state.leagueSource || 'unknown'}${leagueUpdatedLabel}`,
           `Pricing league: ${state.pricingLeague || 'unknown'}`,
+          `Price source: ${state.priceSource}`,
           `Pricing base: ${state.watchBase || 'unknown'}`,
           `Price items loaded: ${state.priceData?.items?.length || 0}`,
           `Category counts: ${loadedTypes.join(' | ') || 'none'}`,
@@ -1660,24 +1886,27 @@
     }
 
     async function fetchPrices(forceRefresh = false) {
-      setStatus(USE_STATIC_DATA ? 'Loading cached prices…' : 'Fetching poe.watch prices…');
+      const usingStatic = usingStaticData();
+      const sourceLabel = state.priceSource === 'poe-ninja' ? 'poe.ninja' : 'poe.watch';
+      setStatus(usingStatic ? `Loading cached ${sourceLabel} prices…` : `Fetching ${sourceLabel} prices…`);
       state.priceData = null;
       state.fallbackHits = new Map();
       state.fetchResults = [];
-      state.watchBase = null;
+      const liveBase = state.priceSource === 'poe-ninja' ? NINJA_API_BASE : WATCH_API_BASE;
+      state.watchBase = usingStatic ? `${state.priceSource}:static` : liveBase;
       state.priceUpdatedAt = null;
 
       const leagueCandidates = Array.from(new Set([state.leagueWatchId, state.leagueText, state.leagueId].filter(Boolean)));
       let pricingLeague = leagueCandidates[0] || state.leagueId;
 
-      if (USE_STATIC_DATA) {
+      if (usingStatic) {
         const candidates = leagueCandidates.length
           ? leagueCandidates
           : (LEAGUES?.[0]?.options?.[0]?.id ? [LEAGUES[0].options[0].id] : []);
         for (const candidate of candidates) {
           const slug = slugifyLeague(candidate);
           if (!slug) continue;
-          const url = withCacheBust(`${STATIC_PRICES_BASE}/${slug}/compact.json`, forceRefresh);
+          const url = withCacheBust(`${getStaticPricesBase()}/${slug}/compact.json`, forceRefresh);
           try {
             const resp = await fetch(url, { cache: forceRefresh ? 'no-store' : 'default' });
             if (!resp.ok) throw new Error(`${resp.status}`);
@@ -1687,7 +1916,7 @@
             const leagueLabel = data?.league?.watch || data?.league?.id || candidate;
             state.priceData = indexWatchData(items);
             state.pricingLeague = leagueLabel;
-            state.watchBase = 'static';
+            state.watchBase = `${state.priceSource}:static`;
             state.priceUpdatedAt = parseTimestamp(data?.updatedAt) || parseTimestamp(data?.generatedAt);
             state.fetchResults.push({ status: 'ok', source: 'static', items: items.length, league: leagueLabel, url });
             pricingLeague = leagueLabel;
@@ -1710,88 +1939,140 @@
               state.priceData = indexWatchData(entry.items);
               state.pricingLeague = leagueValue;
               state.watchBase = 'cache';
-            state.priceUpdatedAt = parseTimestamp(entry.updatedAt);
-            state.fetchResults.push({ status: 'cache', source: 'cache', items: entry.items.length, league: leagueValue });
-            const divine = state.priceData.byLower.get('divine orb')?.[0];
-            state.divineChaos = divine ? safeNumber(divine.mean ?? divine.min ?? divine.max) : null;
-            if (state.divineChaos) {
-              localStorage.setItem('poeBossDivineChaos', String(state.divineChaos));
-            }
-            updateMinValueInput();
-            const updatedLabel = state.priceUpdatedAt ? ` Updated ${formatUpdatedAt(state.priceUpdatedAt)}.` : '';
-            setStatus(`Prices loaded for ${leagueValue}.${updatedLabel}`);
-            safeRender();
-            return;
+              state.priceUpdatedAt = parseTimestamp(entry.updatedAt);
+              state.fetchResults.push({ status: 'cache', source: 'cache', items: entry.items.length, league: leagueValue });
+              const divine = state.priceData.byLower.get('divine orb')?.[0];
+              state.divineChaos = divine ? safeNumber(divine.mean ?? divine.min ?? divine.max) : null;
+              if (state.divineChaos) {
+                localStorage.setItem('poeBossDivineChaos', String(state.divineChaos));
+              }
+              updateMinValueInput();
+              const updatedLabel = state.priceUpdatedAt ? ` Updated ${formatUpdatedAt(state.priceUpdatedAt)}.` : '';
+              setStatus(`Prices loaded for ${leagueValue}.${updatedLabel}`);
+              safeRender();
+              return;
             }
           }
         }
-        const base = WATCH_API_BASE;
-        const categoriesEndpoint = buildWatchCategoriesEndpoint(base);
-        const getEndpoint = buildWatchGetEndpoint(base);
-        for (const leagueValue of leagueCandidates) {
-          if (categoriesEndpoint && getEndpoint) {
+        if (state.priceSource === 'poe-ninja') {
+          const base = NINJA_API_BASE;
+          for (const leagueValue of leagueCandidates) {
             try {
-              const resp = await fetch(categoriesEndpoint);
-              if (!resp.ok) throw new Error(`${resp.status}`);
-              const data = await resp.json();
-              const categories = extractWatchCategories(data)
-                .map(normalizeCategorySlug)
-                .filter(Boolean);
-              if (!categories.length) throw new Error('empty');
-              state.fetchResults.push({ status: 'ok', source: 'categories', items: categories.length, url: categoriesEndpoint });
-              const items = [];
-              let updatedAt = null;
-              for (const category of categories) {
-                const url = getEndpoint
-                  .replace('{LEAGUE}', encodeURIComponent(leagueValue))
-                  .replace('{CATEGORY}', encodeURIComponent(category));
-                try {
-                  const catResp = await fetch(url);
-                  if (!catResp.ok) throw new Error(`${catResp.status}`);
-                  const catData = await catResp.json();
-                  const catItems = extractWatchItems(catData).map((item) => {
-                    if (item && item.category == null && category) {
-                      return { ...item, category };
-                    }
-                    return item;
-                  });
-                  if (catItems.length) items.push(...catItems);
-                  updatedAt = pickLatestTimestamp(updatedAt, findUpdatedAt(catData, catResp));
-                  state.fetchResults.push({
-                    status: 'ok',
-                    source: `get:${category}`,
-                    items: catItems.length,
-                    url
-                  });
-                } catch (err) {
-                  state.fetchResults.push({
-                    status: 'error',
-                    source: `get:${category}`,
-                    error: err?.message || 'unknown',
-                    url
-                  });
-                }
-              }
-              if (!items.length) throw new Error('empty');
-              commitWatchData(items, leagueValue, base, updatedAt);
+              const result = await fetchNinjaPricesForLeague(leagueValue);
+              state.fetchResults.push(...result.results);
+              if (!result.items.length) throw new Error('empty');
+              commitWatchData(result.items, leagueValue, base, result.updatedAt);
               pricingLeague = leagueValue;
               break;
             } catch (err) {
               state.fetchResults.push({
                 status: 'error',
-                source: 'categories',
+                source: 'poe.ninja',
                 error: err?.message || 'unknown',
-                url: categoriesEndpoint
+                url: `${base}/getindexstate`
               });
+            }
+          }
+        } else {
+          const base = WATCH_API_BASE;
+          const categoriesEndpoint = buildWatchCategoriesEndpoint(base);
+          const getEndpoint = buildWatchGetEndpoint(base);
+          for (const leagueValue of leagueCandidates) {
+            let ratioItems = [];
+            let ratioUpdatedAt = null;
+            const ratioUrl = buildWatchExchangeEndpoint(base, leagueValue);
+            if (ratioUrl) {
+              try {
+                const ratioResp = await fetch(ratioUrl);
+                if (!ratioResp.ok) throw new Error(`${ratioResp.status}`);
+                const ratioData = await ratioResp.json();
+                const ratio = indexRatioItems(extractRatioItems(ratioData));
+                ratioItems = ratio.items;
+                ratioUpdatedAt = ratio.updatedAt;
+                state.fetchResults.push({
+                  status: 'ok',
+                  source: 'ratios',
+                  items: ratioItems.length,
+                  url: ratioUrl
+                });
+              } catch (err) {
+                state.fetchResults.push({
+                  status: 'error',
+                  source: 'ratios',
+                  error: err?.message || 'unknown',
+                  url: ratioUrl
+                });
+              }
+            }
+
+            let items = [];
+            let updatedAt = null;
+            if (categoriesEndpoint && getEndpoint) {
+              try {
+                const resp = await fetch(categoriesEndpoint);
+                if (!resp.ok) throw new Error(`${resp.status}`);
+                const data = await resp.json();
+                const categories = extractWatchCategories(data)
+                  .map(normalizeCategorySlug)
+                  .filter(Boolean);
+                if (!categories.length) throw new Error('empty');
+                state.fetchResults.push({ status: 'ok', source: 'categories', items: categories.length, url: categoriesEndpoint });
+                for (const category of categories) {
+                  const url = getEndpoint
+                    .replace('{LEAGUE}', encodeURIComponent(leagueValue))
+                    .replace('{CATEGORY}', encodeURIComponent(category));
+                  try {
+                    const catResp = await fetch(url);
+                    if (!catResp.ok) throw new Error(`${catResp.status}`);
+                    const catData = await catResp.json();
+                    const catItems = extractWatchItems(catData).map((item) => {
+                      if (item && item.category == null && category) {
+                        return { ...item, category };
+                      }
+                      return item;
+                    });
+                    if (catItems.length) items.push(...catItems);
+                    updatedAt = pickLatestTimestamp(updatedAt, findUpdatedAt(catData, catResp));
+                    state.fetchResults.push({
+                      status: 'ok',
+                      source: `get:${category}`,
+                      items: catItems.length,
+                      url
+                    });
+                  } catch (err) {
+                    state.fetchResults.push({
+                      status: 'error',
+                      source: `get:${category}`,
+                      error: err?.message || 'unknown',
+                      url
+                    });
+                  }
+                }
+              } catch (err) {
+                state.fetchResults.push({
+                  status: 'error',
+                  source: 'categories',
+                  error: err?.message || 'unknown',
+                  url: categoriesEndpoint
+                });
+              }
+            }
+
+            const mergedItems = mergeRatioItems(ratioItems, items);
+            const mergedUpdatedAt = pickLatestTimestamp(ratioUpdatedAt, updatedAt);
+            if (mergedItems.length) {
+              commitWatchData(mergedItems, leagueValue, base, mergedUpdatedAt);
+              pricingLeague = leagueValue;
+              break;
             }
           }
         }
       }
 
       if (!state.priceData) {
-        const message = USE_STATIC_DATA
-          ? 'Failed to load cached prices. Check data/prices/<league>/compact.json.'
-          : 'Failed to load poe.watch prices. Check the league name and try again.';
+        const message = usingStatic
+          ? `Failed to load cached ${sourceLabel} prices. Check ${getStaticPricesBase()}/<league>/compact.json.`
+          : `Failed to load ${sourceLabel} prices. Check the league name and try again.`;
         setStatus(message, true);
         safeRender();
         return;

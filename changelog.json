@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "version": "0.2.2",
+      "date": "2026-02-10",
+      "changes": [
+        "Prioritized poe.watch exchange/ratios pricing (live + static builds) with fallback to category data.",
+        "Updated poe.ninja endpoints to the new /poe1/api/economy/stash/current path.",
+        "Mobile layout fixes: summary metrics layout, table scroll wrappers, overflow clamps, and search persistence."
+      ]
+    },
+    {
       "version": "0.2.1",
       "date": "2026-02-10",
       "changes": [
