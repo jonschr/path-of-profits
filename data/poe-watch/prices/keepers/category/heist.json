@@ -1,0 +1,535 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Keepers",
+    "text": "Keepers",
+    "slug": "keepers"
+  },
+  "category": "heist",
+  "updatedAt": "2026-02-10T14:59:33.000Z",
+  "items": [
+    {
+      "id": 60211,
+      "name": "Contract: Repository",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQ29udHJhY3RJdGVtNCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/d555dbf890/ContractItem4.png",
+      "min": 0.94,
+      "mean": 1.19,
+      "max": 1.4
+    },
+    {
+      "id": 60212,
+      "name": "Contract: Smuggler's Den",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQ29udHJhY3RJdGVtMiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/f755c71433/ContractItem2.png",
+      "min": 1.29,
+      "mean": 5.74,
+      "max": 8.09
+    },
+    {
+      "id": 60213,
+      "name": "Contract: Prohibited Library",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQ29udHJhY3RJdGVtNSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/fd1a9eb91f/ContractItem5.png",
+      "min": 5.25,
+      "mean": 10.77,
+      "max": 11.6199
+    },
+    {
+      "id": 60214,
+      "name": "Contract: Underbelly",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQ29udHJhY3RJdGVtNyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/aa8fd5bde5/ContractItem7.png",
+      "min": 1.8,
+      "mean": 1.12,
+      "max": 12.14
+    },
+    {
+      "id": 60215,
+      "name": "Contract: Laboratory",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQ29udHJhY3RJdGVtMyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/8838f281b6/ContractItem3.png",
+      "min": 3.28,
+      "mean": 1.25,
+      "max": 8.1
+    },
+    {
+      "id": 60216,
+      "name": "Contract: Mansion",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQ29udHJhY3RJdGVtOSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/24220667d4/ContractItem9.png",
+      "min": 4.74,
+      "mean": 1.35,
+      "max": 7.5
+    },
+    {
+      "id": 60220,
+      "name": "Contract: Records Office",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQ29udHJhY3RJdGVtOCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/d28f52922a/ContractItem8.png",
+      "min": 0.95,
+      "mean": 0.95,
+      "max": 6.6
+    },
+    {
+      "id": 60223,
+      "name": "Contract: Bunker",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQ29udHJhY3RJdGVtIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/8262f2ca0e/ContractItem.png",
+      "min": 0.89,
+      "mean": 0.89,
+      "max": 3.29
+    },
+    {
+      "id": 60249,
+      "name": "Contract: Tunnels",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQ29udHJhY3RJdGVtNiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/fda76bd516/ContractItem6.png",
+      "min": 0.64,
+      "mean": 1.35,
+      "max": 1.19
+    },
+    {
+      "id": 60252,
+      "name": "Blueprint: Repository",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/2705c5829f/BlueprintNotApproved4.png",
+      "min": 49,
+      "mean": 49.82,
+      "max": 80
+    },
+    {
+      "id": 60217,
+      "name": "Blueprint: Bunker",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/03e0a85e57/BlueprintNotApproved.png",
+      "min": 80,
+      "mean": 87.38,
+      "max": 100
+    },
+    {
+      "id": 60218,
+      "name": "Blueprint: Bunker",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/03e0a85e57/BlueprintNotApproved.png",
+      "min": 3.78,
+      "mean": 6.27,
+      "max": 8.67
+    },
+    {
+      "id": 60219,
+      "name": "Blueprint: Prohibited Library",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ1IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/78c1f7c667/BlueprintNotApproved5.png",
+      "min": 3.89,
+      "mean": 5.73,
+      "max": 4.82
+    },
+    {
+      "id": 60221,
+      "name": "Blueprint: Underbelly",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ3IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/bafd718e24/BlueprintNotApproved7.png",
+      "min": 4.67,
+      "mean": 5.23,
+      "max": 9.39
+    },
+    {
+      "id": 60222,
+      "name": "Blueprint: Mansion",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c6b8f5dbc2/BlueprintNotApproved9.png",
+      "min": 4.5199,
+      "mean": 5.16,
+      "max": 5.47
+    },
+    {
+      "id": 60224,
+      "name": "Blueprint: Laboratory",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/fd4cd3685e/BlueprintNotApproved3.png",
+      "min": 4.5199,
+      "mean": 4.55,
+      "max": 5.09
+    },
+    {
+      "id": 60227,
+      "name": "Blueprint: Tunnels",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ2IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f2e3a9ec0f/BlueprintNotApproved6.png",
+      "min": 4.42,
+      "mean": 3.27,
+      "max": 5.5
+    },
+    {
+      "id": 60228,
+      "name": "Blueprint: Smuggler's Den",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/cbd577605e/BlueprintNotApproved2.png",
+      "min": 3.73,
+      "mean": 6.4,
+      "max": 5.69
+    },
+    {
+      "id": 60229,
+      "name": "Blueprint: Mansion",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c6b8f5dbc2/BlueprintNotApproved9.png",
+      "min": 4.53,
+      "mean": 5.6,
+      "max": 4.87
+    },
+    {
+      "id": 60230,
+      "name": "Blueprint: Records Office",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ4IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/cc90ce9113/BlueprintNotApproved8.png",
+      "min": 77.5,
+      "mean": 88,
+      "max": 92
+    },
+    {
+      "id": 60231,
+      "name": "Blueprint: Smuggler's Den",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/cbd577605e/BlueprintNotApproved2.png",
+      "min": 3.93,
+      "mean": 5.78,
+      "max": 8.8699
+    },
+    {
+      "id": 60233,
+      "name": "Blueprint: Mansion",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c6b8f5dbc2/BlueprintNotApproved9.png",
+      "min": 49.5,
+      "mean": 49.87,
+      "max": 75.7099
+    },
+    {
+      "id": 60234,
+      "name": "Blueprint: Smuggler's Den",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/cbd577605e/BlueprintNotApproved2.png",
+      "min": 77.5,
+      "mean": 88.09,
+      "max": 90
+    },
+    {
+      "id": 60237,
+      "name": "Blueprint: Bunker",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/03e0a85e57/BlueprintNotApproved.png",
+      "min": 3.64,
+      "mean": 5.03,
+      "max": 6.46
+    },
+    {
+      "id": 60238,
+      "name": "Blueprint: Repository",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/2705c5829f/BlueprintNotApproved4.png",
+      "min": 80,
+      "mean": 86.45,
+      "max": 100
+    },
+    {
+      "id": 60240,
+      "name": "Blueprint: Tunnels",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ2IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f2e3a9ec0f/BlueprintNotApproved6.png",
+      "min": 45,
+      "mean": 49.79,
+      "max": 56.88
+    },
+    {
+      "id": 60241,
+      "name": "Blueprint: Tunnels",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ2IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f2e3a9ec0f/BlueprintNotApproved6.png",
+      "min": 4.37,
+      "mean": 3.11,
+      "max": 5.5199
+    },
+    {
+      "id": 60242,
+      "name": "Blueprint: Underbelly",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ3IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/bafd718e24/BlueprintNotApproved7.png",
+      "min": 41.82,
+      "mean": 45.54,
+      "max": 61.92
+    },
+    {
+      "id": 60243,
+      "name": "Blueprint: Tunnels",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ2IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f2e3a9ec0f/BlueprintNotApproved6.png",
+      "min": 88.29,
+      "mean": 88,
+      "max": 105
+    },
+    {
+      "id": 60244,
+      "name": "Blueprint: Laboratory",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50QXBwcm92ZWQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6d1f476958/BlueprintApproved.png",
+      "min": 87.6,
+      "mean": 87.41,
+      "max": 97
+    },
+    {
+      "id": 60239,
+      "name": "Blueprint: Smuggler's Den",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50QXBwcm92ZWQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6d1f476958/BlueprintApproved.png",
+      "min": 29,
+      "mean": 50.27,
+      "max": 48.7299
+    },
+    {
+      "id": 60236,
+      "name": "Blueprint: Prohibited Library",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50QXBwcm92ZWQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6d1f476958/BlueprintApproved.png",
+      "min": 76.67,
+      "mean": 87.14,
+      "max": 90
+    },
+    {
+      "id": 60246,
+      "name": "Blueprint: Prohibited Library",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50QXBwcm92ZWQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6d1f476958/BlueprintApproved.png",
+      "min": 42.14,
+      "mean": 49.72,
+      "max": 51.67
+    },
+    {
+      "id": 60247,
+      "name": "Blueprint: Mansion",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c6b8f5dbc2/BlueprintNotApproved9.png",
+      "min": 76.67,
+      "mean": 88,
+      "max": 92.5
+    },
+    {
+      "id": 60250,
+      "name": "Blueprint: Repository",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/2705c5829f/BlueprintNotApproved4.png",
+      "min": 4.5599,
+      "mean": 4.66,
+      "max": 5.25
+    },
+    {
+      "id": 60251,
+      "name": "Blueprint: Underbelly",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ3IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/bafd718e24/BlueprintNotApproved7.png",
+      "min": 3.8,
+      "mean": 4.39,
+      "max": 4.73
+    },
+    {
+      "id": 60253,
+      "name": "Blueprint: Repository",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/2705c5829f/BlueprintNotApproved4.png",
+      "min": 4.14,
+      "mean": 6.13,
+      "max": 4.78
+    },
+    {
+      "id": 60257,
+      "name": "Blueprint: Records Office",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ4IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/cc90ce9113/BlueprintNotApproved8.png",
+      "min": 48,
+      "mean": 48.21,
+      "max": 59
+    },
+    {
+      "id": 60245,
+      "name": "Blueprint: Laboratory",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/fd4cd3685e/BlueprintNotApproved3.png",
+      "min": 45,
+      "mean": 54.18,
+      "max": 54.67
+    },
+    {
+      "id": 60254,
+      "name": "Blueprint: Laboratory",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/fd4cd3685e/BlueprintNotApproved3.png",
+      "min": 3.94,
+      "mean": 4.03,
+      "max": 4.97
+    },
+    {
+      "id": 60255,
+      "name": "Blueprint: Records Office",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ4IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/cc90ce9113/BlueprintNotApproved8.png",
+      "min": 4.25,
+      "mean": 5.73,
+      "max": 5.47
+    },
+    {
+      "id": 60256,
+      "name": "Blueprint: Underbelly",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ3IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/bafd718e24/BlueprintNotApproved7.png",
+      "min": 82.61,
+      "mean": 86.88,
+      "max": 96
+    },
+    {
+      "id": 60258,
+      "name": "Blueprint: Prohibited Library",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ1IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/78c1f7c667/BlueprintNotApproved5.png",
+      "min": 3.92,
+      "mean": 4.74,
+      "max": 5.8
+    },
+    {
+      "id": 60259,
+      "name": "Blueprint: Records Office",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ4IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/cc90ce9113/BlueprintNotApproved8.png",
+      "min": 3.75,
+      "mean": 4.6,
+      "max": 5.12
+    },
+    {
+      "id": 60262,
+      "name": "Blueprint: Mansion",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c6b8f5dbc2/BlueprintNotApproved9.png",
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 60263,
+      "name": "Blueprint: Bunker",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/03e0a85e57/BlueprintNotApproved.png",
+      "min": 45.77,
+      "mean": 57,
+      "max": 71.11
+    },
+    {
+      "id": 60268,
+      "name": "Blueprint: Bunker",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/03e0a85e57/BlueprintNotApproved.png",
+      "min": 30,
+      "mean": 30,
+      "max": 30
+    },
+    {
+      "id": 60282,
+      "name": "Blueprint: Records Office",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ4IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/cc90ce9113/BlueprintNotApproved8.png",
+      "min": 50,
+      "mean": 50,
+      "max": 50
+    },
+    {
+      "id": 60289,
+      "name": "Blueprint: Tunnels",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ2IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f2e3a9ec0f/BlueprintNotApproved6.png",
+      "min": 44,
+      "mean": 44,
+      "max": 44
+    },
+    {
+      "id": 60294,
+      "name": "Blueprint: Repository",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/2705c5829f/BlueprintNotApproved4.png",
+      "min": 8,
+      "mean": 8,
+      "max": 8
+    },
+    {
+      "id": 60297,
+      "name": "Blueprint: Underbelly",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ3IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/bafd718e24/BlueprintNotApproved7.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 60359,
+      "name": "Blueprint: Mansion",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c6b8f5dbc2/BlueprintNotApproved9.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 60368,
+      "name": "Blueprint: Prohibited Library",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQmx1ZXByaW50Tm90QXBwcm92ZWQ1IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/78c1f7c667/BlueprintNotApproved5.png",
+      "min": 30,
+      "mean": 30,
+      "max": 30
+    },
+    {
+      "id": 10649,
+      "name": "Contract: Death to Darnaw",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvQWRtaXJhbERhcm5hd0ZpZ2h0Q29udHJhY3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/d3d9bf5da6/AdmiralDarnawFightContract.png",
+      "min": 1,
+      "mean": 1.54,
+      "max": 4
+    },
+    {
+      "id": 15480,
+      "name": "Contract: Heart of Glory",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvVXN1cnBlckZpZ2h0Q29udHJhY3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/46d7ba4bf9/UsurperFightContract.png",
+      "min": 1.11,
+      "mean": 1.14,
+      "max": 20
+    },
+    {
+      "id": 15658,
+      "name": "Contract: The Twins",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvVm94RmFtaWx5RmlnaHRDb250cmFjdCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/28f9230b0b/VoxFamilyFightContract.png",
+      "min": 28,
+      "mean": 30,
+      "max": 67
+    },
+    {
+      "id": 16460,
+      "name": "Contract: The Slaver King",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvU2xhdmVNZXJjaGFudEZpZ2h0Q29udHJhY3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/05c788361c/SlaveMerchantFightContract.png",
+      "min": 0.05,
+      "mean": 0.07,
+      "max": 1.44
+    },
+    {
+      "id": 10619,
+      "name": "Contract: Breaking the Unbreakable",
+      "category": "heistmission",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVpc3QvVW5icmVha2FibGVGaWdodENvbnRyYWN0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/4e50a5f0ae/UnbreakableFightContract.png",
+      "min": 0.05,
+      "mean": 0.07,
+      "max": 1.1399
+    }
+  ]
+}

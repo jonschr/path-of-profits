@@ -1,0 +1,355 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Phrecia 2.0",
+    "text": "Phrecia 2.0",
+    "slug": "phrecia-2-0"
+  },
+  "category": "flask",
+  "updatedAt": "2026-02-10T14:59:46.000Z",
+  "items": [
+    {
+      "id": 64039,
+      "name": "Wine of the Prophet",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQm90dGxlZEZ1dHVyZXMiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/70846e66e7/BottledFutures.png",
+      "min": 4033.13,
+      "mean": 5052.78,
+      "max": 4481.25
+    },
+    {
+      "id": 65328,
+      "name": "Wellwater Phylactery",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvTXlzdGVyaW91c1BoeWxhY3RlcnkiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/b86da401c1/MysteriousPhylactery.png",
+      "min": 4.93,
+      "mean": 7.21,
+      "max": 8.2
+    },
+    {
+      "id": 43395,
+      "name": "Vorana's Preparation",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQWRhcHRhdGlvbkZsYXNrMDMiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/f67d3bf6f2/AdaptationFlask03.png",
+      "min": 5.33,
+      "mean": 8.17,
+      "max": 10
+    },
+    {
+      "id": 43556,
+      "name": "Elixir of the Unbroken Circle",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvV2FyZEZsYXNrMDMiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/d78b003b9a/WardFlask03.png",
+      "min": 1035,
+      "mean": 1015.9,
+      "max": 1200
+    },
+    {
+      "id": 48905,
+      "name": "Oriath's End",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvVWJlclNpcnVzRmxhc2siLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZpIjp0cnVlfV0/559e44ad89/UberSirusFlask.png",
+      "min": 1574.47,
+      "mean": 1662.67,
+      "max": 1922.25
+    },
+    {
+      "id": 11,
+      "name": "Forbidden Taste",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvUGhhbnRvbUJsb29kIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/d04fc2ce16/PhantomBlood.png",
+      "min": 0.97,
+      "mean": 1.27,
+      "max": 1.23
+    },
+    {
+      "id": 12,
+      "name": "Lavianga's Spirit",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvTGF2aWFuZ2FzT2lsIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/44f064d737/LaviangasOil.png",
+      "min": 1.05,
+      "mean": 1.07,
+      "max": 1.72
+    },
+    {
+      "id": 45,
+      "name": "Coralito's Signature",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvR29yZ29uc0ZsYXNrIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/8fa50a1974/GorgonsFlask.png",
+      "min": 1.06,
+      "mean": 1.73,
+      "max": 1.35
+    },
+    {
+      "id": 160,
+      "name": "Vessel of Vinktar",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvVmlua3RhckZsYXNrIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxLCJmaSI6dHJ1ZX1d/6af45743fa/VinktarFlask.png",
+      "min": 14.55,
+      "mean": 14.14,
+      "max": 17.12
+    },
+    {
+      "id": 157,
+      "name": "Divination Distillate",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MveUZsYXNrczE3IiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/df28fc612b/yFlasks17.png",
+      "min": 1.1298,
+      "mean": 1.03,
+      "max": 1.8
+    },
+    {
+      "id": 145,
+      "name": "Blood of the Karui",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQmxvb2RPZlRoZUthcnVpIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/f70bd57e9f/BloodOfTheKarui.png",
+      "min": 1.16,
+      "mean": 1.38,
+      "max": 1.89
+    },
+    {
+      "id": 202,
+      "name": "Witchfire Brew",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvV2l0Y2hGaXJlQnJldyIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/1696a739f5/WitchFireBrew.png",
+      "min": 1.78,
+      "mean": 2.86,
+      "max": 3.07
+    },
+    {
+      "id": 477,
+      "name": "Doedre's Elixir",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MveUZsYXNrNCIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/59c415efed/yFlask4.png",
+      "min": 0.91,
+      "mean": 1.07,
+      "max": 1.98
+    },
+    {
+      "id": 787,
+      "name": "The Overflowing Chalice",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvT3ZlcmZsb3dpbmdDaGFsaWNlIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/ff0069d957/OverflowingChalice.png",
+      "min": 1.08,
+      "mean": 1.2,
+      "max": 1.92
+    },
+    {
+      "id": 1229,
+      "name": "Atziri's Promise",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQXR6aXJpc1Byb21pc2UiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/8a5f4f13b4/AtzirisPromise.png",
+      "min": 67.39,
+      "mean": 54.37,
+      "max": 78.53
+    },
+    {
+      "id": 1424,
+      "name": "The Sorrow of the Divine",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvU29ycm93T2ZUaGVEaXZpbmUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/5d9eb26bd6/SorrowOfTheDivine.png",
+      "min": 1.49,
+      "mean": 1.76,
+      "max": 1.86
+    },
+    {
+      "id": 2345,
+      "name": "Zerphi's Last Breath",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvWmVycGhpc0xhc3RCcmVhdGgiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/bf8cb7b943/ZerphisLastBreath.png",
+      "min": 35.83,
+      "mean": 4.88,
+      "max": 41.88
+    },
+    {
+      "id": 3317,
+      "name": "Sin's Rebirth",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvU2luIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/897bffaad1/Sin.png",
+      "min": 21.71,
+      "mean": 23.88,
+      "max": 23.5798
+    },
+    {
+      "id": 10782,
+      "name": "Replica Lavianga's Spirit",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvTGF2aWFuZ2FzT2lsIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/44f064d737/LaviangasOil.png",
+      "min": 1.4,
+      "mean": 6.84,
+      "max": 3.21
+    },
+    {
+      "id": 10803,
+      "name": "Replica Rumi's Concoction",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQmxvY2tGbGFzayIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/3bc27f19d5/BlockFlask.png",
+      "min": 6.2,
+      "mean": 9.32,
+      "max": 37.75
+    },
+    {
+      "id": 260,
+      "name": "Soul Catcher",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvU291bENhdGNoZXIiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/00e2d0f2b5/SoulCatcher.png",
+      "min": 2.05,
+      "mean": 2.48,
+      "max": 2.27
+    },
+    {
+      "id": 2340,
+      "name": "The Wise Oak",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvVGhlV2lzZU9hayIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/80a47134d5/TheWiseOak.png",
+      "min": 1.08,
+      "mean": 1.91,
+      "max": 2
+    },
+    {
+      "id": 472,
+      "name": "The Writhing Jar",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvV3JpdGhpbmdKYXIiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/6d3e384036/WrithingJar.png",
+      "min": 3.88,
+      "mean": 4.24,
+      "max": 5
+    },
+    {
+      "id": 43741,
+      "name": "Olroth's Resolve",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvV2FyZEZsYXNrMDIiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZpIjp0cnVlfV0/e2d893328e/WardFlask02.png",
+      "min": 48.42,
+      "mean": 197.66,
+      "max": 720.25
+    },
+    {
+      "id": 1826,
+      "name": "Lion's Roar",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MveUZsYXNrNSIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/69fe070e32/yFlask5.png",
+      "min": 1.3899,
+      "mean": 1.26,
+      "max": 1.85
+    },
+    {
+      "id": 3008,
+      "name": "Coruscating Elixir",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQ29ydXNFbGl4aXIiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/26769c58f3/CorusElixir.png",
+      "min": 5.99,
+      "mean": 9.32,
+      "max": 9.88
+    },
+    {
+      "id": 258,
+      "name": "Dying Sun",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvU2hhcGVyc0ZsYXNrIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/c6e2f8118d/ShapersFlask.png",
+      "min": 337.04,
+      "mean": 340.21,
+      "max": 358.97
+    },
+    {
+      "id": 10786,
+      "name": "Replica Sorrow of the Divine",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvU29ycm93T2ZUaGVEaXZpbmUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZpIjp0cnVlfV0/46fa5cc940/SorrowOfTheDivine.png",
+      "min": 2.33,
+      "mean": 2.33,
+      "max": 3.4
+    },
+    {
+      "id": 1298,
+      "name": "Kiara's Determination",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvS2lhcmFzRGV0ZXJtaW5hdGlvbiIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/591dcd7979/KiarasDetermination.png",
+      "min": 0.96,
+      "mean": 1.19,
+      "max": 1.77
+    },
+    {
+      "id": 43633,
+      "name": "Starlight Chalice",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQWRhcHRhdGlvbkZsYXNrMDIiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/e2a95fa6e6/AdaptationFlask02.png",
+      "min": 1309.98,
+      "mean": 1428.17,
+      "max": 1618.18
+    },
+    {
+      "id": 2441,
+      "name": "Soul Ripper",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvU291bFJpcHBlciIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/f74d277e1d/SoulRipper.png",
+      "min": 1980,
+      "mean": 2238.07,
+      "max": 2290.91
+    },
+    {
+      "id": 2219,
+      "name": "Bottled Faith",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQm90dGxlZFB1cml0eSIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MSwiZnMiOnRydWV9XQ/0b53a73e4b/BottledPurity.png",
+      "min": 1187.55,
+      "mean": 1282.05,
+      "max": 1324.79
+    },
+    {
+      "id": 48908,
+      "name": "Progenesis",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvVWJlck1hdmVuRmxhc2siLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/b82c247a54/UberMavenFlask.png",
+      "min": 10676.25,
+      "mean": 11017.87,
+      "max": 13288
+    },
+    {
+      "id": 123,
+      "name": "Rumi's Concoction",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQmxvY2tGbGFzayIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MSwiZnMiOnRydWV9XQ/7fa6b99150/BlockFlask.png",
+      "min": 26.58,
+      "mean": 14.77,
+      "max": 86.59
+    },
+    {
+      "id": 351,
+      "name": "Taste of Hate",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvVGFzdGVPZkhhdGUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/37ff43c7ff/TasteOfHate.png",
+      "min": 8.97,
+      "mean": 85.74,
+      "max": 11.73
+    },
+    {
+      "id": 185,
+      "name": "Cinderswallow Urn",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvVmlhbG9mVW5saWZlIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxLCJmcyI6dHJ1ZX1d/42923b206b/VialofUnlife.png",
+      "min": 19.2399,
+      "mean": 21.38,
+      "max": 29.12
+    },
+    {
+      "id": 589,
+      "name": "Rotgut",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvUm90Z3V0IiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxLCJmcyI6dHJ1ZX1d/ae49952b84/Rotgut.png",
+      "min": 1.19,
+      "mean": 1.57,
+      "max": 1.3899
+    },
+    {
+      "id": 57170,
+      "name": "Replica Witchfire Brew",
+      "category": "flasks",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvV2l0Y2hGaXJlQnJldyIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/1696a739f5/WitchFireBrew.png",
+      "min": 6.83,
+      "mean": 9.17,
+      "max": 16.5
+    }
+  ]
+}

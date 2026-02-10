@@ -489,6 +489,15 @@
       });
     }
 
+    document.addEventListener('keydown', (event) => {
+      if (!searchInput) return;
+      const isFind = (event.key || '').toLowerCase() === 'f' && (event.metaKey || event.ctrlKey);
+      if (!isFind) return;
+      event.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    });
+
     function getChaosPerDivine() {
       const stored = Number(localStorage.getItem('poeBossDivineChaos') || '');
       return state.divineChaos || (Number.isFinite(stored) && stored > 0 ? stored : null);
@@ -1181,6 +1190,12 @@
       const exactMatches = state.priceData.byLower.get(lower) || [];
       const normalizedMatches = state.priceData.byName.get(normalized) || [];
       let matches = exactMatches.length ? exactMatches.slice() : normalizedMatches.slice();
+
+      if (item.watchId != null) {
+        const targetId = String(item.watchId);
+        const filtered = matches.filter((match) => String(match?.id) === targetId);
+        if (filtered.length) matches = filtered;
+      }
 
       if (useTypeFilter) {
         const categories = categoriesForTypes(item.types);

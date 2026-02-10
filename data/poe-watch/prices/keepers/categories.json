@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Keepers",
+    "text": "Keepers",
+    "slug": "keepers"
+  },
+  "categories": [
+    "accessory",
+    "armour",
+    "card",
+    "currency",
+    "enchantment",
+    "flask",
+    "gem",
+    "jewel",
+    "map",
+    "weapon",
+    "bases",
+    "beast",
+    "fossil",
+    "uniquemap",
+    "deliriumorb",
+    "incubator",
+    "oil",
+    "resonator",
+    "essence",
+    "invitation",
+    "fragment",
+    "heist",
+    "scarab"
+  ]
+}

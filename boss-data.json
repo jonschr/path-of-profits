@@ -215,7 +215,8 @@
             "p": 0.43,
             "types": [
               "UniqueWeapon"
-            ]
+            ],
+            "watchId": 47954
           },
           {
             "name": "Melding of the Flesh",
@@ -1414,7 +1415,8 @@
               "UniqueArmour"
             ],
             "strategy": "avg",
-            "note": "9 variants"
+            "note": "9 variants",
+            "watchId": 737
           },
           {
             "name": "The Vertex",

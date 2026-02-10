@@ -1,0 +1,2452 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Phrecia 2.0",
+    "text": "Phrecia 2.0",
+    "slug": "phrecia-2-0"
+  },
+  "category": "card",
+  "updatedAt": "2026-02-10T14:59:45.000Z",
+  "items": [
+    {
+      "id": 165,
+      "name": "Assassin's Favour",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 63943,
+      "name": "When Currents Blaze",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 19,
+      "mean": 19,
+      "max": 19
+    },
+    {
+      "id": 63944,
+      "name": "History",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 7020,
+      "mean": 7298.459999999999,
+      "max": 7800
+    },
+    {
+      "id": 63946,
+      "name": "Runic Luck",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 63965,
+      "name": "Damnation",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 7485.599999999999,
+      "mean": 7485.599999999999,
+      "max": 7485.599999999999
+    },
+    {
+      "id": 65185,
+      "name": "Bound by Flame",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 65272,
+      "name": "The Lake",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 70,
+      "mean": 70,
+      "max": 70
+    },
+    {
+      "id": 65288,
+      "name": "One Last Score",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 118.5,
+      "mean": 118.5,
+      "max": 118.5
+    },
+    {
+      "id": 35690,
+      "name": "The Whiteout",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 35682,
+      "name": "Society's Remorse",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 35697,
+      "name": "Draped in Dreams",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 35705,
+      "name": "The Patient",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 7.5,
+      "mean": 5.12,
+      "max": 10
+    },
+    {
+      "id": 35727,
+      "name": "The Bear Woman",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 35818,
+      "name": "Love Through Ice",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 231.05,
+      "mean": 231.05,
+      "max": 231.05
+    },
+    {
+      "id": 42172,
+      "name": "The Adventuring Spirit",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 42202,
+      "name": "A Modest Request",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 40,
+      "mean": 40,
+      "max": 40
+    },
+    {
+      "id": 42220,
+      "name": "Brush, Paint and Palette",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 30,
+      "mean": 25,
+      "max": 30
+    },
+    {
+      "id": 43260,
+      "name": "The Offspring",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 80,
+      "mean": 80,
+      "max": 80
+    },
+    {
+      "id": 43259,
+      "name": "Dementophobia",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 43284,
+      "name": "Ambitious Obsession",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 187.14,
+      "mean": 187.14,
+      "max": 187.14
+    },
+    {
+      "id": 43265,
+      "name": "Lachrymal Necrosis",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 20
+    },
+    {
+      "id": 43278,
+      "name": "The Mind's Eyes",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 43262,
+      "name": "The Last Supper",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 40,
+      "mean": 25,
+      "max": 40
+    },
+    {
+      "id": 43287,
+      "name": "The Price of Prescience",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 43288,
+      "name": "Terrible Secret of Space",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 44559,
+      "name": "Guardian's Challenge",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 44547,
+      "name": "A Stone Perfected",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 44586,
+      "name": "Disdain",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 44584,
+      "name": "The Forgotten Treasure",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 44601,
+      "name": "The Rabbit's Foot",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 575,
+      "mean": 575,
+      "max": 575
+    },
+    {
+      "id": 44637,
+      "name": "The Catch",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 45,
+      "mean": 45,
+      "max": 45
+    },
+    {
+      "id": 45892,
+      "name": "Imperfect Memories",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 80,
+      "mean": 80,
+      "max": 80
+    },
+    {
+      "id": 45880,
+      "name": "The Transformation",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5.91,
+      "mean": 5.91,
+      "max": 5.91
+    },
+    {
+      "id": 45899,
+      "name": "Justified Ambition",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 45915,
+      "name": "The Tireless Extractor",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 45924,
+      "name": "Bijoux",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 69,
+      "mean": 69,
+      "max": 69
+    },
+    {
+      "id": 45916,
+      "name": "Misery in Darkness",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 187.14,
+      "mean": 187.14,
+      "max": 187.14
+    },
+    {
+      "id": 45949,
+      "name": "Duality",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 95815.68,
+      "mean": 95815.68,
+      "max": 95815.68
+    },
+    {
+      "id": 46484,
+      "name": "From Bone to Ashes",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 50,
+      "mean": 50,
+      "max": 50
+    },
+    {
+      "id": 46490,
+      "name": "Altered Perception",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 9,
+      "mean": 9,
+      "max": 9
+    },
+    {
+      "id": 46525,
+      "name": "Darker Half",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 45,
+      "mean": 45,
+      "max": 45
+    },
+    {
+      "id": 47457,
+      "name": "The Shepherd's Sandals",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 187.14,
+      "mean": 187.14,
+      "max": 187.14
+    },
+    {
+      "id": 47469,
+      "name": "Checkmate",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 47475,
+      "name": "Gemcutter's Mercy",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 21.74,
+      "max": 5
+    },
+    {
+      "id": 47463,
+      "name": "Something Dark",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 9,
+      "mean": 25.8,
+      "max": 9
+    },
+    {
+      "id": 47489,
+      "name": "Choking Guilt",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 360,
+      "mean": 65,
+      "max": 400
+    },
+    {
+      "id": 47499,
+      "name": "The Shieldbearer",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 187.14,
+      "mean": 187.14,
+      "max": 187.14
+    },
+    {
+      "id": 47502,
+      "name": "The Enforcer",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 48894,
+      "name": "Ever-Changing",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 48879,
+      "name": "The Return of the Rat",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 48891,
+      "name": "Divine Beauty",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 86,
+      "mean": 85.59,
+      "max": 90
+    },
+    {
+      "id": 48895,
+      "name": "The Wedding Gift",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 14,
+      "mean": 14,
+      "max": 14
+    },
+    {
+      "id": 48907,
+      "name": "The Finishing Touch",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 48928,
+      "name": "A Dusty Memory",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 51829,
+      "name": "The Rusted Bard",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5.14,
+      "mean": 5.14,
+      "max": 5.14
+    },
+    {
+      "id": 52063,
+      "name": "Brother's Gift",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 963.77,
+      "mean": 963.77,
+      "max": 963.77
+    },
+    {
+      "id": 53568,
+      "name": "The Fortunate",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 25,
+      "mean": 18.84,
+      "max": 30
+    },
+    {
+      "id": 53675,
+      "name": "Fire Of Unknown Origin",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 748.56,
+      "mean": 748.56,
+      "max": 748.56
+    },
+    {
+      "id": 35767,
+      "name": "Haunting Shadows",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 30,
+      "mean": 2,
+      "max": 30
+    },
+    {
+      "id": 48945,
+      "name": "Man With Bear",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5.35,
+      "max": 5
+    },
+    {
+      "id": 42279,
+      "name": "Broken Promises",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 34,
+      "mean": 34,
+      "max": 198
+    },
+    {
+      "id": 42224,
+      "name": "The Eternal War",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 40,
+      "mean": 40,
+      "max": 40
+    },
+    {
+      "id": 46492,
+      "name": "The Forward Gaze",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 42203,
+      "name": "The Card Sharp",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 4,
+      "mean": 4.86,
+      "max": 4
+    },
+    {
+      "id": 4299,
+      "name": "The Primordial",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 6,
+      "mean": 13.5,
+      "max": 6
+    },
+    {
+      "id": 166,
+      "name": "A Mother's Parting Gift",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 189,
+      "name": "Rebirth",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 196,
+      "name": "Arrogance of the Vaal",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 242,
+      "name": "Beauty Through Death",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 363,
+      "name": "The Nurse",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 76.67,
+      "mean": 42.71,
+      "max": 80
+    },
+    {
+      "id": 548,
+      "name": "The Scarred Meadow",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 791,
+      "name": "The Spark and the Flame",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 8,
+      "mean": 9.14,
+      "max": 8
+    },
+    {
+      "id": 1336,
+      "name": "The Saint's Treasure",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 1395,
+      "name": "Immortal Resolve",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 1396,
+      "name": "The Valkyrie",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 1463,
+      "name": "The Wolven King's Bite",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 1462,
+      "name": "The Risk",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1465,
+      "name": "The Offering",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 1469,
+      "name": "The Endless Darkness",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 327.49,
+      "mean": 327.49,
+      "max": 327.49
+    },
+    {
+      "id": 1466,
+      "name": "The Wrath",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1471,
+      "name": "The Porcupine",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 13,
+      "mean": 14.22,
+      "max": 21.2
+    },
+    {
+      "id": 1478,
+      "name": "The Price of Protection",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 8,
+      "mean": 4,
+      "max": 8
+    },
+    {
+      "id": 1473,
+      "name": "Emperor of Purity",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 1482,
+      "name": "The Cataclysm",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 1474,
+      "name": "Forbidden Power",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 1480,
+      "name": "Time-Lost Relic",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 1477,
+      "name": "Vanity",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1.56,
+      "max": 1.52
+    },
+    {
+      "id": 1994,
+      "name": "The Fiend",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 270,
+      "mean": 503.84,
+      "max": 300
+    },
+    {
+      "id": 2128,
+      "name": "The Immortal",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1260,
+      "mean": 1309.98,
+      "max": 1400
+    },
+    {
+      "id": 2184,
+      "name": "Council of Cats",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 191631.36,
+      "mean": 191631.36,
+      "max": 191631.36
+    },
+    {
+      "id": 2244,
+      "name": "The Darkest Dream",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 187.14,
+      "mean": 187.14,
+      "max": 187.14
+    },
+    {
+      "id": 2241,
+      "name": "The Dreamland",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 8,
+      "mean": 25.6,
+      "max": 8
+    },
+    {
+      "id": 2240,
+      "name": "The Professor",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 2265,
+      "name": "The Dragon's Heart",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 50,
+      "mean": 44.54,
+      "max": 50
+    },
+    {
+      "id": 2261,
+      "name": "Deathly Designs",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 187.14,
+      "mean": 187.14,
+      "max": 187.14
+    },
+    {
+      "id": 2259,
+      "name": "Gift of Asenath",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 2264,
+      "name": "The Strategist",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 2565,
+      "name": "The Sacrifice",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2596,
+      "name": "The Awakened",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 9,
+      "mean": 9,
+      "max": 9
+    },
+    {
+      "id": 2687,
+      "name": "A Note in the Wind",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 2693,
+      "name": "The Rite of Elements",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20,
+      "mean": 2,
+      "max": 20
+    },
+    {
+      "id": 2694,
+      "name": "Baited Expectations",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 35,
+      "mean": 24.38,
+      "max": 198
+    },
+    {
+      "id": 2692,
+      "name": "The Witch",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 2689,
+      "name": "The Forsaken",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 2850,
+      "name": "The Opulent",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 187.14,
+      "mean": 187.14,
+      "max": 187.14
+    },
+    {
+      "id": 2848,
+      "name": "The Carrion Crow",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 4.4,
+      "max": 5
+    },
+    {
+      "id": 2849,
+      "name": "The Incantation",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 3147,
+      "name": "The Samurai's Eye",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 187.14,
+      "mean": 187.14,
+      "max": 187.14
+    },
+    {
+      "id": 3270,
+      "name": "House of Mirrors",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 180,
+      "mean": 12650.66,
+      "max": 200
+    },
+    {
+      "id": 3364,
+      "name": "Emperor's Luck",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 0.18,
+      "max": 1
+    },
+    {
+      "id": 3406,
+      "name": "Left to Fate",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 3413,
+      "name": "The Chosen",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 3405,
+      "name": "The Mad King",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 100,
+      "mean": 100,
+      "max": 100
+    },
+    {
+      "id": 3410,
+      "name": "The Soul",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10.75,
+      "mean": 10.75,
+      "max": 10.75
+    },
+    {
+      "id": 3414,
+      "name": "The Harvester",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 3423,
+      "name": "The Ethereal",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 3456,
+      "name": "The Throne",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 7,
+      "mean": 7,
+      "max": 7
+    },
+    {
+      "id": 3528,
+      "name": "Seven Years Bad Luck",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 360,
+      "mean": 212.19,
+      "max": 400
+    },
+    {
+      "id": 3733,
+      "name": "The Polymath",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 6.5,
+      "mean": 8.83,
+      "max": 198
+    },
+    {
+      "id": 3991,
+      "name": "The Enlightened",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 35.63,
+      "mean": 35.63,
+      "max": 35.63
+    },
+    {
+      "id": 3984,
+      "name": "The Dark Mage",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 8,
+      "mean": 8,
+      "max": 8
+    },
+    {
+      "id": 4054,
+      "name": "Echoes of Love",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 11,
+      "mean": 11,
+      "max": 11
+    },
+    {
+      "id": 4155,
+      "name": "The Life Thief",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 40,
+      "mean": 40,
+      "max": 40
+    },
+    {
+      "id": 4302,
+      "name": "The Twilight Moon",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 8,
+      "mean": 8,
+      "max": 8
+    },
+    {
+      "id": 4308,
+      "name": "Lucky Connections",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4307,
+      "name": "The Beast",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 4317,
+      "name": "The Scavenger",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 4314,
+      "name": "The Oath",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 180,
+      "mean": 10,
+      "max": 200
+    },
+    {
+      "id": 4315,
+      "name": "The Calling",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 4316,
+      "name": "The Sun",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4311,
+      "name": "The Watcher",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 4319,
+      "name": "The Aesthete",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4320,
+      "name": "The Pact",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 4313,
+      "name": "Vile Power",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 50,
+      "mean": 50,
+      "max": 50
+    },
+    {
+      "id": 4312,
+      "name": "The Feast",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 4.56,
+      "max": 5
+    },
+    {
+      "id": 4441,
+      "name": "The Chains that Bind",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4468,
+      "name": "The Avenger",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 4473,
+      "name": "The Tower",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 4471,
+      "name": "The Standoff",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 14,
+      "mean": 14,
+      "max": 14
+    },
+    {
+      "id": 4457,
+      "name": "The Eye of the Dragon",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 7,
+      "mean": 7,
+      "max": 7
+    },
+    {
+      "id": 4475,
+      "name": "Call to the First Ones",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 39.8,
+      "mean": 39.8,
+      "max": 39.8
+    },
+    {
+      "id": 4470,
+      "name": "Hunter's Resolve",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4456,
+      "name": "The Lord of Celebration",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 4461,
+      "name": "Buried Treasure",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 9.18,
+      "mean": 9.18,
+      "max": 9.18
+    },
+    {
+      "id": 4485,
+      "name": "The Bones",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 4489,
+      "name": "Gift of the Gemling Queen",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 4480,
+      "name": "The Wind",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 4479,
+      "name": "The Dragon",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2.25,
+      "mean": 2,
+      "max": 3.71
+    },
+    {
+      "id": 4481,
+      "name": "Dialla's Subjugation",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3.67,
+      "mean": 3.67,
+      "max": 3.67
+    },
+    {
+      "id": 4477,
+      "name": "The Lunaris Priestess",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4484,
+      "name": "The One With All",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 4486,
+      "name": "The Sephirot",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 150,
+      "mean": 139.69,
+      "max": 150
+    },
+    {
+      "id": 4646,
+      "name": "The Fishmonger",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 187.14,
+      "mean": 187.14,
+      "max": 187.14
+    },
+    {
+      "id": 4648,
+      "name": "Mawr Blaidd",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 21,
+      "mean": 21,
+      "max": 21
+    },
+    {
+      "id": 4643,
+      "name": "Divine Justice",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 561.42,
+      "mean": 561.42,
+      "max": 561.42
+    },
+    {
+      "id": 4645,
+      "name": "Etched in Blood",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 4705,
+      "name": "The Gambler",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4806,
+      "name": "Audacity",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 4801,
+      "name": "Light and Truth",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 4803,
+      "name": "Lantador's Lost Love",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4802,
+      "name": "Turn the Other Cheek",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 9,
+      "mean": 9,
+      "max": 9
+    },
+    {
+      "id": 4804,
+      "name": "The Penitent",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 4800,
+      "name": "The Gladiator",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 4815,
+      "name": "The Metalsmith's Gift",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 4822,
+      "name": "Mitts",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1.6,
+      "max": 3
+    },
+    {
+      "id": 4826,
+      "name": "Might is Right",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2.38,
+      "max": 2
+    },
+    {
+      "id": 4828,
+      "name": "Tranquillity",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 14,
+      "mean": 14,
+      "max": 14
+    },
+    {
+      "id": 4820,
+      "name": "Cartographer's Delight",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 4819,
+      "name": "Prosperity",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 21.92,
+      "max": 18.3299
+    },
+    {
+      "id": 4823,
+      "name": "The Surgeon",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 4808,
+      "name": "The Siren",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 4811,
+      "name": "Anarchy's Price",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 180,
+      "mean": 15,
+      "max": 200
+    },
+    {
+      "id": 4812,
+      "name": "The Lich",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4816,
+      "name": "Coveted Possession",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4817,
+      "name": "The Last One Standing",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 43.33,
+      "mean": 43.33,
+      "max": 43.33
+    },
+    {
+      "id": 4809,
+      "name": "Rats",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 4813,
+      "name": "The Drunken Aristocrat",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 180,
+      "mean": 20,
+      "max": 183.33
+    },
+    {
+      "id": 4814,
+      "name": "The Hermit",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4908,
+      "name": "Azyran's Reward",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 30,
+      "mean": 30,
+      "max": 30
+    },
+    {
+      "id": 4970,
+      "name": "The Eldritch Decay",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 8.57,
+      "mean": 8.57,
+      "max": 8.57
+    },
+    {
+      "id": 4975,
+      "name": "The Vast",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 50,
+      "mean": 50,
+      "max": 50
+    },
+    {
+      "id": 5062,
+      "name": "Volatile Power",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 5114,
+      "name": "The Celestial Justicar",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 6,
+      "mean": 5.91,
+      "max": 6
+    },
+    {
+      "id": 5254,
+      "name": "The Conduit",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 5314,
+      "name": "The Wolf's Shadow",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 5390,
+      "name": "Dark Temptation",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 5386,
+      "name": "The Ruthless Ceinture",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 5388,
+      "name": "The Poet",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 5389,
+      "name": "The Garish Power",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 30,
+      "mean": 30,
+      "max": 30
+    },
+    {
+      "id": 5385,
+      "name": "The Traitor",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 34.67,
+      "mean": 41.64,
+      "max": 50
+    },
+    {
+      "id": 5384,
+      "name": "The Sigil",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 5387,
+      "name": "The Fathomless Depths",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 50,
+      "mean": 50,
+      "max": 50
+    },
+    {
+      "id": 5411,
+      "name": "Monochrome",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20,
+      "mean": 19.55,
+      "max": 20
+    },
+    {
+      "id": 5406,
+      "name": "Wealth and Power",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 120,
+      "mean": 103.82,
+      "max": 120
+    },
+    {
+      "id": 5418,
+      "name": "The Web",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 5410,
+      "name": "The Scholar",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 0.18,
+      "max": 1
+    },
+    {
+      "id": 5413,
+      "name": "The Wilted Rose",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 3.58,
+      "max": 10
+    },
+    {
+      "id": 5422,
+      "name": "The Side Quest",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 5415,
+      "name": "Shard of Fate",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 5416,
+      "name": "Jack in the Box",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1.72,
+      "max": 2
+    },
+    {
+      "id": 5417,
+      "name": "Scholar of the Seas",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 5433,
+      "name": "The Master Artisan",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 5427,
+      "name": "The Gemcutter",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 5431,
+      "name": "The Gentleman",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 4,
+      "mean": 2,
+      "max": 4
+    },
+    {
+      "id": 5428,
+      "name": "More is Never Enough",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 561.42,
+      "mean": 561.42,
+      "max": 561.42
+    },
+    {
+      "id": 5711,
+      "name": "Loyalty",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 5716,
+      "name": "The Cacophony",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 22,
+      "mean": 22,
+      "max": 22
+    },
+    {
+      "id": 5713,
+      "name": "No Traces",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 6040,
+      "name": "The Inventor",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 6203,
+      "name": "The Messenger",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 70,
+      "mean": 70,
+      "max": 70
+    },
+    {
+      "id": 6243,
+      "name": "The Catalyst",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 10202,
+      "name": "The Unexpected Prize",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 10218,
+      "name": "The Cache",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 10268,
+      "name": "The Academic",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 8.5,
+      "mean": 5.4,
+      "max": 12
+    },
+    {
+      "id": 10310,
+      "name": "The Bitter Blossom",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 10494,
+      "name": "Unrequited Love",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 6300,
+      "mean": 6581.09,
+      "max": 7000
+    },
+    {
+      "id": 10923,
+      "name": "Cursed Words",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 2691,
+      "name": "The Realm",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 4,
+      "mean": 1,
+      "max": 4
+    },
+    {
+      "id": 46488,
+      "name": "The Apothecary",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5040,
+      "mean": 5193.13,
+      "max": 5600
+    },
+    {
+      "id": 5787,
+      "name": "Abandoned Wealth",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 5402,
+      "name": "The Cheater",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 748.56,
+      "mean": 748.56,
+      "max": 748.56
+    },
+    {
+      "id": 46503,
+      "name": "Home",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 10369,
+      "name": "Desecrated Virtue",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 180,
+      "mean": 189.12,
+      "max": 200
+    },
+    {
+      "id": 4972,
+      "name": "Alluring Bounty",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 8,
+      "mean": 8,
+      "max": 8
+    },
+    {
+      "id": 3398,
+      "name": "The Hunger",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 2636,
+      "name": "Humility",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 45939,
+      "name": "Magnum Opus",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 21,
+      "mean": 21,
+      "max": 21
+    },
+    {
+      "id": 47467,
+      "name": "Doryani's Epiphany",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 27.48,
+      "mean": 27.48,
+      "max": 27.48
+    },
+    {
+      "id": 44636,
+      "name": "Eternal Bonds",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 42210,
+      "name": "The Hook",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 18,
+      "mean": 18,
+      "max": 18
+    },
+    {
+      "id": 4309,
+      "name": "The Pack Leader",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 9,
+      "mean": 9,
+      "max": 9
+    },
+    {
+      "id": 47453,
+      "name": "Broken Truce",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 5714,
+      "name": "Rain of Chaos",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1666,
+      "name": "The Doctor",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 549.99,
+      "mean": 555.18,
+      "max": 549.99
+    },
+    {
+      "id": 51896,
+      "name": "A Chilling Wind",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 28.5,
+      "mean": 28.5,
+      "max": 28.5
+    },
+    {
+      "id": 176,
+      "name": "Akil's Prophecy",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5.5,
+      "mean": 5.5,
+      "max": 5.5
+    },
+    {
+      "id": 2243,
+      "name": "A Dab of Ink",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 8,
+      "mean": 8,
+      "max": 8
+    },
+    {
+      "id": 4046,
+      "name": "The Admirer",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 3529,
+      "name": "The Progeny of Lunaris",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 100,
+      "mean": 100,
+      "max": 100
+    },
+    {
+      "id": 4178,
+      "name": "The Thaumaturgist",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 10203,
+      "name": "The Gulf",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 44592,
+      "name": "The Prince of Darkness",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 4644,
+      "name": "The Artist",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20.5,
+      "mean": 20.5,
+      "max": 20.5
+    },
+    {
+      "id": 44591,
+      "name": "Desperate Crusade",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 3409,
+      "name": "The Queen",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 180,
+      "mean": 187.14,
+      "max": 200
+    },
+    {
+      "id": 4464,
+      "name": "Dark Dreams",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 8,
+      "mean": 8,
+      "max": 8
+    },
+    {
+      "id": 2828,
+      "name": "The Craving",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 3114,
+      "name": "The Escape",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 3.33,
+      "max": 2
+    },
+    {
+      "id": 48951,
+      "name": "The Insane Cat",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2520,
+      "mean": 2152.11,
+      "max": 2800
+    },
+    {
+      "id": 46536,
+      "name": "Rebirth and Renewal",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 14,
+      "mean": 14,
+      "max": 14
+    },
+    {
+      "id": 47461,
+      "name": "Endless Night",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 618,
+      "name": "The King's Heart",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 3636,
+      "name": "Nook's Crown",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 13,
+      "mean": 13,
+      "max": 13
+    },
+    {
+      "id": 35959,
+      "name": "The Astromancer",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 5405,
+      "name": "Thirst for Knowledge",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 6334,
+      "name": "The Demon",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 561.42,
+      "mean": 561.42,
+      "max": 561.42
+    },
+    {
+      "id": 4310,
+      "name": "The Encroaching Darkness",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 16,
+      "mean": 16,
+      "max": 16
+    },
+    {
+      "id": 51893,
+      "name": "Poisoned Faith",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 4467,
+      "name": "Lysah's Respite",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 4304,
+      "name": "The Wolf's Legacy",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 4478,
+      "name": "Glimmer of Hope",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 5423,
+      "name": "The Warden",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 5430,
+      "name": "The Surveyor",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 57473,
+      "name": "I See Brothers",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 180,
+      "mean": 187.14,
+      "max": 200
+    },
+    {
+      "id": 57730,
+      "name": "Eldritch Perfection",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 11,
+      "mean": 11,
+      "max": 11
+    },
+    {
+      "id": 61651,
+      "name": "Avian Pursuit",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 61669,
+      "name": "Lonely Warrior",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 60,
+      "mean": 60,
+      "max": 60
+    },
+    {
+      "id": 61691,
+      "name": "Toxic Tidings",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 130,
+      "mean": 130,
+      "max": 130
+    },
+    {
+      "id": 61712,
+      "name": "Temperance",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 50,
+      "mean": 36.67,
+      "max": 50
+    },
+    {
+      "id": 61989,
+      "name": "Father's Love",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 5239.92,
+      "mean": 5239.92,
+      "max": 5239.92
+    },
+    {
+      "id": 5546,
+      "name": "The Scout",
+      "category": "card",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9JbnZlbnRvcnlJY29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f34bf8cbb5/InventoryIcon.png",
+      "min": 9,
+      "mean": 8.85,
+      "max": 9
+    }
+  ]
+}

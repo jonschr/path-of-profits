@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "league": {
+    "watch": "HC Ruthless Keepers",
+    "text": "HC Ruthless Keepers",
+    "slug": "hc-ruthless-keepers"
+  },
+  "errors": [
+    {
+      "step": "compact",
+      "error": "No compact items returned"
+    }
+  ]
+}

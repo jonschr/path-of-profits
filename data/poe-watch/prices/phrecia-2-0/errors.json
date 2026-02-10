@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "league": {
+    "watch": "Phrecia 2.0",
+    "text": "Phrecia 2.0",
+    "slug": "phrecia-2-0"
+  },
+  "errors": [
+    {
+      "category": "enchantment",
+      "error": "HTTP 400"
+    },
+    {
+      "category": "uniquemap",
+      "error": "HTTP 400"
+    },
+    {
+      "category": "deliriumorb",
+      "error": "HTTP 400"
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Keepers",
+    "text": "Keepers",
+    "slug": "keepers"
+  },
+  "category": "resonator",
+  "updatedAt": "2026-02-10T14:59:31.000Z",
+  "items": [
+    {
+      "id": 44538,
+      "name": "Fundamental Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvRW5jcnVzdGVkRm9zc2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/4f7e7cc55d/EncrustedFossil.png",
+      "min": 2,
+      "mean": 3.86,
+      "max": 13.5
+    },
+    {
+      "id": 44530,
+      "name": "Deft Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvRW5jaGFudGVkRm9zc2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/314cfdc367/EnchantedFossil.png",
+      "min": 1.44,
+      "mean": 3.9,
+      "max": 10
+    },
+    {
+      "id": 38,
+      "name": "Aetheric Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvQWV0aGVyaWNGb3NzaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/fb38994bc8/AethericFossil.png",
+      "min": 1,
+      "mean": 2.87,
+      "max": 8.2
+    },
+    {
+      "id": 39,
+      "name": "Dense Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvRGVuc2VGb3NzaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e51b8071e7/DenseFossil.png",
+      "min": 1.45,
+      "mean": 1.96,
+      "max": 5
+    },
+    {
+      "id": 134,
+      "name": "Pristine Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUHJpc3RpbmVGb3NzaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e9dda92a19/PristineFossil.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.03
+    },
+    {
+      "id": 135,
+      "name": "Frigid Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvQW1iZXJGYW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/559d8ae855/AmberFang.png",
+      "min": 1,
+      "mean": 1.43,
+      "max": 3.5
+    },
+    {
+      "id": 132,
+      "name": "Scorched Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvQW1iZXJGaXJlRmx5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/cf1a077c8d/AmberFireFly.png",
+      "min": 1,
+      "mean": 1.42,
+      "max": 1.31
+    },
+    {
+      "id": 358,
+      "name": "Prime Chaotic Resonator",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUmVyb2xsMngyQyIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/584267701b/Reroll2x2C.png",
+      "min": 22,
+      "mean": 19.17,
+      "max": 57.79
+    },
+    {
+      "id": 430,
+      "name": "Gilded Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvU2FuY3RpZmllZEZvc3NpbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/3c8e7553b5/SanctifiedFossil.png",
+      "min": 2.38,
+      "mean": 2.55,
+      "max": 20
+    },
+    {
+      "id": 853,
+      "name": "Potent Chaotic Resonator",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUmVyb2xsMngxQSIsInciOjEsImgiOjIsInNjYWxlIjoxfV0/1aa8e1c365/Reroll2x1A.png",
+      "min": 1,
+      "mean": 2.22,
+      "max": 3.64
+    },
+    {
+      "id": 850,
+      "name": "Prismatic Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUHJpc21hdGljRm9zc2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/ebaea2a708/PrismaticFossil.png",
+      "min": 1.69,
+      "mean": 2.45,
+      "max": 10
+    },
+    {
+      "id": 848,
+      "name": "Corroded Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvQ29ycm9kZWRGb3NzaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e934508b43/CorrodedFossil.png",
+      "min": 3.69,
+      "mean": 3.69,
+      "max": 10
+    },
+    {
+      "id": 1381,
+      "name": "Serrated Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvU2VycmF0ZWRGb3NzaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/42d7279694/SerratedFossil.png",
+      "min": 2.59,
+      "mean": 2.64,
+      "max": 10
+    },
+    {
+      "id": 1677,
+      "name": "Tangled Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvVGFuZ2xlZEZvc3NpbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/3e5e6289c8/TangledFossil.png",
+      "min": 4.67,
+      "mean": 4.67,
+      "max": 40
+    },
+    {
+      "id": 1679,
+      "name": "Fractured Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvRnJhY3R1cmVkRm9zc2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/ffb5b47984/FracturedFossil.png",
+      "min": 14.5,
+      "mean": 19.18,
+      "max": 19.29
+    },
+    {
+      "id": 1801,
+      "name": "Powerful Chaotic Resonator",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUmVyb2xsMngyQSIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/b5be7d519f/Reroll2x2A.png",
+      "min": 3,
+      "mean": 3.3,
+      "max": 4.64
+    },
+    {
+      "id": 1791,
+      "name": "Bound Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUmVzb25hdGluZ0Zvc3NpbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/836925ced6/ResonatingFossil.png",
+      "min": 1,
+      "mean": 2.33,
+      "max": 9.58
+    },
+    {
+      "id": 2887,
+      "name": "Primitive Chaotic Resonator",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUmVyb2xsMXgxQSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/eea57ec0df/Reroll1x1A.png",
+      "min": 1.25,
+      "mean": 1.67,
+      "max": 1.67
+    },
+    {
+      "id": 3533,
+      "name": "Faceted Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvRmFjZXRlZEZvc3NpbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/db0aba6238/FacetedFossil.png",
+      "min": 51.33,
+      "mean": 18.71,
+      "max": 193
+    },
+    {
+      "id": 3534,
+      "name": "Hollow Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvQW1iZXJFeWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/7579485795/AmberEye.png",
+      "min": 163.8,
+      "mean": 144.62,
+      "max": 200
+    },
+    {
+      "id": 133,
+      "name": "Aberrant Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvQWJiZXJhbnRGb3NzaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/426882fe76/AbberantFossil.png",
+      "min": 1,
+      "mean": 1.09,
+      "max": 1.09
+    },
+    {
+      "id": 1764,
+      "name": "Jagged Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvSmFnZ2VkRm9zc2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/054b08865e/JaggedFossil.png",
+      "min": 1.08,
+      "mean": 1.46,
+      "max": 4
+    },
+    {
+      "id": 37,
+      "name": "Metallic Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvTWV0YWxsaWNGb3NzaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c26857827c/MetallicFossil.png",
+      "min": 1,
+      "mean": 1.46,
+      "max": 2.67
+    },
+    {
+      "id": 1790,
+      "name": "Lucent Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvTHVjZW50Rm9zc2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/633b40a6b0/LucentFossil.png",
+      "min": 1.67,
+      "mean": 1.67,
+      "max": 10
+    },
+    {
+      "id": 2886,
+      "name": "Glyphic Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvR2x5cGhpY0Zvc3NpbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/f5b3c6edf7/GlyphicFossil.png",
+      "min": 20,
+      "mean": 17.3,
+      "max": 28.7
+    },
+    {
+      "id": 1378,
+      "name": "Shuddering Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvU2h1ZGRlcmluZ0Zvc3NpbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/7ea7926999/ShudderingFossil.png",
+      "min": 3,
+      "mean": 8.67,
+      "max": 7.49
+    },
+    {
+      "id": 851,
+      "name": "Sanctified Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvR2lsZGVkRm9zc2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/8a8b6de108/GildedFossil.png",
+      "min": 31.22,
+      "mean": 33.23,
+      "max": 50
+    },
+    {
+      "id": 1678,
+      "name": "Bloodstained Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvQmxvb2RzdGFpbmVkRm9zc2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/fe0b3edea8/BloodstainedFossil.png",
+      "min": 4.17,
+      "mean": 4.93,
+      "max": 20
+    },
+    {
+      "id": 61603,
+      "name": "Opulent Fossil",
+      "category": "delve",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUGVyZmVjdEZvc3NpbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/7a87694b3c/PerfectFossil.png",
+      "min": 1.19,
+      "mean": 1.6,
+      "max": 10
+    }
+  ]
+}

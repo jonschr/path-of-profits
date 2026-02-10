@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "league": {
+    "watch": "Solo Self-Found",
+    "text": "Solo Self-Found",
+    "slug": "solo-self-found"
+  },
+  "errors": [
+    {
+      "step": "compact",
+      "error": "No compact items returned"
+    }
+  ]
+}

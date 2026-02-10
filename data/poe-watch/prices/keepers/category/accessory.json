@@ -1,0 +1,3046 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Keepers",
+    "text": "Keepers",
+    "slug": "keepers"
+  },
+  "category": "accessory",
+  "updatedAt": "2026-02-10T14:59:21.000Z",
+  "items": [
+    {
+      "id": 70,
+      "name": "Andvarius",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmluZzRVbmlxdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/eea4645cf2/Ring4Unique.png",
+      "min": 1,
+      "mean": 1,
+      "max": 3.67
+    },
+    {
+      "id": 1230,
+      "name": "The Pariah",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVGhlUGFyaWFoIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/778fe35c1e/ThePariah.png",
+      "min": 4,
+      "mean": 11.89,
+      "max": 8.31
+    },
+    {
+      "id": 1627,
+      "name": "Coward's Legacy",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQ293YXJkJ3MgTGVnYWN5IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/2325fc7213/Coward%27s%20Legacy.png",
+      "min": 70,
+      "mean": 91.33,
+      "max": 91.25
+    },
+    {
+      "id": 63997,
+      "name": "Whispers of Infinity",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9XaGlzcGVyc29mSW5maW5pdHkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/4fc9361433/WhispersofInfinity.png",
+      "min": 61.18,
+      "mean": 51.52,
+      "max": 126.86
+    },
+    {
+      "id": 63998,
+      "name": "Betrayal's Sting",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmV0cmF5YWxzU3RpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/36f2f0b6dd/BetrayalsSting.png",
+      "min": 22.28,
+      "mean": 24.77,
+      "max": 26.66
+    },
+    {
+      "id": 64003,
+      "name": "The Arkhon's Tools",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVGlua2VyZXJzVG9vbHMiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/f94753a7d4/TinkerersTools.png",
+      "min": 19.79,
+      "mean": 25.08,
+      "max": 24.37
+    },
+    {
+      "id": 64005,
+      "name": "Prospero's Protection",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU2hpZWxkQmFuZCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/06b60e71b6/ShieldBand.png",
+      "min": 0.81,
+      "mean": 1.22,
+      "max": 1.84
+    },
+    {
+      "id": 64046,
+      "name": "Squirming Terror",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvV3JpdGhpbmdMb29wIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1a7a27fef6/WrithingLoop.png",
+      "min": 2.04,
+      "mean": 1.5,
+      "max": 3.9
+    },
+    {
+      "id": 64041,
+      "name": "Coiling Whisper",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQ2lyY2xlb2ZEYXJrUml0dWFscyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/15e83a745c/CircleofDarkRituals.png",
+      "min": 34.77,
+      "mean": 36,
+      "max": 38.5
+    },
+    {
+      "id": 64008,
+      "name": "Enmity's Embrace",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRW5taXR5c0VtYnJhY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/11729d94d1/EnmitysEmbrace.png",
+      "min": 28.5,
+      "mean": 141.74,
+      "max": 134.37
+    },
+    {
+      "id": 64063,
+      "name": "Binds of Bloody Vengeance",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvTGFzaG9mUmV0cmlidXRpb24iLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/c7899c1b31/LashofRetribution.png",
+      "min": 31.48,
+      "mean": 32.8,
+      "max": 48.29
+    },
+    {
+      "id": 64043,
+      "name": "Venarius' Astrolabe",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9WZW5hcml1c0FzdHJvbGFiZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/c71ea5c55c/VenariusAstrolabe.png",
+      "min": 91.62,
+      "mean": 140.54,
+      "max": 123.85
+    },
+    {
+      "id": 44598,
+      "name": "Mageblood",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSW5qZWN0b3JCZWx0IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/21ec0269de/InjectorBelt.png",
+      "min": 22276.8,
+      "mean": 24103.67,
+      "max": 27606.25
+    },
+    {
+      "id": 65314,
+      "name": "The Will of Xoph",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQnJlYWNobG9yZFJpbmdVbmlxdWVfWG9waCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/02e3cc712a/BreachlordRingUnique_Xoph.png",
+      "min": 10.88,
+      "mean": 10.44,
+      "max": 12.02
+    },
+    {
+      "id": 65315,
+      "name": "The Will of Uul-Netol",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQnJlYWNobG9yZFJpbmdVbmlxdWVfVXVsTmV0b2wiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/88cdc90883/BreachlordRingUnique_UulNetol.png",
+      "min": 8.63,
+      "mean": 8.63,
+      "max": 9.38
+    },
+    {
+      "id": 65316,
+      "name": "The Will of Tul",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQnJlYWNobG9yZFJpbmdVbmlxdWVfVHVsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/9588c2ec88/BreachlordRingUnique_Tul.png",
+      "min": 11.06,
+      "mean": 13.5,
+      "max": 13.36
+    },
+    {
+      "id": 65317,
+      "name": "Bonemeld",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9EZWF0aHdhcmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8ba22f2bdd/Deathward.png",
+      "min": 4.94,
+      "mean": 10.18,
+      "max": 26.53
+    },
+    {
+      "id": 65335,
+      "name": "The Sundered Will",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQnJlYWNobG9yZFJpbmdVbmlxdWVfQ2hheXVsYSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/b99a4b6b9a/BreachlordRingUnique_Chayula.png",
+      "min": 210.3,
+      "mean": 359.49,
+      "max": 317.83
+    },
+    {
+      "id": 65348,
+      "name": "The Unseen Hue",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUHJpc21PZkZlYXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/cc8d0e07b6/PrismOfFear.png",
+      "min": 7.48,
+      "mean": 25.84,
+      "max": 154.08
+    },
+    {
+      "id": 65326,
+      "name": "Haunting Memories",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Gb3Jnb3R0ZW5QYWluIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/6a8bf4332c/ForgottenPain.png",
+      "min": 7.67,
+      "mean": 7.43,
+      "max": 44.39
+    },
+    {
+      "id": 65327,
+      "name": "Woespike",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU3BsaW50ZXJoZWFydCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/8583f97bed/Splinterheart.png",
+      "min": 38.13,
+      "mean": 14,
+      "max": 148.99
+    },
+    {
+      "id": 65332,
+      "name": "The Will of Esh",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQnJlYWNobG9yZFJpbmdVbmlxdWVfRXNoIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/553690867e/BreachlordRingUnique_Esh.png",
+      "min": 14.29,
+      "mean": 13.24,
+      "max": 18.5798
+    },
+    {
+      "id": 65341,
+      "name": "Lost Unity",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQnJlYWNobG9yZFJpbmdVbmlxdWVfQWxsQ29tYmluZWQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8b39060f10/BreachlordRingUnique_AllCombined.png",
+      "min": 576.86,
+      "mean": 665.84,
+      "max": 779.76
+    },
+    {
+      "id": 65764,
+      "name": "Foulborn Le Heup of All (%Defences)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTGVoZXVwb2ZhbGwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/a3014dad89/Leheupofall.png",
+      "min": 14.07,
+      "mean": 9.45,
+      "max": 66.23
+    },
+    {
+      "id": 65765,
+      "name": "Foulborn The Pandemonius (Chilled)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9HbGFjaWVyQ2Fjb29uVXBncmFkZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/4676228206/GlacierCacoonUpgrade.png",
+      "min": 2.5,
+      "mean": 5.25,
+      "max": 9.5
+    },
+    {
+      "id": 65809,
+      "name": "Foulborn Timeclasp",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVGltZWNsYXNwIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/a77770e543/Timeclasp.png",
+      "min": 1.3798,
+      "mean": 1.33,
+      "max": 7.54
+    },
+    {
+      "id": 65810,
+      "name": "Foulborn Heartbound Loop",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvSGVhcnRib3VuZFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/af86751914/HeartboundRing.png",
+      "min": 1.09,
+      "mean": 1.08,
+      "max": 1.8
+    },
+    {
+      "id": 65769,
+      "name": "Foulborn Kikazaru",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvS2lrYXphcnUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/709da29b75/Kikazaru.png",
+      "min": 7.09,
+      "mean": 21.38,
+      "max": 8.24
+    },
+    {
+      "id": 65770,
+      "name": "Foulborn Meginord's Girdle",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmVsdDdVbmlxdWUiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/26e71a5371/Belt7Unique.png",
+      "min": 1.19,
+      "mean": 1.79,
+      "max": 1.76
+    },
+    {
+      "id": 65772,
+      "name": "Foulborn Berek's Respite (Explode Ignited, Explode Shocked)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmVyZWtzUmVzcGl0ZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/3fdccbf3ee/BereksRespite.png",
+      "min": 13185.9,
+      "mean": 13631.38,
+      "max": 16427.71
+    },
+    {
+      "id": 65774,
+      "name": "Foulborn Lori's Lantern (Lucky LowLife, Speed LowLife)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTG9yaXNMYW50ZXJuIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/667ce3b093/LorisLantern.png",
+      "min": 3.5,
+      "mean": 10.92,
+      "max": 29.94
+    },
+    {
+      "id": 65775,
+      "name": "Foulborn Lori's Lantern (Lucky LowLife)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTG9yaXNMYW50ZXJuIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/667ce3b093/LorisLantern.png",
+      "min": 5.76,
+      "mean": 7.41,
+      "max": 9.14
+    },
+    {
+      "id": 65779,
+      "name": "Foulborn Ventor's Gamble",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRGllT2ZEZXN0aW55IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/753bfd17d1/DieOfDestiny.png",
+      "min": 4.97,
+      "mean": 18.33,
+      "max": 175.03
+    },
+    {
+      "id": 66059,
+      "name": "Foulborn Headhunter (Minimap Icons)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGVhZGh1bnRlciIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/2a93cbdad2/Headhunter.png",
+      "min": 30576,
+      "mean": 28005.9,
+      "max": 59800
+    },
+    {
+      "id": 65800,
+      "name": "Foulborn Belt of the Deceiver (Unnerve)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmVsdE9mVGhlRGVjaWV2ZXIiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/2559ea3739/BeltOfTheDeciever.png",
+      "min": 1.1399,
+      "mean": 1.32,
+      "max": 1.74
+    },
+    {
+      "id": 65803,
+      "name": "Foulborn Belt of the Deceiver (Reduced Curse)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmVsdE9mVGhlRGVjaWV2ZXIiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/2559ea3739/BeltOfTheDeciever.png",
+      "min": 1,
+      "mean": 1.17,
+      "max": 1.94
+    },
+    {
+      "id": 65806,
+      "name": "Foulborn Lori's Lantern (Speed LowLife)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTG9yaXNMYW50ZXJuIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/667ce3b093/LorisLantern.png",
+      "min": 1.55,
+      "mean": 1.95,
+      "max": 3.79
+    },
+    {
+      "id": 65821,
+      "name": "Foulborn Le Heup of All (Crit Multi)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTGVoZXVwb2ZhbGwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/a3014dad89/Leheupofall.png",
+      "min": 4,
+      "mean": 6.24,
+      "max": 24.72
+    },
+    {
+      "id": 65813,
+      "name": "Foulborn Xoph's Blood (Ele Overload, Phys as Fire)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9ZcGhldGhha2tzSGVhcnRVcGdyYWRlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/d43d2d423b/YphethakksHeartUpgrade.png",
+      "min": 342.8,
+      "mean": 480.84,
+      "max": 463.56
+    },
+    {
+      "id": 65851,
+      "name": "Foulborn Umbilicus Immortalis (Flask Chargegen)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW1iaWxpY3VzSW1tb3J0YWxpcyIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/1f496369fe/UmbilicusImmortalis.png",
+      "min": 1.23,
+      "mean": 3.67,
+      "max": 6
+    },
+    {
+      "id": 65852,
+      "name": "Foulborn Dyadian Dawn (Chill)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvTW90aGVyRHlhZHVzIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/22f1e9e2a4/MotherDyadus.png",
+      "min": 1.5,
+      "mean": 3.41,
+      "max": 4.5
+    },
+    {
+      "id": 65853,
+      "name": "Foulborn Choir of the Storm (Max LightRes)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Wb2ljZU9mVGhlU3Rvcm1VcGdyYWRlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/bc02926725/VoiceOfTheStormUpgrade.png",
+      "min": 18.61,
+      "mean": 14.21,
+      "max": 33.28
+    },
+    {
+      "id": 65816,
+      "name": "Foulborn Dyadian Dawn (Chill, Ignite)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvTW90aGVyRHlhZHVzIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/22f1e9e2a4/MotherDyadus.png",
+      "min": 6,
+      "mean": 24.48,
+      "max": 29.21
+    },
+    {
+      "id": 65832,
+      "name": "Foulborn The Aylardex",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9YZWRyYWx5YXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/bde77c4af5/Xedralyas.png",
+      "min": 1.57,
+      "mean": 1.5,
+      "max": 2.5
+    },
+    {
+      "id": 65836,
+      "name": "Foulborn Badge of the Brotherhood",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Bc3Nhc3NpblVuaXF1ZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/8c4226caee/AssassinUnique.png",
+      "min": 62.07,
+      "mean": 65.76,
+      "max": 78.75
+    },
+    {
+      "id": 65838,
+      "name": "Foulborn The Pandemonius (Phys as Cold)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9HbGFjaWVyQ2Fjb29uVXBncmFkZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/4676228206/GlacierCacoonUpgrade.png",
+      "min": 3,
+      "mean": 3.56,
+      "max": 5.86
+    },
+    {
+      "id": 65823,
+      "name": "Foulborn Le Heup of All (%Defences, Crit Multi)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTGVoZXVwb2ZhbGwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/a3014dad89/Leheupofall.png",
+      "min": 153.2,
+      "mean": 119.14,
+      "max": 314.57
+    },
+    {
+      "id": 65824,
+      "name": "Foulborn Choir of the Storm (Max LightRes, Res Mana)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Wb2ljZU9mVGhlU3Rvcm1VcGdyYWRlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/bc02926725/VoiceOfTheStormUpgrade.png",
+      "min": 20020,
+      "mean": 20641.2,
+      "max": 41679
+    },
+    {
+      "id": 65941,
+      "name": "Foulborn Shavronne's Revelation (Evasion)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTW9vbnN0b25lUmluZ1VuaXF1ZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/63e88d68d3/MoonstoneRingUnique.png",
+      "min": 42.5,
+      "mean": 47.13,
+      "max": 412.45
+    },
+    {
+      "id": 65828,
+      "name": "Foulborn Mokou's Embrace",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTW9rb3VzRW1icmFjZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/3faaadf683/MokousEmbrace.png",
+      "min": 1.19,
+      "mean": 1.93,
+      "max": 1.92
+    },
+    {
+      "id": 65831,
+      "name": "Foulborn Death Rush",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQW1ldGh5c3RSaW5nVW5pcXVlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/37ffe1ea5a/AmethystRingUnique.png",
+      "min": 7.33,
+      "mean": 7.4,
+      "max": 8.5399
+    },
+    {
+      "id": 65839,
+      "name": "Foulborn Berek's Respite (Explode Ignited)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmVyZWtzUmVzcGl0ZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/3fdccbf3ee/BereksRespite.png",
+      "min": 31.95,
+      "mean": 32,
+      "max": 37.2
+    },
+    {
+      "id": 65844,
+      "name": "Foulborn The Magnate",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQnVja2xlZEJlbHRVbmlxdWUiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/bb106936b9/BuckledBeltUnique.png",
+      "min": 3,
+      "mean": 8.7,
+      "max": 31.5
+    },
+    {
+      "id": 65850,
+      "name": "Foulborn Berek's Grip (Frozen Dmg)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmVyZWtzR3JpcCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/36b2206a76/BereksGrip.png",
+      "min": 1,
+      "mean": 1.68,
+      "max": 1.79
+    },
+    {
+      "id": 65856,
+      "name": "Foulborn Voice of the Storm (Unlucky)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Wb2ljZU9mVGhlU3Rvcm0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/be66036a70/VoiceOfTheStorm.png",
+      "min": 4.18,
+      "mean": 7.18,
+      "max": 9.93
+    },
+    {
+      "id": 65857,
+      "name": "Foulborn Warped Timepiece",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9XYXJwZWRUaW1lcGllY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/09bb24a5fe/WarpedTimepiece.png",
+      "min": 1.21,
+      "mean": 19.93,
+      "max": 11.44
+    },
+    {
+      "id": 65858,
+      "name": "Foulborn Thief's Torment",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVGhpZWZzVG9ybWVudCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/d6ef4b655b/ThiefsTorment.png",
+      "min": 1.01,
+      "mean": 1.43,
+      "max": 1.99
+    },
+    {
+      "id": 65869,
+      "name": "Foulborn Xoph's Heart (Phys as Fire)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9ZcGhldGhha2tzSGVhcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/11ceaf21c7/YphethakksHeart.png",
+      "min": 1.31,
+      "mean": 1.39,
+      "max": 15.43
+    },
+    {
+      "id": 65871,
+      "name": "Foulborn Voll's Devotion (Gain Power)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BZ2F0ZUFtdWxldFVuaXF1ZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/6067114161/AgateAmuletUnique.png",
+      "min": 24.9,
+      "mean": 26.38,
+      "max": 26.27
+    },
+    {
+      "id": 65874,
+      "name": "Foulborn Call of the Brotherhood",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQnJvdGhlcmhvb2QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/6535c26dea/Brotherhood.png",
+      "min": 1.4,
+      "mean": 3,
+      "max": 15.27
+    },
+    {
+      "id": 65958,
+      "name": "Foulborn Soul Tether (Instant Leech)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvU291bFRldGhlciIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/216cae11b7/SoulTether.png",
+      "min": 7,
+      "mean": 5.89,
+      "max": 17.73
+    },
+    {
+      "id": 65882,
+      "name": "Foulborn Hinekora's Sight",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9IaW5la29yYXNTaWdodCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/1696c2d647/HinekorasSight.png",
+      "min": 6.88,
+      "mean": 14.67,
+      "max": 11.5
+    },
+    {
+      "id": 65883,
+      "name": "Foulborn Dyadian Dawn (Ignite)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvTW90aGVyRHlhZHVzIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/22f1e9e2a4/MotherDyadus.png",
+      "min": 2.25,
+      "mean": 3,
+      "max": 8
+    },
+    {
+      "id": 65901,
+      "name": "Foulborn Voll's Devotion (Lose Power)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BZ2F0ZUFtdWxldFVuaXF1ZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/6067114161/AgateAmuletUnique.png",
+      "min": 15,
+      "mean": 18.78,
+      "max": 21.73
+    },
+    {
+      "id": 65909,
+      "name": "Foulborn Astramentis",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbXVsZXQzNiIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/319bc67776/Amulet36.png",
+      "min": 21,
+      "mean": 18.8,
+      "max": 172.81
+    },
+    {
+      "id": 65912,
+      "name": "Foulborn Xoph's Blood (Ele Overload)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9ZcGhldGhha2tzSGVhcnRVcGdyYWRlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/d43d2d423b/YphethakksHeartUpgrade.png",
+      "min": 6.17,
+      "mean": 17.67,
+      "max": 15.13
+    },
+    {
+      "id": 65919,
+      "name": "Foulborn Auxium",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQXV4aXVtIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/bf52c6f065/Auxium.png",
+      "min": 3.41,
+      "mean": 3.33,
+      "max": 6.64
+    },
+    {
+      "id": 65923,
+      "name": "Foulborn Romira's Banquet",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUm9taXJhc0JhbnF1ZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/119f76a3dc/RomirasBanquet.png",
+      "min": 4.57,
+      "mean": 9.9,
+      "max": 14.38
+    },
+    {
+      "id": 65950,
+      "name": "Foulborn Gifts from Above",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRGlhbW9uZFJpbmdVbmlxdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/0df45a26fb/DiamondRingUnique.png",
+      "min": 2.89,
+      "mean": 1.67,
+      "max": 3.86
+    },
+    {
+      "id": 65924,
+      "name": "Foulborn Shavronne's Revelation (Armour)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTW9vbnN0b25lUmluZ1VuaXF1ZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/63e88d68d3/MoonstoneRingUnique.png",
+      "min": 105.82,
+      "mean": 28.5,
+      "max": 375
+    },
+    {
+      "id": 65932,
+      "name": "Foulborn Sunblast",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmVsdDgiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/dda9cc2386/Belt8.png",
+      "min": 1.75,
+      "mean": 1.25,
+      "max": 5.18
+    },
+    {
+      "id": 65933,
+      "name": "Foulborn Berek's Pass (Frozen Recoup)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmVyZWtzUGFzcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/29115a7712/BereksPass.png",
+      "min": 1,
+      "mean": 1.15,
+      "max": 2.2599
+    },
+    {
+      "id": 65935,
+      "name": "Foulborn Ming's Heart",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTWluZ3NIZWFydCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/45916a81dc/MingsHeart.png",
+      "min": 2,
+      "mean": 3.47,
+      "max": 3.75
+    },
+    {
+      "id": 65937,
+      "name": "Foulborn Berek's Pass (Ignite Action)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmVyZWtzUGFzcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/29115a7712/BereksPass.png",
+      "min": 1,
+      "mean": 2.36,
+      "max": 3.82
+    },
+    {
+      "id": 65953,
+      "name": "Foulborn Xoph's Heart (Debilitate)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9ZcGhldGhha2tzSGVhcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/11ceaf21c7/YphethakksHeart.png",
+      "min": 1,
+      "mean": 1.2,
+      "max": 1.73
+    },
+    {
+      "id": 65954,
+      "name": "Foulborn The Halcyon (Phys as Cold)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9HbGFjaWVyQ2Fjb29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/feb50f8a81/GlacierCacoon.png",
+      "min": 1,
+      "mean": 1.29,
+      "max": 2
+    },
+    {
+      "id": 65955,
+      "name": "Foulborn Voice of the Storm (Max LightRes)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Wb2ljZU9mVGhlU3Rvcm0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/be66036a70/VoiceOfTheStorm.png",
+      "min": 2.57,
+      "mean": 1.87,
+      "max": 11.06
+    },
+    {
+      "id": 65956,
+      "name": "Foulborn Xoph's Heart (Debilitate, Phys as Fire)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9ZcGhldGhha2tzSGVhcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/11ceaf21c7/YphethakksHeart.png",
+      "min": 3.75,
+      "mean": 25.86,
+      "max": 31.47
+    },
+    {
+      "id": 65967,
+      "name": "Foulborn Soul Tether (Everlasting)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvU291bFRldGhlciIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/216cae11b7/SoulTether.png",
+      "min": 1,
+      "mean": 5.26,
+      "max": 1.62
+    },
+    {
+      "id": 65969,
+      "name": "Foulborn Berek's Respite (Explode Shocked)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmVyZWtzUmVzcGl0ZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/3fdccbf3ee/BereksRespite.png",
+      "min": 35.32,
+      "mean": 37.93,
+      "max": 44.55
+    },
+    {
+      "id": 65983,
+      "name": "Foulborn The Halcyon (Frozen, Phys as Cold)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9HbGFjaWVyQ2Fjb29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/feb50f8a81/GlacierCacoon.png",
+      "min": 1,
+      "mean": 1.48,
+      "max": 327.6
+    },
+    {
+      "id": 65988,
+      "name": "Foulborn Voll's Devotion (Gain Power, Lose Power)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BZ2F0ZUFtdWxldFVuaXF1ZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/6067114161/AgateAmuletUnique.png",
+      "min": 49,
+      "mean": 71.61,
+      "max": 163.8
+    },
+    {
+      "id": 65994,
+      "name": "Foulborn Xoph's Blood (Phys as Fire)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9ZcGhldGhha2tzSGVhcnRVcGdyYWRlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/d43d2d423b/YphethakksHeartUpgrade.png",
+      "min": 7.95,
+      "mean": 7.22,
+      "max": 193.45
+    },
+    {
+      "id": 66010,
+      "name": "Foulborn Soul Tether (Everlasting, Instant Leech)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvU291bFRldGhlciIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/216cae11b7/SoulTether.png",
+      "min": 2.5,
+      "mean": 2.5,
+      "max": 15.8
+    },
+    {
+      "id": 66019,
+      "name": "Foulborn Presence of Chayula (ES Recoup)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QcmVzZW5jZU9mQ2hheXVsYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/7c04c48f5a/PresenceOfChayula.png",
+      "min": 7,
+      "mean": 17.64,
+      "max": 11.33
+    },
+    {
+      "id": 66024,
+      "name": "Foulborn Presence of Chayula (Chaos Recoup)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QcmVzZW5jZU9mQ2hheXVsYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/7c04c48f5a/PresenceOfChayula.png",
+      "min": 5,
+      "mean": 7.38,
+      "max": 8.63
+    },
+    {
+      "id": 66040,
+      "name": "Foulborn Voice of the Storm (Max LightRes, Unlucky)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Wb2ljZU9mVGhlU3Rvcm0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/be66036a70/VoiceOfTheStorm.png",
+      "min": 2.33,
+      "mean": 3.73,
+      "max": 3.78
+    },
+    {
+      "id": 66049,
+      "name": "Foulborn Anathema",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlQ3Vyc2VSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/7b5111d3ce/UniqueCurseRing.png",
+      "min": 28.67,
+      "mean": 207.38,
+      "max": 238.86
+    },
+    {
+      "id": 66069,
+      "name": "Foulborn Mageblood",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSW5qZWN0b3JCZWx0IiwidyI6MiwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/8f193a2016/InjectorBelt.png",
+      "min": 28992.6,
+      "mean": 29135.93,
+      "max": 36160
+    },
+    {
+      "id": 66071,
+      "name": "Foulborn Choir of the Storm (Res Mana)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Wb2ljZU9mVGhlU3Rvcm1VcGdyYWRlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/bc02926725/VoiceOfTheStormUpgrade.png",
+      "min": 13734,
+      "mean": 23275.03,
+      "max": 23868.57
+    },
+    {
+      "id": 66073,
+      "name": "Foulborn The Halcyon (Frozen)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9HbGFjaWVyQ2Fjb29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/feb50f8a81/GlacierCacoon.png",
+      "min": 1.19,
+      "mean": 1.47,
+      "max": 1.57
+    },
+    {
+      "id": 66088,
+      "name": "Foulborn Umbilicus Immortalis (Flask Chargegen, Flask Charges)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW1iaWxpY3VzSW1tb3J0YWxpcyIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/1f496369fe/UmbilicusImmortalis.png",
+      "min": 3,
+      "mean": 9.18,
+      "max": 18.2
+    },
+    {
+      "id": 66114,
+      "name": "Foulborn Soulthirst",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvU291bHRoaXJzdCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/5963a88f01/Soulthirst.png",
+      "min": 1,
+      "mean": 5,
+      "max": 5.41
+    },
+    {
+      "id": 66119,
+      "name": "Foulborn Umbilicus Immortalis (Flask Charges)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW1iaWxpY3VzSW1tb3J0YWxpcyIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/1f496369fe/UmbilicusImmortalis.png",
+      "min": 1,
+      "mean": 1.48,
+      "max": 1.1
+    },
+    {
+      "id": 66150,
+      "name": "Foulborn Defiance of Destiny",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9IaW5la29yYUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/13c3aa8666/HinekoraAmulet.png",
+      "min": 1873.45,
+      "mean": 2338,
+      "max": 2683.38
+    },
+    {
+      "id": 66136,
+      "name": "Foulborn Belt of the Deceiver (Reduced Curse, Unnerve)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmVsdE9mVGhlRGVjaWV2ZXIiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/2559ea3739/BeltOfTheDeciever.png",
+      "min": 1,
+      "mean": 2.3,
+      "max": 1.35
+    },
+    {
+      "id": 66139,
+      "name": "Foulborn Maligaro's Restraint",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvTWFsaWdhcm9zUmVzdHJhaW50IiwidyI6MiwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/62ff976609/MaligarosRestraint.png",
+      "min": 1,
+      "mean": 1.9,
+      "max": 1.83
+    },
+    {
+      "id": 66143,
+      "name": "Foulborn Headhunter (Culling, Minimap Icons)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGVhZGh1bnRlciIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/2a93cbdad2/Headhunter.png",
+      "min": 344881.72,
+      "mean": 344881.72,
+      "max": 344881.72
+    },
+    {
+      "id": 66144,
+      "name": "Foulborn Headhunter (Soul Eater)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGVhZGh1bnRlciIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/2a93cbdad2/Headhunter.png",
+      "min": 12828.92,
+      "mean": 17442.22,
+      "max": 117324.48
+    },
+    {
+      "id": 66157,
+      "name": "Foulborn Warrior's Legacy",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvV2FycmlvcnNMZWdhY3kiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/324ea9d8db/WarriorsLegacy.png",
+      "min": 20.8,
+      "mean": 32.43,
+      "max": 32.5
+    },
+    {
+      "id": 66175,
+      "name": "Foulborn Berek's Grip (Shock Debil)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmVyZWtzR3JpcCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/36b2206a76/BereksGrip.png",
+      "min": 1.6,
+      "mean": 1.48,
+      "max": 5
+    },
+    {
+      "id": 66180,
+      "name": "Foulborn Dream Fragments",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmluZzZVbmlxdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/9abf6655f1/Ring6Unique.png",
+      "min": 1,
+      "mean": 3.35,
+      "max": 22.4
+    },
+    {
+      "id": 66187,
+      "name": "Foulborn Berek's Pass (Frozen Recoup, Ignite Action)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmVyZWtzUGFzcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/29115a7712/BereksPass.png",
+      "min": 1.5,
+      "mean": 3.21,
+      "max": 4.55
+    },
+    {
+      "id": 66191,
+      "name": "Foulborn Pyre",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQ2hlcnVmZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/dec400a753/Cherufe.png",
+      "min": 1,
+      "mean": 1.67,
+      "max": 1.72
+    },
+    {
+      "id": 66198,
+      "name": "Foulborn Astral Projector",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQXN0cmFsUHJvamVjdG9yIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/8add0d2c3a/AstralProjector.png",
+      "min": 18.17,
+      "mean": 36.5,
+      "max": 44.29
+    },
+    {
+      "id": 66199,
+      "name": "Foulborn Headhunter (Culling)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGVhZGh1bnRlciIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/2a93cbdad2/Headhunter.png",
+      "min": 156240,
+      "mean": 156612.6,
+      "max": 196363.44
+    },
+    {
+      "id": 66204,
+      "name": "Foulborn Berek's Grip (Frozen Dmg, Shock Debil)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmVyZWtzR3JpcCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/36b2206a76/BereksGrip.png",
+      "min": 2,
+      "mean": 2.94,
+      "max": 5.17
+    },
+    {
+      "id": 66237,
+      "name": "Foulborn Presence of Chayula (Chaos Recoup, ES Recoup)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QcmVzZW5jZU9mQ2hheXVsYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/7c04c48f5a/PresenceOfChayula.png",
+      "min": 170,
+      "mean": 167,
+      "max": 197.8899
+    },
+    {
+      "id": 66257,
+      "name": "Foulborn The Pandemonius (Chilled, Phys as Cold)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9HbGFjaWVyQ2Fjb29uVXBncmFkZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/4676228206/GlacierCacoonUpgrade.png",
+      "min": 4.83,
+      "mean": 4.75,
+      "max": 5.29
+    },
+    {
+      "id": 66318,
+      "name": "Foulborn Headhunter (Culling, Soul Eater)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGVhZGh1bnRlciIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/2a93cbdad2/Headhunter.png",
+      "min": 50064,
+      "mean": 50990.67,
+      "max": 75760
+    },
+    {
+      "id": 66365,
+      "name": "Foulborn Shavronne's Revelation (Armour, Evasion)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTW9vbnN0b25lUmluZ1VuaXF1ZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/63e88d68d3/MoonstoneRingUnique.png",
+      "min": 44.5,
+      "mean": 80.33,
+      "max": 568.3499
+    },
+    {
+      "id": 66381,
+      "name": "Foulborn Headhunter (Minimap Icons, Soul Eater)",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGVhZGh1bnRlciIsInciOjIsImgiOjEsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/2a93cbdad2/Headhunter.png",
+      "min": 16800,
+      "mean": 17702,
+      "max": 17278
+    },
+    {
+      "id": 26682,
+      "name": "The Primordial Chain",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9UaGVQcmltb3JkaWFsQ2hhaW4iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/cd566defdb/ThePrimordialChain.png",
+      "min": 1.18,
+      "mean": 3.71,
+      "max": 3.8
+    },
+    {
+      "id": 35747,
+      "name": "Survivor's Guilt",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSW1iYWxhbmNlZENvcmQiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/0560075a4c/ImbalancedCord.png",
+      "min": 7.67,
+      "mean": 5.38,
+      "max": 9
+    },
+    {
+      "id": 35741,
+      "name": "Blackflame",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmxhY2tGbGFtZUZpcmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/d8cb90fe20/BlackFlameFire.png",
+      "min": 25,
+      "mean": 25,
+      "max": 40
+    },
+    {
+      "id": 35759,
+      "name": "Olesya's Delight",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQWx0Q2hhcmdlRGV4IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/caa418edee/AltChargeDex.png",
+      "min": 2.44,
+      "mean": 3.94,
+      "max": 10
+    },
+    {
+      "id": 1217,
+      "name": "Carnage Heart",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbXVsZXQzNyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/451ac32a56/Amulet37.png",
+      "min": 1.29,
+      "mean": 1.94,
+      "max": 3.73
+    },
+    {
+      "id": 42126,
+      "name": "Triumvirate Authority",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVmFhbFVuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/21c7f71af2/VaalUnsetRing.png",
+      "min": 8.45,
+      "mean": 13.19,
+      "max": 21.12
+    },
+    {
+      "id": 35689,
+      "name": "Arn's Anguish",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQWx0Q2hhcmdlU3RyIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/c07eed602e/AltChargeStr.png",
+      "min": 8.5399,
+      "mean": 12,
+      "max": 28.56
+    },
+    {
+      "id": 45853,
+      "name": "Ashes of the Stars",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9NYXN0ZXJPZkdlbXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/f6497cbdfe/MasterOfGems.png",
+      "min": 37.96,
+      "mean": 36.86,
+      "max": 45.3
+    },
+    {
+      "id": 45870,
+      "name": "Polaric Devastation",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQXNoQW5kRnJvc3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/70630a6e17/AshAndFrost.png",
+      "min": 19.64,
+      "mean": 18.55,
+      "max": 195.83
+    },
+    {
+      "id": 45868,
+      "name": "Crystallised Omniscience",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Bc2NlbmRhbmNlQW11bGV0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/60368620d5/AscendanceAmulet.png",
+      "min": 10.72,
+      "mean": 18.38,
+      "max": 29.17
+    },
+    {
+      "id": 46489,
+      "name": "Call of the Void",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRnJvc3RHbGF6ZWRFeWVSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/e10b85c4f1/FrostGlazedEyeRing.png",
+      "min": 5.68,
+      "mean": 5.11,
+      "max": 7.91
+    },
+    {
+      "id": 46481,
+      "name": "The Burden of Truth",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvU2lydXNCZWx0IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/757f213691/SirusBelt.png",
+      "min": 4.25,
+      "mean": 3.44,
+      "max": 6.4
+    },
+    {
+      "id": 48888,
+      "name": "Anathema",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlQ3Vyc2VSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/db99b5c4d2/UniqueCurseRing.png",
+      "min": 18.9,
+      "mean": 17,
+      "max": 24.32
+    },
+    {
+      "id": 48903,
+      "name": "Nimis",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVWJlckVhdGVyb2ZXb3JsZHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6dbfb1baea/UberEaterofWorlds.png",
+      "min": 8026.2,
+      "mean": 9240.67,
+      "max": 10496.08
+    },
+    {
+      "id": 48890,
+      "name": "Doedre's Tongue",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Eb2VkcmVzVG9uZ3VlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/434403db05/DoedresTongue.png",
+      "min": 1.22,
+      "mean": 1.75,
+      "max": 1.58
+    },
+    {
+      "id": 49028,
+      "name": "Eternal Damnation",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbndlbnNBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/1d40745e7d/AnwensAmulet.png",
+      "min": 252,
+      "mean": 236.58,
+      "max": 300
+    },
+    {
+      "id": 51851,
+      "name": "Ceinture of Benevolence",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvTGlua21hc3RlcnNDb2lsIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/19af94314e/LinkmastersCoil.png",
+      "min": 1.06,
+      "mean": 0.98,
+      "max": 1.74
+    },
+    {
+      "id": 51856,
+      "name": "Bloodsoaked Medallion",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CbG9vZFNvYWtlZF9NZWRhbGxpb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/2160ca2460/BloodSoaked_Medallion.png",
+      "min": 1.06,
+      "mean": 1.02,
+      "max": 1.88
+    },
+    {
+      "id": 51860,
+      "name": "Soulbound",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQm9uZGVkTGlmZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/2ee06d14a2/BondedLife.png",
+      "min": 1.09,
+      "mean": 1.63,
+      "max": 1.75
+    },
+    {
+      "id": 51853,
+      "name": "Chain of Endurance",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5oZWFsdGh5QnVyZGVuIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/d59c2c2bc9/UnhealthyBurden.png",
+      "min": 0.89,
+      "mean": 0.78,
+      "max": 1.08
+    },
+    {
+      "id": 53628,
+      "name": "Tawhanuku's Timing",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVGF3aGFudWt1UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/024958a572/TawhanukuRing.png",
+      "min": 1,
+      "mean": 1.62,
+      "max": 1.91
+    },
+    {
+      "id": 53615,
+      "name": "Ikiaho's Promise",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Ja2lhaG9BbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/119e919299/IkiahoAmulet.png",
+      "min": 0.67,
+      "mean": 1.13,
+      "max": 1.61
+    },
+    {
+      "id": 53658,
+      "name": "Bound Fate",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGluZWtvcmFCZWx0IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/0ffa60853d/HinekoraBelt.png",
+      "min": 1,
+      "mean": 1.09,
+      "max": 1.35
+    },
+    {
+      "id": 53702,
+      "name": "Kaom's Binding",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvS2FvbUJlbHQiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/94edbfb12d/KaomBelt.png",
+      "min": 1,
+      "mean": 1.37,
+      "max": 1.96
+    },
+    {
+      "id": 53901,
+      "name": "Replica Dragonfang's Flight",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9NYWxhY2hhaSdzIEJyaWxsaWFuY2VBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/a1548914e0/Malachai%27s%20BrillianceAmulet.png",
+      "min": 15.46,
+      "mean": 37.3,
+      "max": 87.41
+    },
+    {
+      "id": 60692,
+      "name": "The Tides of Time",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVWJlclNoYXBlckJlbHQiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/7a326845e7/UberShaperBelt.png",
+      "min": 34.06,
+      "mean": 36.05,
+      "max": 43.89
+    },
+    {
+      "id": 45215,
+      "name": "Uul-Netol's Vow",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9HaWZ0b2ZVdWxOZXRvbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/6cabe4da33/GiftofUulNetol.png",
+      "min": 556.92,
+      "mean": 561.73,
+      "max": 992.31
+    },
+    {
+      "id": 26665,
+      "name": "Circle of Fear",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU3ludGhlc2lzQ29sZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJzeW50aGVzaXNlZCI6dHJ1ZX1d/f2a949365a/SynthesisCold.png",
+      "min": 5.24,
+      "mean": 6.03,
+      "max": 15.93
+    },
+    {
+      "id": 53926,
+      "name": "Defiance of Destiny",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9IaW5la29yYUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/d26f80f9c7/HinekoraAmulet.png",
+      "min": 1031.17,
+      "mean": 939.1,
+      "max": 2273.4
+    },
+    {
+      "id": 47658,
+      "name": "Kalandra's Touch",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTWlycm9yUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJkdXBsaWNhdGVkIjp0cnVlfV0/2cbd02eced/MirrorRing.png",
+      "min": 4095,
+      "mean": 4100.14,
+      "max": 5414.35
+    },
+    {
+      "id": 35780,
+      "name": "Graven's Secret",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQWx0Q2hhcmdlSW50IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/1300aed2ac/AltChargeInt.png",
+      "min": 4,
+      "mean": 10.57,
+      "max": 19.77
+    },
+    {
+      "id": 46482,
+      "name": "The Eternal Struggle",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Wb2lkY29yZUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJzZWFyaW5nIjp0cnVlLCJ0YW5nbGVkIjp0cnVlfV0/3ca1f8ecb5/VoidcoreAmulet.png",
+      "min": 4.28,
+      "mean": 9.71,
+      "max": 11.85
+    },
+    {
+      "id": 4,
+      "name": "Meginord's Girdle",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmVsdDdVbmlxdWUiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/59718aca01/Belt7Unique.png",
+      "min": 1,
+      "mean": 1.1,
+      "max": 1.8
+    },
+    {
+      "id": 23,
+      "name": "Ungil's Harmony",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmdpbHNIYXJtb255IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/dfdaf30e66/UngilsHarmony.png",
+      "min": 1.24,
+      "mean": 1.94,
+      "max": 9.46
+    },
+    {
+      "id": 66,
+      "name": "Malachai's Artifice",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTWFsYWNoYWlzQXJ0aWZpY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/dfbb52ebfe/MalachaisArtifice.png",
+      "min": 1,
+      "mean": 1.14,
+      "max": 1.83
+    },
+    {
+      "id": 62,
+      "name": "Doedre's Damning",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmluZzNVbmlxdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/d06b386d73/Ring3Unique.png",
+      "min": 1.44,
+      "mean": 1.6,
+      "max": 1.8
+    },
+    {
+      "id": 72,
+      "name": "Blackheart",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmluZzFVbmlxdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/40666e2827/Ring1Unique.png",
+      "min": 1.58,
+      "mean": 1.9,
+      "max": 2.82
+    },
+    {
+      "id": 77,
+      "name": "Perandus Signet",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTGFkeVJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/d696be5b25/LadyRing.png",
+      "min": 5.86,
+      "mean": 7.73,
+      "max": 7.15
+    },
+    {
+      "id": 86,
+      "name": "Daresso's Salute",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9DaXRyaW5lQW11bGV0VW5pcXVlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/ea232d0123/CitrineAmuletUnique.png",
+      "min": 1.29,
+      "mean": 1.24,
+      "max": 1.87
+    },
+    {
+      "id": 83,
+      "name": "Bated Breath",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmF0ZWRCcmVhdGgiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/0a8cc4529f/BatedBreath.png",
+      "min": 1,
+      "mean": 1.47,
+      "max": 1.76
+    },
+    {
+      "id": 84,
+      "name": "Lori's Lantern",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTG9yaXNMYW50ZXJuIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/7abe3ca54f/LorisLantern.png",
+      "min": 0.95,
+      "mean": 1.17,
+      "max": 1.86
+    },
+    {
+      "id": 114,
+      "name": "Thief's Torment",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVGhpZWZzVG9ybWVudCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/1c182176dc/ThiefsTorment.png",
+      "min": 1.31,
+      "mean": 1.65,
+      "max": 1.9
+    },
+    {
+      "id": 107,
+      "name": "Immortal Flesh",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSW1tb3J0YWxGbGVzaCIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/fceb1b8f8c/ImmortalFlesh.png",
+      "min": 2.21,
+      "mean": 2.63,
+      "max": 2.47
+    },
+    {
+      "id": 129,
+      "name": "Heartbound Loop",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvSGVhcnRib3VuZFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c214aff507/HeartboundRing.png",
+      "min": 1.1,
+      "mean": 1.83,
+      "max": 1.98
+    },
+    {
+      "id": 162,
+      "name": "Sibyl's Lament",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU2lieWxzTGFtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/73ccf7d7c4/SibylsLament.png",
+      "min": 1.1,
+      "mean": 1.27,
+      "max": 1.84
+    },
+    {
+      "id": 155,
+      "name": "Headhunter",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGVhZGh1bnRlciIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/e9542ec6ee/Headhunter.png",
+      "min": 1788.76,
+      "mean": 2614.41,
+      "max": 2643.36
+    },
+    {
+      "id": 163,
+      "name": "Ming's Heart",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTWluZ3NIZWFydCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/7395d98bba/MingsHeart.png",
+      "min": 1.5,
+      "mean": 2.45,
+      "max": 3.45
+    },
+    {
+      "id": 178,
+      "name": "Shaper's Seed",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9TaGFwZXJzU2VlZCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/99265d5594/ShapersSeed.png",
+      "min": 0.88,
+      "mean": 1.28,
+      "max": 1.98
+    },
+    {
+      "id": 177,
+      "name": "Tavukai",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9UYXZ1a2FpIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/86cc756de2/Tavukai.png",
+      "min": 1.1399,
+      "mean": 9.93,
+      "max": 1.92
+    },
+    {
+      "id": 170,
+      "name": "Maligaro's Cruelty",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbXVsZXQxNSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/f1b938bbd1/Amulet15.png",
+      "min": 0.85,
+      "mean": 1.67,
+      "max": 1.91
+    },
+    {
+      "id": 199,
+      "name": "Le Heup of All",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTGVoZXVwb2ZhbGwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6ea73cc7e4/Leheupofall.png",
+      "min": 2.87,
+      "mean": 9.58,
+      "max": 11.99
+    },
+    {
+      "id": 207,
+      "name": "Darkness Enthroned",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvRGFya25lc3NFbnRocm9uZWQiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/2e418e2c4d/DarknessEnthroned.png",
+      "min": 3.11,
+      "mean": 135.36,
+      "max": 25.76
+    },
+    {
+      "id": 204,
+      "name": "Araku Tiki",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbXVsZXQyVW5pcXVlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/6468b95d6b/Amulet2Unique.png",
+      "min": 0.72,
+      "mean": 1.2,
+      "max": 1.17
+    },
+    {
+      "id": 225,
+      "name": "The Halcyon",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9HbGFjaWVyQ2Fjb29uIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/9bb08197c4/GlacierCacoon.png",
+      "min": 1,
+      "mean": 1.03,
+      "max": 15
+    },
+    {
+      "id": 224,
+      "name": "The Anvil",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbnZpbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/8d05280077/Anvil.png",
+      "min": 6.29,
+      "mean": 3.64,
+      "max": 6.99
+    },
+    {
+      "id": 340,
+      "name": "Voll's Devotion",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BZ2F0ZUFtdWxldFVuaXF1ZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/a67e002c89/AgateAmuletUnique.png",
+      "min": 16.1,
+      "mean": 12.17,
+      "max": 24.27
+    },
+    {
+      "id": 332,
+      "name": "Circle of Guilt",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU3ludGhlc2lzUGh5c2ljYWwyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInN5bnRoZXNpc2VkIjp0cnVlfV0/9345ce30d7/SynthesisPhysical2.png",
+      "min": 9.52,
+      "mean": 25.38,
+      "max": 18.78
+    },
+    {
+      "id": 394,
+      "name": "Perandus Blazon",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQnVja2xlZEJlbHRVbmlxdWUyIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/b67e6fa4a9/BuckledBeltUnique2.png",
+      "min": 0.93,
+      "mean": 1.28,
+      "max": 1.54
+    },
+    {
+      "id": 402,
+      "name": "Sacrificial Heart",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9TYWNyaWZpY2lhbF9IZWFydCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/e3daa4cd32/Sacrificial_Heart.png",
+      "min": 1.33,
+      "mean": 1.55,
+      "max": 3
+    },
+    {
+      "id": 470,
+      "name": "Profane Proxy",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU2tpdHRlcmJvdFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/20b7d215dd/SkitterbotRing.png",
+      "min": 1.51,
+      "mean": 3.77,
+      "max": 1.97
+    },
+    {
+      "id": 459,
+      "name": "Dream Fragments",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmluZzZVbmlxdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/0c74ddd77c/Ring6Unique.png",
+      "min": 1.02,
+      "mean": 3.22,
+      "max": 1.74
+    },
+    {
+      "id": 468,
+      "name": "Warped Timepiece",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9XYXJwZWRUaW1lcGllY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/abee67f17d/WarpedTimepiece.png",
+      "min": 1.3,
+      "mean": 2.22,
+      "max": 2.72
+    },
+    {
+      "id": 490,
+      "name": "Karui Ward",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbXVsZXQ0VW5pcXVlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/069e4f76ea/Amulet4Unique.png",
+      "min": 1.58,
+      "mean": 2.38,
+      "max": 1.93
+    },
+    {
+      "id": 488,
+      "name": "Leash of Oblation",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvTGVhc2hPZk9ibGF0aW9uIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/f865c7f643/LeashOfOblation.png",
+      "min": 2.47,
+      "mean": 4,
+      "max": 2.8
+    },
+    {
+      "id": 483,
+      "name": "Siegebreaker",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvODU0ODIiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/ee893f3cb8/85482.png",
+      "min": 1.22,
+      "mean": 1.22,
+      "max": 1.98
+    },
+    {
+      "id": 481,
+      "name": "The Pandemonius",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9HbGFjaWVyQ2Fjb29uVXBncmFkZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/f54aa988e2/GlacierCacoonUpgrade.png",
+      "min": 5,
+      "mean": 5.73,
+      "max": 9.5
+    },
+    {
+      "id": 605,
+      "name": "Faminebind",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvRmFtaW5lYmluZCIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/a790722613/Faminebind.png",
+      "min": 0.08,
+      "mean": 0.76,
+      "max": 0.9
+    },
+    {
+      "id": 659,
+      "name": "Atziri's Foible",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9RdWlkIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/00c2b3a588/Quid.png",
+      "min": 6,
+      "mean": 7.88,
+      "max": 9.3699
+    },
+    {
+      "id": 653,
+      "name": "Mark of the Shaper",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVWJlclNoYXBlclJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/302889cfca/UberShaperRing.png",
+      "min": 5.53,
+      "mean": 5.89,
+      "max": 8.6
+    },
+    {
+      "id": 672,
+      "name": "Doryani's Invitation",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvRG9yeWFuaXNJbnZpdGF0aW9uIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/d0085639cc/DoryanisInvitation.png",
+      "min": 11.63,
+      "mean": 26.35,
+      "max": 18.87
+    },
+    {
+      "id": 676,
+      "name": "The Retch",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVGhlUmV0Y2giLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/4d93673157/TheRetch.png",
+      "min": 2,
+      "mean": 3.76,
+      "max": 20
+    },
+    {
+      "id": 715,
+      "name": "Stone of Lazhwar",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbXVsZXQ1VW5pcXVlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c7c2e9bfcf/Amulet5Unique.png",
+      "min": 1.1298,
+      "mean": 1.13,
+      "max": 1.59
+    },
+    {
+      "id": 712,
+      "name": "The Aylardex",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9YZWRyYWx5YXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/d9ae7f380f/Xedralyas.png",
+      "min": 0.95,
+      "mean": 1.32,
+      "max": 1.54
+    },
+    {
+      "id": 717,
+      "name": "Kikazaru",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvS2lrYXphcnUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/911affa06b/Kikazaru.png",
+      "min": 1.22,
+      "mean": 1.77,
+      "max": 1.6
+    },
+    {
+      "id": 721,
+      "name": "Death Rush",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQW1ldGh5c3RSaW5nVW5pcXVlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1ade97e0ac/AmethystRingUnique.png",
+      "min": 9.26,
+      "mean": 11,
+      "max": 11.13
+    },
+    {
+      "id": 762,
+      "name": "Prismweave",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvUHJpc213ZWF2ZSIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/822582fe24/Prismweave.png",
+      "min": 1.46,
+      "mean": 2.13,
+      "max": 1.94
+    },
+    {
+      "id": 780,
+      "name": "Pyre",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQ2hlcnVmZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/08c38718a4/Cherufe.png",
+      "min": 2.13,
+      "mean": 2.06,
+      "max": 3.09
+    },
+    {
+      "id": 925,
+      "name": "Belt of the Deceiver",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmVsdE9mVGhlRGVjaWV2ZXIiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/914fb37e8c/BeltOfTheDeciever.png",
+      "min": 1.16,
+      "mean": 1.48,
+      "max": 1.91
+    },
+    {
+      "id": 926,
+      "name": "Wurm's Molt",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmVsdDZVbmlxdWUiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/3307668b96/Belt6Unique.png",
+      "min": 0.99,
+      "mean": 1.79,
+      "max": 1.49
+    },
+    {
+      "id": 993,
+      "name": "Rigwald's Curse",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVEaXJlQ2xhd1RhbGlzbWFuIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/e8cd3f0898/UniqueDireClawTalisman.png",
+      "min": 168,
+      "mean": 5.75,
+      "max": 189.6
+    },
+    {
+      "id": 1208,
+      "name": "Ascent From Flesh",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVHVybmNvYXRzZm9ydHVuZSIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/3adba0ad35/Turncoatsfortune.png",
+      "min": 0.75,
+      "mean": 1.05,
+      "max": 1.77
+    },
+    {
+      "id": 1218,
+      "name": "Victario's Acuity",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9UdXJxdW9pc2VBbXVsZXRVbmlxdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8ba340b31f/TurquoiseAmuletUnique.png",
+      "min": 0.95,
+      "mean": 1.39,
+      "max": 1.68
+    },
+    {
+      "id": 1238,
+      "name": "Romira's Banquet",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUm9taXJhc0JhbnF1ZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/aa054b3ccd/RomirasBanquet.png",
+      "min": 1.12,
+      "mean": 1.19,
+      "max": 1.98
+    },
+    {
+      "id": 1234,
+      "name": "Xoph's Blood",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9ZcGhldGhha2tzSGVhcnRVcGdyYWRlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/259f2be84d/YphethakksHeartUpgrade.png",
+      "min": 14.5,
+      "mean": 15.2,
+      "max": 19.75
+    },
+    {
+      "id": 1273,
+      "name": "The Flow Untethered",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGFyYmluZ2VyQmVsdCIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/805aeb48f1/HarbingerBelt.png",
+      "min": 4.5,
+      "mean": 4.33,
+      "max": 100
+    },
+    {
+      "id": 1277,
+      "name": "Berek's Pass",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmVyZWtzUGFzcyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/efb7743eeb/BereksPass.png",
+      "min": 1,
+      "mean": 1.48,
+      "max": 1.72
+    },
+    {
+      "id": 1278,
+      "name": "Sidhebreath",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbXVsZXQxVW5pcXVlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/2a0f1c86cc/Amulet1Unique.png",
+      "min": 1.09,
+      "mean": 1.27,
+      "max": 1.83
+    },
+    {
+      "id": 1286,
+      "name": "Ryslatha's Coil",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvUnl1c2xhdGhhc0NsdXRjaGVzIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/5b990decd3/RyuslathasClutches.png",
+      "min": 38,
+      "mean": 37.67,
+      "max": 42.32
+    },
+    {
+      "id": 1351,
+      "name": "Vivinsect",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmV0cmF5YWxFeHBlcmltZW50YXRpb25SaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/0131f81491/BetrayalExperimentationRing.png",
+      "min": 1.5,
+      "mean": 11.88,
+      "max": 9.11
+    },
+    {
+      "id": 1374,
+      "name": "The Hungry Loop",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVGhlSHVuZ3J5TG9vcCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/2225980dc6/TheHungryLoop.png",
+      "min": 3.54,
+      "mean": 3,
+      "max": 402.87
+    },
+    {
+      "id": 1423,
+      "name": "Mokou's Embrace",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTW9rb3VzRW1icmFjZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/b3bd556d83/MokousEmbrace.png",
+      "min": 1.01,
+      "mean": 1.85,
+      "max": 1.54
+    },
+    {
+      "id": 1431,
+      "name": "Sunblast",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmVsdDgiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/c50a807f09/Belt8.png",
+      "min": 4.5,
+      "mean": 6.57,
+      "max": 16
+    },
+    {
+      "id": 1456,
+      "name": "Astramentis",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbXVsZXQzNiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/95da0d04a4/Amulet36.png",
+      "min": 22.31,
+      "mean": 13.35,
+      "max": 130.9
+    },
+    {
+      "id": 1496,
+      "name": "Fury Valve",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9NZXRhbW9ycGhvc2lzQW11bGV0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f8bdb14091/MetamorphosisAmulet.png",
+      "min": 5.14,
+      "mean": 7.5,
+      "max": 8.67
+    },
+    {
+      "id": 1529,
+      "name": "Circle of Nostalgia",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU3ludGhlc2lzUGh5c2ljYWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwic3ludGhlc2lzZWQiOnRydWV9XQ/91f50b535b/SynthesisPhysical.png",
+      "min": 7.03,
+      "mean": 17.45,
+      "max": 13.0399
+    },
+    {
+      "id": 1532,
+      "name": "Willowgift",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9TdGFybGlnaHRNYXJrIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b956123acc/StarlightMark.png",
+      "min": 1.3798,
+      "mean": 2.39,
+      "max": 1.92
+    },
+    {
+      "id": 1559,
+      "name": "Kaom's Sign",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmluZzJVbmlxdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/15ce180809/Ring2Unique.png",
+      "min": 1.01,
+      "mean": 1.61,
+      "max": 1.79
+    },
+    {
+      "id": 1577,
+      "name": "Putembo's Valley",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmx1ZUNvbXBvbmVudDMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/cd1b931996/BlueComponent3.png",
+      "min": 7,
+      "mean": 8.62,
+      "max": 11.43
+    },
+    {
+      "id": 1593,
+      "name": "Gluttony",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvR2x1dHRvbnkiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/850a3a646d/Gluttony.png",
+      "min": 1.05,
+      "mean": 0.96,
+      "max": 1.72
+    },
+    {
+      "id": 1589,
+      "name": "Ahkeli's Valley",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmVkQ29tcG9uZW50MyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/fe1c0d1513/RedComponent3.png",
+      "min": 9,
+      "mean": 17,
+      "max": 18.67
+    },
+    {
+      "id": 1587,
+      "name": "Choir of the Storm",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Wb2ljZU9mVGhlU3Rvcm1VcGdyYWRlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/50b59f1123/VoiceOfTheStormUpgrade.png",
+      "min": 45,
+      "mean": 52.83,
+      "max": 56.88
+    },
+    {
+      "id": 1635,
+      "name": "Bloodgrip",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CbG9vZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/546826e52b/BloodAmulet.png",
+      "min": 2.23,
+      "mean": 2.07,
+      "max": 3.65
+    },
+    {
+      "id": 1632,
+      "name": "Voideye",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvdW51c2VkNCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/6f0e76fbbb/unused4.png",
+      "min": 0.88,
+      "mean": 1.13,
+      "max": 1.7
+    },
+    {
+      "id": 1631,
+      "name": "Perquil's Toe",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QZXJxdWlsc1RvZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/7509c4517f/PerquilsToe.png",
+      "min": 0.88,
+      "mean": 1.01,
+      "max": 1.87
+    },
+    {
+      "id": 1637,
+      "name": "Winterheart",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9XaW50ZXJIZWFydEFMVCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ff8c8c67f2/WinterHeartALT.png",
+      "min": 0.85,
+      "mean": 1.23,
+      "max": 1.21
+    },
+    {
+      "id": 1706,
+      "name": "Mark of the Elder",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVWJlckVsZGVyUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/d211f75615/UberElderRing.png",
+      "min": 7.6,
+      "mean": 9.04,
+      "max": 13.33
+    },
+    {
+      "id": 1744,
+      "name": "Soul Tether",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvU291bFRldGhlciIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/a2b7447a4a/SoulTether.png",
+      "min": 1,
+      "mean": 1.96,
+      "max": 1.54
+    },
+    {
+      "id": 1797,
+      "name": "Cyclopean Coil",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvRWxkZXJCZWx0IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/f565e25e57/ElderBelt.png",
+      "min": 7,
+      "mean": 73.27,
+      "max": 52.06
+    },
+    {
+      "id": 1806,
+      "name": "Blood of Corruption",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9IZWFydE9mQ29ycnVwdGlvbiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ded3d6446f/HeartOfCorruption.png",
+      "min": 5,
+      "mean": 4.21,
+      "max": 39
+    },
+    {
+      "id": 1817,
+      "name": "Solstice Vigil",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9TaGFwZXJzUHJlc2VuY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/57d45e4009/ShapersPresence.png",
+      "min": 5,
+      "mean": 6.46,
+      "max": 9.1199
+    },
+    {
+      "id": 1841,
+      "name": "Maligaro's Restraint",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvTWFsaWdhcm9zUmVzdHJhaW50IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/17a500cb6f/MaligarosRestraint.png",
+      "min": 0.07,
+      "mean": 1.95,
+      "max": 1.7
+    },
+    {
+      "id": 1858,
+      "name": "Icefang Orbit",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvSWNlZmFuZ09yYml0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/da6e5eb5aa/IcefangOrbit.png",
+      "min": 1.11,
+      "mean": 1.2,
+      "max": 1.48
+    },
+    {
+      "id": 1944,
+      "name": "Star of Wraeclast",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9EaXJnZU9mVmljdG9yeSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/e30fe7839f/DirgeOfVictory.png",
+      "min": 168.86,
+      "mean": 133.24,
+      "max": 2841.75
+    },
+    {
+      "id": 60763,
+      "name": "Nevalius Inheritance",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvTmV2YWxpdXNCZWx0IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/db57602cd1/NevaliusBelt.png",
+      "min": 0.07,
+      "mean": 1.15,
+      "max": 1.69
+    },
+    {
+      "id": 2117,
+      "name": "Presence of Chayula",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QcmVzZW5jZU9mQ2hheXVsYSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/6460da7c94/PresenceOfChayula.png",
+      "min": 93.75,
+      "mean": 103.38,
+      "max": 327.6
+    },
+    {
+      "id": 2130,
+      "name": "Call of the Brotherhood",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQnJvdGhlcmhvb2QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/956d645be0/Brotherhood.png",
+      "min": 2.3,
+      "mean": 12.23,
+      "max": 10.17
+    },
+    {
+      "id": 2216,
+      "name": "Coward's Chains",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQ293YXJkJ3MgQ2hhaW5zIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/b1cb3d3a26/Coward%27s%20Chains.png",
+      "min": 15.64,
+      "mean": 22.38,
+      "max": 50
+    },
+    {
+      "id": 2275,
+      "name": "Putembo's Meadow",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmx1ZUNvbXBvbmVudDIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e8d0f426fe/BlueComponent2.png",
+      "min": 23.79,
+      "mean": 20,
+      "max": 42.96
+    },
+    {
+      "id": 60768,
+      "name": "Grattus Signet",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvR3JhdHR1c1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/230a414e3d/GrattusRing.png",
+      "min": 1.05,
+      "mean": 1.12,
+      "max": 1.95
+    },
+    {
+      "id": 2437,
+      "name": "Storm Secret",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVGh1bmRlckxvb3AiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/1322cee671/ThunderLoop.png",
+      "min": 1.1298,
+      "mean": 1.8,
+      "max": 1.91
+    },
+    {
+      "id": 2456,
+      "name": "Night's Hold",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Tb2NrZXRlZFRhbGlzbWFuIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/89ef47ed1c/SocketedTalisman.png",
+      "min": 0.85,
+      "mean": 1.44,
+      "max": 1.9
+    },
+    {
+      "id": 2533,
+      "name": "Uzaza's Mountain",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvR3JlZW5Db21wb25lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/f6e55e6800/GreenComponent.png",
+      "min": 68.75,
+      "mean": 45.23,
+      "max": 155.87
+    },
+    {
+      "id": 2574,
+      "name": "Brinerot Mark",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQnJpbmVyb3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c1d39c178d/Brinerot.png",
+      "min": 1.5,
+      "mean": 2.68,
+      "max": 3.67
+    },
+    {
+      "id": 2572,
+      "name": "Mutewind Seal",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTXV0ZXdpbmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/3c7eee1d2b/Mutewind.png",
+      "min": 2.75,
+      "mean": 4.15,
+      "max": 4.91
+    },
+    {
+      "id": 2573,
+      "name": "Extractor Mentis",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FeHRyYWN0b3JNZW50aXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/af5684bd74/ExtractorMentis.png",
+      "min": 0.81,
+      "mean": 1.27,
+      "max": 1.82
+    },
+    {
+      "id": 2651,
+      "name": "Ahkeli's Meadow",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmVkQ29tcG9uZW50MiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/0c950dc560/RedComponent2.png",
+      "min": 16,
+      "mean": 30,
+      "max": 29.03
+    },
+    {
+      "id": 2661,
+      "name": "Rigwald's Crest",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmlnd2FsZHNDcmVzdCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ba5e5c58a3/RigwaldsCrest.png",
+      "min": 2,
+      "mean": 2.59,
+      "max": 2.79
+    },
+    {
+      "id": 60777,
+      "name": "Circle of Ambition",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVWJlckNpcmNsZUhlcmFsZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJzeW50aGVzaXNlZCI6dHJ1ZX1d/77050fa01b/UberCircleHerald.png",
+      "min": 101.27,
+      "mean": 150.49,
+      "max": 263.94
+    },
+    {
+      "id": 2809,
+      "name": "Perseverance",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvUGVyc2VydmVyYW5jZSIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/1ff634248a/Perserverance.png",
+      "min": 1.2,
+      "mean": 1.69,
+      "max": 1.66
+    },
+    {
+      "id": 2840,
+      "name": "Mark of Submission",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmVkQnJhbmRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/8f15300177/RedBrandRing.png",
+      "min": 1,
+      "mean": 1.06,
+      "max": 1.3
+    },
+    {
+      "id": 3006,
+      "name": "Emberwake",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmluZzEwIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/55c8711fd7/Ring10.png",
+      "min": 1.19,
+      "mean": 1.32,
+      "max": 1.53
+    },
+    {
+      "id": 3005,
+      "name": "Feastbind",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvRmVhc3RiaW5kIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/f5d1f232d6/Feastbind.png",
+      "min": 0.87,
+      "mean": 0.74,
+      "max": 1.05
+    },
+    {
+      "id": 3025,
+      "name": "Hinekora's Sight",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9IaW5la29yYXNTaWdodCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/13820d857f/HinekorasSight.png",
+      "min": 1.12,
+      "mean": 1.47,
+      "max": 12.25
+    },
+    {
+      "id": 3096,
+      "name": "Ngamahu's Sign",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTmdhbWFodXNTaWduIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/4323574c5a/NgamahusSign.png",
+      "min": 1.11,
+      "mean": 1.49,
+      "max": 1.26
+    },
+    {
+      "id": 3298,
+      "name": "Mother's Embrace",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvTW90aGVyc0VtYnJhY2UiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/e576fccc3e/MothersEmbrace.png",
+      "min": 0.88,
+      "mean": 0.96,
+      "max": 1.96
+    },
+    {
+      "id": 3536,
+      "name": "Uzaza's Valley",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvR3JlZW5Db21wb25lbnQzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/7e3d39e9a7/GreenComponent3.png",
+      "min": 125,
+      "mean": 122.92,
+      "max": 173.57
+    },
+    {
+      "id": 3674,
+      "name": "Voice of the Storm",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Wb2ljZU9mVGhlU3Rvcm0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c5fb24dbbe/VoiceOfTheStorm.png",
+      "min": 5.4,
+      "mean": 5.42,
+      "max": 117.33
+    },
+    {
+      "id": 3935,
+      "name": "Redblade Band",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmVkYmxhZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/cf85c48dff/Redblade.png",
+      "min": 2.1,
+      "mean": 3.83,
+      "max": 3.06
+    },
+    {
+      "id": 4173,
+      "name": "Putembo's Mountain",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmx1ZUNvbXBvbmVudCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/086886e893/BlueComponent.png",
+      "min": 141.75,
+      "mean": 135,
+      "max": 207.9
+    },
+    {
+      "id": 4172,
+      "name": "Uzaza's Meadow",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvR3JlZW5Db21wb25lbnQyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c5f02c50a6/GreenComponent2.png",
+      "min": 6,
+      "mean": 20.09,
+      "max": 28.28
+    },
+    {
+      "id": 4226,
+      "name": "Ahkeli's Mountain",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmVkQ29tcG9uZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/4c8c42f98b/RedComponent.png",
+      "min": 5,
+      "mean": 5.13,
+      "max": 16.25
+    },
+    {
+      "id": 4284,
+      "name": "Auxium",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQXV4aXVtIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/acf784e82e/Auxium.png",
+      "min": 2.44,
+      "mean": 2.75,
+      "max": 5
+    },
+    {
+      "id": 6750,
+      "name": "Winterweave",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmxvb2RCb2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/8335c22285/BloodBoil.png",
+      "min": 5.45,
+      "mean": 7.42,
+      "max": 8.88
+    },
+    {
+      "id": 6684,
+      "name": "The Felbog Fang",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9TYWJlcnRvb3Roc1BlbmRhbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bbb6f80324/SabertoothsPendant.png",
+      "min": 1.11,
+      "mean": 1.04,
+      "max": 1.29
+    },
+    {
+      "id": 10128,
+      "name": "The Ephemeral Bond",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9DaGFyZ2UgQW1wbGlmaWVyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/a285d4c77a/Charge%20Amplifier.png",
+      "min": 2.52,
+      "mean": 1.37,
+      "max": 3.96
+    },
+    {
+      "id": 10166,
+      "name": "The Druggery",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVGhlRHJ1Z2dlcnkiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/136b59f839/TheDruggery.png",
+      "min": 1,
+      "mean": 0.99,
+      "max": 1.95
+    },
+    {
+      "id": 10561,
+      "name": "Fated End",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRm9yYmlkZGVuU2VhbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/f402209b8f/ForbiddenSeal.png",
+      "min": 5,
+      "mean": 6.54,
+      "max": 7.27
+    },
+    {
+      "id": 10783,
+      "name": "Replica Atziri's Foible",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9RdWlkIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/00c2b3a588/Quid.png",
+      "min": 13,
+      "mean": 9.33,
+      "max": 25
+    },
+    {
+      "id": 10778,
+      "name": "Replica Hyrri's Truth",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9TeW50aGVzaXNBY2N1cmFjeUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/6062fd361e/SynthesisAccuracyAmulet.png",
+      "min": 2.4,
+      "mean": 4.26,
+      "max": 25
+    },
+    {
+      "id": 10781,
+      "name": "Replica Winterheart",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9XaW50ZXJIZWFydEFMVCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ff8c8c67f2/WinterHeartALT.png",
+      "min": 1,
+      "mean": 1.42,
+      "max": 1.89
+    },
+    {
+      "id": 10793,
+      "name": "Replica Soul Tether",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvU291bFRldGhlciIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/a2b7447a4a/SoulTether.png",
+      "min": 9.4,
+      "mean": 12.38,
+      "max": 18.6
+    },
+    {
+      "id": 10822,
+      "name": "Replica Tasalio's Sign",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVGFzYWxpb3NTaWduIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1e73f81099/TasaliosSign.png",
+      "min": 4.7,
+      "mean": 4,
+      "max": 9.5
+    },
+    {
+      "id": 10811,
+      "name": "Replica Prismweave",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvUHJpc213ZWF2ZSIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/822582fe24/Prismweave.png",
+      "min": 3.29,
+      "mean": 3.82,
+      "max": 9.38
+    },
+    {
+      "id": 10848,
+      "name": "Replica Headhunter",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGVhZGh1bnRlciIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/e9542ec6ee/Headhunter.png",
+      "min": 693.47,
+      "mean": 598.42,
+      "max": 980.68
+    },
+    {
+      "id": 10843,
+      "name": "Replica Siegebreaker",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvODU0ODIiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/ee893f3cb8/85482.png",
+      "min": 5.64,
+      "mean": 6.7,
+      "max": 6.74
+    },
+    {
+      "id": 10894,
+      "name": "Replica Bated Breath",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmF0ZWRCcmVhdGgiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/0a8cc4529f/BatedBreath.png",
+      "min": 336,
+      "mean": 219.19,
+      "max": 600
+    },
+    {
+      "id": 15498,
+      "name": "Leadership's Price",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9LdXJhaXNNYXN0ZXJ5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/bf33f8013a/KuraisMastery.png",
+      "min": 1,
+      "mean": 2.69,
+      "max": 13.13
+    },
+    {
+      "id": 16461,
+      "name": "Chains of Emancipation",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvU2xhdmVyc0JlbHQiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/0b8d818fbb/SlaversBelt.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.64
+    },
+    {
+      "id": 331,
+      "name": "Ventor's Gamble",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRGllT2ZEZXN0aW55IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1470dfcdce/DieOfDestiny.png",
+      "min": 10.8699,
+      "mean": 19.64,
+      "max": 11.92
+    },
+    {
+      "id": 5,
+      "name": "Gloomfang",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9TaGFkb3dSYXkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/9c05fb0b03/ShadowRay.png",
+      "min": 4.14,
+      "mean": 6.05,
+      "max": 5.75
+    },
+    {
+      "id": 2988,
+      "name": "Berek's Respite",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmVyZWtzUmVzcGl0ZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/82b228798a/BereksRespite.png",
+      "min": 5.65,
+      "mean": 3.95,
+      "max": 9.33
+    },
+    {
+      "id": 10797,
+      "name": "Replica Emberwake",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmluZzEwIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/55c8711fd7/Ring10.png",
+      "min": 4,
+      "mean": 4.67,
+      "max": 7.5
+    },
+    {
+      "id": 1216,
+      "name": "Aul's Uprising",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BaG4gQXJ0aWZhY3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/5234506d57/Ahn%20Artifact.png",
+      "min": 29.94,
+      "mean": 115.49,
+      "max": 117.96
+    },
+    {
+      "id": 975,
+      "name": "Circle of Regret",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU3ludGhlc2lzTGlnaHRuaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInN5bnRoZXNpc2VkIjp0cnVlfV0/ce810e2fcc/SynthesisLightning.png",
+      "min": 7.67,
+      "mean": 6.07,
+      "max": 15.59
+    },
+    {
+      "id": 966,
+      "name": "Circle of Anguish",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU3ludGhlc2lzRmlyZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJzeW50aGVzaXNlZCI6dHJ1ZX1d/f64b382150/SynthesisFire.png",
+      "min": 6.28,
+      "mean": 7.99,
+      "max": 10.46
+    },
+    {
+      "id": 2310,
+      "name": "Gifts from Above",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRGlhbW9uZFJpbmdVbmlxdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8edaf6655a/DiamondRingUnique.png",
+      "min": 0.99,
+      "mean": 1.93,
+      "max": 1.82
+    },
+    {
+      "id": 3554,
+      "name": "Eyes of the Greatwolf",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9SaWd3YWxkc1RhbGlzbWFuIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/4936fcad86/RigwaldsTalisman.png",
+      "min": 49.75,
+      "mean": 118.24,
+      "max": 57.76
+    },
+    {
+      "id": 2815,
+      "name": "Xoph's Heart",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9ZcGhldGhha2tzSGVhcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8fce3ec78f/YphethakksHeart.png",
+      "min": 1.5,
+      "mean": 2.69,
+      "max": 2.69
+    },
+    {
+      "id": 494,
+      "name": "Yoke of Suffering",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Zb2tlT2ZTdWZmZXJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/80cc716213/YokeOfSuffering.png",
+      "min": 167.81,
+      "mean": 196.83,
+      "max": 291.56
+    },
+    {
+      "id": 1555,
+      "name": "Hyrri's Truth",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9TeW50aGVzaXNBY2N1cmFjeUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/6062fd361e/SynthesisAccuracyAmulet.png",
+      "min": 1.28,
+      "mean": 1.5,
+      "max": 2.35
+    },
+    {
+      "id": 118,
+      "name": "Essence Worm",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRXNzZW5jZVdvcm0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/4455cc009b/EssenceWorm.png",
+      "min": 1.28,
+      "mean": 1.19,
+      "max": 1.55
+    },
+    {
+      "id": 200,
+      "name": "Stormfire",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU3Rvcm1GaXJlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/6b3db4e8df/StormFire.png",
+      "min": 2.34,
+      "mean": 3.39,
+      "max": 2.89
+    },
+    {
+      "id": 1281,
+      "name": "Berek's Grip",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmVyZWtzR3JpcCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/7abb06d839/BereksGrip.png",
+      "min": 1.23,
+      "mean": 1.44,
+      "max": 1.79
+    },
+    {
+      "id": 5606,
+      "name": "Eye of Innocence",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FeWVPZklubm9jZW5jZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/9544014b69/EyeOfInnocence.png",
+      "min": 1.55,
+      "mean": 2.15,
+      "max": 2.47
+    },
+    {
+      "id": 1691,
+      "name": "Dyadian Dawn",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvTW90aGVyRHlhZHVzIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/ca299e5015/MotherDyadus.png",
+      "min": 2.14,
+      "mean": 5.73,
+      "max": 7.08
+    },
+    {
+      "id": 2604,
+      "name": "Soulthirst",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvU291bHRoaXJzdCIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/ee53d9c1ef/Soulthirst.png",
+      "min": 1,
+      "mean": 1.95,
+      "max": 1.92
+    },
+    {
+      "id": 1583,
+      "name": "Bisco's Leash",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmlzY29zTGVhc2giLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/87b17c98e7/BiscosLeash.png",
+      "min": 0.89,
+      "mean": 1.53,
+      "max": 1.58
+    },
+    {
+      "id": 10162,
+      "name": "The Highwayman",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFuZGl0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/e08cd25657/BanditRing.png",
+      "min": 1.06,
+      "mean": 1.28,
+      "max": 1.96
+    },
+    {
+      "id": 929,
+      "name": "Retaliation Charm",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9TaGFyZWRVbnNpZ2h0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d12260a7ac/SharedUnsight.png",
+      "min": 0.95,
+      "mean": 1.05,
+      "max": 1.12
+    },
+    {
+      "id": 7186,
+      "name": "Zerphi's Heart",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9aZXJwaGlzSGVhcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/3e35140dfe/ZerphisHeart.png",
+      "min": 163.8,
+      "mean": 239.44,
+      "max": 200
+    },
+    {
+      "id": 713,
+      "name": "The Ignomon",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbXVsZXQ2VW5pcXVlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/41a964dea4/Amulet6Unique.png",
+      "min": 1,
+      "mean": 0.96,
+      "max": 1.83
+    },
+    {
+      "id": 3934,
+      "name": "Valyrium",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVmFseXJpdW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/dd9261042f/Valyrium.png",
+      "min": 1.5,
+      "mean": 2.29,
+      "max": 2.32
+    },
+    {
+      "id": 5163,
+      "name": "Valako's Sign",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVmFsYWtvc1NpZ24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/cd646c8c54/ValakosSign.png",
+      "min": 1.02,
+      "mean": 1.42,
+      "max": 1.48
+    },
+    {
+      "id": 2558,
+      "name": "Venopuncture",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmxvb2RmcmVlemUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8873778384/Bloodfreeze.png",
+      "min": 1.58,
+      "mean": 1.11,
+      "max": 1.93
+    },
+    {
+      "id": 10126,
+      "name": "Pyroshock Clasp",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvUHlyb3Nob2NrQ2xhc3AiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/42b1bcc3c8/PyroshockClasp.png",
+      "min": 1.17,
+      "mean": 1.23,
+      "max": 1.87
+    },
+    {
+      "id": 4214,
+      "name": "Blightwell",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9UYWludGVkU3ByaW5ncyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/a95bad91d3/TaintedSprings.png",
+      "min": 0.98,
+      "mean": 1.9,
+      "max": 1.79
+    },
+    {
+      "id": 451,
+      "name": "Timeclasp",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVGltZWNsYXNwIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b0c1b94ad1/Timeclasp.png",
+      "min": 3.35,
+      "mean": 15.01,
+      "max": 5.35
+    },
+    {
+      "id": 6463,
+      "name": "Bear's Girdle",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmVhcnNDbHV0Y2giLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/31930452e4/BearsClutch.png",
+      "min": 1,
+      "mean": 1.47,
+      "max": 1.72
+    },
+    {
+      "id": 4139,
+      "name": "Natural Hierarchy",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9UYWxpc21hblVuaXF1ZTIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/3783a100bf/TalismanUnique2.png",
+      "min": 1,
+      "mean": 1,
+      "max": 70
+    },
+    {
+      "id": 1459,
+      "name": "Eye of Chayula",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbXVsZXQ3VW5pcXVlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/6b059ec15d/Amulet7Unique.png",
+      "min": 1.05,
+      "mean": 1.08,
+      "max": 1.91
+    },
+    {
+      "id": 10850,
+      "name": "Replica Malachai's Artifice",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTWFsYWNoYWlzQXJ0aWZpY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/dfbb52ebfe/MalachaisArtifice.png",
+      "min": 1.8,
+      "mean": 1.79,
+      "max": 5
+    },
+    {
+      "id": 1321,
+      "name": "Praxis",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUHJheGlzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/5098474fb7/Praxis.png",
+      "min": 1.47,
+      "mean": 1.77,
+      "max": 1.79
+    },
+    {
+      "id": 3316,
+      "name": "Tasalio's Sign",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVGFzYWxpb3NTaWduIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1e73f81099/TasaliosSign.png",
+      "min": 0.97,
+      "mean": 1.48,
+      "max": 1.58
+    },
+    {
+      "id": 230,
+      "name": "The Taming",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVGhlVGFtaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/17c5d3d74b/TheTaming.png",
+      "min": 9.2,
+      "mean": 75.41,
+      "max": 21.55
+    },
+    {
+      "id": 3293,
+      "name": "Astral Projector",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQXN0cmFsUHJvamVjdG9yIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/92eca463f2/AstralProjector.png",
+      "min": 16.25,
+      "mean": 24.66,
+      "max": 24.38
+    },
+    {
+      "id": 1827,
+      "name": "The Warden's Brand",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVGhlV2FyZGVuc0JhbmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/5d3830d11d/TheWardensBand.png",
+      "min": 0.65,
+      "mean": 1.63,
+      "max": 1.03
+    },
+    {
+      "id": 392,
+      "name": "String of Servitude",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvU3RyaW5nX29mX1NlcnZpdHVkZSIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/a19be8cb67/String_of_Servitude.png",
+      "min": 2.14,
+      "mean": 2.47,
+      "max": 3.74
+    },
+    {
+      "id": 2527,
+      "name": "Umbilicus Immortalis",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW1iaWxpY3VzSW1tb3J0YWxpcyIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/822946a168/UmbilicusImmortalis.png",
+      "min": 0.07,
+      "mean": 0.99,
+      "max": 1.56
+    },
+    {
+      "id": 496,
+      "name": "Tear of Purity",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9UZWFyT2ZQdXJpdHkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8a2e6d3c61/TearOfPurity.png",
+      "min": 1.15,
+      "mean": 1.6,
+      "max": 1.93
+    },
+    {
+      "id": 1366,
+      "name": "Snakepit",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU2VycGVudHNlZWQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/634a5c8913/Serpentseed.png",
+      "min": 4.15,
+      "mean": 4.03,
+      "max": 4.43
+    },
+    {
+      "id": 1889,
+      "name": "The Magnate",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQnVja2xlZEJlbHRVbmlxdWUiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/10d87b7baf/BuckledBeltUnique.png",
+      "min": 7.5,
+      "mean": 8.8,
+      "max": 9.06
+    },
+    {
+      "id": 10795,
+      "name": "Replica Voideye",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvdW51c2VkNCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/6f0e76fbbb/unused4.png",
+      "min": 1,
+      "mean": 1.75,
+      "max": 1.43
+    },
+    {
+      "id": 51858,
+      "name": "Tainted Pact",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9UYWludGVkUGFjdCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/77ad55d4dd/TaintedPact.png",
+      "min": 1.6,
+      "mean": 3,
+      "max": 7.2
+    },
+    {
+      "id": 999,
+      "name": "Badge of the Brotherhood",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Bc3Nhc3NpblVuaXF1ZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/3616219d7d/AssassinUnique.png",
+      "min": 16.85,
+      "mean": 18.5,
+      "max": 19.54
+    },
+    {
+      "id": 1330,
+      "name": "The Jinxed Juju",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9KdWp1c1NvdWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6d30276e6f/JujusSoul.png",
+      "min": 2.43,
+      "mean": 3.77,
+      "max": 3.71
+    },
+    {
+      "id": 113,
+      "name": "Rashkaldor's Patience",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9SYXNoa2FsZG9yc1BhdGllbmNlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/336e3419f4/RashkaldorsPatience.png",
+      "min": 1.48,
+      "mean": 1.36,
+      "max": 1.96
+    },
+    {
+      "id": 2433,
+      "name": "The Torrent's Reclamation",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGFyYmluZ2VyQmVsdFVwZ3JhZGVkIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/0c8b942a94/HarbingerBeltUpgraded.png",
+      "min": 80,
+      "mean": 57.82,
+      "max": 80
+    },
+    {
+      "id": 35733,
+      "name": "Rotblood Promise",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQ3Vyc2VkRXllIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/6f6b42ce7e/CursedEye.png",
+      "min": 3,
+      "mean": 3.14,
+      "max": 10
+    },
+    {
+      "id": 10841,
+      "name": "Replica Doedre's Damning",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmluZzNVbmlxdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/d06b386d73/Ring3Unique.png",
+      "min": 1,
+      "mean": 2.2,
+      "max": 39.34
+    },
+    {
+      "id": 3997,
+      "name": "Hyperboreus",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmV0cmF5YWxfVW5pcXVlX1RyYW5zcG9ydF9CZWx0IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/52b9b09a12/Betrayal_Unique_Transport_Belt.png",
+      "min": 3,
+      "mean": 22.48,
+      "max": 25.38
+    },
+    {
+      "id": 10824,
+      "name": "Replica Karui Ward",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BbXVsZXQ0VW5pcXVlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/069e4f76ea/Amulet4Unique.png",
+      "min": 10.2899,
+      "mean": 10.79,
+      "max": 18.79
+    },
+    {
+      "id": 1941,
+      "name": "Shavronne's Revelation",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTW9vbnN0b25lUmluZ1VuaXF1ZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/d8c1823da5/MoonstoneRingUnique.png",
+      "min": 19,
+      "mean": 28.28,
+      "max": 119.57
+    },
+    {
+      "id": 63,
+      "name": "Marylene's Fallacy",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9NYXJ5bGVuZXNGYWxsYWN5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1665e40d51/MarylenesFallacy.png",
+      "min": 3.55,
+      "mean": 13.57,
+      "max": 9.51
+    },
+    {
+      "id": 6805,
+      "name": "Warrior's Legacy",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvV2FycmlvcnNMZWdhY3kiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/80c16ee4e7/WarriorsLegacy.png",
+      "min": 24.75,
+      "mean": 8.6,
+      "max": 36.67
+    },
+    {
+      "id": 50068,
+      "name": "Original Sin",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU2FuY3R1bVNwZWNpYWxVbmlxdWVSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/e0ff1c1c6b/SanctumSpecialUniqueRing.png",
+      "min": 88200,
+      "mean": 90113.2,
+      "max": 109000
+    },
+    {
+      "id": 45421,
+      "name": "Stranglegasp",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9HaWZ0T2ZHbG9waCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/babc794c98/GiftOfGloph.png",
+      "min": 982.8,
+      "mean": 1670,
+      "max": 1600
+    },
+    {
+      "id": 156,
+      "name": "Precursor's Emblem",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQ29tYmluZWRHcmVlbkJsdWVSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/68cecf86db/CombinedGreenBlueRing.png",
+      "min": 34.27,
+      "mean": 63.54,
+      "max": 56.44
+    },
+    {
+      "id": 1570,
+      "name": "Impresence",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FbGRlckxpZ2h0bmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/371ac0eb40/ElderLightning.png",
+      "min": 16.6,
+      "mean": 16.22,
+      "max": 40.07
+    },
+    {
+      "id": 57200,
+      "name": "Replica Badge of the Brotherhood",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Bc3Nhc3NpblVuaXF1ZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/3616219d7d/AssassinUnique.png",
+      "min": 23,
+      "mean": 33,
+      "max": 327.6
+    },
+    {
+      "id": 57313,
+      "name": "Replica Hinekora's Sight",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9IaW5la29yYXNTaWdodCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/13820d857f/HinekorasSight.png",
+      "min": 3.38,
+      "mean": 9.81,
+      "max": 10.8
+    },
+    {
+      "id": 57995,
+      "name": "The Untouched Soul",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9TdHJpbmdPZlJpbmdzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/a79e77693d/StringOfRings.png",
+      "min": 3.06,
+      "mean": 2.95,
+      "max": 5.59
+    },
+    {
+      "id": 61678,
+      "name": "The Queller of Minds",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUml0dWFsU2lsZW5jZVJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/5e33a5eefb/RitualSilenceRing.png",
+      "min": 3,
+      "mean": 5.95,
+      "max": 5.5
+    },
+    {
+      "id": 61683,
+      "name": "Ynda's Stand",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvS2FsZ3V1cmFuV2FyZEJlbHQiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/07e1a52bf3/KalguuranWardBelt.png",
+      "min": 142.5,
+      "mean": 216,
+      "max": 370.77
+    },
+    {
+      "id": 61695,
+      "name": "The Selfish Shepherd",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUml0dWFsTGlmZWRyYWluUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/0ce3466499/RitualLifedrainRing.png",
+      "min": 1.21,
+      "mean": 1.76,
+      "max": 3.89
+    },
+    {
+      "id": 61707,
+      "name": "The Hateful Accuser",
+      "category": "accessories",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUml0dWFsUGhhbnRhc21SaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/cba7f7e493/RitualPhantasmRing.png",
+      "min": 10.25,
+      "mean": 11.13,
+      "max": 15.73
+    }
+  ]
+}

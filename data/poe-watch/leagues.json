@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "leagues": [
+    {
+      "name": "HC Ruthless Keepers",
+      "start_date": "2025-10-31T19:00:00Z",
+      "end_date": "0001-01-01T00:00:00Z"
+    },
+    {
+      "name": "Standard",
+      "start_date": "2013-01-23T21:00:00Z",
+      "end_date": "0001-01-01T00:00:00Z"
+    },
+    {
+      "name": "Ruthless Keepers",
+      "start_date": "2025-10-31T19:00:00Z",
+      "end_date": "0001-01-01T00:00:00Z"
+    },
+    {
+      "name": "Keepers",
+      "start_date": "2025-10-31T19:00:00Z",
+      "end_date": "0001-01-01T00:00:00Z"
+    },
+    {
+      "name": "Hardcore",
+      "start_date": "2013-01-23T21:00:00Z",
+      "end_date": "0001-01-01T00:00:00Z"
+    },
+    {
+      "name": "Solo Self-Found",
+      "start_date": "2013-01-23T21:00:00Z",
+      "end_date": "0001-01-01T00:00:00Z"
+    },
+    {
+      "name": "Hardcore Keepers",
+      "start_date": "2025-10-31T19:00:00Z",
+      "end_date": "0001-01-01T00:00:00Z"
+    },
+    {
+      "name": "Phrecia 2.0",
+      "start_date": "2026-01-29T21:00:00Z",
+      "end_date": "2026-02-19T21:00:00Z"
+    },
+    {
+      "name": "Hardcore Phrecia 2.0",
+      "start_date": "2026-01-29T21:00:00Z",
+      "end_date": "2026-02-19T21:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Hardcore Keepers",
+    "text": "Hardcore Keepers",
+    "slug": "hardcore-keepers"
+  },
+  "category": "incubator",
+  "updatedAt": "2026-02-10T14:59:42.000Z",
+  "items": [
+    {
+      "id": 42238,
+      "name": "Maddening Incubator",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5jdWJhdGlvbi9JbmN1YmF0aW9uRGVsaXJpdW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/856c8ac937/IncubationDelirium.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    }
+  ]
+}

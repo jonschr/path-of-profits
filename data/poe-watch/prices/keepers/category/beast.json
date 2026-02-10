@@ -1,0 +1,1786 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Keepers",
+    "text": "Keepers",
+    "slug": "keepers"
+  },
+  "category": "beast",
+  "updatedAt": "2026-02-10T14:59:30.000Z",
+  "items": [
+    {
+      "id": 8291,
+      "name": "Scavenging Vulture",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 34921,
+      "name": "Feral Fowl",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 2,
+      "mean": 2.65,
+      "max": 3
+    },
+    {
+      "id": 36270,
+      "name": "Infested Serpent",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 36387,
+      "name": "Enraptured Crab",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 36419,
+      "name": "Elder-Blessed Goatman",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 2.77,
+      "max": 1
+    },
+    {
+      "id": 37000,
+      "name": "War Hound",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 3,
+      "mean": 1,
+      "max": 3
+    },
+    {
+      "id": 37316,
+      "name": "Parasite",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 30,
+      "mean": 30,
+      "max": 30
+    },
+    {
+      "id": 37315,
+      "name": "Infested Vulture",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 38,
+      "mean": 38,
+      "max": 38
+    },
+    {
+      "id": 40053,
+      "name": "Elder-Blessed Rhoa",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 8.71,
+      "mean": 8.71,
+      "max": 8.71
+    },
+    {
+      "id": 42566,
+      "name": "Vicious Hound",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 43697,
+      "name": "Rhoa Mare",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.08,
+      "max": 1.04
+    },
+    {
+      "id": 43880,
+      "name": "Tercel Rhoa",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 49006,
+      "name": "Wild Brambleback",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 14,
+      "mean": 14.18,
+      "max": 15.17
+    },
+    {
+      "id": 49004,
+      "name": "Primal Cystcaller",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 8.44,
+      "mean": 8.41,
+      "max": 9.44
+    },
+    {
+      "id": 49007,
+      "name": "Vivid Watcher",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 62.11,
+      "mean": 58.7,
+      "max": 108.35
+    },
+    {
+      "id": 49008,
+      "name": "Vivid Vulture",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 249.26,
+      "mean": 500.32,
+      "max": 255.6
+    },
+    {
+      "id": 49039,
+      "name": "Primal Crushclaw",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 2,
+      "mean": 1.68,
+      "max": 3
+    },
+    {
+      "id": 49046,
+      "name": "Vivid Abberarach",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.1399
+    },
+    {
+      "id": 49086,
+      "name": "Primal Rhex Matriarch",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1.95,
+      "mean": 1.69,
+      "max": 2
+    },
+    {
+      "id": 48998,
+      "name": "Wild Hellion Alpha",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 3.25,
+      "mean": 4,
+      "max": 11.2899
+    },
+    {
+      "id": 541,
+      "name": "Craicic Savage Crab",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.93,
+      "max": 5
+    },
+    {
+      "id": 544,
+      "name": "Saqawine Chimeral",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.02
+    },
+    {
+      "id": 546,
+      "name": "Craicic Vassal",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 11.2,
+      "mean": 9.74,
+      "max": 13.06
+    },
+    {
+      "id": 642,
+      "name": "Saqawine Vulture",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.01,
+      "max": 1
+    },
+    {
+      "id": 644,
+      "name": "Farric Lynx Alpha",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.19
+    },
+    {
+      "id": 1970,
+      "name": "Enraptured Arachnid",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2060,
+      "name": "Fenumal Plagued Arachnid",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 4.09,
+      "mean": 8.77,
+      "max": 5.61
+    },
+    {
+      "id": 2231,
+      "name": "Grazing Taurus",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.25,
+      "max": 1
+    },
+    {
+      "id": 2232,
+      "name": "Dread Primate",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.27,
+      "max": 1.22
+    },
+    {
+      "id": 2233,
+      "name": "Chrome-touched Croaker",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.04,
+      "max": 1.1
+    },
+    {
+      "id": 2267,
+      "name": "Farric Wolf Alpha",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 2.05,
+      "mean": 2,
+      "max": 2.2799
+    },
+    {
+      "id": 2535,
+      "name": "Farric Goatman",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.03
+    },
+    {
+      "id": 2878,
+      "name": "Farric Ursa",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.02,
+      "max": 1.11
+    },
+    {
+      "id": 3033,
+      "name": "Host Adder",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1.5,
+      "mean": 1.5,
+      "max": 1.5
+    },
+    {
+      "id": 3034,
+      "name": "Host Cobra",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.57,
+      "max": 2
+    },
+    {
+      "id": 3073,
+      "name": "Rotting Vulture",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 18,
+      "mean": 25.58,
+      "max": 4000
+    },
+    {
+      "id": 3170,
+      "name": "Craicic Spider Crab",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.24
+    },
+    {
+      "id": 3169,
+      "name": "Saqawine Rhex",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.03,
+      "max": 1.02
+    },
+    {
+      "id": 3168,
+      "name": "Infested Crab",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.16,
+      "max": 1
+    },
+    {
+      "id": 3204,
+      "name": "Farric Pit Hound",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.01
+    },
+    {
+      "id": 3203,
+      "name": "Farric Ape",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 3601,
+      "name": "Brine Vassal",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.05,
+      "max": 1
+    },
+    {
+      "id": 4245,
+      "name": "Farric Tiger Alpha",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 6,
+      "mean": 6,
+      "max": 6.14
+    },
+    {
+      "id": 4366,
+      "name": "Farric Goliath",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.01,
+      "max": 1.06
+    },
+    {
+      "id": 4939,
+      "name": "Feral Chimeral",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.07,
+      "max": 1.3
+    },
+    {
+      "id": 4956,
+      "name": "Chrome-infused Croaker",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.48,
+      "max": 1.43
+    },
+    {
+      "id": 5082,
+      "name": "Farric Magma Hound",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.09,
+      "max": 1.09
+    },
+    {
+      "id": 5152,
+      "name": "Craicic Shield Crab",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.2,
+      "max": 1.36
+    },
+    {
+      "id": 5222,
+      "name": "Fury Hound",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 5465,
+      "name": "Farric Gargantuan",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.17,
+      "max": 1.94
+    },
+    {
+      "id": 5466,
+      "name": "Fenumal Scrabbler",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 5507,
+      "name": "Carrion Swarmer",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.01
+    },
+    {
+      "id": 5505,
+      "name": "Plumed Chimeral",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 5504,
+      "name": "Bone Rhoa",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 5788,
+      "name": "Fenumal Devourer",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.04,
+      "max": 1.02
+    },
+    {
+      "id": 5790,
+      "name": "Enslaved Hellion",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.04
+    },
+    {
+      "id": 5791,
+      "name": "Dune Hellion",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.02,
+      "max": 1.03
+    },
+    {
+      "id": 5789,
+      "name": "Acid Slitherer",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 5792,
+      "name": "Chimeric Croaker",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.05,
+      "max": 1
+    },
+    {
+      "id": 6007,
+      "name": "Fenumal Scorpion",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.05
+    },
+    {
+      "id": 6154,
+      "name": "Night Adder",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 6153,
+      "name": "Noxious Tarantula",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 6205,
+      "name": "Farric Taurus",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.04
+    },
+    {
+      "id": 6295,
+      "name": "Bramble Cobra",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 6310,
+      "name": "Enraptured Beast",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1.1,
+      "mean": 1.09,
+      "max": 5
+    },
+    {
+      "id": 6397,
+      "name": "Farric Flame Hellion Alpha",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.02,
+      "max": 1.05
+    },
+    {
+      "id": 6561,
+      "name": "Pitbull Demon",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 6544,
+      "name": "Maternal Rhex",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 6762,
+      "name": "Fighting Bull",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.31
+    },
+    {
+      "id": 6761,
+      "name": "Venomous Spawn",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.22,
+      "max": 1
+    },
+    {
+      "id": 6763,
+      "name": "Carrion Burrower",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 6765,
+      "name": "Carnage Ape",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.24,
+      "max": 3
+    },
+    {
+      "id": 6764,
+      "name": "Saqawine Cobra",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.93,
+      "max": 5
+    },
+    {
+      "id": 6771,
+      "name": "Plagued Arachnid",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.96,
+      "max": 1
+    },
+    {
+      "id": 6894,
+      "name": "Obsidian Eater",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 6893,
+      "name": "Corrupted Arach",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 7260,
+      "name": "Slimy Nemesis",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 7300,
+      "name": "Mountain Lynx",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.31,
+      "max": 1
+    },
+    {
+      "id": 7534,
+      "name": "Fenumal Queen",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.01,
+      "max": 5
+    },
+    {
+      "id": 7551,
+      "name": "Fenumal Widow",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 7645,
+      "name": "Farric Chieftain",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.05
+    },
+    {
+      "id": 7648,
+      "name": "Mountain Hellion",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 7646,
+      "name": "Saqawine Blood Viper",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.01,
+      "max": 1.01
+    },
+    {
+      "id": 7650,
+      "name": "Mountain Hellion Alpha",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.33,
+      "max": 59
+    },
+    {
+      "id": 7647,
+      "name": "Shackled Hellion",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.22
+    },
+    {
+      "id": 7649,
+      "name": "Flame Hellion",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.03
+    },
+    {
+      "id": 7662,
+      "name": "Vaulting Croaker",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 7664,
+      "name": "Infested Maw",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 7665,
+      "name": "Fetid Maw",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 2
+    },
+    {
+      "id": 7663,
+      "name": "Blood Chieftain",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.23,
+      "max": 1.19
+    },
+    {
+      "id": 7666,
+      "name": "Craicic Sand Spitter",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.05,
+      "max": 1.31
+    },
+    {
+      "id": 7703,
+      "name": "Saqawine Retch",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 7738,
+      "name": "Bone Cruncher",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.14,
+      "max": 1.17
+    },
+    {
+      "id": 7739,
+      "name": "Spine Serpent",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 7740,
+      "name": "Chrome-touched Chimeral",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 7770,
+      "name": "Gluttonous Gull",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.37,
+      "max": 1.12
+    },
+    {
+      "id": 7787,
+      "name": "Alpine Devil",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.01,
+      "max": 1.77
+    },
+    {
+      "id": 7857,
+      "name": "Saqawine Rhoa",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 0.95,
+      "mean": 1.03,
+      "max": 1.01
+    },
+    {
+      "id": 8062,
+      "name": "Snow Wolf",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.58,
+      "max": 2
+    },
+    {
+      "id": 8076,
+      "name": "Avalanche Rider",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8073,
+      "name": "Freezing Wolf",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.4,
+      "max": 1
+    },
+    {
+      "id": 8112,
+      "name": "Waste Lurcher",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 2,
+      "mean": 1.06,
+      "max": 2
+    },
+    {
+      "id": 8111,
+      "name": "Purge Hound",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8109,
+      "name": "Leaping Spider",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8108,
+      "name": "Alpine Shaman",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.07,
+      "max": 3
+    },
+    {
+      "id": 8110,
+      "name": "Devourer",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8107,
+      "name": "Merveil's Blessed",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8117,
+      "name": "Forest Beast",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1.19,
+      "mean": 1.19,
+      "max": 1.19
+    },
+    {
+      "id": 8125,
+      "name": "Blood Ape",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.56,
+      "max": 2
+    },
+    {
+      "id": 8116,
+      "name": "Bearded Skycaller",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.19,
+      "max": 1.33
+    },
+    {
+      "id": 8232,
+      "name": "Goatman Shaman",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.08,
+      "max": 1.17
+    },
+    {
+      "id": 8256,
+      "name": "Hybrid Arachnid",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8257,
+      "name": "Hill Devil",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.08,
+      "max": 1.1
+    },
+    {
+      "id": 8277,
+      "name": "Infested Crawler",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8290,
+      "name": "Merveil's Retainer",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8292,
+      "name": "Chrome-infused Goliath",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.3
+    },
+    {
+      "id": 8307,
+      "name": "Arakaali's Daughter",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8304,
+      "name": "Webbed Spider",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8340,
+      "name": "Corrupted Beast",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 5,
+      "mean": 3.54,
+      "max": 5
+    },
+    {
+      "id": 8337,
+      "name": "Crustacean Sniper",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.27,
+      "max": 1.57
+    },
+    {
+      "id": 8356,
+      "name": "Cave Skitterer",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8352,
+      "name": "Goatman",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.15,
+      "max": 1.6
+    },
+    {
+      "id": 8355,
+      "name": "Talon Archer",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.06,
+      "max": 2
+    },
+    {
+      "id": 8353,
+      "name": "Virulent Spider",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8377,
+      "name": "Goatman Fire-raiser",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 7,
+      "mean": 7,
+      "max": 7
+    },
+    {
+      "id": 8378,
+      "name": "Bearded Devil",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.1,
+      "max": 1.68
+    },
+    {
+      "id": 8390,
+      "name": "Plated Parasite",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.04,
+      "max": 1
+    },
+    {
+      "id": 8445,
+      "name": "Granite Eater",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.06
+    },
+    {
+      "id": 8447,
+      "name": "Stygian Ape",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.03
+    },
+    {
+      "id": 8444,
+      "name": "Murk Runner",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.01,
+      "max": 1
+    },
+    {
+      "id": 8477,
+      "name": "Singing Siren",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8499,
+      "name": "Wild Rhex",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8501,
+      "name": "Spindle Spider",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8502,
+      "name": "Plummeting Ursa",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.01,
+      "max": 1.01
+    },
+    {
+      "id": 8517,
+      "name": "Cursed Spawn",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8534,
+      "name": "Chrome-infused Chimeral",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8541,
+      "name": "Infested Tunnelfiend",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.02,
+      "max": 5
+    },
+    {
+      "id": 8578,
+      "name": "Soulless Watcher",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8580,
+      "name": "Ink Spinner",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8577,
+      "name": "Dust Scrabbler",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8602,
+      "name": "Chrome-touched Goliath",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8603,
+      "name": "Bearded Shaman",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.18,
+      "max": 1.24
+    },
+    {
+      "id": 8600,
+      "name": "Scum Crawler",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8594,
+      "name": "Dirt Scrabbler",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8601,
+      "name": "Merveil's Favoured",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.03,
+      "max": 1.01
+    },
+    {
+      "id": 8654,
+      "name": "Glade Mamba",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8640,
+      "name": "Savage Crab",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8639,
+      "name": "Filth Maw",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8684,
+      "name": "Sewage Crawler",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.2,
+      "max": 1.16
+    },
+    {
+      "id": 8713,
+      "name": "Porcupine Goliath",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8707,
+      "name": "Sulphurspawn",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.02,
+      "max": 1
+    },
+    {
+      "id": 8759,
+      "name": "Vicious Parasite",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.02,
+      "max": 1
+    },
+    {
+      "id": 8760,
+      "name": "Predatory Scorpion",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8778,
+      "name": "Mindless Scavenger",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.25
+    },
+    {
+      "id": 8779,
+      "name": "Infested Rhoa",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.01,
+      "max": 2
+    },
+    {
+      "id": 8801,
+      "name": "Crypt Ambusher",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 25,
+      "mean": 5,
+      "max": 25
+    },
+    {
+      "id": 8857,
+      "name": "Avian Retch",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.2,
+      "max": 1.04
+    },
+    {
+      "id": 8903,
+      "name": "Scalding Arachnid",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.05,
+      "max": 1
+    },
+    {
+      "id": 8919,
+      "name": "Bleached Crawler",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8904,
+      "name": "Infested Skitterer",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8924,
+      "name": "Swarthy Mollusc",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1.05,
+      "mean": 1.05,
+      "max": 1.05
+    },
+    {
+      "id": 8954,
+      "name": "Elder-Blessed Retch",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 9013,
+      "name": "Carnage Chieftain",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 9043,
+      "name": "Rooster Fiend",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.77
+    },
+    {
+      "id": 9079,
+      "name": "Merveil's Chosen",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 9122,
+      "name": "Carrion Queen",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.3
+    },
+    {
+      "id": 9198,
+      "name": "Corrupted Rhoa",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 9376,
+      "name": "Sulphuric Scorpion",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 9478,
+      "name": "Woods Ursa",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 9523,
+      "name": "Armour Cruncher",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.03,
+      "max": 1.06
+    },
+    {
+      "id": 9536,
+      "name": "Thicket Hulk",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 2
+    },
+    {
+      "id": 9537,
+      "name": "Shaggy Monstrosity",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1.11,
+      "mean": 1.02,
+      "max": 1.17
+    },
+    {
+      "id": 9581,
+      "name": "Merveil's Attendant",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 9593,
+      "name": "Escaped Rhex",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 9815,
+      "name": "Spitting Parasite",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.1,
+      "max": 1.01
+    },
+    {
+      "id": 9993,
+      "name": "Hairy Bonecruncher",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.01,
+      "max": 1.07
+    },
+    {
+      "id": 9997,
+      "name": "Black Scorpion",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.06,
+      "max": 1
+    },
+    {
+      "id": 10081,
+      "name": "Host Chieftain",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 10238,
+      "name": "Elder-Blessed Cobra",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 2.6,
+      "mean": 2.6,
+      "max": 2.6
+    },
+    {
+      "id": 10525,
+      "name": "Crypt Weaver",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 12751,
+      "name": "Adolescent Rhex",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.3
+    },
+    {
+      "id": 13723,
+      "name": "Vaal Recluse",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 15563,
+      "name": "Ruins Hellion",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1.75,
+      "mean": 1.75,
+      "max": 1.75
+    },
+    {
+      "id": 17534,
+      "name": "Stygian Silverback",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 2.54,
+      "mean": 2.54,
+      "max": 2.54
+    },
+    {
+      "id": 3007,
+      "name": "Farric Frost Hellion Alpha",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.87
+    },
+    {
+      "id": 7644,
+      "name": "Craicic Maw",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1.2,
+      "mean": 1.94,
+      "max": 2.38
+    },
+    {
+      "id": 8958,
+      "name": "Craicic Watcher",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.02
+    },
+    {
+      "id": 2210,
+      "name": "Craicic Chimeral",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 163.78,
+      "mean": 166.99,
+      "max": 198.9
+    },
+    {
+      "id": 49005,
+      "name": "Wild Bristle Matron",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 35.92,
+      "mean": 35.8,
+      "max": 42.03
+    },
+    {
+      "id": 8006,
+      "name": "Craicic Squid",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.46
+    },
+    {
+      "id": 6568,
+      "name": "Fenumal Hybrid Arachnid",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 2.08,
+      "mean": 2.25,
+      "max": 3.78
+    },
+    {
+      "id": 8972,
+      "name": "Cave Beast",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 8940,
+      "name": "Sand Leaper",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 9786,
+      "name": "Skeletal Beast",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.01,
+      "max": 1
+    },
+    {
+      "id": 9507,
+      "name": "Colossus Crusher",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.1,
+      "max": 1
+    },
+    {
+      "id": 61766,
+      "name": "Black Mórrigan",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 163.8,
+      "mean": 308.12,
+      "max": 200.08
+    },
+    {
+      "id": 16649,
+      "name": "Infested Ape",
+      "category": "monsters",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "min": 1,
+      "mean": 1.35,
+      "max": 1
+    }
+  ]
+}

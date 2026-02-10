@@ -1,0 +1,139 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Keepers",
+    "text": "Keepers",
+    "slug": "keepers"
+  },
+  "category": "oil",
+  "updatedAt": "2026-02-10T14:59:31.000Z",
+  "items": [
+    {
+      "id": 42187,
+      "name": "Tainted Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9WYWFsT2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/54c3400bd8/VaalOil.png",
+      "min": 327.6,
+      "mean": 327.32,
+      "max": 400
+    },
+    {
+      "id": 60,
+      "name": "Silver Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9TaWx2ZXJPaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/fb57de2d95/SilverOil.png",
+      "min": 43.18,
+      "mean": 33,
+      "max": 60
+    },
+    {
+      "id": 361,
+      "name": "Clear Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9DbGVhck9pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/de298bd226/ClearOil.png",
+      "min": 0.8,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 364,
+      "name": "Amber Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9BbWJlck9pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/931f4d2fdd/AmberOil.png",
+      "min": 0.83,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 597,
+      "name": "Violet Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9WaW9sZXRPaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/64c679a735/VioletOil.png",
+      "min": 1,
+      "mean": 3.92,
+      "max": 5
+    },
+    {
+      "id": 1373,
+      "name": "Black Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9CbGFja09pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/763ed79fad/BlackOil.png",
+      "min": 4.2,
+      "mean": 8.47,
+      "max": 9.53
+    },
+    {
+      "id": 1384,
+      "name": "Indigo Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9JbmRpZ29PaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/f9356f7cb0/IndigoOil.png",
+      "min": 1.36,
+      "mean": 1.82,
+      "max": 6
+    },
+    {
+      "id": 2062,
+      "name": "Opalescent Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9PcGFsZXNjZW50T2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/11d5d92171/OpalescentOil.png",
+      "min": 12.14,
+      "mean": 15.56,
+      "max": 17.86
+    },
+    {
+      "id": 602,
+      "name": "Azure Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9BenVyZU9pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/926343421b/AzureOil.png",
+      "min": 1,
+      "mean": 1.84,
+      "max": 2
+    },
+    {
+      "id": 365,
+      "name": "Sepia Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9TZXBpYU9pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/580407bed5/SepiaOil.png",
+      "min": 0.83,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1379,
+      "name": "Verdant Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9WZXJkYW50T2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/55a911a67d/VerdantOil.png",
+      "min": 0.92,
+      "mean": 1,
+      "max": 3.4
+    },
+    {
+      "id": 1504,
+      "name": "Teal Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9UZWFsT2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b6712a15cf/TealOil.png",
+      "min": 1,
+      "mean": 1.83,
+      "max": 1
+    },
+    {
+      "id": 2049,
+      "name": "Golden Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9Hb2xkZW5PaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/69094a06e9/GoldenOil.png",
+      "min": 51.63,
+      "mean": 57.55,
+      "max": 129.2
+    },
+    {
+      "id": 1387,
+      "name": "Crimson Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9Dcmltc29uT2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/54fb620c7e/CrimsonOil.png",
+      "min": 3.82,
+      "mean": 3.54,
+      "max": 4.3
+    }
+  ]
+}

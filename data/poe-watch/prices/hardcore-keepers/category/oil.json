@@ -1,0 +1,130 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Hardcore Keepers",
+    "text": "Hardcore Keepers",
+    "slug": "hardcore-keepers"
+  },
+  "category": "oil",
+  "updatedAt": "2026-02-10T14:59:42.000Z",
+  "items": [
+    {
+      "id": 60,
+      "name": "Silver Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9TaWx2ZXJPaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/fb57de2d95/SilverOil.png",
+      "min": 29,
+      "mean": 29,
+      "max": 29
+    },
+    {
+      "id": 361,
+      "name": "Clear Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9DbGVhck9pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/de298bd226/ClearOil.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 364,
+      "name": "Amber Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9BbWJlck9pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/931f4d2fdd/AmberOil.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 597,
+      "name": "Violet Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9WaW9sZXRPaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/64c679a735/VioletOil.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 1373,
+      "name": "Black Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9CbGFja09pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/763ed79fad/BlackOil.png",
+      "min": 15,
+      "mean": 10.8,
+      "max": 15
+    },
+    {
+      "id": 1384,
+      "name": "Indigo Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9JbmRpZ29PaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/f9356f7cb0/IndigoOil.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 2062,
+      "name": "Opalescent Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9PcGFsZXNjZW50T2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/11d5d92171/OpalescentOil.png",
+      "min": 18,
+      "mean": 18,
+      "max": 18
+    },
+    {
+      "id": 602,
+      "name": "Azure Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9BenVyZU9pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/926343421b/AzureOil.png",
+      "min": 1.7,
+      "mean": 1.7,
+      "max": 1.7
+    },
+    {
+      "id": 365,
+      "name": "Sepia Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9TZXBpYU9pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/580407bed5/SepiaOil.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1379,
+      "name": "Verdant Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9WZXJkYW50T2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/55a911a67d/VerdantOil.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1504,
+      "name": "Teal Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9UZWFsT2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b6712a15cf/TealOil.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2049,
+      "name": "Golden Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9Hb2xkZW5PaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/69094a06e9/GoldenOil.png",
+      "min": 125,
+      "mean": 125,
+      "max": 125
+    },
+    {
+      "id": 1387,
+      "name": "Crimson Oil",
+      "category": "oils",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9Dcmltc29uT2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/54fb620c7e/CrimsonOil.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    }
+  ]
+}

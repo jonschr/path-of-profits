@@ -1,0 +1,1858 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Hardcore Phrecia 2.0",
+    "text": "Hardcore Phrecia 2.0",
+    "slug": "hardcore-phrecia-2-0"
+  },
+  "category": "bases",
+  "updatedAt": "2026-02-10T15:00:01.000Z",
+  "items": [
+    {
+      "id": 17624,
+      "name": "Ghastly Eye Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL0doYXN0bHlFeWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwic3ludGhlc2lzZWQiOnRydWV9XQ/6d68c7b124/GhastlyEye.png",
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 17641,
+      "name": "Large Cluster Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL05ld0dlbUJhc2UzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/db35e60885/NewGemBase3.png",
+      "min": 2.64,
+      "mean": 4.43,
+      "max": 4.5
+    },
+    {
+      "id": 17640,
+      "name": "Viridian Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL2Jhc2ljZGV4IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsImZyYWN0dXJlZCI6dHJ1ZX1d/248654efbc/basicdex.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 17706,
+      "name": "Karui Chopper",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlMiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/cf0e0b241c/TwoHandAxe2.png",
+      "min": 180,
+      "mean": 180,
+      "max": 180
+    },
+    {
+      "id": 17726,
+      "name": "Fossilised Spirit Shield",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9TaGllbGRzL1NoaWVsZEludDMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/aa834083ad/ShieldInt3.png",
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 17763,
+      "name": "Prophecy Wand",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kNiIsInciOjEsImgiOjMsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/e117fc7d9f/Wand6.png",
+      "min": 30,
+      "mean": 5,
+      "max": 30
+    },
+    {
+      "id": 17762,
+      "name": "Slink Boots",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c0RleDQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/c00b9a736c/BootsDex4.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 17757,
+      "name": "Crusader Boots",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c1N0ckludDMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/935e17c8ae/BootsStrInt3.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 17772,
+      "name": "Crystal Belt",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQ3J5c3RhbEJlbHQiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MSwic3ludGhlc2lzZWQiOnRydWV9XQ/0d8ee92af1/CrystalBelt.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 17799,
+      "name": "Vermillion Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVmVybWlsbGlvblJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b0570b8efc/VermillionRing.png",
+      "min": 30,
+      "mean": 30,
+      "max": 30
+    },
+    {
+      "id": 17803,
+      "name": "Jewelled Foil",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9SYXBpZXJzL1JhcGllcjciLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/2506399e80/Rapier7.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 17856,
+      "name": "Opal Sceptre",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9zY2VwdGVyNCIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/c986bafb78/scepter4.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 17881,
+      "name": "Harmonic Spirit Shield",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9TaGllbGRzL1NoaWVsZEludDUiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/4bf20f79d1/ShieldInt5.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 17912,
+      "name": "Marble Amulet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9NYXJibGVBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/3dee478d8d/MarbleAmulet.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 17921,
+      "name": "Vaal Axe",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlNSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/0fd27274ca/TwoHandAxe5.png",
+      "min": 3,
+      "mean": 3.5,
+      "max": 147.91
+    },
+    {
+      "id": 18034,
+      "name": "Basalt Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc3RvbmUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/00261d09db/stone.png",
+      "min": 4,
+      "mean": 7.14,
+      "max": 4
+    },
+    {
+      "id": 18041,
+      "name": "Divine Life Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvbGlmZWZsYXNrMTEiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/54ba3c70ae/lifeflask11.png",
+      "min": 90,
+      "mean": 5.3,
+      "max": 90
+    },
+    {
+      "id": 18138,
+      "name": "Jade Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZXZhc2lvbmZsYXNrMDEiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/8ead4435df/evasionflask01.png",
+      "min": 5,
+      "mean": 5,
+      "max": 6.6
+    },
+    {
+      "id": 18264,
+      "name": "Stibnite Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc3RpYm5pdGUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/35fbc2f198/stibnite.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 18308,
+      "name": "Aquamarine Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvYXF1YW1hcmluZSIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/b48851db23/aquamarine.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 18632,
+      "name": "Medium Cluster Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL05ld0dlbUJhc2UyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/78f6bf8356/NewGemBase2.png",
+      "min": 3,
+      "mean": 3,
+      "max": 5.4
+    },
+    {
+      "id": 18667,
+      "name": "Vermillion Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVmVybWlsbGlvblJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b0570b8efc/VermillionRing.png",
+      "min": 24,
+      "mean": 24,
+      "max": 24
+    },
+    {
+      "id": 18658,
+      "name": "Amethyst Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQW1ldGh5c3RSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInN5bnRoZXNpc2VkIjp0cnVlfV0/e7250c8970/AmethystRing.png",
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 18778,
+      "name": "Hypnotic Eye Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL1JpdmV0ZWRFeWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwic3ludGhlc2lzZWQiOnRydWV9XQ/a5986fc8bc/RivetedEye.png",
+      "min": 12,
+      "mean": 12,
+      "max": 12
+    },
+    {
+      "id": 18818,
+      "name": "Hydrascale Boots",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c1N0ckRleDIiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/f17113ca1a/BootsStrDex2.png",
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 18821,
+      "name": "Void Sceptre",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9zY2VwdGVyOCIsInciOjIsImgiOjMsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/916c115e4f/scepter8.png",
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 18864,
+      "name": "Viridian Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL2Jhc2ljZGV4IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsImZyYWN0dXJlZCI6dHJ1ZX1d/248654efbc/basicdex.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 18879,
+      "name": "Crimson Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL2Jhc2ljc3RyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/8129ab1f4d/basicstr.png",
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 18859,
+      "name": "Titanium Spirit Shield",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9TaGllbGRzL1NoaWVsZEludDYiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/209eaa426e/ShieldInt6.png",
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 18933,
+      "name": "Medium Cluster Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL05ld0dlbUJhc2UyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/78f6bf8356/NewGemBase2.png",
+      "min": 3.5,
+      "mean": 7.47,
+      "max": 34
+    },
+    {
+      "id": 18937,
+      "name": "Judgement Staff",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY3IiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/c1ded974d5/Staff7.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 18995,
+      "name": "Large Cluster Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL05ld0dlbUJhc2UzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/db35e60885/NewGemBase3.png",
+      "min": 25,
+      "mean": 88.68,
+      "max": 92.5
+    },
+    {
+      "id": 19038,
+      "name": "Sulphur Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZ29sZCIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/74568fc9b9/gold.png",
+      "min": 2.13,
+      "mean": 2,
+      "max": 2.43
+    },
+    {
+      "id": 19180,
+      "name": "Moonstone Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTW9vbnN0b25lUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/ea0cb60058/MoonstoneRing.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 19208,
+      "name": "Jade Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZXZhc2lvbmZsYXNrMDEiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/8ead4435df/evasionflask01.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 19212,
+      "name": "Jade Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZXZhc2lvbmZsYXNrMDEiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/8ead4435df/evasionflask01.png",
+      "min": 2.5,
+      "mean": 3.68,
+      "max": 4.55
+    },
+    {
+      "id": 19268,
+      "name": "Profane Wand",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kNyIsInciOjEsImgiOjMsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/66b84ffa5c/Wand7.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 19269,
+      "name": "Fleshripper",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlOCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/ba1d6734bb/TwoHandAxe8.png",
+      "min": 40,
+      "mean": 40,
+      "max": 40
+    },
+    {
+      "id": 19479,
+      "name": "Profane Wand",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kNyIsInciOjEsImgiOjMsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/66b84ffa5c/Wand7.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 19481,
+      "name": "Platinum Kris",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0RhZ2dlcjYiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/5dcee0019c/Dagger6.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 20082,
+      "name": "Elegant Ringmail",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RySW50MUMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/3247afb396/BodyStrInt1C.png",
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 20267,
+      "name": "Marble Amulet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9NYXJibGVBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/3dee478d8d/MarbleAmulet.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 20714,
+      "name": "Divine Life Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvbGlmZWZsYXNrMTEiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/54ba3c70ae/lifeflask11.png",
+      "min": 90,
+      "mean": 57.08,
+      "max": 90
+    },
+    {
+      "id": 20720,
+      "name": "Stibnite Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc3RpYm5pdGUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/35fbc2f198/stibnite.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 20729,
+      "name": "Necromancer Circlet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldEludDgiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwic2VhcmluZyI6dHJ1ZSwidGFuZ2xlZCI6dHJ1ZX1d/9ec428a948/HelmetInt8.png",
+      "min": 30,
+      "mean": 30,
+      "max": 30
+    },
+    {
+      "id": 20894,
+      "name": "Searching Eye Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL1NlYXJjaGluZ0V5ZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ff2df16522/SearchingEye.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 21450,
+      "name": "Basalt Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc3RvbmUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/00261d09db/stone.png",
+      "min": 5,
+      "mean": 4,
+      "max": 10.6
+    },
+    {
+      "id": 22095,
+      "name": "Eternal Mana Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvbWFuYWZsYXNrMTIiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/6146902646/manaflask12.png",
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 23188,
+      "name": "Battle Lamellar",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RyNEEiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/7e1c29aacf/BodyStr4A.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 24682,
+      "name": "Topaz Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvdG9wYXoiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/2a6d920bc1/topaz.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2.58
+    },
+    {
+      "id": 35002,
+      "name": "Crystal Belt",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQ3J5c3RhbEJlbHQiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/1e9174ec8f/CrystalBelt.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 35081,
+      "name": "Legion Gloves",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvR2xvdmVzU3RySW50MiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/ff0c4e4096/GlovesStrInt2.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 35084,
+      "name": "Titanium Spirit Shield",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9TaGllbGRzL1NoaWVsZEludDYiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/404ef29c87/ShieldInt6.png",
+      "min": 30,
+      "mean": 30,
+      "max": 30
+    },
+    {
+      "id": 35076,
+      "name": "Imperial Claw",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9DbGF3NyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/9dad3a8c92/Claw7.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 35295,
+      "name": "Titanium Spirit Shield",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9TaGllbGRzL1NoaWVsZEludDYiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/209eaa426e/ShieldInt6.png",
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 35291,
+      "name": "Amethyst Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQW1ldGh5c3RSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsImZyYWN0dXJlZCI6dHJ1ZX1d/2367b82d60/AmethystRing.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 35391,
+      "name": "Reaver Axe",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9PbmVIYW5kQXhlNCIsInciOjIsImgiOjMsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/6238912002/OneHandAxe4.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 36114,
+      "name": "Sundering Axe",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlMyIsInciOjIsImgiOjQsInNjYWxlIjoxLCJzeW50aGVzaXNlZCI6dHJ1ZX1d/8401bfc9c4/TwoHandAxe3.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 36189,
+      "name": "Colossal Tower Shield",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9TaGllbGRzL1NoaWVsZFN0cjYiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/d883ad1ca2/ShieldStr6.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 43993,
+      "name": "Corundum Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQW50aVN0dW5GbGFzayIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/4df2dac26a/AntiStunFlask.png",
+      "min": 2,
+      "mean": 2.07,
+      "max": 2
+    },
+    {
+      "id": 18191,
+      "name": "Topaz Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvdG9wYXoiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/2a6d920bc1/topaz.png",
+      "min": 2.45,
+      "mean": 2.33,
+      "max": 3.39
+    },
+    {
+      "id": 26750,
+      "name": "Bismuth Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvYmlzbXV0aCIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MSwiZmkiOnRydWV9XQ/d8294b3822/bismuth.png",
+      "min": 2,
+      "mean": 2.55,
+      "max": 2.8
+    },
+    {
+      "id": 21077,
+      "name": "Granite Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZ3Jhbml0ZSIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MSwiZmkiOnRydWV9XQ/f72bf74a94/granite.png",
+      "min": 3,
+      "mean": 26.56,
+      "max": 28.75
+    },
+    {
+      "id": 24683,
+      "name": "Ruby Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvcnVieSIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MSwiZmkiOnRydWV9XQ/bb6c188269/ruby.png",
+      "min": 2.25,
+      "mean": 3.44,
+      "max": 5.38
+    },
+    {
+      "id": 21442,
+      "name": "Granite Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZ3Jhbml0ZSIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/101bce8899/granite.png",
+      "min": 3,
+      "mean": 4.07,
+      "max": 7
+    },
+    {
+      "id": 21396,
+      "name": "Diamond Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZGlhbW9uZCIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/98bf48b8dd/diamond.png",
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 35997,
+      "name": "Samnite Helmet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldFN0cjgiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/acafd1a808/HelmetStr8.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 23554,
+      "name": "Topaz Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvdG9wYXoiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZzIjp0cnVlfV0/dfefd757a4/topaz.png",
+      "min": 10.4,
+      "mean": 10.4,
+      "max": 47.5
+    },
+    {
+      "id": 18810,
+      "name": "Crimson Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL2Jhc2ljc3RyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsImZyYWN0dXJlZCI6dHJ1ZX1d/11becdd5a3/basicstr.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 18092,
+      "name": "Quartz Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvcGhhc2VmbGFzazAxIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/7ea4e84414/phaseflask01.png",
+      "min": 4,
+      "mean": 3.81,
+      "max": 7.31
+    },
+    {
+      "id": 36880,
+      "name": "Dragonscale Gauntlets",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvR2xvdmVzU3RyRGV4MyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/ac52222103/GlovesStrDex3.png",
+      "min": 100,
+      "mean": 100,
+      "max": 100
+    },
+    {
+      "id": 34988,
+      "name": "Two-Stone Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvU2FwcGhpcmVSdWJ5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsImZyYWN0dXJlZCI6dHJ1ZX1d/b85e278935/SapphireRuby.png",
+      "min": 2,
+      "mean": 73.24,
+      "max": 72.4
+    },
+    {
+      "id": 17630,
+      "name": "Sinner Tricorne",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldERleDkiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/6489cfe7c5/HelmetDex9.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 18876,
+      "name": "Cobalt Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL2Jhc2ljaW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsImZyYWN0dXJlZCI6dHJ1ZX1d/b470123709/basicint.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 43571,
+      "name": "Corundum Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQW50aVN0dW5GbGFzayIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/4df2dac26a/AntiStunFlask.png",
+      "min": 2,
+      "mean": 2.36,
+      "max": 2
+    },
+    {
+      "id": 24936,
+      "name": "Sapphire Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc2FwcGhpcmUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZzIjp0cnVlfV0/e14b38eac2/sapphire.png",
+      "min": 1.79,
+      "mean": 1.5,
+      "max": 2.25
+    },
+    {
+      "id": 19315,
+      "name": "Convoking Wand",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9Db252b2tpbmdXYW5kIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsImZyYWN0dXJlZCI6dHJ1ZX1d/28b54e6f65/ConvokingWand.png",
+      "min": 720,
+      "mean": 20,
+      "max": 720
+    },
+    {
+      "id": 22689,
+      "name": "Conquest Chainmail",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RySW50MkIiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/2cea5723dd/BodyStrInt2B.png",
+      "min": 35,
+      "mean": 35,
+      "max": 35
+    },
+    {
+      "id": 34651,
+      "name": "Topaz Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvdG9wYXoiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/2a6d920bc1/topaz.png",
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 18651,
+      "name": "Agate Amulet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9BZ2F0ZUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/8372924691/AgateAmulet.png",
+      "min": 180,
+      "mean": 180,
+      "max": 180
+    },
+    {
+      "id": 21459,
+      "name": "Quartz Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvcGhhc2VmbGFzazAxIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxLCJmcyI6dHJ1ZX1d/77b6889e71/phaseflask01.png",
+      "min": 2.11,
+      "mean": 2.16,
+      "max": 2.67
+    },
+    {
+      "id": 17886,
+      "name": "Quicksilver Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc3ByaW50IiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxLCJmcyI6dHJ1ZX1d/e0bf74a30f/sprint.png",
+      "min": 2.2,
+      "mean": 2.48,
+      "max": 2.44
+    },
+    {
+      "id": 17637,
+      "name": "Crimson Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL2Jhc2ljc3RyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInN5bnRoZXNpc2VkIjp0cnVlfV0/9c1bb0e02a/basicstr.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 18881,
+      "name": "Diamond Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRGlhbW9uZFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/d07e3dfbb6/DiamondRing.png",
+      "min": 144,
+      "mean": 144,
+      "max": 144
+    },
+    {
+      "id": 18947,
+      "name": "Citrine Amulet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9DaXRyaW5lQW11bGV0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/95804f838b/CitrineAmulet.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 18858,
+      "name": "Opal Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvT3BhbFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8c87f65b28/OpalRing.png",
+      "min": 40,
+      "mean": 40,
+      "max": 40
+    },
+    {
+      "id": 19784,
+      "name": "Cerulean Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQ2VydWxlYW5SaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c5fe3e533c/CeruleanRing.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 21794,
+      "name": "Vaal Axe",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlNSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/0fd27274ca/TwoHandAxe5.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 20634,
+      "name": "Sambar Sceptre",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9zY2VwdGVyOSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/151820601e/scepter9.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 34992,
+      "name": "Steel Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQWRhbWFudGluZVJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/04d7eaa12e/AdamantineRing.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 35095,
+      "name": "Majestic Plate",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RyM0MiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/09903268a5/BodyStr3C.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 35101,
+      "name": "Demon's Horn",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kMiIsInciOjEsImgiOjMsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/b3e1442fad/Wand2.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 35074,
+      "name": "Omen Wand",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kNiIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/30763e0fe7/Wand6.png",
+      "min": 17,
+      "mean": 17,
+      "max": 17
+    },
+    {
+      "id": 35372,
+      "name": "Titan Greaves",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c1N0cjQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/82bedfd1e0/BootsStr4.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 35363,
+      "name": "Colossus Mallet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvVHdvSGFuZE1hY2UzIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/5e536c19aa/TwoHandMace3.png",
+      "min": 24,
+      "mean": 24,
+      "max": 24
+    },
+    {
+      "id": 35442,
+      "name": "General's Brigandine",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RyRGV4MkMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/23476fa0a6/BodyStrDex2C.png",
+      "min": 35,
+      "mean": 35,
+      "max": 35
+    },
+    {
+      "id": 35561,
+      "name": "Titan Greaves",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c1N0cjQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/d5d9f4a7a8/BootsStr4.png",
+      "min": 7,
+      "mean": 7,
+      "max": 7
+    },
+    {
+      "id": 36515,
+      "name": "Sekhem",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9zY2VwdGVyMyIsInciOjIsImgiOjMsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/15245bf662/scepter3.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 36986,
+      "name": "Serpentscale Boots",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c1N0ckRleDIiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/f17113ca1a/BootsStrDex2.png",
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 37201,
+      "name": "Cardinal Round Shield",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9TaGllbGRzL1NoaWVsZFN0ckRleDQiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/f50adf0569/ShieldStrDex4.png",
+      "min": 24,
+      "mean": 24,
+      "max": 24
+    },
+    {
+      "id": 35063,
+      "name": "Two-Stone Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVG9wYXpSdWJ5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInN5bnRoZXNpc2VkIjp0cnVlfV0/eed3b580ba/TopazRuby.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 47944,
+      "name": "Convening Wand",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9Db252b2tpbmdXYW5kIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsImZyYWN0dXJlZCI6dHJ1ZX1d/28b54e6f65/ConvokingWand.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 48319,
+      "name": "Trapper Mitts",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvR2xvdmVzRGV4SW50MSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/ffde0c6622/GlovesDexInt1.png",
+      "min": 180,
+      "mean": 180,
+      "max": 180
+    },
+    {
+      "id": 17629,
+      "name": "Medium Cluster Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL05ld0dlbUJhc2UyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/78f6bf8356/NewGemBase2.png",
+      "min": 2.7799,
+      "mean": 3.67,
+      "max": 4.83
+    },
+    {
+      "id": 22745,
+      "name": "Quicksilver Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc3ByaW50IiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/aa66be180b/sprint.png",
+      "min": 2,
+      "mean": 2,
+      "max": 19.2399
+    },
+    {
+      "id": 18631,
+      "name": "Large Cluster Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL05ld0dlbUJhc2UzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/db35e60885/NewGemBase3.png",
+      "min": 35,
+      "mean": 5,
+      "max": 90.36
+    },
+    {
+      "id": 31869,
+      "name": "Ruby Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvcnVieSIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/0d582b3f83/ruby.png",
+      "min": 4,
+      "mean": 1.38,
+      "max": 7.4
+    },
+    {
+      "id": 36497,
+      "name": "Abyssal Sceptre",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9zY2VwdGVyOCIsInciOjIsImgiOjMsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/916c115e4f/scepter8.png",
+      "min": 60,
+      "mean": 60,
+      "max": 60
+    },
+    {
+      "id": 17660,
+      "name": "Small Cluster Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL05ld0dlbUJhc2UxIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/0eb1a9d981/NewGemBase1.png",
+      "min": 3.4,
+      "mean": 3.46,
+      "max": 8
+    },
+    {
+      "id": 19175,
+      "name": "Vermillion Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVmVybWlsbGlvblJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/631f22a3c8/VermillionRing.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 18032,
+      "name": "Granite Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZ3Jhbml0ZSIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MSwiZnMiOnRydWUsImZyYWN0dXJlZCI6dHJ1ZX1d/6b5742601b/granite.png",
+      "min": 180,
+      "mean": 150.7,
+      "max": 180
+    },
+    {
+      "id": 18265,
+      "name": "Sulphur Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZ29sZCIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/74568fc9b9/gold.png",
+      "min": 2,
+      "mean": 2.57,
+      "max": 2
+    },
+    {
+      "id": 35216,
+      "name": "Heavy Belt",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmVsdDUiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/618d89847d/Belt5.png",
+      "min": 270,
+      "mean": 270,
+      "max": 270
+    },
+    {
+      "id": 19013,
+      "name": "Diamond Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZGlhbW9uZCIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MSwiZnMiOnRydWV9XQ/5f46f59057/diamond.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 17995,
+      "name": "Diamond Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZGlhbW9uZCIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MSwiZmkiOnRydWV9XQ/a764b9bc68/diamond.png",
+      "min": 1.97,
+      "mean": 1.67,
+      "max": 2.6
+    },
+    {
+      "id": 36306,
+      "name": "Ambusher",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0RhZ2dlcjQiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/954af836f7/Dagger4.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 19459,
+      "name": "Royal Sceptre",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9zY2VwdGVyNyIsInciOjIsImgiOjMsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/ea7ec81ce5/scepter7.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 31062,
+      "name": "Basalt Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc3RvbmUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/00261d09db/stone.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 36058,
+      "name": "Tyrant's Sekhem",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9zY2VwdGVyMyIsInciOjIsImgiOjMsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/15245bf662/scepter3.png",
+      "min": 13.21,
+      "mean": 13.21,
+      "max": 20
+    },
+    {
+      "id": 21374,
+      "name": "Quartz Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvcGhhc2VmbGFzazAxIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/6266d738e1/phaseflask01.png",
+      "min": 3,
+      "mean": 3.31,
+      "max": 3.8
+    },
+    {
+      "id": 22757,
+      "name": "Silver Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc2lsdmVyIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxLCJmcyI6dHJ1ZX1d/4a736a5685/silver.png",
+      "min": 2,
+      "mean": 2.36,
+      "max": 2
+    },
+    {
+      "id": 18335,
+      "name": "Bismuth Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvYmlzbXV0aCIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/fbda460273/bismuth.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 43428,
+      "name": "Gold Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvR29sZEZsYXNrIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxLCJmcyI6dHJ1ZX1d/0de293b349/GoldFlask.png",
+      "min": 5,
+      "mean": 9.94,
+      "max": 6.33
+    },
+    {
+      "id": 43889,
+      "name": "Gold Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvR29sZEZsYXNrIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxLCJmcyI6dHJ1ZX1d/0de293b349/GoldFlask.png",
+      "min": 12,
+      "mean": 4,
+      "max": 13
+    },
+    {
+      "id": 18306,
+      "name": "Sapphire Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc2FwcGhpcmUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZzIjp0cnVlfV0/e14b38eac2/sapphire.png",
+      "min": 2,
+      "mean": 3,
+      "max": 3.67
+    },
+    {
+      "id": 35071,
+      "name": "Sapphire Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmluZzYiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwic3ludGhlc2lzZWQiOnRydWV9XQ/8bb5f7513d/Ring6.png",
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 17951,
+      "name": "Silver Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc2lsdmVyIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxLCJmcyI6dHJ1ZX1d/4a736a5685/silver.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2.44
+    },
+    {
+      "id": 35021,
+      "name": "Fingerless Silk Gloves",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvRmluZ2VybGVzc1NpbGtHbG92ZXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/8853f1e934/FingerlessSilkGloves.png",
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 47430,
+      "name": "Bone Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQm9uZVJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwic3ludGhlc2lzZWQiOnRydWV9XQ/3b1d182c56/BoneRing.png",
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 17758,
+      "name": "Royal Burgonet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldFN0cjEwIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/b1e95342a8/HelmetStr10.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 20468,
+      "name": "Sapphire Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc2FwcGhpcmUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZpIjp0cnVlfV0/7762dad209/sapphire.png",
+      "min": 2,
+      "mean": 1.5,
+      "max": 3.47
+    },
+    {
+      "id": 35936,
+      "name": "Karui Chopper",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlMiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/cf0e0b241c/TwoHandAxe2.png",
+      "min": 60,
+      "mean": 3,
+      "max": 60
+    },
+    {
+      "id": 18090,
+      "name": "Ruby Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvcnVieSIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/0d582b3f83/ruby.png",
+      "min": 2,
+      "mean": 2.95,
+      "max": 2.95
+    },
+    {
+      "id": 17716,
+      "name": "Convoking Wand",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9Db252b2tpbmdXYW5kIiwidyI6MSwiaCI6Mywic2NhbGUiOjF9XQ/fc10997b84/ConvokingWand.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 35288,
+      "name": "Corsair Sword",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL09uZUhhbmRTd29yZDMiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MSwic3ludGhlc2lzZWQiOnRydWV9XQ/b5d1b9a0fc/OneHandSword3.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 61673,
+      "name": "Lich's Circlet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldEludDgiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/4bb6b31cbe/HelmetInt8.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 61677,
+      "name": "Twilight Regalia",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RyRGV4SW50MUMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/e6eb42b23a/BodyStrDexInt1C.png",
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 61679,
+      "name": "Sacred Chainmail",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RySW50M0MiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/900b4f2c03/BodyStrInt3C.png",
+      "min": 12,
+      "mean": 8.73,
+      "max": 12
+    },
+    {
+      "id": 61751,
+      "name": "Lich's Circlet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldEludDgiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/4bb6b31cbe/HelmetInt8.png",
+      "min": 4,
+      "mean": 5.25,
+      "max": 4
+    },
+    {
+      "id": 61754,
+      "name": "Necrotic Armour",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5RGV4SW50NEMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/99efce2041/BodyDexInt4C.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 61856,
+      "name": "Haunted Bascinet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldFN0ckRleDEwIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/4c9ea10e7c/HelmetStrDex10.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 61863,
+      "name": "Necrotic Armour",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5RGV4SW50NEMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/99efce2041/BodyDexInt4C.png",
+      "min": 15,
+      "mean": 180,
+      "max": 156.43
+    },
+    {
+      "id": 61876,
+      "name": "Leviathan Gauntlets",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvR2xvdmVzU3RyNCIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/468f466568/GlovesStr4.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 61877,
+      "name": "Divine Crown",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldFN0ckludDkiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/6ad7c513a8/HelmetStrInt9.png",
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 61880,
+      "name": "Marshall's Brigandine",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RyRGV4MkMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/60a6d7b58c/BodyStrDex2C.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 61913,
+      "name": "Grand Ringmail",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RySW50MUMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwic3ludGhlc2lzZWQiOnRydWV9XQ/582c4184f4/BodyStrInt1C.png",
+      "min": 35,
+      "mean": 35,
+      "max": 35
+    },
+    {
+      "id": 61926,
+      "name": "Torturer's Mask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldERleEludDExIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/ff51fc2e8c/HelmetDexInt11.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 61951,
+      "name": "Warlock Gloves",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvR2xvdmVzSW50NCIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/484e9bd879/GlovesInt4.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 62281,
+      "name": "Infiltrator Mitts",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvR2xvdmVzRGV4SW50MiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/2a5dad783d/GlovesDexInt2.png",
+      "min": 50,
+      "mean": 50,
+      "max": 50
+    },
+    {
+      "id": 61626,
+      "name": "Leviathan Greaves",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c1N0cjQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/82bedfd1e0/BootsStr4.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 61796,
+      "name": "Warlock Boots",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c0ludDQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/5589419509/BootsInt4.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 61873,
+      "name": "Conqueror's Helmet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldFN0cjEwIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsImZyYWN0dXJlZCI6dHJ1ZX1d/e09548e1f9/HelmetStr10.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 61929,
+      "name": "Conquest Lamellar",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RyNEEiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/7e1c29aacf/BodyStr4A.png",
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 61931,
+      "name": "Phantom Mitts",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvR2xvdmVzRGV4SW50MyIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/060b6ea395/GlovesDexInt3.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 61956,
+      "name": "Warlock Gloves",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvR2xvdmVzSW50NCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/b44e9c4309/GlovesInt4.png",
+      "min": 4,
+      "mean": 5.44,
+      "max": 4
+    },
+    {
+      "id": 62015,
+      "name": "Divine Crown",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldFN0ckludDkiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/6ad7c513a8/HelmetStrInt9.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 62085,
+      "name": "Harpyskin Boots",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c0RleDMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/f2b03f733a/BootsDex3.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 62312,
+      "name": "Infiltrator Mitts",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvR2xvdmVzRGV4SW50MiIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/e18b986979/GlovesDexInt2.png",
+      "min": 50,
+      "mean": 50,
+      "max": 50
+    },
+    {
+      "id": 62120,
+      "name": "Necrotic Armour",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5RGV4SW50NEMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/99efce2041/BodyDexInt4C.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 35038,
+      "name": "Thicket Bow",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzIiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/97d13fc53e/Bow2.png",
+      "min": 180,
+      "mean": 150,
+      "max": 180
+    },
+    {
+      "id": 35043,
+      "name": "Jewelled Foil",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9SYXBpZXJzL1JhcGllcjciLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/2506399e80/Rapier7.png",
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 35025,
+      "name": "Diamond Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRGlhbW9uZFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/22398d3b59/DiamondRing.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 35041,
+      "name": "Gemini Claw",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9DbGF3OSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/c81beef9a2/Claw9.png",
+      "min": 180,
+      "mean": 180,
+      "max": 180
+    },
+    {
+      "id": 35018,
+      "name": "Leather Belt",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmVsdDMiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MSwic3ludGhlc2lzZWQiOnRydWV9XQ/27eb6af783/Belt3.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 35006,
+      "name": "Thicket Bow",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzIiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/97d13fc53e/Bow2.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 35271,
+      "name": "Ambush Boots",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c0RleEludDMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/786dd1501e/BootsDexInt3.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 35525,
+      "name": "Opal Sceptre",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9zY2VwdGVyNCIsInciOjIsImgiOjMsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/b84bdc5d60/scepter4.png",
+      "min": 36.43,
+      "mean": 36.43,
+      "max": 50
+    },
+    {
+      "id": 36142,
+      "name": "Steel Kite Shield",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9TaGllbGRzL1NoaWVsZFN0ckludDQiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/8d673b3a1f/ShieldStrInt4.png",
+      "min": 270,
+      "mean": 270,
+      "max": 270
+    },
+    {
+      "id": 36580,
+      "name": "Dread Maul",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvVHdvSGFuZE1hY2U3IiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/d7e632f004/TwoHandMace7.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 17797,
+      "name": "Crusader Buckler",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9TaGllbGRzL1NoaWVsZERleDUiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/b955444684/ShieldDex5.png",
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 18039,
+      "name": "Amethyst Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQW1ldGh5c3QiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/0f93f9050a/Amethyst.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 18617,
+      "name": "Small Cluster Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL05ld0dlbUJhc2UxIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/0eb1a9d981/NewGemBase1.png",
+      "min": 4,
+      "mean": 5.58,
+      "max": 5.11
+    },
+    {
+      "id": 35320,
+      "name": "Wyrmscale Gauntlets",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvR2xvdmVzU3RyRGV4MyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/ac52222103/GlovesStrDex3.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 22321,
+      "name": "Amethyst Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQW1ldGh5c3QiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZpIjp0cnVlfV0/78787470b8/Amethyst.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 21302,
+      "name": "Quicksilver Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc3ByaW50IiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/aa66be180b/sprint.png",
+      "min": 2,
+      "mean": 2.75,
+      "max": 3.08
+    },
+    {
+      "id": 35022,
+      "name": "Crystal Belt",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQ3J5c3RhbEJlbHQiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/1e9174ec8f/CrystalBelt.png",
+      "min": 9,
+      "mean": 9,
+      "max": 9
+    },
+    {
+      "id": 22343,
+      "name": "Aquamarine Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvYXF1YW1hcmluZSIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MX1d/b48851db23/aquamarine.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 21461,
+      "name": "Sulphur Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZ29sZCIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MSwiZmkiOnRydWV9XQ/63fbfd35d3/gold.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 19582,
+      "name": "Karui Chopper",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlMiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJmcmFjdHVyZWQiOnRydWV9XQ/cf0e0b241c/TwoHandAxe2.png",
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 18767,
+      "name": "Silver Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc2lsdmVyIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/a2143b575d/silver.png",
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 18800,
+      "name": "Cobalt Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL2Jhc2ljaW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInN5bnRoZXNpc2VkIjp0cnVlfV0/870966c313/basicint.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 21981,
+      "name": "Small Cluster Jewel",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL05ld0dlbUJhc2UxIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/0eb1a9d981/NewGemBase1.png",
+      "min": 5,
+      "mean": 5,
+      "max": 8
+    },
+    {
+      "id": 24727,
+      "name": "Jade Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZXZhc2lvbmZsYXNrMDEiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/8ead4435df/evasionflask01.png",
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 18620,
+      "name": "Despot Axe",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlNiIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/e2c34a0fb2/TwoHandAxe6.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 23737,
+      "name": "Stibnite Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc3RpYm5pdGUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZpIjp0cnVlfV0/440483cb0c/stibnite.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 19220,
+      "name": "Basalt Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3Mvc3RvbmUiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZpIjp0cnVlfV0/b9ccc40808/stone.png",
+      "min": 3.89,
+      "mean": 3.6,
+      "max": 5.2
+    },
+    {
+      "id": 26843,
+      "name": "Bismuth Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvYmlzbXV0aCIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MSwiZmkiOnRydWV9XQ/d8294b3822/bismuth.png",
+      "min": 2,
+      "mean": 2.07,
+      "max": 2
+    },
+    {
+      "id": 24459,
+      "name": "Amethyst Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQW1ldGh5c3QiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZzIjp0cnVlfV0/f6d1ce7ee1/Amethyst.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 24824,
+      "name": "Diamond Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvZGlhbW9uZCIsInciOjEsImgiOjIsInNjYWxlIjoxLCJsZXZlbCI6MSwiZnMiOnRydWV9XQ/5f46f59057/diamond.png",
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 30142,
+      "name": "Amethyst Flask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvQW1ldGh5c3QiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZzIjp0cnVlfV0/f6d1ce7ee1/Amethyst.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 42206,
+      "name": "Iolite Ring",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQ2hhb3NEbWdSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/41236019f8/ChaosDmgRing.png",
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 21564,
+      "name": "Spiraled Foil",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9SYXBpZXJzL1JhcGllcjUiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MX1d/ccce0178cc/Rapier5.png",
+      "min": 180,
+      "mean": 180,
+      "max": 180
+    },
+    {
+      "id": 61645,
+      "name": "Twilight Regalia",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RyRGV4SW50MUMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/e6eb42b23a/BodyStrDexInt1C.png",
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 61649,
+      "name": "Twilight Regalia",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RyRGV4SW50MUMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/e6eb42b23a/BodyStrDexInt1C.png",
+      "min": 12,
+      "mean": 10.25,
+      "max": 12
+    },
+    {
+      "id": 61781,
+      "name": "Torturer's Mask",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldERleEludDExIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/ff51fc2e8c/HelmetDexInt11.png",
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 61800,
+      "name": "Necrotic Armour",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5RGV4SW50NEMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/99efce2041/BodyDexInt4C.png",
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 61807,
+      "name": "Full Wyvernscale",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RyRGV4MUMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/769e4eedeb/BodyStrDex1C.png",
+      "min": 40,
+      "mean": 40,
+      "max": 40
+    },
+    {
+      "id": 61811,
+      "name": "Leviathan Greaves",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c1N0cjQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/82bedfd1e0/BootsStr4.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 61812,
+      "name": "Astral Leather",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5RGV4M0MiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/e30de2c7a6/BodyDex3C.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 61814,
+      "name": "Warlock Boots",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c0ludDQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/5589419509/BootsInt4.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 61821,
+      "name": "Lich's Circlet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldEludDgiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/4bb6b31cbe/HelmetInt8.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 61935,
+      "name": "Royal Plate",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Cb2R5U3RyM0MiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/09903268a5/BodyStr3C.png",
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 61948,
+      "name": "Warlock Boots",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Cb290c0ludDQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwiZnJhY3R1cmVkIjp0cnVlfV0/154d7c4f2f/BootsInt4.png",
+      "min": 5,
+      "mean": 10,
+      "max": 5
+    },
+    {
+      "id": 61947,
+      "name": "Giantslayer Helmet",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldFN0cjExIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsImZyYWN0dXJlZCI6dHJ1ZX1d/03b4819350/HelmetStr11.png",
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 61980,
+      "name": "Dire Pelt",
+      "category": "bases",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldERleDQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwic2VhcmluZyI6dHJ1ZX1d/f9f5d8bbd3/HelmetDex4.png",
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    }
+  ]
+}

@@ -1,0 +1,3469 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Standard",
+    "text": "Standard",
+    "slug": "standard"
+  },
+  "category": "currency",
+  "updatedAt": "2026-02-10T14:59:06.000Z",
+  "items": [
+    {
+      "id": 186,
+      "name": "Cartographer's Chisel",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNYXBRdWFsaXR5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c83c35bed5/CurrencyMapQuality.png",
+      "min": 0.7,
+      "mean": 1.59,
+      "max": 1.98
+    },
+    {
+      "id": 1505,
+      "name": "Exalted Shard",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXhhbHRlZFNoYXJkIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/a919870741/ExaltedShard.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 57113,
+      "name": "Cooperation",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UcmlhbG1hc3RlclJpZ2h0RnJhZ21lbnQiLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MX1d/923a1f4d20/TrialmasterRightFragment.png",
+      "min": 10,
+      "mean": 1233,
+      "max": 47.2299
+    },
+    {
+      "id": 57115,
+      "name": "Curiosity",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UcmlhbG1hc3RlckJvdHRvbUZyYWdtZW50IiwidyI6MywiaCI6MSwic2NhbGUiOjF9XQ/78cddd2ad4/TrialmasterBottomFragment.png",
+      "min": 40,
+      "mean": 40,
+      "max": 65.45
+    },
+    {
+      "id": 57116,
+      "name": "Ambition",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UcmlhbG1hc3Rlck1pZGRsZUZyYWdtZW50IiwidyI6MSwiaCI6Miwic2NhbGUiOjF9XQ/ce938362fd/TrialmasterMiddleFragment.png",
+      "min": 41.87,
+      "mean": 41,
+      "max": 805.72
+    },
+    {
+      "id": 57120,
+      "name": "Challenging Delirium Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsaXJpdW0vRGVsaXJpdW1PcmJVbHRpbWF0dW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/382c6157d7/DeliriumOrbUltimatum.png",
+      "min": 143.23,
+      "mean": 411,
+      "max": 406.67
+    },
+    {
+      "id": 64002,
+      "name": "Runegraft of Time",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUxOSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/eac6bee4c7/VillageRune19.png",
+      "min": 80.11,
+      "mean": 75.56,
+      "max": 1626.68
+    },
+    {
+      "id": 64011,
+      "name": "Runegraft of the Bound",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/53af548bef/VillageRune3.png",
+      "min": 31.8,
+      "mean": 269.25,
+      "max": 46.88
+    },
+    {
+      "id": 64021,
+      "name": "Runegraft of the Sinistral",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmU2IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f655bb547e/VillageRune6.png",
+      "min": 8.05,
+      "mean": 5.71,
+      "max": 203.34
+    },
+    {
+      "id": 64025,
+      "name": "Orb of Intention",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2VjcmV0c29mdGhlQXRsYXMvWmFuYVBpbm5hY2xlT3JiMyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/0ccbd52cd2/ZanaPinnacleOrb3.png",
+      "min": 316.43,
+      "mean": 296.16,
+      "max": 459.25
+    },
+    {
+      "id": 64048,
+      "name": "Runegraft of the Witchmark",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUyNCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/367ce008d2/VillageRune24.png",
+      "min": 219.65,
+      "mean": 60,
+      "max": 378.5
+    },
+    {
+      "id": 64017,
+      "name": "Runegraft of the Fortress",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUxIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/539dfedcaf/VillageRune1.png",
+      "min": 89.52,
+      "mean": 109.35,
+      "max": 1626.68
+    },
+    {
+      "id": 64019,
+      "name": "Runegraft of Gemcraft",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUxNCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/2dc9bb5ab7/VillageRune14.png",
+      "min": 1082.58,
+      "mean": 1387.13,
+      "max": 2250.9899
+    },
+    {
+      "id": 64020,
+      "name": "Runegraft of Treachery",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUyMCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ec4c85a8cb/VillageRune20.png",
+      "min": 33.75,
+      "mean": 44.56,
+      "max": 406.67
+    },
+    {
+      "id": 64045,
+      "name": "Orb of Unravelling",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2VjcmV0c29mdGhlQXRsYXMvWmFuYVBpbm5hY2xlT3JiMiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/6af1812735/ZanaPinnacleOrb2.png",
+      "min": 414.82,
+      "mean": 424.41,
+      "max": 833.12
+    },
+    {
+      "id": 64055,
+      "name": "Orb of Remembrance",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2VjcmV0c29mdGhlQXRsYXMvWmFuYVBpbm5hY2xlT3JiMSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/955fc75eee/ZanaPinnacleOrb1.png",
+      "min": 3595.82,
+      "mean": 3821.19,
+      "max": 4150.32
+    },
+    {
+      "id": 64026,
+      "name": "Runegraft of the Jeweller",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmU4IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/2ab7a42c37/VillageRune8.png",
+      "min": 7.11,
+      "mean": 246.77,
+      "max": 8.71
+    },
+    {
+      "id": 64049,
+      "name": "Veiled Exalted Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVmVpbGVkRXhhbHRlZE9yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/729ce24b5a/VeiledExaltedOrb.png",
+      "min": 165.04,
+      "mean": 223.56,
+      "max": 221.72
+    },
+    {
+      "id": 64075,
+      "name": "Runegraft of Restitching",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUyMiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/7164b5744e/VillageRune22.png",
+      "min": 4.5,
+      "mean": 5,
+      "max": 1220.01
+    },
+    {
+      "id": 64033,
+      "name": "Runegraft of the Warp",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUxMSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/9acdc6d6bf/VillageRune11.png",
+      "min": 131.6699,
+      "mean": 85.86,
+      "max": 1626.68
+    },
+    {
+      "id": 64038,
+      "name": "Shaper's Exalted Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2VjcmV0c29mdGhlQXRsYXMvU2hhcGVyRXhhbHRlZE9yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ca4ad1f9eb/ShaperExaltedOrb.png",
+      "min": 739.55,
+      "mean": 881.23,
+      "max": 818.76
+    },
+    {
+      "id": 64047,
+      "name": "Elder's Exalted Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2VjcmV0c29mdGhlQXRsYXMvRWxkZXJFeGFsdGVkT3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/233ff3fef0/ElderExaltedOrb.png",
+      "min": 452.36,
+      "mean": 772.14,
+      "max": 801.72
+    },
+    {
+      "id": 64053,
+      "name": "Runegraft of Quaffing",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUyMSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/29906dc65f/VillageRune21.png",
+      "min": 4,
+      "mean": 9,
+      "max": 1626.68
+    },
+    {
+      "id": 64061,
+      "name": "Runegraft of the River",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmU1IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/359ab82f70/VillageRune5.png",
+      "min": 4.35,
+      "mean": 5,
+      "max": 813.34
+    },
+    {
+      "id": 64058,
+      "name": "Runegraft of Bellows",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUxMyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/b48169261b/VillageRune13.png",
+      "min": 4,
+      "mean": 9.5,
+      "max": 6.99
+    },
+    {
+      "id": 64062,
+      "name": "Runegraft of Stability",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/72f9c23523/VillageRune2.png",
+      "min": 342.66,
+      "mean": 309.36,
+      "max": 2014.3
+    },
+    {
+      "id": 64065,
+      "name": "Runegraft of Blasphemy",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUxNSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/73329c3094/VillageRune15.png",
+      "min": 4,
+      "mean": 12,
+      "max": 22.54
+    },
+    {
+      "id": 64066,
+      "name": "Runegraft of the Soulwick",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUxMiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/39faa76af2/VillageRune12.png",
+      "min": 301.43,
+      "mean": 375.88,
+      "max": 406.67
+    },
+    {
+      "id": 64067,
+      "name": "Runegraft of the Novamark",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUyNSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/f2b2920431/VillageRune25.png",
+      "min": 9,
+      "mean": 211.5,
+      "max": 10.58
+    },
+    {
+      "id": 64069,
+      "name": "Runegraft of the Combatant",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmU0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/7b3f931918/VillageRune4.png",
+      "min": 4.08,
+      "mean": 9.18,
+      "max": 6.91
+    },
+    {
+      "id": 64083,
+      "name": "Runegraft of Loyalty",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUyMyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/55f5558d50/VillageRune23.png",
+      "min": 10.77,
+      "mean": 13.57,
+      "max": 1626.68
+    },
+    {
+      "id": 64315,
+      "name": "Runegraft of the Angler",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmUxMCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/2249acfea4/VillageRune10.png",
+      "min": 156180,
+      "mean": 156180,
+      "max": 156180
+    },
+    {
+      "id": 65345,
+      "name": "Runegraft of Refraction",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2V0dGxlcnMvVmlsbGFnZVJ1bmU3IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b7a66fc6ab/VillageRune7.png",
+      "min": 26.56,
+      "mean": 216.97,
+      "max": 813.34
+    },
+    {
+      "id": 35660,
+      "name": "Orb of Unmaking",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvUmVncmV0T3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/a2ebb4b5a3/RegretOrb.png",
+      "min": 0.67,
+      "mean": 0.87,
+      "max": 1.83
+    },
+    {
+      "id": 42145,
+      "name": "Veiled Chaos Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVmVpbGVkQ2hhb3NPcmIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/fe00a81cbc/VeiledChaosOrb.png",
+      "min": 341.47,
+      "mean": 355.49,
+      "max": 460.93
+    },
+    {
+      "id": 42168,
+      "name": "Accelerating Catalyst",
+      "category": "catalysts",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL1NwZWVkTW9kaWZpZXJDYXRhbHlzdCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/592075333a/SpeedModifierCatalyst.png",
+      "min": 3.25,
+      "mean": 4,
+      "max": 10.41
+    },
+    {
+      "id": 44537,
+      "name": "Tainted Chromatic Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVsbHNjYXBlL0hlbGxzY2FwZUNocm9tYXRpY09yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/c0a50953c2/HellscapeChromaticOrb.png",
+      "min": 17.8,
+      "mean": 18.09,
+      "max": 20.7399
+    },
+    {
+      "id": 44544,
+      "name": "Tainted Jeweller's Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVsbHNjYXBlL0hlbGxzY2FwZUpld2VsbGVyc09yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/7ade99596b/HellscapeJewellersOrb.png",
+      "min": 1.3798,
+      "mean": 3.14,
+      "max": 2.98
+    },
+    {
+      "id": 44546,
+      "name": "Tainted Orb of Fusing",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVsbHNjYXBlL0hlbGxzY2FwZU9yYk9mRnVzaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/a97eb273c3/HellscapeOrbOfFusing.png",
+      "min": 40.22,
+      "mean": 44.16,
+      "max": 45.21
+    },
+    {
+      "id": 44562,
+      "name": "Tainted Exalted Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVsbHNjYXBlL0hlbGxzY2FwZUV4YWx0ZWRPcmIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/7cb146de94/HellscapeExaltedOrb.png",
+      "min": 90,
+      "mean": 700.66,
+      "max": 1133.54
+    },
+    {
+      "id": 44536,
+      "name": "Tainted Armourer's Scrap",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVsbHNjYXBlL0hlbGxzY2FwZUFybW91cmVyc1NjcmFwIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/05e0065a80/HellscapeArmourersScrap.png",
+      "min": 8.36,
+      "mean": 9.72,
+      "max": 9.32
+    },
+    {
+      "id": 44542,
+      "name": "Tainted Blacksmith's Whetstone",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVsbHNjYXBlL0hlbGxzY2FwZUJsYWNrc21pdGhXaGV0c3RvbmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c1551a2a62/HellscapeBlacksmithWhetstone.png",
+      "min": 0.84,
+      "mean": 5.68,
+      "max": 1.36
+    },
+    {
+      "id": 44616,
+      "name": "Tainted Divine Teardrop",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVsbHNjYXBlL0hlbGxzY2FwZVRlYXJkcm9wT3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/e3cd0195e1/HellscapeTeardropOrb.png",
+      "min": 6862.45,
+      "mean": 7700.84,
+      "max": 7908.8
+    },
+    {
+      "id": 45848,
+      "name": "Orb of Dominance",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvTWF2ZW5PcmIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8396ed7d8d/MavenOrb.png",
+      "min": 3467.69,
+      "mean": 3562,
+      "max": 3836.25
+    },
+    {
+      "id": 45851,
+      "name": "Exceptional Eldritch Ember",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2xlYW5zaW5nRmlyZU9yYlJhbms0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/920113641f/CleansingFireOrbRank4.png",
+      "min": 1453.95,
+      "mean": 1374.28,
+      "max": 1562.3
+    },
+    {
+      "id": 45849,
+      "name": "Orb of Conflict",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ29uZmxpY3RPcmJSYW5rMSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/e1919976c3/ConflictOrbRank1.png",
+      "min": 1153.46,
+      "mean": 1342.2,
+      "max": 1437.88
+    },
+    {
+      "id": 45858,
+      "name": "Explorer's Scouting Report",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NvdXRpbmdSZXBvcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/584635f3c8/ScoutingReport.png",
+      "min": 10,
+      "mean": 12.96,
+      "max": 15.8
+    },
+    {
+      "id": 45855,
+      "name": "Lesser Eldritch Ember",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2xlYW5zaW5nRmlyZU9yYlJhbmsxIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/62c98f8357/CleansingFireOrbRank1.png",
+      "min": 0.3,
+      "mean": 0.42,
+      "max": 0.32
+    },
+    {
+      "id": 45854,
+      "name": "Lesser Eldritch Ichor",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVGFuZ2xlT3JiUmFuazEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/3135dab202/TangleOrbRank1.png",
+      "min": 0.27,
+      "mean": 0.89,
+      "max": 0.6
+    },
+    {
+      "id": 45865,
+      "name": "Greater Eldritch Ember",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2xlYW5zaW5nRmlyZU9yYlJhbmsyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/33fd210c40/CleansingFireOrbRank2.png",
+      "min": 2.16,
+      "mean": 2.76,
+      "max": 2.94
+    },
+    {
+      "id": 45861,
+      "name": "Eldritch Exalted Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRWxkcml0Y2hFeGFsdGVkT3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/56026bffa3/EldritchExaltedOrb.png",
+      "min": 62.87,
+      "mean": 64.71,
+      "max": 78.87
+    },
+    {
+      "id": 45862,
+      "name": "Grand Eldritch Ember",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2xlYW5zaW5nRmlyZU9yYlJhbmszIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/65093ad252/CleansingFireOrbRank3.png",
+      "min": 7.48,
+      "mean": 23.43,
+      "max": 31.03
+    },
+    {
+      "id": 45889,
+      "name": "Singular Scouting Report",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NvdXRpbmdSZXBvcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/584635f3c8/ScoutingReport.png",
+      "min": 17.3,
+      "mean": 10.89,
+      "max": 22.66
+    },
+    {
+      "id": 45874,
+      "name": "Greater Eldritch Ichor",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVGFuZ2xlT3JiUmFuazIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/37b581d6b1/TangleOrbRank2.png",
+      "min": 1.3,
+      "mean": 1.43,
+      "max": 1.84
+    },
+    {
+      "id": 45873,
+      "name": "Eldritch Chaos Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRWxkcml0Y2hDaGFvc09yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/afdc1d40be/EldritchChaosOrb.png",
+      "min": 109.11,
+      "mean": 193.64,
+      "max": 176.1399
+    },
+    {
+      "id": 45884,
+      "name": "Oil Extractor",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9JY2hvckV4dHJhY3RvciIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/21d47cfba0/IchorExtractor.png",
+      "min": 35.9099,
+      "mean": 40,
+      "max": 297.2
+    },
+    {
+      "id": 45895,
+      "name": "Vaal Scouting Report",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NvdXRpbmdSZXBvcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/584635f3c8/ScoutingReport.png",
+      "min": 8.58,
+      "mean": 11.16,
+      "max": 18.27
+    },
+    {
+      "id": 45935,
+      "name": "Comprehensive Scouting Report",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NvdXRpbmdSZXBvcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/584635f3c8/ScoutingReport.png",
+      "min": 113.51,
+      "mean": 115.08,
+      "max": 429.68
+    },
+    {
+      "id": 45948,
+      "name": "Operative's Scouting Report",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NvdXRpbmdSZXBvcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/584635f3c8/ScoutingReport.png",
+      "min": 266.36,
+      "mean": 387.21,
+      "max": 352.29
+    },
+    {
+      "id": 45983,
+      "name": "Delirious Scouting Report",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NvdXRpbmdSZXBvcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/584635f3c8/ScoutingReport.png",
+      "min": 10,
+      "mean": 137,
+      "max": 88.77
+    },
+    {
+      "id": 45995,
+      "name": "Blighted Scouting Report",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NvdXRpbmdSZXBvcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/584635f3c8/ScoutingReport.png",
+      "min": 44.76,
+      "mean": 45.67,
+      "max": 54.11
+    },
+    {
+      "id": 47439,
+      "name": "Primal Crystallised Lifeforce",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFydmVzdC9QcmltYWxMaWZlZm9yY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/d5d53c61c3/PrimalLifeforce.png",
+      "min": 0.07,
+      "mean": 0.07,
+      "max": 0.08
+    },
+    {
+      "id": 47440,
+      "name": "Wild Crystallised Lifeforce",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFydmVzdC9XaWxkTGlmZWZvcmNlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/facb3683d5/WildLifeforce.png",
+      "min": 0.07,
+      "mean": 0.07,
+      "max": 0.07
+    },
+    {
+      "id": 47441,
+      "name": "Vivid Crystallised Lifeforce",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFydmVzdC9WaXZpZExpZmVmb3JjZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/9e3d712362/VividLifeforce.png",
+      "min": 0.22,
+      "mean": 0.3,
+      "max": 0.34
+    },
+    {
+      "id": 47458,
+      "name": "Reflective Oil",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9NaXJyb3JPaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/1c90ed676a/MirrorOil.png",
+      "min": 357.92,
+      "mean": 822,
+      "max": 657.44
+    },
+    {
+      "id": 48886,
+      "name": "Fracturing Shard",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRnJhY3R1cmluZ09yYlNoYXJkIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d900d0042c/FracturingOrbShard.png",
+      "min": 239.48,
+      "mean": 338.69,
+      "max": 367.0299
+    },
+    {
+      "id": 48915,
+      "name": "Fracturing Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRnJhY3R1cmluZ09yYkNvbWJpbmVkIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/bb12c8fdcc/FracturingOrbCombined.png",
+      "min": 20.14,
+      "mean": 4251.72,
+      "max": 3963.38
+    },
+    {
+      "id": 60558,
+      "name": "Veiled Scarab",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdGFja2VkU2NhcmFiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/617beab72c/StackedScarab.png",
+      "min": 10.36,
+      "mean": 15.88,
+      "max": 207.22
+    },
+    {
+      "id": 53525,
+      "name": "Tattoo of the Tukohama Warrior",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 5,
+      "mean": 33.88,
+      "max": 41.6599
+    },
+    {
+      "id": 53517,
+      "name": "Tattoo of the Rongokurai Warrior",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 40,
+      "mean": 74.43,
+      "max": 650.67
+    },
+    {
+      "id": 53522,
+      "name": "Tattoo of the Tawhoa Naturalist",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 5.76,
+      "mean": 5.67,
+      "max": 100
+    },
+    {
+      "id": 53549,
+      "name": "Tattoo of the Valako Scout",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 4.5,
+      "mean": 1,
+      "max": 70
+    },
+    {
+      "id": 53534,
+      "name": "Tattoo of the Hinekora Shaman",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 10.56,
+      "mean": 215.71,
+      "max": 406.67
+    },
+    {
+      "id": 53546,
+      "name": "Tattoo of the Tasalio Shaman",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 36.05,
+      "mean": 5,
+      "max": 156.8
+    },
+    {
+      "id": 53532,
+      "name": "Tattoo of the Valako Warrior",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 13.8,
+      "mean": 20,
+      "max": 406.67
+    },
+    {
+      "id": 53551,
+      "name": "Tattoo of the Tawhoa Scout",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 7,
+      "mean": 12.8,
+      "max": 406.67
+    },
+    {
+      "id": 53545,
+      "name": "Tattoo of the Tasalio Bladedancer",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 4.91,
+      "mean": 5,
+      "max": 287.41
+    },
+    {
+      "id": 53565,
+      "name": "Honoured Tattoo of the Oak",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhQ29tbW9uVGF0dHRvb0VxdWlwbWVudCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/80dfeda101/HinekoraCommonTatttooEquipment.png",
+      "min": 20550,
+      "mean": 18495,
+      "max": 27213.07
+    },
+    {
+      "id": 53563,
+      "name": "Honoured Tattoo of the Tuatara",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhQ29tbW9uVGF0dHRvb0VxdWlwbWVudCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/80dfeda101/HinekoraCommonTatttooEquipment.png",
+      "min": 12085.8,
+      "mean": 13782.2,
+      "max": 16932.03
+    },
+    {
+      "id": 53559,
+      "name": "Tattoo of the Arohongui Scout",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 4.93,
+      "mean": 6.25,
+      "max": 406.67
+    },
+    {
+      "id": 53561,
+      "name": "Tattoo of the Rongokurai Brute",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 6.22,
+      "mean": 85.52,
+      "max": 54.86
+    },
+    {
+      "id": 53557,
+      "name": "Honoured Tattoo of the Turtle",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhQ29tbW9uVGF0dHRvb0VxdWlwbWVudCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/80dfeda101/HinekoraCommonTatttooEquipment.png",
+      "min": 5081.82,
+      "mean": 4806.91,
+      "max": 8315.35
+    },
+    {
+      "id": 53564,
+      "name": "Tattoo of the Arohongui Warrior",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 11,
+      "mean": 5,
+      "max": 1626.68
+    },
+    {
+      "id": 53555,
+      "name": "Tattoo of the Valako Shieldbearer",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 1995.7,
+      "mean": 1783.74,
+      "max": 2846.69
+    },
+    {
+      "id": 53554,
+      "name": "Tattoo of the Tasalio Tideshifter",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 80,
+      "mean": 30,
+      "max": 406.67
+    },
+    {
+      "id": 53556,
+      "name": "Tattoo of the Hinekora Storyteller",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 220,
+      "mean": 383.6,
+      "max": 2033.35
+    },
+    {
+      "id": 53558,
+      "name": "Tattoo of the Hinekora Warrior",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 399.08,
+      "mean": 411,
+      "max": 627.12
+    },
+    {
+      "id": 53552,
+      "name": "Tattoo of the Hinekora Deathwarden",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 15.67,
+      "mean": 18.29,
+      "max": 406.67
+    },
+    {
+      "id": 53572,
+      "name": "Honoured Tattoo of the Sky",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhQ29tbW9uVGF0dHRvb0VxdWlwbWVudCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/80dfeda101/HinekoraCommonTatttooEquipment.png",
+      "min": 1859.29,
+      "mean": 1885.76,
+      "max": 4066.7
+    },
+    {
+      "id": 53585,
+      "name": "Tattoo of the Arohongui Shaman",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 60,
+      "mean": 449.33,
+      "max": 724.07
+    },
+    {
+      "id": 53589,
+      "name": "Honoured Tattoo of the Dove",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhQ29tbW9uVGF0dHRvb0VxdWlwbWVudCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/80dfeda101/HinekoraCommonTatttooEquipment.png",
+      "min": 1626.68,
+      "mean": 1815.25,
+      "max": 2376.42
+    },
+    {
+      "id": 53588,
+      "name": "Tattoo of the Tawhoa Shaman",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 93,
+      "mean": 326.58,
+      "max": 220
+    },
+    {
+      "id": 53591,
+      "name": "Tattoo of the Tukohama Warmonger",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 271.72,
+      "mean": 361.68,
+      "max": 853.34
+    },
+    {
+      "id": 53575,
+      "name": "Tattoo of the Tawhoa Herbalist",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 424.78,
+      "mean": 436.69,
+      "max": 1220.01
+    },
+    {
+      "id": 53573,
+      "name": "Tattoo of the Ramako Shaman",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 1220.01,
+      "mean": 1335.75,
+      "max": 1978.57
+    },
+    {
+      "id": 53590,
+      "name": "Tattoo of the Rongokurai Turtle",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 873.38,
+      "mean": 1233,
+      "max": 4066.7
+    },
+    {
+      "id": 53597,
+      "name": "Tattoo of the Hinekora Warmonger",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 272.13,
+      "mean": 263.27,
+      "max": 2846.69
+    },
+    {
+      "id": 53598,
+      "name": "Tattoo of the Ramako Scout",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 85.38,
+      "mean": 87.43,
+      "max": 416.85
+    },
+    {
+      "id": 53610,
+      "name": "Tattoo of the Kitava Blood Drinker",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 18.91,
+      "mean": 96,
+      "max": 241.71
+    },
+    {
+      "id": 53614,
+      "name": "Tattoo of the Ngamahu Firewalker",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 66.25,
+      "mean": 225.96,
+      "max": 406.67
+    },
+    {
+      "id": 53596,
+      "name": "Tattoo of the Tasalio Scout",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 656.75,
+      "mean": 873.38,
+      "max": 943.11
+    },
+    {
+      "id": 53595,
+      "name": "Tattoo of the Ngamahu Woodcarver",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 16.8,
+      "mean": 16,
+      "max": 406.67
+    },
+    {
+      "id": 53601,
+      "name": "Tattoo of the Kitava Shaman",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 256.76,
+      "mean": 424.33,
+      "max": 416.56
+    },
+    {
+      "id": 53583,
+      "name": "Omen of the Soul Devourer",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zM0JsdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c90fccd068/VoodooOmens3Blue.png",
+      "min": 1,
+      "mean": 9,
+      "max": 1
+    },
+    {
+      "id": 53580,
+      "name": "Omen of Brilliance",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zNEJsdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/3492df192d/VoodooOmens4Blue.png",
+      "min": 19.2,
+      "mean": 30,
+      "max": 427.87
+    },
+    {
+      "id": 53606,
+      "name": "Tattoo of the Ngamahu Warmonger",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 1438.79,
+      "mean": 1952.25,
+      "max": 4066.7
+    },
+    {
+      "id": 53625,
+      "name": "Tattoo of the Ngamahu Warrior",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 42.7299,
+      "mean": 20,
+      "max": 406.67
+    },
+    {
+      "id": 53631,
+      "name": "Tattoo of the Tasalio Warrior",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 346.5,
+      "mean": 411,
+      "max": 2440.02
+    },
+    {
+      "id": 53632,
+      "name": "Tattoo of the Kitava Heart Eater",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 10,
+      "mean": 10,
+      "max": 416.56
+    },
+    {
+      "id": 53636,
+      "name": "Honoured Tattoo of the Hatungo",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhQ29tbW9uVGF0dHRvb0VxdWlwbWVudCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/80dfeda101/HinekoraCommonTatttooEquipment.png",
+      "min": 52786.26,
+      "mean": 72618.56,
+      "max": 561204.6
+    },
+    {
+      "id": 53657,
+      "name": "Omen of Resurgence",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zMVllbGxvdyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/186596afad/VoodooOmens1Yellow.png",
+      "min": 411,
+      "mean": 411,
+      "max": 411
+    },
+    {
+      "id": 53660,
+      "name": "Omen of Death-dancing",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zMVllbGxvdyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/186596afad/VoodooOmens1Yellow.png",
+      "min": 22.4899,
+      "mean": 10,
+      "max": 101.67
+    },
+    {
+      "id": 53680,
+      "name": "Loyalty Tattoo of Kaom",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVTdHJUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c7c5e8c4de/RareStrTatttooEquipment.png",
+      "min": 399.14,
+      "mean": 2712.6,
+      "max": 2055
+    },
+    {
+      "id": 53698,
+      "name": "Tattoo of the Kitava Rebel",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 10.8,
+      "mean": 105.51,
+      "max": 88.14
+    },
+    {
+      "id": 53695,
+      "name": "Loyalty Tattoo of Utula",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVTdHJUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c7c5e8c4de/RareStrTatttooEquipment.png",
+      "min": 1291.71,
+      "mean": 411,
+      "max": 3867.12
+    },
+    {
+      "id": 53689,
+      "name": "Omen of Amelioration",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zMUJsdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/2ef7acaf03/VoodooOmens1Blue.png",
+      "min": 797.98,
+      "mean": 762.34,
+      "max": 1016.675
+    },
+    {
+      "id": 53703,
+      "name": "Loyalty Tattoo of Ahuana",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVEZXhUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/a2e28f4b6c/RareDexTatttooEquipment.png",
+      "min": 2365.66,
+      "mean": 3288,
+      "max": 3612.7
+    },
+    {
+      "id": 53705,
+      "name": "Loyalty Tattoo of Tawhanuku",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVJbnRUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b43cc22fc6/RareIntTatttooEquipment.png",
+      "min": 271.2799,
+      "mean": 411,
+      "max": 691.64
+    },
+    {
+      "id": 53699,
+      "name": "Loyalty Tattoo of Kiloava",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVJbnRUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b43cc22fc6/RareIntTatttooEquipment.png",
+      "min": 805.72,
+      "mean": 1233,
+      "max": 4791.6
+    },
+    {
+      "id": 53736,
+      "name": "Honoured Tattoo of the Wise",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhUmFyZUludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/77b2de82f9/HinekoraRareIntTatttooEquipment.png",
+      "min": 8896.22,
+      "mean": 8877.6,
+      "max": 10275
+    },
+    {
+      "id": 53735,
+      "name": "Tattoo of the Tasalio Makanga",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVJbnRUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b43cc22fc6/RareIntTatttooEquipment.png",
+      "min": 4028.6,
+      "mean": 18860.33,
+      "max": 162668
+    },
+    {
+      "id": 53725,
+      "name": "Tattoo of the Ramako Makanga",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVEZXhUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/a2e28f4b6c/RareDexTatttooEquipment.png",
+      "min": 52350.15,
+      "mean": 90009,
+      "max": 86267.46
+    },
+    {
+      "id": 53720,
+      "name": "Omen of Death's Door",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zNFllbGxvdyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/c65d1281e2/VoodooOmens4Yellow.png",
+      "min": 3,
+      "mean": 411,
+      "max": 415.3
+    },
+    {
+      "id": 53737,
+      "name": "Tattoo of the Kitava Makanga",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVTdHJUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c7c5e8c4de/RareStrTatttooEquipment.png",
+      "min": 3973,
+      "mean": 13197.67,
+      "max": 11858.3
+    },
+    {
+      "id": 53724,
+      "name": "Omen of the Jeweller",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zMlB1cnBsZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/9033727556/VoodooOmens2Purple.png",
+      "min": 20,
+      "mean": 100,
+      "max": 4066.7
+    },
+    {
+      "id": 53722,
+      "name": "Omen of Connections",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zM1B1cnBsZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/73a387466a/VoodooOmens3Purple.png",
+      "min": 1995.7,
+      "mean": 2055,
+      "max": 2148.4
+    },
+    {
+      "id": 53785,
+      "name": "Tattoo of the Valako Makanga",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVJbnRUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b43cc22fc6/RareIntTatttooEquipment.png",
+      "min": 0.27,
+      "mean": 18084,
+      "max": 621391.76
+    },
+    {
+      "id": 53799,
+      "name": "Tattoo of the Tukohama Makanga",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVTdHJUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c7c5e8c4de/RareStrTatttooEquipment.png",
+      "min": 1438.5,
+      "mean": 8494,
+      "max": 1933.56
+    },
+    {
+      "id": 53819,
+      "name": "Honoured Tattoo of the Berserker",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhUmFyZURleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/ab06601d49/HinekoraRareDexTatttooEquipment.png",
+      "min": 3794.78,
+      "mean": 9864,
+      "max": 14440.75
+    },
+    {
+      "id": 53821,
+      "name": "Tattoo of the Hinekora Makanga",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVJbnRUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b43cc22fc6/RareIntTatttooEquipment.png",
+      "min": 2472,
+      "mean": 6904.8,
+      "max": 3887.89
+    },
+    {
+      "id": 53836,
+      "name": "Honoured Tattoo of the Flood",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhUmFyZUludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/77b2de82f9/HinekoraRareIntTatttooEquipment.png",
+      "min": 402.86,
+      "mean": 3699,
+      "max": 1656.96
+    },
+    {
+      "id": 53873,
+      "name": "Honoured Tattoo of the Barbarian",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhUmFyZURleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/ab06601d49/HinekoraRareDexTatttooEquipment.png",
+      "min": 20948.72,
+      "mean": 24921.55,
+      "max": 25315.62
+    },
+    {
+      "id": 53906,
+      "name": "Honoured Tattoo of the Mountain",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhUmFyZVN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/21ddcb435d/HinekoraRareStrTatttooEquipment.png",
+      "min": 9050.7,
+      "mean": 10448.05,
+      "max": 20333.5
+    },
+    {
+      "id": 54228,
+      "name": "Journey Tattoo of Makanui",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1VuaXF1ZTRUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/6e8c1bd4e6/Unique4TatttooEquipment.png",
+      "min": 144158.27,
+      "mean": 202931.25,
+      "max": 228274.2
+    },
+    {
+      "id": 54232,
+      "name": "Journey Tattoo of the Soul",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1VuaXF1ZTNUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b9554ff666/Unique3TatttooEquipment.png",
+      "min": 2362.15,
+      "mean": 3288,
+      "max": 40667
+    },
+    {
+      "id": 54230,
+      "name": "Journey Tattoo of the Body",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1VuaXF1ZTNUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b9554ff666/Unique3TatttooEquipment.png",
+      "min": 7942.44,
+      "mean": 7809,
+      "max": 22366.85
+    },
+    {
+      "id": 45890,
+      "name": "Influenced Scouting Report",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NvdXRpbmdSZXBvcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/584635f3c8/ScoutingReport.png",
+      "min": 6.87,
+      "mean": 7.22,
+      "max": 21.3
+    },
+    {
+      "id": 53782,
+      "name": "Honoured Tattoo of the Warlord",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhUmFyZVN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/21ddcb435d/HinekoraRareStrTatttooEquipment.png",
+      "min": 1752.48,
+      "mean": 2157.75,
+      "max": 8133.4
+    },
+    {
+      "id": 42169,
+      "name": "Unstable Catalyst",
+      "category": "catalysts",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL0NyaXRpY2FsTW9kaWZpZXJDYXRhbHlzdCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/18e5522c0e/CriticalModifierCatalyst.png",
+      "min": 7.43,
+      "mean": 2,
+      "max": 12.5
+    },
+    {
+      "id": 53521,
+      "name": "Tattoo of the Ramako Sniper",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 10,
+      "mean": 232.9,
+      "max": 255.05
+    },
+    {
+      "id": 53593,
+      "name": "Tattoo of the Rongokurai Guard",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 9.67,
+      "mean": 12,
+      "max": 406.67
+    },
+    {
+      "id": 53584,
+      "name": "Tattoo of the Rongokurai Goliath",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 19.4899,
+      "mean": 83.39,
+      "max": 54.81
+    },
+    {
+      "id": 54231,
+      "name": "Honoured Tattoo of the Makanga",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1VuaXF1ZTJUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/180024f962/Unique2TatttooEquipment.png",
+      "min": 2398.98,
+      "mean": 4932,
+      "max": 40667
+    },
+    {
+      "id": 53664,
+      "name": "Loyalty Tattoo of Akoya",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVTdHJUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c7c5e8c4de/RareStrTatttooEquipment.png",
+      "min": 334,
+      "mean": 411,
+      "max": 3867.12
+    },
+    {
+      "id": 56327,
+      "name": "Divine Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNb2RWYWx1ZXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1a54ff97d/CurrencyModValues.png",
+      "min": 0,
+      "mean": 411.35,
+      "max": 421.39
+    },
+    {
+      "id": 90,
+      "name": "Exalted Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lBZGRNb2RUb1JhcmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b102771c23/CurrencyAddModToRare.png",
+      "min": 75.93,
+      "mean": 73.58,
+      "max": 82.31
+    },
+    {
+      "id": 658,
+      "name": "Imbued Catalyst",
+      "category": "catalysts",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL0ltYnVlZENhdGFseXN0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/9053293cf6/ImbuedCatalyst.png",
+      "min": 1.23,
+      "mean": 1,
+      "max": 2
+    },
+    {
+      "id": 28,
+      "name": "Abrasive Catalyst",
+      "category": "catalysts",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL0FicmFzaXZlQ2F0YWx5c3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c4e7f7f379/AbrasiveCatalyst.png",
+      "min": 1.23,
+      "mean": 1.17,
+      "max": 2
+    },
+    {
+      "id": 30,
+      "name": "Intrinsic Catalyst",
+      "category": "catalysts",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL0ludHJpbnNpY0NhdGFseXN0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/107ffb799e/IntrinsicCatalyst.png",
+      "min": 1.29,
+      "mean": 1.43,
+      "max": 5.53
+    },
+    {
+      "id": 29,
+      "name": "Turbulent Catalyst",
+      "category": "catalysts",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL1R1cmJ1bGVudENhdGFseXN0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/fc41fe8950/TurbulentCatalyst.png",
+      "min": 1,
+      "mean": 1.14,
+      "max": 3.63
+    },
+    {
+      "id": 54,
+      "name": "Gemcutter's Prism",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lHZW1RdWFsaXR5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1be1273b91/CurrencyGemQuality.png",
+      "min": 3.4,
+      "mean": 4.11,
+      "max": 4.18
+    },
+    {
+      "id": 57,
+      "name": "Chromatic Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lSZXJvbGxTb2NrZXRDb2xvdXJzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/136314c10a/CurrencyRerollSocketColours.png",
+      "min": 0.3,
+      "mean": 0.23,
+      "max": 0.36
+    },
+    {
+      "id": 50,
+      "name": "Redeemer's Exalted Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5mbHVlbmNlIEV4YWx0cy9FeXJpZU9yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/6157e9ce59/EyrieOrb.png",
+      "min": 805.72,
+      "mean": 888.75,
+      "max": 1011.89
+    },
+    {
+      "id": 52,
+      "name": "Harbinger's Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFyYmluZ2VyT3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3e31090ea7/HarbingerOrb.png",
+      "min": 4.7699,
+      "mean": 6.27,
+      "max": 7.76
+    },
+    {
+      "id": 55,
+      "name": "Crusader's Exalted Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5mbHVlbmNlIEV4YWx0cy9DcnVzYWRlck9yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/0449a66634/CrusaderOrb.png",
+      "min": 805.72,
+      "mean": 807.27,
+      "max": 1241.7
+    },
+    {
+      "id": 58,
+      "name": "Orb of Annulment",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5udWxsT3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/88cfdbe1e5/AnnullOrb.png",
+      "min": 19.8,
+      "mean": 20.4,
+      "max": 21.47
+    },
+    {
+      "id": 53,
+      "name": "Mirror Shard",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvTWlycm9yU2hhcmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6604b7aa32/MirrorShard.png",
+      "min": 31886.85,
+      "mean": 33207.16,
+      "max": 34087.95
+    },
+    {
+      "id": 92,
+      "name": "Vaal Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lWYWFsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/304f775089/CurrencyVaal.png",
+      "min": 1.3899,
+      "mean": 1.37,
+      "max": 1.74
+    },
+    {
+      "id": 140,
+      "name": "Jeweller's Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lSZXJvbGxTb2NrZXROdW1iZXJzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/685633cb14/CurrencyRerollSocketNumbers.png",
+      "min": 0.16,
+      "mean": 0.15,
+      "max": 0.22
+    },
+    {
+      "id": 138,
+      "name": "Hunter's Exalted Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5mbHVlbmNlIEV4YWx0cy9CYXNpbGlza09yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/c17ac5e60c/BasiliskOrb.png",
+      "min": 1506.99,
+      "mean": 1724.51,
+      "max": 1659.15
+    },
+    {
+      "id": 209,
+      "name": "Mirror of Kalandra",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lEdXBsaWNhdGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/7111e35254/CurrencyDuplicate.png",
+      "min": 0.26,
+      "mean": 538615.4,
+      "max": 658960.98
+    },
+    {
+      "id": 428,
+      "name": "Orb of Horizons",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSG9yaXpvbk9yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/a48e326c68/HorizonOrb.png",
+      "min": 0.33,
+      "mean": 0.43,
+      "max": 0.58
+    },
+    {
+      "id": 634,
+      "name": "First Piece of Storms",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hhcmJpbmdlclNoYXJkcy9TaGFyZDEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/571346519c/Shard1.png",
+      "min": 2055,
+      "mean": 2056.75,
+      "max": 2112.35
+    },
+    {
+      "id": 677,
+      "name": "Third Piece of the Arcane",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0hhcmJpbmdlckxlYWd1ZVNoYXJkcy9IYXJiaW5nZXJTd29yZFNoYXJkMyIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/b0044b38e9/HarbingerSwordShard3.png",
+      "min": 10,
+      "mean": 18,
+      "max": 16.67
+    },
+    {
+      "id": 1276,
+      "name": "Blacksmith's Whetstone",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lXZWFwb25RdWFsaXR5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c874e03eb7/CurrencyWeaponQuality.png",
+      "min": 0.07,
+      "mean": 0.21,
+      "max": 0.67
+    },
+    {
+      "id": 1291,
+      "name": "Orb of Augmentation",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lBZGRNb2RUb01hZ2ljIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1a6cb2ad17/CurrencyAddModToMagic.png",
+      "min": 0.06,
+      "mean": 0.05,
+      "max": 0.24
+    },
+    {
+      "id": 1371,
+      "name": "Fertile Catalyst",
+      "category": "catalysts",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL0ZlcnRpbGVDYXRhbHlzdCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/4b4ca5d929/FertileCatalyst.png",
+      "min": 40.3,
+      "mean": 11.68,
+      "max": 82.54
+    },
+    {
+      "id": 1372,
+      "name": "Tempering Catalyst",
+      "category": "catalysts",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL1RlbXBlcmluZ0NhdGFseXN0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/7b6277022e/TemperingCatalyst.png",
+      "min": 29.82,
+      "mean": 6.43,
+      "max": 406.67
+    },
+    {
+      "id": 1399,
+      "name": "Regal Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lVcGdyYWRlTWFnaWNUb1JhcmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/898378b439/CurrencyUpgradeMagicToRare.png",
+      "min": 0.93,
+      "mean": 0.83,
+      "max": 1.08
+    },
+    {
+      "id": 1537,
+      "name": "Orb of Regret",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lQYXNzaXZlU2tpbGxSZWZ1bmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6b8ab3ff07/CurrencyPassiveSkillRefund.png",
+      "min": 0.98,
+      "mean": 0.91,
+      "max": 1.24
+    },
+    {
+      "id": 1781,
+      "name": "Perandus Coin",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lDb2luIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/32ca6f562d/CurrencyCoin.png",
+      "min": 0.19,
+      "mean": 0.56,
+      "max": 319.56
+    },
+    {
+      "id": 1808,
+      "name": "Prismatic Catalyst",
+      "category": "catalysts",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL1ByaXNtYXRpY0NhdGFseXN0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/5e51d41a0e/PrismaticCatalyst.png",
+      "min": 26.28,
+      "mean": 69.44,
+      "max": 71.02
+    },
+    {
+      "id": 2019,
+      "name": "Vial of Fate",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVmlhbFN0b3J5VmFhbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/5cc747026e/VialStoryVaal.png",
+      "min": 3.4,
+      "mean": 4.11,
+      "max": 6.38
+    },
+    {
+      "id": 2093,
+      "name": "Vial of Awakening",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVmlhbFNsdW1iZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/153f99e185/VialSlumber.png",
+      "min": 399.14,
+      "mean": 4113.5,
+      "max": 429.68
+    },
+    {
+      "id": 2102,
+      "name": "Vial of Transcendence",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVmlhbFRlbXBlcmVkRmxlc2giLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/ff6f1f931e/VialTemperedFlesh.png",
+      "min": 100,
+      "mean": 100,
+      "max": 109.81
+    },
+    {
+      "id": 2444,
+      "name": "Portal Scroll",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lQb3J0YWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/a55c72f398/CurrencyPortal.png",
+      "min": 0.05,
+      "mean": 0.09,
+      "max": 0.42
+    },
+    {
+      "id": 2447,
+      "name": "Glassblower's Bauble",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lGbGFza1F1YWxpdHkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8a36dffe11/CurrencyFlaskQuality.png",
+      "min": 0.89,
+      "mean": 0.76,
+      "max": 1.21
+    },
+    {
+      "id": 2445,
+      "name": "Orb of Scouring",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lDb252ZXJ0VG9Ob3JtYWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6953e90545/CurrencyConvertToNormal.png",
+      "min": 0.7,
+      "mean": 0.98,
+      "max": 1.12
+    },
+    {
+      "id": 2449,
+      "name": "Scroll of Wisdom",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lJZGVudGlmaWNhdGlvbiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/3a1e615322/CurrencyIdentification.png",
+      "min": 0.01,
+      "mean": 0.02,
+      "max": 0.29
+    },
+    {
+      "id": 2451,
+      "name": "Orb of Chance",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lVcGdyYWRlUmFuZG9tbHkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/eaeece27be/CurrencyUpgradeRandomly.png",
+      "min": 0.15,
+      "mean": 0.28,
+      "max": 0.19
+    },
+    {
+      "id": 2443,
+      "name": "Orb of Alchemy",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lVcGdyYWRlVG9SYXJlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f0dc27cd7c/CurrencyUpgradeToRare.png",
+      "min": 0.07,
+      "mean": 0.11,
+      "max": 0.11
+    },
+    {
+      "id": 2448,
+      "name": "Blessed Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lJbXBsaWNpdE1vZCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/c3cbf3e5ab/CurrencyImplicitMod.png",
+      "min": 0.43,
+      "mean": 0.73,
+      "max": 0.52
+    },
+    {
+      "id": 2598,
+      "name": "Unshaping Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXRsYXNEb3duZ3JhZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/0f3716b72b/AtlasDowngrade.png",
+      "min": 3991.4,
+      "mean": 4113.5,
+      "max": 4296.8
+    },
+    {
+      "id": 2698,
+      "name": "Third Piece of Storms",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hhcmJpbmdlclNoYXJkcy9TaGFyZDMiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/130f12073c/Shard3.png",
+      "min": 5,
+      "mean": 5,
+      "max": 7
+    },
+    {
+      "id": 2699,
+      "name": "Second Piece of the Arcane",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0hhcmJpbmdlckxlYWd1ZVNoYXJkcy9IYXJiaW5nZXJTd29yZFNoYXJkMiIsInciOjEsImgiOjIsInNjYWxlIjoxfV0/244c6caa1e/HarbingerSwordShard2.png",
+      "min": 3.67,
+      "mean": 5.73,
+      "max": 10
+    },
+    {
+      "id": 2795,
+      "name": "Apprentice Cartographer's Seal",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2VhbFdoaXRlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b17568d971/SealWhite.png",
+      "min": 0.26,
+      "mean": 35787.450000000004,
+      "max": 742971.37
+    },
+    {
+      "id": 2912,
+      "name": "Harbinger's Shard",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFyYmluZ2VyU2hhcmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/9b8b1837d2/HarbingerShard.png",
+      "min": 28,
+      "mean": 0,
+      "max": 28
+    },
+    {
+      "id": 3017,
+      "name": "Second Piece of Storms",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hhcmJpbmdlclNoYXJkcy9TaGFyZDIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/931375a2c0/Shard2.png",
+      "min": 7,
+      "mean": 80,
+      "max": 39480.28
+    },
+    {
+      "id": 3262,
+      "name": "Vial of Consequence",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVmlhbENvd2FyZHNDaGFpbnMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/49367d5e04/VialCowardsChains.png",
+      "min": 20,
+      "mean": 91.44,
+      "max": 68.53
+    },
+    {
+      "id": 3549,
+      "name": "Simple Rope Net",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlUcmFwMSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/f88cb77185/BestiaryTrap1.png",
+      "min": 50,
+      "mean": 50,
+      "max": 50
+    },
+    {
+      "id": 4287,
+      "name": "Second Piece of Brutality",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvSGFyYmluZ2VyU2hhcmRzL1NoYXJkMiIsInciOjEsImgiOjIsInNjYWxlIjoxfV0/992359550f/Shard2.png",
+      "min": 6.56,
+      "mean": 50,
+      "max": 39480.28
+    },
+    {
+      "id": 4285,
+      "name": "First Piece of the Arcane",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0hhcmJpbmdlckxlYWd1ZVNoYXJkcy9IYXJiaW5nZXJTd29yZFNoYXJkMSIsInciOjEsImgiOjIsInNjYWxlIjoxfV0/34740b6337/HarbingerSwordShard1.png",
+      "min": 6.6,
+      "mean": 7.5,
+      "max": 8.11
+    },
+    {
+      "id": 60816,
+      "name": "Curio of Absorption",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QaW5uYWNsZUZyYWdtZW50RXhhcmNoIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/0da90fe2d1/PinnacleFragmentExarch.png",
+      "min": 537.15,
+      "mean": 725.91,
+      "max": 3660.03
+    },
+    {
+      "id": 4443,
+      "name": "Thaumaturgical Net",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlUcmFwMTAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/256605e9d6/BestiaryTrap10.png",
+      "min": 822,
+      "mean": 822.7,
+      "max": 844.94
+    },
+    {
+      "id": 4576,
+      "name": "First Piece of Brutality",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvSGFyYmluZ2VyU2hhcmRzL1NoYXJkMSIsInciOjEsImgiOjIsInNjYWxlIjoxfV0/4dec967e18/Shard1.png",
+      "min": 5.15,
+      "mean": 5.6,
+      "max": 7
+    },
+    {
+      "id": 60830,
+      "name": "Curio of Decay",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QaW5uYWNsZUZyYWdtZW50RWxkZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/40544dbcfb/PinnacleFragmentElder.png",
+      "min": 402.86,
+      "mean": 551.8,
+      "max": 813.34
+    },
+    {
+      "id": 60845,
+      "name": "Curio of Consumption",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QaW5uYWNsZUZyYWdtZW50RWF0ZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/a386f18599/PinnacleFragmentEater.png",
+      "min": 2820.02,
+      "mean": 7815.650000000001,
+      "max": 4880.04
+    },
+    {
+      "id": 5726,
+      "name": "Master Cartographer's Seal",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2VhbFJlZCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/19547bcaf5/SealRed.png",
+      "min": 11979,
+      "mean": 12340.5,
+      "max": 128904
+    },
+    {
+      "id": 6036,
+      "name": "Third Piece of Brutality",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvSGFyYmluZ2VyU2hhcmRzL1NoYXJkMyIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/b2ec5375d5/Shard3.png",
+      "min": 82,
+      "mean": 2056.75,
+      "max": 100
+    },
+    {
+      "id": 60865,
+      "name": "Curio of Potential",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QaW5uYWNsZUZyYWdtZW50TWF2ZW4iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/53c751ef5d/PinnacleFragmentMaven.png",
+      "min": 805.72,
+      "mean": 1380.96,
+      "max": 1345.8699
+    },
+    {
+      "id": 6194,
+      "name": "Strong Steel Net",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlUcmFwOSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/be128a6187/BestiaryTrap9.png",
+      "min": 2056.75,
+      "mean": 2056.75,
+      "max": 2056.75
+    },
+    {
+      "id": 6195,
+      "name": "Reinforced Steel Net",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlUcmFwOCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/e45e7b50e4/BestiaryTrap8.png",
+      "min": 411,
+      "mean": 411.35,
+      "max": 411
+    },
+    {
+      "id": 6248,
+      "name": "Reinforced Rope Net",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlUcmFwMiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/f5c14993fb/BestiaryTrap2.png",
+      "min": 39914,
+      "mean": 41135,
+      "max": 42968
+    },
+    {
+      "id": 7603,
+      "name": "Vial of Sacrifice",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVmlhbFNhY3JpZmljaWFsSGVhcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/7f68150b22/VialSacrificialHeart.png",
+      "min": 32880,
+      "mean": 32908,
+      "max": 32880
+    },
+    {
+      "id": 7743,
+      "name": "Necromancy Net",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvTmVjcm9uZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/a42aac619c/Necronet.png",
+      "min": 3098.11,
+      "mean": 822.7,
+      "max": 39930
+    },
+    {
+      "id": 8044,
+      "name": "Vial of the Ghost",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVmlhbFNvdWxDYXRjaGVyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/41cbc9ed1d/VialSoulCatcher.png",
+      "min": 15566.46,
+      "mean": 16042.650000000001,
+      "max": 16757.52
+    },
+    {
+      "id": 8072,
+      "name": "Infused Engineer's Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5mdXNlZEVuZ2luZWVyc09yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/af16686b10/InfusedEngineersOrb.png",
+      "min": 35,
+      "mean": 411.35,
+      "max": 791.85
+    },
+    {
+      "id": 10375,
+      "name": "Tempering Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGl2aW5lRW5jaGFudEJvZHlBcm1vdXJDdXJyZW5jeSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/41418e201d/DivineEnchantBodyArmourCurrency.png",
+      "min": 945.3,
+      "mean": 1724.93,
+      "max": 1824.04
+    },
+    {
+      "id": 51,
+      "name": "Warlord's Exalted Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5mbHVlbmNlIEV4YWx0cy9Db25xdWVyb3JPcmIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/14d882831a/ConquerorOrb.png",
+      "min": 1183.28,
+      "mean": 1449.55,
+      "max": 1531.57
+    },
+    {
+      "id": 1398,
+      "name": "Orb of Binding",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmluZGluZ09yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/66ef64410c/BindingOrb.png",
+      "min": 0.24,
+      "mean": 0.22,
+      "max": 0.52
+    },
+    {
+      "id": 2446,
+      "name": "Orb of Fusing",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lSZXJvbGxTb2NrZXRMaW5rcyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/f38529edfc/CurrencyRerollSocketLinks.png",
+      "min": 0.33,
+      "mean": 0.37,
+      "max": 0.38
+    },
+    {
+      "id": 325,
+      "name": "Ancient Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jaWVudE9yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/08feb97abf/AncientOrb.png",
+      "min": 17.93,
+      "mean": 17,
+      "max": 20.18
+    },
+    {
+      "id": 4964,
+      "name": "Vial of the Ritual",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVmlhbERhbmNlT2ZmZXJlZCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/a21fb783fd/VialDanceOffered.png",
+      "min": 1,
+      "mean": 3.71,
+      "max": 7.77
+    },
+    {
+      "id": 3058,
+      "name": "Albino Rhoa Feather",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lSaG9hRmVhdGhlciIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/a6c81de02d/CurrencyRhoaFeather.png",
+      "min": 1507.07,
+      "mean": 2468.1,
+      "max": 4468.6899
+    },
+    {
+      "id": 10417,
+      "name": "Tailoring Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGl2aW5lRW5jaGFudFdlYXBvbkN1cnJlbmN5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c5f4a79b45/DivineEnchantWeaponCurrency.png",
+      "min": 2510.13,
+      "mean": 2607.74,
+      "max": 2903.16
+    },
+    {
+      "id": 53710,
+      "name": "Loyalty Tattoo of Ikiaho",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVEZXhUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/a2e28f4b6c/RareDexTatttooEquipment.png",
+      "min": 402.86,
+      "mean": 822.7,
+      "max": 747.27
+    },
+    {
+      "id": 53743,
+      "name": "Honoured Tattoo of the Hunter",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhUmFyZURleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/ab06601d49/HinekoraRareDexTatttooEquipment.png",
+      "min": 3524.26,
+      "mean": 4570.56,
+      "max": 16241.9
+    },
+    {
+      "id": 53899,
+      "name": "Honoured Tattoo of the Storm",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhUmFyZUludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/77b2de82f9/HinekoraRareIntTatttooEquipment.png",
+      "min": 28840,
+      "mean": 36147.38,
+      "max": 174868.1
+    },
+    {
+      "id": 53691,
+      "name": "Loyalty Tattoo of Rakiata",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVEZXhUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/a2e28f4b6c/RareDexTatttooEquipment.png",
+      "min": 805.72,
+      "mean": 12340.5,
+      "max": 20486.21
+    },
+    {
+      "id": 53853,
+      "name": "Honoured Tattoo of the Pa",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhUmFyZVN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/21ddcb435d/HinekoraRareStrTatttooEquipment.png",
+      "min": 3998.3,
+      "mean": 11047.69,
+      "max": 5569.76
+    },
+    {
+      "id": 53592,
+      "name": "Tattoo of the Arohongui Warmonger",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 20,
+      "mean": 20,
+      "max": 416.56
+    },
+    {
+      "id": 53616,
+      "name": "Tattoo of the Kitava Warrior",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 20,
+      "mean": 132.66,
+      "max": 406.67
+    },
+    {
+      "id": 53574,
+      "name": "Tattoo of the Tukohama Warcaller",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 267.05,
+      "mean": 1192.91,
+      "max": 1220.01
+    },
+    {
+      "id": 53566,
+      "name": "Tattoo of the Ramako Archer",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 85,
+      "mean": 111.2,
+      "max": 2033.35
+    },
+    {
+      "id": 53707,
+      "name": "Loyalty Tattoo of Maata",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVJbnRUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b43cc22fc6/RareIntTatttooEquipment.png",
+      "min": 187,
+      "mean": 822.7,
+      "max": 672.59
+    },
+    {
+      "id": 53586,
+      "name": "Tattoo of the Valako Stormrider",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 76,
+      "mean": 144.73,
+      "max": 406.67
+    },
+    {
+      "id": 53747,
+      "name": "Tattoo of the Ngamahu Makanga",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVTdHJUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c7c5e8c4de/RareStrTatttooEquipment.png",
+      "min": 16114.4,
+      "mean": 59234.4,
+      "max": 37638.24
+    },
+    {
+      "id": 53788,
+      "name": "Tattoo of the Tawhoa Makanga",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVEZXhUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/a2e28f4b6c/RareDexTatttooEquipment.png",
+      "min": 0.32,
+      "mean": 596457.5,
+      "max": 803071.11
+    },
+    {
+      "id": 45852,
+      "name": "Eldritch Orb of Annulment",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRWxkcml0Y2hBbm51bG1lbnRPcmIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/cd03411d81/EldritchAnnulmentOrb.png",
+      "min": 97.08,
+      "mean": 120.22,
+      "max": 169.45
+    },
+    {
+      "id": 44552,
+      "name": "Tainted Chaos Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVsbHNjYXBlL0hlbGxzY2FwZUNoYW9zT3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/bd934ad92b/HellscapeChaosOrb.png",
+      "min": 27.14,
+      "mean": 126.55,
+      "max": 107.33
+    },
+    {
+      "id": 53653,
+      "name": "Tattoo of the Ngamahu Shaman",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 5.34,
+      "mean": 77.79,
+      "max": 59.22
+    },
+    {
+      "id": 53535,
+      "name": "Tattoo of the Arohongui Moonwarden",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 16,
+      "mean": 47.29,
+      "max": 406.67
+    },
+    {
+      "id": 53550,
+      "name": "Tattoo of the Tukohama Brawler",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 11.25,
+      "mean": 30.23,
+      "max": 68.34
+    },
+    {
+      "id": 53541,
+      "name": "Tattoo of the Tawhoa Warrior",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 237.25,
+      "mean": 147.31,
+      "max": 406.67
+    },
+    {
+      "id": 53925,
+      "name": "Hinekora's Lock",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGluZWtvcmFzTG9jayIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/9fe8aa2704/HinekorasLock.png",
+      "min": 0.09,
+      "mean": 166031.14,
+      "max": 185667.45
+    },
+    {
+      "id": 53741,
+      "name": "Tattoo of the Rongokurai Makanga",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVTdHJUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c7c5e8c4de/RareStrTatttooEquipment.png",
+      "min": 2284.7399,
+      "mean": 9872.400000000001,
+      "max": 10312.32
+    },
+    {
+      "id": 53617,
+      "name": "Tattoo of the Valako Shaman",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkludFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/bae0258602/CommonIntTatttooEquipment.png",
+      "min": 5,
+      "mean": 30,
+      "max": 100
+    },
+    {
+      "id": 53665,
+      "name": "Loyalty Tattoo of Kahuturoa",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVTdHJUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c7c5e8c4de/RareStrTatttooEquipment.png",
+      "min": 805.72,
+      "mean": 9872.4,
+      "max": 8927.8
+    },
+    {
+      "id": 53576,
+      "name": "Honoured Tattoo of the Pillager",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhQ29tbW9uVGF0dHRvb0VxdWlwbWVudCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/80dfeda101/HinekoraCommonTatttooEquipment.png",
+      "min": 2466,
+      "mean": 3004.64,
+      "max": 24400.2
+    },
+    {
+      "id": 53674,
+      "name": "Omen of Bequeathal",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zMUJsdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/2ef7acaf03/VoodooOmens1Blue.png",
+      "min": 0.26,
+      "mean": 20,
+      "max": 40
+    },
+    {
+      "id": 53578,
+      "name": "Tattoo of the Ramako Fleetfoot",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vbkRleFRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b80711f45f/CommonDexTatttooEquipment.png",
+      "min": 121.67,
+      "mean": 308.51,
+      "max": 458.23
+    },
+    {
+      "id": 43155,
+      "name": "Instilling Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXhwZWRpdGlvbi9GbGFza0luamVjdG9yIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/08e3793591/FlaskInjector.png",
+      "min": 0.14,
+      "mean": 0.33,
+      "max": 0.68
+    },
+    {
+      "id": 53524,
+      "name": "Tattoo of the Tukohama Shaman",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0NvbW1vblN0clRhdHR0b29FcXVpcG1lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b7072892c0/CommonStrTatttooEquipment.png",
+      "min": 20,
+      "mean": 127.87,
+      "max": 406.67
+    },
+    {
+      "id": 49,
+      "name": "Awakener's Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVHJhbnNmZXJPcmIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6db384ea6e/TransferOrb.png",
+      "min": 1111.56,
+      "mean": 1206.63,
+      "max": 1357
+    },
+    {
+      "id": 47431,
+      "name": "Sacred Crystallised Lifeforce",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFydmVzdC9TYWNyZWRMaWZlZm9yY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/dd4e43e4d0/SacredLifeforce.png",
+      "min": 705,
+      "mean": 815.35,
+      "max": 1057.34
+    },
+    {
+      "id": 45875,
+      "name": "Grand Eldritch Ichor",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVGFuZ2xlT3JiUmFuazMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/80772bd510/TangleOrbRank3.png",
+      "min": 7.12,
+      "mean": 10.17,
+      "max": 10.13
+    },
+    {
+      "id": 53802,
+      "name": "Tattoo of the Arohongui Makanga",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1JhcmVEZXhUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/a2e28f4b6c/RareDexTatttooEquipment.png",
+      "min": 0.26,
+      "mean": 48127.95,
+      "max": 621391.76
+    },
+    {
+      "id": 45863,
+      "name": "Exceptional Eldritch Ichor",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVGFuZ2xlT3JiUmFuazQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c1205e2c0a/TangleOrbRank4.png",
+      "min": 1206.23,
+      "mean": 1327.05,
+      "max": 1535.18
+    },
+    {
+      "id": 53641,
+      "name": "Honoured Tattoo of the Flock",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL0hpbmVrb3JhQ29tbW9uVGF0dHRvb0VxdWlwbWVudCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/80dfeda101/HinekoraCommonTatttooEquipment.png",
+      "min": 60429,
+      "mean": 129575.25,
+      "max": 85066.3
+    },
+    {
+      "id": 1536,
+      "name": "Engineer's Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRW5naW5lZXJzT3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/56b41a5ee5/EngineersOrb.png",
+      "min": 0.99,
+      "mean": 3.57,
+      "max": 4.33
+    },
+    {
+      "id": 243,
+      "name": "Orb of Alteration",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lSZXJvbGxNYWdpYyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/28212545fd/CurrencyRerollMagic.png",
+      "min": 0.2,
+      "mean": 0.22,
+      "max": 0.32
+    },
+    {
+      "id": 3960,
+      "name": "Vial of Summoning",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVmlhbFNwaXJpdERyaW5rZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b4c71ef906/VialSpiritDrinker.png",
+      "min": 402.86,
+      "mean": 411.35,
+      "max": 753.9299
+    },
+    {
+      "id": 54229,
+      "name": "Ancestral Tattoo of Bloodlines",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1VuaXF1ZTFUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/9ddb5a7038/Unique1TatttooEquipment.png",
+      "min": 1596.56,
+      "mean": 3702.15,
+      "max": 6925.66
+    },
+    {
+      "id": 2452,
+      "name": "Armourer's Scrap",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lBcm1vdXJRdWFsaXR5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/0b964e9b9e/CurrencyArmourQuality.png",
+      "min": 0.39,
+      "mean": 0.18,
+      "max": 0.59
+    },
+    {
+      "id": 6164,
+      "name": "Vial of Dominance",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVmlhbEFyY2hpdGVjdHNIYW5kIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/dbe46fb20c/VialArchitectsHand.png",
+      "min": 8.89,
+      "mean": 11,
+      "max": 240
+    },
+    {
+      "id": 42170,
+      "name": "Noxious Catalyst",
+      "category": "catalysts",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL0NoYW9zUGh5c2ljYWxDYXRhbHlzdCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/bbdf8917e4/ChaosPhysicalCatalyst.png",
+      "min": 1.27,
+      "mean": 1.46,
+      "max": 3.86
+    },
+    {
+      "id": 45960,
+      "name": "Otherworldly Scouting Report",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NvdXRpbmdSZXBvcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/584635f3c8/ScoutingReport.png",
+      "min": 302.75,
+      "mean": 60,
+      "max": 416.85
+    },
+    {
+      "id": 54233,
+      "name": "Journey Tattoo of the Mind",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQW5jZXN0b3JzL1VuaXF1ZTNUYXR0dG9vRXF1aXBtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b9554ff666/Unique3TatttooEquipment.png",
+      "min": 23768.74,
+      "mean": 24269.65,
+      "max": 40667
+    },
+    {
+      "id": 2450,
+      "name": "Orb of Transmutation",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lVcGdyYWRlVG9NYWdpYyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/130762c82d/CurrencyUpgradeToMagic.png",
+      "min": 0.01,
+      "mean": 0.08,
+      "max": 0.15
+    },
+    {
+      "id": 8096,
+      "name": "Facetor's Lens",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lHZW1FeHBlcmllbmNlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/4e718312e1/CurrencyGemExperience.png",
+      "min": 169,
+      "mean": 617.03,
+      "max": 813.34
+    },
+    {
+      "id": 57122,
+      "name": "Beauty",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UcmlhbG1hc3RlckxlZnRGcmFnbWVudCIsInciOjEsImgiOjIsInNjYWxlIjoxfV0/ec9e7257ef/TrialmasterLeftFragment.png",
+      "min": 16.54,
+      "mean": 10,
+      "max": 21.76
+    },
+    {
+      "id": 53732,
+      "name": "Omen of Blanching",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zNFB1cnBsZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/e5f4838ca7/VoodooOmens4Purple.png",
+      "min": 2563.93,
+      "mean": 2879.45,
+      "max": 3253.36
+    },
+    {
+      "id": 53696,
+      "name": "Omen of Adrenaline",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zM1llbGxvdyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/f262a79371/VoodooOmens3Yellow.png",
+      "min": 349.86,
+      "mean": 9,
+      "max": 429.68
+    },
+    {
+      "id": 53666,
+      "name": "Omen of Revenge",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zMUJsdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/2ef7acaf03/VoodooOmens1Blue.png",
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 53678,
+      "name": "Omen of Refreshment",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zMlllbGxvdyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/c1c1cc7c84/VoodooOmens2Yellow.png",
+      "min": 12,
+      "mean": 3,
+      "max": 18
+    },
+    {
+      "id": 53928,
+      "name": "Omen of Fortune",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zMVB1cnBsZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/68c64f2338/VoodooOmens1Purple.png",
+      "min": 18510.75,
+      "mean": 18510.75,
+      "max": 18510.75
+    },
+    {
+      "id": 53716,
+      "name": "Omen of Return",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zMkJsdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/67b6654753/VoodooOmens2Blue.png",
+      "min": 1,
+      "mean": 2,
+      "max": 10
+    },
+    {
+      "id": 57199,
+      "name": "Imperfect Frozen Cannibal",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0hhaWxyYWtlQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/a3828d3005/HailrakeCorpse.png",
+      "min": 1.5,
+      "mean": 1.5,
+      "max": 2
+    },
+    {
+      "id": 57214,
+      "name": "Imperfect Dancing Sword",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0FuaW1hdGVkV2VhcG9uQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/2720caa383/AnimatedWeaponCorpse.png",
+      "min": 1,
+      "mean": 1.08,
+      "max": 1
+    },
+    {
+      "id": 57216,
+      "name": "Imperfect Dark Marionette",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1JvYm90TWFubmVxdWluQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/2ad85223a4/RobotMannequinCorpse.png",
+      "min": 9,
+      "mean": 11.8,
+      "max": 18.31
+    },
+    {
+      "id": 57233,
+      "name": "Imperfect Meatsack",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0Z1bmd1c1pvbWJpZUNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/4da2b7756d/FungusZombieCorpse.png",
+      "min": 1,
+      "mean": 7.54,
+      "max": 22.01
+    },
+    {
+      "id": 57229,
+      "name": "Imperfect Spirit of Fortune",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0t1ZHVrdVRvdGVtQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/7faf1de77b/KudukuTotemCorpse.png",
+      "min": 10,
+      "mean": 19.9,
+      "max": 11.67
+    },
+    {
+      "id": 57230,
+      "name": "Imperfect Druidic Alchemist",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Rhd2hvYU1lZGljaW5lV29tYW5Db3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/a446a2f4d0/TawhoaMedicineWomanCorpse.png",
+      "min": 1,
+      "mean": 11.48,
+      "max": 416.56
+    },
+    {
+      "id": 57236,
+      "name": "Imperfect Fiery Cannibal",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0ZpcmVGdXJ5Q29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/458c4ab871/FireFuryCorpse.png",
+      "min": 1,
+      "mean": 5.75,
+      "max": 1.4
+    },
+    {
+      "id": 57268,
+      "name": "Imperfect Guardian Turtle",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Jvbmdva3VyYWlTcGlyaXRUb3J0b2lzZUNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/5cdaded7da/RongokuraiSpiritTortoiseCorpse.png",
+      "min": 4,
+      "mean": 9.13,
+      "max": 4
+    },
+    {
+      "id": 57269,
+      "name": "Imperfect Forest Warrior",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zpa2luZ01hcEJvc3NDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/cc6f33141d/VikingMapBossCorpse.png",
+      "min": 3,
+      "mean": 5.08,
+      "max": 4.79
+    },
+    {
+      "id": 57317,
+      "name": "Fiery Cannibal",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0ZpcmVGdXJ5Q29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/458c4ab871/FireFuryCorpse.png",
+      "min": 3.5,
+      "mean": 3.79,
+      "max": 416.56
+    },
+    {
+      "id": 57414,
+      "name": "Dark Marionette",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1JvYm90TWFubmVxdWluQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/2ad85223a4/RobotMannequinCorpse.png",
+      "min": 40,
+      "mean": 43.33,
+      "max": 200
+    },
+    {
+      "id": 57416,
+      "name": "Imperfect Pain Artist",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0FmZmxpY3Rpb25NaW5pb24yQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/afa1eaea1c/AfflictionMinion2Corpse.png",
+      "min": 1,
+      "mean": 1.51,
+      "max": 5
+    },
+    {
+      "id": 57453,
+      "name": "Dancing Sword",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0FuaW1hdGVkV2VhcG9uQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/2720caa383/AnimatedWeaponCorpse.png",
+      "min": 1.5,
+      "mean": 16.65,
+      "max": 14.31
+    },
+    {
+      "id": 57454,
+      "name": "Tainted Catalyst",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL1RhaW50ZWRDYXRhbHlzdCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/c096cd4f25/TaintedCatalyst.png",
+      "min": 74.56,
+      "mean": 73.46,
+      "max": 100.75
+    },
+    {
+      "id": 57458,
+      "name": "Meatsack",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0Z1bmd1c1pvbWJpZUNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/4da2b7756d/FungusZombieCorpse.png",
+      "min": 2,
+      "mean": 18.8,
+      "max": 12.9
+    },
+    {
+      "id": 57463,
+      "name": "Forest Warrior",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zpa2luZ01hcEJvc3NDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/cc6f33141d/VikingMapBossCorpse.png",
+      "min": 7,
+      "mean": 7.31,
+      "max": 10.56
+    },
+    {
+      "id": 57474,
+      "name": "Guardian Turtle",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Jvbmdva3VyYWlTcGlyaXRUb3J0b2lzZUNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/5cdaded7da/RongokuraiSpiritTortoiseCorpse.png",
+      "min": 18,
+      "mean": 23.44,
+      "max": 26.33
+    },
+    {
+      "id": 57472,
+      "name": "Frozen Cannibal",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0hhaWxyYWtlQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/a3828d3005/HailrakeCorpse.png",
+      "min": 1.5,
+      "mean": 1.15,
+      "max": 19.55
+    },
+    {
+      "id": 57489,
+      "name": "Spirit of Fortune",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0t1ZHVrdVRvdGVtQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/7faf1de77b/KudukuTotemCorpse.png",
+      "min": 30,
+      "mean": 27.27,
+      "max": 94.29
+    },
+    {
+      "id": 57504,
+      "name": "Imperfect Spider Matriarch",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0JsYWNrRGVhdGhCb3NzQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/658153825a/BlackDeathBossCorpse.png",
+      "min": 4.25,
+      "mean": 5.2,
+      "max": 15
+    },
+    {
+      "id": 53642,
+      "name": "Omen of Acceleration",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zvb2Rvb09tZW5zMVllbGxvdyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/186596afad/VoodooOmens1Yellow.png",
+      "min": 40723.65,
+      "mean": 40723.65,
+      "max": 40723.65
+    },
+    {
+      "id": 57512,
+      "name": "Imperfect Blasphemer",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0dlb2ZyaUNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/c8c02e1c54/GeofriCorpse.png",
+      "min": 3.5,
+      "mean": 3.85,
+      "max": 10
+    },
+    {
+      "id": 57523,
+      "name": "Druidic Alchemist",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Rhd2hvYU1lZGljaW5lV29tYW5Db3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/a446a2f4d0/TawhoaMedicineWomanCorpse.png",
+      "min": 1,
+      "mean": 21.82,
+      "max": 406.67
+    },
+    {
+      "id": 57551,
+      "name": "Imperfect Slashing Horror",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0RlbW9uQm9zczJDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/211195cd4d/DemonBoss2Corpse.png",
+      "min": 1,
+      "mean": 0.81,
+      "max": 5
+    },
+    {
+      "id": 57544,
+      "name": "Spider Matriarch",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0JsYWNrRGVhdGhCb3NzQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/658153825a/BlackDeathBossCorpse.png",
+      "min": 15,
+      "mean": 56.25,
+      "max": 56.25
+    },
+    {
+      "id": 57591,
+      "name": "Pain Artist",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0FmZmxpY3Rpb25NaW5pb24yQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/afa1eaea1c/AfflictionMinion2Corpse.png",
+      "min": 1,
+      "mean": 1.21,
+      "max": 1.27
+    },
+    {
+      "id": 57597,
+      "name": "Perfect Forest Warrior",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Zpa2luZ01hcEJvc3NDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/cc6f33141d/VikingMapBossCorpse.png",
+      "min": 60,
+      "mean": 62.5,
+      "max": 65
+    },
+    {
+      "id": 57602,
+      "name": "Perfect Guardian Turtle",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Jvbmdva3VyYWlTcGlyaXRUb3J0b2lzZUNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/5cdaded7da/RongokuraiSpiritTortoiseCorpse.png",
+      "min": 1171.8599,
+      "mean": 1140.56,
+      "max": 1304.39
+    },
+    {
+      "id": 57617,
+      "name": "Perfect Fiery Cannibal",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0ZpcmVGdXJ5Q29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/458c4ab871/FireFuryCorpse.png",
+      "min": 9.8,
+      "mean": 9.89,
+      "max": 50
+    },
+    {
+      "id": 57638,
+      "name": "Perfect Frozen Cannibal",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0hhaWxyYWtlQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/a3828d3005/HailrakeCorpse.png",
+      "min": 15,
+      "mean": 8.5,
+      "max": 416.56
+    },
+    {
+      "id": 57646,
+      "name": "Perfect Dancing Sword",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0FuaW1hdGVkV2VhcG9uQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/2720caa383/AnimatedWeaponCorpse.png",
+      "min": 10,
+      "mean": 11.67,
+      "max": 16.3298
+    },
+    {
+      "id": 57626,
+      "name": "Perfect Meatsack",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0Z1bmd1c1pvbWJpZUNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/4da2b7756d/FungusZombieCorpse.png",
+      "min": 1,
+      "mean": 1.35,
+      "max": 1.33
+    },
+    {
+      "id": 57648,
+      "name": "Perfect Spirit of Fortune",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0t1ZHVrdVRvdGVtQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/7faf1de77b/KudukuTotemCorpse.png",
+      "min": 757.53,
+      "mean": 774.31,
+      "max": 885.19
+    },
+    {
+      "id": 57653,
+      "name": "Perfect Druidic Alchemist",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1Rhd2hvYU1lZGljaW5lV29tYW5Db3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/a446a2f4d0/TawhoaMedicineWomanCorpse.png",
+      "min": 20,
+      "mean": 29.3,
+      "max": 429.68
+    },
+    {
+      "id": 57663,
+      "name": "Perfect Dark Marionette",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1JvYm90TWFubmVxdWluQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/2ad85223a4/RobotMannequinCorpse.png",
+      "min": 60,
+      "mean": 77.14,
+      "max": 192.69
+    },
+    {
+      "id": 57669,
+      "name": "Slashing Horror",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0RlbW9uQm9zczJDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/211195cd4d/DemonBoss2Corpse.png",
+      "min": 1,
+      "mean": 2.43,
+      "max": 813.34
+    },
+    {
+      "id": 57679,
+      "name": "Perfect Spider Matriarch",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0JsYWNrRGVhdGhCb3NzQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/658153825a/BlackDeathBossCorpse.png",
+      "min": 24.75,
+      "mean": 23.8,
+      "max": 8337
+    },
+    {
+      "id": 57681,
+      "name": "Eldritch Eye",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0VsZGVyVGVudGFjbGVNaW5pb25MYXJnZUNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/19b67ee9a1/ElderTentacleMinionLargeCorpse.png",
+      "min": 3,
+      "mean": 4.38,
+      "max": 16.3298
+    },
+    {
+      "id": 57682,
+      "name": "Perfect Pain Artist",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0FmZmxpY3Rpb25NaW5pb24yQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/afa1eaea1c/AfflictionMinion2Corpse.png",
+      "min": 28,
+      "mean": 70,
+      "max": 58.79
+    },
+    {
+      "id": 57694,
+      "name": "Imperfect Eldritch Eye",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0VsZGVyVGVudGFjbGVNaW5pb25MYXJnZUNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/19b67ee9a1/ElderTentacleMinionLargeCorpse.png",
+      "min": 1,
+      "mean": 1.25,
+      "max": 1.67
+    },
+    {
+      "id": 57699,
+      "name": "Primal Demiurge",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0NydXNhZGVyTWFuYVBoYW50YXNtQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/66bb067c9b/CrusaderManaPhantasmCorpse.png",
+      "min": 8.33,
+      "mean": 7.15,
+      "max": 11.25
+    },
+    {
+      "id": 57702,
+      "name": "Imperfect Hulking Miscreation",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1JvYm90QXJndXNNaW5pYm9zc0NvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/b72efcb93e/RobotArgusMinibossCorpse.png",
+      "min": 4.33,
+      "mean": 5.46,
+      "max": 50
+    },
+    {
+      "id": 57706,
+      "name": "Blasphemer",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0dlb2ZyaUNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/c8c02e1c54/GeofriCorpse.png",
+      "min": 10,
+      "mean": 22.91,
+      "max": 22.5
+    },
+    {
+      "id": 57714,
+      "name": "Imperfect Primal Demiurge",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0NydXNhZGVyTWFuYVBoYW50YXNtQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/66bb067c9b/CrusaderManaPhantasmCorpse.png",
+      "min": 1,
+      "mean": 6.06,
+      "max": 7
+    },
+    {
+      "id": 57718,
+      "name": "Imperfect Needle Horror",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0RlbW9uQm9zczNDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/6abaea26f2/DemonBoss3Corpse.png",
+      "min": 10,
+      "mean": 16.77,
+      "max": 16.25
+    },
+    {
+      "id": 57740,
+      "name": "Imperfect Sanguimancer Demon",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0hlbGxzY2FwZURlbW9uRWxpdGUyQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/a795ad40fa/HellscapeDemonElite2Corpse.png",
+      "min": 0.64,
+      "mean": 0.74,
+      "max": 1.36
+    },
+    {
+      "id": 57741,
+      "name": "Imperfect Warlord",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL09ha0NvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/9a9c4d9ada/OakCorpse.png",
+      "min": 26.25,
+      "mean": 72.65,
+      "max": 33.33
+    },
+    {
+      "id": 57747,
+      "name": "Imperfect Sawblade Horror",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0RlbW9uQm9zczFDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/27f61146a0/DemonBoss1Corpse.png",
+      "min": 18.1,
+      "mean": 17.63,
+      "max": 120
+    },
+    {
+      "id": 57749,
+      "name": "Imperfect Runic Skeleton",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1N3b3JkU2tlbGV0b25Db3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/171f40accf/SwordSkeletonCorpse.png",
+      "min": 10,
+      "mean": 5.29,
+      "max": 10
+    },
+    {
+      "id": 57756,
+      "name": "Imperfect Primal Thunderbird",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1JhdmVuQm9zc0JsdWVDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/1a1ed30e2f/RavenBossBlueCorpse.png",
+      "min": 3,
+      "mean": 7.85,
+      "max": 7
+    },
+    {
+      "id": 57759,
+      "name": "Imperfect Dark Reaper",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1JlYXBlckJvc3NDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/d6c81d82f9/ReaperBossCorpse.png",
+      "min": 30,
+      "mean": 287.23,
+      "max": 833.7
+    },
+    {
+      "id": 57766,
+      "name": "Perfect Slashing Horror",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0RlbW9uQm9zczJDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/211195cd4d/DemonBoss2Corpse.png",
+      "min": 3,
+      "mean": 396.67,
+      "max": 405.97
+    },
+    {
+      "id": 57770,
+      "name": "Imperfect Shadow Construct",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0luY2FTaGFkb3dCb3NzQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/acddc4a119/IncaShadowBossCorpse.png",
+      "min": 9,
+      "mean": 10.69,
+      "max": 11.75
+    },
+    {
+      "id": 57780,
+      "name": "Sawblade Horror",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0RlbW9uQm9zczFDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/27f61146a0/DemonBoss1Corpse.png",
+      "min": 5,
+      "mean": 18.75,
+      "max": 51.67
+    },
+    {
+      "id": 57785,
+      "name": "Primal Thunderbird",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1JhdmVuQm9zc0JsdWVDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/1a1ed30e2f/RavenBossBlueCorpse.png",
+      "min": 10,
+      "mean": 9,
+      "max": 20
+    },
+    {
+      "id": 57788,
+      "name": "Perfect Blasphemer",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0dlb2ZyaUNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/c8c02e1c54/GeofriCorpse.png",
+      "min": 46.36,
+      "mean": 60,
+      "max": 416.56
+    },
+    {
+      "id": 57799,
+      "name": "Needle Horror",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0RlbW9uQm9zczNDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/6abaea26f2/DemonBoss3Corpse.png",
+      "min": 10,
+      "mean": 19.52,
+      "max": 30
+    },
+    {
+      "id": 57803,
+      "name": "Hydra",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0h5ZHJhQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/cd848db11b/HydraCorpse.png",
+      "min": 406.67,
+      "mean": 534.75,
+      "max": 575.03
+    },
+    {
+      "id": 57900,
+      "name": "Imperfect Hydra",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0h5ZHJhQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/cd848db11b/HydraCorpse.png",
+      "min": 95,
+      "mean": 330.9,
+      "max": 353.48
+    },
+    {
+      "id": 57903,
+      "name": "Imperfect Judgemental Spirit",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0dvZGRlc3NPZkp1c3RpY2VDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/e674a594ff/GoddessOfJusticeCorpse.png",
+      "min": 30,
+      "mean": 46.82,
+      "max": 31.25
+    },
+    {
+      "id": 57925,
+      "name": "Perfect Warlord",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL09ha0NvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/9a9c4d9ada/OakCorpse.png",
+      "min": 3782.33,
+      "mean": 4113.5,
+      "max": 4124.93
+    },
+    {
+      "id": 57937,
+      "name": "Perfect Primal Thunderbird",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1JhdmVuQm9zc0JsdWVDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/1a1ed30e2f/RavenBossBlueCorpse.png",
+      "min": 44.5,
+      "mean": 112.18,
+      "max": 130
+    },
+    {
+      "id": 57973,
+      "name": "Perfect Primal Demiurge",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0NydXNhZGVyTWFuYVBoYW50YXNtQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/66bb067c9b/CrusaderManaPhantasmCorpse.png",
+      "min": 9,
+      "mean": 19.73,
+      "max": 19.71
+    },
+    {
+      "id": 57984,
+      "name": "Perfect Hydra",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0h5ZHJhQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/cd848db11b/HydraCorpse.png",
+      "min": 14793.71,
+      "mean": 15350.83,
+      "max": 19011.15
+    },
+    {
+      "id": 57989,
+      "name": "Sanguimancer Demon",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0hlbGxzY2FwZURlbW9uRWxpdGUyQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/a795ad40fa/HellscapeDemonElite2Corpse.png",
+      "min": 399.3,
+      "mean": 13.5,
+      "max": 859.36
+    },
+    {
+      "id": 58039,
+      "name": "Perfect Serpent Warrior",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0F0bGFzRXhpbGUzQXBwYXJpdGlvbkNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/127b613caf/AtlasExile3ApparitionCorpse.png",
+      "min": 20,
+      "mean": 20,
+      "max": 416.85
+    },
+    {
+      "id": 58054,
+      "name": "Perfect Forest Tiger",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1RpZ2VyQmVzdGlhcnlTcGlyaXRCb3NzQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/6a46a7dc19/TigerBestiarySpiritBossCorpse.png",
+      "min": 33185.89,
+      "mean": 34193.47,
+      "max": 35663.44
+    },
+    {
+      "id": 58045,
+      "name": "Shadow Construct",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0luY2FTaGFkb3dCb3NzQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/acddc4a119/IncaShadowBossCorpse.png",
+      "min": 6,
+      "mean": 7.89,
+      "max": 30
+    },
+    {
+      "id": 58056,
+      "name": "Blood Demon",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0hlbGxzY2FwZURlbW9uQm9zc0NvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/9bcd7bb5b8/HellscapeDemonBossCorpse.png",
+      "min": 80,
+      "mean": 286.46,
+      "max": 359.847
+    },
+    {
+      "id": 61619,
+      "name": "Prismatic Oil",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9QcmlzbWF0aWNPaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/3efc2bb957/PrismaticOil.png",
+      "min": 1016.68,
+      "mean": 1645.4,
+      "max": 1583.03
+    },
+    {
+      "id": 58068,
+      "name": "Judgemental Spirit",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0dvZGRlc3NPZkp1c3RpY2VDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/e674a594ff/GoddessOfJusticeCorpse.png",
+      "min": 73.33,
+      "mean": 81.43,
+      "max": 133.75
+    },
+    {
+      "id": 58076,
+      "name": "Perfect Hulking Miscreation",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1JvYm90QXJndXNNaW5pYm9zc0NvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/b72efcb93e/RobotArgusMinibossCorpse.png",
+      "min": 100,
+      "mean": 224.29,
+      "max": 364.31
+    },
+    {
+      "id": 58079,
+      "name": "Forest Tiger",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1RpZ2VyQmVzdGlhcnlTcGlyaXRCb3NzQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/6a46a7dc19/TigerBestiarySpiritBossCorpse.png",
+      "min": 40,
+      "mean": 67.77,
+      "max": 45.4
+    },
+    {
+      "id": 58081,
+      "name": "Hulking Miscreation",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1JvYm90QXJndXNNaW5pYm9zc0NvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/b72efcb93e/RobotArgusMinibossCorpse.png",
+      "min": 34.44,
+      "mean": 34.44,
+      "max": 300
+    },
+    {
+      "id": 58088,
+      "name": "Perfect Eldritch Eye",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0VsZGVyVGVudGFjbGVNaW5pb25MYXJnZUNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/19b67ee9a1/ElderTentacleMinionLargeCorpse.png",
+      "min": 2,
+      "mean": 3.53,
+      "max": 3
+    },
+    {
+      "id": 58093,
+      "name": "Perfect Sanguimancer Demon",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0hlbGxzY2FwZURlbW9uRWxpdGUyQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/a795ad40fa/HellscapeDemonElite2Corpse.png",
+      "min": 18,
+      "mean": 18.44,
+      "max": 18.3299
+    },
+    {
+      "id": 58095,
+      "name": "Warlord",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL09ha0NvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/9a9c4d9ada/OakCorpse.png",
+      "min": 40,
+      "mean": 42,
+      "max": 48.96
+    },
+    {
+      "id": 58098,
+      "name": "Imperfect Serpent Warrior",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0F0bGFzRXhpbGUzQXBwYXJpdGlvbkNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/127b613caf/AtlasExile3ApparitionCorpse.png",
+      "min": 20,
+      "mean": 18.75,
+      "max": 176.94
+    },
+    {
+      "id": 58102,
+      "name": "Perfect Shadow Construct",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0luY2FTaGFkb3dCb3NzQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/acddc4a119/IncaShadowBossCorpse.png",
+      "min": 20,
+      "mean": 22.69,
+      "max": 4296.8
+    },
+    {
+      "id": 61640,
+      "name": "Reflecting Mist",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvUmVmbGVjdGl2ZU1pc3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c04e507406/ReflectiveMist.png",
+      "min": 9161.2099,
+      "mean": 9563.89,
+      "max": 10386.4
+    },
+    {
+      "id": 58114,
+      "name": "Perfect Needle Horror",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0RlbW9uQm9zczNDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/6abaea26f2/DemonBoss3Corpse.png",
+      "min": 19.8,
+      "mean": 49.57,
+      "max": 32.59
+    },
+    {
+      "id": 58115,
+      "name": "Imperfect Half-remembered Goliath",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1N5bnRoZXNpc0dvbGVtQm9zc0NvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/aed2848215/SynthesisGolemBossCorpse.png",
+      "min": 100,
+      "mean": 92.67,
+      "max": 100
+    },
+    {
+      "id": 58134,
+      "name": "Perfect Sawblade Horror",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0RlbW9uQm9zczFDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/27f61146a0/DemonBoss1Corpse.png",
+      "min": 35,
+      "mean": 5,
+      "max": 58.57
+    },
+    {
+      "id": 58135,
+      "name": "Runic Skeleton",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1N3b3JkU2tlbGV0b25Db3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/171f40accf/SwordSkeletonCorpse.png",
+      "min": 10.33,
+      "mean": 13.47,
+      "max": 13
+    },
+    {
+      "id": 58140,
+      "name": "Serpent Warrior",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0F0bGFzRXhpbGUzQXBwYXJpdGlvbkNvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/127b613caf/AtlasExile3ApparitionCorpse.png",
+      "min": 5,
+      "mean": 5.67,
+      "max": 6.67
+    },
+    {
+      "id": 58145,
+      "name": "Perfect Naval Officer",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0FkbWlyYWxEYXJuYXdDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/ccfa254872/AdmiralDarnawCorpse.png",
+      "min": 1208.58,
+      "mean": 1480.86,
+      "max": 6738.4
+    },
+    {
+      "id": 58149,
+      "name": "Imperfect Blood Demon",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0hlbGxzY2FwZURlbW9uQm9zc0NvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/9bcd7bb5b8/HellscapeDemonBossCorpse.png",
+      "min": 50,
+      "mean": 44.29,
+      "max": 50
+    },
+    {
+      "id": 58162,
+      "name": "Perfect Dark Reaper",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1JlYXBlckJvc3NDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/d6c81d82f9/ReaperBossCorpse.png",
+      "min": 36.67,
+      "mean": 21.29,
+      "max": 54.17
+    },
+    {
+      "id": 58171,
+      "name": "Naval Officer",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0FkbWlyYWxEYXJuYXdDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/ccfa254872/AdmiralDarnawCorpse.png",
+      "min": 45,
+      "mean": 50,
+      "max": 90
+    },
+    {
+      "id": 58190,
+      "name": "Perfect Judgemental Spirit",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0dvZGRlc3NPZkp1c3RpY2VDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/e674a594ff/GoddessOfJusticeCorpse.png",
+      "min": 2014.3,
+      "mean": 2757.57,
+      "max": 2848.79
+    },
+    {
+      "id": 58189,
+      "name": "Perfect Runic Skeleton",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1N3b3JkU2tlbGV0b25Db3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/171f40accf/SwordSkeletonCorpse.png",
+      "min": 80,
+      "mean": 436.85,
+      "max": 494.53
+    },
+    {
+      "id": 58199,
+      "name": "Dark Reaper",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1JlYXBlckJvc3NDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/d6c81d82f9/ReaperBossCorpse.png",
+      "min": 822,
+      "mean": 664.16,
+      "max": 844.94
+    },
+    {
+      "id": 58220,
+      "name": "Imperfect Forest Tiger",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1RpZ2VyQmVzdGlhcnlTcGlyaXRCb3NzQ29ycHNlIiwidyI6MywiaCI6Miwic2NhbGUiOjF9XQ/6a46a7dc19/TigerBestiarySpiritBossCorpse.png",
+      "min": 20,
+      "mean": 23.46,
+      "max": 20
+    },
+    {
+      "id": 58228,
+      "name": "Half-remembered Goliath",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1N5bnRoZXNpc0dvbGVtQm9zc0NvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/aed2848215/SynthesisGolemBossCorpse.png",
+      "min": 15,
+      "mean": 29.82,
+      "max": 80
+    },
+    {
+      "id": 58235,
+      "name": "Perfect Half-remembered Goliath",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL1N5bnRoZXNpc0dvbGVtQm9zc0NvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/aed2848215/SynthesisGolemBossCorpse.png",
+      "min": 100,
+      "mean": 37.86,
+      "max": 100
+    },
+    {
+      "id": 58236,
+      "name": "Perfect Blood Demon",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0hlbGxzY2FwZURlbW9uQm9zc0NvcnBzZSIsInciOjMsImgiOjIsInNjYWxlIjoxfV0/9bcd7bb5b8/HellscapeDemonBossCorpse.png",
+      "min": 402.86,
+      "mean": 716.05,
+      "max": 741.26
+    },
+    {
+      "id": 61720,
+      "name": "Maven's Chisel of Divination",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvTWF2ZW5DaGlzZWw1IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/38a6fb8abe/MavenChisel5.png",
+      "min": 80.5699,
+      "mean": 69.11,
+      "max": 352.37
+    },
+    {
+      "id": 61729,
+      "name": "Maven's Chisel of Procurement",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvTWF2ZW5DaGlzZWwxIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/adaf0d8258/MavenChisel1.png",
+      "min": 23.5,
+      "mean": 18.65,
+      "max": 33.28
+    },
+    {
+      "id": 61733,
+      "name": "Maven's Chisel of Avarice",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvTWF2ZW5DaGlzZWw0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/5e388a0af7/MavenChisel4.png",
+      "min": 215.44,
+      "mean": 214.11,
+      "max": 355.43
+    },
+    {
+      "id": 61746,
+      "name": "Maven's Chisel of Proliferation",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvTWF2ZW5DaGlzZWwyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c2d88e71df/MavenChisel2.png",
+      "min": 304.32,
+      "mean": 197.54,
+      "max": 375.48
+    },
+    {
+      "id": 58330,
+      "name": "Imperfect Naval Officer",
+      "category": "corpse",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXptZXJpL0FkbWlyYWxEYXJuYXdDb3Jwc2UiLCJ3IjozLCJoIjoyLCJzY2FsZSI6MX1d/ccfa254872/AdmiralDarnawCorpse.png",
+      "min": 60,
+      "mean": 52.14,
+      "max": 100
+    },
+    {
+      "id": 61774,
+      "name": "Maven's Chisel of Scarabs",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvTWF2ZW5DaGlzZWwzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/7eb7224754/MavenChisel3.png",
+      "min": 171.08,
+      "mean": 204.01,
+      "max": 237.87
+    },
+    {
+      "id": 58726,
+      "name": "Valdo's Puzzle Box",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVmFsZG9zUHV6emxlQm94IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/aa5be00d00/ValdosPuzzleBox.png",
+      "min": 261.65,
+      "mean": 424.59,
+      "max": 430.25
+    },
+    {
+      "id": 44555,
+      "name": "Sacred Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2FjcmVkT3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f5a07465c5/SacredOrb.png",
+      "min": 147.45,
+      "mean": 161.3,
+      "max": 390.17
+    },
+    {
+      "id": 44535,
+      "name": "Tainted Mythic Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVsbHNjYXBlL0hlbGxzY2FwZU15dGhpY09yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/3cc4ad8930/HellscapeMythicOrb.png",
+      "min": 48.96,
+      "mean": 63.26,
+      "max": 53.64
+    },
+    {
+      "id": 43173,
+      "name": "Enkindling Orb",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXhwZWRpdGlvbi9GbGFza1BsYXRlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/c03aace282/FlaskPlate.png",
+      "min": 1.84,
+      "mean": 5.19,
+      "max": 2.2
+    },
+    {
+      "id": 88,
+      "name": "Stacked Deck",
+      "category": "divination",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9EZWNrIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/962aa0e620/Deck.png",
+      "min": 8.03,
+      "mean": 66.18,
+      "max": 8.71
+    },
+    {
+      "id": 61033,
+      "name": "Forbidden Tome 68-70",
+      "category": "research",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2FuY3R1bS9TYW5jdHVtS2V5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d0326cac9a/SanctumKey.png",
+      "min": 7208,
+      "mean": 7411.04,
+      "max": 7734.24
+    },
+    {
+      "id": 60958,
+      "name": "Forbidden Tome 70-75",
+      "category": "research",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2FuY3R1bS9TYW5jdHVtS2V5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d0326cac9a/SanctumKey.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.4
+    },
+    {
+      "id": 60972,
+      "name": "Forbidden Tome 75-83",
+      "category": "research",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2FuY3R1bS9TYW5jdHVtS2V5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d0326cac9a/SanctumKey.png",
+      "min": 0.96,
+      "mean": 1.29,
+      "max": 3.67
+    },
+    {
+      "id": 60966,
+      "name": "Forbidden Tome 83+",
+      "category": "research",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2FuY3R1bS9TYW5jdHVtS2V5IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d0326cac9a/SanctumKey.png",
+      "min": 0.86,
+      "mean": 1.64,
+      "max": 1.82
+    },
+    {
+      "id": 8127,
+      "name": "Time-light Scroll",
+      "category": "harvest",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFydmVzdC9IYXJiaW5nZXJUb2tlbkJlbHQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/cd4f70a070/HarbingerTokenBelt.png",
+      "min": 798.28,
+      "mean": 411.35,
+      "max": 859.36
+    },
+    {
+      "id": 8128,
+      "name": "Deregulation Scroll",
+      "category": "harvest",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFydmVzdC9IYXJiaW5nZXJUb2tlbkhlbG0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/ee0bd282eb/HarbingerTokenHelm.png",
+      "min": 399.14,
+      "mean": 587.64,
+      "max": 685
+    },
+    {
+      "id": 8174,
+      "name": "Fragmentation Scroll",
+      "category": "harvest",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFydmVzdC9IYXJiaW5nZXJUb2tlblF1aXZlciIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/a6017fd37d/HarbingerTokenQuiver.png",
+      "min": 399.14,
+      "mean": 822.7,
+      "max": 685
+    },
+    {
+      "id": 8211,
+      "name": "Electroshock Scroll",
+      "category": "harvest",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFydmVzdC9IYXJiaW5nZXJUb2tlblN3b3JkIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/e3cec18702/HarbingerTokenSword.png",
+      "min": 399.14,
+      "mean": 411.35,
+      "max": 429.68
+    },
+    {
+      "id": 8122,
+      "name": "Haemocombustion Scroll",
+      "category": "harvest",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFydmVzdC9IYXJiaW5nZXJUb2tlblN0YWZmIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3bac452156/HarbingerTokenStaff.png",
+      "min": 402.86,
+      "mean": 558.26,
+      "max": 633.71
+    },
+    {
+      "id": 8172,
+      "name": "Specularity Scroll",
+      "category": "harvest",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGFydmVzdC9IYXJiaW5nZXJUb2tlblNoaWVsZCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/7e0479ea6e/HarbingerTokenShield.png",
+      "min": 1197.42,
+      "mean": 1782.52,
+      "max": 1890.6
+    }
+  ]
+}

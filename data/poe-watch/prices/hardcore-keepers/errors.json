@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "league": {
+    "watch": "Hardcore Keepers",
+    "text": "Hardcore Keepers",
+    "slug": "hardcore-keepers"
+  },
+  "errors": [
+    {
+      "category": "enchantment",
+      "error": "HTTP 400"
+    },
+    {
+      "category": "uniquemap",
+      "error": "HTTP 400"
+    },
+    {
+      "category": "deliriumorb",
+      "error": "HTTP 400"
+    }
+  ]
+}

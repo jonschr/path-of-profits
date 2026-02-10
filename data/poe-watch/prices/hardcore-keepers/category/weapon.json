@@ -1,0 +1,3223 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Hardcore Keepers",
+    "text": "Hardcore Keepers",
+    "slug": "hardcore-keepers"
+  },
+  "category": "weapon",
+  "updatedAt": "2026-02-10T14:59:40.000Z",
+  "items": [
+    {
+      "id": 141,
+      "name": "Hiltless",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0hpbHRsZXNzIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/04689b7d41/Hiltless.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 969,
+      "name": "Terminus Est",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1R3b0hhbmRTd29yZFVuaXF1ZTIiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/c5d5843861/TwoHandSwordUnique2.png",
+      "linkCount": 6,
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 784,
+      "name": "Rigwald's Charge",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1R3b0hhbmRTd29yZDVVbmlxdWUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/ce7492e94d/TwoHandSword5Unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2011,
+      "name": "Oro's Sacrifice",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL09yb3NTYWNyaWZpY2UiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/82b813f27d/OrosSacrifice.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 3,
+      "max": 2
+    },
+    {
+      "id": 2082,
+      "name": "Doryani's Catalyst",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9Eb3J5YW5pc0NhdGFseXN0IiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/aa54cbb507/DoryanisCatalyst.png",
+      "linkCount": 0,
+      "min": 100,
+      "mean": 100,
+      "max": 100
+    },
+    {
+      "id": 2338,
+      "name": "Hopeshredder",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0VsZGVyQm93IiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/537ee088f0/ElderBow.png",
+      "linkCount": 0,
+      "min": 11,
+      "mean": 11,
+      "max": 11
+    },
+    {
+      "id": 2513,
+      "name": "Doon Cuebiyari",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvRG9vbkN1ZWJpeWFyaSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/8a4a0ccb6b/DoonCuebiyari.png",
+      "linkCount": 0,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 3009,
+      "name": "Rigwald's Command",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL1JpZ3dhcmxTd29yZCIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/90114046a7/RigwarlSword.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2883,
+      "name": "Storm Cloud",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL1N0b3JtY2xvdWQiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/003957da0c/Stormcloud.png",
+      "linkCount": 5,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 10796,
+      "name": "Replica Earendel's Embrace",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9FYXJlbmRlbHNFbWJyYWNlIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/7fbecdb2b3/EarendelsEmbrace.png",
+      "linkCount": 0,
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 64023,
+      "name": "Legacy of the Rose",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvV2hpc3BlcmluZ05lYnVsYSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/fff9168cf2/WhisperingNebula.png",
+      "linkCount": 0,
+      "min": 100,
+      "mean": 100,
+      "max": 100
+    },
+    {
+      "id": 64004,
+      "name": "Mystic Refractor",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kb2ZCbGFzdGluZyIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/de9f534714/WandofBlasting.png",
+      "linkCount": 0,
+      "min": 6,
+      "mean": 28.93,
+      "max": 10.5
+    },
+    {
+      "id": 64037,
+      "name": "Starcaller",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9TdGFyZmVsbCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/72f3fc9a20/Starfell.png",
+      "linkCount": 0,
+      "min": 80,
+      "mean": 80,
+      "max": 80
+    },
+    {
+      "id": 65762,
+      "name": "Foulborn Ashcaller",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9Bc2h3YWtlciIsInciOjEsImgiOjMsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/2fca84d521/Ashwaker.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 65318,
+      "name": "Unlight Extant",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9UaGVEYXJrQmFyZ2FpbiIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/03daaf4758/TheDarkBargain.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 1.92,
+      "max": 2
+    },
+    {
+      "id": 65319,
+      "name": "The Monastery Bell",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvVGhlQmVsbFJpbmdlciIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/6b76474814/TheBellRinger.png",
+      "linkCount": 0,
+      "min": 5,
+      "mean": 2,
+      "max": 5
+    },
+    {
+      "id": 65322,
+      "name": "The Grey Wind",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9TZWV0aGluZ1dyYWl0aCIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/651bf610c2/SeethingWraith.png",
+      "linkCount": 0,
+      "min": 30,
+      "mean": 42.35,
+      "max": 55
+    },
+    {
+      "id": 65325,
+      "name": "Jiquani's Potential",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmF0dGVyeW9mWWl4YXZpbSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/fe2ff82537/BatteryofYixavim.png",
+      "linkCount": 0,
+      "min": 100,
+      "mean": 3,
+      "max": 100
+    },
+    {
+      "id": 65336,
+      "name": "Wing of the Wyvern",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0ZlYXJvZnRoZUZhbGwiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/1bfa2147c3/FearoftheFall.png",
+      "linkCount": 0,
+      "min": 500,
+      "mean": 500,
+      "max": 500
+    },
+    {
+      "id": 65351,
+      "name": "Jiquani's Potential",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmF0dGVyeW9mWWl4YXZpbSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/fe2ff82537/BatteryofYixavim.png",
+      "linkCount": 5,
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 65790,
+      "name": "Foulborn Xoph's Inception (Fast Ignite)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jsb29kUGVyaWdyZWUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/0aba82adb6/BloodPerigree.png",
+      "linkCount": 0,
+      "min": 10,
+      "mean": 3,
+      "max": 10
+    },
+    {
+      "id": 65793,
+      "name": "Foulborn Kongor's Undying Rage (Crit Degen)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvS29uZ29yc1VuZHlpbmdSYWdlIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/4eedbb427e/KongorsUndyingRage.png",
+      "linkCount": 0,
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 65796,
+      "name": "Foulborn The Searing Touch",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY0dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/83cc8a39dc/Staff4unique.png",
+      "linkCount": 0,
+      "min": 125,
+      "mean": 125,
+      "max": 125
+    },
+    {
+      "id": 65798,
+      "name": "Foulborn Hand of Thought and Motion (Int Accuracy)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9UaG91Z2h0TW90aW9uMSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/8bc9acabb1/ThoughtMotion1.png",
+      "linkCount": 0,
+      "min": 52.14,
+      "mean": 50,
+      "max": 250
+    },
+    {
+      "id": 65773,
+      "name": "Foulborn The Harvest",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9UaGVFeHRyYWN0b3IiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/dac109c05d/TheExtractor.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 65776,
+      "name": "Foulborn Severed in Sleep (Unholy Might)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0V0ZXJuYWxTbGVlcDEiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/97a85894d1/EternalSleep1.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 65777,
+      "name": "Foulborn Tulborn (Cold Gems)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9UdWxib3JuIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/5656701aa1/Tulborn.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1.4,
+      "max": 1
+    },
+    {
+      "id": 65825,
+      "name": "Foulborn Severed in Sleep (Crit)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0V0ZXJuYWxTbGVlcDEiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/97a85894d1/EternalSleep1.png",
+      "linkCount": 0,
+      "min": 3,
+      "mean": 3.13,
+      "max": 3
+    },
+    {
+      "id": 65789,
+      "name": "Foulborn Tremor Rod",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvTWluZVN0YWZmIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/778c9992f4/MineStaff.png",
+      "linkCount": 0,
+      "min": 32.5,
+      "mean": 32.5,
+      "max": 32.5
+    },
+    {
+      "id": 65799,
+      "name": "Foulborn Sire of Shards",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvUmFkaWVuY2UiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/2ced44860b/Radience.png",
+      "linkCount": 6,
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 65802,
+      "name": "Foulborn Hand of Thought and Motion (Strength %)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9UaG91Z2h0TW90aW9uMSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/8bc9acabb1/ThoughtMotion1.png",
+      "linkCount": 0,
+      "min": 50,
+      "mean": 7.2,
+      "max": 50
+    },
+    {
+      "id": 65811,
+      "name": "Foulborn Tulborn (Power Charge)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9UdWxib3JuIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/5656701aa1/Tulborn.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1.2,
+      "max": 1
+    },
+    {
+      "id": 65878,
+      "name": "Foulborn Hand of Wisdom and Action (Dex Crit)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9UaG91Z2h0TW90aW9uMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/00b9639bca/ThoughtMotion2.png",
+      "linkCount": 0,
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 65830,
+      "name": "Foulborn Quill Rain (AoE)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzJ1bmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/0962feb029/Bow2unique.png",
+      "linkCount": 0,
+      "min": 5,
+      "mean": 6.5,
+      "max": 5
+    },
+    {
+      "id": 65842,
+      "name": "Foulborn Uul-Netol's Embrace (Fast Bleed)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9VdWxOZXRvbHNLaXNzVXBncmFkZWQiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/01534b300e/UulNetolsKissUpgraded.png",
+      "linkCount": 5,
+      "min": 11.6,
+      "mean": 11.6,
+      "max": 11.6
+    },
+    {
+      "id": 65889,
+      "name": "Foulborn Tulfall (Power Charge)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9UdWxib3JuVXBncmFkZWQiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/27c80db79e/TulbornUpgraded.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 65847,
+      "name": "Foulborn United in Dream (Gemqual)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0V0ZXJuYWxTbGVlcDIiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/1ef923f173/EternalSleep2.png",
+      "linkCount": 0,
+      "min": 45,
+      "mean": 40.83,
+      "max": 45
+    },
+    {
+      "id": 65849,
+      "name": "Foulborn Uul-Netol's Embrace (Reduced Int)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9VdWxOZXRvbHNLaXNzVXBncmFkZWQiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/01534b300e/UulNetolsKissUpgraded.png",
+      "linkCount": 0,
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 65859,
+      "name": "Foulborn Midnight Bargain (Max Golems, Minion Degen)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kVW5pcXVlMyIsInciOjEsImgiOjMsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/73bc716a11/WandUnique3.png",
+      "linkCount": 0,
+      "min": 40,
+      "mean": 40,
+      "max": 40
+    },
+    {
+      "id": 65860,
+      "name": "Foulborn Midnight Bargain (Max Golems)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kVW5pcXVlMyIsInciOjEsImgiOjMsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/73bc716a11/WandUnique3.png",
+      "linkCount": 0,
+      "min": 15,
+      "mean": 40.75,
+      "max": 22.5
+    },
+    {
+      "id": 65861,
+      "name": "Foulborn Xoph's Nurture (Immolate)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jsb29kUGVyaWdyZWVCUkVBQ0giLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/21cfde45f2/BloodPerigreeBREACH.png",
+      "linkCount": 6,
+      "min": 125,
+      "mean": 125,
+      "max": 125
+    },
+    {
+      "id": 65866,
+      "name": "Foulborn Al Dhih",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9BbGRoaWgiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/7980ed9b3c/Aldhih.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 65905,
+      "name": "Foulborn Jorrhast's Blacksteel (Minion %Dmg)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvSm9ycmhhc3RzQmxhY2tzdGVlbCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/4c1dbe7235/JorrhastsBlacksteel.png",
+      "linkCount": 6,
+      "min": 125,
+      "mean": 125,
+      "max": 125
+    },
+    {
+      "id": 65902,
+      "name": "Foulborn Razor of the Seventh Sun",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL1Jhem9yT2ZUaGVTZXZlbnRoU3VuIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/06e362c6de/RazorOfTheSeventhSun.png",
+      "linkCount": 0,
+      "min": 30,
+      "mean": 30,
+      "max": 30
+    },
+    {
+      "id": 65911,
+      "name": "Foulborn Quill Rain (Mana)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzJ1bmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/0962feb029/Bow2unique.png",
+      "linkCount": 0,
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 65916,
+      "name": "Foulborn Kongor's Undying Rage (Battlemage, Crit Degen)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvS29uZ29yc1VuZHlpbmdSYWdlIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/4eedbb427e/KongorsUndyingRage.png",
+      "linkCount": 6,
+      "min": 250,
+      "mean": 250,
+      "max": 250
+    },
+    {
+      "id": 65930,
+      "name": "Foulborn Moonbender's Wing",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9Nb29uYmVuZGVyc1dpbmciLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/f375515d38/MoonbendersWing.png",
+      "linkCount": 0,
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 65931,
+      "name": "Foulborn Xoph's Inception (Fast Ignite)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jsb29kUGVyaWdyZWUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/0aba82adb6/BloodPerigree.png",
+      "linkCount": 5,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 65939,
+      "name": "Foulborn Hand of Wisdom and Action (Dex Crit, Strength %)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9UaG91Z2h0TW90aW9uMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/00b9639bca/ThoughtMotion2.png",
+      "linkCount": 0,
+      "min": 875,
+      "mean": 875,
+      "max": 875
+    },
+    {
+      "id": 65944,
+      "name": "Foulborn Tulfall (Cold DoT)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9UdWxib3JuVXBncmFkZWQiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/27c80db79e/TulbornUpgraded.png",
+      "linkCount": 0,
+      "min": 1.5,
+      "mean": 1.5,
+      "max": 1.5
+    },
+    {
+      "id": 65949,
+      "name": "Foulborn The Consuming Dark",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0NvbnN1bWluZ3RoZURhcmsiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/20741693b3/ConsumingtheDark.png",
+      "linkCount": 0,
+      "min": 2.5,
+      "mean": 2.5,
+      "max": 2.5
+    },
+    {
+      "id": 65980,
+      "name": "Foulborn Quill Rain (Mana)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzJ1bmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/0962feb029/Bow2unique.png",
+      "linkCount": 5,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 65952,
+      "name": "Foulborn Uul-Netol's Kiss (+1 Exert)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9VdWxOZXRvbHNLaXNzIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/1b5f279dbd/UulNetolsKiss.png",
+      "linkCount": 5,
+      "min": 35,
+      "mean": 35,
+      "max": 35
+    },
+    {
+      "id": 65964,
+      "name": "Foulborn The Whispering Ice",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY4dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/da4f9d55a8/Staff8unique.png",
+      "linkCount": 0,
+      "min": 5.5,
+      "mean": 5.5,
+      "max": 5.5
+    },
+    {
+      "id": 66000,
+      "name": "Foulborn Tulfall (Cold DoT, Power Charge)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9UdWxib3JuVXBncmFkZWQiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/27c80db79e/TulbornUpgraded.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 66030,
+      "name": "Foulborn Uul-Netol's Kiss (Warcry CDR)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9VdWxOZXRvbHNLaXNzIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/1b5f279dbd/UulNetolsKiss.png",
+      "linkCount": 0,
+      "min": 10,
+      "mean": 6.27,
+      "max": 10
+    },
+    {
+      "id": 65986,
+      "name": "Foulborn Sire of Shards",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvUmFkaWVuY2UiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/2ced44860b/Radience.png",
+      "linkCount": 0,
+      "min": 3,
+      "mean": 2.2,
+      "max": 3
+    },
+    {
+      "id": 66006,
+      "name": "Foulborn Xoph's Nurture (Ignite, Immolate)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jsb29kUGVyaWdyZWVCUkVBQ0giLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/21cfde45f2/BloodPerigreeBREACH.png",
+      "linkCount": 5,
+      "min": 22,
+      "mean": 22,
+      "max": 22
+    },
+    {
+      "id": 66007,
+      "name": "Foulborn Edge of Madness",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0VkZ2VPZk1hZG5lc3MiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/25bbed2db3/EdgeOfMadness.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 65984,
+      "name": "Foulborn Apep's Rage",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9BcGVwc1JhZ2UiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/47d97f3269/ApepsRage.png",
+      "linkCount": 0,
+      "min": 55,
+      "mean": 55,
+      "max": 55
+    },
+    {
+      "id": 65995,
+      "name": "Foulborn Jorrhast's Blacksteel (2x AW)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvSm9ycmhhc3RzQmxhY2tzdGVlbCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/4c1dbe7235/JorrhastsBlacksteel.png",
+      "linkCount": 5,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 66008,
+      "name": "Foulborn Hand of Wisdom and Action (Strength %)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9UaG91Z2h0TW90aW9uMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/00b9639bca/ThoughtMotion2.png",
+      "linkCount": 0,
+      "min": 5,
+      "mean": 1.33,
+      "max": 5
+    },
+    {
+      "id": 66026,
+      "name": "Foulborn Uul-Netol's Kiss (+1 Exert)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9VdWxOZXRvbHNLaXNzIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/1b5f279dbd/UulNetolsKiss.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 66037,
+      "name": "Foulborn Uul-Netol's Kiss (Warcry CDR)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9VdWxOZXRvbHNLaXNzIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/1b5f279dbd/UulNetolsKiss.png",
+      "linkCount": 6,
+      "min": 45,
+      "mean": 45,
+      "max": 45
+    },
+    {
+      "id": 66080,
+      "name": "Foulborn Jorrhast's Blacksteel (2x AW, Minion %Dmg)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvSm9ycmhhc3RzQmxhY2tzdGVlbCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/4c1dbe7235/JorrhastsBlacksteel.png",
+      "linkCount": 5,
+      "min": 25,
+      "mean": 22.5,
+      "max": 25
+    },
+    {
+      "id": 66082,
+      "name": "Foulborn Rebuke of the Vaal",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL09uZUhhbmRTd29yZDdVbmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/5d9628fc69/OneHandSword7Unique.png",
+      "linkCount": 0,
+      "min": 13.8,
+      "mean": 13.8,
+      "max": 13.8
+    },
+    {
+      "id": 66048,
+      "name": "Foulborn The Harvest",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9UaGVFeHRyYWN0b3IiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/dac109c05d/TheExtractor.png",
+      "linkCount": 5,
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 66093,
+      "name": "Foulborn Uul-Netol's Kiss (Warcry CDR)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9VdWxOZXRvbHNLaXNzIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/1b5f279dbd/UulNetolsKiss.png",
+      "linkCount": 5,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 66077,
+      "name": "Foulborn Quill Rain (AoE, Mana)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzJ1bmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/0962feb029/Bow2unique.png",
+      "linkCount": 0,
+      "min": 100,
+      "mean": 100,
+      "max": 100
+    },
+    {
+      "id": 66091,
+      "name": "Foulborn Xoph's Inception (Return Proj)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jsb29kUGVyaWdyZWUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/0aba82adb6/BloodPerigree.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 1.75,
+      "max": 2
+    },
+    {
+      "id": 66105,
+      "name": "Foulborn Uul-Netol's Kiss (+1 Exert, Warcry CDR)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9VdWxOZXRvbHNLaXNzIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/1b5f279dbd/UulNetolsKiss.png",
+      "linkCount": 0,
+      "min": 40,
+      "mean": 40,
+      "max": 40
+    },
+    {
+      "id": 66116,
+      "name": "Foulborn Quill Rain (AoE)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzJ1bmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/0962feb029/Bow2unique.png",
+      "linkCount": 5,
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 66096,
+      "name": "Foulborn The Dancing Dervish",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1JoeXNibGFkZSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/3760a66254/Rhysblade.png",
+      "linkCount": 0,
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 66110,
+      "name": "Foulborn The Dancing Dervish",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1JoeXNibGFkZSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/3760a66254/Rhysblade.png",
+      "linkCount": 6,
+      "min": 8,
+      "mean": 8,
+      "max": 8
+    },
+    {
+      "id": 66126,
+      "name": "Foulborn Piscator's Vigil",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9QaXNjYXRvcnNWaWdpbCIsInciOjEsImgiOjMsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/260eb8bbc0/PiscatorsVigil.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 66122,
+      "name": "Foulborn Reverberation Rod",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9SZXZlcmJlcmF0aW9uUm9kIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/c745e03294/ReverberationRod.png",
+      "linkCount": 0,
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 66137,
+      "name": "Foulborn Xoph's Nurture (Immolate)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jsb29kUGVyaWdyZWVCUkVBQ0giLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/21cfde45f2/BloodPerigreeBREACH.png",
+      "linkCount": 5,
+      "min": 30,
+      "mean": 30,
+      "max": 30
+    },
+    {
+      "id": 66160,
+      "name": "Foulborn Death's Hand",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9FbmRPZkVyYSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/d3aa145324/EndOfEra.png",
+      "linkCount": 0,
+      "min": 8,
+      "mean": 8,
+      "max": 8
+    },
+    {
+      "id": 66162,
+      "name": "Foulborn Chin Sol (Pierce)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzV1bmlxdWUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/d3b13626ea/Bow5unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 66176,
+      "name": "Foulborn Edge of Madness",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0VkZ2VPZk1hZG5lc3MiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/25bbed2db3/EdgeOfMadness.png",
+      "linkCount": 5,
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 66164,
+      "name": "Foulborn Frostbreath",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvRnJvc3RCcmVhdGgiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/c69df4d962/FrostBreath.png",
+      "linkCount": 0,
+      "min": 80,
+      "mean": 80,
+      "max": 80
+    },
+    {
+      "id": 66184,
+      "name": "Foulborn Rigwald's Command",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL1JpZ3dhcmxTd29yZCIsInciOjIsImgiOjMsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/bb569ef21e/RigwarlSword.png",
+      "linkCount": 0,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 66185,
+      "name": "Foulborn Kongor's Undying Rage (Battlemage, Crit Degen)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvS29uZ29yc1VuZHlpbmdSYWdlIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/4eedbb427e/KongorsUndyingRage.png",
+      "linkCount": 5,
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 66193,
+      "name": "Foulborn Ngamahu's Flame",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvUmlyaVRlTmdhbWFodSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/4d9c2677d7/RiriTeNgamahu.png",
+      "linkCount": 6,
+      "min": 375,
+      "mean": 375,
+      "max": 375
+    },
+    {
+      "id": 66194,
+      "name": "Foulborn Singularity",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9HbG9vbWV5ZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/7e8e032c4b/Gloomeye.png",
+      "linkCount": 0,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 66228,
+      "name": "Foulborn Ngamahu's Flame",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvUmlyaVRlTmdhbWFodSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/4d9c2677d7/RiriTeNgamahu.png",
+      "linkCount": 0,
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 66212,
+      "name": "Foulborn Xoph's Nurture (Immolate)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jsb29kUGVyaWdyZWVCUkVBQ0giLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/21cfde45f2/BloodPerigreeBREACH.png",
+      "linkCount": 0,
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 66220,
+      "name": "Foulborn The Whispering Ice",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY4dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/da4f9d55a8/Staff8unique.png",
+      "linkCount": 5,
+      "min": 60,
+      "mean": 60,
+      "max": 60
+    },
+    {
+      "id": 66233,
+      "name": "Foulborn Kongor's Undying Rage (Battlemage)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvS29uZ29yc1VuZHlpbmdSYWdlIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/4eedbb427e/KongorsUndyingRage.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 66217,
+      "name": "Foulborn The Poet's Pen",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9Qb2V0c1BlbiIsInciOjEsImgiOjMsInNjYWxlIjoxLCJtdXRhdGVkIjp0cnVlfV0/e42e6a919a/PoetsPen.png",
+      "linkCount": 0,
+      "min": 125,
+      "mean": 125,
+      "max": 125
+    },
+    {
+      "id": 66246,
+      "name": "Foulborn Rigwald's Savagery",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9SaWd3YXJsQXhlIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/1e49ad9962/RigwarlAxe.png",
+      "linkCount": 0,
+      "min": 50,
+      "mean": 50,
+      "max": 50
+    },
+    {
+      "id": 66255,
+      "name": "Foulborn Kongor's Undying Rage (Battlemage)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvS29uZ29yc1VuZHlpbmdSYWdlIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/4eedbb427e/KongorsUndyingRage.png",
+      "linkCount": 5,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 66266,
+      "name": "Foulborn Quill Rain (Mana)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzJ1bmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwibXV0YXRlZCI6dHJ1ZX1d/0962feb029/Bow2unique.png",
+      "linkCount": 6,
+      "min": 500,
+      "mean": 500,
+      "max": 500
+    },
+    {
+      "id": 66276,
+      "name": "Foulborn Kongor's Undying Rage (Battlemage)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvS29uZ29yc1VuZHlpbmdSYWdlIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/4eedbb427e/KongorsUndyingRage.png",
+      "linkCount": 6,
+      "min": 40,
+      "mean": 40,
+      "max": 40
+    },
+    {
+      "id": 66361,
+      "name": "Foulborn Kongor's Undying Rage (Battlemage, Crit Degen)",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvS29uZ29yc1VuZHlpbmdSYWdlIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsIm11dGF0ZWQiOnRydWV9XQ/4eedbb427e/KongorsUndyingRage.png",
+      "linkCount": 0,
+      "min": 40,
+      "mean": 40,
+      "max": 40
+    },
+    {
+      "id": 34749,
+      "name": "Chin Sol",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzV1bmlxdWUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/199f28ea8d/Bow5unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 34746,
+      "name": "Pillar of the Caged God",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvUGlsbGFyb2Z0aGVDYWdlZEdvZCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/0451281624/PillaroftheCagedGod.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 34752,
+      "name": "Reaper's Pursuit",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlVW5pcXVlMSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/d39a181d8d/TwoHandAxeUnique1.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 34765,
+      "name": "The Blood Reaper",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlVW5pcXVlMiIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/3f8b59ec70/TwoHandAxeUnique2.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 34753,
+      "name": "Hezmana's Bloodlust",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9IZXptYW5hc0Jsb29kbHVzdCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/fdbd48147f/HezmanasBloodlust.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 34763,
+      "name": "Nuro's Harp",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL051cm9zUHVyaWZ5aW5nSGFycCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/36ac89806c/NurosPurifyingHarp.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 34766,
+      "name": "Brain Rattler",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvQnJhaW5TY3JhbWJsZXIiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/0749c07fa6/BrainScrambler.png",
+      "linkCount": 0,
+      "min": 80,
+      "mean": 80,
+      "max": 80
+    },
+    {
+      "id": 34760,
+      "name": "Atziri's Disfavour",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9BdHppcmlzRGlzZmF2b3VyIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/1ffab716f8/AtzirisDisfavour.png",
+      "linkCount": 0,
+      "min": 625,
+      "mean": 625,
+      "max": 625
+    },
+    {
+      "id": 34759,
+      "name": "Xirgil's Crank",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY3dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/2437d7498a/Staff7unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 34775,
+      "name": "Reach of the Council",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jvd09mVGhlQ291bmNpbCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/55dc65893e/BowOfTheCouncil.png",
+      "linkCount": 0,
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 34797,
+      "name": "Replica Wings of Entropy",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9FbnRyb3B5d2luZ3MiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/86e128789a/Entropywings.png",
+      "linkCount": 0,
+      "min": 9,
+      "mean": 9,
+      "max": 9
+    },
+    {
+      "id": 35642,
+      "name": "Goblinedge",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0dvYmxpbkVkZ2UiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/61d1382d07/GoblinEdge.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 10
+    },
+    {
+      "id": 47939,
+      "name": "Cane of Kulemak",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQ2F0YXJpbmFTdGFmZiIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/9e79ed63e5/CatarinaStaff.png",
+      "linkCount": 0,
+      "min": 25,
+      "mean": 26.92,
+      "max": 150
+    },
+    {
+      "id": 47960,
+      "name": "The Annihilating Light",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvSW50cmVwaWR1c0RvbG9yZW0iLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/8244c5f079/IntrepidusDolorem.png",
+      "linkCount": 0,
+      "min": 110,
+      "mean": 101,
+      "max": 110
+    },
+    {
+      "id": 47951,
+      "name": "Relic of the Pact",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9JcG9jaG90bFdhbmQiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/015c140e10/IpochotlWand.png",
+      "linkCount": 0,
+      "min": 20,
+      "mean": 6.67,
+      "max": 20
+    },
+    {
+      "id": 47958,
+      "name": "Atziri's Rule",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvUG9ydGVudE9mQUZhbHNlR29kIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/a3949ac141/PortentOfAFalseGod.png",
+      "linkCount": 0,
+      "min": 150,
+      "mean": 150,
+      "max": 150
+    },
+    {
+      "id": 48018,
+      "name": "Yaomac's Accord",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9PbmF0emxpU2NlcHRyZSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/49dafc0859/OnatzliSceptre.png",
+      "linkCount": 0,
+      "min": 60,
+      "mean": 60,
+      "max": 60
+    },
+    {
+      "id": 48950,
+      "name": "Echoforge",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0Nvc21pY0ZvcmdlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/df82c06267/CosmicForge.png",
+      "linkCount": 0,
+      "min": 522.73,
+      "mean": 522.73,
+      "max": 522.73
+    },
+    {
+      "id": 51836,
+      "name": "Widowhail",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL1dpZG93aGFpbEJvdyIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/1f31742277/WidowhailBow.png",
+      "linkCount": 0,
+      "min": 60,
+      "mean": 4.83,
+      "max": 250
+    },
+    {
+      "id": 53789,
+      "name": "Rakiata's Dance",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1Jha2lhdGFTd29yZCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/ec593eeaa8/RakiataSword.png",
+      "linkCount": 0,
+      "min": 1250,
+      "mean": 1250,
+      "max": 1250
+    },
+    {
+      "id": 51988,
+      "name": "Widowhail",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL1dpZG93aGFpbEJvdyIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/1f31742277/WidowhailBow.png",
+      "linkCount": 5,
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 7,
+      "name": "Brightbeak",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvT25lSGFuZE1hY2U1VW5pcXVlIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/d3f763cad7/OneHandMace5Unique.png",
+      "linkCount": 0,
+      "min": 0.5,
+      "mean": 0.84,
+      "max": 0.5
+    },
+    {
+      "id": 8,
+      "name": "Edge of Madness",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0VkZ2VPZk1hZG5lc3MiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/5ab6c808b5/EdgeOfMadness.png",
+      "linkCount": 0,
+      "min": 3,
+      "mean": 1.5,
+      "max": 3
+    },
+    {
+      "id": 31,
+      "name": "Ngamahu's Flame",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvUmlyaVRlTmdhbWFodSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/55c2a170af/RiriTeNgamahu.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 26,
+      "name": "Quill Rain",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzJ1bmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/5c5cad82e8/Bow2unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1.1,
+      "max": 22
+    },
+    {
+      "id": 15,
+      "name": "Singularity",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9HbG9vbWV5ZSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/12d7027e18/Gloomeye.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 41,
+      "name": "Hyaon's Fury",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0h5YW9uc0Z1cnkiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/1abaf6507b/HyaonsFury.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 46,
+      "name": "Paradoxica",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9SYXBpZXJzL0Fzc2Fzc2luYXRpb25VbmlxdWUyIiwidyI6MSwiaCI6NCwic2NhbGUiOjF9XQ/b84147fcbd/AssassinationUnique2.png",
+      "linkCount": 0,
+      "min": 230,
+      "mean": 60,
+      "max": 250
+    },
+    {
+      "id": 80,
+      "name": "Reverberation Rod",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9SZXZlcmJlcmF0aW9uUm9kIiwidyI6MSwiaCI6Mywic2NhbGUiOjF9XQ/676a395a5f/ReverberationRod.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 3.43,
+      "max": 15
+    },
+    {
+      "id": 96,
+      "name": "Widowmaker",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL1dpZG93bWFrZXIiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/c581a2aec4/Widowmaker.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 152,
+      "name": "Tulfall",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9UdWxib3JuVXBncmFkZWQiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/575d6058a2/TulbornUpgraded.png",
+      "linkCount": 0,
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 154,
+      "name": "Queen's Decree",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1R3b0hhbmRTd29yZFVuaXF1ZTMiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/a79e04039c/TwoHandSwordUnique3.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1.13,
+      "max": 1
+    },
+    {
+      "id": 183,
+      "name": "Shiversting",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1R3b0hhbmRTd29yZDZVbmlxdWUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/084a248453/TwoHandSword6Unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1.17,
+      "max": 1
+    },
+    {
+      "id": 184,
+      "name": "Abberath's Horn",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XeWNodmVyZ2UiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/ea4dd8a801/Wychverge.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 191,
+      "name": "Ichimonji",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0JsYWRlT2ZWYXN0cmkiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/a01d200e74/BladeOfVastri.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 20
+    },
+    {
+      "id": 205,
+      "name": "Apep's Rage",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9BcGVwc1JhZ2UiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/074c66dadc/ApepsRage.png",
+      "linkCount": 0,
+      "min": 5,
+      "mean": 5,
+      "max": 30
+    },
+    {
+      "id": 195,
+      "name": "Terminus Est",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1R3b0hhbmRTd29yZFVuaXF1ZTIiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/c5d5843861/TwoHandSwordUnique2.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 203,
+      "name": "Dying Breath",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvRHlpbmdCcmVhdGgiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/3b7be0c935/DyingBreath.png",
+      "linkCount": 0,
+      "min": 1.25,
+      "mean": 1.38,
+      "max": 2
+    },
+    {
+      "id": 376,
+      "name": "The Blood Thorn",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvVGhlQmxvb2RUaG9ybiIsInciOjEsImgiOjQsInNjYWxlIjoxfV0/3dac5ee34b/TheBloodThorn.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 370,
+      "name": "The Dark Seer",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9Wb2lkR2F6ZSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/e24a55cd27/VoidGaze.png",
+      "linkCount": 0,
+      "min": 345,
+      "mean": 416.67,
+      "max": 375
+    },
+    {
+      "id": 391,
+      "name": "Void Battery",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9Wb2lkQmF0dGVyeSIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/71a0fdc8db/VoidBattery.png",
+      "linkCount": 0,
+      "min": 38,
+      "mean": 38,
+      "max": 38
+    },
+    {
+      "id": 393,
+      "name": "Slivertongue",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL1NpbHZlclRvbmd1ZSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/15c7237f48/SilverTongue.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1.57,
+      "max": 1
+    },
+    {
+      "id": 396,
+      "name": "The Crimson Storm",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0ZvcnRpZmljYXRpb25zVW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/b95b104d3e/FortificationsUnique.png",
+      "linkCount": 0,
+      "min": 5,
+      "mean": 8.75,
+      "max": 125
+    },
+    {
+      "id": 403,
+      "name": "Nebulis",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9TY2VwdHJlT2ZNZW1vcmllcyIsInciOjIsImgiOjMsInNjYWxlIjoxLCJzeW50aGVzaXNlZCI6dHJ1ZX1d/42c37f31d6/SceptreOfMemories.png",
+      "linkCount": 0,
+      "min": 25,
+      "mean": 113.1,
+      "max": 25
+    },
+    {
+      "id": 444,
+      "name": "Jack, the Axe",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9KYWNrdGhlYXhlIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/f1f813fe9f/Jacktheaxe.png",
+      "linkCount": 0,
+      "min": 70,
+      "mean": 39.37,
+      "max": 125
+    },
+    {
+      "id": 455,
+      "name": "Obliteration",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9NYWxlZGljdCIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/2ddc131782/Maledict.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 1.16,
+      "max": 2
+    },
+    {
+      "id": 497,
+      "name": "Allure",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9BbGx1cmUiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/ff5311676c/Allure.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 499,
+      "name": "Storm Prison",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9TdG9ybVByaXNvbiIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/0fc4811c94/StormPrison.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 739,
+      "name": "Augyre",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9FbGRlclNjZXB0cmUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/325c7b1591/ElderSceptre.png",
+      "linkCount": 0,
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 778,
+      "name": "Moonsorrow",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kVW5pcXVlMiIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/7a5458ab50/WandUnique2.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 1.9,
+      "max": 2.25
+    },
+    {
+      "id": 798,
+      "name": "Cold Iron Point",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0NvbGRJcm9uUG9pbnQiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/1a4002957b/ColdIronPoint.png",
+      "linkCount": 0,
+      "min": 7,
+      "mean": 6.94,
+      "max": 7
+    },
+    {
+      "id": 785,
+      "name": "Al Dhih",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9BbGRoaWgiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/5af625fdd1/Aldhih.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 786,
+      "name": "Lifesprig",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9MaWZlU3ByaWciLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/8e97a1d808/LifeSprig.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 779,
+      "name": "White Wind",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL1doaXRlV2luZCIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/48866b1c7f/WhiteWind.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 803,
+      "name": "Agnerod South",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY2dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/8b60f5a033/Staff6unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1201,
+      "name": "Goredrill",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0dvcmVkcmlsbCIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/e61d6f038e/Goredrill.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1199,
+      "name": "Lakishu's Blade",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL09uZUhhbmRTd29yZDVVbmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/5a5771852b/OneHandSword5Unique.png",
+      "linkCount": 0,
+      "min": 0,
+      "mean": 1,
+      "max": 0
+    },
+    {
+      "id": 1245,
+      "name": "Scaeva",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL1NjYWV2YSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/320c7247e3/Scaeva.png",
+      "linkCount": 0,
+      "min": 0,
+      "mean": 1,
+      "max": 0
+    },
+    {
+      "id": 1262,
+      "name": "Soul Taker",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9BbGV4YXhlIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/647bb8bb63/Alexaxe.png",
+      "linkCount": 0,
+      "min": 5625,
+      "mean": 5625,
+      "max": 5625
+    },
+    {
+      "id": 1235,
+      "name": "Mjölner",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvTWpvbG5lciIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/3e6fc15b26/Mjolner.png",
+      "linkCount": 0,
+      "min": 50,
+      "mean": 20,
+      "max": 50
+    },
+    {
+      "id": 1283,
+      "name": "Kongor's Undying Rage",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvS29uZ29yc1VuZHlpbmdSYWdlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/5fa26110bc/KongorsUndyingRage.png",
+      "linkCount": 0,
+      "min": 20,
+      "mean": 1.5,
+      "max": 20
+    },
+    {
+      "id": 1282,
+      "name": "Innsbury Edge",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0VsZGVyU3dvcmQiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/2bd26d4bf6/ElderSword.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1285,
+      "name": "Dreamfeather",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0RyZWFtZmVhdGhlciIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/89a3a7588c/Dreamfeather.png",
+      "linkCount": 0,
+      "min": 20,
+      "mean": 13.5,
+      "max": 20
+    },
+    {
+      "id": 1284,
+      "name": "Ephemeral Edge",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL09uZUhhbmRTd29yZDhVbmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/d2fdb4e56e/OneHandSword8Unique.png",
+      "linkCount": 0,
+      "min": 4895.83,
+      "mean": 4895.83,
+      "max": 4895.83
+    },
+    {
+      "id": 1314,
+      "name": "Fidelitas' Spike",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0ZpZGVsaXRhc1NwaWtlIiwidyI6MSwiaCI6NCwic2NhbGUiOjF9XQ/de1d15ceb1/FidelitasSpike.png",
+      "linkCount": 0,
+      "min": 0,
+      "mean": 2,
+      "max": 0
+    },
+    {
+      "id": 1304,
+      "name": "Taryn's Shiver",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvVGFyeW5zc2hpdmVyIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/b11b3dffb7/Tarynsshiver.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1317,
+      "name": "Taproot",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL01hcnJvd0dhc2hlciIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/22be181636/MarrowGasher.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1348,
+      "name": "Kondo's Pride",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0tvbmRvc1ByaWRlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/59f41a868c/KondosPride.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1345,
+      "name": "Doomsower",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0Rvb21Tb3dlciIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/7d9d914b75/DoomSower.png",
+      "linkCount": 5,
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 1369,
+      "name": "Lioneye's Glare",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jvdzh1bmlxdWUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/29fc966523/Bow8unique.png",
+      "linkCount": 0,
+      "min": 1250,
+      "mean": 1250,
+      "max": 1250
+    },
+    {
+      "id": 1367,
+      "name": "Breath of the Council",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9QbGFndWVicmluZ2VyIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/c22a70dd6e/Plaguebringer.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1386,
+      "name": "Agnerod North",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY2dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/8b60f5a033/Staff6unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1407,
+      "name": "Twyzel",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kMVVuaXF1ZSIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/086aeb214c/Wand1Unique.png",
+      "linkCount": 0,
+      "min": 50,
+      "mean": 1.33,
+      "max": 50
+    },
+    {
+      "id": 1445,
+      "name": "Cane of Unravelling",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQ2FuZU9mVW5yYXZlbGxpbmciLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/99b4e7e44e/CaneOfUnravelling.png",
+      "linkCount": 0,
+      "min": 3,
+      "mean": 1,
+      "max": 3
+    },
+    {
+      "id": 1434,
+      "name": "Aurumvorax",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9SYXBpZXJzL0F1cnVtdm9yYXgiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MX1d/64b63c7413/Aurumvorax.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1435,
+      "name": "Ungil's Gauche",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0RhZ2dlcjN1bmlxdWUiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/ec0e6a82fb/Dagger3unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1444,
+      "name": "Midnight Bargain",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kVW5pcXVlMyIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/1db4fb5dbf/WandUnique3.png",
+      "linkCount": 0,
+      "min": 2.5,
+      "mean": 2.33,
+      "max": 15
+    },
+    {
+      "id": 1439,
+      "name": "Rebuke of the Vaal",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL09uZUhhbmRTd29yZDdVbmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/90312b1e4a/OneHandSword7Unique.png",
+      "linkCount": 0,
+      "min": 16.5,
+      "mean": 13.4,
+      "max": 20
+    },
+    {
+      "id": 1426,
+      "name": "Bloodplay",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0Jsb29kUGxheSIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/3c8258f393/BloodPlay.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1437,
+      "name": "Wildslash",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9XaWxkc2xhc2giLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/9dc7260a86/Wildslash.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1454,
+      "name": "Limbsplit",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlX3NwYXJlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/6cc29798f1/TwoHandAxe_spare.png",
+      "linkCount": 0,
+      "min": 1.75,
+      "mean": 1.75,
+      "max": 1.75
+    },
+    {
+      "id": 1460,
+      "name": "Agnerod East",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY2dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/8b60f5a033/Staff6unique.png",
+      "linkCount": 0,
+      "min": 5,
+      "mean": 4,
+      "max": 5
+    },
+    {
+      "id": 1446,
+      "name": "Mortem Morsu",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9DbGF3OHVuaXF1ZSIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/7294efb794/Claw8unique.png",
+      "linkCount": 0,
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 1447,
+      "name": "Storm Cloud",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL1N0b3JtY2xvdWQiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/003957da0c/Stormcloud.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1448,
+      "name": "Nycta's Lantern",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9MeWNobnVzbHlhZWkiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/c69b77ef8a/Lychnuslyaei.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 2.19,
+      "max": 2.38
+    },
+    {
+      "id": 1533,
+      "name": "Severed in Sleep",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0V0ZXJuYWxTbGVlcDEiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/60deeaccc5/EternalSleep1.png",
+      "linkCount": 0,
+      "min": 125,
+      "mean": 125,
+      "max": 125
+    },
+    {
+      "id": 1556,
+      "name": "Silverbranch",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzFVbmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/73d6f96075/Bow1Unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1.67,
+      "max": 1
+    },
+    {
+      "id": 1618,
+      "name": "Nebuloch",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvRWxkZXJNYWNlIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/f381b102f8/ElderMace.png",
+      "linkCount": 0,
+      "min": 82.5,
+      "mean": 82.5,
+      "max": 82.5
+    },
+    {
+      "id": 1727,
+      "name": "Advancing Fortress",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9DbGF3c2hpZWxkMyIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/a04190ca2b/Clawshield3.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1735,
+      "name": "Wings of Entropy",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9FbnRyb3B5d2luZ3MiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/86e128789a/Entropywings.png",
+      "linkCount": 0,
+      "min": 5.5,
+      "mean": 5.5,
+      "max": 5.5
+    },
+    {
+      "id": 1759,
+      "name": "The Screaming Eagle",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9TY3JlYW1pbmdlYWdsZSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/1fd02e9312/Screamingeagle.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1799,
+      "name": "Martyr of Innocence",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvTWFydHlySW5ub2NlbmNlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/6fd4eee9df/MartyrInnocence.png",
+      "linkCount": 0,
+      "min": 76,
+      "mean": 76,
+      "max": 76
+    },
+    {
+      "id": 1824,
+      "name": "Cybil's Paw",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9DeWJpbHNDbGF3IiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/6da52a7519/CybilsClaw.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 1871,
+      "name": "Hegemony's Era",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvSGVnZW1vbnlzRXJhIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/85929506ae/HegemonysEra.png",
+      "linkCount": 0,
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 1860,
+      "name": "Soulwrest",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvVG9wRG93blN0YXZlSWNvbiIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/f62cfea775/TopDownStaveIcon.png",
+      "linkCount": 0,
+      "min": 15,
+      "mean": 13.25,
+      "max": 15
+    },
+    {
+      "id": 1935,
+      "name": "Callinellus Malleus",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvQ2FsbGluZWxsdXNNYWxsZXVzIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/54da9946c9/CallinellusMalleus.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1921,
+      "name": "Darkscorn",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0RhcmtzY29ybiIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/5145b7feef/Darkscorn.png",
+      "linkCount": 0,
+      "min": 14,
+      "mean": 14,
+      "max": 14
+    },
+    {
+      "id": 1937,
+      "name": "Earendel's Embrace",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9FYXJlbmRlbHNFbWJyYWNlIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/7fbecdb2b3/EarendelsEmbrace.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2047,
+      "name": "The Stormheart",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY4dW5pcXVlWCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/fa0b46bc0c/Staff8uniqueX.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2163,
+      "name": "Uul-Netol's Embrace",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9VdWxOZXRvbHNLaXNzVXBncmFkZWQiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/8c4738c8a9/UulNetolsKissUpgraded.png",
+      "linkCount": 6,
+      "min": 375,
+      "mean": 375,
+      "max": 375
+    },
+    {
+      "id": 2198,
+      "name": "Marohi Erqi",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvVHdvSGFuZE1hY2UydW5pcXVlMiIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/6ae0a56923/TwoHandMace2unique2.png",
+      "linkCount": 0,
+      "min": 2500,
+      "mean": 2500,
+      "max": 2500
+    },
+    {
+      "id": 2190,
+      "name": "Jorrhast's Blacksteel",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvSm9ycmhhc3RzQmxhY2tzdGVlbCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/a1ee3a6a3c/JorrhastsBlacksteel.png",
+      "linkCount": 0,
+      "min": 3,
+      "mean": 1.82,
+      "max": 3
+    },
+    {
+      "id": 2204,
+      "name": "Cospri's Malice",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0Nvc3ByaXNNYWxpY2UiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MX1d/e9e517220b/CosprisMalice.png",
+      "linkCount": 0,
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 2221,
+      "name": "Relentless Fury",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9SZWxlbnRsZXNzRnVyeSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/8013c33f55/RelentlessFury.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2222,
+      "name": "Wideswing",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9XaWRlc3dpbmciLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/e9dfcf58df/Wideswing.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2251,
+      "name": "Mark of the Doubting Knight",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0RvdWJ0aW5nS25pZ2h0IiwidyI6MSwiaCI6Mywic2NhbGUiOjF9XQ/a71d0de38e/DoubtingKnight.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2250,
+      "name": "Mon'tregul's Grasp",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9Nb250cmVndWxzR3Jhc3AiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/c94034110b/MontregulsGrasp.png",
+      "linkCount": 0,
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 2253,
+      "name": "Bitterdream",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9zY2VwdGVyOHVuaXF1ZTIiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/085f7726de/scepter8unique2.png",
+      "linkCount": 0,
+      "min": 9,
+      "mean": 9,
+      "max": 9
+    },
+    {
+      "id": 2252,
+      "name": "Last Resort",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9OZXJhc0xhc3RSZXNvcnQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/5f5a6bd205/NerasLastResort.png",
+      "linkCount": 0,
+      "min": 0,
+      "mean": 7,
+      "max": 0
+    },
+    {
+      "id": 2268,
+      "name": "Cerberus Limb",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9DZXJlYnVzIExpbWIiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/abffc5b395/Cerebus%20Limb.png",
+      "linkCount": 0,
+      "min": 14,
+      "mean": 14,
+      "max": 14
+    },
+    {
+      "id": 2286,
+      "name": "Dyadus",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9EeWFkdXMiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/e1b1cf2439/Dyadus.png",
+      "linkCount": 0,
+      "min": 0,
+      "mean": 1,
+      "max": 0
+    },
+    {
+      "id": 2280,
+      "name": "Rive",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9CbGVlZENsYXciLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/085844fb05/BleedClaw.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2295,
+      "name": "Prismatic Eclipse",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL1ByaXNtYXRpY0VjbGlwc2UiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/d6243ca476/PrismaticEclipse.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2313,
+      "name": "Quecholli",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvVHdvSGFuZE1hY2U1VW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/9361b8eb61/TwoHandMace5Unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2350,
+      "name": "Redbeak",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL09uZUhhbmRTd29yZDFVbmlxdWUiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/a3010a69f5/OneHandSword1Unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2341,
+      "name": "Touch of Anguish",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9Ub3VjaE9mQW5ndWlzaCIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/c3b67bc0c2/TouchOfAnguish.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2384,
+      "name": "Iron Commander",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0lyb25Db21tZW5kYW50IiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/001ca245e3/IronCommendant.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2414,
+      "name": "Varunastra",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL1ZhcnVuYXN0cmEiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/ce779b1e41/Varunastra.png",
+      "linkCount": 0,
+      "min": 690,
+      "mean": 250,
+      "max": 750
+    },
+    {
+      "id": 2479,
+      "name": "Lavianga's Wisdom",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvT25lSGFuZE1hY2UzYSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/3c0044c7be/OneHandMace3a.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2457,
+      "name": "Chober Chaber",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvQ2hvYmVyQ2hhYmVyIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/77d9d3e30a/ChoberChaber.png",
+      "linkCount": 0,
+      "min": 0,
+      "mean": 1,
+      "max": 0
+    },
+    {
+      "id": 2482,
+      "name": "Roth's Reach",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL1NhcmtoYW1zUmVhY2giLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/89bf0cff0b/SarkhamsReach.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2486,
+      "name": "Shimmeron",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9FbGRlcldhbmQiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/f941d5c543/ElderWand.png",
+      "linkCount": 0,
+      "min": 10,
+      "mean": 14,
+      "max": 10
+    },
+    {
+      "id": 2515,
+      "name": "Disintegrator",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvRWxkZXJTdGFmZiIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/4d2bfda95c/ElderStaff.png",
+      "linkCount": 0,
+      "min": 70,
+      "mean": 70,
+      "max": 70
+    },
+    {
+      "id": 2564,
+      "name": "Realmshaper",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY1dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/33929e1979/Staff5unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2683,
+      "name": "Vulconus",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL1Z1bGNvbnVzIiwidyI6MSwiaCI6Mywic2NhbGUiOjF9XQ/aefa0a977b/Vulconus.png",
+      "linkCount": 0,
+      "min": 8,
+      "mean": 5.5,
+      "max": 8
+    },
+    {
+      "id": 2680,
+      "name": "Eclipse Solaris",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kVW5pcXVlMSIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/e1734b812d/WandUnique1.png",
+      "linkCount": 0,
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 2716,
+      "name": "Doomfletch",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Rvb21GbGV0Y2giLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/a284f1cdab/DoomFletch.png",
+      "linkCount": 6,
+      "min": 50,
+      "mean": 50,
+      "max": 50
+    },
+    {
+      "id": 2725,
+      "name": "Daresso's Passion",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9SYXBpZXJzL0RhcmVzc29zIiwidyI6MSwiaCI6NCwic2NhbGUiOjF9XQ/d698c36c19/Daressos.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 2814,
+      "name": "Ashcaller",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9Bc2h3YWtlciIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/a36e60acf6/Ashwaker.png",
+      "linkCount": 0,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 2851,
+      "name": "Debeon's Dirge",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9TdHJpbmdBeGUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/c3289a678a/StringAxe.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 2844,
+      "name": "Beltimber Blade",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL1ZlcmRhbnRHdWFyZGlhblN3b3JkMiIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/3f09536952/VerdantGuardianSword2.png",
+      "linkCount": 0,
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 2898,
+      "name": "Agnerod West",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY2dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/8b60f5a033/Staff6unique.png",
+      "linkCount": 0,
+      "min": 1.27,
+      "mean": 1.27,
+      "max": 1.27
+    },
+    {
+      "id": 2944,
+      "name": "Oro's Sacrifice",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL09yb3NTYWNyaWZpY2UiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/82b813f27d/OrosSacrifice.png",
+      "linkCount": 6,
+      "min": 125,
+      "mean": 125,
+      "max": 125
+    },
+    {
+      "id": 2955,
+      "name": "Soulwrest",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvVG9wRG93blN0YXZlSWNvbiIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/f62cfea775/TopDownStaveIcon.png",
+      "linkCount": 6,
+      "min": 35,
+      "mean": 35,
+      "max": 35
+    },
+    {
+      "id": 2996,
+      "name": "Voltaxic Rift",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL1ZvaWRzaGFmdCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/aaa5cfdba1/Voidshaft.png",
+      "linkCount": 5,
+      "min": 750,
+      "mean": 750,
+      "max": 750
+    },
+    {
+      "id": 3002,
+      "name": "The Goddess Bound",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9SYXBpZXJzL1VuaXF1ZVJhcGllcjYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MX1d/b9f0cc5e60/UniqueRapier6.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 3065,
+      "name": "Jorrhast's Blacksteel",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvSm9ycmhhc3RzQmxhY2tzdGVlbCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/a1ee3a6a3c/JorrhastsBlacksteel.png",
+      "linkCount": 6,
+      "min": 12,
+      "mean": 12,
+      "max": 12
+    },
+    {
+      "id": 3172,
+      "name": "Fencoil",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmYxdW5pcXVlIiwidyI6MSwiaCI6NCwic2NhbGUiOjF9XQ/cff9022931/Staff1unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 3167,
+      "name": "Ewar's Mirage",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9SYXBpZXJzL0V3YXJzTWlyYWdlIiwidyI6MSwiaCI6NCwic2NhbGUiOjF9XQ/c7b916c7f4/EwarsMirage.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 3202,
+      "name": "Death's Harp",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0RlYXRoc2hhcnAiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/488e5f6267/Deathsharp.png",
+      "linkCount": 5,
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 3211,
+      "name": "Sinvicta's Mettle",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9TaW52aWN0YXNNZXR0bGUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/f1eaf2346b/SinvictasMettle.png",
+      "linkCount": 5,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 3217,
+      "name": "Gorebreaker",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvT25lSGFuZE1hY2UzVW5pcXVlIiwidyI6MSwiaCI6Mywic2NhbGUiOjF9XQ/c3ca02cad8/OneHandMace3Unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 3481,
+      "name": "Sign of the Sin Eater",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9TY2VwdGVyT2ZTdWZmZXJpbmciLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/49a06d1a23/ScepterOfSuffering.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 2.25,
+      "max": 3
+    },
+    {
+      "id": 3640,
+      "name": "Essentia Sanguis",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9DbGF3NVVuaXF1ZTIiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/8041876a9e/Claw5Unique2.png",
+      "linkCount": 0,
+      "min": 230,
+      "mean": 250,
+      "max": 250
+    },
+    {
+      "id": 3639,
+      "name": "The Supreme Truth",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9UaGVzdXByZW1ldHJ1dGgiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/1f03434324/Thesupremetruth.png",
+      "linkCount": 0,
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 3726,
+      "name": "Voidhome",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvVm9pZGhvbWUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/0122c9dcf4/Voidhome.png",
+      "linkCount": 0,
+      "min": 5,
+      "mean": 1.33,
+      "max": 5
+    },
+    {
+      "id": 3927,
+      "name": "Frostbreath",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvRnJvc3RCcmVhdGgiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/8a6b305388/FrostBreath.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 3933,
+      "name": "Ahn's Might",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0FobnNNaWdodCIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/ee9d3b45a4/AhnsMight.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4039,
+      "name": "Grelwood Shank",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL1ZlcmRhbnRHdWFyZGlhblN3b3JkMSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/b085f741a5/VerdantGuardianSword1.png",
+      "linkCount": 0,
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 4112,
+      "name": "Infractem",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0luZnJhY3RlbSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/ea06e13fb8/Infractem.png",
+      "linkCount": 6,
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 4203,
+      "name": "Shade of Solaris",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9Tb2xhcmlzV2FuZCIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/8f2f75ad2e/SolarisWand.png",
+      "linkCount": 0,
+      "min": 27.33,
+      "mean": 27.33,
+      "max": 27.33
+    },
+    {
+      "id": 4348,
+      "name": "Agnerod North",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY2dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/8b60f5a033/Staff6unique.png",
+      "linkCount": 6,
+      "min": 37,
+      "mean": 37,
+      "max": 37
+    },
+    {
+      "id": 4639,
+      "name": "The Consuming Dark",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0NvbnN1bWluZ3RoZURhcmsiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/71882cbd42/ConsumingtheDark.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 4844,
+      "name": "The Tempestuous Steel",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL1RlbXBlc3R1b3VzU3RlZWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/72078201f9/TempestuousSteel.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1.57,
+      "max": 1
+    },
+    {
+      "id": 4834,
+      "name": "Agnerod South",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY2dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/8b60f5a033/Staff6unique.png",
+      "linkCount": 5,
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 4932,
+      "name": "Slivertongue",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL1NpbHZlclRvbmd1ZSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/15c7237f48/SilverTongue.png",
+      "linkCount": 5,
+      "min": 8,
+      "mean": 8,
+      "max": 8
+    },
+    {
+      "id": 5257,
+      "name": "Dying Breath",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvRHlpbmdCcmVhdGgiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/3b7be0c935/DyingBreath.png",
+      "linkCount": 6,
+      "min": 17,
+      "mean": 17,
+      "max": 17
+    },
+    {
+      "id": 5256,
+      "name": "Silverbranch",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzFVbmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/73d6f96075/Bow1Unique.png",
+      "linkCount": 5,
+      "min": 4,
+      "mean": 9.25,
+      "max": 4
+    },
+    {
+      "id": 5537,
+      "name": "Dreadarc",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9EcmVhZGFyYyIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/fd1e188ee3/Dreadarc.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 1,
+      "max": 2
+    },
+    {
+      "id": 5690,
+      "name": "Moonbender's Wing",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9Nb29uYmVuZGVyc1dpbmciLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/68a04ccc3f/MoonbendersWing.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 5782,
+      "name": "Realmshaper",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY1dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/33929e1979/Staff5unique.png",
+      "linkCount": 6,
+      "min": 34,
+      "mean": 34,
+      "max": 34
+    },
+    {
+      "id": 5959,
+      "name": "Wings of Entropy",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9FbnRyb3B5d2luZ3MiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/86e128789a/Entropywings.png",
+      "linkCount": 5,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 6213,
+      "name": "Hegemony's Era",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvSGVnZW1vbnlzRXJhIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/85929506ae/HegemonysEra.png",
+      "linkCount": 5,
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 60871,
+      "name": "Grace of the Goddess",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9VYmVyTWF2ZW5XYW5kIiwidyI6MSwiaCI6Mywic2NhbGUiOjF9XQ/1e06b23a5b/UberMavenWand.png",
+      "linkCount": 0,
+      "min": 1035,
+      "mean": 1125,
+      "max": 1125
+    },
+    {
+      "id": 6686,
+      "name": "Law of the Wilds",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9Xb2xmQ2xhdyIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/8dd39cb98e/WolfClaw.png",
+      "linkCount": 0,
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 6683,
+      "name": "Witchhunter's Judgment",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQnJhbmREZXRvbmF0ZVN0YWZmIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/07d64ef02c/BrandDetonateStaff.png",
+      "linkCount": 0,
+      "min": 250,
+      "mean": 250,
+      "max": 250
+    },
+    {
+      "id": 7194,
+      "name": "Pillar of the Caged God",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvUGlsbGFyb2Z0aGVDYWdlZEdvZCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/0451281624/PillaroftheCagedGod.png",
+      "linkCount": 5,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 7382,
+      "name": "Hiltless",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0hpbHRsZXNzIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/04689b7d41/Hiltless.png",
+      "linkCount": 6,
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 7503,
+      "name": "Xoph's Inception",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jsb29kUGVyaWdyZWUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/7856c171f7/BloodPerigree.png",
+      "linkCount": 5,
+      "min": 12,
+      "mean": 12,
+      "max": 12
+    },
+    {
+      "id": 7566,
+      "name": "Agnerod West",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY2dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/8b60f5a033/Staff6unique.png",
+      "linkCount": 6,
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 7623,
+      "name": "Edge of Madness",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0VkZ2VPZk1hZG5lc3MiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/5ab6c808b5/EdgeOfMadness.png",
+      "linkCount": 5,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 7707,
+      "name": "Trypanon",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvVHJ5cGFub24iLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/3152ab4124/Trypanon.png",
+      "linkCount": 6,
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": 7870,
+      "name": "Voidhome",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvVm9pZGhvbWUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/0122c9dcf4/Voidhome.png",
+      "linkCount": 5,
+      "min": 25,
+      "mean": 1,
+      "max": 25
+    },
+    {
+      "id": 7910,
+      "name": "Agnerod North",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY2dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/8b60f5a033/Staff6unique.png",
+      "linkCount": 5,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 7991,
+      "name": "Agnerod East",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY2dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/8b60f5a033/Staff6unique.png",
+      "linkCount": 5,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 8252,
+      "name": "Hiltless",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0hpbHRsZXNzIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/04689b7d41/Hiltless.png",
+      "linkCount": 5,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 8316,
+      "name": "Dying Breath",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvRHlpbmdCcmVhdGgiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/3b7be0c935/DyingBreath.png",
+      "linkCount": 5,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 8509,
+      "name": "Realmshaper",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY1dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/33929e1979/Staff5unique.png",
+      "linkCount": 5,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 10599,
+      "name": "Actum",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9IYW5sb25zUmF6b3IiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/a81f0f6259/HanlonsRazor.png",
+      "linkCount": 0,
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 10614,
+      "name": "The Fulcrum",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvRWxlbWVudGFsSGFybW9ueSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/912f60acd7/ElementalHarmony.png",
+      "linkCount": 0,
+      "min": 25,
+      "mean": 32.5,
+      "max": 125
+    },
+    {
+      "id": 10789,
+      "name": "Replica Bitterdream",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9zY2VwdGVyOHVuaXF1ZTIiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/085f7726de/scepter8unique2.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 10790,
+      "name": "Replica Frostbreath",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvRnJvc3RCcmVhdGgiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/8a6b305388/FrostBreath.png",
+      "linkCount": 0,
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": 10794,
+      "name": "Replica Cold Iron Point",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0NvbGRJcm9uUG9pbnQiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/1a4002957b/ColdIronPoint.png",
+      "linkCount": 0,
+      "min": 20.57,
+      "mean": 20.57,
+      "max": 20.57
+    },
+    {
+      "id": 10788,
+      "name": "Replica Bloodplay",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0Jsb29kUGxheSIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/3c8258f393/BloodPlay.png",
+      "linkCount": 0,
+      "min": 7,
+      "mean": 7,
+      "max": 7
+    },
+    {
+      "id": 10804,
+      "name": "Replica Quill Rain",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzJ1bmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/5c5cad82e8/Bow2unique.png",
+      "linkCount": 0,
+      "min": 1.8,
+      "mean": 1.8,
+      "max": 1.8
+    },
+    {
+      "id": 10817,
+      "name": "Replica Twyzel",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kMVVuaXF1ZSIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/086aeb214c/Wand1Unique.png",
+      "linkCount": 0,
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 10812,
+      "name": "Replica Paradoxica",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9SYXBpZXJzL0Fzc2Fzc2luYXRpb25VbmlxdWUyIiwidyI6MSwiaCI6NCwic2NhbGUiOjF9XQ/b84147fcbd/AssassinationUnique2.png",
+      "linkCount": 0,
+      "min": 50,
+      "mean": 50,
+      "max": 50
+    },
+    {
+      "id": 10820,
+      "name": "Replica Iron Commander",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0lyb25Db21tZW5kYW50IiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/001ca245e3/IronCommendant.png",
+      "linkCount": 0,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 10837,
+      "name": "Replica Dreamfeather",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0RyZWFtZmVhdGhlciIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/89a3a7588c/Dreamfeather.png",
+      "linkCount": 0,
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 10854,
+      "name": "Replica Fencoil",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmYxdW5pcXVlIiwidyI6MSwiaCI6NCwic2NhbGUiOjF9XQ/cff9022931/Staff1unique.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": 10871,
+      "name": "Replica Nebulis",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9TY2VwdHJlT2ZNZW1vcmllcyIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/a627a19fc4/SceptreOfMemories.png",
+      "linkCount": 0,
+      "min": 1000,
+      "mean": 1000,
+      "max": 1000
+    },
+    {
+      "id": 10866,
+      "name": "Replica Duskdawn",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU29sYXJpc0x1bmFyaXNTdGFmZiIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/e5e9df18a4/SolarisLunarisStaff.png",
+      "linkCount": 0,
+      "min": 375,
+      "mean": 375,
+      "max": 375
+    },
+    {
+      "id": 10876,
+      "name": "Replica Wings of Entropy",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9FbnRyb3B5d2luZ3MiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/86e128789a/Entropywings.png",
+      "linkCount": 6,
+      "min": 750,
+      "mean": 750,
+      "max": 750
+    },
+    {
+      "id": 1866,
+      "name": "Hand of Wisdom and Action",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9UaG91Z2h0TW90aW9uMiIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/69f2b430d0/ThoughtMotion2.png",
+      "linkCount": 0,
+      "min": 0,
+      "mean": 2,
+      "max": 0
+    },
+    {
+      "id": 34780,
+      "name": "Windripper",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0VhZ2xlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/01fdf37ac0/Eagle.png",
+      "linkCount": 0,
+      "min": 6,
+      "mean": 6,
+      "max": 6
+    },
+    {
+      "id": 571,
+      "name": "The Wasp Nest",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9MZXZpYXRoYW5pdm9yeSIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/8d31776c34/Leviathanivory.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 34768,
+      "name": "Sire of Shards",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvUmFkaWVuY2UiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/229388b736/Radience.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1.17,
+      "max": 1
+    },
+    {
+      "id": 1433,
+      "name": "Doomfletch",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Rvb21GbGV0Y2giLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/a284f1cdab/DoomFletch.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 7604,
+      "name": "Reaper's Pursuit",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlVW5pcXVlMSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/d39a181d8d/TwoHandAxeUnique1.png",
+      "linkCount": 5,
+      "min": 5.43,
+      "mean": 5.43,
+      "max": 5.43
+    },
+    {
+      "id": 21,
+      "name": "Infractem",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0luZnJhY3RlbSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/ea06e13fb8/Infractem.png",
+      "linkCount": 0,
+      "min": 0,
+      "mean": 1,
+      "max": 0
+    },
+    {
+      "id": 34795,
+      "name": "The Harvest",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9UaGVFeHRyYWN0b3IiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/8452349a24/TheExtractor.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 930,
+      "name": "The Whispering Ice",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY4dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/04e7459f43/Staff8unique.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 2.6,
+      "max": 1
+    },
+    {
+      "id": 456,
+      "name": "Axiom Perpetuum",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9BeGlvbVBlcnBldHV1bSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/da686b937b/AxiomPerpetuum.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 740,
+      "name": "Sinvicta's Mettle",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9TaW52aWN0YXNNZXR0bGUiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/f1eaf2346b/SinvictasMettle.png",
+      "linkCount": 0,
+      "min": 0,
+      "mean": 1.5,
+      "max": 0
+    },
+    {
+      "id": 10839,
+      "name": "Replica Midnight Bargain",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kVW5pcXVlMyIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/1db4fb5dbf/WandUnique3.png",
+      "linkCount": 0,
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    },
+    {
+      "id": 1354,
+      "name": "Brutus' Lead Sprinkler",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvVGhlTGVhZFNwcmlua2xlciIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/9a9217f832/TheLeadSprinkler.png",
+      "linkCount": 0,
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": 2978,
+      "name": "Balefire",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYWVsZmlyZSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/082c0ee423/Baelfire.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 6038,
+      "name": "Quill Rain",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0JvdzJ1bmlxdWUiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/5c5cad82e8/Bow2unique.png",
+      "linkCount": 5,
+      "min": 25,
+      "mean": 25,
+      "max": 25
+    },
+    {
+      "id": 2903,
+      "name": "Tidebreaker",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvVGlkZWJyZWFrZXIiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/25b69a132f/Tidebreaker.png",
+      "linkCount": 0,
+      "min": 300,
+      "mean": 300,
+      "max": 300
+    },
+    {
+      "id": 782,
+      "name": "Piscator's Vigil",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9QaXNjYXRvcnNWaWdpbCIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/332f80f7ac/PiscatorsVigil.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 5840,
+      "name": "Oro's Sacrifice",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL09yb3NTYWNyaWZpY2UiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/82b813f27d/OrosSacrifice.png",
+      "linkCount": 5,
+      "min": 45,
+      "mean": 45,
+      "max": 45
+    },
+    {
+      "id": 34764,
+      "name": "The Dancing Dervish",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1JoeXNibGFkZSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/3ed974e708/Rhysblade.png",
+      "linkCount": 0,
+      "min": 3,
+      "mean": 3.88,
+      "max": 3
+    },
+    {
+      "id": 2485,
+      "name": "The Scourge",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9UaGVTY291cmdlIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/598a9f9893/TheScourge.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 2.92,
+      "max": 22
+    },
+    {
+      "id": 5358,
+      "name": "Flesh-Eater",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvT25lSGFuZE1hY2U2VW5pcXVlIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/2db8b10771/OneHandMace6Unique.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 1,
+      "max": 2
+    },
+    {
+      "id": 854,
+      "name": "Femurs of the Saints",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvRmVtdXJzb2Z0aGVTYWludHMiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/e275f87366/FemursoftheSaints.png",
+      "linkCount": 0,
+      "min": 25,
+      "mean": 1.4,
+      "max": 25
+    },
+    {
+      "id": 1558,
+      "name": "Cameria's Maul",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvQW1lcmljc01hdWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/e1b9d35ca3/AmericsMaul.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 10855,
+      "name": "Replica Tulfall",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9UdWxib3JuVXBncmFkZWQiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/575d6058a2/TulbornUpgraded.png",
+      "linkCount": 0,
+      "min": 13.33,
+      "mean": 13.33,
+      "max": 13.33
+    },
+    {
+      "id": 3074,
+      "name": "Rigwald's Savagery",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kQXhlcy9SaWd3YXJsQXhlIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/e2ee95737e/RigwarlAxe.png",
+      "linkCount": 0,
+      "min": 2,
+      "mean": 2.8,
+      "max": 2
+    },
+    {
+      "id": 1873,
+      "name": "Razor of the Seventh Sun",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL1Jhem9yT2ZUaGVTZXZlbnRoU3VuIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/ef21dd7f97/RazorOfTheSeventhSun.png",
+      "linkCount": 0,
+      "min": 4.08,
+      "mean": 4.08,
+      "max": 4.08
+    },
+    {
+      "id": 8028,
+      "name": "Geofri's Baptism",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvVHdvSGFuZE1hY2U3VW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/378419527e/TwoHandMace7Unique.png",
+      "linkCount": 5,
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": 10808,
+      "name": "Replica Tempestuous Steel",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL1RlbXBlc3R1b3VzU3RlZWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/72078201f9/TempestuousSteel.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1307,
+      "name": "Death's Hand",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9FbmRPZkVyYSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/fbfd20f658/EndOfEra.png",
+      "linkCount": 0,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": 1527,
+      "name": "The Poet's Pen",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9Qb2V0c1BlbiIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/f6f0645739/PoetsPen.png",
+      "linkCount": 0,
+      "min": 48,
+      "mean": 28.5,
+      "max": 48
+    },
+    {
+      "id": 3392,
+      "name": "Arakaali's Fang",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9EYWdnZXJzL0ZhbmdVbmlxdWUiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/de6e51652e/FangUnique.png",
+      "linkCount": 0,
+      "min": 73.18,
+      "mean": 73.18,
+      "max": 73.18
+    },
+    {
+      "id": 1607,
+      "name": "Nuro's Harp",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL051cm9zUHVyaWZ5aW5nSGFycCIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/36ac89806c/NurosPurifyingHarp.png",
+      "linkCount": 6,
+      "min": 5,
+      "mean": 5,
+      "max": 5
+    },
+    {
+      "id": 58217,
+      "name": "The Burden of Shadows",
+      "category": "weapons",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvVm9vZG9vS2luZ1N0YWZmIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/295f49d20f/VoodooKingStaff.png",
+      "linkCount": 0,
+      "min": 40,
+      "mean": 20,
+      "max": 40
+    }
+  ]
+}

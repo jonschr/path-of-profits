@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-02-10T14:58:50.355Z",
+  "source": "poe.watch",
+  "league": {
+    "watch": "Keepers",
+    "text": "Keepers",
+    "slug": "keepers"
+  },
+  "category": "incubator",
+  "updatedAt": "2026-02-10T14:59:31.000Z",
+  "items": [
+    {
+      "id": 39940,
+      "name": "Gemcutter's Incubator",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5jdWJhdGlvbi9JbmN1YmF0aW9uR2VtcyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/5e44f2f524/IncubationGems.png",
+      "min": 90,
+      "mean": 90,
+      "max": 90
+    },
+    {
+      "id": 42238,
+      "name": "Maddening Incubator",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5jdWJhdGlvbi9JbmN1YmF0aW9uRGVsaXJpdW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/856c8ac937/IncubationDelirium.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.53
+    },
+    {
+      "id": 42270,
+      "name": "Blighted Incubator",
+      "category": "currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5jdWJhdGlvbi9JbmN1YmF0aW9uQmxpZ2h0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/47630133e8/IncubationBlight.png",
+      "min": 1,
+      "mean": 1,
+      "max": 1.89
+    }
+  ]
+}
