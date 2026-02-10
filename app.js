@@ -3,6 +3,10 @@
     const BASE_DISPLAY_CURRENCY = 'divine';
     const BASE_MIN_VALUE_ENABLED = false;
     const BASE_MIN_VALUE_CHAOS = 10;
+    const BASE_MIN_PROBABILITY_ENABLED = false;
+    const BASE_MIN_PROBABILITY = 0.01;
+    const BASE_SORT_KEY = 'expectedProfit';
+    const BASE_SORT_DIR = 'desc';
     const BASE_DEBUG = false;
 
     const LEGACY_LEAGUE_ALIASES = {
@@ -24,6 +28,8 @@
     const manualCurrencyKey = 'poeBossManualCurrency';
     const ignoreDropsKey = 'poeBossIgnoreDrops';
     const displayCurrencyKey = 'poeBossDisplayCurrency';
+    const sortKeyStorage = 'poeBossSortKey';
+    const sortDirStorage = 'poeBossSortDir';
     const priceCacheKey = 'poeBossPriceCacheV1';
     const priceCacheTtlMs = 60 * 60 * 1000;
     const leagueCacheKey = 'poeBossLeagueCacheV2';
@@ -110,6 +116,10 @@
       divineChaos: null,
       minValueFilter: false,
       minValueThresholdChaos: 10,
+      minProbabilityFilter: false,
+      minProbabilityThreshold: 0.01,
+      sortKey: BASE_SORT_KEY,
+      sortDir: BASE_SORT_DIR,
       searchQuery: ''
     };
 
@@ -126,7 +136,10 @@
     const bossList = document.getElementById('bossList');
     const minValueToggle = document.getElementById('minValueToggle');
     const minValueInput = document.getElementById('minValueInput');
+    const minProbToggle = document.getElementById('minProbToggle');
+    const minProbInput = document.getElementById('minProbInput');
     const searchInput = document.getElementById('searchInput');
+    const sortButtons = document.querySelectorAll('.sort-button');
 
     function normalizeLeagueKey(value) {
       const raw = String(value || '').trim();
@@ -377,6 +390,19 @@
     state.minValueThresholdChaos = Number.isFinite(minThresholdPref) ? minThresholdPref : 10;
     minValueToggle.checked = state.minValueFilter;
 
+    const minProbPref = localStorage.getItem('poeBossMinProbEnabled') || 'off';
+    const minProbThresholdPref = Number(localStorage.getItem('poeBossMinProb') || String(BASE_MIN_PROBABILITY));
+    state.minProbabilityFilter = minProbPref === 'on';
+    state.minProbabilityThreshold = Number.isFinite(minProbThresholdPref)
+      ? minProbThresholdPref
+      : BASE_MIN_PROBABILITY;
+    minProbToggle.checked = state.minProbabilityFilter;
+
+    const storedSortKey = localStorage.getItem(sortKeyStorage) || BASE_SORT_KEY;
+    const storedSortDir = localStorage.getItem(sortDirStorage) || BASE_SORT_DIR;
+    state.sortKey = storedSortKey || BASE_SORT_KEY;
+    state.sortDir = storedSortDir === 'asc' ? 'asc' : 'desc';
+
     if (searchInput) {
       searchInput.value = state.searchQuery;
       searchInput.addEventListener('input', (event) => {
@@ -432,7 +458,40 @@
       }
     }
 
+    function updateMinProbabilityInput() {
+      const thresholdPct = (state.minProbabilityThreshold || 0) * 100;
+      minProbInput.value = thresholdPct.toFixed(2);
+      minProbInput.step = '0.01';
+    }
+
+    function defaultSortDirFor(key) {
+      if (key === 'entryCost') return 'asc';
+      return 'desc';
+    }
+
+    function updateSortButtons() {
+      if (!sortButtons?.length) return;
+      sortButtons.forEach((button) => {
+        const key = button.dataset.sortKey;
+        const label = button.dataset.sortLabel || button.textContent.trim();
+        if (!button.dataset.sortLabel) button.dataset.sortLabel = label;
+        if (key === state.sortKey) {
+          button.classList.add('active');
+          button.setAttribute('aria-pressed', 'true');
+          button.textContent = label;
+          button.dataset.sortDir = state.sortDir;
+        } else {
+          button.classList.remove('active');
+          button.setAttribute('aria-pressed', 'false');
+          button.textContent = label;
+          delete button.dataset.sortDir;
+        }
+      });
+    }
+
     updateMinValueInput();
+    updateMinProbabilityInput();
+    updateSortButtons();
 
     minValueToggle.addEventListener('change', () => {
       state.minValueFilter = minValueToggle.checked;
@@ -451,6 +510,41 @@
       localStorage.setItem('poeBossMinValueChaos', state.minValueThresholdChaos.toString());
       safeRender();
     });
+
+    minProbToggle.addEventListener('change', () => {
+      state.minProbabilityFilter = minProbToggle.checked;
+      localStorage.setItem('poeBossMinProbEnabled', state.minProbabilityFilter ? 'on' : 'off');
+      safeRender();
+    });
+
+    minProbInput.addEventListener('change', () => {
+      const raw = Number(minProbInput.value);
+      if (!Number.isFinite(raw)) return;
+      const clamped = Math.min(Math.max(raw, 0), 100);
+      state.minProbabilityThreshold = clamped / 100;
+      minProbInput.value = clamped.toFixed(2);
+      localStorage.setItem('poeBossMinProb', state.minProbabilityThreshold.toString());
+      safeRender();
+    });
+
+    if (sortButtons?.length) {
+      sortButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const key = button.dataset.sortKey;
+          if (!key) return;
+          if (state.sortKey === key) {
+            state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+          } else {
+            state.sortKey = key;
+            state.sortDir = defaultSortDirFor(key);
+          }
+          localStorage.setItem(sortKeyStorage, state.sortKey);
+          localStorage.setItem(sortDirStorage, state.sortDir);
+          updateSortButtons();
+          safeRender();
+        });
+      });
+    }
 
     leagueSelect.addEventListener('change', () => {
       state.leagueId = leagueSelect.value;
@@ -502,6 +596,10 @@
         localStorage.removeItem(displayCurrencyKey);
         localStorage.removeItem('poeBossMinValueEnabled');
         localStorage.removeItem('poeBossMinValueChaos');
+        localStorage.removeItem('poeBossMinProbEnabled');
+        localStorage.removeItem('poeBossMinProb');
+        localStorage.removeItem(sortKeyStorage);
+        localStorage.removeItem(sortDirStorage);
         localStorage.removeItem('poeBossDebug');
 
         applyLeagueSelection(previousLeague, { persist: true });
@@ -509,13 +607,20 @@
         state.displayCurrency = BASE_DISPLAY_CURRENCY;
         state.minValueFilter = BASE_MIN_VALUE_ENABLED;
         state.minValueThresholdChaos = BASE_MIN_VALUE_CHAOS;
+        state.minProbabilityFilter = BASE_MIN_PROBABILITY_ENABLED;
+        state.minProbabilityThreshold = BASE_MIN_PROBABILITY;
+        state.sortKey = BASE_SORT_KEY;
+        state.sortDir = BASE_SORT_DIR;
         state.debug = BASE_DEBUG;
 
         priceModeInput.value = state.priceMode;
         currencyInput.value = state.displayCurrency;
         minValueToggle.checked = state.minValueFilter;
+        minProbToggle.checked = state.minProbabilityFilter;
         debugToggle.checked = state.debug;
         updateMinValueInput();
+        updateMinProbabilityInput();
+        updateSortButtons();
 
         safeRender();
         setStatus('Custom values reset (league preserved).');
@@ -887,6 +992,20 @@
       return `${value.toFixed(1)}%`;
     }
 
+    function formatMultiplier(value) {
+      if (value == null || Number.isNaN(value)) return '—';
+      const abs = Math.abs(value);
+      let text = '';
+      if (abs > 10) {
+        text = String(Math.round(value));
+      } else if (abs >= 1) {
+        text = (Math.round(value * 10) / 10).toFixed(1);
+      } else {
+        text = (Math.round(value * 100) / 100).toFixed(2);
+      }
+      return `${text}x`;
+    }
+
     function clamp(value, min, max) {
       return Math.min(Math.max(value, min), max);
     }
@@ -922,6 +1041,19 @@
       return mixColor(yellow, red, t);
     }
 
+    function ratioColor(value) {
+      const yellow = { r: 251, g: 191, b: 36 };
+      const green = { r: 34, g: 197, b: 94 };
+      const red = { r: 239, g: 68, b: 68 };
+      if (!Number.isFinite(value)) return yellow;
+      if (value >= 1) {
+        const t = clamp((value - 1) / 2, 0, 1);
+        return mixColor(yellow, green, t);
+      }
+      const t = clamp(value / 1, 0, 1);
+      return mixColor(red, yellow, t);
+    }
+
     function profitMagnitude(value, maxProfit, minProfit) {
       if (!Number.isFinite(value)) return 0;
       if (value >= 0) {
@@ -933,6 +1065,11 @@
     function percentOf(numerator, denominator) {
       if (!Number.isFinite(numerator) || !Number.isFinite(denominator) || denominator === 0) return null;
       return (numerator / Math.abs(denominator)) * 100;
+    }
+
+    function ratioOf(numerator, denominator) {
+      if (!Number.isFinite(numerator) || !Number.isFinite(denominator) || denominator <= 0) return null;
+      return numerator / denominator;
     }
 
     function safeNumber(value) {
@@ -1054,6 +1191,10 @@
           unpricedItems.push({ ...item, price, reason: item.noPrice ? 'manual' : 'price' });
           return;
         }
+        if (state.minProbabilityFilter && p < state.minProbabilityThreshold) {
+          pricedItems.push({ ...item, price, value: 0, ignored: true });
+          return;
+        }
         if (state.minValueFilter && price < state.minValueThresholdChaos) {
           pricedItems.push({ ...item, price, value: 0, ignored: true });
           return;
@@ -1089,8 +1230,8 @@
       return 'Drop EV is the average value of all included drops for one run, after filters and excludes.';
     }
 
-    function volatilityTooltip() {
-      return 'Volatility shows how much results swing compared to the average drop value. Higher percent means more variability.';
+    function dropVsCostTooltip() {
+      return 'Average return shows how many times the run cost is covered by the average drops. 1x means breakeven on drops alone.';
     }
 
     function expectedTooltip() {
@@ -1138,6 +1279,21 @@
       };
     }
 
+    function sortValueFor(row) {
+      const computed = row.computed;
+      switch (state.sortKey) {
+        case 'entryCost':
+          return computed.entryCost;
+        case 'expectedDrops':
+          return computed.expectedDrops;
+        case 'dropVsCost':
+          return ratioOf(computed.expectedDrops, computed.entryCost);
+        case 'expectedProfit':
+        default:
+          return computed.expectedProfit;
+      }
+    }
+
     function render() {
       const openIds = new Set();
       bossList.querySelectorAll('details[open]').forEach((detail) => {
@@ -1166,9 +1322,11 @@
       const minProfit = profitValues.length ? Math.min(...profitValues, 0) : 0;
 
       bossRows.sort((a, b) => {
-        const av = Number.isFinite(a.computed.expectedProfit) ? a.computed.expectedProfit : -Infinity;
-        const bv = Number.isFinite(b.computed.expectedProfit) ? b.computed.expectedProfit : -Infinity;
-        return bv - av;
+        const avRaw = sortValueFor(a);
+        const bvRaw = sortValueFor(b);
+        const av = Number.isFinite(avRaw) ? avRaw : (state.sortDir === 'asc' ? Infinity : -Infinity);
+        const bv = Number.isFinite(bvRaw) ? bvRaw : (state.sortDir === 'asc' ? Infinity : -Infinity);
+        return state.sortDir === 'asc' ? av - bv : bv - av;
       });
 
       bossRows.forEach(({ boss, computed }) => {
@@ -1177,8 +1335,6 @@
           return sum + priceMissing;
         }, 0);
         const entryMissing = computed.entryMissing.length;
-        const volatilityPct = percentOf(computed.stdev, computed.expectedDrops);
-
         computed.entryMissing.forEach((item) => {
           missingItems.push({ boss: boss.name, group: 'Entry', item: item.name, types: item.types || [], reason: 'price' });
         });
@@ -1201,10 +1357,13 @@
         if (openIds.has(boss.id)) details.open = true;
         const accentColor = profitColor(computed.expectedProfit, maxProfit, minProfit);
         const accentRgb = rgbString(accentColor);
+        const dropVsCost = ratioOf(computed.expectedDrops, computed.entryCost);
+        const ratioAccent = rgbString(ratioColor(dropVsCost));
         const gradientStrength = profitMagnitude(computed.expectedProfit, maxProfit, minProfit);
         const gradientColor = rgbaString(accentColor, 0.08 + 0.32 * gradientStrength);
         details.style.setProperty('--summary-accent', accentRgb);
         details.style.setProperty('--profit-accent', accentRgb);
+        details.style.setProperty('--ratio-accent', ratioAccent);
         details.innerHTML = `
           <summary>
             <div class="boss-summary" style="--summary-gradient: linear-gradient(90deg, ${gradientColor} 0%, rgba(15, 23, 42, 0.0) 60%);">
@@ -1215,7 +1374,7 @@
               <div class="boss-metrics">
                 <div class="metric"><span class="metric-label">Run Cost <span class="info-dot has-tooltip" data-tooltip="${runCostTooltip()}">i</span></span><strong>${formatValue(computed.entryCost, chaosPerDivine)}</strong></div>
                 <div class="metric"><span class="metric-label">Drop EV <span class="info-dot has-tooltip" data-tooltip="${dropEvTooltip()}">i</span></span><strong>${formatValue(computed.expectedDrops, chaosPerDivine)}</strong></div>
-                <div class="metric"><span class="metric-label">Volatility <span class="info-dot has-tooltip" data-tooltip="${volatilityTooltip()}">i</span></span><strong>${formatPercent(volatilityPct)}</strong></div>
+                <div class="metric metric-ratio"><span class="metric-label">Average return <span class="info-dot has-tooltip" data-tooltip="${dropVsCostTooltip()}">i</span></span><strong>${formatMultiplier(dropVsCost)}</strong></div>
               </div>
               <div class="expected-return">
                 <span>Expected Return <span class="info-dot has-tooltip" data-tooltip="${expectedTooltip()}">i</span></span>
@@ -1310,7 +1469,7 @@
                         const probLabel = p == null ? '—' : `${approx}${(p * 100).toFixed(2)}%`;
                         const key = itemKey(item);
                         return `
-                      <tr class="${price == null ? 'row-missing' : ((excluded || (state.minValueFilter && price != null && price < state.minValueThresholdChaos)) ? 'row-ignored' : '')}">
+                      <tr class="${price == null ? 'row-missing' : ((excluded || (state.minProbabilityFilter && p != null && p < state.minProbabilityThreshold) || (state.minValueFilter && price != null && price < state.minValueThresholdChaos)) ? 'row-ignored' : '')}">
                         <td>
                           <div class="item-cell">
                             ${icon ? `<img class="item-icon" src="${icon}" alt="" />` : ''}

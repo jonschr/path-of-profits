@@ -69,16 +69,25 @@
             <input id="minValueInput" type="number" min="0" step="0.1" />
           </div>
         </div>
+        <div>
+          <div class="label-row">
+            <label for="minProbInput">Ignore Prob Below</label>
+            <span class="info-dot has-tooltip" data-tooltip="Drops with probability below this percent are treated as zero." tabindex="0" aria-label="Drops with probability below this percent are treated as zero.">i</span>
+          </div>
+          <div class="min-filter">
+            <label class="switch">
+              <input type="checkbox" id="minProbToggle" />
+              <span class="slider"></span>
+            </label>
+            <input id="minProbInput" type="number" min="0" max="100" step="0.01" />
+          </div>
+        </div>
         <div class="control-compact">
           <div class="label-row">
             <label for="resetAll">Reset</label>
             <span class="info-dot has-tooltip" data-tooltip="Resets manual price overrides, include toggles, league/currency selections, filters, and debug back to defaults." tabindex="0" aria-label="Resets manual price overrides, include toggles, league/currency selections, filters, and debug back to defaults.">i</span>
           </div>
           <button id="resetAll" class="button-secondary" type="button">Reset</button>
-        </div>
-        <div class="control-compact">
-          <label aria-hidden="true">&nbsp;</label>
-          <button id="refresh" class="button-wide has-tooltip" data-tooltip="Refresh reloads the cached data file (bypasses browser cache). Updated timestamps reflect when poe.watch last updated, not when you click refresh." aria-label="Refresh reloads the cached data file (bypasses browser cache). Updated timestamps reflect when poe.watch last updated, not when you click refresh.">Refresh Prices</button>
         </div>
       </div>
       <div id="status" class="status">Ready.</div>
@@ -98,6 +107,16 @@
 
     <section class="search-bar">
       <input id="searchInput" type="search" placeholder="Search bosses, items, fragments, or currency…" autocomplete="off" />
+    </section>
+
+    <section class="sort-bar" aria-label="Sort bosses">
+      <div class="sort-label">Sort by</div>
+      <div class="sort-options">
+        <button class="sort-button" type="button" data-sort-key="entryCost" data-sort-label="Run Cost">Run Cost</button>
+        <button class="sort-button" type="button" data-sort-key="expectedDrops" data-sort-label="Drop EV">Drop EV</button>
+        <button class="sort-button" type="button" data-sort-key="dropVsCost" data-sort-label="Average return">Average return</button>
+        <button class="sort-button" type="button" data-sort-key="expectedProfit" data-sort-label="Expected Return">Expected Return</button>
+      </div>
     </section>
 
     <section id="bossList" class="boss-list"></section>

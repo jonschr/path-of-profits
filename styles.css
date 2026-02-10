@@ -160,6 +160,84 @@ h1 {
 	box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
 }
 
+.sort-bar {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 6px 0 16px;
+}
+
+.sort-label {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+	color: var(--muted);
+}
+
+.sort-options {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.sort-button {
+	display: inline-flex;
+	align-items: center;
+	width: auto;
+	padding: 6px 10px;
+	border-radius: 999px;
+	border: 1px solid var(--border);
+	background: rgba(15, 23, 42, 0.6);
+	color: var(--muted);
+	font-size: 12px;
+	font-weight: 600;
+	box-shadow: none;
+	transition:
+		color 0.15s ease,
+		border-color 0.15s ease,
+		background 0.15s ease;
+}
+
+.sort-button::after {
+	content: '';
+	width: 6px;
+	height: 6px;
+	margin-left: 6px;
+	border-right: 2px solid currentColor;
+	border-bottom: 2px solid currentColor;
+	opacity: 0;
+	transform: translateY(-1px) rotate(45deg);
+	transition:
+		opacity 0.15s ease,
+		transform 0.15s ease;
+}
+
+.sort-button.active::after {
+	opacity: 0.85;
+}
+
+.sort-button.active[data-sort-dir='asc']::after {
+	transform: translateY(1px) rotate(-135deg);
+}
+
+.sort-button.active[data-sort-dir='desc']::after {
+	transform: translateY(-1px) rotate(45deg);
+}
+
+.sort-button:hover {
+	transform: none;
+	color: var(--ink);
+	border-color: rgba(56, 189, 248, 0.6);
+	background: rgba(56, 189, 248, 0.12);
+}
+
+.sort-button.active {
+	color: var(--ink);
+	border-color: rgba(56, 189, 248, 0.6);
+	background: rgba(56, 189, 248, 0.12);
+}
+
 .control-grid {
 	display: flex;
 	flex-wrap: wrap;
@@ -392,8 +470,9 @@ button:hover {
 }
 
 .min-filter input[type='number'] {
-	flex: 1 1 auto;
-	width: auto;
+	flex: 0 0 120px;
+	width: 120px;
+	max-width: 140px;
 }
 
 .boss-list {
@@ -408,6 +487,15 @@ details {
 	background: var(--panel);
 	padding: 0;
 	overflow: visible;
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease,
+		transform 0.2s ease;
+}
+
+details:hover {
+	border-color: rgba(56, 189, 248, 0.5);
+	transform: translateY(-1px);
 }
 
 summary {
@@ -417,10 +505,16 @@ summary {
 	display: block;
 	background: var(--summary-gradient, #0b1220);
 	border-left: 3px solid var(--summary-accent, #fbbf24);
+	border-radius: 16px;
 }
 
 summary::-webkit-details-marker {
 	display: none;
+}
+
+details[open] summary {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 .boss-summary {
@@ -472,6 +566,10 @@ summary::-webkit-details-marker {
 	font-size: 15px;
 	color: var(--ink);
 	margin-top: 2px;
+}
+
+.metric-ratio strong {
+	color: var(--ratio-accent, var(--ink));
 }
 
 .metric-label {
