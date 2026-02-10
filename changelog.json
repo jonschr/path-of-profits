@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "version": "0.2",
+      "date": "2026-02-10",
+      "changes": [
+        "Expanded and reworked boss loot tables (Uber Elder/Uber Uber Elder, Sirus, Exarch/Eater) and added new bosses with PoE Wiki sources.",
+        "Updated UI: average return metric, filters, sorting, header layout, and other visual refinements.",
+        "Added Google tag and structured changelog."
+      ]
+    },
+    {
       "version": "0.1.14",
       "date": "2026-02-10",
       "changes": [
