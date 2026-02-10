@@ -940,28 +940,28 @@
     "tier": "Pinnacle",
     "entry": [
       {
-        "name": "Fragment of Purification",
+        "name": "Fragment of Knowledge",
         "qty": 1,
         "types": [
           "Fragment"
         ]
       },
       {
-        "name": "Fragment of Constriction",
+        "name": "Fragment of Shape",
         "qty": 1,
         "types": [
           "Fragment"
         ]
       },
       {
-        "name": "Fragment of Enslavement",
+        "name": "Fragment of Terror",
         "qty": 1,
         "types": [
           "Fragment"
         ]
       },
       {
-        "name": "Fragment of Eradication",
+        "name": "Fragment of Emptiness",
         "qty": 1,
         "types": [
           "Fragment"
@@ -1075,29 +1075,8 @@
     "tier": "Pinnacle",
     "entry": [
       {
-        "name": "Fragment of Knowledge",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Fragment of Shape",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Fragment of Terror",
-        "qty": 1,
-        "types": [
-          "Fragment"
-        ]
-      },
-      {
-        "name": "Fragment of Emptiness",
-        "qty": 1,
+        "name": "Decaying Fragment",
+        "qty": 5,
         "types": [
           "Fragment"
         ]
@@ -2167,5 +2146,131 @@
     "sources": [
       "https://www.poewiki.net/wiki/Incarnation_of_Fear"
     ]
+  },
+  {
+    "id": "elder",
+    "name": "The Elder",
+    "tier": "Pinnacle",
+    "entry": [
+      {
+        "name": "Fragment of Purification",
+        "qty": 1,
+        "types": [
+          "Fragment"
+        ]
+      },
+      {
+        "name": "Fragment of Constriction",
+        "qty": 1,
+        "types": [
+          "Fragment"
+        ]
+      },
+      {
+        "name": "Fragment of Enslavement",
+        "qty": 1,
+        "types": [
+          "Fragment"
+        ]
+      },
+      {
+        "name": "Fragment of Eradication",
+        "qty": 1,
+        "types": [
+          "Fragment"
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "label": "Fragment Drop",
+        "type": "exclusive",
+        "items": [
+          {
+            "name": "Fragment of Terror",
+            "p": 0.5,
+            "types": [
+              "Fragment"
+            ]
+          },
+          {
+            "name": "Fragment of Emptiness",
+            "p": 0.5,
+            "types": [
+              "Fragment"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Guaranteed Unique (Pool A)",
+        "type": "exclusive",
+        "items": [
+          {
+            "name": "Cyclopean Coil",
+            "p": 0.3
+          },
+          {
+            "name": "Blasphemer's Grasp",
+            "p": 0.3
+          },
+          {
+            "name": "Nebuloch",
+            "p": 0.1
+          },
+          {
+            "name": "Hopeshredder",
+            "p": 0.1
+          },
+          {
+            "name": "Shimmeron",
+            "p": 0.1
+          },
+          {
+            "name": "Impresence",
+            "p": 0.1,
+            "types": [
+              "UniqueAccessory"
+            ],
+            "note": "Full power variant (2 curses)"
+          }
+        ]
+      },
+      {
+        "label": "Additional Drops",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Watcher's Eye (2-mod)",
+            "p": 0.4
+          },
+          {
+            "name": "Elder's Exalted Orb",
+            "p": 0.1,
+            "types": [
+              "Currency"
+            ]
+          },
+          {
+            "name": "Orb of Dominance",
+            "p": 0.02,
+            "types": [
+              "Currency"
+            ]
+          },
+          {
+            "name": "Void of the Elements",
+            "p": 0.01,
+            "types": [
+              "DivinationCard"
+            ]
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.poewiki.net/wiki/The_Elder"
+    ],
+    "note": "Watcher's Eye uses unidentified pricing."
   }
 ]
