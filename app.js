@@ -59,6 +59,41 @@
     const NINJA_API_BASE = IS_LOCAL_HOST
       ? '/api/poeninja/poe1/api/economy/stash/current'
       : 'https://poe.ninja/poe1/api/economy/stash/current';
+    const TRADE_SITE_BASE = 'https://www.pathofexile.com';
+    const TRADE_LINK_SEEDS = {
+      beauty: buildDivinationCardTradeSeedByName('Beauty'),
+      mortalgrief: { mode: 'exchange', id: 'JQlp45YIl' },
+      mortalrage: { mode: 'exchange', id: 'JQlp45YIl' },
+      mortalhope: { mode: 'exchange', id: 'rV2WaZ4TQ' },
+      mortalignorance: { mode: 'exchange', id: '9y5kGXKCK' },
+      nimis: buildNinjaTradeSeedByName('Nimis'),
+      curioofconsumption: buildNinjaTradeSeedByName('Curio of Consumption'),
+      ashesofthestars: buildNinjaTradeSeedByName('Ashes of the Stars'),
+      whispersofinfinity: buildNinjaTradeSeedByName('Whispers of Infinity'),
+      curioofabsorption: buildNinjaTradeSeedByName('Curio of Absorption'),
+      atzirispromise: buildNinjaTradeSeedByName("Atziri's Promise"),
+      atzirisacuity: buildNinjaTradeSeedByName("Atziri's Acuity"),
+      bottledfaith: buildNinjaTradeSeedByName('Bottled Faith'),
+      dissolutionoftheflesh: buildNinjaTradeSeedByName('Dissolution of the Flesh'),
+      doppelgngerguise: buildNinjaTradeSeedByName('Doppelgänger Guise'),
+      dyingsun: buildNinjaTradeSeedByName('Dying Sun'),
+      garboftheephemeral: buildNinjaTradeSeedByName('Garb of the Ephemeral'),
+      indigon: buildNinjaTradeSeedByName('Indigon'),
+      meldingoftheflesh: buildNinjaTradeSeedByName('Melding of the Flesh'),
+      oriathsend: buildNinjaTradeSeedByName("Oriath's End"),
+      progenesis: buildNinjaTradeSeedByName('Progenesis'),
+      rationaldoctrine: buildNinjaTradeSeedByName('Rational Doctrine'),
+      servantofdecay: buildNinjaTradeSeedByName('Servant of Decay'),
+      sublimevision: buildNinjaTradeSeedByName('Sublime Vision'),
+      celestialbrace: buildNinjaTradeSeedByName('The Celestial Brace'),
+      unseenhue: buildNinjaTradeSeedByName('The Unseen Hue'),
+      venariusastrolabe: buildNinjaTradeSeedByName("Venarius' Astrolabe"),
+      watcherseye: buildNinjaTradeSeedByName("Watcher's Eye"),
+      wellwaterphylactery: buildNinjaTradeSeedByName('Wellwater Phylactery'),
+      wineoftheprophet: buildNinjaTradeSeedByName('Wine of the Prophet')
+    };
+    const NON_UNIQUE_TRADE_TYPES = new Set(['Currency', 'Fragment', 'Invitations', 'DivinationCard']);
+    let UNIQUE_DROP_NAME_KEYS = new Set();
 
     const WATCH_CATEGORY_MAP = {
       Currency: ['currency'],
@@ -125,6 +160,28 @@
         console.error('Failed to load boss-data.json', err);
         return [];
       }
+    }
+
+    function rebuildUniqueDropNameKeys() {
+      const next = new Set();
+      (BOSS_DATA || []).forEach((boss) => {
+        (boss?.groups || []).forEach((group) => {
+          const label = String(group?.label || '');
+          const groupLooksUnique = /unique/i.test(label);
+          (group?.items || []).forEach((item) => {
+            const name = String(item?.name || '').trim();
+            if (!name) return;
+            const types = Array.isArray(item?.types) ? item.types : [];
+            const hasUniqueType = types.some((type) => String(type).startsWith('Unique'));
+            const hasNonUniqueType = types.some((type) => NON_UNIQUE_TRADE_TYPES.has(String(type)));
+            if (hasNonUniqueType) return;
+            if (!hasUniqueType && !groupLooksUnique) return;
+            const key = normalizeText(name);
+            if (key) next.add(key);
+          });
+        });
+      });
+      UNIQUE_DROP_NAME_KEYS = next;
     }
 
     const storedCurrency = localStorage.getItem(displayCurrencyKey) || BASE_DISPLAY_CURRENCY;
@@ -789,6 +846,40 @@
         .replace(/[^a-z0-9]/g, '');
     }
 
+    function buildNinjaTradeSeedByName(name) {
+      return {
+        mode: 'search',
+        q: JSON.stringify({
+          query: {
+            filters: {
+              type_filters: { filters: {} },
+              misc_filters: {
+                filters: {
+                  foulborn_item: { option: 'false' }
+                }
+              }
+            },
+            status: { option: 'available' },
+            name: String(name || '')
+          }
+        })
+      };
+    }
+
+    function buildDivinationCardTradeSeedByName(name) {
+      return {
+        mode: 'search',
+        q: JSON.stringify({
+          query: {
+            status: { option: 'online' },
+            type: String(name || ''),
+            stats: [{ type: 'and', filters: [] }]
+          },
+          sort: { price: 'asc' }
+        })
+      };
+    }
+
     function slugifyLeague(text) {
       return String(text || '')
         .normalize('NFD')
@@ -1239,16 +1330,113 @@
       return `https://www.poewiki.net/wiki/${encodeURIComponent(slug)}`;
     }
 
-    function itemLabelMarkup(item) {
+    function tradeLeagueName() {
+      return state.leagueText || leagueTextFor(state.leagueId) || state.pricingLeague || '';
+    }
+
+    function tradeSeedForItemName(name) {
+      const normalized = normalizeText(name);
+      if (!normalized) return null;
+      return TRADE_LINK_SEEDS[normalized] || null;
+    }
+
+    function shouldAutoTradeUniqueItem(item) {
+      const types = Array.isArray(item?.types) ? item.types : [];
+      if (types.some((type) => NON_UNIQUE_TRADE_TYPES.has(String(type)))) return false;
+      if (types.some((type) => String(type).startsWith('Unique'))) return true;
+      const key = normalizeText(item?.name);
+      return key ? UNIQUE_DROP_NAME_KEYS.has(key) : false;
+    }
+
+    function shouldAutoTradeDivinationCard(item) {
+      const types = Array.isArray(item?.types) ? item.types : [];
+      return types.some((type) => String(type) === 'DivinationCard');
+    }
+
+    function tradeSeedForItem(item) {
+      const name = String(item?.name || '').trim();
+      if (!name) return null;
+      const explicit = tradeSeedForItemName(name);
+      if (explicit) return explicit;
+      if (shouldAutoTradeDivinationCard(item)) return buildDivinationCardTradeSeedByName(name);
+      if (!shouldAutoTradeUniqueItem(item)) return null;
+      return buildNinjaTradeSeedByName(name);
+    }
+
+    function normalizeTradeSeed(seed) {
+      if (!seed) return null;
+      if (typeof seed === 'object' && seed.mode && seed.id) {
+        const mode = String(seed.mode).toLowerCase();
+        const id = String(seed.id).trim();
+        if ((mode === 'search' || mode === 'exchange') && id) return { mode, id };
+        return null;
+      }
+      if (typeof seed === 'object' && seed.mode && seed.q) {
+        const mode = String(seed.mode).toLowerCase();
+        const q = String(seed.q).trim();
+        if (mode === 'search' && q) return { mode, q };
+        return null;
+      }
+      if (typeof seed !== 'string') return null;
+      try {
+        const parsed = new URL(seed);
+        const parts = parsed.pathname.split('/').filter(Boolean);
+        if (parts[0] !== 'trade') return null;
+        if (parts.length === 3 && String(parts[1] || '').toLowerCase() === 'search') {
+          const q = parsed.searchParams.get('q');
+          if (q) return { mode: 'search', q };
+        }
+        if (parts.length < 4) return null;
+        const mode = String(parts[1] || '').toLowerCase();
+        const id = parts.slice(3).join('/').trim();
+        if ((mode !== 'search' && mode !== 'exchange') || !id) return null;
+        return { mode, id };
+      } catch (err) {
+        return null;
+      }
+    }
+
+    function tradeUrlFromSeed(seed, league) {
+      if (!seed) return null;
+      const normalized = normalizeTradeSeed(seed);
+      if (!normalized) return null;
+      if (!league) return null;
+      if (normalized.q) {
+        return `${TRADE_SITE_BASE}/trade/search/${encodeURIComponent(league)}?q=${encodeURIComponent(normalized.q)}`;
+      }
+      return `${TRADE_SITE_BASE}/trade/${normalized.mode}/${encodeURIComponent(league)}/${normalized.id}`;
+    }
+
+    function tradeQueryForItem(item, _bossId) {
+      const seed = tradeSeedForItem(item);
+      if (!seed) return null;
+      return { seed };
+    }
+
+    function tradeUrlForItem(item, bossId) {
+      const payload = tradeQueryForItem(item, bossId);
+      if (!payload) return null;
+      return tradeUrlFromSeed(payload.seed, tradeLeagueName());
+    }
+
+    function itemLabelMarkup(item, bossId) {
       const url = itemPageUrl(item);
       const wikiUrl = wikiUrlForItem(item);
+      const tradeQuery = tradeQueryForItem(item, bossId);
+      const tradeUrl = tradeUrlForItem(item, bossId);
       const base = url
         ? `<a class="item-link" href="${url}" target="_blank" rel="noreferrer">${item.name}</a>`
         : `<span>${item.name}</span>`;
-      const wiki = wikiUrl ? `<a class="item-link wiki-link" href="${wikiUrl}" target="_blank" rel="noreferrer">(wiki)</a>` : '';
+      const wiki = wikiUrl ? `<a class="item-link wiki-link" href="${wikiUrl}" target="_blank" rel="noreferrer">wiki</a>` : '';
+      const trade = tradeQuery
+        ? (tradeUrl
+            ? `<a class="item-link trade-link is-ready" href="${tradeUrl}" target="_blank" rel="noreferrer">trade</a>`
+            : `<span class="item-link trade-link" aria-disabled="true">trade</span>`)
+        : '';
+      const links = [base, wiki, trade].filter(Boolean).join(' <span class="item-sep">·</span> ');
       const variant = item.variant ? ` <span class="muted">(${item.variant})</span>` : '';
-      const note = item.note ? ` <span class="muted">${item.note}</span>` : '';
-      return `${base}${wiki}${variant}${note}`;
+      const note = item.note ? ` <span class="item-sep">·</span> <span class="muted">${item.note}</span>` : '';
+      return `${links}${variant}${note}`;
     }
 
     function formatValue(value, chaosPerDivine) {
@@ -1693,7 +1881,7 @@
                       <td>
                         <div class="item-cell">
                           ${item.icon ? `<img class="item-icon" src="${item.icon}" alt="" />` : ''}
-                          ${itemLabelMarkup(item)}
+                          ${itemLabelMarkup(item, boss.id)}
                         </div>
                       </td>
                       <td>${item.qty}</td>
@@ -1755,7 +1943,7 @@
                         <td>
                           <div class="item-cell">
                             ${icon ? `<img class="item-icon" src="${icon}" alt="" />` : ''}
-                            ${itemLabelMarkup(item)}
+                            ${itemLabelMarkup(item, boss.id)}
                           </div>
                         </td>
                         <td>${probLabel}</td>
@@ -2143,6 +2331,7 @@
         // Ignore storage failures.
       }
       BOSS_DATA = await loadBossData();
+      rebuildUniqueDropNameKeys();
       if (!BOSS_DATA.length) {
         setStatus('Failed to load boss data. Check boss-data.json.', true);
       }

@@ -965,10 +965,15 @@ details[open] summary {
 	text-decoration: underline;
 }
 
-.wiki-link {
+.wiki-link,
+.trade-link {
 	margin-left: 0;
 	color: var(--ink);
 	font-size: inherit;
+}
+
+.item-sep {
+	color: var(--muted);
 }
 
 .warning {
