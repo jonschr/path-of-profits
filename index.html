@@ -159,19 +159,93 @@
         Tweet questions and complaints to <a class="link" href="https://x.com/jonschr" target="_blank" rel="noreferrer">@jonschr</a>.
       </div>
     </section>
+    <details class="changelog-details">
+      <summary class="changelog-summary">Changelog</summary>
+      <section class="changelog-panel">
+        <div class="changelog-content">
+          <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.2.6</span><span>2026-02-11</span></div>
+            <ul class="changelog-list">
+              <li>Refactored the app into modular services (trade, leagues, pricing, HTTP/cache/repositories) to reduce single-file coupling and improve maintainability.</li>
+              <li>Stabilized league persistence so selected league is retained across refreshes, with simplified league setting ownership.</li>
+              <li>Restored item icon rendering by preserving icon URLs in cached price data and bypassing stale iconless cache entries.</li>
+              <li>Cleaned up unused CSS selectors without changing item icon sizing/layout behavior.</li>
+            </ul>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.2.5</span><span>2026-02-11</span></div>
+            <ul class="changelog-list">
+              <li>Added trade links for boss drops with query-based Path of Exile trade searches for unique items and divination cards.</li>
+              <li>Expanded trade-link coverage by combining explicit seed mappings with automatic fallback generation for eligible unique drops.</li>
+              <li>Refined trade seed behavior for known special cases (exchange links) and corrected Mortal Rage mapping.</li>
+            </ul>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.2.4</span><span>2026-02-10</span></div>
+            <ul class="changelog-list">
+              <li>Pinned poe.watch IDs for items with misleading 6-link prices (Gluttonous Tide, Atziri's Splendour).</li>
+              <li>Added support for explicit poe.watch IDs in boss drop definitions.</li>
+            </ul>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.2.3</span><span>2026-02-10</span></div>
+            <ul class="changelog-list">
+              <li>Avoided six-link poe.watch prices by preferring unlinked entries when multiple variants exist.</li>
+              <li>Improved mobile tables with scrollable wrappers and overflow containment.</li>
+            </ul>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.2.2</span><span>2026-02-10</span></div>
+            <ul class="changelog-list">
+              <li>Prioritized poe.watch exchange/ratios pricing (live + static builds) with fallback to category data.</li>
+              <li>Updated poe.ninja endpoints to the new /poe1/api/economy/stash/current path.</li>
+              <li>Mobile layout fixes: summary metrics layout, table scroll wrappers, overflow clamps, and search persistence.</li>
+            </ul>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.2.1</span><span>2026-02-10</span></div>
+            <ul class="changelog-list">
+              <li>Adjusted Elder/Uber Elder/Uber Uber Elder drops and entry costs, and restored The Elder.</li>
+              <li>Added PoE Wiki sources for newly added bosses.</li>
+              <li>Refined boss tables for Sirus, Exarch/Eater, and Uber Shaper/Uber Maven.</li>
+            </ul>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.2</span><span>2026-02-10</span></div>
+            <ul class="changelog-list">
+              <li>Expanded and reworked boss loot tables (Uber Elder/Uber Uber Elder, Sirus, Exarch/Eater) and added new bosses with PoE Wiki sources.</li>
+              <li>Updated UI: average return metric, filters, sorting, header layout, and other visual refinements.</li>
+              <li>Added Google tag and structured changelog.</li>
+            </ul>
+          </article>
+          <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.1.14</span><span>2026-02-10</span></div>
+            <ul class="changelog-list">
+              <li>Added Average return metric (multiplier) and sortable metrics; removed volatility column.</li>
+              <li>Added default drop filters (0.5 div min value, 10% min probability) with units and default-on toggles.</li>
+              <li>Refined layout and UI: centered header, combined search + sort row, updated info dots and metric cards, adjusted inputs and dropdown sizing.</li>
+              <li>Added footer actions (debug toggle + local hit counter) and installed Google tag.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </details>
     <div class="debug-footer">
-      <button id="changelogToggle" class="changelog-link" type="button" aria-controls="changelogPanel" aria-expanded="false">Changelog</button>
       <span>Debug</span>
       <label class="switch switch-mini">
         <input type="checkbox" id="debugToggle" />
         <span class="slider"></span>
       </label>
     </div>
-    <section id="changelogPanel" class="changelog-panel" hidden>
-      <div id="changelogContent" class="changelog-content muted">Loading changelog…</div>
-    </section>
   </div>
 
+  <script src="modules/trade.js" defer></script>
+  <script src="modules/settings-store.js" defer></script>
+  <script src="modules/http-client.js" defer></script>
+  <script src="modules/cache-store.js" defer></script>
+  <script src="modules/repositories.js" defer></script>
+  <script src="modules/leagues.js" defer></script>
+  <script src="modules/pricing.js" defer></script>
   <script src="app.js" defer></script>
 </body>
 </html>

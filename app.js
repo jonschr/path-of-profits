@@ -22,20 +22,19 @@
       'phrecia2.0': 'Phrecia 2.0'
     };
 
-    const DEFAULT_LEAGUE_RAW = localStorage.getItem('poeBossLeague') || BASE_LEAGUE;
-    const DEFAULT_LEAGUE = normalizeLeagueKey(DEFAULT_LEAGUE_RAW) || BASE_LEAGUE;
-    const DEFAULT_PRICE_MODE = localStorage.getItem('poeBossPriceMode') || BASE_PRICE_MODE;
-    const DEFAULT_PRICE_SOURCE = BASE_PRICE_SOURCE;
     const manualPriceKey = 'poeBossManualPrices';
     const manualCostKey = 'poeBossManualCosts';
     const manualCurrencyKey = 'poeBossManualCurrency';
     const ignoreDropsKey = 'poeBossIgnoreDrops';
     const displayCurrencyKey = 'poeBossDisplayCurrency';
     const priceSourceKey = 'poeBossPriceSource';
+    const priceModeKey = 'poeBossPriceMode';
+    const leagueKey = 'poeBossLeague';
+    const debugKey = 'poeBossDebug';
     const sortKeyStorage = 'poeBossSortKey';
     const sortDirStorage = 'poeBossSortDir';
     const searchKeyStorage = 'poeBossSearch';
-    const DEFAULT_SEARCH_QUERY = localStorage.getItem(searchKeyStorage) || '';
+    const settingsStorageKey = 'poeAppSettingsV1';
     const priceCacheKey = 'poeBossPriceCacheV1';
     const priceCacheTtlMs = 60 * 60 * 1000;
     const leagueCacheKey = 'poeBossLeagueCacheV2';
@@ -60,39 +59,17 @@
       ? '/api/poeninja/poe1/api/economy/stash/current'
       : 'https://poe.ninja/poe1/api/economy/stash/current';
     const TRADE_SITE_BASE = 'https://www.pathofexile.com';
-    const TRADE_LINK_SEEDS = {
-      beauty: buildDivinationCardTradeSeedByName('Beauty'),
-      mortalgrief: { mode: 'exchange', id: 'JQlp45YIl' },
-      mortalrage: { mode: 'exchange', id: 'JQlp45YIl' },
-      mortalhope: { mode: 'exchange', id: 'rV2WaZ4TQ' },
-      mortalignorance: { mode: 'exchange', id: '9y5kGXKCK' },
-      nimis: buildNinjaTradeSeedByName('Nimis'),
-      curioofconsumption: buildNinjaTradeSeedByName('Curio of Consumption'),
-      ashesofthestars: buildNinjaTradeSeedByName('Ashes of the Stars'),
-      whispersofinfinity: buildNinjaTradeSeedByName('Whispers of Infinity'),
-      curioofabsorption: buildNinjaTradeSeedByName('Curio of Absorption'),
-      atzirispromise: buildNinjaTradeSeedByName("Atziri's Promise"),
-      atzirisacuity: buildNinjaTradeSeedByName("Atziri's Acuity"),
-      bottledfaith: buildNinjaTradeSeedByName('Bottled Faith'),
-      dissolutionoftheflesh: buildNinjaTradeSeedByName('Dissolution of the Flesh'),
-      doppelgngerguise: buildNinjaTradeSeedByName('Doppelgänger Guise'),
-      dyingsun: buildNinjaTradeSeedByName('Dying Sun'),
-      garboftheephemeral: buildNinjaTradeSeedByName('Garb of the Ephemeral'),
-      indigon: buildNinjaTradeSeedByName('Indigon'),
-      meldingoftheflesh: buildNinjaTradeSeedByName('Melding of the Flesh'),
-      oriathsend: buildNinjaTradeSeedByName("Oriath's End"),
-      progenesis: buildNinjaTradeSeedByName('Progenesis'),
-      rationaldoctrine: buildNinjaTradeSeedByName('Rational Doctrine'),
-      servantofdecay: buildNinjaTradeSeedByName('Servant of Decay'),
-      sublimevision: buildNinjaTradeSeedByName('Sublime Vision'),
-      celestialbrace: buildNinjaTradeSeedByName('The Celestial Brace'),
-      unseenhue: buildNinjaTradeSeedByName('The Unseen Hue'),
-      venariusastrolabe: buildNinjaTradeSeedByName("Venarius' Astrolabe"),
-      watcherseye: buildNinjaTradeSeedByName("Watcher's Eye"),
-      wellwaterphylactery: buildNinjaTradeSeedByName('Wellwater Phylactery'),
-      wineoftheprophet: buildNinjaTradeSeedByName('Wine of the Prophet')
-    };
-    const NON_UNIQUE_TRADE_TYPES = new Set(['Currency', 'Fragment', 'Invitations', 'DivinationCard']);
+    const Trade = window.PoeTrade || null;
+    const Settings = window.PoeSettings || null;
+    const Http = window.PoeHttp || null;
+    const Cache = window.PoeCache || null;
+    const Repositories = window.PoeRepositories || null;
+    const Leagues = window.PoeLeagues || null;
+    const Pricing = window.PoePricing || null;
+    const TRADE_LINK_SEEDS = Trade ? Trade.buildTradeLinkSeeds() : {};
+    const NON_UNIQUE_TRADE_TYPES = Trade
+      ? Trade.NON_UNIQUE_TRADE_TYPES
+      : new Set(['Currency', 'Fragment', 'Invitations', 'DivinationCard']);
     let UNIQUE_DROP_NAME_KEYS = new Set();
 
     const WATCH_CATEGORY_MAP = {
@@ -148,7 +125,6 @@
     }
 
     let BOSS_DATA = [];
-    let CHANGELOG_ENTRIES = null;
 
     async function loadBossData() {
       try {
@@ -163,42 +139,122 @@
       }
     }
 
-    async function loadChangelogData() {
-      try {
-        const resp = await fetch('changelog.json', { cache: 'no-store' });
-        if (!resp.ok) throw new Error(String(resp.status));
-        const data = await resp.json();
-        if (!Array.isArray(data?.entries)) throw new Error('invalid data');
-        return data.entries;
-      } catch (err) {
-        console.error('Failed to load changelog.json', err);
-        return null;
+    function rebuildUniqueDropNameKeys() {
+      if (!Trade) {
+        UNIQUE_DROP_NAME_KEYS = new Set();
+        return;
+      }
+      UNIQUE_DROP_NAME_KEYS = Trade.buildUniqueDropNameKeys(
+        BOSS_DATA,
+        normalizeText,
+        NON_UNIQUE_TRADE_TYPES
+      );
+    }
+
+    const settingsStore = Settings
+      ? Settings.createSettingsStore({
+          storageKey: settingsStorageKey,
+          defaults: {
+            displayCurrency: BASE_DISPLAY_CURRENCY,
+            priceSource: BASE_PRICE_SOURCE,
+            priceMode: BASE_PRICE_MODE,
+            debug: BASE_DEBUG
+          },
+          legacyReaders: {
+            displayCurrency: () => localStorage.getItem(displayCurrencyKey),
+            priceSource: () => localStorage.getItem(priceSourceKey),
+            priceMode: () => localStorage.getItem(priceModeKey),
+            debug: () => (localStorage.getItem(debugKey) === 'on')
+          }
+        })
+      : null;
+    const initialSettings = settingsStore ? settingsStore.getState() : {};
+    const storedLeagueLegacy = normalizeLeagueKey(localStorage.getItem(leagueKey) || '');
+    const DEFAULT_LEAGUE = storedLeagueLegacy || BASE_LEAGUE;
+    const DEFAULT_PRICE_MODE = String(initialSettings.priceMode || BASE_PRICE_MODE);
+    const DEFAULT_PRICE_SOURCE = normalizePriceSource(initialSettings.priceSource || BASE_PRICE_SOURCE);
+    const DEFAULT_SEARCH_QUERY = localStorage.getItem(searchKeyStorage) || '';
+    const DEFAULT_DISPLAY_CURRENCY = initialSettings.displayCurrency === 'chaos' ? 'chaos' : 'divine';
+    const DEFAULT_DEBUG = Boolean(initialSettings.debug ?? BASE_DEBUG);
+
+    const httpClient = Http ? Http.createHttpClient() : undefined;
+    const leagueCacheStore = Cache ? Cache.createStorageCache({ storageKey: leagueCacheKey }) : undefined;
+    const priceCacheStore = Cache ? Cache.createStorageCache({ storageKey: priceCacheKey }) : undefined;
+    const leaguesRepository = Repositories
+      ? Repositories.createLeaguesRepository({ httpClient, cacheStore: leagueCacheStore })
+      : null;
+    const pricingRepository = Repositories
+      ? Repositories.createPricingRepository({ httpClient, cacheStore: priceCacheStore })
+      : null;
+
+    function writeLegacySharedSetting(key, value) {
+      const isQuotaExceeded = (err) => err?.name === 'QuotaExceededError' || err?.code === 22 || err?.code === 1014;
+      const safeSetItem = (storageKey, storageValue) => {
+        try {
+          localStorage.setItem(storageKey, storageValue);
+          return;
+        } catch (err) {
+          if (!isQuotaExceeded(err)) return;
+        }
+        try {
+          localStorage.removeItem(priceCacheKey);
+        } catch (_removeErr) {
+          // Ignore follow-up storage failures.
+        }
+        try {
+          localStorage.setItem(storageKey, storageValue);
+        } catch (_retryErr) {
+          // Ignore if storage is still unavailable.
+        }
+      };
+      if (key === 'leagueId') {
+        safeSetItem(leagueKey, String(value || ''));
+        return;
+      }
+      if (key === 'displayCurrency') {
+        safeSetItem(displayCurrencyKey, String(value || BASE_DISPLAY_CURRENCY));
+        return;
+      }
+      if (key === 'priceSource') {
+        safeSetItem(priceSourceKey, normalizePriceSource(value));
+        return;
+      }
+      if (key === 'priceMode') {
+        safeSetItem(priceModeKey, String(value || BASE_PRICE_MODE));
+        return;
+      }
+      if (key === 'debug') {
+        safeSetItem(debugKey, value ? 'on' : 'off');
       }
     }
 
-    function rebuildUniqueDropNameKeys() {
-      const next = new Set();
-      (BOSS_DATA || []).forEach((boss) => {
-        (boss?.groups || []).forEach((group) => {
-          const label = String(group?.label || '');
-          const groupLooksUnique = /unique/i.test(label);
-          (group?.items || []).forEach((item) => {
-            const name = String(item?.name || '').trim();
-            if (!name) return;
-            const types = Array.isArray(item?.types) ? item.types : [];
-            const hasUniqueType = types.some((type) => String(type).startsWith('Unique'));
-            const hasNonUniqueType = types.some((type) => NON_UNIQUE_TRADE_TYPES.has(String(type)));
-            if (hasNonUniqueType) return;
-            if (!hasUniqueType && !groupLooksUnique) return;
-            const key = normalizeText(name);
-            if (key) next.add(key);
-          });
-        });
-      });
-      UNIQUE_DROP_NAME_KEYS = next;
+    function saveSharedSetting(key, value) {
+      if (key === 'leagueId') {
+        // Keep league persistence simple and explicit: this key is owned by poeBossLeague.
+        writeLegacySharedSetting(key, value);
+        return;
+      }
+      if (settingsStore) {
+        try {
+          settingsStore.set(key, value);
+        } catch (err) {
+          if (err?.name === 'QuotaExceededError' || err?.code === 22 || err?.code === 1014) {
+            try {
+              localStorage.removeItem(priceCacheKey);
+            } catch (_removeErr) {
+              // Ignore follow-up storage failures.
+            }
+            try {
+              settingsStore.set(key, value);
+            } catch (_retryErr) {
+              // Ignore if settings persistence remains unavailable.
+            }
+          }
+        }
+      }
+      writeLegacySharedSetting(key, value);
     }
 
-    const storedCurrency = localStorage.getItem(displayCurrencyKey) || BASE_DISPLAY_CURRENCY;
     const state = {
       leagueId: DEFAULT_LEAGUE,
       leagueText: DEFAULT_LEAGUE,
@@ -206,8 +262,8 @@
       leagueSource: 'fallback',
       leagueUpdatedAt: null,
       priceMode: DEFAULT_PRICE_MODE,
-      priceSource: normalizePriceSource(DEFAULT_PRICE_SOURCE),
-      displayCurrency: storedCurrency === 'divine' ? 'divine' : 'chaos',
+      priceSource: DEFAULT_PRICE_SOURCE,
+      displayCurrency: DEFAULT_DISPLAY_CURRENCY,
       priceData: null,
       watchBase: null,
       pricingLeague: null,
@@ -235,9 +291,6 @@
     const debugEl = document.getElementById('debug');
     const debugContent = document.getElementById('debugContent');
     const copyDebug = document.getElementById('copyDebug');
-    const changelogToggle = document.getElementById('changelogToggle');
-    const changelogPanel = document.getElementById('changelogPanel');
-    const changelogContent = document.getElementById('changelogContent');
     const bossList = document.getElementById('bossList');
     const minValueToggle = document.getElementById('minValueToggle');
     const minValueInput = document.getElementById('minValueInput');
@@ -246,6 +299,53 @@
     const minProbInput = document.getElementById('minProbInput');
     const searchInput = document.getElementById('searchInput');
     const sortButtons = document.querySelectorAll('.sort-button');
+    const leaguesService = Leagues
+      ? Leagues.createLeagueService({
+          state,
+          leagueSelectEl: leagueSelect,
+          defaultLeague: DEFAULT_LEAGUE,
+          leagueStorageKey: leagueKey,
+          usingStaticData,
+          getStaticLeaguesUrl,
+          watchApiBase: WATCH_API_BASE,
+          normalizeLeagueKey,
+          withCacheBust,
+          parseTimestamp,
+          parseLeagueDate,
+          repository: leaguesRepository,
+          leagueCacheTtlMs
+        })
+      : null;
+    const pricingService = Pricing
+      ? Pricing.createPricingService({
+          state,
+          getLeagues: () => (leaguesService ? leaguesService.getLeagues() : LEAGUES),
+          usingStaticData,
+          getStaticPricesBase,
+          slugifyLeague,
+          withCacheBust,
+          parseTimestamp,
+          safeNumber,
+          formatUpdatedAt,
+          setStatus,
+          safeRender,
+          updateMinValueInput,
+          extractWatchItems,
+          extractWatchCategories,
+          findUpdatedAt,
+          indexWatchData,
+          buildWatchCategoriesEndpoint,
+          buildWatchGetEndpoint,
+          buildWatchExchangeEndpoint,
+          normalizeText,
+          watchApiBase: WATCH_API_BASE,
+          ninjaApiBase: NINJA_API_BASE,
+          ninjaCurrencyTypes: NINJA_CURRENCY_TYPES,
+          ninjaItemTypes: NINJA_ITEM_TYPES,
+          repository: pricingRepository,
+          priceCacheTtlMs
+        })
+      : null;
 
     function normalizeLeagueKey(value) {
       const raw = String(value || '').trim();
@@ -255,7 +355,8 @@
     }
 
     function normalizeLeagueCompare(value) {
-      return String(value || '').trim().toLowerCase();
+      if (leaguesService) return leaguesService.normalizeLeagueCompare(value);
+      return String(normalizeLeagueKey(value) || '').trim().toLowerCase();
     }
 
     function normalizePriceSource(value) {
@@ -280,25 +381,28 @@
       return `${getStaticDataRoot()}/prices`;
     }
 
-    function flattenLeagues(groups = LEAGUES) {
+    function flattenLeagues(groups = leaguesService ? leaguesService.getLeagues() : LEAGUES) {
+      if (leaguesService) return leaguesService.flattenLeagues(groups);
       return (groups || []).flatMap((group) => (Array.isArray(group.options) ? group.options : []));
     }
 
     function findLeagueByKey(key) {
-      const normalized = normalizeLeagueCompare(normalizeLeagueKey(key));
+      if (leaguesService) return leaguesService.findLeagueByKey(key);
+      const normalized = normalizeLeagueCompare(key);
       if (!normalized) return null;
-      return (
-        flattenLeagues().find((option) => {
-          return [option.id, option.watch, option.text].some(
-            (value) => normalizeLeagueCompare(value) === normalized
-          );
-        }) || null
-      );
+      return flattenLeagues().find((option) => {
+        return [option.id, option.watch, option.text].some(
+          (value) => normalizeLeagueCompare(value) === normalized
+        );
+      }) || null;
     }
 
 
 
     function applyLeagueSelection(preferred, { persist = false, allowFallback = true } = {}) {
+      if (leaguesService) {
+        return leaguesService.applyLeagueSelection(preferred, { persist, allowFallback });
+      }
       const match = findLeagueByKey(preferred);
       const fallbackValue = allowFallback ? (leagueSelect?.options?.[0]?.value || '') : '';
       const nextId = match?.id || fallbackValue || '';
@@ -307,11 +411,12 @@
       if (leagueSelect && nextId) leagueSelect.value = nextId;
       state.leagueText = nextId ? leagueTextFor(state.leagueId) : '';
       state.leagueWatchId = nextId ? leagueWatchFor(state.leagueId) : '';
-      if (persist) localStorage.setItem('poeBossLeague', state.leagueId);
+      if (persist) saveSharedSetting('leagueId', state.leagueId);
       return changed;
     }
 
     function buildLeagueSelect() {
+      if (leaguesService) return leaguesService.buildLeagueSelect();
       leagueSelect.innerHTML = '';
       LEAGUES.forEach((groupDef) => {
         const group = document.createElement('optgroup');
@@ -328,196 +433,41 @@
     }
 
     function leagueTextFor(id) {
+      if (leaguesService) return leaguesService.leagueTextFor(id);
       const match = findLeagueByKey(id);
       return match ? match.text : id;
     }
 
     function leagueWatchFor(id) {
+      if (leaguesService) return leaguesService.leagueWatchFor(id);
       const match = findLeagueByKey(id);
       return match ? match.watch || match.id || match.text : id;
     }
 
-    function loadLeagueCache() {
-      return null;
-    }
-
-    function saveLeagueCache(groups) {
-      // Caching disabled for testing.
-    }
-
-    function leagueCacheIsFresh(entry) {
-      if (!entry || entry.source !== 'api' || !entry.fetchedAt || !Array.isArray(entry.groups)) return false;
-      return Date.now() - entry.fetchedAt < leagueCacheTtlMs;
-    }
-
-    function normalizeLeagueEntry(entry) {
-      if (!entry) return null;
-      if (typeof entry === 'string') {
-        const name = entry.trim();
-        return name ? { id: name, text: name, watch: name } : null;
-      }
-      const name = entry.name || entry.league || entry.id || entry.slug || entry.code || entry.short;
-      const display = entry.displayName || entry.display || entry.text || entry.label || entry.name || name;
-      const watch = String(name || display || '').trim();
-      if (!watch) return null;
-      const startDate = parseLeagueDate(entry.start_date || entry.startDate || entry.start);
-      const endDate = parseLeagueDate(entry.end_date || entry.endDate || entry.end);
-      const now = Date.now();
-      let active = entry.active ?? entry.isActive ?? entry.enabled ?? entry.current;
-      if (active == null && endDate) {
-        active = endDate.getTime() >= now;
-      }
-      return {
-        id: watch,
-        text: String(display || watch),
-        watch,
-        active,
-        upcoming: entry.upcoming ?? entry.isUpcoming,
-        event: entry.event ?? entry.isEvent,
-        hardcore: entry.hardcore ?? entry.isHardcore,
-        startDate,
-        endDate
-      };
-    }
-
-    function normalizeLeagueGroups(data) {
-      const raw = Array.isArray(data)
-        ? data
-        : (Array.isArray(data?.leagues)
-            ? data.leagues
-            : (Array.isArray(data?.items)
-                ? data.items
-                : (Array.isArray(data?.result)
-                    ? data.result
-                    : (Array.isArray(data?.data) ? data.data : null))));
-      if (!raw || !raw.length) return null;
-      const seen = new Set();
-      const options = raw.map(normalizeLeagueEntry).filter((option) => {
-        if (!option) return false;
-        const key = normalizeLeagueCompare(option.watch || option.id || option.text);
-        if (!key || seen.has(key)) return false;
-        seen.add(key);
-        if (option.active === false) return false;
-        if (shouldIgnoreLeague(option)) return false;
-        return true;
-      });
-      if (!options.length) return null;
-      options.sort((a, b) => {
-        const aStart = a.startDate ? a.startDate.getTime() : 0;
-        const bStart = b.startDate ? b.startDate.getTime() : 0;
-        if (aStart !== bStart) return bStart - aStart;
-        return String(a.text || a.id).localeCompare(String(b.text || b.id));
-      });
-      return [{ label: 'Leagues', options }];
-    }
-
-    function buildWatchLeagueEndpoints(base) {
-      const root = String(base || '').replace(/\/$/, '');
-      if (!root) return [];
-      return [`${root}/leagues`];
-    }
-
     async function loadLeagues(forceRefresh = false) {
-      if (usingStaticData()) {
-        try {
-          const url = withCacheBust(getStaticLeaguesUrl(), forceRefresh);
-          const resp = await fetch(url, { cache: forceRefresh ? 'no-store' : 'default' });
-          if (!resp.ok) throw new Error(String(resp.status));
-          const data = await resp.json();
-          const raw = data?.leagues ?? data?.items ?? data?.data ?? data;
-          const groups = normalizeLeagueGroups(raw);
-          if (!groups) throw new Error('empty');
-          LEAGUES = groups;
-          state.leagueSource = 'static';
-          state.leagueUpdatedAt = parseTimestamp(data?.generatedAt || data?.updatedAt || data?.fetchedAt);
-          buildLeagueSelect();
-          applyLeagueSelection(state.leagueId || DEFAULT_LEAGUE, { persist: true, allowFallback: false });
-          return true;
-        } catch (err) {
-          state.leagueSource = 'static';
-          state.leagueUpdatedAt = null;
-          return false;
-        }
+      if (leaguesService) {
+        const loaded = await leaguesService.loadLeagues(forceRefresh);
+        LEAGUES = leaguesService.getLeagues();
+        return loaded;
       }
-
-      if (IS_FILE_ORIGIN) return false;
-      const cached = loadLeagueCache();
-      if (leagueCacheIsFresh(cached)) {
-        LEAGUES = cached.groups;
-        state.leagueSource = 'cache';
-        state.leagueUpdatedAt = cached.fetchedAt ? new Date(cached.fetchedAt) : null;
-        buildLeagueSelect();
-        applyLeagueSelection(state.leagueId || DEFAULT_LEAGUE, { persist: true, allowFallback: false });
-        return true;
-      }
-
-      const endpoints = buildWatchLeagueEndpoints(WATCH_API_BASE);
-      for (const url of endpoints) {
-        try {
-          const resp = await fetch(url);
-          if (!resp.ok) throw new Error(String(resp.status));
-          const data = await resp.json();
-          const groups = normalizeLeagueGroups(data);
-          if (!groups) throw new Error('empty');
-          LEAGUES = groups;
-          saveLeagueCache(groups);
-          state.leagueSource = 'api';
-          state.leagueUpdatedAt = new Date();
-          buildLeagueSelect();
-          applyLeagueSelection(state.leagueId || DEFAULT_LEAGUE, { persist: true, allowFallback: false });
-          return true;
-        } catch (err) {
-          // Try next endpoint.
-        }
-      }
-      state.leagueSource = 'fallback';
-      state.leagueUpdatedAt = null;
       return false;
     }
 
     function selectMostRecentLeague() {
-      const options = flattenLeagues();
-      if (!options.length) return false;
-      const maxStart = options.reduce((best, option) => {
-        const start = option.startDate ? option.startDate.getTime() : 0;
-        return Math.max(best, start);
-      }, 0);
-      const candidates = options.filter((option) => {
-        const start = option.startDate ? option.startDate.getTime() : 0;
-        return start === maxStart;
-      });
-      const preferred = candidates.find((option) => !isDisfavoredLeague(option));
-      const pick = preferred || candidates[0] || options[0];
-      return applyLeagueSelection(pick.id, { persist: true });
-    }
-
-    function isDisfavoredLeague(option) {
-      const raw = String(option?.text || option?.id || option?.watch || '');
-      const normalized = raw.toLowerCase();
-      return normalized.includes('hardcore') || /solo self[- ]found/.test(normalized);
-    }
-
-    function shouldIgnoreLeague(option) {
-      const raw = String(option?.text || option?.id || option?.watch || '');
-      const normalized = raw.toLowerCase();
-      if (normalized.includes('ruthless')) return true;
-      if (normalized.includes('hardcore') && normalized.includes('phrecia')) return true;
-      if (normalized.includes('solo self-found') || /\bssf\b/.test(normalized)) return true;
+      if (leaguesService) {
+        return leaguesService.selectMostRecentLeague();
+      }
       return false;
     }
 
     buildLeagueSelect();
 
-    try {
-      localStorage.setItem(priceSourceKey, BASE_PRICE_SOURCE);
-    } catch (err) {
-      // Ignore storage failures.
-    }
-
     priceModeInput.value = state.priceMode;
     currencyInput.value = state.displayCurrency;
     if (priceSourceInput) priceSourceInput.value = state.priceSource;
-    applyLeagueSelection(DEFAULT_LEAGUE, { allowFallback: false });
+    if (DEFAULT_LEAGUE && leagueSelect?.options?.length) {
+      applyLeagueSelection(DEFAULT_LEAGUE, { allowFallback: false });
+    }
 
     const minPref = localStorage.getItem('poeBossMinValueEnabled') || (BASE_MIN_VALUE_ENABLED ? 'on' : 'off');
     const minThresholdRaw = localStorage.getItem('poeBossMinValueChaos');
@@ -725,13 +675,13 @@
       state.leagueId = leagueSelect.value;
       state.leagueText = leagueTextFor(state.leagueId);
       state.leagueWatchId = leagueWatchFor(state.leagueId);
-      localStorage.setItem('poeBossLeague', state.leagueId);
+      saveSharedSetting('leagueId', state.leagueId);
       fetchPrices();
     });
 
     currencyInput.addEventListener('change', () => {
       state.displayCurrency = currencyInput.value;
-      localStorage.setItem(displayCurrencyKey, state.displayCurrency);
+      saveSharedSetting('displayCurrency', state.displayCurrency);
       updateMinValueInput();
       safeRender();
     });
@@ -739,7 +689,7 @@
     if (priceSourceInput) {
       priceSourceInput.addEventListener('change', async () => {
         state.priceSource = normalizePriceSource(priceSourceInput.value);
-        localStorage.setItem(priceSourceKey, state.priceSource);
+        saveSharedSetting('priceSource', state.priceSource);
         if (priceSourceInput.value !== state.priceSource) {
           priceSourceInput.value = state.priceSource;
         }
@@ -754,7 +704,7 @@
 
     priceModeInput.addEventListener('change', () => {
       state.priceMode = priceModeInput.value;
-      localStorage.setItem('poeBossPriceMode', state.priceMode);
+      saveSharedSetting('priceMode', state.priceMode);
       safeRender();
     });
 
@@ -763,7 +713,7 @@
         state.leagueId = leagueSelect.value;
         state.leagueText = leagueTextFor(state.leagueId);
         state.leagueWatchId = leagueWatchFor(state.leagueId);
-        localStorage.setItem('poeBossLeague', state.leagueId);
+        saveSharedSetting('leagueId', state.leagueId);
         fetchPrices(true);
       });
     }
@@ -783,8 +733,6 @@
         localStorage.removeItem(manualPriceKey);
         localStorage.removeItem(manualCostKey);
         localStorage.removeItem(ignoreDropsKey);
-        localStorage.removeItem('poeBossPriceMode');
-        localStorage.removeItem(displayCurrencyKey);
         localStorage.removeItem('poeBossMinValueEnabled');
         localStorage.removeItem('poeBossMinValueChaos');
         localStorage.removeItem('poeBossMinProbEnabled');
@@ -792,7 +740,6 @@
         localStorage.removeItem(sortKeyStorage);
         localStorage.removeItem(sortDirStorage);
         localStorage.removeItem(searchKeyStorage);
-        localStorage.removeItem('poeBossDebug');
 
         applyLeagueSelection(previousLeague, { persist: true });
         state.priceMode = BASE_PRICE_MODE;
@@ -806,6 +753,10 @@
         state.sortDir = BASE_SORT_DIR;
         state.searchQuery = '';
         state.debug = BASE_DEBUG;
+        saveSharedSetting('priceMode', state.priceMode);
+        saveSharedSetting('displayCurrency', state.displayCurrency);
+        saveSharedSetting('debug', state.debug);
+        saveSharedSetting('priceSource', state.priceSource);
 
         priceModeInput.value = state.priceMode;
         currencyInput.value = state.displayCurrency;
@@ -826,62 +777,6 @@
     function setStatus(text, isError) {
       statusEl.textContent = text;
       statusEl.classList.toggle('error', Boolean(isError));
-    }
-
-    function escapeHtml(value) {
-      return String(value ?? '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
-    }
-
-    function renderChangelogEntries(entries) {
-      if (!changelogContent) return;
-      if (!Array.isArray(entries) || !entries.length) {
-        changelogContent.innerHTML = '<div class="muted">No changelog entries found.</div>';
-        return;
-      }
-      const html = entries.map((entry) => {
-        const version = escapeHtml(entry?.version || '');
-        const date = escapeHtml(entry?.date || '');
-        const changes = Array.isArray(entry?.changes) ? entry.changes : [];
-        const changeRows = changes.length
-          ? `<ul class="changelog-list">${changes.map((change) => `<li>${escapeHtml(change)}</li>`).join('')}</ul>`
-          : '<div class="muted">No listed changes.</div>';
-        return `
-          <article class="changelog-entry">
-            <div class="changelog-meta">
-              <span class="changelog-version">v${version || 'unknown'}</span>
-              ${date ? `<span>${date}</span>` : ''}
-            </div>
-            ${changeRows}
-          </article>
-        `;
-      }).join('');
-      changelogContent.innerHTML = html;
-    }
-
-    async function toggleChangelogPanel() {
-      if (!changelogPanel || !changelogToggle) return;
-      const shouldOpen = changelogPanel.hidden;
-      changelogPanel.hidden = !shouldOpen;
-      changelogToggle.classList.toggle('is-open', shouldOpen);
-      changelogToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
-      if (!shouldOpen) return;
-      if (CHANGELOG_ENTRIES) {
-        renderChangelogEntries(CHANGELOG_ENTRIES);
-        return;
-      }
-      if (changelogContent) changelogContent.textContent = 'Loading changelog…';
-      const entries = await loadChangelogData();
-      if (!entries) {
-        if (changelogContent) changelogContent.innerHTML = '<div class="muted warning">Unable to load changelog.</div>';
-        return;
-      }
-      CHANGELOG_ENTRIES = entries;
-      renderChangelogEntries(entries);
     }
 
     function setDebug(text) {
@@ -917,40 +812,6 @@
         .replace(/^the\\s+/, '')
         .replace(/[’']/g, '')
         .replace(/[^a-z0-9]/g, '');
-    }
-
-    function buildNinjaTradeSeedByName(name) {
-      return {
-        mode: 'search',
-        q: JSON.stringify({
-          query: {
-            filters: {
-              type_filters: { filters: {} },
-              misc_filters: {
-                filters: {
-                  foulborn_item: { option: 'false' }
-                }
-              }
-            },
-            status: { option: 'available' },
-            name: String(name || '')
-          }
-        })
-      };
-    }
-
-    function buildDivinationCardTradeSeedByName(name) {
-      return {
-        mode: 'search',
-        q: JSON.stringify({
-          query: {
-            status: { option: 'online' },
-            type: String(name || ''),
-            stats: [{ type: 'and', filters: [] }]
-          },
-          sort: { price: 'asc' }
-        })
-      };
     }
 
     function slugifyLeague(text) {
@@ -1065,19 +926,6 @@
       });
     }
 
-    function loadPriceCache() {
-      return {};
-    }
-
-    function savePriceCache(cache) {
-      // Caching disabled for testing.
-    }
-
-    function cacheEntryIsFresh(entry) {
-      if (!entry || !entry.fetchedAt || !Array.isArray(entry.items)) return false;
-      return Date.now() - entry.fetchedAt < priceCacheTtlMs;
-    }
-
     function flattenWatchBuckets(buckets) {
       if (!buckets || typeof buckets !== 'object') return [];
       const items = [];
@@ -1115,171 +963,6 @@
       return [];
     }
 
-    function normalizeRatioCategory(category) {
-      if (!category) return category;
-      const normalized = String(category).toLowerCase();
-      if (normalized === 'divination' || normalized === 'divinationcard' || normalized === 'divination-card') {
-        return 'card';
-      }
-      if (normalized === 'cards') return 'card';
-      if (normalized === 'map' || normalized === 'maps' || normalized === 'invitation' || normalized === 'invitations') {
-        return 'maps';
-      }
-      return normalized;
-    }
-
-    function extractRatioItems(data) {
-      if (Array.isArray(data)) return data;
-      if (!data || typeof data !== 'object') return [];
-      if (Array.isArray(data.items)) return data.items;
-      return [];
-    }
-
-    function parseRatioPrice(item) {
-      const chaosValue = Number(item?.chaos?.value ?? item?.chaos?.chaosValue ?? item?.chaosValue ?? item?.value);
-      if (!Number.isFinite(chaosValue) || chaosValue <= 0) return null;
-      const name = item?.name;
-      if (!name) return null;
-      return {
-        id: item?.id ?? name,
-        name,
-        category: normalizeRatioCategory(item?.category),
-        icon: item?.icon,
-        min: chaosValue,
-        mean: chaosValue,
-        max: chaosValue,
-        updatedAt: parseTimestamp(item?.chaos?.timestamp ?? item?.divine?.timestamp ?? item?.timestamp)
-      };
-    }
-
-    function indexRatioItems(items) {
-      const seen = new Set();
-      const result = [];
-      let updatedAt = null;
-      (items || []).forEach((item) => {
-        const parsed = parseRatioPrice(item);
-        if (!parsed) return;
-        const key = normalizeText(parsed.name);
-        if (!key || seen.has(key)) return;
-        seen.add(key);
-        updatedAt = pickLatestTimestamp(updatedAt, parsed.updatedAt);
-        const { updatedAt: _ignored, ...rest } = parsed;
-        result.push(rest);
-      });
-      return { items: result, updatedAt };
-    }
-
-    function mergeRatioItems(ratioItems, fallbackItems) {
-      if (!ratioItems?.length) return fallbackItems || [];
-      const ratioNames = new Set(
-        ratioItems
-          .map((item) => normalizeText(item?.name))
-          .filter(Boolean)
-      );
-      const mergedFallback = (fallbackItems || []).filter((item) => {
-        const key = normalizeText(item?.name);
-        return !key || !ratioNames.has(key);
-      });
-      return [...ratioItems, ...mergedFallback];
-    }
-
-    function toNinjaItem({ name, value, category, icon, id }) {
-      if (!name || !Number.isFinite(value)) return null;
-      const rounded = Math.round(value * 10000) / 10000;
-      return {
-        id: id || name,
-        name,
-        category,
-        icon,
-        min: rounded,
-        mean: rounded,
-        max: rounded
-      };
-    }
-
-    function ninjaEndpointPath(isCurrency) {
-      return isCurrency ? 'currency/overview' : 'item/overview';
-    }
-
-    async function fetchNinjaOverview(leagueValue, entry, isCurrency) {
-      const endpoint = ninjaEndpointPath(isCurrency);
-      const url = `${NINJA_API_BASE}/${endpoint}?league=${encodeURIComponent(leagueValue)}&type=${encodeURIComponent(entry.type)}`;
-      const resp = await fetch(url);
-      if (!resp.ok) throw new Error(String(resp.status));
-      const data = await resp.json();
-      const lines = Array.isArray(data?.lines) ? data.lines : [];
-      const items = [];
-      lines.forEach((line) => {
-        const value = Number(isCurrency ? line.chaosEquivalent : line.chaosValue);
-        const name = isCurrency ? (line.currencyTypeName || line.name) : (line.name || line.baseType);
-        const icon = line.icon;
-        const id = line.detailsId || name;
-        const item = toNinjaItem({ name, value, category: entry.category, icon, id });
-        if (item) items.push(item);
-      });
-      return { items, updatedAt: parseTimestamp(data?.updated), url };
-    }
-
-    async function fetchNinjaPricesForLeague(leagueValue) {
-      let items = [];
-      let updatedAt = null;
-      const results = [];
-
-      for (const entry of NINJA_CURRENCY_TYPES) {
-        try {
-          const result = await fetchNinjaOverview(leagueValue, entry, true);
-          if (result.items.length) items = items.concat(result.items);
-          updatedAt = pickLatestTimestamp(updatedAt, result.updatedAt);
-          results.push({ status: 'ok', source: `currency:${entry.type}`, items: result.items.length, url: result.url });
-        } catch (err) {
-          const url = `${NINJA_API_BASE}/${ninjaEndpointPath(true)}?league=${encodeURIComponent(leagueValue)}&type=${encodeURIComponent(entry.type)}`;
-          results.push({ status: 'error', source: `currency:${entry.type}`, error: err?.message || 'unknown', url });
-        }
-      }
-
-      for (const entry of NINJA_ITEM_TYPES) {
-        try {
-          const result = await fetchNinjaOverview(leagueValue, entry, false);
-          if (result.items.length) items = items.concat(result.items);
-          updatedAt = pickLatestTimestamp(updatedAt, result.updatedAt);
-          results.push({ status: 'ok', source: `item:${entry.type}`, items: result.items.length, url: result.url });
-        } catch (err) {
-          const url = `${NINJA_API_BASE}/${ninjaEndpointPath(false)}?league=${encodeURIComponent(leagueValue)}&type=${encodeURIComponent(entry.type)}`;
-          results.push({ status: 'error', source: `item:${entry.type}`, error: err?.message || 'unknown', url });
-        }
-      }
-
-      return { items, updatedAt, results };
-    }
-
-    function normalizeCategorySlug(value) {
-      if (value == null) return '';
-      if (typeof value === 'string') {
-        const trimmed = value.trim();
-        if (!trimmed || /^\d+$/.test(trimmed)) return '';
-        return trimmed.toLowerCase();
-      }
-      if (typeof value === 'number') return '';
-      if (typeof value === 'object') {
-        const candidate = value.slug || value.category || value.name || value.label || value.text || value.id;
-        return normalizeCategorySlug(candidate);
-      }
-      return normalizeCategorySlug(String(value));
-    }
-
-    function slimWatchItems(items) {
-      return items.map((item) => ({
-        id: item.id,
-        name: item.name,
-        category: item.category,
-        icon: item.icon,
-        linkCount: item.linkCount,
-        min: item.min,
-        mean: item.mean,
-        max: item.max
-      }));
-    }
-
     function slugifyItem(text) {
       return String(text || '')
         .normalize('NFD')
@@ -1313,28 +996,6 @@
       });
 
       return { items, byName, byLower, counts };
-    }
-
-    function pickLatestTimestamp(current, next) {
-      if (!next) return current;
-      if (!current) return next;
-      return next.getTime() > current.getTime() ? next : current;
-    }
-
-    function commitWatchData(items, leagueValue, base, updatedAt) {
-      const slimItems = slimWatchItems(items);
-      state.priceData = indexWatchData(slimItems);
-      state.pricingLeague = leagueValue;
-      state.watchBase = base;
-      state.priceUpdatedAt = updatedAt;
-      const cache = {
-        [leagueValue]: {
-          fetchedAt: Date.now(),
-          updatedAt: updatedAt ? updatedAt.toISOString() : null,
-          items: slimItems
-        }
-      };
-      savePriceCache(cache);
     }
 
     function categoriesForTypes(types) {
@@ -1408,76 +1069,24 @@
     }
 
     function tradeSeedForItemName(name) {
-      const normalized = normalizeText(name);
-      if (!normalized) return null;
-      return TRADE_LINK_SEEDS[normalized] || null;
-    }
-
-    function shouldAutoTradeUniqueItem(item) {
-      const types = Array.isArray(item?.types) ? item.types : [];
-      if (types.some((type) => NON_UNIQUE_TRADE_TYPES.has(String(type)))) return false;
-      if (types.some((type) => String(type).startsWith('Unique'))) return true;
-      const key = normalizeText(item?.name);
-      return key ? UNIQUE_DROP_NAME_KEYS.has(key) : false;
-    }
-
-    function shouldAutoTradeDivinationCard(item) {
-      const types = Array.isArray(item?.types) ? item.types : [];
-      return types.some((type) => String(type) === 'DivinationCard');
+      if (!Trade) return null;
+      return Trade.tradeSeedForItemName(name, normalizeText, TRADE_LINK_SEEDS);
     }
 
     function tradeSeedForItem(item) {
-      const name = String(item?.name || '').trim();
-      if (!name) return null;
-      const explicit = tradeSeedForItemName(name);
-      if (explicit) return explicit;
-      if (shouldAutoTradeDivinationCard(item)) return buildDivinationCardTradeSeedByName(name);
-      if (!shouldAutoTradeUniqueItem(item)) return null;
-      return buildNinjaTradeSeedByName(name);
-    }
-
-    function normalizeTradeSeed(seed) {
-      if (!seed) return null;
-      if (typeof seed === 'object' && seed.mode && seed.id) {
-        const mode = String(seed.mode).toLowerCase();
-        const id = String(seed.id).trim();
-        if ((mode === 'search' || mode === 'exchange') && id) return { mode, id };
-        return null;
-      }
-      if (typeof seed === 'object' && seed.mode && seed.q) {
-        const mode = String(seed.mode).toLowerCase();
-        const q = String(seed.q).trim();
-        if (mode === 'search' && q) return { mode, q };
-        return null;
-      }
-      if (typeof seed !== 'string') return null;
-      try {
-        const parsed = new URL(seed);
-        const parts = parsed.pathname.split('/').filter(Boolean);
-        if (parts[0] !== 'trade') return null;
-        if (parts.length === 3 && String(parts[1] || '').toLowerCase() === 'search') {
-          const q = parsed.searchParams.get('q');
-          if (q) return { mode: 'search', q };
-        }
-        if (parts.length < 4) return null;
-        const mode = String(parts[1] || '').toLowerCase();
-        const id = parts.slice(3).join('/').trim();
-        if ((mode !== 'search' && mode !== 'exchange') || !id) return null;
-        return { mode, id };
-      } catch (err) {
-        return null;
-      }
+      if (!Trade) return null;
+      return Trade.tradeSeedForItem({
+        item,
+        normalizeText,
+        tradeLinkSeeds: TRADE_LINK_SEEDS,
+        uniqueDropNameKeys: UNIQUE_DROP_NAME_KEYS,
+        nonUniqueTradeTypes: NON_UNIQUE_TRADE_TYPES
+      });
     }
 
     function tradeUrlFromSeed(seed, league) {
-      if (!seed) return null;
-      const normalized = normalizeTradeSeed(seed);
-      if (!normalized) return null;
-      if (!league) return null;
-      if (normalized.q) {
-        return `${TRADE_SITE_BASE}/trade/search/${encodeURIComponent(league)}?q=${encodeURIComponent(normalized.q)}`;
-      }
-      return `${TRADE_SITE_BASE}/trade/${normalized.mode}/${encodeURIComponent(league)}/${normalized.id}`;
+      if (!Trade) return null;
+      return Trade.tradeUrlFromSeed(seed, league, TRADE_SITE_BASE);
     }
 
     function tradeQueryForItem(item, _bossId) {
@@ -2169,219 +1778,19 @@
     }
 
     async function fetchPrices(forceRefresh = false) {
-      const usingStatic = usingStaticData();
-      const sourceLabel = state.priceSource === 'poe-ninja' ? 'poe.ninja' : 'poe.watch';
-      setStatus(usingStatic ? `Loading cached ${sourceLabel} prices…` : `Fetching ${sourceLabel} prices…`);
-      state.priceData = null;
-      state.fallbackHits = new Map();
-      state.fetchResults = [];
-      const liveBase = state.priceSource === 'poe-ninja' ? NINJA_API_BASE : WATCH_API_BASE;
-      state.watchBase = usingStatic ? `${state.priceSource}:static` : liveBase;
-      state.priceUpdatedAt = null;
-
-      const leagueCandidates = Array.from(new Set([state.leagueWatchId, state.leagueText, state.leagueId].filter(Boolean)));
-      let pricingLeague = leagueCandidates[0] || state.leagueId;
-
-      if (usingStatic) {
-        const candidates = leagueCandidates.length
-          ? leagueCandidates
-          : (LEAGUES?.[0]?.options?.[0]?.id ? [LEAGUES[0].options[0].id] : []);
-        for (const candidate of candidates) {
-          const slug = slugifyLeague(candidate);
-          if (!slug) continue;
-          const url = withCacheBust(`${getStaticPricesBase()}/${slug}/compact.json`, forceRefresh);
-          try {
-            const resp = await fetch(url, { cache: forceRefresh ? 'no-store' : 'default' });
-            if (!resp.ok) throw new Error(`${resp.status}`);
-            const data = await resp.json();
-            const items = Array.isArray(data?.items) ? data.items : extractWatchItems(data);
-            if (!items.length) throw new Error('empty');
-            const leagueLabel = data?.league?.watch || data?.league?.id || candidate;
-            state.priceData = indexWatchData(items);
-            state.pricingLeague = leagueLabel;
-            state.watchBase = `${state.priceSource}:static`;
-            state.priceUpdatedAt = parseTimestamp(data?.updatedAt) || parseTimestamp(data?.generatedAt);
-            state.fetchResults.push({ status: 'ok', source: 'static', items: items.length, league: leagueLabel, url });
-            pricingLeague = leagueLabel;
-            break;
-          } catch (err) {
-            state.fetchResults.push({
-              status: 'error',
-              source: 'static',
-              error: err?.message || 'unknown',
-              url
-            });
-          }
-        }
-      } else {
-        if (!forceRefresh) {
-          const cache = loadPriceCache();
-          for (const leagueValue of leagueCandidates) {
-            const entry = cache[leagueValue];
-            if (cacheEntryIsFresh(entry)) {
-              state.priceData = indexWatchData(entry.items);
-              state.pricingLeague = leagueValue;
-              state.watchBase = 'cache';
-              state.priceUpdatedAt = parseTimestamp(entry.updatedAt);
-              state.fetchResults.push({ status: 'cache', source: 'cache', items: entry.items.length, league: leagueValue });
-              const divine = state.priceData.byLower.get('divine orb')?.[0];
-              state.divineChaos = divine ? safeNumber(divine.mean ?? divine.min ?? divine.max) : null;
-              if (state.divineChaos) {
-                localStorage.setItem('poeBossDivineChaos', String(state.divineChaos));
-              }
-              updateMinValueInput();
-              const updatedLabel = state.priceUpdatedAt ? ` Updated ${formatUpdatedAt(state.priceUpdatedAt)}.` : '';
-              setStatus(`Prices loaded for ${leagueValue}.${updatedLabel}`);
-              safeRender();
-              return;
-            }
-          }
-        }
-        if (state.priceSource === 'poe-ninja') {
-          const base = NINJA_API_BASE;
-          for (const leagueValue of leagueCandidates) {
-            try {
-              const result = await fetchNinjaPricesForLeague(leagueValue);
-              state.fetchResults.push(...result.results);
-              if (!result.items.length) throw new Error('empty');
-              commitWatchData(result.items, leagueValue, base, result.updatedAt);
-              pricingLeague = leagueValue;
-              break;
-            } catch (err) {
-              state.fetchResults.push({
-                status: 'error',
-                source: 'poe.ninja',
-                error: err?.message || 'unknown',
-                url: `${base}/getindexstate`
-              });
-            }
-          }
-        } else {
-          const base = WATCH_API_BASE;
-          const categoriesEndpoint = buildWatchCategoriesEndpoint(base);
-          const getEndpoint = buildWatchGetEndpoint(base);
-          for (const leagueValue of leagueCandidates) {
-            let ratioItems = [];
-            let ratioUpdatedAt = null;
-            const ratioUrl = buildWatchExchangeEndpoint(base, leagueValue);
-            if (ratioUrl) {
-              try {
-                const ratioResp = await fetch(ratioUrl);
-                if (!ratioResp.ok) throw new Error(`${ratioResp.status}`);
-                const ratioData = await ratioResp.json();
-                const ratio = indexRatioItems(extractRatioItems(ratioData));
-                ratioItems = ratio.items;
-                ratioUpdatedAt = ratio.updatedAt;
-                state.fetchResults.push({
-                  status: 'ok',
-                  source: 'ratios',
-                  items: ratioItems.length,
-                  url: ratioUrl
-                });
-              } catch (err) {
-                state.fetchResults.push({
-                  status: 'error',
-                  source: 'ratios',
-                  error: err?.message || 'unknown',
-                  url: ratioUrl
-                });
-              }
-            }
-
-            let items = [];
-            let updatedAt = null;
-            if (categoriesEndpoint && getEndpoint) {
-              try {
-                const resp = await fetch(categoriesEndpoint);
-                if (!resp.ok) throw new Error(`${resp.status}`);
-                const data = await resp.json();
-                const categories = extractWatchCategories(data)
-                  .map(normalizeCategorySlug)
-                  .filter(Boolean);
-                if (!categories.length) throw new Error('empty');
-                state.fetchResults.push({ status: 'ok', source: 'categories', items: categories.length, url: categoriesEndpoint });
-                for (const category of categories) {
-                  const url = getEndpoint
-                    .replace('{LEAGUE}', encodeURIComponent(leagueValue))
-                    .replace('{CATEGORY}', encodeURIComponent(category));
-                  try {
-                    const catResp = await fetch(url);
-                    if (!catResp.ok) throw new Error(`${catResp.status}`);
-                    const catData = await catResp.json();
-                    const catItems = extractWatchItems(catData).map((item) => {
-                      if (item && item.category == null && category) {
-                        return { ...item, category };
-                      }
-                      return item;
-                    });
-                    if (catItems.length) items.push(...catItems);
-                    updatedAt = pickLatestTimestamp(updatedAt, findUpdatedAt(catData, catResp));
-                    state.fetchResults.push({
-                      status: 'ok',
-                      source: `get:${category}`,
-                      items: catItems.length,
-                      url
-                    });
-                  } catch (err) {
-                    state.fetchResults.push({
-                      status: 'error',
-                      source: `get:${category}`,
-                      error: err?.message || 'unknown',
-                      url
-                    });
-                  }
-                }
-              } catch (err) {
-                state.fetchResults.push({
-                  status: 'error',
-                  source: 'categories',
-                  error: err?.message || 'unknown',
-                  url: categoriesEndpoint
-                });
-              }
-            }
-
-            const mergedItems = mergeRatioItems(ratioItems, items);
-            const mergedUpdatedAt = pickLatestTimestamp(ratioUpdatedAt, updatedAt);
-            if (mergedItems.length) {
-              commitWatchData(mergedItems, leagueValue, base, mergedUpdatedAt);
-              pricingLeague = leagueValue;
-              break;
-            }
-          }
-        }
-      }
-
-      if (!state.priceData) {
-        const message = usingStatic
-          ? `Failed to load cached ${sourceLabel} prices. Check ${getStaticPricesBase()}/<league>/compact.json.`
-          : `Failed to load ${sourceLabel} prices. Check the league name and try again.`;
-        setStatus(message, true);
+      if (!pricingService) {
+        setStatus('Pricing module failed to load.', true);
         safeRender();
         return;
       }
-
-      const divine = state.priceData.byLower.get('divine orb')?.[0];
-      const divineChaos = divine ? safeNumber(divine.mean ?? divine.min ?? divine.max) : null;
-      state.divineChaos = divineChaos;
-      if (state.divineChaos) {
-        localStorage.setItem('poeBossDivineChaos', String(state.divineChaos));
-      }
-      updateMinValueInput();
-
-      const failures = state.fetchResults.filter((r) => r && r.status === 'error');
-      const updatedLabel = state.priceUpdatedAt ? ` Updated ${formatUpdatedAt(state.priceUpdatedAt)}.` : '';
-      setStatus(`Prices loaded for ${pricingLeague}.${updatedLabel}`);
-      if (failures.length && state.debug) console.table?.(failures);
-      safeRender();
+      return pricingService.fetchPrices(forceRefresh);
     }
 
-    const debugPref = localStorage.getItem('poeBossDebug') || 'off';
-    debugToggle.checked = debugPref === 'on';
+    debugToggle.checked = DEFAULT_DEBUG;
     state.debug = debugToggle.checked;
     debugToggle.addEventListener('change', () => {
       state.debug = debugToggle.checked;
-      localStorage.setItem('poeBossDebug', state.debug ? 'on' : 'off');
+      saveSharedSetting('debug', state.debug);
       safeRender();
     });
 
@@ -2393,12 +1802,6 @@
         setStatus('Unable to copy debug output.', true);
       }
     });
-
-    if (changelogToggle) {
-      changelogToggle.addEventListener('click', () => {
-        toggleChangelogPanel();
-      });
-    }
 
     async function init() {
       if (IS_FILE_ORIGIN) {
@@ -2416,7 +1819,9 @@
       }
       const leaguesLoaded = await loadLeagues();
       if (leaguesLoaded) {
-        selectMostRecentLeague();
+        if (!state.leagueId) {
+          selectMostRecentLeague();
+        }
       } else {
         setStatus('Unable to load league data.', true);
       }
