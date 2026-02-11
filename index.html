@@ -25,7 +25,7 @@
             Estimate boss-run value using community drop rates and live poe.watch prices. Focuses on entry items and boss-specific drops only.
           </div>
           <div class="chips">
-            <span class="chip">Version 0.2.4</span>
+            <span class="chip">Version 0.2.5</span>
             <span class="chip">Prices: poe.watch</span>
             <span class="chip">Drops: PoE Wiki estimates</span>
           </div>
@@ -160,12 +160,16 @@
       </div>
     </section>
     <div class="debug-footer">
+      <button id="changelogToggle" class="changelog-link" type="button" aria-controls="changelogPanel" aria-expanded="false">Changelog</button>
       <span>Debug</span>
       <label class="switch switch-mini">
         <input type="checkbox" id="debugToggle" />
         <span class="slider"></span>
       </label>
     </div>
+    <section id="changelogPanel" class="changelog-panel" hidden>
+      <div id="changelogContent" class="changelog-content muted">Loading changelog…</div>
+    </section>
   </div>
 
   <script src="app.js" defer></script>

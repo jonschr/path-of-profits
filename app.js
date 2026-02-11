@@ -148,6 +148,7 @@
     }
 
     let BOSS_DATA = [];
+    let CHANGELOG_ENTRIES = null;
 
     async function loadBossData() {
       try {
@@ -159,6 +160,19 @@
       } catch (err) {
         console.error('Failed to load boss-data.json', err);
         return [];
+      }
+    }
+
+    async function loadChangelogData() {
+      try {
+        const resp = await fetch('changelog.json', { cache: 'no-store' });
+        if (!resp.ok) throw new Error(String(resp.status));
+        const data = await resp.json();
+        if (!Array.isArray(data?.entries)) throw new Error('invalid data');
+        return data.entries;
+      } catch (err) {
+        console.error('Failed to load changelog.json', err);
+        return null;
       }
     }
 
@@ -221,6 +235,9 @@
     const debugEl = document.getElementById('debug');
     const debugContent = document.getElementById('debugContent');
     const copyDebug = document.getElementById('copyDebug');
+    const changelogToggle = document.getElementById('changelogToggle');
+    const changelogPanel = document.getElementById('changelogPanel');
+    const changelogContent = document.getElementById('changelogContent');
     const bossList = document.getElementById('bossList');
     const minValueToggle = document.getElementById('minValueToggle');
     const minValueInput = document.getElementById('minValueInput');
@@ -809,6 +826,62 @@
     function setStatus(text, isError) {
       statusEl.textContent = text;
       statusEl.classList.toggle('error', Boolean(isError));
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function renderChangelogEntries(entries) {
+      if (!changelogContent) return;
+      if (!Array.isArray(entries) || !entries.length) {
+        changelogContent.innerHTML = '<div class="muted">No changelog entries found.</div>';
+        return;
+      }
+      const html = entries.map((entry) => {
+        const version = escapeHtml(entry?.version || '');
+        const date = escapeHtml(entry?.date || '');
+        const changes = Array.isArray(entry?.changes) ? entry.changes : [];
+        const changeRows = changes.length
+          ? `<ul class="changelog-list">${changes.map((change) => `<li>${escapeHtml(change)}</li>`).join('')}</ul>`
+          : '<div class="muted">No listed changes.</div>';
+        return `
+          <article class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="changelog-version">v${version || 'unknown'}</span>
+              ${date ? `<span>${date}</span>` : ''}
+            </div>
+            ${changeRows}
+          </article>
+        `;
+      }).join('');
+      changelogContent.innerHTML = html;
+    }
+
+    async function toggleChangelogPanel() {
+      if (!changelogPanel || !changelogToggle) return;
+      const shouldOpen = changelogPanel.hidden;
+      changelogPanel.hidden = !shouldOpen;
+      changelogToggle.classList.toggle('is-open', shouldOpen);
+      changelogToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+      if (!shouldOpen) return;
+      if (CHANGELOG_ENTRIES) {
+        renderChangelogEntries(CHANGELOG_ENTRIES);
+        return;
+      }
+      if (changelogContent) changelogContent.textContent = 'Loading changelog…';
+      const entries = await loadChangelogData();
+      if (!entries) {
+        if (changelogContent) changelogContent.innerHTML = '<div class="muted warning">Unable to load changelog.</div>';
+        return;
+      }
+      CHANGELOG_ENTRIES = entries;
+      renderChangelogEntries(entries);
     }
 
     function setDebug(text) {
@@ -2320,6 +2393,12 @@
         setStatus('Unable to copy debug output.', true);
       }
     });
+
+    if (changelogToggle) {
+      changelogToggle.addEventListener('click', () => {
+        toggleChangelogPanel();
+      });
+    }
 
     async function init() {
       if (IS_FILE_ORIGIN) {

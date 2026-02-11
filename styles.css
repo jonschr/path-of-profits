@@ -105,6 +105,88 @@ h1 {
 	text-transform: uppercase;
 }
 
+.changelog-link {
+	width: auto;
+	display: inline;
+	background: transparent;
+	border: 0;
+	color: var(--muted);
+	font: inherit;
+	font-size: 12px;
+	letter-spacing: 0.4px;
+	text-transform: uppercase;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+	box-shadow: none;
+	transform: none;
+}
+
+.changelog-link:hover {
+	color: var(--muted);
+	box-shadow: none;
+	transform: none;
+}
+
+.changelog-link.is-open {
+	color: var(--muted);
+}
+
+.changelog-link:focus,
+.changelog-link:focus-visible {
+	outline: none;
+	box-shadow: none;
+}
+
+.changelog-panel {
+	margin-top: 10px;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	box-shadow: none;
+}
+
+.changelog-content {
+	display: grid;
+	gap: 16px;
+}
+
+.changelog-entry {
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	padding: 0;
+}
+
+.changelog-meta {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 12px;
+	letter-spacing: 0.3px;
+	color: var(--muted);
+	margin-bottom: 4px;
+}
+
+.changelog-version {
+	color: var(--ink);
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.changelog-list {
+	margin: 0;
+	padding-left: 18px;
+}
+
+.changelog-list li {
+	margin: 4px 0;
+	color: var(--ink);
+	line-height: 1.45;
+	font-size: 14px;
+}
+
 
 .button-secondary {
 	background: transparent;

@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "version": "0.2.5",
+      "date": "2026-02-11",
+      "changes": [
+        "Added trade links for boss drops with query-based Path of Exile trade searches for unique items and divination cards.",
+        "Expanded trade-link coverage by combining explicit seed mappings with automatic fallback generation for eligible unique drops.",
+        "Refined trade seed behavior for known special cases (exchange links) and corrected Mortal Rage mapping."
+      ]
+    },
+    {
       "version": "0.2.4",
       "date": "2026-02-10",
       "changes": [
