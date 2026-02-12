@@ -81,6 +81,9 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/The_Searing_Exarch"
+    ],
+    "tags": [
+      "Exarch"
     ]
   },
   {
@@ -183,6 +186,10 @@
     ],
     "sources": [
       "https://www.reddit.com/r/pathofexile/comments/1eniskx/330_blazing_fragments_66_uber_searing_exarchs/"
+    ],
+    "tags": [
+      "Uber",
+      "Exarch"
     ]
   },
   {
@@ -268,6 +275,9 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+    ],
+    "tags": [
+      "Eater"
     ]
   },
   {
@@ -367,6 +377,10 @@
     "sources": [
       "https://www.poewiki.net/wiki/The_Eater_of_Worlds",
       "https://www.reddit.com/r/pathofexile/comments/1eonkdp/455_uber_eater_fragments_91_uber_eaters_again/"
+    ],
+    "tags": [
+      "Uber",
+      "Eater"
     ]
   },
   {
@@ -524,7 +538,10 @@
       "https://www.poewiki.net/wiki/The_Maven",
       "https://www.reddit.com/r/pathofexile/comments/1eudvji/loot_from_1525_uber_maven_3844_div_profit/"
     ],
-    "note": "Impossible Escape uses unidentified pricing. Awakened gem weights are personal estimates based on observed rarity tiers."
+    "note": "Impossible Escape uses unidentified pricing. Awakened gem weights are personal estimates based on observed rarity tiers.",
+    "tags": [
+      "Uber"
+    ]
   },
   {
     "id": "sirus",
@@ -626,7 +643,10 @@
     "sources": [
       "https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
     ],
-    "note": "Thread of Hope uses unidentified pricing, with fallback to average of identified size variants."
+    "note": "Thread of Hope uses unidentified pricing, with fallback to average of identified size variants.",
+    "tags": [
+      "The Feared"
+    ]
   },
   {
     "id": "uber-sirus",
@@ -711,7 +731,11 @@
     "sources": [
       "https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
     ],
-    "note": "Thread of Hope (Massive) uses unidentified pricing, with fallback to identified Massive listings."
+    "note": "Thread of Hope (Massive) uses unidentified pricing, with fallback to identified Massive listings.",
+    "tags": [
+      "Uber",
+      "The Feared"
+    ]
   },
   {
     "id": "shaper",
@@ -825,6 +849,9 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/The_Shaper"
+    ],
+    "tags": [
+      "The Feared"
     ]
   },
   {
@@ -933,7 +960,11 @@
     "sources": [
       "https://www.poewiki.net/wiki/The_Shaper"
     ],
-    "note": "Sublime Vision uses unidentified pricing."
+    "note": "Sublime Vision uses unidentified pricing.",
+    "tags": [
+      "Uber",
+      "The Feared"
+    ]
   },
   {
     "id": "uber-elder",
@@ -1068,6 +1099,9 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/The_Elder"
+    ],
+    "tags": [
+      "The Feared"
     ]
   },
   {
@@ -1215,6 +1249,10 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/Uber_Elder"
+    ],
+    "tags": [
+      "Uber",
+      "The Feared"
     ]
   },
   {
@@ -1503,6 +1541,9 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/Atziri%2C_Queen_of_the_Vaal"
+    ],
+    "tags": [
+      "Uber"
     ]
   },
   {
@@ -1593,6 +1634,9 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/Uber_Cortex"
+    ],
+    "tags": [
+      "Uber"
     ]
   },
   {
@@ -1656,6 +1700,9 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/The_Black_Star"
+    ],
+    "tags": [
+      "Exarch"
     ]
   },
   {
@@ -1723,6 +1770,9 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/The_Infinite_Hunger"
+    ],
+    "tags": [
+      "Eater"
     ]
   },
   {
@@ -1818,6 +1868,262 @@
     "note": "Forbidden Shako price based on unidentified listings."
   },
   {
+    "id": "craiceann",
+    "name": "Craiceann, First of the Deep",
+    "tier": "Endgame",
+    "entry": [
+      {
+        "name": "Craicic Spider Crab",
+        "qty": 1
+      }
+    ],
+    "groups": [
+      {
+        "label": "Guaranteed Unique (Pool A)",
+        "type": "exclusive",
+        "items": [
+          {
+            "name": "Craiceann's Carapace",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          },
+          {
+            "name": "Craiceann's Chitin",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          },
+          {
+            "name": "Craiceann's Pincers",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          },
+          {
+            "name": "Craiceann's Tracks",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Guaranteed Beast Drop",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Craicic Spider Crab",
+            "p": 1
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.poewiki.net/wiki/Craiceann,_First_of_the_Deep"
+    ],
+    "note": "PoE Wiki confirms one set-item reward, but does not publish per-item weights; modeled as an even split.",
+    "tags": [
+      "Spirit Beast"
+    ]
+  },
+  {
+    "id": "farrul",
+    "name": "Farrul, First of the Plains",
+    "tier": "Endgame",
+    "entry": [
+      {
+        "name": "Farric Tiger Alpha",
+        "qty": 1
+      }
+    ],
+    "groups": [
+      {
+        "label": "Guaranteed Unique (Pool A)",
+        "type": "exclusive",
+        "items": [
+          {
+            "name": "Farrul's Bite",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          },
+          {
+            "name": "Farrul's Chase",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          },
+          {
+            "name": "Farrul's Fur",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          },
+          {
+            "name": "Farrul's Pounce",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Guaranteed Beast Drop",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Farric Tiger Alpha",
+            "p": 1
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.poewiki.net/wiki/Farrul,_First_of_the_Plains"
+    ],
+    "note": "PoE Wiki confirms one set-item reward, but does not publish per-item weights; modeled as an even split.",
+    "tags": [
+      "Spirit Beast"
+    ]
+  },
+  {
+    "id": "fenumus",
+    "name": "Fenumus, First of the Night",
+    "tier": "Endgame",
+    "entry": [
+      {
+        "name": "Fenumal Hybrid Arachnid",
+        "qty": 1
+      }
+    ],
+    "groups": [
+      {
+        "label": "Guaranteed Unique (Pool A)",
+        "type": "exclusive",
+        "items": [
+          {
+            "name": "Fenumus' Shroud",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          },
+          {
+            "name": "Fenumus' Spinnerets",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          },
+          {
+            "name": "Fenumus' Toxins",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          },
+          {
+            "name": "Fenumus' Weave",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Guaranteed Beast Drop",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Fenumal Hybrid Arachnid",
+            "p": 1
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.poewiki.net/wiki/Fenumus,_First_of_the_Night"
+    ],
+    "note": "PoE Wiki confirms one set-item reward, but does not publish per-item weights; modeled as an even split.",
+    "tags": [
+      "Spirit Beast"
+    ]
+  },
+  {
+    "id": "saqawal",
+    "name": "Saqawal, First of the Sky",
+    "tier": "Endgame",
+    "entry": [
+      {
+        "name": "Saqawine Rhex",
+        "qty": 1
+      }
+    ],
+    "groups": [
+      {
+        "label": "Guaranteed Unique (Pool A)",
+        "type": "exclusive",
+        "items": [
+          {
+            "name": "Saqawal's Flock",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          },
+          {
+            "name": "Saqawal's Nest",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          },
+          {
+            "name": "Saqawal's Talons",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          },
+          {
+            "name": "Saqawal's Winds",
+            "p": 0.25,
+            "types": [
+              "UniqueArmour"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Guaranteed Beast Drop",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Saqawine Rhex",
+            "p": 1
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.poewiki.net/wiki/Saqawal,_First_of_the_Sky"
+    ],
+    "note": "PoE Wiki confirms one set-item reward, but does not publish per-item weights; modeled as an even split.",
+    "tags": [
+      "Spirit Beast"
+    ]
+  },
+  {
     "id": "incarnation-of-dread",
     "name": "Incarnation of Dread",
     "tier": "Endgame",
@@ -1867,6 +2173,10 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/Incarnation_of_Dread"
+    ],
+    "tags": [
+      "The Feared",
+      "The Incarnations"
     ]
   },
   {
@@ -1923,6 +2233,11 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/Incarnation_of_Dread"
+    ],
+    "tags": [
+      "Uber",
+      "The Feared",
+      "The Incarnations"
     ]
   },
   {
@@ -1979,6 +2294,9 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/Incarnation_of_Neglect"
+    ],
+    "tags": [
+      "The Incarnations"
     ]
   },
   {
@@ -2039,6 +2357,10 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/Incarnation_of_Neglect"
+    ],
+    "tags": [
+      "Uber",
+      "The Incarnations"
     ]
   },
   {
@@ -2091,6 +2413,9 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/Incarnation_of_Fear"
+    ],
+    "tags": [
+      "The Incarnations"
     ]
   },
   {
@@ -2147,6 +2472,10 @@
     ],
     "sources": [
       "https://www.poewiki.net/wiki/Incarnation_of_Fear"
+    ],
+    "tags": [
+      "Uber",
+      "The Incarnations"
     ]
   },
   {
@@ -2273,6 +2602,9 @@
     "sources": [
       "https://www.poewiki.net/wiki/The_Elder"
     ],
-    "note": "Watcher's Eye uses unidentified pricing."
+    "note": "Watcher's Eye uses unidentified pricing.",
+    "tags": [
+      "The Feared"
+    ]
   }
 ]

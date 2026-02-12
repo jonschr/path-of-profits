@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "version": "0.2.7",
+      "date": "2026-02-12",
+      "changes": [
+        "Added Spirit Beast bosses (Craiceann, Farrul, Fenumus, Saqawal) with unique set pools and guaranteed 100% boss-beast drops.",
+        "Added boss tags with search integration: tags are now indexed by the main search and can be clicked to filter the boss list.",
+        "Introduced and normalized shared tag groups (Uber, Exarch, Eater, The Feared, The Incarnations, Spirit Beast) with consistent capitalization in data.",
+        "Adjusted boss summary layout: missing-price count now appears above the boss name in a compact style, and tag chips are shown as natural-width inline pills."
+      ]
+    },
+    {
       "version": "0.2.5",
       "date": "2026-02-11",
       "changes": [

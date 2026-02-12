@@ -664,12 +664,48 @@ button:hover {
 .boss-top {
 	display: flex;
 	flex-direction: column;
-	gap: 6px;
+	gap: 5px;
 }
 
 .boss-name {
 	font-family: var(--display);
 	font-size: 24px;
+}
+
+.boss-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	align-items: center;
+}
+
+.boss-tag {
+	display: inline-flex;
+	width: auto;
+	white-space: nowrap;
+	text-transform: lowercase;
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	background: rgba(15, 23, 42, 0.45);
+	color: var(--ink);
+	font-size: 12px;
+	line-height: 1;
+	padding: 5px 10px;
+	cursor: pointer;
+	transition:
+		border-color 0.15s ease,
+		background-color 0.15s ease,
+		transform 0.12s ease;
+}
+
+.boss-tag:hover {
+	border-color: rgba(56, 189, 248, 0.65);
+	background: rgba(56, 189, 248, 0.18);
+}
+
+.boss-tag:focus-visible {
+	outline: 2px solid rgba(56, 189, 248, 0.8);
+	outline-offset: 1px;
 }
 
 .boss-metrics {
@@ -1021,9 +1057,13 @@ button:hover {
 }
 
 .missing-note {
-	font-size: 15px;
+	font-size: 10px;
+	line-height: 1.1;
+	letter-spacing: 0.35px;
+	text-transform: uppercase;
 	color: var(--muted);
-	opacity: 0.6;
+	opacity: 0.55;
+	margin-left: 0;
 }
 
 @media (max-width: 720px) {

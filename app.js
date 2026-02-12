@@ -492,23 +492,36 @@
     state.sortKey = storedSortKey || BASE_SORT_KEY;
     state.sortDir = storedSortDir === 'asc' ? 'asc' : 'desc';
 
+    function setSearchQuery(nextQuery, options = {}) {
+      const {
+        shouldRender = true,
+        focus = false,
+        select = false
+      } = options;
+      state.searchQuery = String(nextQuery || '');
+      if (searchInput && searchInput.value !== state.searchQuery) {
+        searchInput.value = state.searchQuery;
+      }
+      if (state.searchQuery) {
+        localStorage.setItem(searchKeyStorage, state.searchQuery);
+      } else {
+        localStorage.removeItem(searchKeyStorage);
+      }
+      if (focus && searchInput) {
+        searchInput.focus();
+        if (select) searchInput.select();
+      }
+      if (shouldRender) safeRender();
+    }
+
     if (searchInput) {
       searchInput.value = state.searchQuery;
       searchInput.addEventListener('input', (event) => {
-        state.searchQuery = event.target.value || '';
-        if (state.searchQuery) {
-          localStorage.setItem(searchKeyStorage, state.searchQuery);
-        } else {
-          localStorage.removeItem(searchKeyStorage);
-        }
-        safeRender();
+        setSearchQuery(event.target.value || '');
       });
       searchInput.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
-          searchInput.value = '';
-          state.searchQuery = '';
-          localStorage.removeItem(searchKeyStorage);
-          safeRender();
+          setSearchQuery('');
         }
       });
     }
@@ -832,6 +845,7 @@
         boss?.tier,
         boss?.note
       ];
+      (boss?.tags || []).forEach((tag) => parts.push(tag));
       (boss?.entry || []).forEach((item) => {
         parts.push(item?.name, item?.note, item?.variant);
         (item?.types || []).forEach((type) => parts.push(type));
@@ -1479,6 +1493,7 @@
       });
 
       bossRows.forEach(({ boss, computed }) => {
+        const bossTags = Array.from(new Set((boss?.tags || []).map((tag) => String(tag || '').trim()).filter(Boolean)));
         const missingCount = computed.groupResults.reduce((sum, group) => {
           const priceMissing = group.result.unpricedItems.filter((item) => item.reason === 'price').length;
           return sum + priceMissing;
@@ -1510,6 +1525,10 @@
         const ratioAccent = rgbString(ratioColor(dropVsCost));
         const gradientStrength = profitMagnitude(computed.expectedProfit, maxProfit, minProfit);
         const gradientColor = rgbaString(accentColor, 0.08 + 0.32 * gradientStrength);
+        const tagsMarkup = bossTags.length
+          ? `<div class="boss-tags">${bossTags.map((tag) => `<button class="boss-tag" type="button" data-tag="${encodeURIComponent(tag)}">${tag}</button>`).join('')}</div>`
+          : '';
+        const missingMarkup = missingCount + entryMissing > 0 ? `<div class="missing-note">Missing prices: ${missingCount + entryMissing}</div>` : '';
         details.style.setProperty('--summary-accent', accentRgb);
         details.style.setProperty('--profit-accent', accentRgb);
         details.style.setProperty('--ratio-accent', ratioAccent);
@@ -1517,8 +1536,9 @@
           <summary>
             <div class="boss-summary" style="--summary-gradient: linear-gradient(90deg, ${gradientColor} 0%, rgba(15, 23, 42, 0.0) 60%);">
               <div class="boss-top">
+                ${missingMarkup}
                 <div class="boss-name">${boss.name}</div>
-                ${missingCount + entryMissing > 0 ? `<div class="missing-note">Missing prices: ${missingCount + entryMissing}</div>` : ''}
+                ${tagsMarkup}
               </div>
               <div class="boss-metrics">
                 <div class="metric"><span class="metric-label">Run Cost <span class="info-dot has-tooltip" data-tooltip="${runCostTooltip()}">?</span></span><strong>${formatValue(computed.entryCost, chaosPerDivine)}</strong></div>
@@ -1759,6 +1779,22 @@
           }
           localStorage.setItem(ignoreDropsKey, JSON.stringify(IGNORED_DROPS));
           safeRender();
+        });
+      });
+
+      bossList.querySelectorAll('.boss-tag').forEach((button) => {
+        button.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          const encodedTag = button.getAttribute('data-tag');
+          if (!encodedTag) return;
+          const tag = decodeURIComponent(encodedTag);
+          if (!tag) return;
+          setSearchQuery(tag, { focus: true, select: true });
+        });
+        button.addEventListener('pointerdown', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
         });
       });
 
