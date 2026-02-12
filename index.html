@@ -25,7 +25,7 @@
             Estimate boss-run value using community drop rates and live poe.watch prices. Focuses on entry items and boss-specific drops only.
           </div>
           <div class="chips">
-            <span class="chip">Version 0.2.7</span>
+            <span class="chip">Version 0.2.8</span>
             <span class="chip">Prices: poe.watch</span>
             <span class="chip">Drops: PoE Wiki estimates</span>
           </div>
@@ -53,8 +53,8 @@
         <div class="control-compact">
           <label for="displayCurrency">Display Currency</label>
           <select id="displayCurrency">
-            <option value="chaos">Chaos</option>
-            <option value="divine" selected>Divine</option>
+            <option value="chaos" selected>Chaos</option>
+            <option value="divine">Divine</option>
           </select>
         </div>
         <div class="control-compact">
@@ -163,6 +163,17 @@
       <summary class="changelog-summary">Changelog</summary>
       <section class="changelog-panel">
         <div class="changelog-content">
+          <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.2.8</span><span>2026-02-12</span></div>
+            <ul class="changelog-list">
+              <li>Reworked boss detail layout and interactivity: moved sources into summary tags, restored per-pool drop cards, refined borders/radii/padding, and moved accent bars to span full boss cards.</li>
+              <li>Simplified drop/entry editing flow: probabilities and prices are directly editable, custom-edited fields have strong highlighting, and EV/subtotals remain calculated outputs with consistent compact input sizing.</li>
+              <li>Added stable ordering during local edits so boss rows no longer jump while typing; sorting now re-applies on explicit global actions (search/sort/filter/refresh/settings changes).</li>
+              <li>Unified visual styling with a tighter tokenized palette, improved typography/readability (Inter for item/input UI), updated warning-note presentation, and adjusted hover/open detail states.</li>
+              <li>Expanded mobile usability: denser no-horizontal-scroll tables, balanced subtitle wrapping with smaller copy, and a structured 3-row control layout (3 controls, then 2 filters, then 2 action buttons).</li>
+              <li>Default display currency is now Chaos for new/default sessions while preserving any saved user preference.</li>
+            </ul>
+          </article>
           <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2.7</span><span>2026-02-12</span></div>
             <ul class="changelog-list">

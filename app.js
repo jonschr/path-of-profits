@@ -1,6 +1,6 @@
     const BASE_LEAGUE = '';
     const BASE_PRICE_MODE = 'avg';
-    const BASE_DISPLAY_CURRENCY = 'divine';
+    const BASE_DISPLAY_CURRENCY = 'chaos';
     const BASE_MIN_VALUE_ENABLED = true;
     const BASE_MIN_VALUE_DIVINE = 0.5;
     const BASE_MIN_VALUE_CHAOS = 10;
@@ -24,6 +24,7 @@
 
     const manualPriceKey = 'poeBossManualPrices';
     const manualCostKey = 'poeBossManualCosts';
+    const manualProbabilityKey = 'poeBossManualProbabilities';
     const manualCurrencyKey = 'poeBossManualCurrency';
     const ignoreDropsKey = 'poeBossIgnoreDrops';
     const displayCurrencyKey = 'poeBossDisplayCurrency';
@@ -44,6 +45,7 @@
 
     const MANUAL_PRICES = JSON.parse(localStorage.getItem(manualPriceKey) || '{}');
     const MANUAL_COSTS = JSON.parse(localStorage.getItem(manualCostKey) || '{}');
+    const MANUAL_PROBABILITIES = JSON.parse(localStorage.getItem(manualProbabilityKey) || '{}');
     if (!localStorage.getItem(manualCurrencyKey)) {
       localStorage.setItem(manualCurrencyKey, 'chaos');
     }
@@ -174,7 +176,7 @@
     const DEFAULT_PRICE_MODE = String(initialSettings.priceMode || BASE_PRICE_MODE);
     const DEFAULT_PRICE_SOURCE = normalizePriceSource(initialSettings.priceSource || BASE_PRICE_SOURCE);
     const DEFAULT_SEARCH_QUERY = localStorage.getItem(searchKeyStorage) || '';
-    const DEFAULT_DISPLAY_CURRENCY = initialSettings.displayCurrency === 'chaos' ? 'chaos' : 'divine';
+    const DEFAULT_DISPLAY_CURRENCY = initialSettings.displayCurrency === 'divine' ? 'divine' : 'chaos';
     const DEFAULT_DEBUG = Boolean(initialSettings.debug ?? BASE_DEBUG);
 
     const httpClient = Http ? Http.createHttpClient() : undefined;
@@ -255,7 +257,7 @@
       writeLegacySharedSetting(key, value);
     }
 
-    const state = {
+	    const state = {
       leagueId: DEFAULT_LEAGUE,
       leagueText: DEFAULT_LEAGUE,
       leagueWatchId: DEFAULT_LEAGUE,
@@ -274,11 +276,12 @@
       minValueThresholdChaos: 10,
       minValueWasDefault: false,
       minProbabilityFilter: false,
-      minProbabilityThreshold: 0.01,
-      sortKey: BASE_SORT_KEY,
-      sortDir: BASE_SORT_DIR,
-      searchQuery: DEFAULT_SEARCH_QUERY
-    };
+	      minProbabilityThreshold: 0.01,
+	      sortKey: BASE_SORT_KEY,
+	      sortDir: BASE_SORT_DIR,
+	      searchQuery: DEFAULT_SEARCH_QUERY,
+	      preservedBossOrder: []
+	    };
 
     const leagueSelect = document.getElementById('leagueSelect');
     const priceModeInput = document.getElementById('priceMode');
@@ -741,10 +744,12 @@
 
         clearObject(MANUAL_PRICES);
         clearObject(MANUAL_COSTS);
+        clearObject(MANUAL_PROBABILITIES);
         clearObject(IGNORED_DROPS);
 
         localStorage.removeItem(manualPriceKey);
         localStorage.removeItem(manualCostKey);
+        localStorage.removeItem(manualProbabilityKey);
         localStorage.removeItem(ignoreDropsKey);
         localStorage.removeItem('poeBossMinValueEnabled');
         localStorage.removeItem('poeBossMinValueChaos');
@@ -810,9 +815,17 @@
       return `${item.name}${variant}`;
     }
 
+    function probabilityKey(item) {
+      return itemKey(item);
+    }
+
     function costKey(item) {
       const variant = item.variant ? `::${item.variant}` : '';
       return `cost::${item.name}${variant}`;
+    }
+
+    function hasOwn(obj, key) {
+      return Object.prototype.hasOwnProperty.call(obj, key);
     }
 
     function isExcluded(item) {
@@ -1120,7 +1133,7 @@
       const wikiUrl = wikiUrlForItem(item);
       const tradeQuery = tradeQueryForItem(item, bossId);
       const tradeUrl = tradeUrlForItem(item, bossId);
-      const base = url
+      const name = url
         ? `<a class="item-link" href="${url}" target="_blank" rel="noreferrer">${item.name}</a>`
         : `<span>${item.name}</span>`;
       const wiki = wikiUrl ? `<a class="item-link wiki-link" href="${wikiUrl}" target="_blank" rel="noreferrer">wiki</a>` : '';
@@ -1129,10 +1142,11 @@
             ? `<a class="item-link trade-link is-ready" href="${tradeUrl}" target="_blank" rel="noreferrer">trade</a>`
             : `<span class="item-link trade-link" aria-disabled="true">trade</span>`)
         : '';
-      const links = [base, wiki, trade].filter(Boolean).join(' <span class="item-sep">·</span> ');
-      const variant = item.variant ? ` <span class="muted">(${item.variant})</span>` : '';
-      const note = item.note ? ` <span class="item-sep">·</span> <span class="muted">${item.note}</span>` : '';
-      return `${links}${variant}${note}`;
+      const variant = item.variant ? `<span class="item-meta-text">(${item.variant})</span>` : '';
+      const note = item.note ? `<span class="item-meta-text">${item.note}</span>` : '';
+      const meta = [wiki, trade, variant, note].filter(Boolean).join(' <span class="item-sep">·</span> ');
+      if (!meta) return `<span class="item-label"><span class="item-primary">${name}</span></span>`;
+      return `<span class="item-label"><span class="item-primary">${name}</span><span class="item-meta">${meta}</span></span>`;
     }
 
     function formatValue(value, chaosPerDivine) {
@@ -1152,11 +1166,26 @@
       if (!Number.isFinite(value)) return '';
       const factor = 10 ** maxDecimals;
       const rounded = Math.round(value * factor) / factor;
+      if (maxDecimals <= 0) return String(Math.round(rounded));
       return rounded.toFixed(maxDecimals).replace(/\.?0+$/, '');
     }
 
-    function formatMultiplier(value) {
-      if (value == null || Number.isNaN(value)) return '—';
+    function approximatelyEqual(a, b, epsilon = 1e-8) {
+      if (!Number.isFinite(a) || !Number.isFinite(b)) return false;
+      return Math.abs(a - b) <= epsilon;
+    }
+
+    function displayPriceInputValue(chaosValue) {
+      return manualFromChaos(chaosValue);
+    }
+
+    function displayProbabilityInputValue(probability) {
+      if (!Number.isFinite(probability)) return '';
+      return formatInputNumber(probability * 100, 0);
+    }
+
+	    function formatMultiplier(value) {
+	      if (value == null || Number.isNaN(value)) return '—';
       const abs = Math.abs(value);
       let text = '';
       if (abs > 10) {
@@ -1166,8 +1195,19 @@
       } else {
         text = (Math.round(value * 100) / 100).toFixed(2);
       }
-      return `${text}x`;
-    }
+	      return `${text}x`;
+	    }
+
+	    function displayGroupLabel(label) {
+	      const text = String(label || '').trim();
+	      if (!text) return '';
+	      return text
+	        .replace(/\s*\(pool\s*[a-z0-9]+\)/gi, '')
+	        .replace(/\s*-\s*pool\s*[a-z0-9]+\b/gi, '')
+	        .replace(/\s+pool\s*[a-z0-9]+\b/gi, '')
+	        .replace(/\s{2,}/g, ' ')
+	        .trim();
+	    }
 
     function clamp(value, min, max) {
       return Math.min(Math.max(value, min), max);
@@ -1276,30 +1316,68 @@
       return Array.from(new Set(candidates)).slice(0, 3);
     }
 
-    function getPrice(item) {
-      const key = itemKey(item);
-      const manual = MANUAL_PRICES[key];
-      if (manual != null && manual !== '') return Number(manual);
-
+    function getBasePrice(item) {
       if (item.noPrice) return null;
-
       const matches = findWatchMatches(item, true);
       const price = pickWatchPrice(matches, item);
       if (price != null) return price;
-
       const fallback = searchAllTypes(item);
       if (fallback != null) {
         recordFallback(item, fallback.type, fallback.price, fallback.icon);
         return fallback.price;
       }
-
       return null;
     }
 
-    function getCostOverride(item) {
-      const manual = MANUAL_COSTS[costKey(item)];
-      if (manual != null && manual !== '') return Number(manual);
-      return null;
+    function getDropCustomPrice(item) {
+      const key = itemKey(item);
+      if (!hasOwn(MANUAL_PRICES, key)) return null;
+      const value = Number(MANUAL_PRICES[key]);
+      return Number.isFinite(value) ? value : null;
+    }
+
+    function hasDropCustomPrice(item) {
+      return getDropCustomPrice(item) != null;
+    }
+
+    function getEntryCustomPrice(item) {
+      const key = costKey(item);
+      if (!hasOwn(MANUAL_COSTS, key)) return null;
+      const value = Number(MANUAL_COSTS[key]);
+      return Number.isFinite(value) ? value : null;
+    }
+
+    function hasEntryCustomPrice(item) {
+      return getEntryCustomPrice(item) != null;
+    }
+
+    function getCustomProbability(item) {
+      const key = probabilityKey(item);
+      if (!hasOwn(MANUAL_PROBABILITIES, key)) return null;
+      const value = Number(MANUAL_PROBABILITIES[key]);
+      return Number.isFinite(value) ? value : null;
+    }
+
+    function hasCustomProbability(item) {
+      return getCustomProbability(item) != null;
+    }
+
+    function getProbability(item) {
+      const custom = getCustomProbability(item);
+      if (custom != null) return custom;
+      return item.p;
+    }
+
+    function getPrice(item) {
+      const custom = getDropCustomPrice(item);
+      if (custom != null) return custom;
+      return getBasePrice(item);
+    }
+
+    function getEntryPrice(item) {
+      const custom = getEntryCustomPrice(item);
+      if (custom != null) return custom;
+      return getBasePrice(item);
     }
 
     function searchAllTypes(item) {
@@ -1319,10 +1397,10 @@
     }
 
     function findIcon(item) {
-      const manual = MANUAL_PRICES[itemKey(item)];
+      const hasCustom = hasDropCustomPrice(item);
       const match = findWatchLine(item, true) || findWatchLine(item, false);
       if (match?.icon) return match.icon;
-      if (manual && state.debug && state.fallbackHits?.has(itemKey(item))) {
+      if (hasCustom && state.debug && state.fallbackHits?.has(itemKey(item))) {
         const fallback = state.fallbackHits.get(itemKey(item));
         if (fallback?.icon) return fallback.icon;
       }
@@ -1339,7 +1417,7 @@
       group.items.forEach((item) => {
         const excluded = isExcluded(item);
         const price = getPrice(item);
-        const p = item.p;
+        const p = getProbability(item);
 
         if (excluded) {
           pricedItems.push({ ...item, price, value: 0, ignored: true });
@@ -1386,7 +1464,7 @@
     }
 
     function runCostTooltip() {
-      return 'Run Cost is the total cost of the entry items for one run. It uses any manual overrides you set.';
+      return 'Run Cost is the total cost of the entry items for one run, using current prices (including any custom edits).';
     }
 
     function dropEvTooltip() {
@@ -1407,16 +1485,19 @@
     }
 
     function computeBoss(boss) {
-      const entryItems = boss.entry.map((item) => ({
-        ...item,
-        price: getPrice(item),
-        value: getPrice(item) != null ? getPrice(item) * (item.qty || 1) : null,
-        icon: findIcon(item),
-        costOverride: getCostOverride(item)
-      }));
+      const entryItems = boss.entry.map((item) => {
+        const price = getEntryPrice(item);
+        return {
+          ...item,
+          defaultPrice: getBasePrice(item),
+          price,
+          value: price != null ? price * (item.qty || 1) : null,
+          icon: findIcon(item),
+          isCustomPrice: hasEntryCustomPrice(item)
+        };
+      });
 
       const entryCost = entryItems.reduce((sum, item) => {
-        if (item.costOverride != null) return sum + item.costOverride;
         return sum + (item.value || 0);
       }, 0);
       const entryMissing = entryItems.filter((item) => item.value == null);
@@ -1442,9 +1523,9 @@
       };
     }
 
-    function sortValueFor(row) {
-      const computed = row.computed;
-      switch (state.sortKey) {
+	    function sortValueFor(row) {
+	      const computed = row.computed;
+	      switch (state.sortKey) {
         case 'entryCost':
           return computed.entryCost;
         case 'expectedDrops':
@@ -1454,17 +1535,27 @@
         case 'expectedProfit':
         default:
           return computed.expectedProfit;
-      }
-    }
+	      }
+	    }
 
-    function render() {
-      const openIds = new Set();
-      bossList.querySelectorAll('details[open]').forEach((detail) => {
-        if (detail.dataset.bossId) openIds.add(detail.dataset.bossId);
+	    function compareBossRowsBySort(a, b) {
+	      const avRaw = sortValueFor(a);
+	      const bvRaw = sortValueFor(b);
+	      const av = Number.isFinite(avRaw) ? avRaw : (state.sortDir === 'asc' ? Infinity : -Infinity);
+	      const bv = Number.isFinite(bvRaw) ? bvRaw : (state.sortDir === 'asc' ? Infinity : -Infinity);
+	      return state.sortDir === 'asc' ? av - bv : bv - av;
+	    }
+
+	    function render(options = {}) {
+	      const { resort = true } = options;
+	      const openIds = new Set();
+	      bossList.querySelectorAll('details[open]').forEach((detail) => {
+	        if (detail.dataset.bossId) openIds.add(detail.dataset.bossId);
       });
       bossList.innerHTML = '';
       const chaosPerDivine = state.divineChaos;
       const manualLocked = state.displayCurrency === 'divine' && !getChaosPerDivine();
+      const priceUnitLabel = state.displayCurrency === 'divine' ? 'div.' : 'c';
       const missingItems = [];
       state.fallbackHits = new Map();
 
@@ -1481,36 +1572,46 @@
       const profitValues = bossRows
         .map((row) => row.computed.expectedProfit)
         .filter((value) => Number.isFinite(value));
-      const maxProfit = profitValues.length ? Math.max(...profitValues, 0) : 0;
-      const minProfit = profitValues.length ? Math.min(...profitValues, 0) : 0;
+	      const maxProfit = profitValues.length ? Math.max(...profitValues, 0) : 0;
+	      const minProfit = profitValues.length ? Math.min(...profitValues, 0) : 0;
 
-      bossRows.sort((a, b) => {
-        const avRaw = sortValueFor(a);
-        const bvRaw = sortValueFor(b);
-        const av = Number.isFinite(avRaw) ? avRaw : (state.sortDir === 'asc' ? Infinity : -Infinity);
-        const bv = Number.isFinite(bvRaw) ? bvRaw : (state.sortDir === 'asc' ? Infinity : -Infinity);
-        return state.sortDir === 'asc' ? av - bv : bv - av;
-      });
+	      if (!resort && Array.isArray(state.preservedBossOrder) && state.preservedBossOrder.length) {
+	        const indexByBossId = new Map(state.preservedBossOrder.map((id, index) => [id, index]));
+	        bossRows.sort((a, b) => {
+	          const aIndex = indexByBossId.get(a.boss.id);
+	          const bIndex = indexByBossId.get(b.boss.id);
+	          const hasA = Number.isInteger(aIndex);
+	          const hasB = Number.isInteger(bIndex);
+	          if (hasA && hasB) return aIndex - bIndex;
+	          if (hasA) return -1;
+	          if (hasB) return 1;
+	          return compareBossRowsBySort(a, b);
+	        });
+	      } else {
+	        bossRows.sort(compareBossRowsBySort);
+	      }
+	      state.preservedBossOrder = bossRows.map((row) => row.boss.id);
 
-      bossRows.forEach(({ boss, computed }) => {
+	      bossRows.forEach(({ boss, computed }) => {
         const bossTags = Array.from(new Set((boss?.tags || []).map((tag) => String(tag || '').trim()).filter(Boolean)));
         const missingCount = computed.groupResults.reduce((sum, group) => {
-          const priceMissing = group.result.unpricedItems.filter((item) => item.reason === 'price').length;
-          return sum + priceMissing;
+          const unresolved = group.result.unpricedItems.filter((item) => item.reason !== 'manual').length;
+          return sum + unresolved;
         }, 0);
         const entryMissing = computed.entryMissing.length;
         computed.entryMissing.forEach((item) => {
           missingItems.push({ boss: boss.name, group: 'Entry', item: item.name, types: item.types || [], reason: 'price' });
         });
-        computed.groupResults.forEach((group) => {
-          group.result.unpricedItems.forEach((item) => {
-            if (item.reason === 'manual') return;
-            missingItems.push({
-              boss: boss.name,
-              group: group.label,
-              item: item.name,
-              types: item.types || [],
-              p: item.p,
+	        computed.groupResults.forEach((group) => {
+	          const groupLabel = displayGroupLabel(group.label);
+	          group.result.unpricedItems.forEach((item) => {
+	            if (item.reason === 'manual') return;
+	            missingItems.push({
+	              boss: boss.name,
+	              group: groupLabel,
+	              item: item.name,
+	              types: item.types || [],
+	              p: item.p,
               reason: item.reason || 'price'
             });
           });
@@ -1525,10 +1626,16 @@
         const ratioAccent = rgbString(ratioColor(dropVsCost));
         const gradientStrength = profitMagnitude(computed.expectedProfit, maxProfit, minProfit);
         const gradientColor = rgbaString(accentColor, 0.08 + 0.32 * gradientStrength);
-        const tagsMarkup = bossTags.length
-          ? `<div class="boss-tags">${bossTags.map((tag) => `<button class="boss-tag" type="button" data-tag="${encodeURIComponent(tag)}">${tag}</button>`).join('')}</div>`
+        const sourceLinks = Array.isArray(boss.sources) ? boss.sources.filter(Boolean) : [];
+        const sourceMarkup = sourceLinks.length
+          ? `<span class="boss-sources">${sourceLinks
+              .map((src, index) => `<a class="boss-source-link" href="${src}" target="_blank" rel="noreferrer">wiki${sourceLinks.length > 1 ? ` ${index + 1}` : ''}</a>`)
+              .join('')}</span>`
           : '';
-        const missingMarkup = missingCount + entryMissing > 0 ? `<div class="missing-note">Missing prices: ${missingCount + entryMissing}</div>` : '';
+        const tagsMarkup = bossTags.length || sourceMarkup
+          ? `<div class="boss-tags">${bossTags.map((tag) => `<button class="boss-tag" type="button" data-tag="${encodeURIComponent(tag)}">${tag}</button>`).join('')}${sourceMarkup}</div>`
+          : '';
+        const missingMarkup = missingCount + entryMissing > 0 ? `<div class="missing-note">Missing values: ${missingCount + entryMissing}</div>` : '';
         details.style.setProperty('--summary-accent', accentRgb);
         details.style.setProperty('--profit-accent', accentRgb);
         details.style.setProperty('--ratio-accent', ratioAccent);
@@ -1552,118 +1659,144 @@
             </div>
           </summary>
           <div class="detail-body">
-            <div class="muted">
-              Sources: ${boss.sources.map((src) => `<a class="link" href="${src}" target="_blank" rel="noreferrer">PoE Wiki</a>`).join(', ')}
-            </div>
-            <div>
-              <div class="section-title">Entry Cost</div>
-              <div class="table-wrap">
-                <table class="table entry-table">
-                <colgroup>
-                  <col class="col-item" />
-                  <col class="col-qty" />
-                  <col class="col-price" />
-                  <col class="col-subtotal" />
-                  <col class="col-include" />
-                  <col class="col-override" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>Item</th>
-                    <th>Qty</th>
-                    <th>Price</th>
-                    <th>Subtotal</th>
-                    <th>Include</th>
-                    <th>Override</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${computed.entryItems.map((item) => `
-                    <tr class="${item.value == null ? 'row-missing' : ''}">
-                      <td>
-                        <div class="item-cell">
-                          ${item.icon ? `<img class="item-icon" src="${item.icon}" alt="" />` : ''}
-                          ${itemLabelMarkup(item, boss.id)}
-                        </div>
-                      </td>
-                      <td>${item.qty}</td>
-                      <td>${item.price == null ? '—' : formatValue(item.price, chaosPerDivine)}</td>
-                      <td>${item.costOverride != null ? formatValue(item.costOverride, chaosPerDivine) : (item.value == null ? '—' : formatValue(item.value, chaosPerDivine))}</td>
-                      <td class="include-note">—</td>
-                      <td><input class="price-input" data-cost-key="${costKey(item)}" name="cost:${costKey(item)}" value="${manualFromChaos(MANUAL_COSTS[costKey(item)])}" placeholder="${manualLocked ? 'Waiting for prices' : 'override'}" ${manualLocked ? 'disabled title="Waiting for divine/chaos rate"' : ''} /></td>
-                    </tr>
-                  `).join('')}
-                </tbody>
-              </table>
-              </div>
-            </div>
             ${boss.note ? `<div class="muted warning">${boss.note}</div>` : ''}
-            ${computed.groupResults.map((group) => {
-              const groupExpected = group.result.expected;
-              const groupStdev = Math.sqrt(group.result.variance);
-              const groupVolPct = percentOf(groupStdev, groupExpected);
-              const missing = group.result.unpricedItems.length;
-              return `
-                <div class="group-card">
-                  <div class="flex-row">
-                    <div>
-                      <div class="section-title">${group.label}</div>
-                    </div>
-                  </div>
-                  <div class="table-wrap">
-                  <table class="table drop-table">
-                    <colgroup>
-                      <col class="col-item" />
-                      <col class="col-prob" />
-                      <col class="col-price" />
-                      <col class="col-ev" />
-                      <col class="col-include" />
-                      <col class="col-manual" />
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th>Item</th>
-                        <th>Prob</th>
-                        <th>Price</th>
-                        <th>EV</th>
-                        <th>Include</th>
-                        <th>Manual</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      ${group.items.map((item) => {
-                        const excluded = isExcluded(item);
-                        const price = getPrice(item);
-                        const icon = findIcon(item);
-                        const p = item.p;
-                        const value = !excluded && price != null && p != null ? price * p * (item.qty || 1) : null;
-                        const approx = item.approx ? '~' : '';
-                        const probLabel = p == null ? '—' : `${approx}${(p * 100).toFixed(2)}%`;
-                        const key = itemKey(item);
-                        return `
-                      <tr class="${price == null ? 'row-missing' : ((excluded || (state.minProbabilityFilter && p != null && p < state.minProbabilityThreshold) || (state.minValueFilter && price != null && price < state.minValueThresholdChaos)) ? 'row-ignored' : '')}">
+            <div class="detail-columns">
+              <div class="detail-column detail-column-entry">
+                <div class="section-title">Entry Cost</div>
+                <div class="table-wrap">
+                  <table class="table entry-table">
+                  <colgroup>
+                    <col class="col-item" />
+                    <col class="col-price" />
+                    <col class="col-subtotal" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Item</th>
+                      <th>Price</th>
+                      <th>Subtotal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${computed.entryItems.map((item) => `
+                      <tr class="${item.price == null ? 'row-missing' : ''}">
                         <td>
                           <div class="item-cell">
-                            ${icon ? `<img class="item-icon" src="${icon}" alt="" />` : ''}
+                            ${item.icon ? `<img class="item-icon" src="${item.icon}" alt="" />` : ''}
                             ${itemLabelMarkup(item, boss.id)}
                           </div>
                         </td>
-                        <td>${probLabel}</td>
-                        <td>${price == null ? '—' : formatValue(price, chaosPerDivine)}</td>
-                        <td>${value == null ? '—' : formatValue(value, chaosPerDivine)}</td>
                         <td>
-                          <input class="include-toggle" type="checkbox" data-include-key="${key}" name="include:${key}" ${isExcluded(item) ? '' : 'checked'} />
+                          <div class="table-edit-wrap">
+                            <span class="qty-prefix">${item.qty || 1}x</span>
+                            <input
+                              class="editable-input price-input entry-price-input ${item.isCustomPrice ? 'input-custom' : ''}"
+                              data-entry-key="${costKey(item)}"
+                              data-default-chaos="${item.defaultPrice == null ? '' : item.defaultPrice}"
+                              name="entry-price:${costKey(item)}"
+                              value="${displayPriceInputValue(item.price)}"
+                              placeholder="${manualLocked ? 'Waiting for prices' : ''}"
+                              ${manualLocked ? 'disabled title="Waiting for divine/chaos rate"' : ''}
+                            />
+                            <span class="field-unit">${priceUnitLabel}</span>
+                          </div>
                         </td>
-                        <td><input class="price-input" data-price-key="${key}" name="price:${key}" value="${manualFromChaos(MANUAL_PRICES[key])}" placeholder="${manualLocked ? 'Waiting for prices' : 'override'}" ${manualLocked ? 'disabled title="Waiting for divine/chaos rate"' : ''} /></td>
+                        <td>${item.value == null ? '—' : formatValue(item.value, chaosPerDivine)}</td>
                       </tr>
-                    `;
-                      }).join('')}
-                    </tbody>
-                  </table>
-                  </div>
+                    `).join('')}
+                  </tbody>
+                </table>
                 </div>
-              `;
-            }).join('')}
+              </div>
+	              <div class="detail-column detail-column-drops">
+	                  ${computed.groupResults.map((group) => `
+	                    <div class="drop-group">
+	                      <div class="flex-row">
+	                        <div>
+	                          <div class="drop-group-title">${displayGroupLabel(group.label)}</div>
+	                        </div>
+	                      </div>
+                      <div class="table-wrap">
+                      <table class="table drop-table">
+                        <colgroup>
+                          <col class="col-item" />
+                          <col class="col-prob" />
+                          <col class="col-price" />
+                          <col class="col-include" />
+                          <col class="col-ev" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>Item</th>
+                            <th>Prob</th>
+                            <th>Price</th>
+                            <th aria-label="Include"></th>
+                            <th>EV</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          ${group.items.map((item) => {
+                            const excluded = isExcluded(item);
+                            const defaultPrice = getBasePrice(item);
+                            const price = getPrice(item);
+                            const p = getProbability(item);
+                            const defaultProb = item.p;
+                            const customPrice = hasDropCustomPrice(item);
+                            const customProb = hasCustomProbability(item);
+                            const icon = findIcon(item);
+                            const value = !excluded && price != null && p != null ? price * p * (item.qty || 1) : null;
+                            const key = itemKey(item);
+                            const missing = price == null || p == null;
+                            return `
+                          <tr class="${missing ? 'row-missing' : ((excluded || (state.minProbabilityFilter && p != null && p < state.minProbabilityThreshold) || (state.minValueFilter && price != null && price < state.minValueThresholdChaos)) ? 'row-ignored' : '')}">
+                            <td>
+                              <div class="item-cell">
+                                ${icon ? `<img class="item-icon" src="${icon}" alt="" />` : ''}
+                                ${itemLabelMarkup(item, boss.id)}
+                              </div>
+                            </td>
+                            <td>
+                              <div class="table-edit-wrap">
+                                <input
+                                  class="editable-input prob-input ${customProb ? 'input-custom' : ''}"
+                                  data-prob-key="${key}"
+                                  data-default-prob="${defaultProb == null ? '' : defaultProb}"
+                                  name="prob:${key}"
+                                  value="${displayProbabilityInputValue(p)}"
+                                  placeholder="${item.approx ? 'approx' : ''}"
+                                  title="${item.approx ? 'Approximate source probability' : ''}"
+                                />
+                                <span class="field-unit">%</span>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="table-edit-wrap">
+                                <input
+                                  class="editable-input price-input drop-price-input ${customPrice ? 'input-custom' : ''}"
+                                  data-price-key="${key}"
+                                  data-default-chaos="${defaultPrice == null ? '' : defaultPrice}"
+                                  name="price:${key}"
+                                  value="${displayPriceInputValue(price)}"
+                                  placeholder="${manualLocked ? 'Waiting for prices' : ''}"
+                                  ${manualLocked ? 'disabled title="Waiting for divine/chaos rate"' : ''}
+                                />
+                                <span class="field-unit">${priceUnitLabel}</span>
+                              </div>
+                            </td>
+                            <td>
+                              <input class="include-toggle" type="checkbox" data-include-key="${key}" name="include:${key}" ${isExcluded(item) ? '' : 'checked'} />
+                            </td>
+                            <td>${value == null ? '—' : formatValue(value, chaosPerDivine)}</td>
+                          </tr>
+                        `;
+                          }).join('')}
+                        </tbody>
+                      </table>
+                      </div>
+                    </div>
+                  `).join('')}
+              </div>
+            </div>
           </div>
         `;
 
@@ -1729,40 +1862,126 @@
         setDebug('');
       }
 
-      const applyManualValue = (target, shouldRender) => {
-        const priceKey = target.getAttribute('data-price-key');
-        const costKeyValue = target.getAttribute('data-cost-key');
-        const value = target.value.trim();
-        const numeric = value === '' ? null : Number(value);
-        const storedValue = numeric == null || Number.isNaN(numeric) ? null : manualToChaos(numeric);
-        if (priceKey) {
-          if (value === '') {
-            delete MANUAL_PRICES[priceKey];
-          } else if (storedValue != null) {
-            MANUAL_PRICES[priceKey] = storedValue;
-          }
-          localStorage.setItem(manualPriceKey, JSON.stringify(MANUAL_PRICES));
-          localStorage.setItem(manualCurrencyKey, 'chaos');
-        }
-        if (costKeyValue) {
-          if (value === '') {
-            delete MANUAL_COSTS[costKeyValue];
-          } else if (storedValue != null) {
-            MANUAL_COSTS[costKeyValue] = storedValue;
-          }
-          localStorage.setItem(manualCostKey, JSON.stringify(MANUAL_COSTS));
-          localStorage.setItem(manualCurrencyKey, 'chaos');
-        }
-        if (shouldRender) safeRender();
+      const setCustomInputState = (target, isCustom) => {
+        target.classList.toggle('input-custom', Boolean(isCustom));
       };
 
-      bossList.querySelectorAll('.price-input').forEach((input) => {
+      const applyDropPriceValue = (target, shouldRender) => {
+        const priceKey = target.getAttribute('data-price-key');
+        if (!priceKey) return;
+        const raw = target.value.trim();
+        const defaultChaosRaw = target.getAttribute('data-default-chaos');
+        const defaultChaos = defaultChaosRaw === '' ? null : Number(defaultChaosRaw);
+        if (raw === '') {
+          delete MANUAL_PRICES[priceKey];
+          setCustomInputState(target, false);
+          localStorage.setItem(manualPriceKey, JSON.stringify(MANUAL_PRICES));
+          localStorage.setItem(manualCurrencyKey, 'chaos');
+	          if (shouldRender) safeRender({ resort: false });
+          return;
+        }
+        const numeric = Number(raw);
+        if (!Number.isFinite(numeric)) return;
+        const storedValue = manualToChaos(numeric);
+        if (!Number.isFinite(storedValue)) return;
+        const custom = !(Number.isFinite(defaultChaos) && approximatelyEqual(storedValue, defaultChaos, 1e-6));
+        if (custom) {
+          MANUAL_PRICES[priceKey] = storedValue;
+        } else {
+          delete MANUAL_PRICES[priceKey];
+        }
+        setCustomInputState(target, custom);
+        localStorage.setItem(manualPriceKey, JSON.stringify(MANUAL_PRICES));
+        localStorage.setItem(manualCurrencyKey, 'chaos');
+	        if (shouldRender) safeRender({ resort: false });
+      };
+
+      const applyEntryPriceValue = (target, shouldRender) => {
+        const entryKey = target.getAttribute('data-entry-key');
+        if (!entryKey) return;
+        const raw = target.value.trim();
+        const defaultChaosRaw = target.getAttribute('data-default-chaos');
+        const defaultChaos = defaultChaosRaw === '' ? null : Number(defaultChaosRaw);
+        if (raw === '') {
+          delete MANUAL_COSTS[entryKey];
+          setCustomInputState(target, false);
+          localStorage.setItem(manualCostKey, JSON.stringify(MANUAL_COSTS));
+          localStorage.setItem(manualCurrencyKey, 'chaos');
+	          if (shouldRender) safeRender({ resort: false });
+          return;
+        }
+        const numeric = Number(raw);
+        if (!Number.isFinite(numeric)) return;
+        const storedValue = manualToChaos(numeric);
+        if (!Number.isFinite(storedValue)) return;
+        const custom = !(Number.isFinite(defaultChaos) && approximatelyEqual(storedValue, defaultChaos, 1e-6));
+        if (custom) {
+          MANUAL_COSTS[entryKey] = storedValue;
+        } else {
+          delete MANUAL_COSTS[entryKey];
+        }
+        setCustomInputState(target, custom);
+        localStorage.setItem(manualCostKey, JSON.stringify(MANUAL_COSTS));
+        localStorage.setItem(manualCurrencyKey, 'chaos');
+	        if (shouldRender) safeRender({ resort: false });
+      };
+
+      const applyProbabilityValue = (target, shouldRender) => {
+        const probKey = target.getAttribute('data-prob-key');
+        if (!probKey) return;
+        const raw = target.value.trim();
+        const defaultProbRaw = target.getAttribute('data-default-prob');
+        const defaultProb = defaultProbRaw === '' ? null : Number(defaultProbRaw);
+        if (raw === '') {
+          delete MANUAL_PROBABILITIES[probKey];
+          setCustomInputState(target, false);
+          localStorage.setItem(manualProbabilityKey, JSON.stringify(MANUAL_PROBABILITIES));
+	          if (shouldRender) safeRender({ resort: false });
+          return;
+        }
+        const percent = Number(raw);
+        if (!Number.isFinite(percent)) return;
+        const probability = clamp(percent / 100, 0, 1);
+        target.value = displayProbabilityInputValue(probability);
+        const custom = !(Number.isFinite(defaultProb) && approximatelyEqual(probability, defaultProb, 1e-6));
+        if (custom) {
+          MANUAL_PROBABILITIES[probKey] = probability;
+        } else {
+          delete MANUAL_PROBABILITIES[probKey];
+        }
+        setCustomInputState(target, custom);
+        localStorage.setItem(manualProbabilityKey, JSON.stringify(MANUAL_PROBABILITIES));
+	        if (shouldRender) safeRender({ resort: false });
+      };
+
+      bossList.querySelectorAll('.drop-price-input').forEach((input) => {
         input.addEventListener('input', (event) => {
-          applyManualValue(event.target, false);
+          applyDropPriceValue(event.target, false);
         });
         input.addEventListener('change', (event) => {
-          applyManualValue(event.target, true);
+          applyDropPriceValue(event.target, true);
         });
+      });
+
+      bossList.querySelectorAll('.entry-price-input').forEach((input) => {
+        input.addEventListener('input', (event) => {
+          applyEntryPriceValue(event.target, false);
+        });
+        input.addEventListener('change', (event) => {
+          applyEntryPriceValue(event.target, true);
+        });
+      });
+
+      bossList.querySelectorAll('.prob-input').forEach((input) => {
+        input.addEventListener('input', (event) => {
+          applyProbabilityValue(event.target, false);
+        });
+        input.addEventListener('change', (event) => {
+          applyProbabilityValue(event.target, true);
+        });
+      });
+
+      bossList.querySelectorAll('.editable-input').forEach((input) => {
         input.addEventListener('keydown', (event) => {
           if (event.key === 'Enter') event.target.blur();
         });
@@ -1778,38 +1997,34 @@
             IGNORED_DROPS[key] = true;
           }
           localStorage.setItem(ignoreDropsKey, JSON.stringify(IGNORED_DROPS));
-          safeRender();
+	          safeRender({ resort: false });
         });
       });
 
-      bossList.querySelectorAll('.boss-tag').forEach((button) => {
-        button.addEventListener('click', (event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          const encodedTag = button.getAttribute('data-tag');
-          if (!encodedTag) return;
-          const tag = decodeURIComponent(encodedTag);
-          if (!tag) return;
-          setSearchQuery(tag, { focus: true, select: true });
-        });
-        button.addEventListener('pointerdown', (event) => {
-          event.preventDefault();
-          event.stopPropagation();
-        });
-      });
+	      bossList.querySelectorAll('.boss-tag').forEach((button) => {
+	        button.addEventListener('click', (event) => {
+	          event.preventDefault();
+	          event.stopPropagation();
+	          const encodedTag = button.getAttribute('data-tag');
+	          if (!encodedTag) return;
+	          const tag = decodeURIComponent(encodedTag);
+	          if (!tag) return;
+	          setSearchQuery(tag, { focus: true, select: true });
+	        });
+	      });
 
-      bossList.querySelectorAll('input, select, button, a').forEach((el) => {
-        el.addEventListener('click', (event) => event.stopPropagation());
-        el.addEventListener('pointerdown', (event) => event.stopPropagation());
-      });
-    }
+	      bossList.querySelectorAll('input, select, button, a').forEach((el) => {
+	        el.addEventListener('click', (event) => event.stopPropagation());
+	      });
+	    }
 
-    function safeRender() {
-      try {
-        render();
-      } catch (err) {
-        console.error(err);
-        setStatus(`Render error: ${err.message}`, true);
+	    function safeRender(options = {}) {
+	      const { resort = true } = options;
+	      try {
+	        render({ resort });
+	      } catch (err) {
+	        console.error(err);
+	        setStatus(`Render error: ${err.message}`, true);
       }
     }
 
