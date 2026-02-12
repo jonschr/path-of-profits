@@ -25,7 +25,7 @@
             Estimate boss-run value using community drop rates and live poe.watch prices. Focuses on entry items and boss-specific drops only.
           </div>
           <div class="chips">
-            <span class="chip">Version 0.2.9</span>
+            <span class="chip">Version 0.2.10</span>
             <span class="chip">Prices: poe.watch, poe.ninja</span>
           </div>
         </div>
@@ -168,6 +168,16 @@
         <summary class="meta-summary">Changelog</summary>
         <section class="meta-body">
           <div class="changelog-content">
+            <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.2.10</span><span>2026-02-12</span></div>
+            <ul class="changelog-list">
+              <li>Added a local-only "Build Static" action in the mode links so static JSON generation can be triggered from the UI.</li>
+              <li>Added a local build endpoint in the dev server to run `scripts/update-data.js` and `scripts/update-data-ninja.js` with clear success/error responses.</li>
+              <li>Hardened poe.ninja static generation by adding league-source fallbacks when index-state endpoints are unavailable.</li>
+              <li>Updated gh-pages publish workflow to force-add generated `data/poe-watch` and `data/poe-ninja` artifacts even though they are ignored on `master`.</li>
+              <li>Adjusted automated data refresh cadence from hourly to every 6 hours.</li>
+            </ul>
+            </article>
             <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2.9</span><span>2026-02-12</span></div>
             <ul class="changelog-list">

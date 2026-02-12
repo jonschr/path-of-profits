@@ -1,6 +1,17 @@
 {
   "entries": [
     {
+      "version": "0.2.10",
+      "date": "2026-02-12",
+      "changes": [
+        "Added a local-only \"Build Static\" action in the mode links so static JSON generation can be triggered from the UI.",
+        "Added a local build endpoint in the dev server to run scripts/update-data.js and scripts/update-data-ninja.js with clear success/error responses.",
+        "Hardened poe.ninja static generation by adding league-source fallbacks when index-state endpoints are unavailable.",
+        "Updated gh-pages publish workflow to force-add generated data/poe-watch and data/poe-ninja artifacts even though they are ignored on master.",
+        "Adjusted automated data refresh cadence from hourly to every 6 hours."
+      ]
+    },
+    {
       "version": "0.2.9",
       "date": "2026-02-12",
       "changes": [
