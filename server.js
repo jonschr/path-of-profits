@@ -2,12 +2,14 @@ const http = require('http');
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
+const { spawn } = require('child_process');
 
 const PORT = Number(process.env.PORT) || 5173;
 const ROOT = process.cwd();
 const TARGET_HOST = 'www.pathofexile.com';
 const POE_NINJA_HOST = 'poe.ninja';
 const POE_WATCH_HOST = 'api.poe.watch';
+const BUILD_SCRIPT_SEQUENCE = ['scripts/update-data.js', 'scripts/update-data-ninja.js'];
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -81,7 +83,75 @@ function proxyRequest(req, res, host) {
   forward(initialUrl.toString(), MAX_REDIRECTS);
 }
 
+function tailLines(text, maxLines = 60) {
+  const lines = String(text || '').split(/\r?\n/).filter(Boolean);
+  if (lines.length <= maxLines) return lines;
+  return lines.slice(lines.length - maxLines);
+}
+
+function runNodeScript(scriptPath) {
+  return new Promise((resolve, reject) => {
+    const fullPath = path.join(ROOT, scriptPath);
+    const child = spawn(process.execPath, [fullPath], {
+      cwd: ROOT,
+      env: process.env
+    });
+
+    let stdout = '';
+    let stderr = '';
+    const MAX_CAPTURE = 400000;
+
+    child.stdout.on('data', (chunk) => {
+      stdout += chunk.toString();
+      if (stdout.length > MAX_CAPTURE) stdout = stdout.slice(-MAX_CAPTURE);
+    });
+    child.stderr.on('data', (chunk) => {
+      stderr += chunk.toString();
+      if (stderr.length > MAX_CAPTURE) stderr = stderr.slice(-MAX_CAPTURE);
+    });
+
+    child.on('error', (err) => {
+      reject(err);
+    });
+
+    child.on('close', (code) => {
+      const output = [stdout, stderr].filter(Boolean).join('\n');
+      if (code === 0) {
+        resolve({
+          script: scriptPath,
+          code,
+          lines: tailLines(output)
+        });
+        return;
+      }
+      const error = new Error(`Build step failed: ${scriptPath} (exit ${code})`);
+      error.script = scriptPath;
+      error.code = code;
+      error.lines = tailLines(output);
+      reject(error);
+    });
+  });
+}
+
+let activeBuild = null;
+
+async function runStaticBuild() {
+  const startedAt = Date.now();
+  const results = [];
+  for (const scriptPath of BUILD_SCRIPT_SEQUENCE) {
+    const step = await runNodeScript(scriptPath);
+    results.push(step);
+  }
+  return {
+    ok: true,
+    durationMs: Date.now() - startedAt,
+    steps: results
+  };
+}
+
 const server = http.createServer((req, res) => {
+  const reqPath = req.url.split('?')[0];
+
   if (req.method === 'OPTIONS') {
     res.writeHead(204, {
       'access-control-allow-origin': '*',
@@ -89,6 +159,49 @@ const server = http.createServer((req, res) => {
       'access-control-allow-headers': 'content-type'
     });
     res.end();
+    return;
+  }
+
+  if (reqPath === '/api/local/build-static') {
+    if (req.method === 'GET') {
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({
+        ok: true,
+        available: true,
+        busy: Boolean(activeBuild),
+        steps: BUILD_SCRIPT_SEQUENCE
+      }));
+      return;
+    }
+    if (req.method !== 'POST') {
+      res.writeHead(405, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ ok: false, error: 'Method not allowed. Use GET or POST.' }));
+      return;
+    }
+    if (activeBuild) {
+      res.writeHead(409, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ ok: false, error: 'Build already in progress.' }));
+      return;
+    }
+    activeBuild = runStaticBuild();
+    activeBuild
+      .then((payload) => {
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify(payload));
+      })
+      .catch((err) => {
+        res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({
+          ok: false,
+          error: err?.message || 'Build failed',
+          script: err?.script || null,
+          code: Number.isFinite(err?.code) ? err.code : null,
+          lines: Array.isArray(err?.lines) ? err.lines : []
+        }));
+      })
+      .finally(() => {
+        activeBuild = null;
+      });
     return;
   }
 

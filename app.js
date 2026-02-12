@@ -414,8 +414,40 @@
         <a class="local-mode-link${override ? '' : ' is-active'}" href="${buildModeHref('default')}">Default</a>
         <a class="local-mode-link${override === 'api' ? ' is-active' : ''}" href="${buildModeHref('api')}">API</a>
         <a class="local-mode-link${override === 'static' ? ' is-active' : ''}" href="${buildModeHref('static')}">Static</a>
+        <button type="button" id="buildStaticData" class="local-mode-link local-mode-button">Build Static</button>
       `;
       document.body.appendChild(root);
+      const buildButton = root.querySelector('#buildStaticData');
+      if (buildButton) {
+        buildButton.addEventListener('click', async () => {
+          if (buildButton.disabled) return;
+          buildButton.disabled = true;
+          const previousLabel = buildButton.textContent;
+          buildButton.textContent = 'Building...';
+          setStatus('Building static JSON files locally...');
+          try {
+            const response = await fetch('/api/local/build-static', {
+              method: 'POST',
+              headers: { Accept: 'application/json' }
+            });
+            const payload = await response.json().catch(() => null);
+            if (!response.ok || !payload?.ok) {
+              const errText = payload?.error || `HTTP ${response.status}`;
+              throw new Error(errText);
+            }
+            const durationSec = Math.max(0, Number(payload?.durationMs || 0)) / 1000;
+            setStatus(`Static JSON build complete in ${durationSec.toFixed(1)}s. Reloading prices...`);
+            await loadLeagues(true);
+            await fetchPrices(true);
+          } catch (err) {
+            const message = err?.message || 'Build failed';
+            setStatus(`Static JSON build failed: ${message}`, true);
+          } finally {
+            buildButton.textContent = previousLabel;
+            buildButton.disabled = false;
+          }
+        });
+      }
     }
 
     function getStaticDataRoot() {

@@ -11,6 +11,7 @@ const ROOT = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data', 'poe-ninja');
 const LEAGUES_PATH = path.join(DATA_DIR, 'leagues.json');
 const PRICES_DIR = path.join(DATA_DIR, 'prices');
+const WATCH_LEAGUES_PATH = path.join(ROOT, 'data', 'poe-watch', 'leagues.json');
 
 const CURRENCY_TYPES = [
   { type: 'Currency', category: 'currency' },
@@ -26,6 +27,15 @@ const ITEM_TYPES = [
   { type: 'UniqueFlask', category: 'flask' },
   { type: 'DivinationCard', category: 'card' },
   { type: 'Beast', category: 'monsters' }
+];
+
+const FALLBACK_LEAGUES = [
+  'Standard',
+  'Hardcore',
+  'Keepers',
+  'Hardcore Keepers',
+  'Phrecia 2.0',
+  'Hardcore Phrecia 2.0'
 ];
 
 function sleep(ms) {
@@ -109,6 +119,62 @@ async function fetchJson(url) {
   } finally {
     clearTimeout(timeout);
   }
+}
+
+function uniqueActiveLeagues(rawLeagues) {
+  const normalizedLeagues = (rawLeagues || []).map(normalizeLeagueEntry).filter(Boolean);
+  const uniqueActive = [];
+  const seen = new Set();
+  normalizedLeagues.forEach((league) => {
+    const key = league.watch.toLowerCase();
+    if (seen.has(key)) return;
+    seen.add(key);
+    if (league.active === false) return;
+    uniqueActive.push(league);
+  });
+  return uniqueActive;
+}
+
+async function loadPoeWatchLeagues() {
+  try {
+    const raw = await fs.readFile(WATCH_LEAGUES_PATH, 'utf8');
+    const parsed = JSON.parse(raw);
+    const leagues = extractLeagueList(parsed);
+    return Array.isArray(leagues) ? leagues : [];
+  } catch (_err) {
+    return [];
+  }
+}
+
+async function resolveLeagues() {
+  const endpointCandidates = [
+    `${NINJA_BASE}/getindexstate`,
+    `${NINJA_BASE.replace('/stash/current', '/exchange/current')}/getindexstate`,
+    `${NINJA_ORIGIN}/api/data/getindexstate`
+  ];
+
+  for (const endpoint of endpointCandidates) {
+    try {
+      const indexResp = await fetchJson(endpoint);
+      const rawLeagues = extractLeagueList(indexResp.data);
+      if (rawLeagues.length) {
+        return { rawLeagues, source: `poe.ninja (${endpoint})` };
+      }
+      console.warn(`No leagues returned from ${endpoint}`);
+    } catch (err) {
+      console.warn(`League index fetch failed at ${endpoint}: ${err?.message || 'unknown'}`);
+    }
+  }
+
+  const watchLeagues = await loadPoeWatchLeagues();
+  if (watchLeagues.length) {
+    return { rawLeagues: watchLeagues, source: `poe.watch file (${WATCH_LEAGUES_PATH})` };
+  }
+
+  return {
+    rawLeagues: FALLBACK_LEAGUES.map((name) => ({ name, active: true })),
+    source: 'built-in fallback list'
+  };
 }
 
 function slimItem(item) {
@@ -227,20 +293,13 @@ async function main() {
   await fs.mkdir(DATA_DIR, { recursive: true });
   await fs.mkdir(PRICES_DIR, { recursive: true });
 
-  const indexResp = await fetchJson(`${NINJA_BASE}/getindexstate`);
-  const rawLeagues = extractLeagueList(indexResp.data);
-  if (!rawLeagues.length) throw new Error('No league data returned from poe.ninja');
-
-  const normalizedLeagues = rawLeagues.map(normalizeLeagueEntry).filter(Boolean);
-  const uniqueActive = [];
-  const seen = new Set();
-  normalizedLeagues.forEach((league) => {
-    const key = league.watch.toLowerCase();
-    if (seen.has(key)) return;
-    seen.add(key);
-    if (league.active === false) return;
-    uniqueActive.push(league);
-  });
+  const leagueResolution = await resolveLeagues();
+  const rawLeagues = leagueResolution.rawLeagues;
+  const uniqueActive = uniqueActiveLeagues(rawLeagues);
+  if (!uniqueActive.length) {
+    throw new Error(`No usable leagues for poe.ninja update (source: ${leagueResolution.source})`);
+  }
+  console.log(`Using leagues source: ${leagueResolution.source} (${uniqueActive.length} active leagues)`);
 
   const usedSlugs = new Set();
   for (const league of uniqueActive) {
@@ -359,6 +418,7 @@ async function main() {
   const leaguesPayload = {
     generatedAt,
     source: 'poe.ninja',
+    leagueSource: leagueResolution.source,
     leagues: rawLeagues
   };
 

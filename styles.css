@@ -185,6 +185,17 @@ h1 {
 	background: var(--surface-2);
 }
 
+.local-mode-button {
+	font: inherit;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.local-mode-button[disabled] {
+	opacity: 0.65;
+	cursor: wait;
+}
+
 .local-mode-link.is-active {
 	border-color: var(--accent-2);
 	color: var(--accent-2);
