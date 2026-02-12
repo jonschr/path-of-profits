@@ -3,6 +3,7 @@ const fs = require('fs/promises');
 const path = require('path');
 
 const NINJA_BASE = 'https://poe.ninja/poe1/api/economy/stash/current';
+const NINJA_ORIGIN = 'https://poe.ninja';
 const REQUEST_TIMEOUT_MS = 30000;
 const REQUEST_DELAY_MS = 120;
 
@@ -23,7 +24,8 @@ const ITEM_TYPES = [
   { type: 'UniqueAccessory', category: 'accessory' },
   { type: 'UniqueJewel', category: 'jewels' },
   { type: 'UniqueFlask', category: 'flask' },
-  { type: 'DivinationCard', category: 'card' }
+  { type: 'DivinationCard', category: 'card' },
+  { type: 'Beast', category: 'monsters' }
 ];
 
 function sleep(ms) {
@@ -121,6 +123,14 @@ function slimItem(item) {
   };
 }
 
+function normalizeIcon(icon) {
+  if (!icon) return icon;
+  const text = String(icon);
+  if (/^https?:\/\//i.test(text)) return text;
+  if (text.startsWith('/')) return `${NINJA_ORIGIN}${text}`;
+  return text;
+}
+
 function toItem({ name, value, category, icon, id }) {
   if (!name || !Number.isFinite(value)) return null;
   const rounded = Math.round(value * 10000) / 10000;
@@ -128,7 +138,7 @@ function toItem({ name, value, category, icon, id }) {
     id: id || name,
     name,
     category,
-    icon,
+    icon: normalizeIcon(icon),
     min: rounded,
     mean: rounded,
     max: rounded
@@ -148,7 +158,7 @@ async function fetchCurrencyOverview(league, { type, category }) {
     const item = toItem({ name, value, category, icon, id });
     if (item) items.push(item);
   });
-  return { items, updatedAt: parseTimestamp(data?.updated) };
+  return { items, updatedAt: parseTimestamp(data?.updated), url, sourceType: type, sourceCategory: category };
 }
 
 async function fetchItemOverview(league, { type, category }) {
@@ -164,13 +174,52 @@ async function fetchItemOverview(league, { type, category }) {
     const item = toItem({ name, value, category, icon, id });
     if (item) items.push(item);
   });
-  return { items, updatedAt: parseTimestamp(data?.updated) };
+  return { items, updatedAt: parseTimestamp(data?.updated), url, sourceType: type, sourceCategory: category };
 }
 
 function pickLatestTimestamp(current, next) {
   if (!next) return current;
   if (!current) return next;
   return next.getTime() > current.getTime() ? next : current;
+}
+
+function itemKey(item) {
+  if (!item) return '';
+  if (item.id != null && String(item.id)) return `id:${String(item.id)}`;
+  const name = String(item.name || '').toLowerCase();
+  return name ? `name:${name}` : '';
+}
+
+function mergeItems(targetMap, items) {
+  (items || []).forEach((item) => {
+    const key = itemKey(item);
+    if (!key) return;
+    const existing = targetMap.get(key);
+    if (!existing) {
+      targetMap.set(key, item);
+      return;
+    }
+    if (!existing.category && item.category) {
+      targetMap.set(key, { ...existing, category: item.category });
+    }
+    if (!existing.icon && item.icon) {
+      targetMap.set(key, { ...targetMap.get(key), icon: item.icon });
+    }
+  });
+}
+
+function upsertCategoryBucket(bucketMap, category) {
+  const key = String(category || '').trim().toLowerCase();
+  if (!key) return null;
+  if (!bucketMap.has(key)) {
+    bucketMap.set(key, {
+      category: key,
+      items: new Map(),
+      updatedAt: null,
+      sourceTypes: new Set()
+    });
+  }
+  return bucketMap.get(key);
 }
 
 async function main() {
@@ -205,18 +254,30 @@ async function main() {
     usedSlugs.add(slug);
 
     const leagueDir = path.join(PRICES_DIR, slug);
+    const categoryDir = path.join(leagueDir, 'category');
     await fs.mkdir(leagueDir, { recursive: true });
+    await fs.mkdir(categoryDir, { recursive: true });
 
-    let items = [];
+    const compactMap = new Map();
+    const categoryBuckets = new Map();
+    const errors = [];
     let updatedAt = null;
 
     for (const entry of CURRENCY_TYPES) {
       try {
         const result = await fetchCurrencyOverview(league.watch, entry);
-        items = items.concat(result.items);
+        mergeItems(compactMap, result.items);
+        const bucket = upsertCategoryBucket(categoryBuckets, entry.category);
+        if (bucket) {
+          mergeItems(bucket.items, result.items);
+          bucket.updatedAt = pickLatestTimestamp(bucket.updatedAt, result.updatedAt);
+          bucket.sourceTypes.add(entry.type);
+        }
         updatedAt = pickLatestTimestamp(updatedAt, result.updatedAt);
       } catch (err) {
-        console.warn(`Currency ${entry.type} failed for ${league.watch}: ${err?.message || 'unknown'}`);
+        const message = err?.message || 'unknown';
+        errors.push({ source: 'currency', type: entry.type, error: message });
+        console.warn(`Currency ${entry.type} failed for ${league.watch}: ${message}`);
       }
       await sleep(REQUEST_DELAY_MS);
     }
@@ -224,14 +285,55 @@ async function main() {
     for (const entry of ITEM_TYPES) {
       try {
         const result = await fetchItemOverview(league.watch, entry);
-        items = items.concat(result.items);
+        mergeItems(compactMap, result.items);
+        const bucket = upsertCategoryBucket(categoryBuckets, entry.category);
+        if (bucket) {
+          mergeItems(bucket.items, result.items);
+          bucket.updatedAt = pickLatestTimestamp(bucket.updatedAt, result.updatedAt);
+          bucket.sourceTypes.add(entry.type);
+        }
         updatedAt = pickLatestTimestamp(updatedAt, result.updatedAt);
       } catch (err) {
-        console.warn(`Item ${entry.type} failed for ${league.watch}: ${err?.message || 'unknown'}`);
+        const message = err?.message || 'unknown';
+        errors.push({ source: 'item', type: entry.type, error: message });
+        console.warn(`Item ${entry.type} failed for ${league.watch}: ${message}`);
       }
       await sleep(REQUEST_DELAY_MS);
     }
 
+    const categories = Array.from(categoryBuckets.keys()).sort((a, b) => a.localeCompare(b));
+    const categoriesPayload = {
+      generatedAt,
+      source: 'poe.ninja',
+      league: {
+        watch: league.watch,
+        text: league.text,
+        slug
+      },
+      categories
+    };
+    await fs.writeFile(path.join(leagueDir, 'categories.json'), `${JSON.stringify(categoriesPayload, null, 2)}\n`);
+
+    for (const category of categories) {
+      const bucket = categoryBuckets.get(category);
+      const categoryItems = Array.from(bucket.items.values());
+      const payload = {
+        generatedAt,
+        source: 'poe.ninja',
+        league: {
+          watch: league.watch,
+          text: league.text,
+          slug
+        },
+        category,
+        sourceTypes: Array.from(bucket.sourceTypes).sort((a, b) => a.localeCompare(b)),
+        updatedAt: bucket.updatedAt ? bucket.updatedAt.toISOString() : null,
+        items: categoryItems
+      };
+      await fs.writeFile(path.join(categoryDir, `${category}.json`), `${JSON.stringify(payload, null, 2)}\n`);
+    }
+
+    const items = Array.from(compactMap.values());
     const compactPayload = {
       generatedAt,
       source: 'poe.ninja',
@@ -245,7 +347,13 @@ async function main() {
     };
 
     await fs.writeFile(path.join(leagueDir, 'compact.json'), `${JSON.stringify(compactPayload, null, 2)}\n`);
-    console.log(`League ${league.watch}: items ${items.length}`);
+    if (errors.length) {
+      await fs.writeFile(
+        path.join(leagueDir, 'errors.json'),
+        `${JSON.stringify({ generatedAt, league: { watch: league.watch, text: league.text, slug }, errors }, null, 2)}\n`
+      );
+    }
+    console.log(`League ${league.watch}: items ${items.length}, categories ${categories.length}`);
   }
 
   const leaguesPayload = {

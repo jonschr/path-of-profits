@@ -2,6 +2,13 @@
   'use strict';
 
   const UNSUPPORTED_WATCH_GET_CATEGORIES = new Set(['enchantment']);
+  const NINJA_BASE_ORIGIN = 'https://poe.ninja';
+  const SPIRIT_BEAST_DROP_NAMES = [
+    'Craiceann, First of the Deep',
+    'Farrul, First of the Plains',
+    'Fenumus, First of the Night',
+    'Saqawal, First of the Sky'
+  ];
 
   function normalizeRatioCategory(category) {
     if (!category) return category;
@@ -95,6 +102,66 @@
     return isCurrency ? 'currency/overview' : 'item/overview';
   }
 
+  function normalizeNinjaIcon(icon) {
+    if (!icon) return icon;
+    const text = String(icon);
+    if (/^https?:\/\//i.test(text)) return text;
+    if (text.startsWith('/')) return `${NINJA_BASE_ORIGIN}${text}`;
+    return text;
+  }
+
+  function buildNinjaExchangeBase(ninjaApiBase) {
+    const base = String(ninjaApiBase || '').replace(/\/$/, '');
+    if (!base) return '';
+    return base.replace(/\/stash\/current$/, '/exchange/current');
+  }
+
+  function buildNormalizedNameSet(names, normalizeText) {
+    const result = new Set();
+    (names || []).forEach((name) => {
+      const key = normalizeText(name);
+      if (key) result.add(key);
+    });
+    return result;
+  }
+
+  function hasAllNamedItems(items, names, normalizeText) {
+    const targetKeys = buildNormalizedNameSet(names, normalizeText);
+    if (!targetKeys.size) return true;
+    const existing = new Set(
+      (items || [])
+        .map((item) => normalizeText(item?.name))
+        .filter(Boolean)
+    );
+    for (const key of targetKeys) {
+      if (!existing.has(key)) return false;
+    }
+    return true;
+  }
+
+  function mergeNamedItems(baseItems, supplementalItems, names, normalizeText) {
+    const targetKeys = buildNormalizedNameSet(names, normalizeText);
+    if (!targetKeys.size || !Array.isArray(supplementalItems) || !supplementalItems.length) {
+      return { items: baseItems || [], added: 0 };
+    }
+    const existingKeys = new Set(
+      (baseItems || [])
+        .map((item) => normalizeText(item?.name))
+        .filter(Boolean)
+    );
+    const additions = [];
+    supplementalItems.forEach((item) => {
+      const key = normalizeText(item?.name);
+      if (!key || !targetKeys.has(key) || existingKeys.has(key)) return;
+      existingKeys.add(key);
+      additions.push(item);
+    });
+    return {
+      items: additions.length ? [...(baseItems || []), ...additions] : (baseItems || []),
+      added: additions.length
+    };
+  }
+
   async function fetchNinjaOverview({ leagueValue, entry, isCurrency, ninjaApiBase, fetchJson, parseTimestamp }) {
     const endpoint = ninjaEndpointPath(isCurrency);
     const url = `${ninjaApiBase}/${endpoint}?league=${encodeURIComponent(leagueValue)}&type=${encodeURIComponent(entry.type)}`;
@@ -110,6 +177,125 @@
       if (item) items.push(item);
     });
     return { items, updatedAt: parseTimestamp(data && data.updated), url };
+  }
+
+  async function fetchNinjaExchangeOverview({ leagueValue, entry, ninjaExchangeApiBase, fetchJson, parseTimestamp }) {
+    const url = `${ninjaExchangeApiBase}/overview?league=${encodeURIComponent(leagueValue)}&type=${encodeURIComponent(entry.type)}`;
+    const { data, response } = await fetchJson(url);
+    const lines = Array.isArray(data?.lines) ? data.lines : [];
+    const lookup = new Map();
+    const register = (item) => {
+      const key = item?.id;
+      if (key == null) return;
+      lookup.set(String(key), item);
+    };
+    (Array.isArray(data?.items) ? data.items : []).forEach(register);
+    (Array.isArray(data?.core?.items) ? data.core.items : []).forEach(register);
+
+    const items = [];
+    lines.forEach((line) => {
+      const lineId = line?.id != null ? String(line.id) : '';
+      const meta = lineId ? lookup.get(lineId) : null;
+      const value = Number(line?.primaryValue ?? line?.chaosValue ?? line?.value);
+      const name = meta?.name || line?.name || line?.currencyTypeName;
+      const icon = normalizeNinjaIcon(meta?.image || meta?.icon || line?.icon);
+      const category = entry.category || meta?.category || line?.category;
+      const id = meta?.detailsId || line?.detailsId || lineId || name;
+      const item = toNinjaItem({ name, value, category, icon, id });
+      if (item) items.push(item);
+    });
+
+    const updatedAt = parseTimestamp(data?.updated)
+      || parseTimestamp(data?.updatedAt)
+      || parseTimestamp(data?.generatedAt)
+      || parseTimestamp(response?.headers?.get('last-modified'));
+    return { items, updatedAt, url };
+  }
+
+  async function fetchNinjaSpiritBeastPricesForLeague({
+    leagueValue,
+    ninjaApiBase,
+    fetchJson,
+    parseTimestamp,
+    normalizeText
+  }) {
+    const targetKeys = buildNormalizedNameSet(SPIRIT_BEAST_DROP_NAMES, normalizeText);
+    const seen = new Set();
+    const items = [];
+    const results = [];
+    let updatedAt = null;
+    const beastEntry = { type: 'Beast', category: 'monsters' };
+
+    const collectMatches = (list) => {
+      (list || []).forEach((item) => {
+        const key = normalizeText(item?.name);
+        if (!key || !targetKeys.has(key) || seen.has(key)) return;
+        seen.add(key);
+        items.push(item);
+      });
+    };
+
+    const ninjaExchangeApiBase = buildNinjaExchangeBase(ninjaApiBase);
+    if (ninjaExchangeApiBase) {
+      try {
+        const exchangeResult = await fetchNinjaExchangeOverview({
+          leagueValue,
+          entry: beastEntry,
+          ninjaExchangeApiBase,
+          fetchJson,
+          parseTimestamp
+        });
+        collectMatches(exchangeResult.items);
+        updatedAt = pickLatestTimestamp(updatedAt, exchangeResult.updatedAt);
+        results.push({
+          status: 'ok',
+          source: 'exchange:Beast',
+          items: exchangeResult.items.length,
+          matched: items.length,
+          url: exchangeResult.url
+        });
+      } catch (err) {
+        const url = `${ninjaExchangeApiBase}/overview?league=${encodeURIComponent(leagueValue)}&type=Beast`;
+        results.push({
+          status: 'error',
+          source: 'exchange:Beast',
+          error: err?.message || 'unknown',
+          url
+        });
+      }
+    }
+
+    if (seen.size < targetKeys.size) {
+      try {
+        const stashResult = await fetchNinjaOverview({
+          leagueValue,
+          entry: beastEntry,
+          isCurrency: false,
+          ninjaApiBase,
+          fetchJson,
+          parseTimestamp
+        });
+        collectMatches(stashResult.items);
+        updatedAt = pickLatestTimestamp(updatedAt, stashResult.updatedAt);
+        results.push({
+          status: 'ok',
+          source: 'item:Beast',
+          items: stashResult.items.length,
+          matched: items.length,
+          url: stashResult.url
+        });
+      } catch (err) {
+        const url = `${ninjaApiBase}/${ninjaEndpointPath(false)}?league=${encodeURIComponent(leagueValue)}&type=Beast`;
+        results.push({
+          status: 'error',
+          source: 'item:Beast',
+          error: err?.message || 'unknown',
+          url
+        });
+      }
+    }
+
+    return { items, updatedAt, results };
   }
 
   async function fetchNinjaPricesForLeague({
@@ -198,6 +384,7 @@
     getLeagues,
     usingStaticData,
     getStaticPricesBase,
+    getStaticPricesBaseForSource,
     slugifyLeague,
     withCacheBust,
     parseTimestamp,
@@ -224,7 +411,7 @@
     fetchImpl = global.fetch.bind(global),
     consoleImpl = global.console
   }) {
-    const repo = repository
+      const repo = repository
       || (global.PoeRepositories ? global.PoeRepositories.createPricingRepository() : null);
 
     async function fetchJson(url, options = {}) {
@@ -248,6 +435,50 @@
     function savePriceCacheEntry(leagueValue, items, updatedAt) {
       if (!repo) return;
       repo.savePriceCacheEntry(leagueValue, items, updatedAt);
+    }
+
+    function staticPricesBaseForSource(source) {
+      if (typeof getStaticPricesBaseForSource === 'function') {
+        return getStaticPricesBaseForSource(source);
+      }
+      return getStaticPricesBase();
+    }
+
+    function isLocalHostRuntime() {
+      const host = String(global?.location?.hostname || '').toLowerCase();
+      return host === 'localhost' || host === '127.0.0.1' || host === '::1';
+    }
+
+    async function fetchStaticCompactForSource(source, leagueValues, forceRefresh = false) {
+      const base = staticPricesBaseForSource(source);
+      if (!base) return { items: [], updatedAt: null, results: [] };
+      const slugs = Array.from(new Set(
+        (leagueValues || [])
+          .map((value) => slugifyLeague(value))
+          .filter(Boolean)
+      ));
+      if (!slugs.length) return { items: [], updatedAt: null, results: [] };
+
+      const results = [];
+      for (const slug of slugs) {
+        const url = withCacheBust(`${base}/${slug}/compact.json`, forceRefresh);
+        try {
+          const { data } = await fetchJson(url, { cacheMode: forceRefresh ? 'no-store' : 'default' });
+          const items = Array.isArray(data?.items) ? data.items : extractWatchItems(data);
+          if (!items.length) throw new Error('empty');
+          results.push({ status: 'ok', source: `static:${source}`, items: items.length, url });
+          const updatedAt = parseTimestamp(data?.updatedAt) || parseTimestamp(data?.generatedAt);
+          return { items, updatedAt, results };
+        } catch (err) {
+          results.push({
+            status: 'error',
+            source: `static:${source}`,
+            error: err?.message || 'unknown',
+            url
+          });
+        }
+      }
+      return { items: [], updatedAt: null, results };
     }
 
     function commitWatchData(items, leagueValue, base, updatedAt) {
@@ -284,13 +515,60 @@
           const url = withCacheBust(`${getStaticPricesBase()}/${slug}/compact.json`, forceRefresh);
           try {
             const { data } = await fetchJson(url, { cacheMode: forceRefresh ? 'no-store' : 'default' });
-            const items = Array.isArray(data?.items) ? data.items : extractWatchItems(data);
+            let items = Array.isArray(data?.items) ? data.items : extractWatchItems(data);
             if (!items.length) throw new Error('empty');
             const leagueLabel = data?.league?.watch || data?.league?.id || candidate;
+            let updatedAt = parseTimestamp(data?.updatedAt) || parseTimestamp(data?.generatedAt);
+
+            if (
+              state.priceSource === 'poe-watch'
+              && !hasAllNamedItems(items, SPIRIT_BEAST_DROP_NAMES, normalizeText)
+            ) {
+              const supplemental = await fetchStaticCompactForSource(
+                'poe-ninja',
+                [leagueLabel, candidate, state.leagueText, state.leagueWatchId, state.leagueId],
+                forceRefresh
+              );
+              state.fetchResults.push(...supplemental.results);
+              const merged = mergeNamedItems(items, supplemental.items, SPIRIT_BEAST_DROP_NAMES, normalizeText);
+              items = merged.items;
+              if (merged.added) {
+                updatedAt = pickLatestTimestamp(updatedAt, supplemental.updatedAt);
+                state.fetchResults.push({
+                  status: 'ok',
+                  source: 'supplement:spirit-beasts',
+                  items: merged.added,
+                  league: leagueLabel
+                });
+              }
+
+              if (isLocalHostRuntime() && !hasAllNamedItems(items, SPIRIT_BEAST_DROP_NAMES, normalizeText)) {
+                const apiSupplemental = await fetchNinjaSpiritBeastPricesForLeague({
+                  leagueValue: leagueLabel || candidate,
+                  ninjaApiBase,
+                  fetchJson,
+                  parseTimestamp,
+                  normalizeText
+                });
+                state.fetchResults.push(...apiSupplemental.results);
+                const apiMerged = mergeNamedItems(items, apiSupplemental.items, SPIRIT_BEAST_DROP_NAMES, normalizeText);
+                items = apiMerged.items;
+                if (apiMerged.added) {
+                  updatedAt = pickLatestTimestamp(updatedAt, apiSupplemental.updatedAt);
+                  state.fetchResults.push({
+                    status: 'ok',
+                    source: 'supplement:spirit-beasts-api',
+                    items: apiMerged.added,
+                    league: leagueLabel
+                  });
+                }
+              }
+            }
+
             state.priceData = indexWatchData(items);
             state.pricingLeague = leagueLabel;
             state.watchBase = `${state.priceSource}:static`;
-            state.priceUpdatedAt = parseTimestamp(data?.updatedAt) || parseTimestamp(data?.generatedAt);
+            state.priceUpdatedAt = updatedAt;
             state.fetchResults.push({ status: 'ok', source: 'static', items: items.length, league: leagueLabel, url });
             pricingLeague = leagueLabel;
             break;
@@ -310,6 +588,7 @@
             const { leagueValue, entry } = cached;
             const cachedItems = Array.isArray(entry.items) ? entry.items : [];
             const cacheHasIcons = cachedItems.some((item) => Boolean(item?.icon));
+            const cacheHasSpiritBeasts = hasAllNamedItems(cachedItems, SPIRIT_BEAST_DROP_NAMES, normalizeText);
             if (!cacheHasIcons && state.priceSource === 'poe-watch') {
               state.fetchResults.push({
                 status: 'stale',
@@ -317,6 +596,14 @@
                 items: cachedItems.length,
                 league: leagueValue,
                 reason: 'icons-missing'
+              });
+            } else if (!cacheHasSpiritBeasts) {
+              state.fetchResults.push({
+                status: 'stale',
+                source: 'cache',
+                items: cachedItems.length,
+                league: leagueValue,
+                reason: 'spirit-beasts-missing'
               });
             } else {
               state.priceData = indexWatchData(cachedItems);
@@ -349,9 +636,32 @@
                 fetchJson,
                 parseTimestamp
               });
+              let mergedItems = result.items;
+              let mergedUpdatedAt = result.updatedAt;
+              if (!hasAllNamedItems(mergedItems, SPIRIT_BEAST_DROP_NAMES, normalizeText)) {
+                const supplemental = await fetchNinjaSpiritBeastPricesForLeague({
+                  leagueValue,
+                  ninjaApiBase,
+                  fetchJson,
+                  parseTimestamp,
+                  normalizeText
+                });
+                const merged = mergeNamedItems(mergedItems, supplemental.items, SPIRIT_BEAST_DROP_NAMES, normalizeText);
+                mergedItems = merged.items;
+                if (merged.added) {
+                  mergedUpdatedAt = pickLatestTimestamp(mergedUpdatedAt, supplemental.updatedAt);
+                  state.fetchResults.push({
+                    status: 'ok',
+                    source: 'supplement:spirit-beasts',
+                    items: merged.added,
+                    league: leagueValue
+                  });
+                }
+                state.fetchResults.push(...supplemental.results);
+              }
               state.fetchResults.push(...result.results);
-              if (!result.items.length) throw new Error('empty');
-              commitWatchData(result.items, leagueValue, base, result.updatedAt);
+              if (!mergedItems.length) throw new Error('empty');
+              commitWatchData(mergedItems, leagueValue, base, mergedUpdatedAt);
               pricingLeague = leagueValue;
               break;
             } catch (err) {
@@ -450,9 +760,30 @@
             }
 
             const mergedItems = mergeRatioItems(ratioItems, items, normalizeText);
-            const mergedUpdatedAt = pickLatestTimestamp(ratioUpdatedAt, updatedAt);
-            if (mergedItems.length) {
-              commitWatchData(mergedItems, leagueValue, base, mergedUpdatedAt);
+            let mergedUpdatedAt = pickLatestTimestamp(ratioUpdatedAt, updatedAt);
+            let mergedWithSupplement = { items: mergedItems, added: 0 };
+            if (!hasAllNamedItems(mergedItems, SPIRIT_BEAST_DROP_NAMES, normalizeText)) {
+              const supplemental = await fetchNinjaSpiritBeastPricesForLeague({
+                leagueValue,
+                ninjaApiBase,
+                fetchJson,
+                parseTimestamp,
+                normalizeText
+              });
+              mergedWithSupplement = mergeNamedItems(mergedItems, supplemental.items, SPIRIT_BEAST_DROP_NAMES, normalizeText);
+              state.fetchResults.push(...supplemental.results);
+              if (mergedWithSupplement.added) {
+                mergedUpdatedAt = pickLatestTimestamp(mergedUpdatedAt, supplemental.updatedAt);
+                state.fetchResults.push({
+                  status: 'ok',
+                  source: 'supplement:spirit-beasts',
+                  items: mergedWithSupplement.added,
+                  league: leagueValue
+                });
+              }
+            }
+            if (mergedWithSupplement.items.length) {
+              commitWatchData(mergedWithSupplement.items, leagueValue, base, mergedUpdatedAt);
               pricingLeague = leagueValue;
               break;
             }

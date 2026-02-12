@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "version": "0.2.9",
+      "date": "2026-02-12",
+      "changes": [
+        "Improved debug readability with clearer sectioning and explicit source language for league/pricing origins, including cache key and endpoint context.",
+        "Expanded fallback diagnostics to show requested types/categories and the matched category used for fallback price resolution (from -> to).",
+        "Fixed the debug copy icon rendering and tightened debug panel text presentation for easier scanning."
+      ]
+    },
+    {
       "version": "0.2.7",
       "date": "2026-02-12",
       "changes": [

@@ -25,9 +25,8 @@
             Estimate boss-run value using community drop rates and live poe.watch prices. Focuses on entry items and boss-specific drops only.
           </div>
           <div class="chips">
-            <span class="chip">Version 0.2.8</span>
-            <span class="chip">Prices: poe.watch</span>
-            <span class="chip">Drops: PoE Wiki estimates</span>
+            <span class="chip">Version 0.2.9</span>
+            <span class="chip">Prices: poe.watch, poe.ninja</span>
           </div>
         </div>
         <!--
@@ -113,18 +112,6 @@
         </div>
       </div>
       <div id="status" class="status">Ready.</div>
-      <div id="debug" class="debug">
-        <div class="debug-header">
-          <span>Debug Output</span>
-          <button id="copyDebug" class="icon-button" title="Copy debug output" aria-label="Copy debug output">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="9" y="9" width="12" height="12" rx="2"></rect>
-              <rect x="3" y="3" width="12" height="12" rx="2"></rect>
-            </svg>
-          </button>
-        </div>
-        <pre id="debugContent" class="debug-content"></pre>
-      </div>
     </section>
 
     <section class="sort-search" aria-label="Search and sort bosses">
@@ -144,7 +131,7 @@
 
     <section id="bossList" class="boss-list"></section>
 
-    <section class="footer panel">
+    <section class="footer">
       <div class="flex-row">
         <div>
           <div class="section-title">Model Assumptions</div>
@@ -154,16 +141,42 @@
         </div>
       </div>
     </section>
-    <section class="footer panel">
+    <section class="footer">
       <div class="muted">
         Tweet questions and complaints to <a class="link" href="https://x.com/jonschr" target="_blank" rel="noreferrer">@jonschr</a>.
       </div>
     </section>
-    <details class="changelog-details">
-      <summary class="changelog-summary">Changelog</summary>
-      <section class="changelog-panel">
-        <div class="changelog-content">
-          <article class="changelog-entry">
+    <section class="meta-panels">
+      <details id="debug" class="meta-panel debug-panel">
+        <summary class="meta-summary">
+          <span>Debug</span>
+        </summary>
+        <section class="meta-body">
+          <div class="debug-header">
+            <span>Debug Output</span>
+            <button id="copyDebug" class="icon-button" title="Copy debug output" aria-label="Copy debug output">
+              <svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+          <pre id="debugContent" class="debug-content"></pre>
+        </section>
+      </details>
+      <details class="meta-panel">
+        <summary class="meta-summary">Changelog</summary>
+        <section class="meta-body">
+          <div class="changelog-content">
+            <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.2.9</span><span>2026-02-12</span></div>
+            <ul class="changelog-list">
+              <li>Improved debug readability with clearer sectioning and explicit source language for league/pricing origins, including cache key and endpoint context.</li>
+              <li>Expanded fallback diagnostics to show requested types/categories and the matched category used for fallback price resolution (from -> to).</li>
+              <li>Fixed the debug copy icon rendering and tightened debug panel text presentation for easier scanning.</li>
+            </ul>
+            </article>
+            <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2.8</span><span>2026-02-12</span></div>
             <ul class="changelog-list">
               <li>Reworked boss detail layout and interactivity: moved sources into summary tags, restored per-pool drop cards, refined borders/radii/padding, and moved accent bars to span full boss cards.</li>
@@ -173,8 +186,8 @@
               <li>Expanded mobile usability: denser no-horizontal-scroll tables, balanced subtitle wrapping with smaller copy, and a structured 3-row control layout (3 controls, then 2 filters, then 2 action buttons).</li>
               <li>Default display currency is now Chaos for new/default sessions while preserving any saved user preference.</li>
             </ul>
-          </article>
-          <article class="changelog-entry">
+            </article>
+            <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2.7</span><span>2026-02-12</span></div>
             <ul class="changelog-list">
               <li>Added Spirit Beast bosses (Craiceann, Farrul, Fenumus, Saqawal) with unique set pools and guaranteed 100% boss-beast drops.</li>
@@ -182,8 +195,8 @@
               <li>Introduced and normalized shared tag groups (Uber, Exarch, Eater, The Feared, The Incarnations, Spirit Beast) with consistent capitalization in data.</li>
               <li>Adjusted boss summary layout: missing-price count now appears above the boss name in a compact style, and tag chips are shown as natural-width inline pills.</li>
             </ul>
-          </article>
-          <article class="changelog-entry">
+            </article>
+            <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2.6</span><span>2026-02-11</span></div>
             <ul class="changelog-list">
               <li>Refactored the app into modular services (trade, leagues, pricing, HTTP/cache/repositories) to reduce single-file coupling and improve maintainability.</li>
@@ -191,54 +204,54 @@
               <li>Restored item icon rendering by preserving icon URLs in cached price data and bypassing stale iconless cache entries.</li>
               <li>Cleaned up unused CSS selectors without changing item icon sizing/layout behavior.</li>
             </ul>
-          </article>
-          <article class="changelog-entry">
+            </article>
+            <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2.5</span><span>2026-02-11</span></div>
             <ul class="changelog-list">
               <li>Added trade links for boss drops with query-based Path of Exile trade searches for unique items and divination cards.</li>
               <li>Expanded trade-link coverage by combining explicit seed mappings with automatic fallback generation for eligible unique drops.</li>
               <li>Refined trade seed behavior for known special cases (exchange links) and corrected Mortal Rage mapping.</li>
             </ul>
-          </article>
-          <article class="changelog-entry">
+            </article>
+            <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2.4</span><span>2026-02-10</span></div>
             <ul class="changelog-list">
               <li>Pinned poe.watch IDs for items with misleading 6-link prices (Gluttonous Tide, Atziri's Splendour).</li>
               <li>Added support for explicit poe.watch IDs in boss drop definitions.</li>
             </ul>
-          </article>
-          <article class="changelog-entry">
+            </article>
+            <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2.3</span><span>2026-02-10</span></div>
             <ul class="changelog-list">
               <li>Avoided six-link poe.watch prices by preferring unlinked entries when multiple variants exist.</li>
               <li>Improved mobile tables with scrollable wrappers and overflow containment.</li>
             </ul>
-          </article>
-          <article class="changelog-entry">
+            </article>
+            <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2.2</span><span>2026-02-10</span></div>
             <ul class="changelog-list">
               <li>Prioritized poe.watch exchange/ratios pricing (live + static builds) with fallback to category data.</li>
               <li>Updated poe.ninja endpoints to the new /poe1/api/economy/stash/current path.</li>
               <li>Mobile layout fixes: summary metrics layout, table scroll wrappers, overflow clamps, and search persistence.</li>
             </ul>
-          </article>
-          <article class="changelog-entry">
+            </article>
+            <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2.1</span><span>2026-02-10</span></div>
             <ul class="changelog-list">
               <li>Adjusted Elder/Uber Elder/Uber Uber Elder drops and entry costs, and restored The Elder.</li>
               <li>Added PoE Wiki sources for newly added bosses.</li>
               <li>Refined boss tables for Sirus, Exarch/Eater, and Uber Shaper/Uber Maven.</li>
             </ul>
-          </article>
-          <article class="changelog-entry">
+            </article>
+            <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2</span><span>2026-02-10</span></div>
             <ul class="changelog-list">
               <li>Expanded and reworked boss loot tables (Uber Elder/Uber Uber Elder, Sirus, Exarch/Eater) and added new bosses with PoE Wiki sources.</li>
               <li>Updated UI: average return metric, filters, sorting, header layout, and other visual refinements.</li>
               <li>Added Google tag and structured changelog.</li>
             </ul>
-          </article>
-          <article class="changelog-entry">
+            </article>
+            <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.1.14</span><span>2026-02-10</span></div>
             <ul class="changelog-list">
               <li>Added Average return metric (multiplier) and sortable metrics; removed volatility column.</li>
@@ -246,17 +259,11 @@
               <li>Refined layout and UI: centered header, combined search + sort row, updated info dots and metric cards, adjusted inputs and dropdown sizing.</li>
               <li>Added footer actions (debug toggle + local hit counter) and installed Google tag.</li>
             </ul>
-          </article>
-        </div>
-      </section>
-    </details>
-    <div class="debug-footer">
-      <span>Debug</span>
-      <label class="switch switch-mini">
-        <input type="checkbox" id="debugToggle" />
-        <span class="slider"></span>
-      </label>
-    </div>
+            </article>
+          </div>
+        </section>
+      </details>
+    </section>
   </div>
 
   <script src="modules/trade.js" defer></script>

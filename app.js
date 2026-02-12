@@ -98,7 +98,8 @@
       { type: 'UniqueAccessory', category: 'accessory' },
       { type: 'UniqueJewel', category: 'jewels' },
       { type: 'UniqueFlask', category: 'flask' },
-      { type: 'DivinationCard', category: 'card' }
+      { type: 'DivinationCard', category: 'card' },
+      { type: 'Beast', category: 'monsters' }
     ];
 
     function normalizeWatchBase(base) {
@@ -290,7 +291,6 @@
     const refreshButton = document.getElementById('refresh');
     const resetButton = document.getElementById('resetAll');
     const statusEl = document.getElementById('status');
-    const debugToggle = document.getElementById('debugToggle');
     const debugEl = document.getElementById('debug');
     const debugContent = document.getElementById('debugContent');
     const copyDebug = document.getElementById('copyDebug');
@@ -325,6 +325,7 @@
           getLeagues: () => (leaguesService ? leaguesService.getLeagues() : LEAGUES),
           usingStaticData,
           getStaticPricesBase,
+          getStaticPricesBaseForSource,
           slugifyLeague,
           withCacheBust,
           parseTimestamp,
@@ -369,7 +370,52 @@
     }
 
     function usingStaticData() {
+      const params = new URLSearchParams(window.location.search);
+      const forceStatic = params.get('static') === '1' || params.get('cached') === '1';
+      const forceApi = params.get('api') === '1' || params.get('live') === '1';
+      if (forceStatic) return true;
+      if (forceApi) return false;
       return !IS_LOCAL_HOST;
+    }
+
+    function buildModeHref(mode) {
+      const url = new URL(window.location.href);
+      ['api', 'live', 'static', 'cached'].forEach((key) => url.searchParams.delete(key));
+      if (mode === 'api') {
+        url.searchParams.set('api', '1');
+      } else if (mode === 'static') {
+        url.searchParams.set('static', '1');
+      }
+      return `${url.pathname}${url.search}${url.hash}`;
+    }
+
+    function currentMode() {
+      return usingStaticData() ? 'static' : 'api';
+    }
+
+    function modeOverride() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('static') === '1' || params.get('cached') === '1') return 'static';
+      if (params.get('api') === '1' || params.get('live') === '1') return 'api';
+      return '';
+    }
+
+    function renderLocalModeLinks() {
+      const existing = document.getElementById('localModeLinks');
+      if (existing) existing.remove();
+      if (!IS_LOCAL_HOST) return;
+      const mode = currentMode();
+      const override = modeOverride();
+      const root = document.createElement('div');
+      root.id = 'localModeLinks';
+      root.className = 'local-mode-links';
+      root.innerHTML = `
+        <span class="local-mode-label">Local Mode: ${mode === 'static' ? 'Static' : 'API'}</span>
+        <a class="local-mode-link${override ? '' : ' is-active'}" href="${buildModeHref('default')}">Default</a>
+        <a class="local-mode-link${override === 'api' ? ' is-active' : ''}" href="${buildModeHref('api')}">API</a>
+        <a class="local-mode-link${override === 'static' ? ' is-active' : ''}" href="${buildModeHref('static')}">Static</a>
+      `;
+      document.body.appendChild(root);
     }
 
     function getStaticDataRoot() {
@@ -377,11 +423,16 @@
     }
 
     function getStaticLeaguesUrl() {
-      return `${STATIC_DATA_BASE}/poe-watch/leagues.json`;
+      return `${getStaticDataRoot()}/leagues.json`;
     }
 
     function getStaticPricesBase() {
       return `${getStaticDataRoot()}/prices`;
+    }
+
+    function getStaticPricesBaseForSource(source) {
+      const normalized = normalizePriceSource(source);
+      return `${STATIC_DATA_BASE}/${normalized}/prices`;
     }
 
     function flattenLeagues(groups = leaguesService ? leaguesService.getLeagues() : LEAGUES) {
@@ -780,7 +831,7 @@
         currencyInput.value = state.displayCurrency;
         minValueToggle.checked = state.minValueFilter;
         minProbToggle.checked = state.minProbabilityFilter;
-        debugToggle.checked = state.debug;
+        debugEl.open = state.debug;
         if (searchInput) searchInput.value = '';
         updateMinValueInput();
         updateMinProbabilityInput();
@@ -799,10 +850,11 @@
 
     function setDebug(text) {
       if (!state.debug) {
-        debugEl.style.display = 'none';
+        debugEl.classList.add('is-disabled');
+        debugContent.textContent = 'Debug is disabled. Open the Debug panel to view diagnostics.';
         return;
       }
-      debugEl.style.display = 'block';
+      debugEl.classList.remove('is-disabled');
       debugContent.textContent = text;
     }
 
@@ -1323,7 +1375,7 @@
       if (price != null) return price;
       const fallback = searchAllTypes(item);
       if (fallback != null) {
-        recordFallback(item, fallback.type, fallback.price, fallback.icon);
+        recordFallback(item, fallback);
         return fallback.price;
       }
       return null;
@@ -1385,14 +1437,33 @@
       if (!matches.length) return null;
       const price = pickWatchPrice(matches, item);
       if (price == null) return null;
-      return { type: matches[0].category || 'unknown', price, icon: matches[0].icon };
+      const requestedTypes = Array.isArray(item.types) ? item.types.filter(Boolean) : [];
+      const requestedCategories = categoriesForTypes(requestedTypes);
+      return {
+        toCategory: matches[0].category || 'unknown',
+        lookupName: item.alias || item.name,
+        matchedName: matches[0].name || '',
+        requestedTypes,
+        requestedCategories,
+        price,
+        icon: matches[0].icon
+      };
     }
 
-    function recordFallback(item, type, price, icon) {
+    function recordFallback(item, fallback) {
       if (!state.fallbackHits) state.fallbackHits = new Map();
       const key = itemKey(item);
       if (!state.fallbackHits.has(key)) {
-        state.fallbackHits.set(key, { name: item.name, type, price, icon });
+        state.fallbackHits.set(key, {
+          name: item.name,
+          lookupName: fallback.lookupName || item.alias || item.name,
+          matchedName: fallback.matchedName || '',
+          fromTypes: Array.isArray(fallback.requestedTypes) ? fallback.requestedTypes : [],
+          fromCategories: Array.isArray(fallback.requestedCategories) ? fallback.requestedCategories : [],
+          toCategory: fallback.toCategory || 'unknown',
+          price: fallback.price,
+          icon: fallback.icon
+        });
       }
     }
 
@@ -1813,51 +1884,165 @@
       if (state.debug) {
         const counts = state.priceData?.counts || {};
         const categoryOrder = ['currency', 'fragment', 'maps', 'armour', 'weapon', 'accessory', 'jewels', 'flask', 'card'];
-        const loadedTypes = categoryOrder
-          .filter((key) => counts[key])
-          .map((key) => `${key}: ${counts[key]}`);
-        const apiSummary = (state.fetchResults || []).map((result) => {
-          const label = result.source || (result.status === 'cache' ? 'cache' : 'compact');
-          if (result.status === 'ok') return `${label}: ok (${result.items || 0}) ${result.url || ''}`.trim();
-          if (result.status === 'cache') return `${label}: (${result.items || 0}) ${result.league || ''}`.trim();
-          return `${label}: error (${result.error}) ${result.url || ''}`.trim();
+        const loadedTypes = categoryOrder.filter((key) => counts[key]).map((key) => `${key}: ${counts[key]}`);
+        const fetchSourceLabels = {
+          static: 'static compact dataset',
+          cache: 'browser local price cache',
+          ratios: 'poe.watch exchange ratios',
+          categories: 'poe.watch categories index',
+          'supplement:spirit-beasts': 'spirit beast supplement (primary source -> poe.ninja)',
+          'supplement:spirit-beasts-api': 'spirit beast supplement (static source -> poe.ninja live API)',
+          'exchange:Beast': 'poe.ninja exchange Beast lookup',
+          'item:Beast': 'poe.ninja stash/item Beast lookup'
+        };
+        const fetchStatusLabels = {
+          ok: 'success',
+          cache: 'cache hit (used)',
+          stale: 'cache hit (skipped)',
+          error: 'error'
+        };
+        const fetchLines = (state.fetchResults || []).map((result, index) => {
+          const rawStatus = String(result?.status || 'unknown').toLowerCase();
+          const status = fetchStatusLabels[rawStatus] || rawStatus;
+          const source = String(result?.source || 'unknown');
+          const sourceLabel = fetchSourceLabels[source] || source;
+          const details = [
+            Number.isFinite(result?.items) ? `items=${result.items}` : '',
+            Number.isFinite(result?.matched) ? `matched=${result.matched}` : '',
+            result?.league ? `league=${result.league}` : '',
+            result?.reason ? `reason=${result.reason}` : '',
+            result?.error ? `error=${result.error}` : '',
+            result?.url ? `url=${result.url}` : ''
+          ].filter(Boolean).join(' | ');
+          return `  ${index + 1}. ${status} | source=${sourceLabel}${details ? ` | ${details}` : ''}`;
         });
         const missingPriceItems = missingItems.filter((m) => m.reason === 'price');
         const missingProbItems = missingItems.filter((m) => m.reason === 'prob');
-        const missingPreview = missingPriceItems.slice(0, 50).map((m) => {
+        const missingPreview = missingPriceItems.slice(0, 25).map((m, index) => {
           const prob = m.p == null ? '—' : `${(m.p * 100).toFixed(2)}%`;
           const types = m.types.length ? m.types.join(', ') : 'none';
-          let suggestionText = '';
           const suggestions = suggestCandidates({ name: m.item });
-          if (suggestions.length) {
-            suggestionText = ` | suggestions: ${suggestions.join(', ')}`;
-          }
-          return `${m.boss} | ${m.group} | ${m.item} | p=${prob} | types=${types}${suggestionText}`;
+          const suggestionText = suggestions.length ? ` | suggestions=${suggestions.join(', ')}` : '';
+          return `  ${index + 1}. ${m.boss} > ${m.group} > ${m.item} | p=${prob} | types=${types}${suggestionText}`;
+        });
+        const missingProbPreview = missingProbItems.slice(0, 15).map((m, index) => {
+          const types = m.types.length ? m.types.join(', ') : 'none';
+          return `  ${index + 1}. ${m.boss} > ${m.group} > ${m.item} | types=${types}`;
         });
         const fallbackList = Array.from(state.fallbackHits.values());
+        const fallbackPreview = fallbackList.slice(0, 25).map((f, index) => {
+          const fromTypes = f.fromTypes?.length ? f.fromTypes.join(', ') : 'none';
+          const fromCategories = f.fromCategories?.length ? f.fromCategories.join(', ') : 'none';
+          const lookupName = f.lookupName || f.name;
+          const matchedName = f.matchedName || f.name;
+          return `  ${index + 1}. ${f.name} | lookup="${lookupName}" | requested types=${fromTypes} (categories=${fromCategories}) -> matched category=${f.toCategory} (${matchedName}) | price=${f.price.toFixed(1)}c`;
+        });
+        const mode = currentMode();
+        const modeParam = modeOverride();
+        const displayRate = Number.isFinite(chaosPerDivine) ? `${chaosPerDivine.toFixed(2)} c/div` : 'unknown';
+        const minValueLabel = formatValue(state.minValueThresholdChaos, chaosPerDivine);
+        const minProbLabel = `${formatInputNumber((state.minProbabilityThreshold || 0) * 100, 2)}%`;
+        const sortLabels = {
+          entryCost: 'Run Cost',
+          expectedDrops: 'Drop EV',
+          dropVsCost: 'Average Return',
+          expectedProfit: 'Expected Return'
+        };
         const leagueUpdatedLabel = state.leagueUpdatedAt ? ` (${formatUpdatedAt(state.leagueUpdatedAt)})` : '';
-        const debugLines = [
-          `League: ${state.leagueText} (id: ${state.leagueId})`,
-          `Leagues source: ${state.leagueSource || 'unknown'}${leagueUpdatedLabel}`,
-          `Pricing league: ${state.pricingLeague || 'unknown'}`,
-          `Price source: ${state.priceSource}`,
-          `Pricing base: ${state.watchBase || 'unknown'}`,
-          `Price items loaded: ${state.priceData?.items?.length || 0}`,
-          `Category counts: ${loadedTypes.join(' | ') || 'none'}`,
-          apiSummary.length ? `API results: ${apiSummary.join(' | ')}` : 'API results: none',
-          `Missing price count: ${missingPriceItems.length}`,
-          `Missing probability count: ${missingProbItems.length}`,
-          `Fallback hits: ${fallbackList.length}`,
-          missingPreview.length ? 'Missing (first 50):' : 'Missing (first 50): none',
-          ...missingPreview
-        ];
-        if (fallbackList.length) {
-          debugLines.push('Fallback (first 25):');
-          debugLines.push(...fallbackList.slice(0, 25).map((f) => `${f.name} -> ${f.type} (${f.price.toFixed(1)}c)`));
+        const customDropPriceCount = Object.keys(MANUAL_PRICES).length;
+        const customEntryPriceCount = Object.keys(MANUAL_COSTS).length;
+        const customProbCount = Object.keys(MANUAL_PROBABILITIES).length;
+        const excludedDropCount = Object.keys(IGNORED_DROPS).length;
+        const updatedLabel = state.priceUpdatedAt ? formatUpdatedAt(state.priceUpdatedAt) : 'unknown';
+        const leagueSourceKey = String(state.leagueSource || 'unknown');
+        const leagueSourceMap = {
+          static: `static file (${getStaticLeaguesUrl()})`,
+          cache: `browser localStorage cache (${leagueCacheKey}; cached from ${WATCH_API_BASE}/leagues)`,
+          api: `live API (${WATCH_API_BASE}/leagues)`,
+          fallback: 'fallback (no league dataset loaded; using existing/default league selection)'
+        };
+        const leagueSourceLabel = leagueSourceMap[leagueSourceKey] || leagueSourceKey;
+        const priceSourceLabel = state.priceSource === 'poe-ninja'
+          ? 'poe.ninja (selected primary source)'
+          : 'poe.watch (selected primary source)';
+        let pricingBaseLabel = 'unknown';
+        if (state.watchBase === 'cache') {
+          pricingBaseLabel = `browser localStorage cache (${priceCacheKey})`;
+        } else if (state.watchBase === `${state.priceSource}:static`) {
+          pricingBaseLabel = `static files (${getStaticPricesBase()}/<league>/compact.json)`;
+        } else if (state.watchBase === WATCH_API_BASE) {
+          pricingBaseLabel = `live API (${WATCH_API_BASE})`;
+        } else if (state.watchBase === NINJA_API_BASE) {
+          pricingBaseLabel = `live API (${NINJA_API_BASE})`;
+        } else if (state.watchBase) {
+          pricingBaseLabel = String(state.watchBase);
         }
+        const debugLines = [];
+
+        debugLines.push('Context');
+        debugLines.push(`  Runtime mode: ${mode}${modeParam ? ` (forced: ${modeParam})` : ''}`);
+        debugLines.push(`  League: ${state.leagueText || 'unknown'} (id: ${state.leagueId || 'unknown'})`);
+        debugLines.push(`  League source: ${leagueSourceLabel}${leagueUpdatedLabel}`);
+        debugLines.push(`  Pricing league: ${state.pricingLeague || 'unknown'}`);
+        debugLines.push(`  Price source: ${priceSourceLabel}`);
+        debugLines.push(`  Pricing base: ${pricingBaseLabel}`);
+        debugLines.push(`  Price mode: ${state.priceMode}`);
+        debugLines.push(`  Display currency: ${state.displayCurrency}`);
+        debugLines.push(`  Divine ratio: ${displayRate}`);
+        debugLines.push('');
+
+        debugLines.push('View');
+        debugLines.push(`  Search query: ${query || '(empty)'}`);
+        debugLines.push(`  Sort: ${sortLabels[state.sortKey] || state.sortKey} (${state.sortDir})`);
+        debugLines.push(`  Bosses: ${BOSS_DATA.length} total | ${filteredBosses.length} matched | ${bossRows.length} rendered`);
+        debugLines.push('  Filters:');
+        debugLines.push(`    Min value: ${state.minValueFilter ? 'on' : 'off'} (${minValueLabel})`);
+        debugLines.push(`    Min probability: ${state.minProbabilityFilter ? 'on' : 'off'} (${minProbLabel})`);
+        debugLines.push('');
+
+        debugLines.push('Custom Overrides');
+        debugLines.push(`  Drop prices: ${customDropPriceCount}`);
+        debugLines.push(`  Entry prices: ${customEntryPriceCount}`);
+        debugLines.push(`  Probabilities: ${customProbCount}`);
+        debugLines.push(`  Excluded drops: ${excludedDropCount}`);
+        debugLines.push('');
+
+        debugLines.push('Pricing Data');
+        debugLines.push(`  Updated: ${updatedLabel}`);
+        debugLines.push(`  Loaded items: ${state.priceData?.items?.length || 0}`);
+        debugLines.push(`  Category counts: ${loadedTypes.length ? loadedTypes.join(', ') : 'none'}`);
+        debugLines.push(`  Fetch attempts: ${fetchLines.length}`);
+        if (fetchLines.length) debugLines.push(...fetchLines);
+        debugLines.push('');
+
+        debugLines.push('Missing Data');
+        debugLines.push(`  Missing prices: ${missingPriceItems.length}`);
+        debugLines.push(`  Missing probabilities: ${missingProbItems.length}`);
+        if (missingPreview.length) {
+          debugLines.push('  Missing prices (first 25):');
+          debugLines.push(...missingPreview);
+        } else {
+          debugLines.push('  Missing prices (first 25): none');
+        }
+        if (missingProbPreview.length) {
+          debugLines.push('  Missing probabilities (first 15):');
+          debugLines.push(...missingProbPreview);
+        } else {
+          debugLines.push('  Missing probabilities (first 15): none');
+        }
+        debugLines.push('');
+
+        debugLines.push('Price Match Fallbacks');
+        debugLines.push('  Meaning: exact name+type match had no price, so we retried by name across all categories.');
+        debugLines.push(`  Hits: ${fallbackList.length}`);
+        if (fallbackPreview.length) {
+          debugLines.push('  First 25:');
+          debugLines.push(...fallbackPreview);
+        } else {
+          debugLines.push('  First 25: none');
+        }
+
         setDebug(debugLines.join('\n'));
-        console.table?.(missingItems.slice(0, 50));
-        if (fallbackList.length) console.table?.(fallbackList.slice(0, 50));
       } else {
         setDebug('');
       }
@@ -2037,10 +2222,10 @@
       return pricingService.fetchPrices(forceRefresh);
     }
 
-    debugToggle.checked = DEFAULT_DEBUG;
-    state.debug = debugToggle.checked;
-    debugToggle.addEventListener('change', () => {
-      state.debug = debugToggle.checked;
+    debugEl.open = DEFAULT_DEBUG;
+    state.debug = Boolean(debugEl.open);
+    debugEl.addEventListener('toggle', () => {
+      state.debug = Boolean(debugEl.open);
       saveSharedSetting('debug', state.debug);
       safeRender();
     });
@@ -2055,6 +2240,7 @@
     });
 
     async function init() {
+      renderLocalModeLinks();
       if (IS_FILE_ORIGIN) {
         setStatus('Open this page via a local server so the data files can be fetched.', true);
       }
