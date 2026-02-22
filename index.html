@@ -25,7 +25,7 @@
             Estimate boss-run value using community drop rates and live poe.watch prices. Focuses on entry items and boss-specific drops only.
           </div>
           <div class="chips">
-            <span class="chip">Version 0.2.10</span>
+            <span class="chip">Version 0.2.11</span>
             <span class="chip">Prices: poe.watch, poe.ninja</span>
           </div>
         </div>
@@ -168,6 +168,14 @@
         <summary class="meta-summary">Changelog</summary>
         <section class="meta-body">
           <div class="changelog-content">
+            <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.2.11</span><span>2026-02-22</span></div>
+            <ul class="changelog-list">
+              <li>Updated league-date assumptions for the RefresherLeaf/Phrecia extension by treating Phrecia 2.0 and Hardcore Phrecia 2.0 as active through 2026-04-23T21:00:00Z when upstream end dates lag.</li>
+              <li>Updated local league filtering so Phrecia 2.0 appears in the local server league dropdown under the same end-date override.</li>
+              <li>Fixed static data build reliability by treating sentinel league end dates (for example 0001-01-01T00:00:00Z) as open-ended, preventing poe.ninja update failures like "No usable leagues" when index endpoints return 404.</li>
+            </ul>
+            </article>
             <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2.10</span><span>2026-02-12</span></div>
             <ul class="changelog-list">

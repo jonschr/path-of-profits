@@ -6,6 +6,10 @@ const WATCH_BASE = 'https://api.poe.watch';
 const WATCH_GAME = 'poe1';
 const REQUEST_TIMEOUT_MS = 30000;
 const REQUEST_DELAY_MS = 120;
+const ASSUMED_LEAGUE_END_OVERRIDES = new Map([
+  ['phrecia 2.0', '2026-04-23T21:00:00Z'],
+  ['hardcore phrecia 2.0', '2026-04-23T21:00:00Z']
+]);
 
 const ROOT = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data', 'poe-watch');
@@ -45,6 +49,13 @@ function parseLeagueDate(value) {
   return parsed;
 }
 
+function getAssumedLeagueEndDate(leagueName) {
+  const key = String(leagueName || '').trim().toLowerCase();
+  if (!key) return null;
+  const assumed = ASSUMED_LEAGUE_END_OVERRIDES.get(key);
+  return parseLeagueDate(assumed);
+}
+
 function normalizeLeagueEntry(entry) {
   if (!entry) return null;
   if (typeof entry === 'string') {
@@ -56,7 +67,11 @@ function normalizeLeagueEntry(entry) {
   const watch = String(name || display || '').trim();
   if (!watch) return null;
   const startDate = parseLeagueDate(entry.start_date || entry.startDate || entry.start);
-  const endDate = parseLeagueDate(entry.end_date || entry.endDate || entry.end);
+  let endDate = parseLeagueDate(entry.end_date || entry.endDate || entry.end);
+  const assumedEndDate = getAssumedLeagueEndDate(watch);
+  if (assumedEndDate && (!endDate || assumedEndDate.getTime() > endDate.getTime())) {
+    endDate = assumedEndDate;
+  }
   const now = Date.now();
   let active = entry.active ?? entry.isActive ?? entry.enabled ?? entry.current;
   if (active == null && endDate) {

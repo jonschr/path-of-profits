@@ -808,11 +808,17 @@
     });
 
     if (refreshButton) {
-      refreshButton.addEventListener('click', () => {
+      refreshButton.addEventListener('click', async () => {
         state.leagueId = leagueSelect.value;
         state.leagueText = leagueTextFor(state.leagueId);
         state.leagueWatchId = leagueWatchFor(state.leagueId);
         saveSharedSetting('leagueId', state.leagueId);
+        if (IS_LOCAL_HOST) {
+          const leaguesLoaded = await loadLeagues(true);
+          if (!leaguesLoaded) {
+            setStatus('League refresh failed; refreshing prices with current league list.', true);
+          }
+        }
         fetchPrices(true);
       });
     }

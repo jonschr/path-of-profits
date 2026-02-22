@@ -6,6 +6,10 @@ const NINJA_BASE = 'https://poe.ninja/poe1/api/economy/stash/current';
 const NINJA_ORIGIN = 'https://poe.ninja';
 const REQUEST_TIMEOUT_MS = 30000;
 const REQUEST_DELAY_MS = 120;
+const ASSUMED_LEAGUE_END_OVERRIDES = new Map([
+  ['phrecia 2.0', '2026-04-23T21:00:00Z'],
+  ['hardcore phrecia 2.0', '2026-04-23T21:00:00Z']
+]);
 
 const ROOT = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data', 'poe-ninja');
@@ -54,6 +58,20 @@ function parseTimestamp(value) {
   return Number.isNaN(date.valueOf()) ? null : date;
 }
 
+function parseLeagueDate(value) {
+  const parsed = parseTimestamp(value);
+  if (!parsed) return null;
+  if (parsed.getUTCFullYear() <= 1900) return null;
+  return parsed;
+}
+
+function getAssumedLeagueEndDate(leagueName) {
+  const key = String(leagueName || '').trim().toLowerCase();
+  if (!key) return null;
+  const assumed = ASSUMED_LEAGUE_END_OVERRIDES.get(key);
+  return parseLeagueDate(assumed);
+}
+
 function slugifyLeague(text) {
   return String(text || '')
     .normalize('NFD')
@@ -74,8 +92,12 @@ function normalizeLeagueEntry(entry) {
   const display = entry.displayName || entry.display || entry.text || entry.label || entry.name || name;
   const watch = String(name || display || '').trim();
   if (!watch) return null;
-  const startDate = parseTimestamp(entry.start_date || entry.startDate || entry.start);
-  const endDate = parseTimestamp(entry.end_date || entry.endDate || entry.end);
+  const startDate = parseLeagueDate(entry.start_date || entry.startDate || entry.start);
+  let endDate = parseLeagueDate(entry.end_date || entry.endDate || entry.end);
+  const assumedEndDate = getAssumedLeagueEndDate(watch);
+  if (assumedEndDate && (!endDate || assumedEndDate.getTime() > endDate.getTime())) {
+    endDate = assumedEndDate;
+  }
   const now = Date.now();
   let active = entry.active ?? entry.isActive ?? entry.enabled ?? entry.current;
   if (active == null && endDate) {

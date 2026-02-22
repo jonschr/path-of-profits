@@ -1,6 +1,11 @@
 (function initPoeLeaguesModule(global) {
   'use strict';
 
+  const ASSUMED_LEAGUE_END_OVERRIDES = new Map([
+    ['phrecia 2.0', '2026-04-23T21:00:00Z'],
+    ['hardcore phrecia 2.0', '2026-04-23T21:00:00Z']
+  ]);
+
   function createLeagueService({
     state,
     leagueSelectEl,
@@ -120,6 +125,13 @@
       repo.saveCachedApiLeagues(data);
     }
 
+    function getAssumedLeagueEndDate(leagueName) {
+      const key = normalizeLeagueCompare(leagueName);
+      if (!key) return null;
+      const assumed = ASSUMED_LEAGUE_END_OVERRIDES.get(key);
+      return parseLeagueDate(assumed);
+    }
+
     function normalizeLeagueEntry(entry) {
       if (!entry) return null;
       if (typeof entry === 'string') {
@@ -131,7 +143,11 @@
       const watch = String(name || display || '').trim();
       if (!watch) return null;
       const startDate = parseLeagueDate(entry.start_date || entry.startDate || entry.start);
-      const endDate = parseLeagueDate(entry.end_date || entry.endDate || entry.end);
+      let endDate = parseLeagueDate(entry.end_date || entry.endDate || entry.end);
+      const assumedEndDate = getAssumedLeagueEndDate(watch);
+      if (assumedEndDate && (!endDate || assumedEndDate.getTime() > endDate.getTime())) {
+        endDate = assumedEndDate;
+      }
       const now = Date.now();
       let active = entry.active ?? entry.isActive ?? entry.enabled ?? entry.current;
       if (active == null && endDate) {
