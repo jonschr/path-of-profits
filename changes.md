@@ -1,5 +1,9 @@
 # Changes
 
+## 0.2.12 - 2026-03-02
+- Updated the page title tag to `Path of Profits: POE Mirage Bossing Profitability`.
+- Added a meta description that explicitly mentions `Path of Exile` for clearer search snippet context.
+
 ## 0.2.11 - 2026-02-22
 - Updated league-date assumptions for the RefresherLeaf/Phrecia extension by treating `Phrecia 2.0` and `Hardcore Phrecia 2.0` as active through `2026-04-23T21:00:00Z` when upstream end dates lag.
 - Updated local league filtering so `Phrecia 2.0` appears in the local server league dropdown under the same end-date override.
