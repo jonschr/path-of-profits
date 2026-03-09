@@ -2383,7 +2383,7 @@
             "p": 0.5
           },
           {
-            "name": "Woespike",
+            "name": "The Unseen Hue",
             "p": 0.4
           },
           {
@@ -2434,7 +2434,7 @@
         "type": "exclusive",
         "items": [
           {
-            "name": "The Unseen Hue",
+            "name": "Woespike",
             "p": 0.57
           },
           {

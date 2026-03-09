@@ -1,5 +1,8 @@
 # Changes
 
+## 0.2.13 - 2026-03-09
+- Corrected Incarnation of Fear loot tables by moving `Woespike` to Uber Incarnation of Fear and restoring `The Unseen Hue` to the normal boss drop pool.
+
 ## 0.2.12 - 2026-03-02
 - Updated the page title tag to `Path of Profits: POE Mirage Bossing Profitability`.
 - Added a meta description that explicitly mentions `Path of Exile` for clearer search snippet context.
