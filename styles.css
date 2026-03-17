@@ -81,6 +81,14 @@ body {
 	justify-content: center;
 }
 
+.top-nav-links {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 18px;
+}
+
 .top-nav-brand {
 	color: var(--ink);
 	text-decoration: none;
@@ -617,6 +625,90 @@ h1 {
 	color: var(--ink);
 	border-color: var(--accent-border);
 	background: var(--accent-bg-soft);
+}
+
+.gem-page-panel {
+	display: grid;
+	gap: 16px;
+}
+
+.gem-toolbar {
+	display: grid;
+	grid-template-columns: auto auto minmax(240px, 1fr);
+	gap: 14px;
+	align-items: end;
+}
+
+.gem-search-field {
+	min-width: 0;
+}
+
+.gem-filter-wrap {
+	display: grid;
+	gap: 8px;
+}
+
+.gem-filter-section {
+	margin: 18px 0 14px;
+}
+
+.gem-filter-label {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.7px;
+	color: var(--muted);
+}
+
+.gem-filter-bar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.filter-chip {
+	width: auto;
+	min-width: 0;
+	padding: 7px 12px;
+	border-radius: 999px;
+	border: 1px solid var(--border);
+	background: var(--surface-overlay);
+	color: var(--muted);
+	font-family: var(--ui);
+	font-size: 13px;
+	font-weight: 500;
+	box-shadow: none;
+}
+
+.filter-chip:hover {
+	transform: none;
+	border-color: var(--accent-border);
+	background: var(--accent-bg-soft);
+	color: var(--ink);
+}
+
+.filter-chip.is-active {
+	border-color: var(--accent-border);
+	background: var(--accent-bg-soft);
+	color: var(--ink);
+}
+
+.gem-status-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px 16px;
+}
+
+.gem-summary {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.gem-page-note {
+	color: var(--muted);
+	font-size: 13px;
+	line-height: 1.55;
 }
 
 .control-grid {
@@ -1328,6 +1420,86 @@ button.has-tooltip:focus::after {
 	gap: 5px;
 }
 
+.gem-table-wrap {
+	overflow-x: auto;
+}
+
+.gem-table {
+	min-width: 1380px;
+}
+
+.gem-table col.col-gem {
+	width: 280px;
+}
+
+.gem-table col.col-tags {
+	width: 160px;
+}
+
+.gem-table col.col-state {
+	width: 92px;
+}
+
+.gem-table th:first-child,
+.gem-table td:first-child,
+.gem-table th:nth-child(2),
+.gem-table td:nth-child(2) {
+	text-align: left;
+}
+
+.gem-table th:not(:first-child):not(:nth-child(2)),
+.gem-table td:not(:first-child):not(:nth-child(2)) {
+	text-align: right;
+}
+
+.gem-table td:last-child,
+.gem-table th:last-child {
+	padding-right: 0;
+}
+
+.gem-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.gem-tag {
+	display: inline-flex;
+	align-items: center;
+	padding: 3px 8px;
+	border-radius: 999px;
+	border: 1px solid var(--border);
+	background: var(--surface-overlay);
+	color: var(--muted);
+	font-family: var(--ui);
+	font-size: 11px;
+	line-height: 1.2;
+}
+
+.gem-state-cell {
+	font-variant-numeric: tabular-nums;
+}
+
+.gem-price {
+	color: var(--ink);
+}
+
+.gem-price.is-low-confidence {
+	color: var(--accent-3);
+	text-decoration: underline dotted;
+	text-underline-offset: 2px;
+}
+
+.gem-missing,
+.gem-empty {
+	color: var(--muted);
+}
+
+.gem-empty {
+	padding: 22px 0 8px;
+	text-align: left;
+}
+
 .entry-table .item-icon {
 	width: 22px;
 	height: 22px;
@@ -1637,6 +1809,10 @@ button.has-tooltip:focus::after {
 		justify-content: center;
 	}
 
+	.top-nav-links {
+		gap: 14px;
+	}
+
 	.top-nav-brand-block,
 	.top-nav-meta {
 		justify-self: center;
@@ -1732,6 +1908,18 @@ button.has-tooltip:focus::after {
 		line-height: 1.4;
 		max-width: 100%;
 		text-wrap: balance;
+	}
+
+	.gem-toolbar {
+		grid-template-columns: 1fr;
+	}
+
+	.gem-status-row {
+		align-items: flex-start;
+	}
+
+	.gem-table {
+		min-width: 1180px;
 	}
 
 	.boss-list summary {

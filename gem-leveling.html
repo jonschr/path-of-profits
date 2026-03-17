@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Path of Profits: POE Gem Leveling Profitability</title>
+  <meta name="description" content="Path of Profits helps Path of Exile players compare poe.ninja gem prices across leveling and corruption states for the active leagues." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSY4V2LS0X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WSY4V2LS0X');
+  </script>
+</head>
+<body>
+  <nav class="top-nav" aria-label="Primary">
+    <div class="top-nav-inner">
+      <div class="top-nav-brand-block">
+        <a class="top-nav-brand" href="./">Path of Profits</a>
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.3</button>
+      </div>
+      <div class="top-nav-center">
+        <div class="top-nav-links">
+          <a class="top-nav-link" href="./">Bossing</a>
+          <a class="top-nav-link is-active" href="gem-leveling.html">Gem Leveling</a>
+        </div>
+      </div>
+      <div class="top-nav-meta chips" aria-label="Site metadata">
+        <span class="chip">Prices: poe.ninja</span>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="header-row">
+        <div class="header-left">
+          <h1>POE Gem Leveling Profits</h1>
+          <div class="subtitle">
+            Compare gem prices across the market states that matter for leveling, quality, and corruption. Each row is built from the shared poe.ninja gem dataset rather than page-specific hard-coding.
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <section class="panel gem-page-panel">
+      <div class="gem-toolbar">
+        <div class="control-compact">
+          <label for="gemLeagueSelect">League</label>
+          <select id="gemLeagueSelect"></select>
+        </div>
+        <div class="control-compact">
+          <label for="gemDisplayCurrency">Display Currency</label>
+          <select id="gemDisplayCurrency">
+            <option value="chaos" selected>Chaos</option>
+            <option value="divine">Divine</option>
+          </select>
+        </div>
+        <div class="gem-search-field">
+          <label for="gemSearchInput">Search</label>
+          <input id="gemSearchInput" type="search" placeholder="Search gems or tags..." autocomplete="off" />
+        </div>
+      </div>
+      <div class="gem-status-row">
+        <div id="gemSummary" class="gem-summary muted">Loading gems...</div>
+        <div id="gemStatus" class="status">Loading gem price matrix...</div>
+      </div>
+      <div class="gem-page-note">
+        The table shows common leveling and corruption states side by side. Blank cells mean poe.ninja has no current market record for that gem state in the selected league.
+      </div>
+    </section>
+
+    <section class="gem-filter-section" aria-label="Gem filters">
+      <div class="gem-filter-wrap">
+        <div class="gem-filter-label">Filters</div>
+        <div id="gemFilterBar" class="gem-filter-bar" aria-label="Gem filters"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="table-wrap gem-table-wrap">
+        <table id="gemTable" class="table gem-table">
+          <colgroup id="gemTableColgroup"></colgroup>
+          <thead>
+            <tr id="gemTableHeadRow"></tr>
+          </thead>
+          <tbody id="gemTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <section class="footer-card" aria-labelledby="modelAssumptionsTitle">
+        <div class="footer-card-kicker">Model Assumptions</div>
+        <div id="modelAssumptionsTitle" class="footer-card-copy">
+          Gem prices are pulled from poe.ninja static data builds. Each row groups all matching gem variants into a shared state matrix so the same raw data can support future gem-focused pages without changing the source model.
+        </div>
+      </section>
+      <div class="footer-legal">
+        Path of Exile is a registered trademark of Grinding Gear Games Limited. poe.ninja and any related marks, names, and data services are the property of their respective owners. Path of Profits is an independent fan project and is not affiliated with, endorsed by, sponsored by, or associated with Grinding Gear Games Limited, poe.ninja, or any of their parent companies, subsidiaries, or affiliates.
+      </div>
+      <div class="site-footer-topline muted">
+        <span>Tweet questions and complaints to <a class="link" href="https://x.com/jonschr" target="_blank" rel="noreferrer">@jonschr</a></span>
+        <a id="openDebug" class="footer-inline-link" href="#debugDialog" aria-haspopup="dialog" aria-controls="debugDialog">Debug</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="changelogDialog" class="lightbox-dialog" aria-labelledby="changelogDialogTitle">
+    <div class="lightbox-shell">
+      <div class="lightbox-header">
+        <div>
+          <div class="lightbox-kicker">Changelog</div>
+          <h2 id="changelogDialogTitle" class="lightbox-title">Version history</h2>
+        </div>
+        <button type="button" id="closeChangelog" class="lightbox-close" aria-label="Close changelog">Close</button>
+      </div>
+      <div class="lightbox-body">
+        <div id="changelogContent" class="changelog-content">
+          <div class="muted">Loading changelog...</div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="debugDialog" class="lightbox-dialog debug-dialog" aria-labelledby="debugDialogTitle">
+    <div class="lightbox-shell">
+      <div class="lightbox-header">
+        <div>
+          <div class="lightbox-kicker">Debug</div>
+          <h2 id="debugDialogTitle" class="lightbox-title">Gem diagnostics</h2>
+        </div>
+        <button type="button" id="closeDebug" class="lightbox-close" aria-label="Close debug dialog">Close</button>
+      </div>
+      <div class="lightbox-body">
+        <pre id="debugContent" class="debug-content"></pre>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="gem-leveling.js" defer></script>
+</body>
+</html>
