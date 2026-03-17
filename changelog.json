@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "version": "0.3",
+      "date": "2026-03-17",
+      "changes": [
+        "Removed the active poe.watch pricing path in favor of poe.ninja plus official Path of Exile league discovery.",
+        "Expanded poe.ninja ingestion for invitations, fragments, maps, gems, exchange-backed categories, and richer metadata intended for future pages.",
+        "Fixed inflated pricing caused by linked 5L and 6L variants being averaged into base unique item prices, and surfaced low-confidence pricing notes in the UI.",
+        "Reworked the page chrome with a shared top nav/footer treatment, changelog and debug lightboxes, footer legal copy, and a simpler control strip that removes the global variant-pricing dropdown."
+      ]
+    },
+    {
       "version": "0.2.13",
       "date": "2026-03-09",
       "changes": [

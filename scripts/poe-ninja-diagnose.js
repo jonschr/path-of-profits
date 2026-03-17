@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
+const NinjaTypes = require('../modules/ninja-types.js');
 
 const args = process.argv.slice(2);
 const getArg = (name, fallback) => {
@@ -12,7 +13,7 @@ const getArg = (name, fallback) => {
 
 const leagueArg = getArg('--league', 'phrecia2.0');
 const leagueTextArg = getArg('--league-text', 'Phrecia 2.0');
-const baseArg = getArg('--base', 'http://localhost:5173/api/poewatch');
+const baseArg = getArg('--base', 'http://localhost:5173/data/poe-ninja/prices');
 const watchSeconds = Number(getArg('--watch', '0'));
 const fileArg = getArg('--file', `${process.cwd()}/boss-profit.html`);
 const jsonArg = getArg('--json', `${process.cwd()}/boss-data.json`);
@@ -21,24 +22,11 @@ const missingLimit = Number(getArg('--limit', '50'));
 const findArg = getArg('--find', '');
 const findList = findArg ? findArg.split(',').map((s) => s.trim()).filter(Boolean) : [];
 
-const baseCandidates = Array.from(new Set([
-  baseArg,
-  'https://api.poe.watch'
-]));
+const baseCandidates = Array.from(new Set([baseArg]));
 
 const leagueCandidates = Array.from(new Set([leagueTextArg, leagueArg].filter(Boolean)));
 
-const WATCH_CATEGORY_MAP = {
-  Currency: ['currency'],
-  Fragment: ['fragment'],
-  Invitations: ['maps'],
-  UniqueArmour: ['armour'],
-  UniqueWeapon: ['weapon'],
-  UniqueAccessory: ['accessory'],
-  UniqueJewel: ['jewels'],
-  UniqueFlask: ['flask'],
-  DivinationCard: ['card']
-};
+const PRICE_CATEGORY_MAP = NinjaTypes.typeToCategories;
 
 function normalizeText(text) {
   return String(text || '')
@@ -51,7 +39,7 @@ function normalizeText(text) {
 function categoriesForTypes(types) {
   const categories = new Set();
   (types || []).forEach((type) => {
-    (WATCH_CATEGORY_MAP[type] || []).forEach((category) => categories.add(category));
+    (PRICE_CATEGORY_MAP[type] || []).forEach((category) => categories.add(category));
   });
   return Array.from(categories);
 }
@@ -111,8 +99,18 @@ function suggestCandidates(item, index) {
   return Array.from(new Set(candidates)).slice(0, 3);
 }
 
+function slugifyLeague(text) {
+  return String(text || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[’']/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 async function fetchCompact(base, league) {
-  const url = `${base.replace(/\/$/, '')}/compact?league=${encodeURIComponent(league)}`;
+  const url = `${base.replace(/\/$/, '')}/${slugifyLeague(league)}/compact.json`;
   const res = await fetch(url);
   if (!res.ok) {
     return { ok: false, status: res.status, url };
@@ -281,7 +279,7 @@ async function main() {
     // eslint-disable-next-line no-constant-condition
     while (true) {
       console.clear();
-      console.log(`[${new Date().toISOString()}] poe.watch diagnostics`);
+      console.log(`[${new Date().toISOString()}] poe.ninja diagnostics`);
       await runOnce();
       await new Promise((resolve) => setTimeout(resolve, watchSeconds * 1000));
     }

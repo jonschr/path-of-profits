@@ -1,7 +1,16 @@
 (function initPoeTradeModule(global) {
   'use strict';
 
-  const NON_UNIQUE_TRADE_TYPES = new Set(['Currency', 'Fragment', 'Invitations', 'DivinationCard']);
+  const NON_UNIQUE_TRADE_TYPES = new Set([
+    'Currency',
+    'Fragment',
+    'Invitation',
+    'Invitations',
+    'DivinationCard',
+    'Map',
+    'UniqueMap',
+    'Beast'
+  ]);
 
   function buildNinjaTradeSeedByName(name) {
     return {
@@ -30,6 +39,29 @@
         query: {
           status: { option: 'online' },
           type: String(name || ''),
+          stats: [{ type: 'and', filters: [] }]
+        },
+        sort: { price: 'asc' }
+      })
+    };
+  }
+
+  function sanitizeTradeName(name) {
+    return String(name || '')
+      .replace(/\s*\([^)]*\)\s*/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function buildTypedTradeSeedByName(name) {
+    const sanitized = sanitizeTradeName(name);
+    if (!sanitized) return null;
+    return {
+      mode: 'search',
+      q: JSON.stringify({
+        query: {
+          status: { option: 'online' },
+          type: sanitized,
           stats: [{ type: 'and', filters: [] }]
         },
         sort: { price: 'asc' }
@@ -113,6 +145,20 @@
     return key ? uniqueDropNameKeys.has(key) : false;
   }
 
+  function shouldAutoTradeTypedItem(item) {
+    const types = new Set((Array.isArray(item?.types) ? item.types : []).map((type) => String(type)));
+    if (!types.size) return false;
+    return (
+      types.has('Currency')
+      || types.has('Fragment')
+      || types.has('Invitation')
+      || types.has('Invitations')
+      || types.has('Map')
+      || types.has('UniqueMap')
+      || types.has('Beast')
+    );
+  }
+
   function tradeSeedForItem({
     item,
     normalizeText,
@@ -125,8 +171,11 @@
     const explicit = tradeSeedForItemName(name, normalizeText, tradeLinkSeeds);
     if (explicit) return explicit;
     if (shouldAutoTradeDivinationCard(item)) return buildDivinationCardTradeSeedByName(name);
-    if (!shouldAutoTradeUniqueItem(item, normalizeText, uniqueDropNameKeys, nonUniqueTradeTypes)) return null;
-    return buildNinjaTradeSeedByName(name);
+    if (shouldAutoTradeTypedItem(item)) return buildTypedTradeSeedByName(name);
+    if (shouldAutoTradeUniqueItem(item, normalizeText, uniqueDropNameKeys, nonUniqueTradeTypes)) {
+      return buildNinjaTradeSeedByName(name);
+    }
+    return buildTypedTradeSeedByName(name);
   }
 
   function normalizeTradeSeed(seed) {

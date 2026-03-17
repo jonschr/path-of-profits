@@ -1,12 +1,11 @@
     const BASE_LEAGUE = '';
-    const BASE_PRICE_MODE = 'avg';
     const BASE_DISPLAY_CURRENCY = 'chaos';
     const BASE_MIN_VALUE_ENABLED = true;
     const BASE_MIN_VALUE_DIVINE = 0.5;
     const BASE_MIN_VALUE_CHAOS = 10;
     const BASE_MIN_PROBABILITY_ENABLED = true;
     const BASE_MIN_PROBABILITY = 0.1;
-    const BASE_PRICE_SOURCE = 'poe-watch';
+    const BASE_PRICE_SOURCE = 'poe-ninja';
     const BASE_SORT_KEY = 'expectedProfit';
     const BASE_SORT_DIR = 'desc';
     const BASE_DEBUG = false;
@@ -29,7 +28,6 @@
     const ignoreDropsKey = 'poeBossIgnoreDrops';
     const displayCurrencyKey = 'poeBossDisplayCurrency';
     const priceSourceKey = 'poeBossPriceSource';
-    const priceModeKey = 'poeBossPriceMode';
     const leagueKey = 'poeBossLeague';
     const debugKey = 'poeBossDebug';
     const sortKeyStorage = 'poeBossSortKey';
@@ -54,9 +52,6 @@
     const IS_FILE_ORIGIN = window.location.protocol === 'file:';
     const IS_LOCAL_HOST = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname);
     const STATIC_DATA_BASE = 'data';
-    const WATCH_API_BASE = 'https://api.poe.watch';
-    const WATCH_DETAILS_BASE = 'https://poe.watch/detailed';
-    const WATCH_GAME = 'poe1';
     const NINJA_API_BASE = IS_LOCAL_HOST
       ? '/api/poeninja/poe1/api/economy/stash/current'
       : 'https://poe.ninja/poe1/api/economy/stash/current';
@@ -68,64 +63,74 @@
     const Repositories = window.PoeRepositories || null;
     const Leagues = window.PoeLeagues || null;
     const Pricing = window.PoePricing || null;
+    const NinjaTypes = window.PoeNinjaTypes || null;
+    const NINJA_ECONOMY_BASE = 'https://poe.ninja/poe1/economy';
     const TRADE_LINK_SEEDS = Trade ? Trade.buildTradeLinkSeeds() : {};
     const NON_UNIQUE_TRADE_TYPES = Trade
       ? Trade.NON_UNIQUE_TRADE_TYPES
-      : new Set(['Currency', 'Fragment', 'Invitations', 'DivinationCard']);
+      : new Set(['Currency', 'Fragment', 'Invitation', 'Invitations', 'DivinationCard', 'Map', 'UniqueMap']);
     let UNIQUE_DROP_NAME_KEYS = new Set();
 
-    const WATCH_CATEGORY_MAP = {
+    const PRICE_CATEGORY_MAP = NinjaTypes?.typeToCategories || {
       Currency: ['currency'],
-      Fragment: ['fragment'],
-      Invitations: ['maps'],
+      Fragment: ['fragment', 'invitation'],
+      Invitation: ['invitation', 'fragment'],
+      Invitations: ['invitation', 'fragment'],
       UniqueArmour: ['armour'],
       UniqueWeapon: ['weapon'],
       UniqueAccessory: ['accessory'],
       UniqueJewel: ['jewels'],
       UniqueFlask: ['flask'],
-      DivinationCard: ['card', 'divinationcard', 'divination', 'divination-card']
+      DivinationCard: ['card', 'divinationcard', 'divination', 'divination-card'],
+      Map: ['maps'],
+      UniqueMap: ['maps']
     };
 
-    const NINJA_CURRENCY_TYPES = [
+    const NINJA_CURRENCY_TYPES = NinjaTypes?.currencyOverviewTypes || [
       { type: 'Currency', category: 'currency' },
-      { type: 'Fragment', category: 'fragment' },
-      { type: 'Invitation', category: 'maps' }
+      { type: 'Fragment', category: 'fragment' }
     ];
 
-    const NINJA_ITEM_TYPES = [
+    const NINJA_ITEM_TYPES = NinjaTypes?.itemOverviewTypes || [
       { type: 'UniqueArmour', category: 'armour' },
       { type: 'UniqueWeapon', category: 'weapon' },
       { type: 'UniqueAccessory', category: 'accessory' },
       { type: 'UniqueJewel', category: 'jewels' },
       { type: 'UniqueFlask', category: 'flask' },
       { type: 'DivinationCard', category: 'card' },
-      { type: 'Beast', category: 'monsters' }
+      { type: 'Beast', category: 'monsters' },
+      { type: 'Invitation', category: 'invitation' },
+      { type: 'Map', category: 'maps' },
+      { type: 'UniqueMap', category: 'maps' }
     ];
-
-    function normalizeWatchBase(base) {
-      return String(base || '').replace(/\/$/, '');
-    }
-
-    function buildWatchCategoriesEndpoint(base) {
-      const root = normalizeWatchBase(base);
-      if (!root) return '';
-      const suffix = WATCH_GAME ? `?game=${encodeURIComponent(WATCH_GAME)}` : '';
-      return `${root}/categories${suffix}`;
-    }
-
-    function buildWatchGetEndpoint(base) {
-      const root = normalizeWatchBase(base);
-      if (!root) return '';
-      const suffix = WATCH_GAME ? `&game=${encodeURIComponent(WATCH_GAME)}` : '';
-      return `${root}/get?league={LEAGUE}&category={CATEGORY}${suffix}`;
-    }
-
-    function buildWatchExchangeEndpoint(base, league) {
-      const root = normalizeWatchBase(base);
-      if (!root || !league) return '';
-      const gameParam = WATCH_GAME ? `&game=${encodeURIComponent(WATCH_GAME)}` : '';
-      return `${root}/exchange/ratios?league=${encodeURIComponent(league)}${gameParam}`;
-    }
+    const NINJA_DETAIL_ROUTE_MAP = NinjaTypes?.typeToDetailRoute || {
+      Currency: 'currency',
+      Fragment: 'fragments',
+      Invitation: 'invitations',
+      Scarab: 'scarabs',
+      Oil: 'oils',
+      Incubator: 'incubators',
+      Fossil: 'fossils',
+      Resonator: 'resonators',
+      Essence: 'essences',
+      DeliriumOrb: 'delirium-orbs',
+      UniqueArmour: 'unique-armours',
+      UniqueWeapon: 'unique-weapons',
+      UniqueAccessory: 'unique-accessories',
+      UniqueJewel: 'unique-jewels',
+      UniqueFlask: 'unique-flasks',
+      DivinationCard: 'divination-cards',
+      Beast: 'beasts',
+      Map: 'maps',
+      UniqueMap: 'maps',
+      SkillGem: 'skill-gems',
+      BaseType: 'base-types',
+      Tattoo: 'tattoos',
+      Omen: 'omens'
+    };
+    const LOW_CONFIDENCE_LISTING_THRESHOLD = Number.isFinite(Number(NinjaTypes?.lowConfidenceListingThreshold))
+      ? Number(NinjaTypes.lowConfidenceListingThreshold)
+      : 5;
 
     let BOSS_DATA = [];
 
@@ -160,13 +165,11 @@
           defaults: {
             displayCurrency: BASE_DISPLAY_CURRENCY,
             priceSource: BASE_PRICE_SOURCE,
-            priceMode: BASE_PRICE_MODE,
             debug: BASE_DEBUG
           },
           legacyReaders: {
             displayCurrency: () => localStorage.getItem(displayCurrencyKey),
             priceSource: () => localStorage.getItem(priceSourceKey),
-            priceMode: () => localStorage.getItem(priceModeKey),
             debug: () => (localStorage.getItem(debugKey) === 'on')
           }
         })
@@ -174,7 +177,6 @@
     const initialSettings = settingsStore ? settingsStore.getState() : {};
     const storedLeagueLegacy = normalizeLeagueKey(localStorage.getItem(leagueKey) || '');
     const DEFAULT_LEAGUE = storedLeagueLegacy || BASE_LEAGUE;
-    const DEFAULT_PRICE_MODE = String(initialSettings.priceMode || BASE_PRICE_MODE);
     const DEFAULT_PRICE_SOURCE = normalizePriceSource(initialSettings.priceSource || BASE_PRICE_SOURCE);
     const DEFAULT_SEARCH_QUERY = localStorage.getItem(searchKeyStorage) || '';
     const DEFAULT_DISPLAY_CURRENCY = initialSettings.displayCurrency === 'divine' ? 'divine' : 'chaos';
@@ -222,10 +224,6 @@
         safeSetItem(priceSourceKey, normalizePriceSource(value));
         return;
       }
-      if (key === 'priceMode') {
-        safeSetItem(priceModeKey, String(value || BASE_PRICE_MODE));
-        return;
-      }
       if (key === 'debug') {
         safeSetItem(debugKey, value ? 'on' : 'off');
       }
@@ -264,7 +262,6 @@
       leagueWatchId: DEFAULT_LEAGUE,
       leagueSource: 'fallback',
       leagueUpdatedAt: null,
-      priceMode: DEFAULT_PRICE_MODE,
       priceSource: DEFAULT_PRICE_SOURCE,
       displayCurrency: DEFAULT_DISPLAY_CURRENCY,
       priceData: null,
@@ -285,15 +282,19 @@
 	    };
 
     const leagueSelect = document.getElementById('leagueSelect');
-    const priceModeInput = document.getElementById('priceMode');
     const currencyInput = document.getElementById('displayCurrency');
     const priceSourceInput = document.getElementById('priceSource');
     const refreshButton = document.getElementById('refresh');
     const resetButton = document.getElementById('resetAll');
     const statusEl = document.getElementById('status');
-    const debugEl = document.getElementById('debug');
     const debugContent = document.getElementById('debugContent');
     const copyDebug = document.getElementById('copyDebug');
+    const debugDialog = document.getElementById('debugDialog');
+    const openDebug = document.getElementById('openDebug');
+    const closeDebug = document.getElementById('closeDebug');
+    const changelogDialog = document.getElementById('changelogDialog');
+    const openChangelog = document.getElementById('openChangelog');
+    const closeChangelog = document.getElementById('closeChangelog');
     const bossList = document.getElementById('bossList');
     const minValueToggle = document.getElementById('minValueToggle');
     const minValueInput = document.getElementById('minValueInput');
@@ -308,9 +309,7 @@
           leagueSelectEl: leagueSelect,
           defaultLeague: DEFAULT_LEAGUE,
           leagueStorageKey: leagueKey,
-          usingStaticData,
           getStaticLeaguesUrl,
-          watchApiBase: WATCH_API_BASE,
           normalizeLeagueKey,
           withCacheBust,
           parseTimestamp,
@@ -338,11 +337,7 @@
           extractWatchCategories,
           findUpdatedAt,
           indexWatchData,
-          buildWatchCategoriesEndpoint,
-          buildWatchGetEndpoint,
-          buildWatchExchangeEndpoint,
           normalizeText,
-          watchApiBase: WATCH_API_BASE,
           ninjaApiBase: NINJA_API_BASE,
           ninjaCurrencyTypes: NINJA_CURRENCY_TYPES,
           ninjaItemTypes: NINJA_ITEM_TYPES,
@@ -364,9 +359,7 @@
     }
 
     function normalizePriceSource(value) {
-      const raw = String(value || '').trim().toLowerCase();
-      if (raw === 'poe-ninja' || raw === 'poe.ninja') return 'poe-ninja';
-      return 'poe-watch';
+      return 'poe-ninja';
     }
 
     function usingStaticData() {
@@ -393,11 +386,58 @@
       return usingStaticData() ? 'static' : 'api';
     }
 
+    function defaultMode() {
+      return IS_LOCAL_HOST ? 'api' : 'static';
+    }
+
     function modeOverride() {
       const params = new URLSearchParams(window.location.search);
       if (params.get('static') === '1' || params.get('cached') === '1') return 'static';
       if (params.get('api') === '1' || params.get('live') === '1') return 'api';
       return '';
+    }
+
+    function setLocalBuildFeedback(root, text, tone = '') {
+      const feedback = root?.querySelector('#localBuildFeedback');
+      if (!feedback) return;
+      feedback.textContent = String(text || '');
+      feedback.dataset.tone = tone || '';
+    }
+
+    async function hydrateLocalBuildButton(root, buildButton) {
+      if (!root || !buildButton) return;
+      buildButton.title = 'Builds local static poe.ninja JSON data.';
+      try {
+        const response = await fetch('/api/local/build-static', {
+          method: 'GET',
+          headers: { Accept: 'application/json' }
+        });
+        const payload = await response.json().catch(() => null);
+        if (!response.ok || !payload?.available) {
+          buildButton.disabled = true;
+          buildButton.textContent = 'Build Unavailable';
+          buildButton.title = 'Static build endpoint is not available in this server.';
+          setLocalBuildFeedback(root, 'Build endpoint unavailable', 'error');
+          return;
+        }
+        const steps = Array.isArray(payload.steps) && payload.steps.length
+          ? payload.steps.join(', ')
+          : 'scripts/update-data-ninja.js';
+        if (payload.busy) {
+          buildButton.disabled = true;
+          buildButton.textContent = 'Build Busy';
+          buildButton.title = `Static build already running (${steps}).`;
+          setLocalBuildFeedback(root, 'Build already running in background', 'busy');
+          return;
+        }
+        buildButton.title = `Builds local static data by running ${steps}.`;
+        setLocalBuildFeedback(root, 'Ready to build local static data', 'ready');
+      } catch (_err) {
+        buildButton.disabled = true;
+        buildButton.textContent = 'Build Unavailable';
+        buildButton.title = 'Could not reach the local static build endpoint.';
+        setLocalBuildFeedback(root, 'Could not reach build endpoint', 'error');
+      }
     }
 
     function renderLocalModeLinks() {
@@ -406,18 +446,29 @@
       if (!IS_LOCAL_HOST) return;
       const mode = currentMode();
       const override = modeOverride();
+      const defaultModeValue = defaultMode();
+      const autoLabel = defaultModeValue === 'api' ? 'Auto (API)' : 'Auto (Static)';
+      const summary = override
+        ? `Override: ${mode === 'static' ? 'Static files' : 'Live API'}`
+        : `Auto uses ${defaultModeValue === 'api' ? 'Live API' : 'Static files'}`;
       const root = document.createElement('div');
       root.id = 'localModeLinks';
       root.className = 'local-mode-links';
       root.innerHTML = `
-        <span class="local-mode-label">Local Mode: ${mode === 'static' ? 'Static' : 'API'}</span>
-        <a class="local-mode-link${override ? '' : ' is-active'}" href="${buildModeHref('default')}">Default</a>
-        <a class="local-mode-link${override === 'api' ? ' is-active' : ''}" href="${buildModeHref('api')}">API</a>
-        <a class="local-mode-link${override === 'static' ? ' is-active' : ''}" href="${buildModeHref('static')}">Static</a>
-        <button type="button" id="buildStaticData" class="local-mode-link local-mode-button">Build Static</button>
+        <div class="local-mode-row">
+          <span class="local-mode-label">Local Data: ${mode === 'static' ? 'Static' : 'API'}</span>
+          <a class="local-mode-link${override ? '' : ' is-active'}" href="${buildModeHref('default')}">${autoLabel}</a>
+          <a class="local-mode-link${override === 'static' ? ' is-active' : ''}" href="${buildModeHref('static')}">Static</a>
+          <button type="button" id="buildStaticData" class="local-mode-link local-mode-button">Build Static</button>
+        </div>
+        <div class="local-mode-meta">
+          <span id="localBuildFeedback" class="local-mode-feedback" data-tone="">Checking build status…</span>
+          <span class="local-mode-summary">${summary}</span>
+        </div>
       `;
       document.body.appendChild(root);
       const buildButton = root.querySelector('#buildStaticData');
+      hydrateLocalBuildButton(root, buildButton);
       if (buildButton) {
         buildButton.addEventListener('click', async () => {
           if (buildButton.disabled) return;
@@ -425,6 +476,7 @@
           const previousLabel = buildButton.textContent;
           buildButton.textContent = 'Building...';
           setStatus('Building static JSON files locally...');
+          setLocalBuildFeedback(root, 'Build running in background…', 'busy');
           try {
             const response = await fetch('/api/local/build-static', {
               method: 'POST',
@@ -437,21 +489,24 @@
             }
             const durationSec = Math.max(0, Number(payload?.durationMs || 0)) / 1000;
             setStatus(`Static JSON build complete in ${durationSec.toFixed(1)}s. Reloading prices...`);
+            setLocalBuildFeedback(root, `Build complete in ${durationSec.toFixed(1)}s`, 'ready');
             await loadLeagues(true);
             await fetchPrices(true);
           } catch (err) {
             const message = err?.message || 'Build failed';
             setStatus(`Static JSON build failed: ${message}`, true);
+            setLocalBuildFeedback(root, `Build failed: ${message}`, 'error');
           } finally {
             buildButton.textContent = previousLabel;
             buildButton.disabled = false;
+            hydrateLocalBuildButton(root, buildButton);
           }
         });
       }
     }
 
     function getStaticDataRoot() {
-      return `${STATIC_DATA_BASE}/${state.priceSource}`;
+      return `${STATIC_DATA_BASE}/poe-ninja`;
     }
 
     function getStaticLeaguesUrl() {
@@ -548,8 +603,8 @@
 
     buildLeagueSelect();
 
-    priceModeInput.value = state.priceMode;
     currencyInput.value = state.displayCurrency;
+    updateDisplayCurrencyOptions();
     if (priceSourceInput) priceSourceInput.value = state.priceSource;
     if (DEFAULT_LEAGUE && leagueSelect?.options?.length) {
       applyLeagueSelection(DEFAULT_LEAGUE, { allowFallback: false });
@@ -624,6 +679,25 @@
     function getChaosPerDivine() {
       const stored = Number(localStorage.getItem('poeBossDivineChaos') || '');
       return state.divineChaos || (Number.isFinite(stored) && stored > 0 ? stored : null);
+    }
+
+    function formatChaosPerDivineLabel(value) {
+      if (!Number.isFinite(value) || value <= 0) return null;
+      return value >= 100 ? String(Math.round(value)) : formatInputNumber(value, 1);
+    }
+
+    function updateDisplayCurrencyOptions() {
+      if (!currencyInput) return;
+      const chaosOption = currencyInput.querySelector('option[value="chaos"]');
+      const divineOption = currencyInput.querySelector('option[value="divine"]');
+      const rate = getChaosPerDivine();
+      const label = formatChaosPerDivineLabel(rate);
+      if (chaosOption) {
+        chaosOption.textContent = label ? `Chaos (${label}/div)` : 'Chaos';
+      }
+      if (divineOption) {
+        divineOption.textContent = label ? `Divine (${label}c)` : 'Divine';
+      }
     }
 
     function defaultMinValueThreshold() {
@@ -801,12 +875,6 @@
       });
     }
 
-    priceModeInput.addEventListener('change', () => {
-      state.priceMode = priceModeInput.value;
-      saveSharedSetting('priceMode', state.priceMode);
-      safeRender();
-    });
-
     if (refreshButton) {
       refreshButton.addEventListener('click', async () => {
         state.leagueId = leagueSelect.value;
@@ -849,7 +917,6 @@
         localStorage.removeItem(searchKeyStorage);
 
         applyLeagueSelection(previousLeague, { persist: true });
-        state.priceMode = BASE_PRICE_MODE;
         state.displayCurrency = BASE_DISPLAY_CURRENCY;
         state.minValueFilter = BASE_MIN_VALUE_ENABLED;
         state.minValueWasDefault = true;
@@ -860,16 +927,13 @@
         state.sortDir = BASE_SORT_DIR;
         state.searchQuery = '';
         state.debug = BASE_DEBUG;
-        saveSharedSetting('priceMode', state.priceMode);
         saveSharedSetting('displayCurrency', state.displayCurrency);
         saveSharedSetting('debug', state.debug);
         saveSharedSetting('priceSource', state.priceSource);
 
-        priceModeInput.value = state.priceMode;
         currencyInput.value = state.displayCurrency;
         minValueToggle.checked = state.minValueFilter;
         minProbToggle.checked = state.minProbabilityFilter;
-        debugEl.open = state.debug;
         if (searchInput) searchInput.value = '';
         updateMinValueInput();
         updateMinProbabilityInput();
@@ -887,12 +951,13 @@
     }
 
     function setDebug(text) {
+      if (!debugContent) return;
       if (!state.debug) {
-        debugEl.classList.add('is-disabled');
-        debugContent.textContent = 'Debug is disabled. Open the Debug panel to view diagnostics.';
+        debugDialog?.classList.add('is-disabled');
+        debugContent.textContent = 'Debug is disabled. Use the Debug link in the footer to enable diagnostics.';
         return;
       }
-      debugEl.classList.remove('is-disabled');
+      debugDialog?.classList.remove('is-disabled');
       debugContent.textContent = text;
     }
 
@@ -1118,10 +1183,30 @@
     function categoriesForTypes(types) {
       const categories = new Set();
       (types || []).forEach((type) => {
-        const mapped = WATCH_CATEGORY_MAP[type] || [];
+        const mapped = PRICE_CATEGORY_MAP[type] || [];
         mapped.forEach((category) => categories.add(category));
       });
       return Array.from(categories);
+    }
+
+    function watchMatchScore(match) {
+      if (!match || typeof match !== 'object') return 0;
+      let score = 0;
+      if (match.icon) score += 8;
+      if (match.detailsId) score += 4;
+      if (match.id) score += 2;
+      const listingCount = Number(match.listingCount);
+      if (Number.isFinite(listingCount)) score += 1;
+      return score;
+    }
+
+    function socketLinkCount(match) {
+      const explicit = Number(match?.links);
+      if (Number.isFinite(explicit)) return explicit;
+      const detailsId = String(match?.detailsId || match?.id || '').trim().toLowerCase();
+      const suffix = detailsId.match(/-(\d)l$/);
+      if (suffix) return Number(suffix[1]);
+      return null;
     }
 
     function findWatchMatches(item, useTypeFilter = true) {
@@ -1147,10 +1232,12 @@
       }
 
       const unlinked = matches.filter((match) => {
-        const links = Number(match?.linkCount);
+        const links = socketLinkCount(match);
         return !Number.isFinite(links) || links === 0;
       });
       if (unlinked.length) matches = unlinked;
+
+      matches.sort((a, b) => watchMatchScore(b) - watchMatchScore(a));
 
       return matches;
     }
@@ -1161,17 +1248,13 @@
     }
 
     function itemPageUrl(item) {
-      if (state.priceSource !== 'poe-watch') return null;
       const match = findWatchLine(item, true) || findWatchLine(item, false);
-      if (!match) return null;
-      const league = state.pricingLeague || state.leagueText || leagueTextFor(state.leagueId);
-      const leagueParam = league ? `?league=${encodeURIComponent(league)}` : '';
-      if (match.id != null) {
-        return `${WATCH_DETAILS_BASE}/${encodeURIComponent(match.id)}${leagueParam}`;
-      }
-      const slug = slugifyItem(item.alias || item.name);
-      if (!slug) return null;
-      return `${WATCH_DETAILS_BASE}/${slug}${leagueParam}`;
+      const detailsId = String(match?.detailsId || match?.id || '').trim();
+      const sourceType = String(match?.sourceType || '').trim();
+      const route = NINJA_DETAIL_ROUTE_MAP[sourceType];
+      const leagueSlug = slugifyLeague(state.leagueText || leagueTextFor(state.leagueId) || state.pricingLeague || '');
+      if (!detailsId || !route || !leagueSlug) return null;
+      return `${NINJA_ECONOMY_BASE}/${encodeURIComponent(leagueSlug)}/${route}/${encodeURIComponent(detailsId)}`;
     }
 
     function wikiUrlForItem(item) {
@@ -1234,7 +1317,14 @@
         : '';
       const variant = item.variant ? `<span class="item-meta-text">(${item.variant})</span>` : '';
       const note = item.note ? `<span class="item-meta-text">${item.note}</span>` : '';
-      const meta = [wiki, trade, variant, note].filter(Boolean).join(' <span class="item-sep">·</span> ');
+      const confidenceCount = Number(item.confidenceCount);
+      const confidenceLabel = Number.isFinite(confidenceCount)
+        ? `${confidenceCount} ${confidenceCount === 1 ? 'listing' : 'listings'}`
+        : '';
+      const lowConfidenceNote = item.lowConfidence
+        ? `<span class="item-meta-warning">low confidence${confidenceLabel ? ` (${confidenceLabel}, threshold ${LOW_CONFIDENCE_LISTING_THRESHOLD})` : ''}</span>`
+        : '';
+      const meta = [wiki, trade, variant, note, lowConfidenceNote].filter(Boolean).join(' <span class="item-sep">·</span> ');
       if (!meta) return `<span class="item-label"><span class="item-primary">${name}</span></span>`;
       return `<span class="item-label"><span class="item-primary">${name}</span><span class="item-meta">${meta}</span></span>`;
     }
@@ -1371,7 +1461,7 @@
     }
 
     function priceStrategy(item) {
-      return item.strategy || state.priceMode || 'min';
+      return item.strategy || 'min';
     }
 
     function priceFieldForStrategy(strategy) {
@@ -1921,13 +2011,11 @@
 
       if (state.debug) {
         const counts = state.priceData?.counts || {};
-        const categoryOrder = ['currency', 'fragment', 'maps', 'armour', 'weapon', 'accessory', 'jewels', 'flask', 'card'];
+        const categoryOrder = ['currency', 'fragment', 'invitation', 'maps', 'armour', 'weapon', 'accessory', 'jewels', 'flask', 'card'];
         const loadedTypes = categoryOrder.filter((key) => counts[key]).map((key) => `${key}: ${counts[key]}`);
         const fetchSourceLabels = {
           static: 'static compact dataset',
           cache: 'browser local price cache',
-          ratios: 'poe.watch exchange ratios',
-          categories: 'poe.watch categories index',
           'supplement:spirit-beasts': 'spirit beast supplement (primary source -> poe.ninja)',
           'supplement:spirit-beasts-api': 'spirit beast supplement (static source -> poe.ninja live API)',
           'exchange:Beast': 'poe.ninja exchange Beast lookup',
@@ -1995,21 +2083,17 @@
         const leagueSourceKey = String(state.leagueSource || 'unknown');
         const leagueSourceMap = {
           static: `static file (${getStaticLeaguesUrl()})`,
-          cache: `browser localStorage cache (${leagueCacheKey}; cached from ${WATCH_API_BASE}/leagues)`,
-          api: `live API (${WATCH_API_BASE}/leagues)`,
+          cache: `browser localStorage cache (${leagueCacheKey}; cached from https://api.pathofexile.com/leagues)`,
+          api: 'live API (https://api.pathofexile.com/leagues)',
           fallback: 'fallback (no league dataset loaded; using existing/default league selection)'
         };
         const leagueSourceLabel = leagueSourceMap[leagueSourceKey] || leagueSourceKey;
-        const priceSourceLabel = state.priceSource === 'poe-ninja'
-          ? 'poe.ninja (selected primary source)'
-          : 'poe.watch (selected primary source)';
+        const priceSourceLabel = 'poe.ninja';
         let pricingBaseLabel = 'unknown';
         if (state.watchBase === 'cache') {
           pricingBaseLabel = `browser localStorage cache (${priceCacheKey})`;
         } else if (state.watchBase === `${state.priceSource}:static`) {
           pricingBaseLabel = `static files (${getStaticPricesBase()}/<league>/compact.json)`;
-        } else if (state.watchBase === WATCH_API_BASE) {
-          pricingBaseLabel = `live API (${WATCH_API_BASE})`;
         } else if (state.watchBase === NINJA_API_BASE) {
           pricingBaseLabel = `live API (${NINJA_API_BASE})`;
         } else if (state.watchBase) {
@@ -2024,7 +2108,6 @@
         debugLines.push(`  Pricing league: ${state.pricingLeague || 'unknown'}`);
         debugLines.push(`  Price source: ${priceSourceLabel}`);
         debugLines.push(`  Pricing base: ${pricingBaseLabel}`);
-        debugLines.push(`  Price mode: ${state.priceMode}`);
         debugLines.push(`  Display currency: ${state.displayCurrency}`);
         debugLines.push(`  Divine ratio: ${displayRate}`);
         debugLines.push('');
@@ -2257,16 +2340,10 @@
         safeRender();
         return;
       }
-      return pricingService.fetchPrices(forceRefresh);
+      const result = await pricingService.fetchPrices(forceRefresh);
+      updateDisplayCurrencyOptions();
+      return result;
     }
-
-    debugEl.open = DEFAULT_DEBUG;
-    state.debug = Boolean(debugEl.open);
-    debugEl.addEventListener('toggle', () => {
-      state.debug = Boolean(debugEl.open);
-      saveSharedSetting('debug', state.debug);
-      safeRender();
-    });
 
     copyDebug.addEventListener('click', async () => {
       try {
@@ -2276,6 +2353,66 @@
         setStatus('Unable to copy debug output.', true);
       }
     });
+
+    if (changelogDialog && openChangelog && closeChangelog) {
+      openChangelog.addEventListener('click', () => {
+        if (typeof changelogDialog.showModal === 'function') {
+          changelogDialog.showModal();
+        } else {
+          changelogDialog.setAttribute('open', 'open');
+        }
+      });
+
+      closeChangelog.addEventListener('click', () => {
+        if (typeof changelogDialog.close === 'function') {
+          changelogDialog.close();
+        } else {
+          changelogDialog.removeAttribute('open');
+        }
+      });
+
+      changelogDialog.addEventListener('click', (event) => {
+        if (event.target !== changelogDialog) return;
+        if (typeof changelogDialog.close === 'function') {
+          changelogDialog.close();
+        } else {
+          changelogDialog.removeAttribute('open');
+        }
+      });
+    }
+
+    if (debugDialog && openDebug && closeDebug) {
+      openDebug.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (!state.debug) {
+          state.debug = true;
+          saveSharedSetting('debug', state.debug);
+          safeRender();
+        }
+        if (typeof debugDialog.showModal === 'function') {
+          debugDialog.showModal();
+        } else {
+          debugDialog.setAttribute('open', 'open');
+        }
+      });
+
+      closeDebug.addEventListener('click', () => {
+        if (typeof debugDialog.close === 'function') {
+          debugDialog.close();
+        } else {
+          debugDialog.removeAttribute('open');
+        }
+      });
+
+      debugDialog.addEventListener('click', (event) => {
+        if (event.target !== debugDialog) return;
+        if (typeof debugDialog.close === 'function') {
+          debugDialog.close();
+        } else {
+          debugDialog.removeAttribute('open');
+        }
+      });
+    }
 
     async function init() {
       renderLocalModeLinks();

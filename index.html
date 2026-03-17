@@ -17,17 +17,27 @@
   </script>
 </head>
 <body>
-  <div class="wrap">
-    <header>
+  <nav class="top-nav" aria-label="Primary">
+    <div class="top-nav-inner">
+      <div class="top-nav-brand-block">
+        <a class="top-nav-brand" href="./">Path of Profits</a>
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.3</button>
+      </div>
+      <div class="top-nav-center">
+        <a class="top-nav-link is-active" href="./">Bossing</a>
+      </div>
+      <div class="top-nav-meta chips" aria-label="Site metadata">
+        <span class="chip">Prices: poe.ninja</span>
+      </div>
+    </div>
+  </nav>
+  <header class="page-header">
+    <div class="page-header-inner">
       <div class="header-row">
         <div class="header-left">
           <h1>POE Bossing Profits</h1>
           <div class="subtitle">
-            Estimate boss-run value using community drop rates and live poe.watch prices. Focuses on entry items and boss-specific drops only.
-          </div>
-          <div class="chips">
-            <span class="chip">Version 0.2.13</span>
-            <span class="chip">Prices: poe.watch, poe.ninja</span>
+            Estimate boss-run value using community drop rates and live poe.ninja prices. Focuses on entry items and boss-specific drops only.
           </div>
         </div>
         <!--
@@ -35,15 +45,16 @@
           <div class="control-compact header-control">
             <label for="priceSource">Price Source</label>
             <select id="priceSource">
-              <option value="poe-watch">poe.watch</option>
               <option value="poe-ninja">poe.ninja</option>
             </select>
           </div>
         </div>
         -->
       </div>
-    </header>
+    </div>
+  </header>
 
+  <div class="wrap">
     <section class="panel">
       <div class="control-grid">
         <div class="control-compact">
@@ -55,17 +66,6 @@
           <select id="displayCurrency">
             <option value="chaos" selected>Chaos</option>
             <option value="divine">Divine</option>
-          </select>
-        </div>
-        <div class="control-compact">
-          <div class="label-row">
-            <label for="priceMode">Variant Pricing</label>
-            <span class="info-dot has-tooltip" data-tooltip="Chooses min, average, or max price for items with multiple variants. Example: Atziri's Splendour has 9 variants, so avg takes the mean across them." tabindex="0" aria-label="Chooses min, average, or max price for items with multiple variants. Example: Atziri's Splendour has 9 variants, so avg takes the mean across them.">?</span>
-          </div>
-          <select id="priceMode">
-            <option value="min">Min (Conservative)</option>
-            <option value="avg" selected>Average</option>
-            <option value="max">Max (Optimistic)</option>
           </select>
         </div>
         <div>
@@ -107,9 +107,9 @@
           </div>
           <button id="resetAll" class="button-secondary" type="button">Reset</button>
         </div>
-        <div class="control-compact">
+        <div class="control-compact control-refresh">
           <label aria-hidden="true">&nbsp;</label>
-          <button id="refresh" class="button-wide has-tooltip" data-tooltip="Refresh reloads the cached data file (bypasses browser cache). Updated timestamps reflect when poe.watch last updated, not when you click refresh." aria-label="Refresh reloads the cached data file (bypasses browser cache). Updated timestamps reflect when poe.watch last updated, not when you click refresh.">Refresh Prices</button>
+          <button id="refresh" class="button-wide has-tooltip" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh Prices</button>
         </div>
       </div>
       <div id="status" class="status">Ready.</div>
@@ -131,44 +131,46 @@
     </section>
 
     <section id="bossList" class="boss-list"></section>
+  </div>
 
-    <section class="footer">
-      <div class="flex-row">
-        <div>
-          <div class="section-title">Model Assumptions</div>
-          <div class="muted">
-            Drop rates are taken from PoE Wiki estimated tables (community data). Unique drops are modeled as exclusive pools when probabilities sum to 100, and additional drops are treated as independent rolls. Prices are from poe.watch and can be manually overridden.
-          </div>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <section class="footer-card" aria-labelledby="modelAssumptionsTitle">
+        <div class="footer-card-kicker">Model Assumptions</div>
+        <div id="modelAssumptionsTitle" class="footer-card-copy">
+          Drop rates are taken from PoE Wiki estimated tables (community data). Unique drops are modeled as exclusive pools when probabilities sum to 100, and additional drops are treated as independent rolls. Prices are from poe.ninja and can be manually overridden.
         </div>
+      </section>
+      <div class="footer-legal">
+        Path of Exile is a registered trademark of Grinding Gear Games Limited. poe.ninja and any related marks, names, and data services are the property of their respective owners. Path of Profits is an independent fan project and is not affiliated with, endorsed by, sponsored by, or associated with Grinding Gear Games Limited, poe.ninja, or any of their parent companies, subsidiaries, or affiliates.
       </div>
-    </section>
-    <section class="footer">
-      <div class="muted">
-        Tweet questions and complaints to <a class="link" href="https://x.com/jonschr" target="_blank" rel="noreferrer">@jonschr</a>.
+      <div class="site-footer-topline muted">
+        <span>Tweet questions and complaints to <a class="link" href="https://x.com/jonschr" target="_blank" rel="noreferrer">@jonschr</a></span>
+        <a id="openDebug" class="footer-inline-link" href="#debugDialog" aria-haspopup="dialog" aria-controls="debugDialog">Debug</a>
       </div>
-    </section>
-    <section class="meta-panels">
-      <details id="debug" class="meta-panel debug-panel">
-        <summary class="meta-summary">
-          <span>Debug</span>
-        </summary>
-        <section class="meta-body">
-          <div class="debug-header">
-            <span>Debug Output</span>
-            <button id="copyDebug" class="icon-button" title="Copy debug output" aria-label="Copy debug output">
-              <svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="9" y="9" width="13" height="13" rx="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-            </button>
+    </div>
+  </footer>
+
+  <dialog id="changelogDialog" class="lightbox-dialog" aria-labelledby="changelogDialogTitle">
+      <div class="lightbox-shell">
+        <div class="lightbox-header">
+          <div>
+            <div class="lightbox-kicker">Changelog</div>
+            <h2 id="changelogDialogTitle" class="lightbox-title">Version history</h2>
           </div>
-          <pre id="debugContent" class="debug-content"></pre>
-        </section>
-      </details>
-      <details class="meta-panel">
-        <summary class="meta-summary">Changelog</summary>
-        <section class="meta-body">
+          <button type="button" id="closeChangelog" class="lightbox-close" aria-label="Close changelog">Close</button>
+        </div>
+        <div class="lightbox-body">
           <div class="changelog-content">
+            <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.3</span><span>2026-03-17</span></div>
+            <ul class="changelog-list">
+              <li>Removed the active poe.watch pricing path in favor of poe.ninja plus official Path of Exile league discovery.</li>
+              <li>Expanded poe.ninja ingestion for invitations, fragments, maps, gems, exchange-backed categories, and richer metadata intended for future pages.</li>
+              <li>Fixed inflated pricing caused by linked 5L and 6L variants being averaged into base unique item prices, and surfaced low-confidence pricing notes in the UI.</li>
+              <li>Reworked the page chrome with a shared top nav/footer treatment, changelog and debug lightboxes, footer legal copy, and a simpler control strip that removes the global variant-pricing dropdown.</li>
+            </ul>
+            </article>
             <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.2.13</span><span>2026-03-09</span></div>
             <ul class="changelog-list">
@@ -293,12 +295,36 @@
             </ul>
             </article>
           </div>
-        </section>
-      </details>
-    </section>
-  </div>
+        </div>
+      </div>
+    </dialog>
+
+  <dialog id="debugDialog" class="lightbox-dialog debug-dialog" aria-labelledby="debugDialogTitle">
+      <div class="lightbox-shell">
+        <div class="lightbox-header">
+          <div>
+            <div class="lightbox-kicker">Debug</div>
+            <h2 id="debugDialogTitle" class="lightbox-title">Diagnostics</h2>
+          </div>
+          <button type="button" id="closeDebug" class="lightbox-close" aria-label="Close debug dialog">Close</button>
+        </div>
+        <div class="lightbox-body">
+          <div class="debug-header">
+            <span>Debug Output</span>
+            <button id="copyDebug" class="icon-button" title="Copy debug output" aria-label="Copy debug output">
+              <svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+          <pre id="debugContent" class="debug-content"></pre>
+        </div>
+      </div>
+  </dialog>
 
   <script src="modules/trade.js" defer></script>
+  <script src="modules/ninja-types.js" defer></script>
   <script src="modules/settings-store.js" defer></script>
   <script src="modules/http-client.js" defer></script>
   <script src="modules/cache-store.js" defer></script>

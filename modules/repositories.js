@@ -35,7 +35,7 @@
       return httpClient.getJson(url, { cache: forceRefresh ? 'no-store' : 'default' });
     }
 
-    async function fetchWatchLeagues(url, { forceRefresh = false } = {}) {
+    async function fetchApiLeagues(url, { forceRefresh = false } = {}) {
       const options = forceRefresh ? { cache: 'no-store' } : {};
       return httpClient.getJson(url, options);
     }
@@ -54,7 +54,7 @@
 
     return Object.freeze({
       fetchStaticLeagues,
-      fetchWatchLeagues,
+      fetchApiLeagues,
       loadCachedApiLeagues,
       saveCachedApiLeagues
     });

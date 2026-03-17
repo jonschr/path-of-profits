@@ -5,15 +5,21 @@
     ['phrecia 2.0', '2026-04-23T21:00:00Z'],
     ['hardcore phrecia 2.0', '2026-04-23T21:00:00Z']
   ]);
+  const OFFICIAL_LEAGUES_URL = 'https://api.pathofexile.com/leagues';
+  const ETERNAL_LEAGUE_KEYS = new Set(['standard', 'hardcore']);
+  const FALLBACK_LEAGUES = [
+    'Standard',
+    'Hardcore',
+    'Mirage',
+    'Hardcore Mirage'
+  ];
 
   function createLeagueService({
     state,
     leagueSelectEl,
     defaultLeague = '',
     leagueStorageKey = 'poeBossLeague',
-    usingStaticData,
     getStaticLeaguesUrl,
-    watchApiBase,
     normalizeLeagueKey,
     withCacheBust,
     parseTimestamp,
@@ -115,6 +121,10 @@
       return match ? match.watch || match.id || match.text : id;
     }
 
+    function leagueName(option) {
+      return String(option?.text || option?.id || option?.watch || '');
+    }
+
     function loadLeagueCache() {
       if (!repo) return null;
       return repo.loadCachedApiLeagues(leagueCacheTtlMs);
@@ -149,10 +159,12 @@
         endDate = assumedEndDate;
       }
       const now = Date.now();
-      let active = entry.active ?? entry.isActive ?? entry.enabled ?? entry.current;
+      let active = entry.active ?? entry.isActive ?? entry.enabled ?? entry.current ?? entry?.category?.current;
       if (active == null && endDate) {
         active = endDate.getTime() >= now;
       }
+      const normalizedName = watch.toLowerCase();
+      const inferredHardcore = normalizedName.includes('hardcore') || normalizedName.startsWith('hc ');
       return {
         id: watch,
         text: String(display || watch),
@@ -160,19 +172,71 @@
         active,
         upcoming: entry.upcoming ?? entry.isUpcoming,
         event: entry.event ?? entry.isEvent,
-        hardcore: entry.hardcore ?? entry.isHardcore,
+        hardcore: entry.hardcore ?? entry.isHardcore ?? inferredHardcore,
         startDate,
         endDate
       };
     }
 
-    function shouldIgnoreLeague(option) {
-      const raw = String(option?.text || option?.id || option?.watch || '');
-      const normalized = raw.toLowerCase();
-      if (normalized.includes('ruthless')) return true;
-      if (normalized.includes('hardcore') && normalized.includes('phrecia')) return true;
-      if (normalized.includes('solo self-found') || /\bssf\b/.test(normalized)) return true;
-      return false;
+    function isSoloSelfFoundLeague(option) {
+      const normalized = leagueName(option).toLowerCase();
+      return normalized.includes('solo self-found') || /\bssf\b/.test(normalized);
+    }
+
+    function isRuthlessLeague(option) {
+      return leagueName(option).toLowerCase().includes('ruthless');
+    }
+
+    function isEternalLeague(option) {
+      return ETERNAL_LEAGUE_KEYS.has(normalizeLeagueCompare(option?.watch || option?.id || option?.text));
+    }
+
+    function compareLeaguePriority(a, b) {
+      const aEternal = isEternalLeague(a);
+      const bEternal = isEternalLeague(b);
+      if (aEternal !== bEternal) return aEternal ? -1 : 1;
+      if (aEternal && bEternal) {
+        const aKey = normalizeLeagueCompare(a?.watch || a?.id || a?.text);
+        const bKey = normalizeLeagueCompare(b?.watch || b?.id || b?.text);
+        if (aKey === 'standard' && bKey !== 'standard') return -1;
+        if (bKey === 'standard' && aKey !== 'standard') return 1;
+      }
+      const aHardcore = Boolean(a?.hardcore);
+      const bHardcore = Boolean(b?.hardcore);
+      if (aHardcore !== bHardcore) return aHardcore ? 1 : -1;
+      const aStart = a?.startDate ? a.startDate.getTime() : 0;
+      const bStart = b?.startDate ? b.startDate.getTime() : 0;
+      if (aStart !== bStart) return bStart - aStart;
+      return leagueName(a).localeCompare(leagueName(b));
+    }
+
+    function pickVisibleLeagues(options) {
+      const eternal = options.filter((option) => isEternalLeague(option));
+      const challengeCandidates = options.filter((option) => {
+        return !isEternalLeague(option) && !isRuthlessLeague(option) && !isSoloSelfFoundLeague(option);
+      });
+      let current = [];
+      if (challengeCandidates.length) {
+        const currentFlagged = challengeCandidates.filter((option) => option?.active === true);
+        const source = currentFlagged.length ? currentFlagged : challengeCandidates;
+        const latestStart = source.reduce((best, option) => {
+          const start = option?.startDate ? option.startDate.getTime() : 0;
+          return Math.max(best, start);
+        }, 0);
+        current = source.filter((option) => {
+          const start = option?.startDate ? option.startDate.getTime() : 0;
+          return start === latestStart;
+        });
+      }
+      return [...eternal, ...current].sort(compareLeaguePriority);
+    }
+
+    function fallbackLeagueGroups() {
+      const options = FALLBACK_LEAGUES
+        .map((name) => normalizeLeagueEntry({ name, active: true }))
+        .filter(Boolean)
+        .sort(compareLeaguePriority);
+      return options.length ? [{ label: 'Leagues', options }] : null;
     }
 
     function normalizeLeagueGroups(data) {
@@ -193,73 +257,21 @@
         if (!key || seen.has(key)) return false;
         seen.add(key);
         if (option.active === false) return false;
-        if (shouldIgnoreLeague(option)) return false;
+        if (isRuthlessLeague(option)) return false;
+        if (isSoloSelfFoundLeague(option)) return false;
         return true;
       });
       if (!options.length) return null;
-      options.sort((a, b) => {
-        const aStart = a.startDate ? a.startDate.getTime() : 0;
-        const bStart = b.startDate ? b.startDate.getTime() : 0;
-        if (aStart !== bStart) return bStart - aStart;
-        return String(a.text || a.id).localeCompare(String(b.text || b.id));
-      });
-      return [{ label: 'Leagues', options }];
-    }
-
-    function buildWatchLeagueEndpoints(base) {
-      const root = String(base || '').replace(/\/$/, '');
-      if (!root) return [];
-      return [`${root}/leagues`];
+      const visible = pickVisibleLeagues(options);
+      return visible.length ? [{ label: 'Leagues', options: visible }] : null;
     }
 
     async function loadLeagues(forceRefresh = false) {
-      if (usingStaticData()) {
+      if (global.location?.protocol !== 'file:') {
         try {
-          const url = withCacheBust(getStaticLeaguesUrl(), forceRefresh);
+          const url = withCacheBust(OFFICIAL_LEAGUES_URL, forceRefresh);
           const response = repo
-            ? await repo.fetchStaticLeagues(url, { forceRefresh })
-            : await (async () => {
-              const resp = await fetchImpl(url, { cache: forceRefresh ? 'no-store' : 'default' });
-              if (!resp.ok) throw new Error(String(resp.status));
-              return { data: await resp.json(), response: resp };
-            })();
-          const data = response.data;
-          const raw = data?.leagues ?? data?.items ?? data?.data ?? data;
-          const groups = normalizeLeagueGroups(raw);
-          if (!groups) throw new Error('empty');
-          leagues = groups;
-          state.leagueSource = 'static';
-          state.leagueUpdatedAt = parseTimestamp(data?.generatedAt || data?.updatedAt || data?.fetchedAt);
-          buildLeagueSelect();
-          applyLeagueSelection(state.leagueId || defaultLeague, { persist: true, allowFallback: false });
-          return true;
-        } catch (err) {
-          state.leagueSource = 'static';
-          state.leagueUpdatedAt = null;
-          if (state.debug) consoleImpl.warn?.('Static league load failed', err);
-          return false;
-        }
-      }
-
-      if (global.location?.protocol === 'file:') return false;
-      const cached = loadLeagueCache();
-      if (cached?.data) {
-        const cachedGroups = normalizeLeagueGroups(cached.data);
-        if (cachedGroups?.length) {
-          leagues = cachedGroups;
-          state.leagueSource = 'cache';
-          state.leagueUpdatedAt = cached.fetchedAt ? parseTimestamp(cached.fetchedAt) : null;
-          buildLeagueSelect();
-          applyLeagueSelection(state.leagueId || defaultLeague, { persist: true, allowFallback: false });
-          return true;
-        }
-      }
-
-      const endpoints = buildWatchLeagueEndpoints(watchApiBase);
-      for (const url of endpoints) {
-        try {
-          const response = repo
-            ? await repo.fetchWatchLeagues(url, { forceRefresh })
+            ? await repo.fetchApiLeagues(url, { forceRefresh })
             : await (async () => {
               const resp = await fetchImpl(url, forceRefresh ? { cache: 'no-store' } : {});
               if (!resp.ok) throw new Error(String(resp.status));
@@ -276,12 +288,52 @@
           applyLeagueSelection(state.leagueId || defaultLeague, { persist: true, allowFallback: false });
           return true;
         } catch (err) {
-          // Try next endpoint.
+          if (state.debug) consoleImpl.warn?.('Official league load failed', err);
         }
       }
+
+      const cached = loadLeagueCache();
+      if (cached?.data) {
+        const cachedGroups = normalizeLeagueGroups(cached.data);
+        if (cachedGroups?.length) {
+          leagues = cachedGroups;
+          state.leagueSource = 'cache';
+          state.leagueUpdatedAt = cached.fetchedAt ? parseTimestamp(cached.fetchedAt) : null;
+          buildLeagueSelect();
+          applyLeagueSelection(state.leagueId || defaultLeague, { persist: true, allowFallback: false });
+          return true;
+        }
+      }
+
+      try {
+        const url = withCacheBust(getStaticLeaguesUrl(), forceRefresh);
+        const response = repo
+          ? await repo.fetchStaticLeagues(url, { forceRefresh })
+          : await (async () => {
+            const resp = await fetchImpl(url, { cache: forceRefresh ? 'no-store' : 'default' });
+            if (!resp.ok) throw new Error(String(resp.status));
+            return { data: await resp.json(), response: resp };
+          })();
+        const data = response.data;
+        const raw = data?.leagues ?? data?.items ?? data?.data ?? data;
+        const groups = normalizeLeagueGroups(raw);
+        if (!groups) throw new Error('empty');
+        leagues = groups;
+        state.leagueSource = 'static';
+        state.leagueUpdatedAt = parseTimestamp(data?.generatedAt || data?.updatedAt || data?.fetchedAt);
+        buildLeagueSelect();
+        applyLeagueSelection(state.leagueId || defaultLeague, { persist: true, allowFallback: false });
+        return true;
+      } catch (err) {
+        if (state.debug) consoleImpl.warn?.('Static league load failed', err);
+      }
+
+      leagues = fallbackLeagueGroups() || [];
       state.leagueSource = 'fallback';
       state.leagueUpdatedAt = null;
-      return false;
+      buildLeagueSelect();
+      applyLeagueSelection(state.leagueId || defaultLeague, { persist: true });
+      return Boolean(leagues.length);
     }
 
     function isDisfavoredLeague(option) {

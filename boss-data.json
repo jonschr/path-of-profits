@@ -8,7 +8,7 @@
         "name": "Incandescent Invitation",
         "qty": 1,
         "types": [
-          "Invitations"
+          "Invitation"
         ]
       }
     ],
@@ -201,7 +201,7 @@
         "name": "Screaming Invitation",
         "qty": 1,
         "types": [
-          "Invitations"
+          "Invitation"
         ]
       }
     ],
@@ -1329,7 +1329,7 @@
           },
           {
             "name": "Triumvirate Authority",
-            "p": null,
+            "p": 0.049,
             "types": [
               "UniqueAccessory"
             ]
@@ -1553,7 +1553,10 @@
     "entry": [
       {
         "name": "Cortex",
-        "qty": 1
+        "qty": 1,
+        "types": [
+          "Map"
+        ]
       }
     ],
     "groups": [
@@ -1591,7 +1594,10 @@
     "entry": [
       {
         "name": "Synthesising Fragment",
-        "qty": 5
+        "qty": 5,
+        "types": [
+          "Fragment"
+        ]
       }
     ],
     "groups": [
@@ -1646,7 +1652,10 @@
     "entry": [
       {
         "name": "Polaric Invitation",
-        "qty": 1
+        "qty": 1,
+        "types": [
+          "Invitation"
+        ]
       }
     ],
     "groups": [
@@ -1656,15 +1665,24 @@
         "items": [
           {
             "name": "Polaric Devastation",
-            "p": 0.03
+            "p": 0.03,
+            "types": [
+              "UniqueAccessory"
+            ]
           },
           {
             "name": "Sudden Dawn",
-            "p": 0.03
+            "p": 0.03,
+            "types": [
+              "UniqueArmour"
+            ]
           },
           {
             "name": "The Eternal Struggle",
-            "p": 0.05
+            "p": 0.05,
+            "types": [
+              "UniqueAccessory"
+            ]
           },
           {
             "name": "Eldritch Orb of Annulment",
@@ -1689,11 +1707,17 @@
           },
           {
             "name": "Grand Eldritch Ember",
-            "p": 0.12
+            "p": 0.12,
+            "types": [
+              "Currency"
+            ]
           },
           {
             "name": "Greater Eldritch Ember",
-            "p": 0.12
+            "p": 0.12,
+            "types": [
+              "Currency"
+            ]
           }
         ]
       }
@@ -1712,7 +1736,10 @@
     "entry": [
       {
         "name": "Writhing Invitation",
-        "qty": 1
+        "qty": 1,
+        "types": [
+          "Invitation"
+        ]
       }
     ],
     "groups": [
@@ -1722,19 +1749,31 @@
         "items": [
           {
             "name": "Choking Guilt",
-            "p": 0.005
+            "p": 0.005,
+            "types": [
+              "UniqueAccessory"
+            ]
           },
           {
             "name": "Ceaseless Feast",
-            "p": 0.03
+            "p": 0.03,
+            "types": [
+              "UniqueArmour"
+            ]
           },
           {
             "name": "Black Zenith",
-            "p": 0.03
+            "p": 0.03,
+            "types": [
+              "UniqueArmour"
+            ]
           },
           {
             "name": "The Eternal Struggle",
-            "p": 0.05
+            "p": 0.05,
+            "types": [
+              "UniqueAccessory"
+            ]
           },
           {
             "name": "Eldritch Orb of Annulment",
@@ -1759,11 +1798,17 @@
           },
           {
             "name": "Grand Eldritch Ichor",
-            "p": 0.12
+            "p": 0.12,
+            "types": [
+              "Currency"
+            ]
           },
           {
             "name": "Greater Eldritch Ichor",
-            "p": 0.12
+            "p": 0.12,
+            "types": [
+              "Currency"
+            ]
           }
         ]
       }
@@ -2166,7 +2211,10 @@
           },
           {
             "name": "Orb of Unravelling",
-            "p": 0.33
+            "p": 0.33,
+            "types": [
+              "Currency"
+            ]
           }
         ]
       }
@@ -2222,7 +2270,10 @@
           },
           {
             "name": "Orb of Unravelling",
-            "p": 0.33
+            "p": 0.33,
+            "types": [
+              "Currency"
+            ]
           },
           {
             "name": "Reverent Reliquary Key",
@@ -2283,7 +2334,10 @@
           },
           {
             "name": "Orb of Remembrance",
-            "p": 0.33
+            "p": 0.33,
+            "types": [
+              "Currency"
+            ]
           },
           {
             "name": "Monochrome",
@@ -2342,7 +2396,10 @@
           },
           {
             "name": "Orb of Remembrance",
-            "p": 0.33
+            "p": 0.33,
+            "types": [
+              "Currency"
+            ]
           },
           {
             "name": "Lonely Reliquary Key",
@@ -2406,7 +2463,10 @@
           },
           {
             "name": "Orb of Intention",
-            "p": 0.5
+            "p": 0.5,
+            "types": [
+              "Currency"
+            ]
           }
         ]
       }
@@ -2435,7 +2495,7 @@
         "items": [
           {
             "name": "Woespike",
-            "p": 0.57
+            "p": 0.02
           },
           {
             "name": "The Caged Mammoth",
@@ -2461,7 +2521,10 @@
           },
           {
             "name": "Orb of Intention",
-            "p": 0.5
+            "p": 0.5,
+            "types": [
+              "Currency"
+            ]
           },
           {
             "name": "Traumatic Reliquary Key",

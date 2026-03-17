@@ -8,8 +8,7 @@ const PORT = Number(process.env.PORT) || 5173;
 const ROOT = process.cwd();
 const TARGET_HOST = 'www.pathofexile.com';
 const POE_NINJA_HOST = 'poe.ninja';
-const POE_WATCH_HOST = 'api.poe.watch';
-const BUILD_SCRIPT_SEQUENCE = ['scripts/update-data.js', 'scripts/update-data-ninja.js'];
+const BUILD_SCRIPT_SEQUENCE = ['scripts/update-data-ninja.js'];
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -213,12 +212,6 @@ const server = http.createServer((req, res) => {
   if (req.url.startsWith('/api/poeninja/')) {
     req.url = req.url.replace('/api/poeninja', '');
     proxyRequest(req, res, POE_NINJA_HOST);
-    return;
-  }
-
-  if (req.url.startsWith('/api/poewatch/')) {
-    req.url = req.url.replace('/api/poewatch', '');
-    proxyRequest(req, res, POE_WATCH_HOST);
     return;
   }
 
