@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "version": "0.4",
+      "date": "2026-03-18",
+      "changes": [
+        "Added gem leveling profitability calculations for leveling and corruption/quality pathways."
+      ]
+    },
+    {
       "version": "0.3",
       "date": "2026-03-17",
       "changes": [

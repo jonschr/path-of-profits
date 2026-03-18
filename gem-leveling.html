@@ -22,7 +22,7 @@
       <div class="top-nav-brand-block">
         <a class="top-nav-brand" href="./">Path of Profits</a>
         <div class="top-nav-subline">
-          <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.3</button>
+          <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.4</button>
           <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
         </div>
       </div>
@@ -64,16 +64,6 @@
   <div class="wrap">
     <section class="panel gem-page-panel">
       <div class="gem-toolbar">
-        <div class="control-compact control-cost">
-          <label for="gemcutterCostInput">GCP</label>
-          <div class="currency-setting">
-            <img id="gemcutterCostIcon" class="currency-setting-icon" alt="" hidden />
-            <div class="input-with-unit">
-              <input id="gemcutterCostInput" type="number" min="0" step="0.01" />
-              <span class="input-unit">c</span>
-            </div>
-          </div>
-        </div>
         <div class="control-compact">
           <label for="ignoreLowConfidenceInput">Ignore Low Confidence</label>
           <label class="switch gem-inline-switch">
@@ -96,6 +86,9 @@
         <div id="gemStatus" class="status">Loading gem price matrix...</div>
       </div>
     </section>
+    <div class="gem-data-note muted">
+      <strong>Some transfigured gems have incorrect pricing data within POE Ninja. Listings for 1/20 gems appear to be more reliable at present than the 1/0 versions of the same gems.</strong> <span id="gemSummary">Loading gems...</span>
+    </div>
 
     <section class="gem-filter-section" aria-label="Gem filters">
       <div class="gem-filter-row">
@@ -103,19 +96,9 @@
           <input id="gemSearchInput" type="search" placeholder="Search gems..." autocomplete="off" />
         </div>
         <div id="gemFilterBar" class="gem-filter-bar" aria-label="Gem filters"></div>
-        <details class="gem-column-menu">
-          <summary class="gem-column-menu-trigger">Columns</summary>
-          <div class="gem-column-menu-panel">
-            <div class="gem-column-menu-title">Calculated values</div>
-            <div id="gemColumnToggleBar" class="gem-column-toggle-bar" aria-label="Calculated value columns"></div>
-          </div>
-        </details>
       </div>
     </section>
     <section class="gem-table-panel">
-      <div class="gem-data-note muted">
-        <strong>Some transfigured gems have incorrect pricing data within POE Ninja. Listings for 1/20 gems appear to be more reliable at present than the 1/0 versions of the same gems.</strong> <span id="gemSummary">Loading gems...</span>
-      </div>
       <div class="gem-table-scroll">
         <table id="gemTable" class="table gem-table">
           <colgroup id="gemTableColgroup"></colgroup>
