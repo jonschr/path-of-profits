@@ -2056,13 +2056,46 @@
           return `  ${index + 1}. ${m.boss} > ${m.group} > ${m.item} | types=${types}`;
         });
         const fallbackList = Array.from(state.fallbackHits.values());
-        const fallbackPreview = fallbackList.slice(0, 25).map((f, index) => {
-          const fromTypes = f.fromTypes?.length ? f.fromTypes.join(', ') : 'none';
-          const fromCategories = f.fromCategories?.length ? f.fromCategories.join(', ') : 'none';
-          const lookupName = f.lookupName || f.name;
-          const matchedName = f.matchedName || f.name;
-          return `  ${index + 1}. ${f.name} | lookup="${lookupName}" | requested types=${fromTypes} (categories=${fromCategories}) -> matched category=${f.toCategory} (${matchedName}) | price=${f.price.toFixed(1)}c`;
+        const fallbackDiagnostics = fallbackList.map((fallback) => {
+          const lookupName = fallback.lookupName || fallback.name;
+          const matchedName = fallback.matchedName || fallback.name;
+          const requestedCategories = Array.isArray(fallback.fromCategories)
+            ? fallback.fromCategories.filter(Boolean)
+            : [];
+          const requestedTypes = Array.isArray(fallback.fromTypes)
+            ? fallback.fromTypes.filter(Boolean)
+            : [];
+          const normalizedLookup = normalizeText(lookupName);
+          const normalizedMatched = normalizeText(matchedName);
+          const sameName = Boolean(normalizedLookup && normalizedMatched && normalizedLookup === normalizedMatched);
+          const categoryMatch = !requestedCategories.length || requestedCategories.includes(fallback.toCategory);
+          let riskLabel = 'review';
+          if (!sameName) {
+            riskLabel = 'different-name match';
+          } else if (!categoryMatch) {
+            riskLabel = 'cross-category match';
+          } else {
+            riskLabel = 'same-name fallback';
+          }
+          return {
+            ...fallback,
+            lookupName,
+            matchedName,
+            requestedCategories,
+            requestedTypes,
+            sameName,
+            categoryMatch,
+            riskLabel
+          };
         });
+        const fallbackPreview = fallbackDiagnostics.slice(0, 25).map((f, index) => {
+          const requestedTypes = f.requestedTypes.length ? f.requestedTypes.join(', ') : 'none';
+          const requestedCategories = f.requestedCategories.length ? f.requestedCategories.join(', ') : 'none';
+          const matchLabel = f.sameName ? 'same name' : `matched "${f.matchedName}"`;
+          return `  ${index + 1}. ${f.name} | ${f.riskLabel} | wanted ${requestedTypes} (${requestedCategories}) -> used ${f.toCategory} | ${matchLabel} | ${f.price.toFixed(1)}c`;
+        });
+        const crossCategoryFallbacks = fallbackDiagnostics.filter((f) => !f.categoryMatch).length;
+        const differentNameFallbacks = fallbackDiagnostics.filter((f) => !f.sameName).length;
         const mode = currentMode();
         const modeParam = modeOverride();
         const displayRate = Number.isFinite(chaosPerDivine) ? `${chaosPerDivine.toFixed(2)} c/div` : 'unknown';
@@ -2154,8 +2187,10 @@
         debugLines.push('');
 
         debugLines.push('Price Match Fallbacks');
-        debugLines.push('  Meaning: exact name+type match had no price, so we retried by name across all categories.');
+        debugLines.push('  Meaning: exact name + requested category had no price, so we retried more loosely across all loaded categories.');
         debugLines.push(`  Hits: ${fallbackList.length}`);
+        debugLines.push(`  Cross-category matches: ${crossCategoryFallbacks}`);
+        debugLines.push(`  Different-name matches: ${differentNameFallbacks}`);
         if (fallbackPreview.length) {
           debugLines.push('  First 25:');
           debugLines.push(...fallbackPreview);

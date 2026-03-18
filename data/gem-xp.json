@@ -1,0 +1,4055 @@
+{
+  "generatedAt": "2026-03-18T02:57:13.005Z",
+  "source": "PoE Wiki skill progression tables",
+  "entryCount": 803,
+  "missingCount": 6,
+  "entries": {
+    "Absolution": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Absolution"
+    },
+    "Absolution of Inspiring": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Absolution_of_Inspiring"
+    },
+    "Added Chaos Damage Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Added_Chaos_Damage_Support"
+    },
+    "Added Cold Damage Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Added_Cold_Damage_Support"
+    },
+    "Added Fire Damage Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Added_Fire_Damage_Support"
+    },
+    "Added Lightning Damage Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Added_Lightning_Damage_Support"
+    },
+    "Additional Accuracy Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Additional_Accuracy_Support"
+    },
+    "Advanced Traps Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Advanced_Traps_Support"
+    },
+    "Alchemist's Mark": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Alchemist's_Mark"
+    },
+    "Ambush": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Ambush"
+    },
+    "Ancestral Call Support": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Ancestral_Call_Support"
+    },
+    "Ancestral Cry": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Ancestral_Cry"
+    },
+    "Anger": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Anger"
+    },
+    "Animate Guardian": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Animate_Guardian"
+    },
+    "Animate Guardian of Smiting": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Animate_Guardian_of_Smiting"
+    },
+    "Animate Weapon": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Animate_Weapon"
+    },
+    "Animate Weapon of Ranged Arms": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Animate_Weapon_of_Ranged_Arms"
+    },
+    "Animate Weapon of Self Reflection": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Animate_Weapon_of_Self_Reflection"
+    },
+    "Annihilation Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Annihilation_Support"
+    },
+    "Arc": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Arc"
+    },
+    "Arc of Oscillating": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Arc_of_Oscillating"
+    },
+    "Arc of Surging": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Arc_of_Surging"
+    },
+    "Arcane Cloak": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Arcane_Cloak"
+    },
+    "Arcane Surge Support": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Arcane_Surge_Support"
+    },
+    "Arcanist Brand": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Arcanist_Brand"
+    },
+    "Archmage Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Archmage_Support"
+    },
+    "Arctic Armour": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Arctic_Armour"
+    },
+    "Armageddon Brand": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Armageddon_Brand"
+    },
+    "Armageddon Brand of Recall": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Armageddon_Brand_of_Recall"
+    },
+    "Armageddon Brand of Volatility": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Armageddon_Brand_of_Volatility"
+    },
+    "Arrogance Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Arrogance_Support"
+    },
+    "Arrow Nova Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Arrow_Nova_Support"
+    },
+    "Artillery Ballista": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Artillery_Ballista"
+    },
+    "Artillery Ballista of Cross Strafe": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Artillery_Ballista_of_Cross_Strafe"
+    },
+    "Artillery Ballista of Focus Fire": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Artillery_Ballista_of_Focus_Fire"
+    },
+    "Assassin's Mark": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Assassin's_Mark"
+    },
+    "Autoexertion": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Autoexertion"
+    },
+    "Automation": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Automation"
+    },
+    "Awakened Added Chaos Damage Support": {
+      "xpTo20": null,
+      "xpTo3": 863572955,
+      "url": "https://www.poewiki.net/wiki/Awakened_Added_Chaos_Damage_Support"
+    },
+    "Awakened Added Cold Damage Support": {
+      "xpTo20": null,
+      "xpTo3": 869123383,
+      "url": "https://www.poewiki.net/wiki/Awakened_Added_Cold_Damage_Support"
+    },
+    "Awakened Added Fire Damage Support": {
+      "xpTo20": null,
+      "xpTo3": 869153245,
+      "url": "https://www.poewiki.net/wiki/Awakened_Added_Fire_Damage_Support"
+    },
+    "Awakened Added Lightning Damage Support": {
+      "xpTo20": null,
+      "xpTo3": 869123383,
+      "url": "https://www.poewiki.net/wiki/Awakened_Added_Lightning_Damage_Support"
+    },
+    "Awakened Ancestral Call Support": {
+      "xpTo20": null,
+      "xpTo3": 869149403,
+      "url": "https://www.poewiki.net/wiki/Awakened_Ancestral_Call_Support"
+    },
+    "Awakened Arrow Nova Support": {
+      "xpTo20": null,
+      "xpTo3": 869153245,
+      "url": "https://www.poewiki.net/wiki/Awakened_Arrow_Nova_Support"
+    },
+    "Awakened Blasphemy Support": {
+      "xpTo20": null,
+      "xpTo3": 863572955,
+      "url": "https://www.poewiki.net/wiki/Awakened_Blasphemy_Support"
+    },
+    "Awakened Brutality Support": {
+      "xpTo20": null,
+      "xpTo3": 854905055,
+      "url": "https://www.poewiki.net/wiki/Awakened_Brutality_Support"
+    },
+    "Awakened Burning Damage Support": {
+      "xpTo20": null,
+      "xpTo3": 863572955,
+      "url": "https://www.poewiki.net/wiki/Awakened_Burning_Damage_Support"
+    },
+    "Awakened Cast On Critical Strike Support": {
+      "xpTo20": null,
+      "xpTo3": 854905055,
+      "url": "https://www.poewiki.net/wiki/Awakened_Cast_On_Critical_Strike_Support"
+    },
+    "Awakened Cast While Channelling Support": {
+      "xpTo20": null,
+      "xpTo3": 854905055,
+      "url": "https://www.poewiki.net/wiki/Awakened_Cast_While_Channelling_Support"
+    },
+    "Awakened Chain Support": {
+      "xpTo20": null,
+      "xpTo3": 854905055,
+      "url": "https://www.poewiki.net/wiki/Awakened_Chain_Support"
+    },
+    "Awakened Cold Penetration Support": {
+      "xpTo20": null,
+      "xpTo3": 863572955,
+      "url": "https://www.poewiki.net/wiki/Awakened_Cold_Penetration_Support"
+    },
+    "Awakened Controlled Destruction Support": {
+      "xpTo20": null,
+      "xpTo3": 868592904,
+      "url": "https://www.poewiki.net/wiki/Awakened_Controlled_Destruction_Support"
+    },
+    "Awakened Deadly Ailments Support": {
+      "xpTo20": null,
+      "xpTo3": 868592904,
+      "url": "https://www.poewiki.net/wiki/Awakened_Deadly_Ailments_Support"
+    },
+    "Awakened Elemental Damage with Attacks Support": {
+      "xpTo20": null,
+      "xpTo3": 683662262,
+      "url": "https://www.poewiki.net/wiki/Awakened_Elemental_Damage_with_Attacks_Support"
+    },
+    "Awakened Elemental Focus Support": {
+      "xpTo20": null,
+      "xpTo3": 868592904,
+      "url": "https://www.poewiki.net/wiki/Awakened_Elemental_Focus_Support"
+    },
+    "Awakened Empower Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Awakened_Empower_Support"
+    },
+    "Awakened Enhance Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Awakened_Enhance_Support"
+    },
+    "Awakened Enlighten Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Awakened_Enlighten_Support"
+    },
+    "Awakened Fire Penetration Support": {
+      "xpTo20": null,
+      "xpTo3": 868592904,
+      "url": "https://www.poewiki.net/wiki/Awakened_Fire_Penetration_Support"
+    },
+    "Awakened Fork Support": {
+      "xpTo20": null,
+      "xpTo3": 863572955,
+      "url": "https://www.poewiki.net/wiki/Awakened_Fork_Support"
+    },
+    "Awakened Generosity Support": {
+      "xpTo20": null,
+      "xpTo3": 863572955,
+      "url": "https://www.poewiki.net/wiki/Awakened_Generosity_Support"
+    },
+    "Awakened Greater Multiple Projectiles Support": {
+      "xpTo20": null,
+      "xpTo3": 854905055,
+      "url": "https://www.poewiki.net/wiki/Awakened_Greater_Multiple_Projectiles_Support"
+    },
+    "Awakened Hextouch Support": {
+      "xpTo20": null,
+      "xpTo3": 854905055,
+      "url": "https://www.poewiki.net/wiki/Awakened_Hextouch_Support"
+    },
+    "Awakened Increased Area of Effect Support": {
+      "xpTo20": null,
+      "xpTo3": 854905055,
+      "url": "https://www.poewiki.net/wiki/Awakened_Increased_Area_of_Effect_Support"
+    },
+    "Awakened Lightning Penetration Support": {
+      "xpTo20": null,
+      "xpTo3": 863572955,
+      "url": "https://www.poewiki.net/wiki/Awakened_Lightning_Penetration_Support"
+    },
+    "Awakened Melee Physical Damage Support": {
+      "xpTo20": null,
+      "xpTo3": 868592904,
+      "url": "https://www.poewiki.net/wiki/Awakened_Melee_Physical_Damage_Support"
+    },
+    "Awakened Melee Splash Support": {
+      "xpTo20": null,
+      "xpTo3": 869123383,
+      "url": "https://www.poewiki.net/wiki/Awakened_Melee_Splash_Support"
+    },
+    "Awakened Minion Damage Support": {
+      "xpTo20": null,
+      "xpTo3": 869123383,
+      "url": "https://www.poewiki.net/wiki/Awakened_Minion_Damage_Support"
+    },
+    "Awakened Multistrike Support": {
+      "xpTo20": null,
+      "xpTo3": 854905055,
+      "url": "https://www.poewiki.net/wiki/Awakened_Multistrike_Support"
+    },
+    "Awakened Spell Cascade Support": {
+      "xpTo20": null,
+      "xpTo3": 869149403,
+      "url": "https://www.poewiki.net/wiki/Awakened_Spell_Cascade_Support"
+    },
+    "Awakened Spell Echo Support": {
+      "xpTo20": null,
+      "xpTo3": 854905055,
+      "url": "https://www.poewiki.net/wiki/Awakened_Spell_Echo_Support"
+    },
+    "Awakened Swift Affliction Support": {
+      "xpTo20": null,
+      "xpTo3": 863572955,
+      "url": "https://www.poewiki.net/wiki/Awakened_Swift_Affliction_Support"
+    },
+    "Awakened Unbound Ailments Support": {
+      "xpTo20": null,
+      "xpTo3": 869123383,
+      "url": "https://www.poewiki.net/wiki/Awakened_Unbound_Ailments_Support"
+    },
+    "Awakened Unleash Support": {
+      "xpTo20": null,
+      "xpTo3": 854905055,
+      "url": "https://www.poewiki.net/wiki/Awakened_Unleash_Support"
+    },
+    "Awakened Vicious Projectiles Support": {
+      "xpTo20": null,
+      "xpTo3": 868592904,
+      "url": "https://www.poewiki.net/wiki/Awakened_Vicious_Projectiles_Support"
+    },
+    "Awakened Void Manipulation Support": {
+      "xpTo20": null,
+      "xpTo3": 869123383,
+      "url": "https://www.poewiki.net/wiki/Awakened_Void_Manipulation_Support"
+    },
+    "Ball Lightning": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Ball_Lightning"
+    },
+    "Ball Lightning of Orbiting": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Ball_Lightning_of_Orbiting"
+    },
+    "Ball Lightning of Static": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Ball_Lightning_of_Static"
+    },
+    "Ballista Totem Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Ballista_Totem_Support"
+    },
+    "Bane": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Bane"
+    },
+    "Bane of Condemnation": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Bane_of_Condemnation"
+    },
+    "Barrage": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Barrage"
+    },
+    "Barrage of Volley Fire": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Barrage_of_Volley_Fire"
+    },
+    "Barrage Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Barrage_Support"
+    },
+    "Battlemage's Cry": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Battlemage's_Cry"
+    },
+    "Bear Trap": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Bear_Trap"
+    },
+    "Bear Trap of Skewers": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Bear_Trap_of_Skewers"
+    },
+    "Behead Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Behead_Support"
+    },
+    "Berserk": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Berserk"
+    },
+    "Blade Blast": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Blade_Blast"
+    },
+    "Blade Blast of Dagger Detonation": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Blade_Blast_of_Dagger_Detonation"
+    },
+    "Blade Blast of Unloading": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Blade_Blast_of_Unloading"
+    },
+    "Blade Flurry": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Blade_Flurry"
+    },
+    "Blade Flurry of Incision": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Blade_Flurry_of_Incision"
+    },
+    "Blade Trap": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Blade_Trap"
+    },
+    "Blade Trap of Greatswords": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Blade_Trap_of_Greatswords"
+    },
+    "Blade Trap of Laceration": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Blade_Trap_of_Laceration"
+    },
+    "Blade Vortex": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Blade_Vortex"
+    },
+    "Blade Vortex of the Scythe": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Blade_Vortex_of_the_Scythe"
+    },
+    "Bladefall": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Bladefall"
+    },
+    "Bladefall of Impaling": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Bladefall_of_Impaling"
+    },
+    "Bladefall of Trarthus": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Bladefall_of_Trarthus"
+    },
+    "Bladefall of Volleys": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Bladefall_of_Volleys"
+    },
+    "Bladestorm": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Bladestorm"
+    },
+    "Bladestorm of Uncertainty": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Bladestorm_of_Uncertainty"
+    },
+    "Blasphemy Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Blasphemy_Support"
+    },
+    "Blast Rain": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Blast_Rain"
+    },
+    "Blast Rain of Trarthus": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Blast_Rain_of_Trarthus"
+    },
+    "Blastchain Mine Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Blastchain_Mine_Support"
+    },
+    "Blazing Salvo": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Blazing_Salvo"
+    },
+    "Blessed Call Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Blessed_Call_Support"
+    },
+    "Blight": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Blight"
+    },
+    "Blight of Atrophy": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Blight_of_Atrophy"
+    },
+    "Blight of Contagion": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Blight_of_Contagion"
+    },
+    "Blind Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Blind_Support"
+    },
+    "Blink Arrow": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Blink_Arrow"
+    },
+    "Blink Arrow of Bombarding Clones": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Blink_Arrow_of_Bombarding_Clones"
+    },
+    "Blink Arrow of Prismatic Clones": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Blink_Arrow_of_Prismatic_Clones"
+    },
+    "Block Chance Reduction Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Block_Chance_Reduction_Support"
+    },
+    "Blood and Sand": {
+      "xpTo20": null,
+      "xpTo3": 647270,
+      "url": "https://www.poewiki.net/wiki/Blood_and_Sand"
+    },
+    "Blood Rage": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Blood_Rage"
+    },
+    "Bloodlust Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Bloodlust_Support"
+    },
+    "Bloodsoaked Banner Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Bloodsoaked_Banner_Support"
+    },
+    "Bloodthirst Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Bloodthirst_Support"
+    },
+    "Bodyswap": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Bodyswap"
+    },
+    "Bodyswap of Sacrifice": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Bodyswap_of_Sacrifice"
+    },
+    "Bone Offering": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Bone_Offering"
+    },
+    "Bonechill Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Bonechill_Support"
+    },
+    "Boneshatter": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Boneshatter"
+    },
+    "Boneshatter of Carnage": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Boneshatter_of_Carnage"
+    },
+    "Boneshatter of Complex Trauma": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Boneshatter_of_Complex_Trauma"
+    },
+    "Bonespire Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Bonespire_Support"
+    },
+    "Brand Recall": {
+      "xpTo20": null,
+      "xpTo3": 2510966,
+      "url": "https://www.poewiki.net/wiki/Brand_Recall"
+    },
+    "Brutality Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Brutality_Support"
+    },
+    "Burning Arrow": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Burning_Arrow"
+    },
+    "Burning Arrow of Vigour": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Burning_Arrow_of_Vigour"
+    },
+    "Burning Damage Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Burning_Damage_Support"
+    },
+    "Cast On Critical Strike Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Cast_On_Critical_Strike_Support"
+    },
+    "Cast on Death Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Cast_on_Death_Support"
+    },
+    "Cast on Melee Kill Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Cast_on_Melee_Kill_Support"
+    },
+    "Cast on Ward Break Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Cast_on_Ward_Break_Support"
+    },
+    "Cast when Damage Taken Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Cast_when_Damage_Taken_Support"
+    },
+    "Cast when Stunned Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Cast_when_Stunned_Support"
+    },
+    "Cast while Channelling Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Cast_while_Channelling_Support"
+    },
+    "Caustic Arrow": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Caustic_Arrow"
+    },
+    "Caustic Arrow of Poison": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Caustic_Arrow_of_Poison"
+    },
+    "Chain Hook": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Chain_Hook"
+    },
+    "Chain Hook of Trarthus": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Chain_Hook_of_Trarthus"
+    },
+    "Chain Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Chain_Support"
+    },
+    "Chance to Bleed Support": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Chance_to_Bleed_Support"
+    },
+    "Chance to Flee Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Chance_to_Flee_Support"
+    },
+    "Chance to Poison Support": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Chance_to_Poison_Support"
+    },
+    "Charged Dash": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Charged_Dash"
+    },
+    "Charged Dash of Projection": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Charged_Dash_of_Projection"
+    },
+    "Charged Mines Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Charged_Mines_Support"
+    },
+    "Charged Traps Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Charged_Traps_Support"
+    },
+    "Clarity": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Clarity"
+    },
+    "Cleave": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Cleave"
+    },
+    "Cleave of Rage": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Cleave_of_Rage"
+    },
+    "Close Combat Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Close_Combat_Support"
+    },
+    "Cluster Traps Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Cluster_Traps_Support"
+    },
+    "Cobra Lash": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Cobra_Lash"
+    },
+    "Cold Penetration Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Cold_Penetration_Support"
+    },
+    "Cold Snap": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Cold_Snap"
+    },
+    "Cold Snap of Power": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Cold_Snap_of_Power"
+    },
+    "Cold to Fire Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Cold_to_Fire_Support"
+    },
+    "Combustion Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Combustion_Support"
+    },
+    "Companionship Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Companionship_Support"
+    },
+    "Concentrated Effect Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Concentrated_Effect_Support"
+    },
+    "Conductivity": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Conductivity"
+    },
+    "Conflagration": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Conflagration"
+    },
+    "Congregation Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Congregation_Support"
+    },
+    "Consecrated Path": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Consecrated_Path"
+    },
+    "Consecrated Path of Endurance": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Consecrated_Path_of_Endurance"
+    },
+    "Contagion": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Contagion"
+    },
+    "Contagion of Subsiding": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Contagion_of_Subsiding"
+    },
+    "Contagion of Transference": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Contagion_of_Transference"
+    },
+    "Controlled Blaze Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Controlled_Blaze_Support"
+    },
+    "Controlled Destruction Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Controlled_Destruction_Support"
+    },
+    "Conversion Trap": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Conversion_Trap"
+    },
+    "Cooldown Recovery Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Cooldown_Recovery_Support"
+    },
+    "Corrupting Cry Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Corrupting_Cry_Support"
+    },
+    "Corrupting Fever": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Corrupting_Fever"
+    },
+    "Crackling Lance": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Crackling_Lance"
+    },
+    "Crackling Lance of Branching": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Crackling_Lance_of_Branching"
+    },
+    "Crackling Lance of Disintegration": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Crackling_Lance_of_Disintegration"
+    },
+    "Creeping Frost": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Creeping_Frost"
+    },
+    "Creeping Frost of Floes": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Creeping_Frost_of_Floes"
+    },
+    "Cremation": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Cremation"
+    },
+    "Cremation of Exhuming": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Cremation_of_Exhuming"
+    },
+    "Cremation of the Volcano": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Cremation_of_the_Volcano"
+    },
+    "Critical Strike Affliction Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Critical_Strike_Affliction_Support"
+    },
+    "Cruelty Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Cruelty_Support"
+    },
+    "Crushing Fist": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Crushing_Fist"
+    },
+    "Cull the Weak Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Cull_the_Weak_Support"
+    },
+    "Culling Strike Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Culling_Strike_Support"
+    },
+    "Cursed Ground Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Cursed_Ground_Support"
+    },
+    "Cyclone": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Cyclone"
+    },
+    "Cyclone of Tumult": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Cyclone_of_Tumult"
+    },
+    "Damage on Full Life Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Damage_on_Full_Life_Support"
+    },
+    "Dark Pact": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Dark_Pact"
+    },
+    "Dark Pact of Trarthus": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Dark_Pact_of_Trarthus"
+    },
+    "Dash": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Dash"
+    },
+    "Deadly Ailments Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Deadly_Ailments_Support"
+    },
+    "Decay Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Decay_Support"
+    },
+    "Decoy Totem": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Decoy_Totem"
+    },
+    "Defiance Banner": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Defiance_Banner"
+    },
+    "Desecrate": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Desecrate"
+    },
+    "Despair": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Despair"
+    },
+    "Destructive Link": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Destructive_Link"
+    },
+    "Determination": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Determination"
+    },
+    "Detonate Dead": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Detonate_Dead"
+    },
+    "Detonate Dead of Chain Reaction": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Detonate_Dead_of_Chain_Reaction"
+    },
+    "Detonate Dead of Scavenging": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Detonate_Dead_of_Scavenging"
+    },
+    "Devour Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Devour_Support"
+    },
+    "Devouring Totem": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Devouring_Totem"
+    },
+    "Discharge": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Discharge"
+    },
+    "Discharge of Misery": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Discharge_of_Misery"
+    },
+    "Discipline": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Discipline"
+    },
+    "Divine Blast": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Divine_Blast"
+    },
+    "Divine Ire": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Divine_Ire"
+    },
+    "Divine Ire of Disintegration": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Divine_Ire_of_Disintegration"
+    },
+    "Divine Ire of Holy Lightning": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Divine_Ire_of_Holy_Lightning"
+    },
+    "Divine Retribution": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Divine_Retribution"
+    },
+    "Divine Sentinel Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Divine_Sentinel_Support"
+    },
+    "Dominating Blow": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Dominating_Blow"
+    },
+    "Dominating Blow of Inspiring": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Dominating_Blow_of_Inspiring"
+    },
+    "Double Strike": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Double_Strike"
+    },
+    "Double Strike of Impaling": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Double_Strike_of_Impaling"
+    },
+    "Double Strike of Momentum": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Double_Strike_of_Momentum"
+    },
+    "Dread Banner": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Dread_Banner"
+    },
+    "Dual Strike": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Dual_Strike"
+    },
+    "Dual Strike of Ambidexterity": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Dual_Strike_of_Ambidexterity"
+    },
+    "Earthquake": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Earthquake"
+    },
+    "Earthquake of Amplification": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Earthquake_of_Amplification"
+    },
+    "Earthshatter": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Earthshatter"
+    },
+    "Earthshatter of Fragility": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Earthshatter_of_Fragility"
+    },
+    "Earthshatter of Prominence": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Earthshatter_of_Prominence"
+    },
+    "Eclipse Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Eclipse_Support"
+    },
+    "Efficacy Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Efficacy_Support"
+    },
+    "Eldritch Blasphemy Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Eldritch_Blasphemy_Support"
+    },
+    "Elemental Army Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Elemental_Army_Support"
+    },
+    "Elemental Damage with Attacks Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Elemental_Damage_with_Attacks_Support"
+    },
+    "Elemental Focus Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Elemental_Focus_Support"
+    },
+    "Elemental Hit": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Elemental_Hit"
+    },
+    "Elemental Hit of the Spectrum": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Elemental_Hit_of_the_Spectrum"
+    },
+    "Elemental Penetration Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Elemental_Penetration_Support"
+    },
+    "Elemental Proliferation Support": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Elemental_Proliferation_Support"
+    },
+    "Elemental Weakness": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Elemental_Weakness"
+    },
+    "Empower Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Empower_Support"
+    },
+    "Endurance Charge on Melee Stun Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Endurance_Charge_on_Melee_Stun_Support"
+    },
+    "Enduring Cry": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Enduring_Cry"
+    },
+    "Energy Blade": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Energy_Blade"
+    },
+    "Energy Leech Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Energy_Leech_Support"
+    },
+    "Enfeeble": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Enfeeble"
+    },
+    "Enhance Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Enhance_Support"
+    },
+    "Enlighten Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Enlighten_Support"
+    },
+    "Ensnaring Arrow": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Ensnaring_Arrow"
+    },
+    "Essence Drain": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Essence_Drain"
+    },
+    "Essence Drain of Desperation": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Essence_Drain_of_Desperation"
+    },
+    "Essence Drain of Wickedness": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Essence_Drain_of_Wickedness"
+    },
+    "Eternal Blessing Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Eternal_Blessing_Support"
+    },
+    "Ethereal Knives": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Ethereal_Knives"
+    },
+    "Ethereal Knives of Lingering Blades": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Ethereal_Knives_of_Lingering_Blades"
+    },
+    "Ethereal Knives of the Massacre": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Ethereal_Knives_of_the_Massacre"
+    },
+    "Eviscerate": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Eviscerate"
+    },
+    "Excommunicate Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Excommunicate_Support"
+    },
+    "Exemplar Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Exemplar_Support"
+    },
+    "Expert Retaliation Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Expert_Retaliation_Support"
+    },
+    "Explosive Arrow": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Explosive_Arrow"
+    },
+    "Explosive Concoction": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Explosive_Concoction"
+    },
+    "Explosive Concoction of Destruction": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Explosive_Concoction_of_Destruction"
+    },
+    "Explosive Trap": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Explosive_Trap"
+    },
+    "Explosive Trap of Magnitude": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Explosive_Trap_of_Magnitude"
+    },
+    "Explosive Trap of Shrapnel": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Explosive_Trap_of_Shrapnel"
+    },
+    "Exsanguinate": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Exsanguinate"
+    },
+    "Exsanguinate of Transmission": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Exsanguinate_of_Transmission"
+    },
+    "Eye of Winter": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Eye_of_Winter"
+    },
+    "Eye of Winter of Finality": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Eye_of_Winter_of_Finality"
+    },
+    "Eye of Winter of Transience": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Eye_of_Winter_of_Transience"
+    },
+    "Faster Attacks Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Faster_Attacks_Support"
+    },
+    "Faster Casting Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Faster_Casting_Support"
+    },
+    "Faster Projectiles Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Faster_Projectiles_Support"
+    },
+    "Feeding Frenzy Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Feeding_Frenzy_Support"
+    },
+    "Fire Penetration Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Fire_Penetration_Support"
+    },
+    "Fire Trap": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Fire_Trap"
+    },
+    "Fire Trap of Blasting": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Fire_Trap_of_Blasting"
+    },
+    "Fireball": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Fireball"
+    },
+    "Firestorm": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Firestorm"
+    },
+    "Firestorm of Meteors": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Firestorm_of_Meteors"
+    },
+    "Firestorm of Pelting": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Firestorm_of_Pelting"
+    },
+    "Fissure Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Fissure_Support"
+    },
+    "Fist of War Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Fist_of_War_Support"
+    },
+    "Flame Dash": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Flame_Dash"
+    },
+    "Flame Dash of Return": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Flame_Dash_of_Return"
+    },
+    "Flame Link": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Flame_Link"
+    },
+    "Flame Surge": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Flame_Surge"
+    },
+    "Flame Surge of Combusting": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Flame_Surge_of_Combusting"
+    },
+    "Flame Wall": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Flame_Wall"
+    },
+    "Flameblast": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Flameblast"
+    },
+    "Flameblast of Celerity": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Flameblast_of_Celerity"
+    },
+    "Flameblast of Contraction": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Flameblast_of_Contraction"
+    },
+    "Flamethrower Trap": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Flamethrower_Trap"
+    },
+    "Flamethrower Trap of Stability": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Flamethrower_Trap_of_Stability"
+    },
+    "Flamewood Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Flamewood_Support"
+    },
+    "Flammability": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Flammability"
+    },
+    "Flesh and Stone": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Flesh_and_Stone"
+    },
+    "Flesh Offering": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Flesh_Offering"
+    },
+    "Flicker Strike": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Flicker_Strike"
+    },
+    "Flicker Strike of Power": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Flicker_Strike_of_Power"
+    },
+    "Focused Ballista Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Focused_Ballista_Support"
+    },
+    "Focused Channelling Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Focused_Channelling_Support"
+    },
+    "Forbidden Rite": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Forbidden_Rite"
+    },
+    "Forbidden Rite of Soul Sacrifice": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Forbidden_Rite_of_Soul_Sacrifice"
+    },
+    "Fork Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Fork_Support"
+    },
+    "Fortify Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Fortify_Support"
+    },
+    "Foulgrasp Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Foulgrasp_Support"
+    },
+    "Freezing Pulse": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Freezing_Pulse"
+    },
+    "Frenzy": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Frenzy"
+    },
+    "Frenzy of Onslaught": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Frenzy_of_Onslaught"
+    },
+    "Fresh Meat Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Fresh_Meat_Support"
+    },
+    "Frigid Bond Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Frigid_Bond_Support"
+    },
+    "Frost Blades": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Frost_Blades"
+    },
+    "Frost Blades of Katabasis": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Frost_Blades_of_Katabasis"
+    },
+    "Frost Bomb": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Frost_Bomb"
+    },
+    "Frost Bomb of Forthcoming": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Frost_Bomb_of_Forthcoming"
+    },
+    "Frost Bomb of Instability": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Frost_Bomb_of_Instability"
+    },
+    "Frost Shield": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Frost_Shield"
+    },
+    "Frost Wall": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Frost_Wall"
+    },
+    "Frostbite": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Frostbite"
+    },
+    "Frostblink": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Frostblink"
+    },
+    "Frostblink of Wintry Blast": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Frostblink_of_Wintry_Blast"
+    },
+    "Frostbolt": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Frostbolt"
+    },
+    "Frostmage Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Frostmage_Support"
+    },
+    "Frozen Legion": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Frozen_Legion"
+    },
+    "Frozen Legion of Rallying": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Frozen_Legion_of_Rallying"
+    },
+    "Galvanic Arrow": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Galvanic_Arrow"
+    },
+    "Galvanic Arrow of Energy": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Galvanic_Arrow_of_Energy"
+    },
+    "Galvanic Arrow of Surging": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Galvanic_Arrow_of_Surging"
+    },
+    "Galvanic Field": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Galvanic_Field"
+    },
+    "Galvanic Field of Intensity": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Galvanic_Field_of_Intensity"
+    },
+    "General's Cry": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/General's_Cry"
+    },
+    "Generosity Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Generosity_Support"
+    },
+    "Glacial Cascade": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Glacial_Cascade"
+    },
+    "Glacial Cascade of the Fissure": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Glacial_Cascade_of_the_Fissure"
+    },
+    "Glacial Hammer": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Glacial_Hammer"
+    },
+    "Glacial Hammer of Shattering": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Glacial_Hammer_of_Shattering"
+    },
+    "Glacial Shield Swipe": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Glacial_Shield_Swipe"
+    },
+    "Gluttony Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Gluttony_Support"
+    },
+    "Grace": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Grace"
+    },
+    "Greater Ancestral Call Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Greater_Ancestral_Call_Support"
+    },
+    "Greater Chain Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Greater_Chain_Support"
+    },
+    "Greater Devour Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Greater_Devour_Support"
+    },
+    "Greater Fork Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Greater_Fork_Support"
+    },
+    "Greater Kinetic Instability Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Greater_Kinetic_Instability_Support"
+    },
+    "Greater Multiple Projectiles Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Greater_Multiple_Projectiles_Support"
+    },
+    "Greater Multistrike Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Greater_Multistrike_Support"
+    },
+    "Greater Spell Cascade Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Greater_Spell_Cascade_Support"
+    },
+    "Greater Spell Echo Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Greater_Spell_Echo_Support"
+    },
+    "Greater Unleash Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Greater_Unleash_Support"
+    },
+    "Greater Volley Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Greater_Volley_Support"
+    },
+    "Ground Slam": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Ground_Slam"
+    },
+    "Ground Slam of Earthshaking": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Ground_Slam_of_Earthshaking"
+    },
+    "Guardian's Blessing Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Guardian's_Blessing_Support"
+    },
+    "Hallow Support": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Hallow_Support"
+    },
+    "Haste": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Haste"
+    },
+    "Hatred": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Hatred"
+    },
+    "Heavy Strike": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Heavy_Strike"
+    },
+    "Heavy Strike of Trarthus": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Heavy_Strike_of_Trarthus"
+    },
+    "Herald of Agony": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Herald_of_Agony"
+    },
+    "Herald of Ash": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Herald_of_Ash"
+    },
+    "Herald of Ice": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Herald_of_Ice"
+    },
+    "Herald of Purity": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Herald_of_Purity"
+    },
+    "Herald of Thunder": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Herald_of_Thunder"
+    },
+    "Hex Bloom Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Hex_Bloom_Support"
+    },
+    "Hexblast": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Hexblast"
+    },
+    "Hexblast of Contradiction": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Hexblast_of_Contradiction"
+    },
+    "Hexblast of Havoc": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Hexblast_of_Havoc"
+    },
+    "Hexpass Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Hexpass_Support"
+    },
+    "Hextoad Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Hextoad_Support"
+    },
+    "Hextouch Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Hextouch_Support"
+    },
+    "High-Impact Mine Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/High-Impact_Mine_Support"
+    },
+    "Hiveborn Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Hiveborn_Support"
+    },
+    "Holy Flame Totem": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Holy_Flame_Totem"
+    },
+    "Holy Flame Totem of Ire": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Holy_Flame_Totem_of_Ire"
+    },
+    "Holy Hammers": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Holy_Hammers"
+    },
+    "Holy Strike": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Holy_Strike"
+    },
+    "Holy Sweep": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Holy_Sweep"
+    },
+    "Hydrosphere": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Hydrosphere"
+    },
+    "Hypothermia Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Hypothermia_Support"
+    },
+    "Ice Bite Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Ice_Bite_Support"
+    },
+    "Ice Crash": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Ice_Crash"
+    },
+    "Ice Crash of Cadence": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Ice_Crash_of_Cadence"
+    },
+    "Ice Nova": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Ice_Nova"
+    },
+    "Ice Nova of Deep Freeze": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Ice_Nova_of_Deep_Freeze"
+    },
+    "Ice Nova of Frostbolts": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Ice_Nova_of_Frostbolts"
+    },
+    "Ice Shot": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Ice_Shot"
+    },
+    "Ice Shot of Penetration": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Ice_Shot_of_Penetration"
+    },
+    "Ice Spear": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Ice_Spear"
+    },
+    "Ice Spear of Splitting": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Ice_Spear_of_Splitting"
+    },
+    "Ice Trap": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Ice_Trap"
+    },
+    "Ice Trap of Hollowness": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Ice_Trap_of_Hollowness"
+    },
+    "Icicle Mine": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Icicle_Mine"
+    },
+    "Icicle Mine of Fanning": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Icicle_Mine_of_Fanning"
+    },
+    "Icicle Mine of Sabotage": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Icicle_Mine_of_Sabotage"
+    },
+    "Ignite Proliferation Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Ignite_Proliferation_Support"
+    },
+    "Immolate Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Immolate_Support"
+    },
+    "Immortal Call": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Immortal_Call"
+    },
+    "Impale Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Impale_Support"
+    },
+    "Impending Doom Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Impending_Doom_Support"
+    },
+    "Incinerate": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Incinerate"
+    },
+    "Incinerate of Expanse": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Incinerate_of_Expanse"
+    },
+    "Incinerate of Venting": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Incinerate_of_Venting"
+    },
+    "Increased Area of Effect Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Increased_Area_of_Effect_Support"
+    },
+    "Increased Critical Damage Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Increased_Critical_Damage_Support"
+    },
+    "Increased Critical Strikes Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Increased_Critical_Strikes_Support"
+    },
+    "Infernal Blow": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Infernal_Blow"
+    },
+    "Infernal Blow of Immolation": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Infernal_Blow_of_Immolation"
+    },
+    "Infernal Cry": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Infernal_Cry"
+    },
+    "Infernal Legion Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Infernal_Legion_Support"
+    },
+    "Infused Channelling Support": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Infused_Channelling_Support"
+    },
+    "Innervate Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Innervate_Support"
+    },
+    "Inspiration Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Inspiration_Support"
+    },
+    "Intensify Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Intensify_Support"
+    },
+    "Intimidating Cry": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Intimidating_Cry"
+    },
+    "Intuitive Link": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Intuitive_Link"
+    },
+    "Invention Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Invention_Support"
+    },
+    "Invert the Rules Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Invert_the_Rules_Support"
+    },
+    "Iron Grip Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Iron_Grip_Support"
+    },
+    "Iron Will Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Iron_Will_Support"
+    },
+    "Item Quantity Support": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Item_Quantity_Support"
+    },
+    "Item Rarity Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Item_Rarity_Support"
+    },
+    "Kinetic Blast": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Kinetic_Blast"
+    },
+    "Kinetic Blast of Clustering": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Kinetic_Blast_of_Clustering"
+    },
+    "Kinetic Bolt": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Kinetic_Bolt"
+    },
+    "Kinetic Bolt of Fragmentation": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Kinetic_Bolt_of_Fragmentation"
+    },
+    "Kinetic Fusillade": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Kinetic_Fusillade"
+    },
+    "Kinetic Fusillade of Detonation": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Kinetic_Fusillade_of_Detonation"
+    },
+    "Kinetic Instability Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Kinetic_Instability_Support"
+    },
+    "Kinetic Rain": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Kinetic_Rain"
+    },
+    "Kinetic Rain of Impact": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Kinetic_Rain_of_Impact"
+    },
+    "Knockback Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Knockback_Support"
+    },
+    "Lacerate": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Lacerate"
+    },
+    "Lacerate of Butchering": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Lacerate_of_Butchering"
+    },
+    "Lacerate of Haemorrhage": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Lacerate_of_Haemorrhage"
+    },
+    "Lancing Steel": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Lancing_Steel"
+    },
+    "Lancing Steel of Spraying": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Lancing_Steel_of_Spraying"
+    },
+    "Leap Slam": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Leap_Slam"
+    },
+    "Leap Slam of Groundbreaking": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Leap_Slam_of_Groundbreaking"
+    },
+    "Less Duration Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Less_Duration_Support"
+    },
+    "Lethal Dose Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Lethal_Dose_Support"
+    },
+    "Life Gain on Hit Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Life_Gain_on_Hit_Support"
+    },
+    "Life Leech Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Life_Leech_Support"
+    },
+    "Lifetap Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Lifetap_Support"
+    },
+    "Lightning Arrow": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Lightning_Arrow"
+    },
+    "Lightning Arrow of Electrocution": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Lightning_Arrow_of_Electrocution"
+    },
+    "Lightning Conduit": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Lightning_Conduit"
+    },
+    "Lightning Conduit of the Heavens": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Lightning_Conduit_of_the_Heavens"
+    },
+    "Lightning Penetration Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Lightning_Penetration_Support"
+    },
+    "Lightning Spire Trap": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Lightning_Spire_Trap"
+    },
+    "Lightning Spire Trap of Overloading": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Lightning_Spire_Trap_of_Overloading"
+    },
+    "Lightning Spire Trap of Zapping": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Lightning_Spire_Trap_of_Zapping"
+    },
+    "Lightning Strike": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Lightning_Strike"
+    },
+    "Lightning Strike of Arcing": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Lightning_Strike_of_Arcing"
+    },
+    "Lightning Tendrils": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Lightning_Tendrils"
+    },
+    "Lightning Tendrils of Eccentricity": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Lightning_Tendrils_of_Eccentricity"
+    },
+    "Lightning Tendrils of Escalation": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Lightning_Tendrils_of_Escalation"
+    },
+    "Lightning Trap": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Lightning_Trap"
+    },
+    "Lightning Trap of Sparking": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Lightning_Trap_of_Sparking"
+    },
+    "Lightning Warp": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Lightning_Warp"
+    },
+    "Living Lightning Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Living_Lightning_Support"
+    },
+    "Locus Mine Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Locus_Mine_Support"
+    },
+    "Machinations Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Machinations_Support"
+    },
+    "Maim Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Maim_Support"
+    },
+    "Malevolence": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Malevolence"
+    },
+    "Mana Leech Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Mana_Leech_Support"
+    },
+    "Manabond": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Manabond"
+    },
+    "Manaforged Arrows Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Manaforged_Arrows_Support"
+    },
+    "Mark On Hit Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Mark_On_Hit_Support"
+    },
+    "Meat Shield Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Meat_Shield_Support"
+    },
+    "Melee Physical Damage Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Melee_Physical_Damage_Support"
+    },
+    "Melee Splash Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Melee_Splash_Support"
+    },
+    "Minefield Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Minefield_Support"
+    },
+    "Minion Damage Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Minion_Damage_Support"
+    },
+    "Minion Life Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Minion_Life_Support"
+    },
+    "Minion Pact Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Minion_Pact_Support"
+    },
+    "Minion Speed Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Minion_Speed_Support"
+    },
+    "Mirage Archer Support": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Mirage_Archer_Support"
+    },
+    "Mirror Arrow": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Mirror_Arrow"
+    },
+    "Mirror Arrow of Bombarding Clones": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Mirror_Arrow_of_Bombarding_Clones"
+    },
+    "Mirror Arrow of Prismatic Clones": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Mirror_Arrow_of_Prismatic_Clones"
+    },
+    "Molten Shell": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Molten_Shell"
+    },
+    "Molten Strike": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Molten_Strike"
+    },
+    "Molten Strike of the Zenith": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Molten_Strike_of_the_Zenith"
+    },
+    "Momentum Support": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Momentum_Support"
+    },
+    "More Duration Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/More_Duration_Support"
+    },
+    "Multiple Projectiles Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Multiple_Projectiles_Support"
+    },
+    "Multiple Totems Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Multiple_Totems_Support"
+    },
+    "Multiple Traps Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Multiple_Traps_Support"
+    },
+    "Multistrike Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Multistrike_Support"
+    },
+    "Nightblade Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Nightblade_Support"
+    },
+    "Orb of Storms": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Orb_of_Storms"
+    },
+    "Orb of Storms of Squalls": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Orb_of_Storms_of_Squalls"
+    },
+    "Overcharge Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Overcharge_Support"
+    },
+    "Overexertion Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Overexertion_Support"
+    },
+    "Overheat Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Overheat_Support"
+    },
+    "Overloaded Intensity Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Overloaded_Intensity_Support"
+    },
+    "Pacifism Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Pacifism_Support"
+    },
+    "Penance Brand": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Penance_Brand"
+    },
+    "Penance Brand of Conduction": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Penance_Brand_of_Conduction"
+    },
+    "Penance Brand of Dissipation": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Penance_Brand_of_Dissipation"
+    },
+    "Perforate": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Perforate"
+    },
+    "Perforate of Bloodshed": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Perforate_of_Bloodshed"
+    },
+    "Perforate of Duality": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Perforate_of_Duality"
+    },
+    "Pestilent Strike": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Pestilent_Strike"
+    },
+    "Petrified Blood": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Petrified_Blood"
+    },
+    "Phase Run": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Phase_Run"
+    },
+    "Physical to Lightning Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Physical_to_Lightning_Support"
+    },
+    "Pierce Support": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Pierce_Support"
+    },
+    "Pinpoint Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Pinpoint_Support"
+    },
+    "Plague Bearer": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Plague_Bearer"
+    },
+    "Poacher's Mark": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Poacher's_Mark"
+    },
+    "Point Blank Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Point_Blank_Support"
+    },
+    "Poisonous Concoction": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Poisonous_Concoction"
+    },
+    "Poisonous Concoction of Bouncing": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Poisonous_Concoction_of_Bouncing"
+    },
+    "Power Charge On Critical Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Power_Charge_On_Critical_Support"
+    },
+    "Power Siphon": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Power_Siphon"
+    },
+    "Power Siphon of the Archmage": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Power_Siphon_of_the_Archmage"
+    },
+    "Precision": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Precision"
+    },
+    "Predator Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Predator_Support"
+    },
+    "Pride": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Pride"
+    },
+    "Prismatic Burst Support": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Prismatic_Burst_Support"
+    },
+    "Protective Link": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Protective_Link"
+    },
+    "Pulverise Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Pulverise_Support"
+    },
+    "Puncture": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Puncture"
+    },
+    "Puncture of Shanking": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Puncture_of_Shanking"
+    },
+    "Punishment": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Punishment"
+    },
+    "Purifying Flame": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Purifying_Flame"
+    },
+    "Purifying Flame of Revelations": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Purifying_Flame_of_Revelations"
+    },
+    "Purity of Elements": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Purity_of_Elements"
+    },
+    "Purity of Fire": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Purity_of_Fire"
+    },
+    "Purity of Ice": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Purity_of_Ice"
+    },
+    "Purity of Lightning": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Purity_of_Lightning"
+    },
+    "Pyre Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Pyre_Support"
+    },
+    "Pyroclast Mine": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Pyroclast_Mine"
+    },
+    "Pyroclast Mine of Sabotage": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Pyroclast_Mine_of_Sabotage"
+    },
+    "Rage Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Rage_Support"
+    },
+    "Rage Vortex": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Rage_Vortex"
+    },
+    "Rage Vortex of Berserking": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Rage_Vortex_of_Berserking"
+    },
+    "Rain of Arrows": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Rain_of_Arrows"
+    },
+    "Rain of Arrows of Artillery": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Rain_of_Arrows_of_Artillery"
+    },
+    "Rain of Arrows of Saturation": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Rain_of_Arrows_of_Saturation"
+    },
+    "Raise Spectre": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Raise_Spectre"
+    },
+    "Raise Spectre of Transience": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Raise_Spectre_of_Transience"
+    },
+    "Raise Zombie": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Raise_Zombie"
+    },
+    "Raise Zombie of Falling": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Raise_Zombie_of_Falling"
+    },
+    "Raise Zombie of Slamming": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Raise_Zombie_of_Slamming"
+    },
+    "Rallying Cry": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Rallying_Cry"
+    },
+    "Reap": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Reap"
+    },
+    "Reave": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Reave"
+    },
+    "Reave of Refraction": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Reave_of_Refraction"
+    },
+    "Rejuvenation Totem": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Rejuvenation_Totem"
+    },
+    "Returning Projectiles Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Returning_Projectiles_Support"
+    },
+    "Righteous Fire": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Righteous_Fire"
+    },
+    "Righteous Fire of Arcane Devotion": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Righteous_Fire_of_Arcane_Devotion"
+    },
+    "Rolling Magma": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Rolling_Magma"
+    },
+    "Rupture Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Rupture_Support"
+    },
+    "Ruthless Support": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Ruthless_Support"
+    },
+    "Sacred Wisps Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Sacred_Wisps_Support"
+    },
+    "Sacrifice Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Sacrifice_Support"
+    },
+    "Sadism Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Sadism_Support"
+    },
+    "Scorching Ray": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Scorching_Ray"
+    },
+    "Scorching Ray of Immolation": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Scorching_Ray_of_Immolation"
+    },
+    "Scornful Herald Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Scornful_Herald_Support"
+    },
+    "Scourge Arrow": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Scourge_Arrow"
+    },
+    "Scourge Arrow of Menace": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Scourge_Arrow_of_Menace"
+    },
+    "Searing Bond": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Searing_Bond"
+    },
+    "Searing Bond of Detonation": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Searing_Bond_of_Detonation"
+    },
+    "Second Wind Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Second_Wind_Support"
+    },
+    "Seismic Cry": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Seismic_Cry"
+    },
+    "Seismic Trap": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Seismic_Trap"
+    },
+    "Seismic Trap of Swells": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Seismic_Trap_of_Swells"
+    },
+    "Shattering Steel": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Shattering_Steel"
+    },
+    "Shattering Steel of Ammunition": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Shattering_Steel_of_Ammunition"
+    },
+    "Shield Charge": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Shield_Charge"
+    },
+    "Shield Crush": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Shield_Crush"
+    },
+    "Shield Crush of the Chieftain": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Shield_Crush_of_the_Chieftain"
+    },
+    "Shield of Light": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Shield_of_Light"
+    },
+    "Shock Nova": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Shock_Nova"
+    },
+    "Shock Nova of Procession": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Shock_Nova_of_Procession"
+    },
+    "Shockwave Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Shockwave_Support"
+    },
+    "Shockwave Totem": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Shockwave_Totem"
+    },
+    "Shockwave Totem of Authority": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Shockwave_Totem_of_Authority"
+    },
+    "Shrapnel Ballista": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Shrapnel_Ballista"
+    },
+    "Shrapnel Ballista of Steel": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Shrapnel_Ballista_of_Steel"
+    },
+    "Siege Ballista": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Siege_Ballista"
+    },
+    "Siege Ballista of Splintering": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Siege_Ballista_of_Splintering"
+    },
+    "Siege Ballista of Trarthus": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Siege_Ballista_of_Trarthus"
+    },
+    "Sigil of Power": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Sigil_of_Power"
+    },
+    "Siphoning Trap": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Siphoning_Trap"
+    },
+    "Siphoning Trap of Pain": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Siphoning_Trap_of_Pain"
+    },
+    "Slower Projectiles Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Slower_Projectiles_Support"
+    },
+    "Smite": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Smite"
+    },
+    "Smite of Divine Judgement": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Smite_of_Divine_Judgement"
+    },
+    "Smoke Mine": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Smoke_Mine"
+    },
+    "Snipe": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Snipe"
+    },
+    "Sniper's Mark": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Sniper's_Mark"
+    },
+    "Somatic Shell": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Somatic_Shell"
+    },
+    "Soul Link": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Soul_Link"
+    },
+    "Soulrend": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Soulrend"
+    },
+    "Soulrend of Reaping": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Soulrend_of_Reaping"
+    },
+    "Soulrend of the Spiral": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Soulrend_of_the_Spiral"
+    },
+    "Spark": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Spark"
+    },
+    "Spark of the Nova": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Spark_of_the_Nova"
+    },
+    "Spark of Unpredictability": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Spark_of_Unpredictability"
+    },
+    "Spectral Helix": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Spectral_Helix"
+    },
+    "Spectral Helix of Trarthus": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Spectral_Helix_of_Trarthus"
+    },
+    "Spectral Shield Throw": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Spectral_Shield_Throw"
+    },
+    "Spectral Shield Throw of Shattering": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Spectral_Shield_Throw_of_Shattering"
+    },
+    "Spectral Shield Throw of Trarthus": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Spectral_Shield_Throw_of_Trarthus"
+    },
+    "Spectral Throw": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Spectral_Throw"
+    },
+    "Spectral Throw of Materialising": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Spectral_Throw_of_Materialising"
+    },
+    "Spectral Throw of Trarthus": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Spectral_Throw_of_Trarthus"
+    },
+    "Spell Cascade Support": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Spell_Cascade_Support"
+    },
+    "Spell Echo Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Spell_Echo_Support"
+    },
+    "Spell Totem Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Spell_Totem_Support"
+    },
+    "Spellblade Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Spellblade_Support"
+    },
+    "Spellslinger": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Spellslinger"
+    },
+    "Spirit Offering": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Spirit_Offering"
+    },
+    "Split Arrow": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Split_Arrow"
+    },
+    "Split Arrow of Splitting": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Split_Arrow_of_Splitting"
+    },
+    "Splitting Steel": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Splitting_Steel"
+    },
+    "Splitting Steel of Ammunition": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Splitting_Steel_of_Ammunition"
+    },
+    "Static Strike": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Static_Strike"
+    },
+    "Static Strike of Gathering Lightning": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Static_Strike_of_Gathering_Lightning"
+    },
+    "Steelskin": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Steelskin"
+    },
+    "Storm Brand": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Storm_Brand"
+    },
+    "Storm Brand of Indecision": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Storm_Brand_of_Indecision"
+    },
+    "Storm Burst": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Storm_Burst"
+    },
+    "Storm Burst of Repulsion": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Storm_Burst_of_Repulsion"
+    },
+    "Storm Call": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Storm_Call"
+    },
+    "Storm Call of Trarthus": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Storm_Call_of_Trarthus"
+    },
+    "Storm Rain": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Storm_Rain"
+    },
+    "Storm Rain of the Conduit": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Storm_Rain_of_the_Conduit"
+    },
+    "Storm Rain of the Fence": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Storm_Rain_of_the_Fence"
+    },
+    "Stormbind": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Stormbind"
+    },
+    "Stormbind of Teleportation": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Stormbind_of_Teleportation"
+    },
+    "Stormblast Mine": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Stormblast_Mine"
+    },
+    "Stun Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Stun_Support"
+    },
+    "Summon Carrion Golem": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Carrion_Golem"
+    },
+    "Summon Carrion Golem of Hordes": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Carrion_Golem_of_Hordes"
+    },
+    "Summon Carrion Golem of Scavenging": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Carrion_Golem_of_Scavenging"
+    },
+    "Summon Chaos Golem": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Chaos_Golem"
+    },
+    "Summon Chaos Golem of Hordes": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Chaos_Golem_of_Hordes"
+    },
+    "Summon Chaos Golem of the Maelström": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Chaos_Golem_of_the_Maelstr%C3%B6m"
+    },
+    "Summon Flame Golem": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Flame_Golem"
+    },
+    "Summon Flame Golem of Hordes": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Flame_Golem_of_Hordes"
+    },
+    "Summon Flame Golem of the Meteor": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Flame_Golem_of_the_Meteor"
+    },
+    "Summon Holy Relic": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Summon_Holy_Relic"
+    },
+    "Summon Holy Relic of Conviction": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Summon_Holy_Relic_of_Conviction"
+    },
+    "Summon Ice Golem": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Ice_Golem"
+    },
+    "Summon Ice Golem of Hordes": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Ice_Golem_of_Hordes"
+    },
+    "Summon Ice Golem of Shattering": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Ice_Golem_of_Shattering"
+    },
+    "Summon Lightning Golem": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Lightning_Golem"
+    },
+    "Summon Lightning Golem of Hordes": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Lightning_Golem_of_Hordes"
+    },
+    "Summon Phantasm Support": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Summon_Phantasm_Support"
+    },
+    "Summon Raging Spirit": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Summon_Raging_Spirit"
+    },
+    "Summon Raging Spirit of Enormity": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Summon_Raging_Spirit_of_Enormity"
+    },
+    "Summon Reaper": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Summon_Reaper"
+    },
+    "Summon Reaper of Eviscerating": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Summon_Reaper_of_Eviscerating"
+    },
+    "Summon Reaper of Revenants": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Summon_Reaper_of_Revenants"
+    },
+    "Summon Skeletons": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Summon_Skeletons"
+    },
+    "Summon Skeletons of Archers": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Summon_Skeletons_of_Archers"
+    },
+    "Summon Skeletons of Mages": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Summon_Skeletons_of_Mages"
+    },
+    "Summon Skitterbots": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Summon_Skitterbots"
+    },
+    "Summon Stone Golem": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Stone_Golem"
+    },
+    "Summon Stone Golem of Hordes": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Stone_Golem_of_Hordes"
+    },
+    "Summon Stone Golem of Safeguarding": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Summon_Stone_Golem_of_Safeguarding"
+    },
+    "Sunder": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Sunder"
+    },
+    "Sunder of Earthbreaking": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Sunder_of_Earthbreaking"
+    },
+    "Sunder of Trarthus": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Sunder_of_Trarthus"
+    },
+    "Swift Affliction Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Swift_Affliction_Support"
+    },
+    "Swift Assembly Support": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Swift_Assembly_Support"
+    },
+    "Swiftbrand Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Swiftbrand_Support"
+    },
+    "Swordstorm": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Swordstorm"
+    },
+    "Tectonic Slam": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Tectonic_Slam"
+    },
+    "Tectonic Slam of Cataclysm": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Tectonic_Slam_of_Cataclysm"
+    },
+    "Tempest Shield": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Tempest_Shield"
+    },
+    "Temporal Chains": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Temporal_Chains"
+    },
+    "Temporal Rift": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Temporal_Rift"
+    },
+    "Thunderstorm": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Thunderstorm"
+    },
+    "Tornado": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Tornado"
+    },
+    "Tornado of Elemental Turbulence": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Tornado_of_Elemental_Turbulence"
+    },
+    "Tornado Shot": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Tornado_Shot"
+    },
+    "Tornado Shot of Cloudburst": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Tornado_Shot_of_Cloudburst"
+    },
+    "Toxic Rain": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Toxic_Rain"
+    },
+    "Toxic Rain of Sporeburst": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Toxic_Rain_of_Sporeburst"
+    },
+    "Toxic Rain of Withering": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Toxic_Rain_of_Withering"
+    },
+    "Transfusion Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Transfusion_Support"
+    },
+    "Trap and Mine Damage Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Trap_and_Mine_Damage_Support"
+    },
+    "Trap Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Trap_Support"
+    },
+    "Trauma Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Trauma_Support"
+    },
+    "Trinity Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Trinity_Support"
+    },
+    "Unbound Ailments Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Unbound_Ailments_Support"
+    },
+    "Unearth": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Unearth"
+    },
+    "Unholy Trinity Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Unholy_Trinity_Support"
+    },
+    "Unleash Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Unleash_Support"
+    },
+    "Urgent Orders Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Urgent_Orders_Support"
+    },
+    "Vaal Absolution": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Absolution"
+    },
+    "Vaal Animate Weapon": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Vaal_Animate_Weapon"
+    },
+    "Vaal Arc": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Arc"
+    },
+    "Vaal Arctic Armour": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Vaal_Arctic_Armour"
+    },
+    "Vaal Blade Flurry": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Vaal_Blade_Flurry"
+    },
+    "Vaal Blade Vortex": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Blade_Vortex"
+    },
+    "Vaal Blight": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Blight"
+    },
+    "Vaal Burning Arrow": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Burning_Arrow"
+    },
+    "Vaal Caustic Arrow": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Caustic_Arrow"
+    },
+    "Vaal Clarity": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Vaal_Clarity"
+    },
+    "Vaal Cleave": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Cleave"
+    },
+    "Vaal Cold Snap": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Vaal_Cold_Snap"
+    },
+    "Vaal Cyclone": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Vaal_Cyclone"
+    },
+    "Vaal Detonate Dead": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Vaal_Detonate_Dead"
+    },
+    "Vaal Discipline": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Vaal_Discipline"
+    },
+    "Vaal Domination": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Vaal_Domination"
+    },
+    "Vaal Double Strike": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Double_Strike"
+    },
+    "Vaal Earthquake": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Vaal_Earthquake"
+    },
+    "Vaal Fireball": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Fireball"
+    },
+    "Vaal Firestorm": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Vaal_Firestorm"
+    },
+    "Vaal Flameblast": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Vaal_Flameblast"
+    },
+    "Vaal Flicker Strike": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Vaal_Flicker_Strike"
+    },
+    "Vaal Glacial Hammer": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Glacial_Hammer"
+    },
+    "Vaal Grace": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Vaal_Grace"
+    },
+    "Vaal Ground Slam": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Ground_Slam"
+    },
+    "Vaal Haste": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Vaal_Haste"
+    },
+    "Vaal Ice Nova": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Ice_Nova"
+    },
+    "Vaal Ice Shot": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Ice_Shot"
+    },
+    "Vaal Immortal Call": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Vaal_Immortal_Call"
+    },
+    "Vaal Impurity of Fire": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Vaal_Impurity_of_Fire"
+    },
+    "Vaal Impurity of Ice": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Vaal_Impurity_of_Ice"
+    },
+    "Vaal Impurity of Lightning": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Vaal_Impurity_of_Lightning"
+    },
+    "Vaal Lightning Arrow": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Lightning_Arrow"
+    },
+    "Vaal Lightning Strike": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Lightning_Strike"
+    },
+    "Vaal Lightning Trap": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Lightning_Trap"
+    },
+    "Vaal Lightning Warp": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Vaal_Lightning_Warp"
+    },
+    "Vaal Molten Shell": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Vaal_Molten_Shell"
+    },
+    "Vaal Molten Strike": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Molten_Strike"
+    },
+    "Vaal Power Siphon": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Power_Siphon"
+    },
+    "Vaal Rain of Arrows": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Rain_of_Arrows"
+    },
+    "Vaal Reap": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Vaal_Reap"
+    },
+    "Vaal Reave": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Reave"
+    },
+    "Vaal Rejuvenation Totem": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Vaal_Rejuvenation_Totem"
+    },
+    "Vaal Righteous Fire": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Vaal_Righteous_Fire"
+    },
+    "Vaal Sacrifice Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Vaal_Sacrifice_Support"
+    },
+    "Vaal Smite": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Smite"
+    },
+    "Vaal Spark": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Spark"
+    },
+    "Vaal Spectral Throw": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Vaal_Spectral_Throw"
+    },
+    "Vaal Storm Call": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Storm_Call"
+    },
+    "Vaal Summon Skeletons": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Vaal_Summon_Skeletons"
+    },
+    "Vaal Temptation Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Vaal_Temptation_Support"
+    },
+    "Vaal Venom Gyre": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Venom_Gyre"
+    },
+    "Vaal Volcanic Fissure": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Vaal_Volcanic_Fissure"
+    },
+    "Vampiric Link": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Vampiric_Link"
+    },
+    "Vengeful Cry": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Vengeful_Cry"
+    },
+    "Venom Gyre": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Venom_Gyre"
+    },
+    "Vicious Projectiles Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Vicious_Projectiles_Support"
+    },
+    "Vigilant Strike": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Vigilant_Strike"
+    },
+    "Vile Toxins Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Vile_Toxins_Support"
+    },
+    "Viper Strike": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Viper_Strike"
+    },
+    "Viper Strike of the Mamba": {
+      "xpTo20": 342051651,
+      "xpTo3": 378,
+      "url": "https://www.poewiki.net/wiki/Viper_Strike_of_the_Mamba"
+    },
+    "Vitality": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Vitality"
+    },
+    "Void Manipulation Support": {
+      "xpTo20": 342039899,
+      "xpTo3": 12800,
+      "url": "https://www.poewiki.net/wiki/Void_Manipulation_Support"
+    },
+    "Void Shockwave Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Void_Shockwave_Support"
+    },
+    "Void Sphere": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Void_Sphere"
+    },
+    "Void Sphere of Rending": {
+      "xpTo20": 338712291,
+      "xpTo3": 566989,
+      "url": "https://www.poewiki.net/wiki/Void_Sphere_of_Rending"
+    },
+    "Voidstorm Support": {
+      "xpTo20": null,
+      "xpTo3": 1666045137,
+      "url": "https://www.poewiki.net/wiki/Voidstorm_Support"
+    },
+    "Volatile Dead": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Volatile_Dead"
+    },
+    "Volatile Dead of Confinement": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Volatile_Dead_of_Confinement"
+    },
+    "Volatile Dead of Seething": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Volatile_Dead_of_Seething"
+    },
+    "Volatility Support": {
+      "xpTo20": 341831131,
+      "xpTo3": 198382,
+      "url": "https://www.poewiki.net/wiki/Volatility_Support"
+    },
+    "Volcanic Fissure": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Volcanic_Fissure"
+    },
+    "Volcanic Fissure of Snaking": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Volcanic_Fissure_of_Snaking"
+    },
+    "Volley Support": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/Volley_Support"
+    },
+    "Voltaxic Burst": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Voltaxic_Burst"
+    },
+    "Vortex": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Vortex"
+    },
+    "Vortex of Projection": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Vortex_of_Projection"
+    },
+    "Vulnerability": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Vulnerability"
+    },
+    "Wall of Force": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Wall_of_Force"
+    },
+    "War Banner": {
+      "xpTo20": 342050139,
+      "xpTo3": 3940,
+      "url": "https://www.poewiki.net/wiki/War_Banner"
+    },
+    "Warlord's Mark": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Warlord's_Mark"
+    },
+    "Wave of Conviction": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Wave_of_Conviction"
+    },
+    "Wave of Conviction of Trarthus": {
+      "xpTo20": 341913067,
+      "xpTo3": 145439,
+      "url": "https://www.poewiki.net/wiki/Wave_of_Conviction_of_Trarthus"
+    },
+    "Whirling Blades": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Whirling_Blades"
+    },
+    "Wild Strike": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Wild_Strike"
+    },
+    "Wild Strike of Extremes": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Wild_Strike_of_Extremes"
+    },
+    "Windburst Support": {
+      "xpTo20": 339855551,
+      "xpTo3": 538410,
+      "url": "https://www.poewiki.net/wiki/Windburst_Support"
+    },
+    "Winter Orb": {
+      "xpTo20": 340652931,
+      "xpTo3": 485160,
+      "url": "https://www.poewiki.net/wiki/Winter_Orb"
+    },
+    "Wintertide Brand": {
+      "xpTo20": 342004647,
+      "xpTo3": 56766,
+      "url": "https://www.poewiki.net/wiki/Wintertide_Brand"
+    },
+    "Wither": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Wither"
+    },
+    "Withering Step": {
+      "xpTo20": 342026975,
+      "xpTo3": 37758,
+      "url": "https://www.poewiki.net/wiki/Withering_Step"
+    },
+    "Withering Touch Support": {
+      "xpTo20": 336444335,
+      "xpTo3": 866171,
+      "url": "https://www.poewiki.net/wiki/Withering_Touch_Support"
+    },
+    "Wrath": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Wrath"
+    },
+    "Zealotry": {
+      "xpTo20": 341331311,
+      "xpTo3": 294199,
+      "url": "https://www.poewiki.net/wiki/Zealotry"
+    }
+  },
+  "missing": [
+    {
+      "name": "Convocation",
+      "url": "https://www.poewiki.net/wiki/Convocation",
+      "error": "No usable XP values found"
+    },
+    {
+      "name": "Detonate Mines",
+      "url": "https://www.poewiki.net/wiki/Detonate_Mines",
+      "error": "No usable XP values found"
+    },
+    {
+      "name": "Lesser Multiple Projectiles Support",
+      "url": "https://www.poewiki.net/wiki/Lesser_Multiple_Projectiles_Support",
+      "error": "No level experience values found"
+    },
+    {
+      "name": "Portal",
+      "url": "https://www.poewiki.net/wiki/Portal",
+      "error": "No level experience values found"
+    },
+    {
+      "name": "Sweep",
+      "url": "https://www.poewiki.net/wiki/Sweep",
+      "error": "No level experience values found"
+    },
+    {
+      "name": "Vaal Breach",
+      "url": "https://www.poewiki.net/wiki/Vaal_Breach",
+      "error": "No usable XP values found"
+    }
+  ]
+}

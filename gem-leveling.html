@@ -21,7 +21,10 @@
     <div class="top-nav-inner">
       <div class="top-nav-brand-block">
         <a class="top-nav-brand" href="./">Path of Profits</a>
-        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.3</button>
+        <div class="top-nav-subline">
+          <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.3</button>
+          <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
+        </div>
       </div>
       <div class="top-nav-center">
         <div class="top-nav-links">
@@ -29,8 +32,18 @@
           <a class="top-nav-link is-active" href="gem-leveling.html">Gem Leveling</a>
         </div>
       </div>
-      <div class="top-nav-meta chips" aria-label="Site metadata">
-        <span class="chip">Prices: poe.ninja</span>
+      <div class="top-nav-meta top-nav-settings" aria-label="Site settings">
+        <div class="top-nav-setting">
+          <label for="gemLeagueSelect">League</label>
+          <select id="gemLeagueSelect"></select>
+        </div>
+        <div class="top-nav-setting">
+          <label for="gemDisplayCurrency">Currency</label>
+          <select id="gemDisplayCurrency">
+            <option value="chaos" selected>Chaos</option>
+            <option value="divine">Divine</option>
+          </select>
+        </div>
       </div>
     </div>
   </nav>
@@ -41,7 +54,7 @@
         <div class="header-left">
           <h1>POE Gem Leveling Profits</h1>
           <div class="subtitle">
-            Compare gem prices across the market states that matter for leveling, quality, and corruption. Each row is built from the shared poe.ninja gem dataset rather than page-specific hard-coding.
+            Compare gem prices across the market states that matter for leveling, quality, and corruption.
           </div>
         </div>
       </div>
@@ -51,57 +64,77 @@
   <div class="wrap">
     <section class="panel gem-page-panel">
       <div class="gem-toolbar">
-        <div class="control-compact">
-          <label for="gemLeagueSelect">League</label>
-          <select id="gemLeagueSelect"></select>
+        <div class="control-compact control-cost">
+          <label for="gemcutterCostInput">GCP</label>
+          <div class="currency-setting">
+            <img id="gemcutterCostIcon" class="currency-setting-icon" alt="" hidden />
+            <div class="input-with-unit">
+              <input id="gemcutterCostInput" type="number" min="0" step="0.01" />
+              <span class="input-unit">c</span>
+            </div>
+          </div>
         </div>
         <div class="control-compact">
-          <label for="gemDisplayCurrency">Display Currency</label>
-          <select id="gemDisplayCurrency">
-            <option value="chaos" selected>Chaos</option>
-            <option value="divine">Divine</option>
-          </select>
+          <label for="ignoreLowConfidenceInput">Ignore Low Confidence</label>
+          <label class="switch gem-inline-switch">
+            <input id="ignoreLowConfidenceInput" type="checkbox" />
+            <span class="slider"></span>
+          </label>
         </div>
-        <div class="gem-search-field">
-          <label for="gemSearchInput">Search</label>
-          <input id="gemSearchInput" type="search" placeholder="Search gems or tags..." autocomplete="off" />
+        <div class="control-compact">
+          <label for="startValueLimitInput">Ignore Starting Values Above</label>
+          <div class="input-with-unit">
+            <input id="startValueLimitInput" type="number" min="0" step="0.01" />
+            <span id="startValueLimitUnit" class="input-unit">c</span>
+          </div>
+        </div>
+        <div class="control-compact gem-reset-control">
+          <a id="resetGemSettings" class="gem-toolbar-link" href="#resetGemSettings">Reset</a>
         </div>
       </div>
       <div class="gem-status-row">
-        <div id="gemSummary" class="gem-summary muted">Loading gems...</div>
         <div id="gemStatus" class="status">Loading gem price matrix...</div>
-      </div>
-      <div class="gem-page-note">
-        The table shows common leveling and corruption states side by side. Blank cells mean poe.ninja has no current market record for that gem state in the selected league.
       </div>
     </section>
 
     <section class="gem-filter-section" aria-label="Gem filters">
-      <div class="gem-filter-wrap">
-        <div class="gem-filter-label">Filters</div>
+      <div class="gem-filter-row">
+        <div class="gem-search-field gem-search-field-inline">
+          <input id="gemSearchInput" type="search" placeholder="Search gems..." autocomplete="off" />
+        </div>
         <div id="gemFilterBar" class="gem-filter-bar" aria-label="Gem filters"></div>
-      </div>
-    </section>
-
-    <section class="panel">
-      <div class="table-wrap gem-table-wrap">
-        <table id="gemTable" class="table gem-table">
-          <colgroup id="gemTableColgroup"></colgroup>
-          <thead>
-            <tr id="gemTableHeadRow"></tr>
-          </thead>
-          <tbody id="gemTableBody"></tbody>
-        </table>
+        <details class="gem-column-menu">
+          <summary class="gem-column-menu-trigger">Columns</summary>
+          <div class="gem-column-menu-panel">
+            <div class="gem-column-menu-title">Calculated values</div>
+            <div id="gemColumnToggleBar" class="gem-column-toggle-bar" aria-label="Calculated value columns"></div>
+          </div>
+        </details>
       </div>
     </section>
   </div>
+
+  <section class="panel-full-bleed gem-table-panel">
+    <div class="gem-data-note muted">
+      <strong>Some transfigured gems have incorrect pricing data within POE Ninja. Listings for 1/20 gems appear to be more reliable at present than the 1/0 versions of the same gems.</strong> <span id="gemSummary">Loading gems...</span>
+    </div>
+    <div class="gem-table-scroll">
+      <table id="gemTable" class="table gem-table">
+        <colgroup id="gemTableColgroup"></colgroup>
+        <thead>
+          <tr id="gemTableHeadRow"></tr>
+        </thead>
+        <tbody id="gemTableBody"></tbody>
+      </table>
+    </div>
+  </section>
 
   <footer class="site-footer">
     <div class="site-footer-inner">
       <section class="footer-card" aria-labelledby="modelAssumptionsTitle">
         <div class="footer-card-kicker">Model Assumptions</div>
         <div id="modelAssumptionsTitle" class="footer-card-copy">
-          Gem prices are pulled from poe.ninja static data builds. Each row groups all matching gem variants into a shared state matrix so the same raw data can support future gem-focused pages without changing the source model.
+          Drop rates are taken from PoE Wiki estimated tables (community data). Unique drops are modeled as exclusive pools when probabilities sum to 100, and additional drops are treated as independent rolls. Prices are from poe.ninja and can be manually overridden.
         </div>
       </section>
       <div class="footer-legal">

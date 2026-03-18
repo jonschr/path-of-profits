@@ -21,7 +21,10 @@
     <div class="top-nav-inner">
       <div class="top-nav-brand-block">
         <a class="top-nav-brand" href="./">Path of Profits</a>
-        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.3</button>
+        <div class="top-nav-subline">
+          <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.3</button>
+          <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
+        </div>
       </div>
       <div class="top-nav-center">
         <div class="top-nav-links">
@@ -29,8 +32,18 @@
           <a class="top-nav-link" href="gem-leveling.html">Gem Leveling</a>
         </div>
       </div>
-      <div class="top-nav-meta chips" aria-label="Site metadata">
-        <span class="chip">Prices: poe.ninja</span>
+      <div class="top-nav-meta top-nav-settings" aria-label="Site settings">
+        <div class="top-nav-setting">
+          <label for="leagueSelect">League</label>
+          <select id="leagueSelect"></select>
+        </div>
+        <div class="top-nav-setting">
+          <label for="displayCurrency">Currency</label>
+          <select id="displayCurrency">
+            <option value="chaos" selected>Chaos</option>
+            <option value="divine">Divine</option>
+          </select>
+        </div>
       </div>
     </div>
   </nav>
@@ -58,19 +71,8 @@
   </header>
 
   <div class="wrap">
-    <section class="panel">
+    <section class="boss-controls">
       <div class="control-grid">
-        <div class="control-compact">
-          <label for="leagueSelect">League</label>
-          <select id="leagueSelect"></select>
-        </div>
-        <div class="control-compact">
-          <label for="displayCurrency">Display Currency</label>
-          <select id="displayCurrency">
-            <option value="chaos" selected>Chaos</option>
-            <option value="divine">Divine</option>
-          </select>
-        </div>
         <div>
           <div class="label-row">
             <label for="minValueInput">Ignore Drops Below</label>
@@ -109,10 +111,6 @@
             <span class="info-dot has-tooltip" data-tooltip="Resets manual price overrides, include toggles, league/currency selections, filters, and debug back to defaults." tabindex="0" aria-label="Resets manual price overrides, include toggles, league/currency selections, filters, and debug back to defaults.">?</span>
           </div>
           <button id="resetAll" class="button-secondary" type="button">Reset</button>
-        </div>
-        <div class="control-compact control-refresh">
-          <label aria-hidden="true">&nbsp;</label>
-          <button id="refresh" class="button-wide has-tooltip" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh Prices</button>
         </div>
       </div>
       <div id="status" class="status">Ready.</div>

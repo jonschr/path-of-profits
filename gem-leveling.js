@@ -4,39 +4,101 @@
   const STORAGE_KEYS = {
     league: 'poeGemLeague',
     displayCurrency: 'poeGemDisplayCurrency',
+    gemcutterCost: 'poeGemGemcutterCost',
+    ignoreLowConfidence: 'poeGemIgnoreLowConfidence',
+    startValueLimitChaos: 'poeGemStartValueLimitChaos',
+    rawOverrides: 'poeGemRawOverrides',
+    visibleCalcColumns: 'poeGemVisibleCalcColumns',
     search: 'poeGemSearch',
-    filter: 'poeGemFilter'
+    filter: 'poeGemFilter',
+    sortKey: 'poeGemSortKey',
+    sortDir: 'poeGemSortDir'
   };
   const FALLBACK_LEAGUES = ['Standard', 'Hardcore', 'Mirage', 'Hardcore Mirage'];
   const ETERNAL_LEAGUES = new Set(['standard', 'hardcore']);
   const FILTER_DEFS = [
-    { key: 'normal', label: 'Normal' },
-    { key: 'transfigured', label: 'Transfigured' },
-    { key: 'exceptional', label: 'Exceptional' },
-    { key: 'vaal', label: 'Vaal' }
-  ];
-  const EXCEPTIONAL_COLUMNS = [
-    { key: '1', label: '1' },
-    { key: '1c', label: '1c' },
-    { key: '1/20', label: '1/20' },
-    { key: '2', label: '2' },
-    { key: '3', label: '3' },
-    { key: '4c', label: '4c' }
-  ];
-  const STANDARD_COLUMNS = [
-    { key: '1', label: '1' },
-    { key: '1/20', label: '1/20' },
-    { key: '20c', label: '20c' },
-    { key: '21c', label: '21c' },
-    { key: '21/20c', label: '21/20c' },
-    { key: '21/23c', label: '21/23c' }
+    { key: 'main', label: 'Normal + Transfigured' },
+    { key: 'exceptional', label: 'Exceptional' }
   ];
   const NINJA_ECONOMY_BASE = 'https://poe.ninja/poe1/economy';
+  const TRADE_SITE_BASE = 'https://www.pathofexile.com';
+  const DEFAULT_SORT_BY_FILTER = {
+    main: 'bestStep',
+    exceptional: 'bestStep'
+  };
+  const BASE_VISIBLE_COLUMN_KEYS = {
+    main: [
+      'raw:1',
+      'raw:1/20',
+      'raw:20',
+      'raw:20c',
+      'raw:20/20c',
+      'raw:21c',
+      'raw:21/20c'
+    ],
+    exceptional: [
+      'raw:1',
+      'raw:3',
+      'raw:3c',
+      'raw:3/20c',
+      'raw:4c'
+    ]
+  };
+  const DEFAULT_VISIBLE_CALC_COLUMNS = {
+    main: ['bestStep', 'routeTo20', 'xpPerMillion', 'levelStep'],
+    exceptional: ['bestStep', 'routeTotal', 'xpPerMillion']
+  };
+  const COLUMN_ORDER = {
+    main: [
+      'bestStep',
+      'raw:1',
+      'qualityAdd',
+      'raw:1/20',
+      'routeTo20',
+      'xpPerMillion',
+      'raw:20',
+      'levelStep',
+      'routeTotal',
+      'raw:20/20',
+      'raw:20c',
+      'raw:20/20c',
+      'raw:21c',
+      'raw:21/20c'
+    ],
+    exceptional: [
+      'bestStep',
+      'raw:1',
+      'routeTotal',
+      'xpPerMillion',
+      'qualityAdd',
+      'raw:1/20',
+      'stepTwo',
+      'raw:2',
+      'stepThree',
+      'raw:3',
+      'raw:3/20',
+      'raw:1c',
+      'raw:2c',
+      'raw:3c',
+      'raw:3/20c',
+      'raw:3/23c',
+      'raw:4c',
+      'raw:5',
+      'raw:4/20c'
+    ]
+  };
 
   const leagueSelect = document.getElementById('gemLeagueSelect');
   const displayCurrencySelect = document.getElementById('gemDisplayCurrency');
+  const gemcutterCostInput = document.getElementById('gemcutterCostInput');
+  const gemcutterCostIcon = document.getElementById('gemcutterCostIcon');
+  const ignoreLowConfidenceInput = document.getElementById('ignoreLowConfidenceInput');
+  const startValueLimitInput = document.getElementById('startValueLimitInput');
+  const startValueLimitUnit = document.getElementById('startValueLimitUnit');
+  const resetGemSettingsButton = document.getElementById('resetGemSettings');
   const searchInput = document.getElementById('gemSearchInput');
   const filterBar = document.getElementById('gemFilterBar');
+  const columnToggleBar = document.getElementById('gemColumnToggleBar');
   const summaryEl = document.getElementById('gemSummary');
   const statusEl = document.getElementById('gemStatus');
   const tableEl = document.getElementById('gemTable');
@@ -47,28 +109,65 @@
   const debugContent = document.getElementById('debugContent');
   const changelogDialog = document.getElementById('changelogDialog');
   const debugDialog = document.getElementById('debugDialog');
+  const refreshButton = document.getElementById('refresh');
   const openChangelog = document.getElementById('openChangelog');
   const closeChangelog = document.getElementById('closeChangelog');
   const openDebug = document.getElementById('openDebug');
   const closeDebug = document.getElementById('closeDebug');
 
+  function loadVisibleCalcColumns() {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(STORAGE_KEYS.visibleCalcColumns) || '{}');
+      return {
+        main: Array.isArray(parsed.main) ? parsed.main : DEFAULT_VISIBLE_CALC_COLUMNS.main.slice(),
+        exceptional: Array.isArray(parsed.exceptional) ? parsed.exceptional : DEFAULT_VISIBLE_CALC_COLUMNS.exceptional.slice()
+      };
+    } catch (_error) {
+      return {
+        main: DEFAULT_VISIBLE_CALC_COLUMNS.main.slice(),
+        exceptional: DEFAULT_VISIBLE_CALC_COLUMNS.exceptional.slice()
+      };
+    }
+  }
+
   const state = {
     leagueId: localStorage.getItem(STORAGE_KEYS.league) || '',
     displayCurrency: localStorage.getItem(STORAGE_KEYS.displayCurrency) === 'divine' ? 'divine' : 'chaos',
+    gemcutterCost: null,
+    ignoreLowConfidence: localStorage.getItem(STORAGE_KEYS.ignoreLowConfidence) !== 'false',
+    startValueLimitChaos: parseStoredStartValueLimit(localStorage.getItem(STORAGE_KEYS.startValueLimitChaos)),
     search: localStorage.getItem(STORAGE_KEYS.search) || '',
-    filter: localStorage.getItem(STORAGE_KEYS.filter) || 'normal',
+    filter: localStorage.getItem(STORAGE_KEYS.filter) || 'main',
+    sortKey: localStorage.getItem(STORAGE_KEYS.sortKey) || DEFAULT_SORT_BY_FILTER.main,
+    sortDir: localStorage.getItem(STORAGE_KEYS.sortDir) === 'asc' ? 'asc' : 'desc',
+    rawOverrides: JSON.parse(localStorage.getItem(STORAGE_KEYS.rawOverrides) || '{}'),
+    visibleCalcColumns: loadVisibleCalcColumns(),
     leagues: [],
     rows: [],
     visibleRows: [],
+    rowByName: new Map(),
     divineRate: null,
+    apiGemcutterCost: null,
+    gemcutterIcon: '',
     updatedAt: null,
-    sourceUrls: []
+    sourceUrls: [],
+    gemXp: {}
   };
 
+  const storedGemcutterCost = Number(localStorage.getItem(STORAGE_KEYS.gemcutterCost));
+  if (Number.isFinite(storedGemcutterCost) && storedGemcutterCost >= 0) {
+    state.gemcutterCost = storedGemcutterCost;
+  }
+
   displayCurrencySelect.value = state.displayCurrency;
+  gemcutterCostInput.value = state.gemcutterCost == null ? '' : String(state.gemcutterCost);
+  ignoreLowConfidenceInput.checked = state.ignoreLowConfidence;
   searchInput.value = state.search;
   if (!FILTER_DEFS.some((filter) => filter.key === state.filter)) {
-    state.filter = 'normal';
+    state.filter = 'main';
+  }
+  if (!state.sortKey) {
+    state.sortKey = DEFAULT_SORT_BY_FILTER[state.filter] || 'bestStep';
   }
 
   function slugifyLeague(text) {
@@ -184,6 +283,47 @@
       : formatChaosValue(value);
   }
 
+  function formatDelta(value) {
+    if (!Number.isFinite(value)) return '—';
+    if (value === 0) return formatPrice(0);
+    const sign = value > 0 ? '+' : '-';
+    return `${sign}${formatPrice(Math.abs(value))}`;
+  }
+
+  function formatRate(value) {
+    if (!Number.isFinite(value)) return '—';
+    const sign = value > 0 ? '+' : value < 0 ? '-' : '';
+    const magnitude = formatPrice(Math.abs(value));
+    return `${sign}${magnitude}/M`;
+  }
+
+  function roundCurrencyInput(value) {
+    if (!Number.isFinite(value) || value < 0) return 0;
+    return Math.round(value * 100) / 100;
+  }
+
+  function displayValueFromChaos(value) {
+    if (!Number.isFinite(value)) return '';
+    if (state.displayCurrency === 'divine' && Number.isFinite(state.divineRate) && state.divineRate > 0) {
+      return String(roundCurrencyInput(value / state.divineRate));
+    }
+    return String(roundCurrencyInput(value));
+  }
+
+  function chaosValueFromDisplay(inputValue) {
+    if (inputValue == null || inputValue === '') return null;
+    const value = Number(inputValue);
+    if (!Number.isFinite(value) || value < 0) return null;
+    if (state.displayCurrency === 'divine' && Number.isFinite(state.divineRate) && state.divineRate > 0) {
+      return roundCurrencyInput(value * state.divineRate);
+    }
+    return roundCurrencyInput(value);
+  }
+
+  function displayCurrencyUnitLabel() {
+    return state.displayCurrency === 'divine' ? 'Div' : 'C';
+  }
+
   function updateDisplayCurrencyLabels() {
     const chaosOption = displayCurrencySelect.querySelector('option[value="chaos"]');
     const divineOption = displayCurrencySelect.querySelector('option[value="divine"]');
@@ -207,17 +347,33 @@
     if (level === 1 && quality == null && corrupted) return '1c';
     if (level === 1 && quality === 20 && !corrupted) return '1/20';
     if (level === 2 && quality == null && !corrupted) return '2';
+    if (level === 2 && quality == null && corrupted) return '2c';
     if (level === 3 && quality == null && !corrupted) return '3';
+    if (level === 3 && quality == null && corrupted) return '3c';
+    if (level === 20 && quality == null && !corrupted) return '20';
+    if (level === 20 && quality === 20 && !corrupted) return '20/20';
     if (level === 4 && quality == null && corrupted) return '4c';
+    if (level === 5 && quality == null && !corrupted) return '5';
     if (level === 20 && quality == null && corrupted) return '20c';
+    if (level === 20 && quality === 20 && corrupted) return '20/20c';
+    if (level === 20 && quality === 23 && corrupted) return '20/23c';
     if (level === 21 && quality == null && corrupted) return '21c';
     if (level === 21 && quality === 20 && corrupted) return '21/20c';
     if (level === 21 && quality === 23 && corrupted) return '21/23c';
+    if (level === 1 && quality === 23 && corrupted) return '1/23c';
     return null;
   }
 
-  function isExceptionalGem(name) {
+  function isClassicExceptionalGem(name) {
     return /^(Awakened )?(Enlighten|Empower|Enhance) Support$/i.test(String(name || ''));
+  }
+
+  function isGreaterExceptionalGem(records, name) {
+    if (!/Support$/i.test(String(name || ''))) return false;
+    const maxLevel = records.reduce((best, record) => (
+      Number.isFinite(record?.gemLevel) ? Math.max(best, record.gemLevel) : best
+    ), 0);
+    return maxLevel > 0 && maxLevel <= 4;
   }
 
   function buildGemTags(records, name) {
@@ -226,18 +382,582 @@
     if (first.gemType === 'Normal') tags.push('Normal');
     if (first.isTransfigured) tags.push('Transfigured');
     if (first.isVaal) tags.push('Vaal');
-    if (isExceptionalGem(name)) tags.push('Exceptional');
+    if (isClassicExceptionalGem(name) || isGreaterExceptionalGem(records, name)) tags.push('Exceptional');
     return tags;
   }
 
-  function getActiveColumns() {
-    return state.filter === 'exceptional' ? EXCEPTIONAL_COLUMNS : STANDARD_COLUMNS;
+  function isExceptionalRow(row) {
+    return row?.tags?.includes('Exceptional');
+  }
+
+  function isVaalRow(row) {
+    return row?.tags?.includes('Vaal');
+  }
+
+  function isClassicExceptionalRow(row) {
+    return row?.exceptionalKind === 'classic';
+  }
+
+  function isGreaterExceptionalRow(row) {
+    return row?.exceptionalKind === 'greater';
+  }
+
+  function getRecord(row, key) {
+    if (!row || !key) return null;
+    const baseRecord = row.states?.[key] || null;
+    const overrideKey = `${slugifyLeague(state.leagueId)}::${row.name}::${key}`;
+    const manualValue = Number(state.rawOverrides?.[overrideKey]);
+    if (!Number.isFinite(manualValue)) return baseRecord;
+    if (!baseRecord) {
+      return {
+        name: row.name,
+        variant: key,
+        detailsId: key,
+        min: manualValue,
+        mean: manualValue,
+        max: manualValue,
+        lowConfidence: false,
+        manualOverride: true
+      };
+    }
+    return {
+      ...baseRecord,
+      min: manualValue,
+      mean: manualValue,
+      max: manualValue,
+      lowConfidence: false,
+      manualOverride: true
+    };
+  }
+
+  function describeAdditionalState(record) {
+    if (!record) return 'Unknown state';
+    const parts = [];
+    if (record.variant) {
+      parts.push(record.variant);
+    } else {
+      if (Number.isFinite(record.gemLevel)) parts.push(`lvl ${record.gemLevel}`);
+      if (Number.isFinite(record.gemQuality)) parts.push(`q${record.gemQuality}`);
+      if (record.corrupted === true) parts.push('corrupted');
+    }
+    const label = parts.join(' ');
+    return label || record.detailsId || record.name || 'Unknown state';
+  }
+
+  function getListingCount(record) {
+    if (!record) return 0;
+    if (Number.isFinite(record.listingCount)) return record.listingCount;
+    if (Number.isFinite(record.confidenceCount)) return record.confidenceCount;
+    return 0;
+  }
+
+  function buildMetric({ value = null, records = [], note = '', label = '', format = 'delta' } = {}) {
+    const validRecords = records.filter(Boolean);
+    return {
+      value: Number.isFinite(value) ? value : null,
+      records: validRecords,
+      lowConfidence: validRecords.some((record) => record.lowConfidence),
+      note,
+      label,
+      format
+    };
+  }
+
+  function metricForDisplay(metric) {
+    if (!metric || !state.ignoreLowConfidence || !metric.lowConfidence) return metric;
+    return buildMetric({ records: metric.records, note: metric.note, label: metric.label, format: metric.format });
+  }
+
+  function priceMetric(record, note) {
+    if (!record) return buildMetric({ note });
+    return buildMetric({ value: record.min, records: [record], note });
+  }
+
+  function deltaMetric(target, base, note) {
+    if (!target || !base) return buildMetric({ note });
+    return buildMetric({
+      value: target.min - base.min,
+      records: [base, target],
+      note
+    });
+  }
+
+  function ratioMetric(metric, denominator, note) {
+    if (!metric || !Number.isFinite(metric.value) || !Number.isFinite(denominator) || denominator <= 0) {
+      return buildMetric({ records: metric?.records || [], note, label: metric?.label || '' });
+    }
+    return buildMetric({
+      value: (metric.value * 1000000) / denominator,
+      records: metric.records,
+      note,
+      label: metric.label,
+      format: 'rate'
+    });
+  }
+
+  function withMetricLabel(metric, label) {
+    if (!metric) return buildMetric({ label });
+    return {
+      ...metric,
+      label
+    };
+  }
+
+  function pickHighestRecord(row, keys) {
+    return keys
+      .map((key) => getRecord(row, key))
+      .filter(Boolean)
+      .sort((a, b) => b.min - a.min)[0] || null;
+  }
+
+  function metricWithBestValue(metrics, note) {
+    const candidates = metrics.filter((metric) => Number.isFinite(metric?.value));
+    if (!candidates.length) return buildMetric({ note });
+    return candidates.reduce((best, metric) => (metric.value > best.value ? metric : best));
+  }
+
+  function getGemcutterBatchCost() {
+    return (Number.isFinite(state.gemcutterCost) ? state.gemcutterCost : 0) * 20;
+  }
+
+  function getXpEntry(row) {
+    return row ? state.gemXp?.[row.name] || null : null;
+  }
+
+  function getRouteXpTotal(row) {
+    const xpEntry = getXpEntry(row);
+    if (!xpEntry) return null;
+    return state.filter === 'exceptional'
+      ? xpEntry.xpTo3
+      : xpEntry.xpTo20;
+  }
+
+  function buildGemTradeUrl(row, stateKey) {
+    const record = getRecord(row, stateKey);
+    if (!record || !state.leagueId) return null;
+
+    const typeValue = record.tradeTypeOption
+      ? {
+          option: record.tradeTypeOption,
+          ...(record.tradeTypeDiscriminator ? { discriminator: record.tradeTypeDiscriminator } : {})
+        }
+      : (record.baseType || row.name);
+
+    const miscFilters = {};
+    if (Number.isFinite(record.gemLevel)) {
+      miscFilters.gem_level = { min: record.gemLevel, max: record.gemLevel };
+    }
+    if (Number.isFinite(record.gemQuality)) {
+      miscFilters.quality = { min: record.gemQuality, max: record.gemQuality };
+    }
+    if (record.corrupted === true) {
+      miscFilters.corrupted = { option: 'true' };
+    } else if (record.corrupted === false || record.corrupted == null) {
+      miscFilters.corrupted = { option: 'false' };
+    }
+
+    const query = {
+      query: {
+        status: { option: 'securable' },
+        type: typeValue,
+        stats: [{ type: 'and', filters: [] }],
+        filters: {
+          misc_filters: { filters: miscFilters }
+        }
+      },
+      sort: { price: 'asc' }
+    };
+
+    return `${TRADE_SITE_BASE}/trade/search/${encodeURIComponent(state.leagueId)}?q=${encodeURIComponent(JSON.stringify(query))}`;
+  }
+
+  function buildGemTradeLinks(row) {
+    return [
+      { key: '1', label: 'Level 1' },
+      { key: '1/20', label: '1/20' },
+      { key: '20', label: '20/0' },
+      { key: '20/20', label: '20/20' },
+      { key: '21/20c', label: '21/20c' }
+    ].map(({ key, label }) => {
+      const url = buildGemTradeUrl(row, key);
+      return url ? { key, label, url } : null;
+    }).filter(Boolean);
+  }
+
+  function buildRawColumn(stateKey, label, tooltip) {
+    return {
+      key: `raw:${stateKey}`,
+      labelLines: Array.isArray(label) ? label : [label],
+      tooltip,
+      isRaw: true,
+      rawStateKey: stateKey,
+      metric: (row) => priceMetric(getRecord(row, stateKey), `Raw ${stateKey}`)
+    };
+  }
+
+  function getRawColumnsForExceptional() {
+    return [
+      buildRawColumn('1', ['Level', '1'], 'Market price for the starting exceptional-gem state'),
+      buildRawColumn('1/20', '1/20', 'Raw market price for Level One / 20 Quality'),
+      buildRawColumn('2', ['Level', '2'], 'Raw market price for Level Two'),
+      buildRawColumn('3', ['Level', '3'], 'Raw market price for Level Three'),
+      buildRawColumn('1c', ['Level 1', 'Corrupted'], 'Raw market price for Level One Corrupted'),
+      buildRawColumn('2c', ['Level 2', 'Corrupted'], 'Raw market price for Level Two Corrupted'),
+      buildRawColumn('3c', ['Level 3', 'Corrupted'], 'Raw market price for Level Three Corrupted'),
+      buildRawColumn('3/20', '3/20', 'Raw market price for Level Three / 20 Quality'),
+      buildRawColumn('3/20c', ['3/20', 'Corrupted'], 'Raw market price for Level Three / 20 Quality Corrupted'),
+      buildRawColumn('3/23c', ['3/23', 'Corrupted'], 'Raw market price for Level Three / 23 Quality Corrupted'),
+      buildRawColumn('4c', ['Level 4', 'Corrupted'], 'Raw market price for Level Four Corrupted'),
+      buildRawColumn('5', ['Level', '5'], 'Raw market price for Level Five'),
+      buildRawColumn('4/20c', ['4/20', 'Corrupted'], 'Raw market price for Level Four / 20 Quality Corrupted')
+    ];
+  }
+
+  function getRawColumnsForMain() {
+    return [
+      buildRawColumn('1', '1', 'Market price for Level One'),
+      buildRawColumn('20', '20', 'Raw market price for Level Twenty'),
+      buildRawColumn('1/20', '1/20', 'Raw market price for Level One / 20 Quality'),
+      buildRawColumn('20/20', '20/20', 'Raw market price for Level Twenty / 20 Quality'),
+      buildRawColumn('20c', ['20', 'Corrupted'], 'Raw market price for Level Twenty Corrupted'),
+      buildRawColumn('20/20c', ['20/20', 'Corrupted'], 'Raw market price for Level Twenty / 20 Quality Corrupted'),
+      buildRawColumn('21c', ['21', 'Corrupted'], 'Raw market price for Level Twenty-One Corrupted'),
+      buildRawColumn('21/20c', ['21/20', 'Corrupted'], 'Raw market price for Level Twenty-One / 20 Quality Corrupted')
+    ];
+  }
+
+  function getCalculatedColumnsForExceptional() {
+    return [
+      {
+        key: 'qualityAdd',
+        labelLines: ['1 -> 1/20'],
+        tooltip: 'Level One to Level One / 20 Quality, net of twenty Gemcutter’s Prisms',
+        metric: (row) => {
+          const base = getRecord(row, '1');
+          const target = getRecord(row, '1/20');
+          if (!base || !target) return buildMetric({ note: 'Exceptional quality uplift' });
+          return buildMetric({
+            value: target.min - base.min - getGemcutterBatchCost(),
+            records: [base, target],
+            note: 'Exceptional quality uplift'
+          });
+        }
+      },
+      {
+        key: 'stepTwo',
+        labelLines: ['Base -> Upgrade 1'],
+        tooltip: 'Classic exceptional gems use Level One to Level Two. Greater support gems use Level One to Level One / 20 Quality, net of Gemcutter’s Prisms.',
+        metric: (row) => {
+          if (isGreaterExceptionalRow(row)) {
+            const base = getRecord(row, '1');
+            const target = getRecord(row, '1/20');
+            if (!base || !target) return buildMetric({ note: 'Greater support first upgrade' });
+            return buildMetric({
+              value: target.min - base.min - getGemcutterBatchCost(),
+              records: [base, target],
+              note: 'Greater support first upgrade'
+            });
+          }
+          return deltaMetric(getRecord(row, '2'), getRecord(row, '1'), 'Leveling gain to 2');
+        }
+      },
+      {
+        key: 'stepThree',
+        labelLines: ['Upgrade 1 -> End'],
+        tooltip: 'Classic exceptional gems use Level Two to Level Three. Greater support gems use Level One / 20 Quality to Level Three / 20 Quality.',
+        metric: (row) => (
+          isGreaterExceptionalRow(row)
+            ? deltaMetric(getRecord(row, '3/20'), getRecord(row, '1/20'), 'Greater support end upgrade')
+            : deltaMetric(getRecord(row, '3'), getRecord(row, '2'), 'Leveling gain to 3')
+        )
+      },
+      {
+        key: 'routeTotal',
+        labelLines: ['Base -> End'],
+        tooltip: 'Classic exceptional gems use Level One to Level Three. Greater support gems use Level One to Level Three / 20 Quality, net of Gemcutter’s Prisms.',
+        metric: (row) => {
+          if (isGreaterExceptionalRow(row)) {
+            const base = getRecord(row, '1');
+            const target = getRecord(row, '3/20');
+            if (!base || !target) return buildMetric({ note: 'Greater support full route' });
+            return buildMetric({
+              value: target.min - base.min - getGemcutterBatchCost(),
+              records: [base, target],
+              note: 'Greater support full route'
+            });
+          }
+          return deltaMetric(getRecord(row, '3'), getRecord(row, '1'), 'Full leveling gain');
+        }
+      },
+      {
+        key: 'xpPerMillion',
+        labelLines: ['Value / M XP'],
+        tooltip: 'Currency value added per million gem XP for the full exceptional-gem route',
+        metric: (row) => ratioMetric(
+          isGreaterExceptionalRow(row)
+            ? (() => {
+                const base = getRecord(row, '1');
+                const target = getRecord(row, '3/20');
+                if (!base || !target) return buildMetric({ note: 'Greater support full route' });
+                return buildMetric({
+                  value: target.min - base.min - getGemcutterBatchCost(),
+                  records: [base, target],
+                  note: 'Greater support full route'
+                });
+              })()
+            : deltaMetric(getRecord(row, '3'), getRecord(row, '1'), 'Full leveling gain'),
+          getRouteXpTotal(row),
+          'Exceptional value per million XP'
+        )
+      },
+      {
+        key: 'bestStep',
+        labelLines: ['Best Step'],
+        tooltip: 'Highest-value step within the exceptional-gem route',
+        metric: (row) => metricWithBestValue(
+          isGreaterExceptionalRow(row)
+            ? [
+                withMetricLabel((() => {
+                  const base = getRecord(row, '1');
+                  const target = getRecord(row, '1/20');
+                  if (!base || !target) return buildMetric({ note: 'Greater support first upgrade' });
+                  return buildMetric({
+                    value: target.min - base.min - getGemcutterBatchCost(),
+                    records: [base, target],
+                    note: 'Greater support first upgrade'
+                  });
+                })(), '1 -> 1/20'),
+                withMetricLabel(deltaMetric(getRecord(row, '3/20'), getRecord(row, '1/20'), 'Greater support end upgrade'), '1/20 -> 3/20'),
+                withMetricLabel((() => {
+                  const base = getRecord(row, '1');
+                  const target = getRecord(row, '3/20');
+                  if (!base || !target) return buildMetric({ note: 'Greater support full route' });
+                  return buildMetric({
+                    value: target.min - base.min - getGemcutterBatchCost(),
+                    records: [base, target],
+                  note: 'Greater support full route'
+                });
+                })(), '1 -> 3/20')
+              ]
+            : [
+                withMetricLabel(deltaMetric(getRecord(row, '2'), getRecord(row, '1')), '1 -> 2'),
+                withMetricLabel(deltaMetric(getRecord(row, '3'), getRecord(row, '2')), '2 -> 3'),
+                withMetricLabel(deltaMetric(getRecord(row, '3'), getRecord(row, '1')), '1 -> 3')
+              ],
+          'Best uplift'
+        )
+      }
+    ];
+  }
+
+  function getCalculatedColumnsForMain() {
+    return [
+      {
+        key: 'routeTo20',
+        labelLines: ['1 -> 20'],
+        tooltip: 'Level One to Level Twenty with no added quality',
+        metric: (row) => {
+          const base = getRecord(row, '1');
+          const target = getRecord(row, '20');
+          if (!base || !target) return buildMetric({ note: 'Leveling gain to 20' });
+          return buildMetric({
+            value: target.min - base.min,
+            records: [base, target],
+            note: 'Leveling gain to 20'
+          });
+        }
+      },
+      {
+        key: 'xpPerMillion',
+        labelLines: ['Value / M XP'],
+        tooltip: 'Currency value added per million gem XP for leveling from Level One / 20 Quality to Level Twenty / 20 Quality',
+        metric: (row) => ratioMetric((() => {
+          const base = getRecord(row, '1/20');
+          const target = getRecord(row, '20/20');
+          if (!base || !target) return buildMetric({ note: 'Leveling gain from 1/20 to 20/20' });
+          return buildMetric({
+            value: target.min - base.min,
+            records: [base, target],
+            note: 'Leveling gain from 1/20 to 20/20'
+          });
+        })(), getRouteXpTotal(row), 'Value per million XP')
+      },
+      {
+        key: 'qualityAdd',
+        labelLines: ['1 -> 1/20'],
+        tooltip: 'Level One to Level One / 20 Quality, net of twenty Gemcutter’s Prisms',
+        metric: (row) => {
+          const base = getRecord(row, '1');
+          const target = getRecord(row, '1/20');
+          if (!base || !target) return buildMetric({ note: 'Quality uplift' });
+          return buildMetric({
+            value: target.min - base.min - getGemcutterBatchCost(),
+            records: [base, target],
+            note: 'Quality uplift'
+          });
+        }
+      },
+      {
+        key: 'levelStep',
+        labelLines: ['1/20 -> 20/20'],
+        tooltip: 'Level One / 20 Quality to Level Twenty / 20 Quality',
+        metric: (row) => deltaMetric(getRecord(row, '20/20'), getRecord(row, '1/20'), 'Leveling gain after quality')
+      },
+      {
+        key: 'routeTotal',
+        labelLines: ['1 -> 20/20'],
+        tooltip: 'Level One to Level Twenty / 20 Quality, net of twenty Gemcutter’s Prisms',
+        metric: (row) => {
+          const base = getRecord(row, '1');
+          const target = getRecord(row, '20/20');
+          if (!base || !target) return buildMetric({ note: 'Full leveling gain' });
+          return buildMetric({
+            value: target.min - base.min - getGemcutterBatchCost(),
+            records: [base, target],
+            note: 'Full leveling gain'
+          });
+        }
+      },
+      {
+        key: 'bestStep',
+        labelLines: ['Best Step'],
+        tooltip: 'Highest-value normal-gem step',
+        metric: (row) => metricWithBestValue([
+          withMetricLabel((() => {
+            const base = getRecord(row, '1');
+            const target = getRecord(row, '20');
+            if (!base || !target) return buildMetric({ note: 'Leveling gain to 20' });
+            return buildMetric({
+              value: target.min - base.min,
+              records: [base, target],
+              note: 'Leveling gain to 20'
+            });
+          })(), '1 -> 20'),
+          withMetricLabel((() => {
+            const base = getRecord(row, '1');
+            const target = getRecord(row, '1/20');
+            if (!base || !target) return buildMetric({ note: 'Quality uplift' });
+            return buildMetric({
+              value: target.min - base.min - getGemcutterBatchCost(),
+              records: [base, target],
+              note: 'Quality uplift'
+            });
+          })(), '1 -> 1/20'),
+          withMetricLabel(deltaMetric(getRecord(row, '20/20'), getRecord(row, '1/20')), '1/20 -> 20/20'),
+          withMetricLabel((() => {
+            const base = getRecord(row, '1');
+            const target = getRecord(row, '20/20');
+            if (!base || !target) return buildMetric({ note: 'Full leveling gain' });
+            return buildMetric({
+              value: target.min - base.min - getGemcutterBatchCost(),
+              records: [base, target],
+              note: 'Full leveling gain'
+            });
+          })(), '1 -> 20/20')
+        ], 'Best uplift')
+      }
+    ];
+  }
+
+  function getCalculatedColumns() {
+    return state.filter === 'exceptional'
+      ? getCalculatedColumnsForExceptional()
+      : getCalculatedColumnsForMain();
+  }
+
+  function getOptionalColumns() {
+    if (state.filter === 'exceptional') {
+      const rawByKey = new Map(getRawColumnsForExceptional().map((column) => [column.key, column]));
+      return [
+        rawByKey.get('raw:1/20'),
+        rawByKey.get('raw:2'),
+        rawByKey.get('raw:3/20'),
+        rawByKey.get('raw:1c'),
+        rawByKey.get('raw:2c'),
+        rawByKey.get('raw:3/23c'),
+        rawByKey.get('raw:4/20c'),
+        rawByKey.get('raw:5'),
+        ...getCalculatedColumnsForExceptional()
+      ].filter(Boolean);
+    }
+    const rawByKey = new Map(getRawColumnsForMain().map((column) => [column.key, column]));
+    return [
+      rawByKey.get('raw:20/20'),
+      ...getCalculatedColumnsForMain()
+    ].filter(Boolean);
+  }
+
+  function getVisibleCalculatedColumnKeys() {
+    const allowedKeys = new Set(getOptionalColumns().map((column) => column.key));
+    const stored = Array.isArray(state.visibleCalcColumns[state.filter]) ? state.visibleCalcColumns[state.filter] : [];
+    const next = stored.filter((key) => allowedKeys.has(key));
+    if (next.length || stored.length) return next;
+    return (DEFAULT_VISIBLE_CALC_COLUMNS[state.filter] || []).filter((key) => allowedKeys.has(key));
+  }
+
+  function persistVisibleCalculatedColumnKeys(keys) {
+    state.visibleCalcColumns[state.filter] = keys.slice();
+    localStorage.setItem(STORAGE_KEYS.visibleCalcColumns, JSON.stringify(state.visibleCalcColumns));
+  }
+
+  function orderColumns(columns, filterKey) {
+    const order = COLUMN_ORDER[filterKey] || [];
+    const orderMap = new Map(order.map((key, index) => [key, index]));
+    return columns.slice().sort((a, b) => {
+      const aIndex = orderMap.has(a.key) ? orderMap.get(a.key) : Number.MAX_SAFE_INTEGER;
+      const bIndex = orderMap.has(b.key) ? orderMap.get(b.key) : Number.MAX_SAFE_INTEGER;
+      if (aIndex !== bIndex) return aIndex - bIndex;
+      return a.key.localeCompare(b.key);
+    });
+  }
+
+  function getAllColumnDefs() {
+    if (state.filter === 'exceptional') {
+      return orderColumns(getRawColumnsForExceptional().concat(getCalculatedColumnsForExceptional()), 'exceptional');
+    }
+
+    return orderColumns(getRawColumnsForMain().concat(getCalculatedColumnsForMain()), 'main');
+  }
+
+  function getColumnDefs() {
+    const visibleOptional = new Set(getVisibleCalculatedColumnKeys());
+    const baseVisible = new Set(BASE_VISIBLE_COLUMN_KEYS[state.filter] || []);
+    return getAllColumnDefs().filter((column) => baseVisible.has(column.key) || visibleOptional.has(column.key));
+  }
+
+  function renderColumnToggleBar() {
+    if (!columnToggleBar) return;
+    columnToggleBar.innerHTML = '';
+    const visibleKeys = new Set(getVisibleCalculatedColumnKeys());
+    for (const column of getOptionalColumns()) {
+      const label = document.createElement('label');
+      label.className = 'column-toggle-chip';
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.checked = visibleKeys.has(column.key);
+      input.addEventListener('change', () => {
+        const nextVisible = getVisibleCalculatedColumnKeys().filter((key) => key !== column.key);
+        if (input.checked) nextVisible.push(column.key);
+        persistVisibleCalculatedColumnKeys(Array.from(new Set(nextVisible)));
+        render();
+      });
+      const text = document.createElement('span');
+      text.textContent = column.labelLines.join(' ');
+      if (column.tooltip) label.title = column.tooltip;
+      label.append(input, text);
+      columnToggleBar.appendChild(label);
+    }
   }
 
   function ninjaDetailUrl(leagueId, detailsId) {
     const leagueSlug = slugifyLeague(leagueId);
     if (!leagueSlug || !detailsId) return null;
     return `${NINJA_ECONOMY_BASE}/${encodeURIComponent(leagueSlug)}/skill-gems/${encodeURIComponent(detailsId)}`;
+  }
+
+  function gemWikiUrl(name) {
+    if (!name) return null;
+    return `https://www.poewiki.net/wiki/${encodeURIComponent(String(name).replace(/ /g, '_'))}`;
   }
 
   function buildRows(items, leagueId) {
@@ -263,34 +983,74 @@
         const representative = sortedRecords[0] || {};
         const tags = buildGemTags(sortedRecords, name);
         const states = {};
-        let hiddenStates = 0;
+        const additionalStates = [];
         for (const record of sortedRecords) {
           const key = gemStateKey(record);
           if (key) {
             if (!states[key] || record.min < states[key].min) states[key] = record;
           } else {
-            hiddenStates += 1;
+            additionalStates.push(describeAdditionalState(record));
           }
         }
         return {
           name,
           tags,
+          exceptionalKind: isClassicExceptionalGem(name) ? 'classic' : (isGreaterExceptionalGem(sortedRecords, name) ? 'greater' : null),
           icon: representative.icon || '',
           detailsId: representative.detailsId || '',
           detailUrl: ninjaDetailUrl(leagueId, representative.detailsId),
-          searchText: `${name} ${tags.join(' ')}`.toLowerCase(),
+          wikiUrl: gemWikiUrl(name),
+          levelRequired: Number.isFinite(representative.levelRequired) ? representative.levelRequired : null,
+          gemType: representative.gemType || null,
+          searchText: String(name || '').toLowerCase(),
           states,
-          hiddenStates
+          hiddenStates: additionalStates.length,
+          additionalStates
         };
       })
       .sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  function getActiveSortKey() {
+    const defaultKey = DEFAULT_SORT_BY_FILTER[state.filter] || 'bestStep';
+    const availableKeys = new Set(getAllColumnDefs().map((column) => column.key));
+    if (state.sortKey === 'name') return 'name';
+    if (availableKeys.has(state.sortKey)) return state.sortKey;
+    if (availableKeys.has(defaultKey)) return defaultKey;
+    return 'name';
   }
 
   function filterRows(rows) {
     const query = state.search.trim().toLowerCase();
     return rows.filter((row) => {
       if (query && !row.searchText.includes(query)) return false;
-      return row.tags.some((tag) => tag.toLowerCase() === state.filter);
+      if (Number.isFinite(state.startValueLimitChaos)) {
+        const base = getRecord(row, '1');
+        if (Number.isFinite(base?.min) && base.min > state.startValueLimitChaos) return false;
+      }
+      if (state.filter === 'main') return !isExceptionalRow(row) && !isVaalRow(row);
+      if (state.filter === 'exceptional') return isExceptionalRow(row);
+      return false;
+    });
+  }
+
+  function sortRows(rows) {
+    const sortKey = getActiveSortKey();
+    const direction = state.sortDir === 'asc' ? 1 : -1;
+    const columnMap = new Map(getAllColumnDefs().map((column) => [column.key, column]));
+    return rows.slice().sort((a, b) => {
+      if (sortKey === 'name') {
+        return a.name.localeCompare(b.name) * direction;
+      }
+      const column = columnMap.get(sortKey);
+      if (!column) return a.name.localeCompare(b.name);
+      const aValue = metricForDisplay(column.metric(a))?.value;
+      const bValue = metricForDisplay(column.metric(b))?.value;
+      const aMissing = !Number.isFinite(aValue);
+      const bMissing = !Number.isFinite(bValue);
+      if (aMissing !== bMissing) return aMissing ? 1 : -1;
+      if (!aMissing && aValue !== bValue) return (aValue - bValue) * direction;
+      return a.name.localeCompare(b.name);
     });
   }
 
@@ -305,6 +1065,10 @@
       button.addEventListener('click', () => {
         state.filter = filter.key;
         localStorage.setItem(STORAGE_KEYS.filter, state.filter);
+        state.sortKey = DEFAULT_SORT_BY_FILTER[state.filter] || 'bestStep';
+        state.sortDir = 'desc';
+        localStorage.setItem(STORAGE_KEYS.sortKey, state.sortKey);
+        localStorage.setItem(STORAGE_KEYS.sortDir, state.sortDir);
         render();
       });
       filterBar.appendChild(button);
@@ -319,8 +1083,13 @@
     summaryEl.textContent = `Showing ${visible.toLocaleString()} of ${total.toLocaleString()} gems in ${leagueText}. Updated ${updated}.`;
   }
 
+  function syncBudgetControls() {
+    startValueLimitInput.value = displayValueFromChaos(state.startValueLimitChaos);
+    startValueLimitUnit.textContent = state.displayCurrency === 'divine' ? 'div' : 'c';
+  }
+
   function renderTableHeader() {
-    const columns = getActiveColumns();
+    const columns = getColumnDefs();
     tableColgroup.innerHTML = '';
     tableHeadRow.innerHTML = '';
 
@@ -328,34 +1097,142 @@
     gemCol.className = 'col-gem';
     tableColgroup.appendChild(gemCol);
 
-    const tagsCol = document.createElement('col');
-    tagsCol.className = 'col-tags';
-    tableColgroup.appendChild(tagsCol);
-
     for (let i = 0; i < columns.length; i += 1) {
       const stateCol = document.createElement('col');
-      stateCol.className = 'col-state';
+      stateCol.className = columns[i].isRaw ? 'col-raw' : 'col-state';
       tableColgroup.appendChild(stateCol);
     }
 
-    for (const label of ['Gem', 'Tags', ...columns.map((column) => column.label)]) {
+    const gemHeader = document.createElement('th');
+    gemHeader.appendChild(buildHeaderButton({
+      key: 'name',
+      lines: ['Gem']
+    }));
+    tableHeadRow.appendChild(gemHeader);
+
+    for (const column of columns) {
       const cell = document.createElement('th');
-      cell.textContent = label;
+      if (column.key === 'bestStep') cell.classList.add('gem-column-best-step');
+      cell.appendChild(buildHeaderButton({
+        key: column.key,
+        lines: column.labelLines,
+        tooltip: column.tooltip
+      }));
       tableHeadRow.appendChild(cell);
     }
 
-    if (tableEl) {
-      tableEl.style.minWidth = `${440 + columns.length * 92}px`;
+  }
+
+  function buildHeaderButton({ key, lines, tooltip }) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `gem-header-button${getActiveSortKey() === key ? ' is-active' : ''}`;
+    button.dataset.sortKey = key;
+    const labelText = tooltip || lines.join(' ');
+    button.setAttribute('aria-label', `Sort by ${labelText}`);
+    button.setAttribute('aria-pressed', getActiveSortKey() === key ? 'true' : 'false');
+    if (tooltip) button.title = tooltip;
+    const label = document.createElement('span');
+    label.className = 'gem-header-label';
+    for (const line of lines) {
+      const span = document.createElement('span');
+      span.className = 'gem-header-line';
+      span.textContent = line;
+      label.appendChild(span);
+    }
+    button.appendChild(label);
+    if (getActiveSortKey() === key) {
+      const indicator = document.createElement('span');
+      indicator.className = 'gem-sort-indicator';
+      indicator.textContent = state.sortDir === 'asc' ? '↑' : '↓';
+      button.appendChild(indicator);
+    }
+    button.addEventListener('click', () => {
+      if (state.sortKey === key) {
+        state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+      } else {
+        state.sortKey = key;
+        state.sortDir = key === 'name' ? 'asc' : 'desc';
+      }
+      localStorage.setItem(STORAGE_KEYS.sortKey, state.sortKey);
+      localStorage.setItem(STORAGE_KEYS.sortDir, state.sortDir);
+      render();
+    });
+    return button;
+  }
+
+  function renderMetricCell(cell, metric, { delta = false } = {}) {
+    const displayMetric = metricForDisplay(metric);
+    if (!Number.isFinite(displayMetric?.value)) {
+      cell.innerHTML = '<span class="gem-missing">—</span>';
+      return;
+    }
+    const value = document.createElement('div');
+    value.className = `gem-metric${displayMetric.lowConfidence ? ' is-low-confidence' : ''}${delta && displayMetric.value < 0 ? ' is-negative' : ''}${delta && displayMetric.value > 0 ? ' is-positive' : ''}`;
+    value.textContent = displayMetric.format === 'rate'
+      ? formatRate(displayMetric.value)
+      : (delta ? formatDelta(displayMetric.value) : formatPrice(displayMetric.value));
+    cell.appendChild(value);
+    if (displayMetric.label) {
+      const note = document.createElement('div');
+      note.className = 'gem-cell-note';
+      note.textContent = displayMetric.label;
+      cell.appendChild(note);
+    }
+    if (displayMetric.lowConfidence) {
+      const parts = displayMetric.records
+        .filter((record) => record.lowConfidence)
+        .map((record) => `${record.variant || record.name} (${getListingCount(record)} listings)`);
+      if (parts.length) {
+        value.classList.add('has-tooltip');
+        value.dataset.tooltip = `Sparse market data: ${parts.join(', ')}`;
+        value.setAttribute('tabindex', '0');
+        value.setAttribute('aria-label', `Sparse market data: ${parts.join(', ')}`);
+      }
     }
   }
 
+  function renderRawStateCell(cell, rowData, column) {
+    const record = getRecord(rowData, column.rawStateKey);
+    const wrapper = document.createElement('div');
+    wrapper.className = 'gem-raw-entry';
+    const input = document.createElement('input');
+    input.type = 'number';
+    input.step = '0.01';
+    input.min = '0';
+    input.className = `gem-raw-input${record?.manualOverride ? ' is-manual' : ''}${record?.lowConfidence ? ' is-low-confidence' : ''}`;
+    input.value = displayValueFromChaos(record?.min);
+    input.placeholder = '';
+    if (record?.lowConfidence && !record?.manualOverride) {
+      const count = getListingCount(record);
+      input.title = count ? `Sparse market data (${count} listings)` : 'Sparse market data';
+    }
+    input.addEventListener('change', () => {
+      const overrideKey = `${slugifyLeague(state.leagueId)}::${rowData.name}::${column.rawStateKey}`;
+      const nextValue = chaosValueFromDisplay(input.value);
+      if (nextValue == null) {
+        delete state.rawOverrides[overrideKey];
+      } else {
+        state.rawOverrides[overrideKey] = nextValue;
+      }
+      localStorage.setItem(STORAGE_KEYS.rawOverrides, JSON.stringify(state.rawOverrides));
+      render();
+    });
+    wrapper.appendChild(input);
+    const unit = document.createElement('span');
+    unit.className = 'gem-raw-unit';
+    unit.textContent = displayCurrencyUnitLabel();
+    wrapper.appendChild(unit);
+    cell.appendChild(wrapper);
+  }
+
   function renderTable() {
-    const columns = getActiveColumns();
+    const columns = getColumnDefs();
     tableBody.innerHTML = '';
     if (!state.visibleRows.length) {
       const row = document.createElement('tr');
       const cell = document.createElement('td');
-      cell.colSpan = columns.length + 2;
+      cell.colSpan = columns.length + 1;
       cell.className = 'gem-empty';
       cell.textContent = 'No gems match the current search and filters.';
       row.appendChild(cell);
@@ -387,43 +1264,51 @@
         primary.rel = 'noreferrer';
       }
       label.appendChild(primary);
+      const tradeLinks = buildGemTradeLinks(rowData);
+      if (tradeLinks.length) {
+        const tradeMeta = document.createElement('span');
+        tradeMeta.className = 'item-meta';
+        tradeLinks.forEach((entry, index) => {
+          if (index > 0) {
+            const separator = document.createElement('span');
+            separator.className = 'item-sep';
+            separator.textContent = '·';
+            tradeMeta.appendChild(separator);
+          }
+          const link = document.createElement('a');
+          link.className = 'item-link trade-link is-ready';
+          link.href = entry.url;
+          link.target = '_blank';
+          link.rel = 'noreferrer';
+          link.textContent = entry.label;
+          tradeMeta.appendChild(link);
+        });
+        label.appendChild(tradeMeta);
+      }
       if (rowData.hiddenStates) {
         const meta = document.createElement('span');
-        meta.className = 'item-meta';
+        meta.className = 'item-meta gem-name-meta';
         meta.textContent = `+${rowData.hiddenStates} additional state${rowData.hiddenStates === 1 ? '' : 's'}`;
+        if (Array.isArray(rowData.additionalStates) && rowData.additionalStates.length) {
+          meta.classList.add('has-tooltip');
+          meta.dataset.tooltip = rowData.additionalStates.join(', ');
+          meta.setAttribute('tabindex', '0');
+          meta.setAttribute('aria-label', `Additional states: ${rowData.additionalStates.join(', ')}`);
+        }
         label.appendChild(meta);
       }
       nameWrap.appendChild(label);
       nameCell.appendChild(nameWrap);
       row.appendChild(nameCell);
 
-      const tagsCell = document.createElement('td');
-      const tagsWrap = document.createElement('div');
-      tagsWrap.className = 'gem-tags';
-      for (const tag of rowData.tags) {
-        const tagEl = document.createElement('span');
-        tagEl.className = 'gem-tag';
-        tagEl.textContent = tag;
-        tagsWrap.appendChild(tagEl);
-      }
-      tagsCell.appendChild(tagsWrap);
-      row.appendChild(tagsCell);
-
       for (const column of columns) {
         const cell = document.createElement('td');
         cell.className = 'gem-state-cell';
-        const record = rowData.states[column.key];
-        if (!record) {
-          cell.innerHTML = '<span class="gem-missing">—</span>';
+        if (column.key === 'bestStep') cell.classList.add('gem-column-best-step');
+        if (column.isRaw) {
+          renderRawStateCell(cell, rowData, column);
         } else {
-          const price = document.createElement('span');
-          price.className = `gem-price${record.lowConfidence ? ' is-low-confidence' : ''}`;
-          price.textContent = formatPrice(record.min);
-          if (record.lowConfidence) {
-            const listings = Number.isFinite(record.listingCount) ? record.listingCount : record.confidenceCount;
-            price.title = `Low confidence: ${listings || 0} listing${listings === 1 ? '' : 's'}`;
-          }
-          cell.appendChild(price);
+          renderMetricCell(cell, column.metric(rowData), { delta: true });
         }
         row.appendChild(cell);
       }
@@ -438,9 +1323,16 @@
       leagueSlug: slugifyLeague(state.leagueId),
       displayCurrency: state.displayCurrency,
       divineRateChaos: state.divineRate,
+      gemcutterCostChaos: state.gemcutterCost,
+      startValueLimitChaos: state.startValueLimitChaos,
+      rawOverrideCount: Object.keys(state.rawOverrides || {}).length,
+      visibleCalcColumns: state.visibleCalcColumns,
+      gemXpEntries: Object.keys(state.gemXp || {}).length,
       rows: state.rows.length,
       visibleRows: state.visibleRows.length,
       filter: state.filter,
+      sortKey: state.sortKey,
+      sortDir: state.sortDir,
       search: state.search,
       updatedAt: state.updatedAt,
       sourceUrls: state.sourceUrls
@@ -449,13 +1341,39 @@
   }
 
   function render() {
-    state.visibleRows = filterRows(state.rows);
+    state.visibleRows = sortRows(filterRows(state.rows));
     renderFilterBar();
+    renderColumnToggleBar();
     renderSummary();
+    syncBudgetControls();
     renderTableHeader();
     renderTable();
     updateDisplayCurrencyLabels();
     updateDebugOutput();
+  }
+
+  function hasEmptyViewFallbackState() {
+    return Boolean(
+      (state.search && state.search.trim())
+      || Number.isFinite(state.startValueLimitChaos)
+      || state.filter !== 'main'
+    );
+  }
+
+  function clearEmptyViewFallbackState() {
+    localStorage.removeItem(STORAGE_KEYS.startValueLimitChaos);
+    localStorage.removeItem(STORAGE_KEYS.search);
+    localStorage.removeItem(STORAGE_KEYS.filter);
+    localStorage.removeItem(STORAGE_KEYS.sortKey);
+    localStorage.removeItem(STORAGE_KEYS.sortDir);
+
+    state.startValueLimitChaos = null;
+    state.search = '';
+    state.filter = 'main';
+    state.sortKey = DEFAULT_SORT_BY_FILTER.main;
+    state.sortDir = 'desc';
+
+    searchInput.value = '';
   }
 
   async function loadLeagueOptions() {
@@ -481,19 +1399,35 @@
     const leagueSlug = slugifyLeague(state.leagueId);
     const gemsUrl = `data/poe-ninja/prices/${leagueSlug}/category/gems.json`;
     const currencyUrl = `data/poe-ninja/prices/${leagueSlug}/category/currency.json`;
-    state.sourceUrls = [gemsUrl, currencyUrl];
-    const [gemsResponse, currencyResponse] = await Promise.all([
+    const gemXpUrl = 'data/gem-xp.json';
+    state.sourceUrls = [gemsUrl, currencyUrl, gemXpUrl];
+    const [gemsResponse, currencyResponse, gemXpResponse] = await Promise.all([
       fetch(gemsUrl, { cache: 'no-store' }),
-      fetch(currencyUrl, { cache: 'no-store' })
+      fetch(currencyUrl, { cache: 'no-store' }),
+      fetch(gemXpUrl, { cache: 'no-store' })
     ]);
     if (!gemsResponse.ok) throw new Error(`Failed to load gem prices (${gemsResponse.status})`);
     if (!currencyResponse.ok) throw new Error(`Failed to load currency prices (${currencyResponse.status})`);
     const gemsPayload = await gemsResponse.json();
     const currencyPayload = await currencyResponse.json();
+    const gemXpPayload = gemXpResponse.ok ? await gemXpResponse.json() : { entries: {} };
     const items = Array.isArray(gemsPayload.items) ? gemsPayload.items : [];
+    const currencyItems = Array.isArray(currencyPayload.items) ? currencyPayload.items : [];
     const divineOrb = (currencyPayload.items || []).find((item) => item.name === 'Divine Orb');
+    const gemcutterPrism = currencyItems.find((item) => item.name === 'Gemcutter\'s Prism');
     state.rows = buildRows(items, state.leagueId);
+    state.rowByName = new Map(state.rows.map((row) => [row.name, row]));
+    state.gemXp = gemXpPayload?.entries && typeof gemXpPayload.entries === 'object' ? gemXpPayload.entries : {};
     state.divineRate = Number.isFinite(divineOrb?.min) ? divineOrb.min : null;
+    state.apiGemcutterCost = Number.isFinite(gemcutterPrism?.min) ? roundCurrencyInput(gemcutterPrism.min) : null;
+    if (Number.isFinite(gemcutterPrism?.min) && state.gemcutterCost == null) {
+      state.gemcutterCost = roundCurrencyInput(gemcutterPrism.min);
+      localStorage.setItem(STORAGE_KEYS.gemcutterCost, String(state.gemcutterCost));
+    }
+    state.gemcutterIcon = gemcutterPrism?.icon || '';
+    gemcutterCostInput.value = state.gemcutterCost == null ? '' : String(state.gemcutterCost);
+    gemcutterCostIcon.src = state.gemcutterIcon;
+    gemcutterCostIcon.hidden = !state.gemcutterIcon;
     state.updatedAt = gemsPayload.updatedAt || currencyPayload.updatedAt || gemsPayload.generatedAt || null;
   }
 
@@ -567,7 +1501,11 @@
     try {
       await loadGemData();
       render();
-      statusEl.textContent = `Loaded ${state.rows.length.toLocaleString()} gem rows.`;
+      if (state.rows.length && !state.visibleRows.length && hasEmptyViewFallbackState()) {
+        clearEmptyViewFallbackState();
+        render();
+      }
+      statusEl.textContent = '';
     } catch (error) {
       state.rows = [];
       state.visibleRows = [];
@@ -589,10 +1527,86 @@
     render();
   });
 
+  gemcutterCostInput.addEventListener('input', () => {
+    const rawValue = gemcutterCostInput.value.trim();
+    const value = rawValue === '' ? null : roundCurrencyInput(Number(rawValue));
+    state.gemcutterCost = value;
+    if (value == null) {
+      localStorage.removeItem(STORAGE_KEYS.gemcutterCost);
+    } else {
+      localStorage.setItem(STORAGE_KEYS.gemcutterCost, String(value));
+    }
+    render();
+  });
+
+  ignoreLowConfidenceInput.addEventListener('change', () => {
+    state.ignoreLowConfidence = ignoreLowConfidenceInput.checked;
+    localStorage.setItem(STORAGE_KEYS.ignoreLowConfidence, state.ignoreLowConfidence ? 'true' : 'false');
+    render();
+  });
+
+  startValueLimitInput.addEventListener('change', () => {
+    const nextValue = chaosValueFromDisplay(startValueLimitInput.value);
+    state.startValueLimitChaos = nextValue;
+    if (nextValue == null) {
+      localStorage.removeItem(STORAGE_KEYS.startValueLimitChaos);
+    } else {
+      localStorage.setItem(STORAGE_KEYS.startValueLimitChaos, String(state.startValueLimitChaos));
+    }
+    render();
+  });
+
   searchInput.addEventListener('input', () => {
     state.search = searchInput.value;
     localStorage.setItem(STORAGE_KEYS.search, state.search);
     render();
+  });
+
+  resetGemSettingsButton?.addEventListener('click', (event) => {
+    event.preventDefault();
+    localStorage.removeItem(STORAGE_KEYS.displayCurrency);
+    localStorage.removeItem(STORAGE_KEYS.gemcutterCost);
+    localStorage.removeItem(STORAGE_KEYS.ignoreLowConfidence);
+    localStorage.removeItem(STORAGE_KEYS.startValueLimitChaos);
+    localStorage.removeItem(STORAGE_KEYS.rawOverrides);
+    localStorage.removeItem(STORAGE_KEYS.visibleCalcColumns);
+    localStorage.removeItem(STORAGE_KEYS.search);
+    localStorage.removeItem(STORAGE_KEYS.filter);
+    localStorage.removeItem(STORAGE_KEYS.sortKey);
+    localStorage.removeItem(STORAGE_KEYS.sortDir);
+
+    state.displayCurrency = 'chaos';
+    state.gemcutterCost = state.apiGemcutterCost;
+    state.ignoreLowConfidence = true;
+    state.startValueLimitChaos = null;
+    state.rawOverrides = {};
+    state.visibleCalcColumns = {
+      main: DEFAULT_VISIBLE_CALC_COLUMNS.main.slice(),
+      exceptional: DEFAULT_VISIBLE_CALC_COLUMNS.exceptional.slice()
+    };
+    state.search = '';
+    state.filter = 'main';
+    state.sortKey = DEFAULT_SORT_BY_FILTER.main;
+    state.sortDir = 'desc';
+
+    displayCurrencySelect.value = state.displayCurrency;
+    gemcutterCostInput.value = state.gemcutterCost == null ? '' : String(state.gemcutterCost);
+    searchInput.value = state.search;
+    statusEl.classList.remove('error');
+    statusEl.textContent = 'Gem settings reset (league preserved).';
+    render();
+  });
+
+  refreshButton?.addEventListener('click', async () => {
+    statusEl.classList.remove('error');
+    statusEl.textContent = 'Refreshing gem prices...';
+    try {
+      await loadLeagueOptions();
+      await refreshPageData();
+    } catch (error) {
+      statusEl.classList.add('error');
+      statusEl.textContent = error.message;
+    }
   });
 
   bindDialog(changelogDialog, openChangelog, closeChangelog);
@@ -608,3 +1622,8 @@
     }
   })();
 })();
+  function parseStoredStartValueLimit(value) {
+    const parsed = Number(value);
+    if (!Number.isFinite(parsed) || parsed < 0) return null;
+    return parsed;
+  }
