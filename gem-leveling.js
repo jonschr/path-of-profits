@@ -17,24 +17,45 @@
   const FALLBACK_LEAGUES = ['Standard', 'Hardcore', 'Mirage', 'Hardcore Mirage'];
   const ETERNAL_LEAGUES = new Set(['standard', 'hardcore']);
   const FILTER_DEFS = [
-    { key: 'main', label: 'Normal + Transfigured' },
-    { key: 'exceptional', label: 'Exceptional' }
+    { key: 'all', label: 'All' },
+    { key: 'normal', label: 'Normal' },
+    { key: 'transfigured', label: 'Transfigured' },
+    { key: 'support', label: 'Support' }
   ];
   const NINJA_ECONOMY_BASE = 'https://poe.ninja/poe1/economy';
   const TRADE_SITE_BASE = 'https://www.pathofexile.com';
+  const STANDARD_GEM_XP_BASELINE = 342051651;
   const DEFAULT_SORT_BY_FILTER = {
-    main: 'bestStep',
-    exceptional: 'bestStep'
+    all: 'normalizedValuePair',
+    normal: 'normalizedValuePair',
+    transfigured: 'normalizedValuePair',
+    support: 'normalizedValuePair',
+    exceptional: 'routeTotal'
   };
   const BASE_VISIBLE_COLUMN_KEYS = {
-    main: [
-      'raw:1',
-      'raw:1/20',
-      'raw:20',
-      'raw:20c',
-      'raw:20/20c',
-      'raw:21c',
-      'raw:21/20c'
+    all: [
+      'raw:start',
+      'normalizedValuePair',
+      'raw:end',
+      'raw:corrupt21'
+    ],
+    normal: [
+      'raw:start',
+      'normalizedValuePair',
+      'raw:end',
+      'raw:corrupt21'
+    ],
+    transfigured: [
+      'raw:start',
+      'normalizedValuePair',
+      'raw:end',
+      'raw:corrupt21'
+    ],
+    support: [
+      'raw:start',
+      'normalizedValuePair',
+      'raw:end',
+      'raw:corrupt21'
     ],
     exceptional: [
       'raw:1',
@@ -45,28 +66,38 @@
     ]
   };
   const DEFAULT_VISIBLE_CALC_COLUMNS = {
-    main: ['bestStep', 'routeTo20', 'xpPerMillion', 'levelStep'],
-    exceptional: ['bestStep', 'routeTotal', 'xpPerMillion']
+    all: [],
+    normal: [],
+    transfigured: [],
+    support: [],
+    exceptional: ['routeTotal', 'xpPerMillion']
   };
   const COLUMN_ORDER = {
-    main: [
-      'bestStep',
-      'raw:1',
-      'qualityAdd',
-      'raw:1/20',
-      'routeTo20',
-      'xpPerMillion',
-      'raw:20',
-      'levelStep',
-      'routeTotal',
-      'raw:20/20',
-      'raw:20c',
-      'raw:20/20c',
-      'raw:21c',
-      'raw:21/20c'
+    all: [
+      'raw:start',
+      'normalizedValuePair',
+      'raw:end',
+      'raw:corrupt21'
+    ],
+    normal: [
+      'raw:start',
+      'normalizedValuePair',
+      'raw:end',
+      'raw:corrupt21'
+    ],
+    transfigured: [
+      'raw:start',
+      'normalizedValuePair',
+      'raw:end',
+      'raw:corrupt21'
+    ],
+    support: [
+      'raw:start',
+      'normalizedValuePair',
+      'raw:end',
+      'raw:corrupt21'
     ],
     exceptional: [
-      'bestStep',
       'raw:1',
       'routeTotal',
       'xpPerMillion',
@@ -119,12 +150,18 @@
     try {
       const parsed = JSON.parse(localStorage.getItem(STORAGE_KEYS.visibleCalcColumns) || '{}');
       return {
-        main: Array.isArray(parsed.main) ? parsed.main : DEFAULT_VISIBLE_CALC_COLUMNS.main.slice(),
+        all: Array.isArray(parsed.all) ? parsed.all : DEFAULT_VISIBLE_CALC_COLUMNS.all.slice(),
+        normal: Array.isArray(parsed.normal) ? parsed.normal : DEFAULT_VISIBLE_CALC_COLUMNS.normal.slice(),
+        transfigured: Array.isArray(parsed.transfigured) ? parsed.transfigured : DEFAULT_VISIBLE_CALC_COLUMNS.transfigured.slice(),
+        support: Array.isArray(parsed.support) ? parsed.support : DEFAULT_VISIBLE_CALC_COLUMNS.support.slice(),
         exceptional: Array.isArray(parsed.exceptional) ? parsed.exceptional : DEFAULT_VISIBLE_CALC_COLUMNS.exceptional.slice()
       };
     } catch (_error) {
       return {
-        main: DEFAULT_VISIBLE_CALC_COLUMNS.main.slice(),
+        all: DEFAULT_VISIBLE_CALC_COLUMNS.all.slice(),
+        normal: DEFAULT_VISIBLE_CALC_COLUMNS.normal.slice(),
+        transfigured: DEFAULT_VISIBLE_CALC_COLUMNS.transfigured.slice(),
+        support: DEFAULT_VISIBLE_CALC_COLUMNS.support.slice(),
         exceptional: DEFAULT_VISIBLE_CALC_COLUMNS.exceptional.slice()
       };
     }
@@ -137,8 +174,8 @@
     ignoreLowConfidence: localStorage.getItem(STORAGE_KEYS.ignoreLowConfidence) !== 'false',
     startValueLimitChaos: parseStoredStartValueLimit(localStorage.getItem(STORAGE_KEYS.startValueLimitChaos)),
     search: localStorage.getItem(STORAGE_KEYS.search) || '',
-    filter: localStorage.getItem(STORAGE_KEYS.filter) || 'main',
-    sortKey: localStorage.getItem(STORAGE_KEYS.sortKey) || DEFAULT_SORT_BY_FILTER.main,
+    filter: localStorage.getItem(STORAGE_KEYS.filter) || 'all',
+    sortKey: localStorage.getItem(STORAGE_KEYS.sortKey) || DEFAULT_SORT_BY_FILTER.all,
     sortDir: localStorage.getItem(STORAGE_KEYS.sortDir) === 'asc' ? 'asc' : 'desc',
     rawOverrides: JSON.parse(localStorage.getItem(STORAGE_KEYS.rawOverrides) || '{}'),
     visibleCalcColumns: loadVisibleCalcColumns(),
@@ -146,12 +183,16 @@
     rows: [],
     visibleRows: [],
     rowByName: new Map(),
+    sortFrozen: false,
+    pendingTableLinkActivationUntil: 0,
     divineRate: null,
     apiGemcutterCost: null,
     gemcutterIcon: '',
     updatedAt: null,
     sourceUrls: [],
-    gemXp: {}
+    gemXp: {},
+    searchRenderTimer: null,
+    gemcutterRenderTimer: null
   };
 
   const storedGemcutterCost = Number(localStorage.getItem(STORAGE_KEYS.gemcutterCost));
@@ -164,10 +205,10 @@
   ignoreLowConfidenceInput.checked = state.ignoreLowConfidence;
   searchInput.value = state.search;
   if (!FILTER_DEFS.some((filter) => filter.key === state.filter)) {
-    state.filter = 'main';
+    state.filter = 'all';
   }
   if (!state.sortKey) {
-    state.sortKey = DEFAULT_SORT_BY_FILTER[state.filter] || 'bestStep';
+    state.sortKey = DEFAULT_SORT_BY_FILTER[state.filter] || 'name';
   }
 
   function slugifyLeague(text) {
@@ -320,10 +361,6 @@
     return roundCurrencyInput(value);
   }
 
-  function displayCurrencyUnitLabel() {
-    return state.displayCurrency === 'divine' ? 'Div' : 'C';
-  }
-
   function updateDisplayCurrencyLabels() {
     const chaosOption = displayCurrencySelect.querySelector('option[value="chaos"]');
     const divineOption = displayCurrencySelect.querySelector('option[value="divine"]');
@@ -380,6 +417,7 @@
     const first = records[0] || {};
     const tags = [];
     if (first.gemType === 'Normal') tags.push('Normal');
+    if (first.gemType === 'Support' || /Support$/i.test(String(name || ''))) tags.push('Support');
     if (first.isTransfigured) tags.push('Transfigured');
     if (first.isVaal) tags.push('Vaal');
     if (isClassicExceptionalGem(name) || isGreaterExceptionalGem(records, name)) tags.push('Exceptional');
@@ -392,6 +430,10 @@
 
   function isVaalRow(row) {
     return row?.tags?.includes('Vaal');
+  }
+
+  function isSupportRow(row) {
+    return row?.tags?.includes('Support');
   }
 
   function isClassicExceptionalRow(row) {
@@ -495,12 +537,35 @@
     });
   }
 
-  function withMetricLabel(metric, label) {
-    if (!metric) return buildMetric({ label });
-    return {
-      ...metric,
-      label
-    };
+  function normalizeMetricToBaselineXp(metric, denominator, baseline, note) {
+    if (!metric || !Number.isFinite(metric.value) || !Number.isFinite(denominator) || denominator <= 0 || !Number.isFinite(baseline) || baseline <= 0) {
+      return buildMetric({ records: metric?.records || [], note, label: metric?.label || '' });
+    }
+    return buildMetric({
+      value: (metric.value * baseline) / denominator,
+      records: metric.records,
+      note,
+      label: metric.label
+    });
+  }
+
+  function formatGemStateLabel(stateKey) {
+    switch (stateKey) {
+      case '1':
+        return 'Level 1';
+      case '20':
+        return 'Level 20';
+      case '20c':
+        return 'Level 20 Corrupted';
+      case '20/20c':
+        return '20/20 Corrupted';
+      case '21c':
+        return 'Level 21 Corrupted';
+      case '21/20c':
+        return '21/20 Corrupted';
+      default:
+        return stateKey;
+    }
   }
 
   function pickHighestRecord(row, keys) {
@@ -508,12 +573,6 @@
       .map((key) => getRecord(row, key))
       .filter(Boolean)
       .sort((a, b) => b.min - a.min)[0] || null;
-  }
-
-  function metricWithBestValue(metrics, note) {
-    const candidates = metrics.filter((metric) => Number.isFinite(metric?.value));
-    if (!candidates.length) return buildMetric({ note });
-    return candidates.reduce((best, metric) => (metric.value > best.value ? metric : best));
   }
 
   function getGemcutterBatchCost() {
@@ -571,19 +630,6 @@
     return `${TRADE_SITE_BASE}/trade/search/${encodeURIComponent(state.leagueId)}?q=${encodeURIComponent(JSON.stringify(query))}`;
   }
 
-  function buildGemTradeLinks(row) {
-    return [
-      { key: '1', label: 'Level 1' },
-      { key: '1/20', label: '1/20' },
-      { key: '20', label: '20/0' },
-      { key: '20/20', label: '20/20' },
-      { key: '21/20c', label: '21/20c' }
-    ].map(({ key, label }) => {
-      const url = buildGemTradeUrl(row, key);
-      return url ? { key, label, url } : null;
-    }).filter(Boolean);
-  }
-
   function buildRawColumn(stateKey, label, tooltip) {
     return {
       key: `raw:${stateKey}`,
@@ -592,6 +638,57 @@
       isRaw: true,
       rawStateKey: stateKey,
       metric: (row) => priceMetric(getRecord(row, stateKey), `Raw ${stateKey}`)
+    };
+  }
+
+  function buildMergedRawColumn(key, label, tooltip, stateKeys, sortMode = 'average') {
+    return {
+      key: `raw:${key}`,
+      labelLines: Array.isArray(label) ? label : [label],
+      tooltip,
+      isRaw: true,
+      isRawGroup: true,
+      rawStateKeys: stateKeys.slice(),
+      metric: (row) => {
+        const records = stateKeys.map((stateKey) => getRecord(row, stateKey)).filter(Boolean);
+        const values = records.map((record) => record.min).filter(Number.isFinite);
+        if (!values.length) return buildMetric({ records, note: `Raw ${key}` });
+        const value = sortMode === 'first'
+          ? values[0]
+          : values.reduce((sum, entry) => sum + entry, 0) / values.length;
+        return buildMetric({ value, records, note: `Raw ${key}` });
+      }
+    };
+  }
+
+  function buildMergedMetricColumn(key, label, tooltip, metricDefs, infoTooltip = '', sortMode = 'average') {
+    return {
+      key,
+      labelLines: Array.isArray(label) ? label : [label],
+      tooltip,
+      infoTooltip,
+      isMetricGroup: true,
+      metricDefs: metricDefs.slice(),
+      metric: (row) => {
+        const metrics = metricDefs.map((entry) => entry.metric(row)).filter(Boolean);
+        const values = metrics
+          .map((entry) => metricForDisplay(entry)?.value)
+          .filter(Number.isFinite);
+        if (!values.length) {
+          return buildMetric({
+            note: key,
+            records: metrics.flatMap((entry) => entry?.records || [])
+          });
+        }
+        const value = sortMode === 'first'
+          ? values[0]
+          : values.reduce((sum, entry) => sum + entry, 0) / values.length;
+        return buildMetric({
+          value,
+          note: key,
+          records: metrics.flatMap((entry) => entry?.records || [])
+        });
+      }
     };
   }
 
@@ -615,14 +712,9 @@
 
   function getRawColumnsForMain() {
     return [
-      buildRawColumn('1', '1', 'Market price for Level One'),
-      buildRawColumn('20', '20', 'Raw market price for Level Twenty'),
-      buildRawColumn('1/20', '1/20', 'Raw market price for Level One / 20 Quality'),
-      buildRawColumn('20/20', '20/20', 'Raw market price for Level Twenty / 20 Quality'),
-      buildRawColumn('20c', ['20', 'Corrupted'], 'Raw market price for Level Twenty Corrupted'),
-      buildRawColumn('20/20c', ['20/20', 'Corrupted'], 'Raw market price for Level Twenty / 20 Quality Corrupted'),
-      buildRawColumn('21c', ['21', 'Corrupted'], 'Raw market price for Level Twenty-One Corrupted'),
-      buildRawColumn('21/20c', ['21/20', 'Corrupted'], 'Raw market price for Level Twenty-One / 20 Quality Corrupted')
+      buildMergedRawColumn('start', ['Level 1 gem'], 'Market prices for Level One and Level One / 20 Quality', ['1', '1/20']),
+      buildMergedRawColumn('end', ['Level 20 uncorrupted'], 'Market prices for Level Twenty and Level Twenty / 20 Quality', ['20', '20/20']),
+      buildMergedRawColumn('corrupt21', ['Level 21 corrupted'], 'Market prices for Level Twenty-One Corrupted and Level Twenty-One / 20 Quality Corrupted', ['21c', '21/20c'])
     ];
   }
 
@@ -710,152 +802,63 @@
           'Exceptional value per million XP'
         )
       },
-      {
-        key: 'bestStep',
-        labelLines: ['Best Step'],
-        tooltip: 'Highest-value step within the exceptional-gem route',
-        metric: (row) => metricWithBestValue(
-          isGreaterExceptionalRow(row)
-            ? [
-                withMetricLabel((() => {
-                  const base = getRecord(row, '1');
-                  const target = getRecord(row, '1/20');
-                  if (!base || !target) return buildMetric({ note: 'Greater support first upgrade' });
-                  return buildMetric({
-                    value: target.min - base.min - getGemcutterBatchCost(),
-                    records: [base, target],
-                    note: 'Greater support first upgrade'
-                  });
-                })(), '1 -> 1/20'),
-                withMetricLabel(deltaMetric(getRecord(row, '3/20'), getRecord(row, '1/20'), 'Greater support end upgrade'), '1/20 -> 3/20'),
-                withMetricLabel((() => {
-                  const base = getRecord(row, '1');
-                  const target = getRecord(row, '3/20');
-                  if (!base || !target) return buildMetric({ note: 'Greater support full route' });
-                  return buildMetric({
-                    value: target.min - base.min - getGemcutterBatchCost(),
-                    records: [base, target],
-                  note: 'Greater support full route'
-                });
-                })(), '1 -> 3/20')
-              ]
-            : [
-                withMetricLabel(deltaMetric(getRecord(row, '2'), getRecord(row, '1')), '1 -> 2'),
-                withMetricLabel(deltaMetric(getRecord(row, '3'), getRecord(row, '2')), '2 -> 3'),
-                withMetricLabel(deltaMetric(getRecord(row, '3'), getRecord(row, '1')), '1 -> 3')
-              ],
-          'Best uplift'
-        )
-      }
     ];
   }
 
   function getCalculatedColumnsForMain() {
+    const buildRouteTo20Metric = (row) => {
+      const base = getRecord(row, '1');
+      const target = getRecord(row, '20');
+      if (!base || !target) return buildMetric({ note: 'Leveling gain to 20' });
+      return buildMetric({
+        value: target.min - base.min,
+        records: [base, target],
+        note: 'Leveling gain to 20'
+      });
+    };
+
+    const buildRouteTotalMetric = (row) => {
+      const base = getRecord(row, '1');
+      const target = getRecord(row, '20/20');
+      if (!base || !target) return buildMetric({ note: 'Full leveling gain' });
+      return buildMetric({
+        value: target.min - base.min - getGemcutterBatchCost(),
+        records: [base, target],
+        note: 'Full leveling gain'
+      });
+    };
+
+    const buildNormalizedNoQualityMetric = (row) => normalizeMetricToBaselineXp(
+      buildRouteTo20Metric(row),
+      getRouteXpTotal(row),
+      STANDARD_GEM_XP_BASELINE,
+      'Normalized value without quality'
+    );
+
+    const buildNormalizedQualityMetric = (row) => normalizeMetricToBaselineXp((() => {
+      const base = getRecord(row, '1/20');
+      const target = getRecord(row, '20/20');
+      if (!base || !target) return buildMetric({ note: 'Leveling gain from 1/20 to 20/20' });
+      return buildMetric({
+        value: target.min - base.min,
+        records: [base, target],
+        note: 'Leveling gain from 1/20 to 20/20'
+      });
+    })(), getRouteXpTotal(row), STANDARD_GEM_XP_BASELINE, 'Normalized value with quality');
+
     return [
       {
-        key: 'routeTo20',
-        labelLines: ['1 -> 20'],
-        tooltip: 'Level One to Level Twenty with no added quality',
-        metric: (row) => {
-          const base = getRecord(row, '1');
-          const target = getRecord(row, '20');
-          if (!base || !target) return buildMetric({ note: 'Leveling gain to 20' });
-          return buildMetric({
-            value: target.min - base.min,
-            records: [base, target],
-            note: 'Leveling gain to 20'
-          });
-        }
+        ...buildMergedMetricColumn(
+          'normalizedValuePair',
+          ['Normalized value'],
+          'Stacked values normalized to 342,051,651 XP, which is approximately a standard gem\'s full leveling cost',
+          [
+            { label: 'Level 1 to 20', metric: buildNormalizedNoQualityMetric },
+            { label: '1/20 to 20/20', metric: buildNormalizedQualityMetric }
+          ],
+          'Normalized to a standard gem XP budget.\n\nBaseline XP: 342,051,651\nThis is the typical total XP needed for a gem to reach level 20.\n\nFormula:\nroute value × 342,051,651 ÷ that gem\'s actual XP to 20\n\nLines shown:\nLevel 1 to 20 = uncorrupted route\n1/20 to 20/20 = 20-quality route\n\nResult:\nGems with unusual XP curves are scaled back to a standard leveling budget so they compare more fairly.'
+        )
       },
-      {
-        key: 'xpPerMillion',
-        labelLines: ['Value / M XP'],
-        tooltip: 'Currency value added per million gem XP for leveling from Level One / 20 Quality to Level Twenty / 20 Quality',
-        metric: (row) => ratioMetric((() => {
-          const base = getRecord(row, '1/20');
-          const target = getRecord(row, '20/20');
-          if (!base || !target) return buildMetric({ note: 'Leveling gain from 1/20 to 20/20' });
-          return buildMetric({
-            value: target.min - base.min,
-            records: [base, target],
-            note: 'Leveling gain from 1/20 to 20/20'
-          });
-        })(), getRouteXpTotal(row), 'Value per million XP')
-      },
-      {
-        key: 'qualityAdd',
-        labelLines: ['1 -> 1/20'],
-        tooltip: 'Level One to Level One / 20 Quality, net of twenty Gemcutter’s Prisms',
-        metric: (row) => {
-          const base = getRecord(row, '1');
-          const target = getRecord(row, '1/20');
-          if (!base || !target) return buildMetric({ note: 'Quality uplift' });
-          return buildMetric({
-            value: target.min - base.min - getGemcutterBatchCost(),
-            records: [base, target],
-            note: 'Quality uplift'
-          });
-        }
-      },
-      {
-        key: 'levelStep',
-        labelLines: ['1/20 -> 20/20'],
-        tooltip: 'Level One / 20 Quality to Level Twenty / 20 Quality',
-        metric: (row) => deltaMetric(getRecord(row, '20/20'), getRecord(row, '1/20'), 'Leveling gain after quality')
-      },
-      {
-        key: 'routeTotal',
-        labelLines: ['1 -> 20/20'],
-        tooltip: 'Level One to Level Twenty / 20 Quality, net of twenty Gemcutter’s Prisms',
-        metric: (row) => {
-          const base = getRecord(row, '1');
-          const target = getRecord(row, '20/20');
-          if (!base || !target) return buildMetric({ note: 'Full leveling gain' });
-          return buildMetric({
-            value: target.min - base.min - getGemcutterBatchCost(),
-            records: [base, target],
-            note: 'Full leveling gain'
-          });
-        }
-      },
-      {
-        key: 'bestStep',
-        labelLines: ['Best Step'],
-        tooltip: 'Highest-value normal-gem step',
-        metric: (row) => metricWithBestValue([
-          withMetricLabel((() => {
-            const base = getRecord(row, '1');
-            const target = getRecord(row, '20');
-            if (!base || !target) return buildMetric({ note: 'Leveling gain to 20' });
-            return buildMetric({
-              value: target.min - base.min,
-              records: [base, target],
-              note: 'Leveling gain to 20'
-            });
-          })(), '1 -> 20'),
-          withMetricLabel((() => {
-            const base = getRecord(row, '1');
-            const target = getRecord(row, '1/20');
-            if (!base || !target) return buildMetric({ note: 'Quality uplift' });
-            return buildMetric({
-              value: target.min - base.min - getGemcutterBatchCost(),
-              records: [base, target],
-              note: 'Quality uplift'
-            });
-          })(), '1 -> 1/20'),
-          withMetricLabel(deltaMetric(getRecord(row, '20/20'), getRecord(row, '1/20')), '1/20 -> 20/20'),
-          withMetricLabel((() => {
-            const base = getRecord(row, '1');
-            const target = getRecord(row, '20/20');
-            if (!base || !target) return buildMetric({ note: 'Full leveling gain' });
-            return buildMetric({
-              value: target.min - base.min - getGemcutterBatchCost(),
-              records: [base, target],
-              note: 'Full leveling gain'
-            });
-          })(), '1 -> 20/20')
-        ], 'Best uplift')
-      }
     ];
   }
 
@@ -880,18 +883,14 @@
         ...getCalculatedColumnsForExceptional()
       ].filter(Boolean);
     }
-    const rawByKey = new Map(getRawColumnsForMain().map((column) => [column.key, column]));
-    return [
-      rawByKey.get('raw:20/20'),
-      ...getCalculatedColumnsForMain()
-    ].filter(Boolean);
+    return [];
   }
 
   function getVisibleCalculatedColumnKeys() {
     const allowedKeys = new Set(getOptionalColumns().map((column) => column.key));
     const stored = Array.isArray(state.visibleCalcColumns[state.filter]) ? state.visibleCalcColumns[state.filter] : [];
     const next = stored.filter((key) => allowedKeys.has(key));
-    if (next.length || stored.length) return next;
+    if (next.length) return next;
     return (DEFAULT_VISIBLE_CALC_COLUMNS[state.filter] || []).filter((key) => allowedKeys.has(key));
   }
 
@@ -916,7 +915,7 @@
       return orderColumns(getRawColumnsForExceptional().concat(getCalculatedColumnsForExceptional()), 'exceptional');
     }
 
-    return orderColumns(getRawColumnsForMain().concat(getCalculatedColumnsForMain()), 'main');
+    return orderColumns(getRawColumnsForMain().concat(getCalculatedColumnsForMain()), state.filter);
   }
 
   function getColumnDefs() {
@@ -927,9 +926,16 @@
 
   function renderColumnToggleBar() {
     if (!columnToggleBar) return;
+    const menu = columnToggleBar.closest('.gem-column-menu');
     columnToggleBar.innerHTML = '';
+    const optionalColumns = getOptionalColumns();
+    if (menu) {
+      menu.hidden = optionalColumns.length === 0;
+      if (optionalColumns.length === 0) menu.open = false;
+    }
+    if (!optionalColumns.length) return;
     const visibleKeys = new Set(getVisibleCalculatedColumnKeys());
-    for (const column of getOptionalColumns()) {
+    for (const column of optionalColumns) {
       const label = document.createElement('label');
       label.className = 'column-toggle-chip';
       const input = document.createElement('input');
@@ -1012,12 +1018,21 @@
   }
 
   function getActiveSortKey() {
-    const defaultKey = DEFAULT_SORT_BY_FILTER[state.filter] || 'bestStep';
+    const defaultKey = DEFAULT_SORT_BY_FILTER[state.filter] || 'name';
     const availableKeys = new Set(getAllColumnDefs().map((column) => column.key));
     if (state.sortKey === 'name') return 'name';
     if (availableKeys.has(state.sortKey)) return state.sortKey;
     if (availableKeys.has(defaultKey)) return defaultKey;
     return 'name';
+  }
+
+  function matchesSelectedFilterBucket(row) {
+    if (isExceptionalRow(row) || isVaalRow(row)) return false;
+    if (state.filter === 'all') return true;
+    if (state.filter === 'normal') return !row?.tags?.includes('Transfigured') && !isSupportRow(row);
+    if (state.filter === 'transfigured') return row?.tags?.includes('Transfigured') && !isSupportRow(row);
+    if (state.filter === 'support') return isSupportRow(row);
+    return false;
   }
 
   function filterRows(rows) {
@@ -1028,9 +1043,7 @@
         const base = getRecord(row, '1');
         if (Number.isFinite(base?.min) && base.min > state.startValueLimitChaos) return false;
       }
-      if (state.filter === 'main') return !isExceptionalRow(row) && !isVaalRow(row);
-      if (state.filter === 'exceptional') return isExceptionalRow(row);
-      return false;
+      return matchesSelectedFilterBucket(row);
     });
   }
 
@@ -1054,6 +1067,20 @@
     });
   }
 
+  function preserveVisibleRowOrder(rows) {
+    const orderMap = new Map((state.visibleRows || []).map((row, index) => [row.name, index]));
+    return rows.slice().sort((a, b) => {
+      const aIndex = orderMap.has(a.name) ? orderMap.get(a.name) : Number.MAX_SAFE_INTEGER;
+      const bIndex = orderMap.has(b.name) ? orderMap.get(b.name) : Number.MAX_SAFE_INTEGER;
+      if (aIndex !== bIndex) return aIndex - bIndex;
+      return a.name.localeCompare(b.name);
+    });
+  }
+
+  function isTableLinkActivationPending() {
+    return state.pendingTableLinkActivationUntil > Date.now();
+  }
+
   function renderFilterBar() {
     filterBar.innerHTML = '';
     for (const filter of FILTER_DEFS) {
@@ -1064,8 +1091,9 @@
       button.setAttribute('aria-pressed', state.filter === filter.key ? 'true' : 'false');
       button.addEventListener('click', () => {
         state.filter = filter.key;
+        state.sortFrozen = false;
         localStorage.setItem(STORAGE_KEYS.filter, state.filter);
-        state.sortKey = DEFAULT_SORT_BY_FILTER[state.filter] || 'bestStep';
+        state.sortKey = DEFAULT_SORT_BY_FILTER[state.filter] || 'name';
         state.sortDir = 'desc';
         localStorage.setItem(STORAGE_KEYS.sortKey, state.sortKey);
         localStorage.setItem(STORAGE_KEYS.sortDir, state.sortDir);
@@ -1076,7 +1104,7 @@
   }
 
   function renderSummary() {
-    const total = state.rows.length;
+    const total = state.rows.filter(matchesSelectedFilterBucket).length;
     const visible = state.visibleRows.length;
     const leagueText = state.leagueId || 'Unknown league';
     const updated = formatUpdatedAt(state.updatedAt);
@@ -1099,7 +1127,13 @@
 
     for (let i = 0; i < columns.length; i += 1) {
       const stateCol = document.createElement('col');
-      stateCol.className = columns[i].isRaw ? 'col-raw' : 'col-state';
+      const baseClass = columns[i].isRaw
+        ? (columns[i].isRawGroup ? 'col-raw-group' : 'col-raw')
+        : 'col-state';
+      const keyClass = `col-key-${String(columns[i].key || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')}`;
+      stateCol.className = `${baseClass} ${keyClass}`.trim();
       tableColgroup.appendChild(stateCol);
     }
 
@@ -1112,12 +1146,24 @@
 
     for (const column of columns) {
       const cell = document.createElement('th');
-      if (column.key === 'bestStep') cell.classList.add('gem-column-best-step');
-      cell.appendChild(buildHeaderButton({
+      if (column.key === 'normalizedValuePair') cell.classList.add('gem-column-primary');
+      const headerWrap = document.createElement('div');
+      headerWrap.className = 'gem-header-cell';
+      headerWrap.appendChild(buildHeaderButton({
         key: column.key,
         lines: column.labelLines,
         tooltip: column.tooltip
       }));
+      if (column.infoTooltip) {
+        const info = document.createElement('span');
+        info.className = 'info-dot has-tooltip tooltip-below';
+        info.textContent = '?';
+        info.dataset.tooltip = column.infoTooltip;
+        info.setAttribute('tabindex', '0');
+        info.setAttribute('aria-label', column.infoTooltip);
+        headerWrap.appendChild(info);
+      }
+      cell.appendChild(headerWrap);
       tableHeadRow.appendChild(cell);
     }
 
@@ -1148,6 +1194,7 @@
       button.appendChild(indicator);
     }
     button.addEventListener('click', () => {
+      state.sortFrozen = false;
       if (state.sortKey === key) {
         state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
       } else {
@@ -1192,10 +1239,36 @@
     }
   }
 
-  function renderRawStateCell(cell, rowData, column) {
-    const record = getRecord(rowData, column.rawStateKey);
+  function renderMetricGroupCell(cell, rowData, column, { delta = false } = {}) {
+    if (column.key === 'normalizedValuePair') cell.classList.add('gem-column-primary');
+    const stack = document.createElement('div');
+    stack.className = `gem-metric-stack${column.key === 'normalizedValuePair' ? ' is-primary' : ''}`;
+
+    for (const entry of column.metricDefs || []) {
+      const line = document.createElement('div');
+      line.className = 'gem-metric-stack-line';
+
+      const valueWrap = document.createElement('div');
+      valueWrap.className = 'gem-metric-stack-value';
+      renderMetricCell(valueWrap, entry.metric(rowData), { delta });
+      line.appendChild(valueWrap);
+
+      const label = document.createElement('span');
+      label.className = 'gem-metric-stack-label';
+      label.textContent = entry.label;
+      line.appendChild(label);
+
+      stack.appendChild(line);
+    }
+
+    cell.appendChild(stack);
+  }
+
+  function buildRawStateInput(rowData, stateKey) {
+    const record = getRecord(rowData, stateKey);
     const wrapper = document.createElement('div');
     wrapper.className = 'gem-raw-entry';
+
     const input = document.createElement('input');
     input.type = 'number';
     input.step = '0.01';
@@ -1208,22 +1281,114 @@
       input.title = count ? `Sparse market data (${count} listings)` : 'Sparse market data';
     }
     input.addEventListener('change', () => {
-      const overrideKey = `${slugifyLeague(state.leagueId)}::${rowData.name}::${column.rawStateKey}`;
+      const overrideKey = `${slugifyLeague(state.leagueId)}::${rowData.name}::${stateKey}`;
       const nextValue = chaosValueFromDisplay(input.value);
       if (nextValue == null) {
         delete state.rawOverrides[overrideKey];
       } else {
         state.rawOverrides[overrideKey] = nextValue;
       }
+      state.sortFrozen = true;
       localStorage.setItem(STORAGE_KEYS.rawOverrides, JSON.stringify(state.rawOverrides));
-      render();
+      const affectsVisibility = Number.isFinite(state.startValueLimitChaos) && stateKey === '1';
+      const delayMs = isTableLinkActivationPending() ? 180 : 0;
+      window.setTimeout(() => {
+        if (affectsVisibility || !rerenderRowInPlace(rowData)) {
+          render();
+          return;
+        }
+        renderSummary();
+        updateDebugOutput();
+      }, delayMs);
     });
     wrapper.appendChild(input);
-    const unit = document.createElement('span');
-    unit.className = 'gem-raw-unit';
-    unit.textContent = displayCurrencyUnitLabel();
-    wrapper.appendChild(unit);
-    cell.appendChild(wrapper);
+
+    return wrapper;
+  }
+
+  function renderRawStateCell(cell, rowData, column) {
+    if (column.isRawGroup && Array.isArray(column.rawStateKeys)) {
+      const stack = document.createElement('div');
+      stack.className = 'gem-raw-stack';
+      column.rawStateKeys.forEach((stateKey) => {
+        const line = document.createElement('div');
+        line.className = 'gem-raw-stack-line';
+        line.append(buildRawStateInput(rowData, stateKey));
+        const tradeUrl = buildGemTradeUrl(rowData, stateKey);
+        const label = tradeUrl ? document.createElement('a') : document.createElement('span');
+        label.className = 'gem-raw-stack-label';
+        label.textContent = formatGemStateLabel(stateKey);
+        if (tradeUrl) {
+          label.href = tradeUrl;
+          label.target = '_blank';
+          label.rel = 'noreferrer';
+        }
+        line.appendChild(label);
+        stack.appendChild(line);
+      });
+      cell.appendChild(stack);
+      return;
+    }
+
+    cell.appendChild(buildRawStateInput(rowData, column.rawStateKey));
+  }
+
+  function buildTableRow(rowData, columns) {
+    const row = document.createElement('tr');
+    row.dataset.rowName = rowData.name;
+
+    const nameCell = document.createElement('td');
+    const nameWrap = document.createElement('div');
+    nameWrap.className = 'item-cell';
+    if (rowData.icon) {
+      const icon = document.createElement('img');
+      icon.className = 'item-icon';
+      icon.src = rowData.icon;
+      icon.alt = '';
+      icon.loading = 'lazy';
+      nameWrap.appendChild(icon);
+    }
+    const label = document.createElement('div');
+    label.className = 'item-label';
+    const primary = rowData.detailUrl ? document.createElement('a') : document.createElement('span');
+    primary.className = rowData.detailUrl ? 'item-primary item-link' : 'item-primary';
+    primary.textContent = rowData.name;
+    if (rowData.detailUrl) {
+      primary.href = rowData.detailUrl;
+      primary.target = '_blank';
+      primary.rel = 'noreferrer';
+    }
+    label.appendChild(primary);
+    if (rowData.hiddenStates) {
+      const meta = document.createElement('span');
+      meta.className = 'item-meta gem-name-meta';
+      meta.textContent = `+${rowData.hiddenStates} additional state${rowData.hiddenStates === 1 ? '' : 's'}`;
+      if (Array.isArray(rowData.additionalStates) && rowData.additionalStates.length) {
+        meta.classList.add('has-tooltip');
+        meta.dataset.tooltip = rowData.additionalStates.join(', ');
+        meta.setAttribute('tabindex', '0');
+        meta.setAttribute('aria-label', `Additional states: ${rowData.additionalStates.join(', ')}`);
+      }
+      label.appendChild(meta);
+    }
+    nameWrap.appendChild(label);
+    nameCell.appendChild(nameWrap);
+    row.appendChild(nameCell);
+
+    for (const column of columns) {
+      const cell = document.createElement('td');
+      cell.className = 'gem-state-cell';
+      if (column.isRaw) {
+        renderRawStateCell(cell, rowData, column);
+      } else if (column.isMetricGroup) {
+        renderMetricGroupCell(cell, rowData, column, { delta: true });
+      } else {
+        renderMetricCell(cell, column.metric(rowData), { delta: true });
+      }
+      row.appendChild(cell);
+    }
+
+    return row;
   }
 
   function renderTable() {
@@ -1239,82 +1404,19 @@
       tableBody.appendChild(row);
       return;
     }
+    const fragment = document.createDocumentFragment();
     for (const rowData of state.visibleRows) {
-      const row = document.createElement('tr');
-
-      const nameCell = document.createElement('td');
-      const nameWrap = document.createElement('div');
-      nameWrap.className = 'item-cell';
-      if (rowData.icon) {
-        const icon = document.createElement('img');
-        icon.className = 'item-icon';
-        icon.src = rowData.icon;
-        icon.alt = '';
-        icon.loading = 'lazy';
-        nameWrap.appendChild(icon);
-      }
-      const label = document.createElement('div');
-      label.className = 'item-label';
-      const primary = rowData.detailUrl ? document.createElement('a') : document.createElement('span');
-      primary.className = rowData.detailUrl ? 'item-primary item-link' : 'item-primary';
-      primary.textContent = rowData.name;
-      if (rowData.detailUrl) {
-        primary.href = rowData.detailUrl;
-        primary.target = '_blank';
-        primary.rel = 'noreferrer';
-      }
-      label.appendChild(primary);
-      const tradeLinks = buildGemTradeLinks(rowData);
-      if (tradeLinks.length) {
-        const tradeMeta = document.createElement('span');
-        tradeMeta.className = 'item-meta';
-        tradeLinks.forEach((entry, index) => {
-          if (index > 0) {
-            const separator = document.createElement('span');
-            separator.className = 'item-sep';
-            separator.textContent = '·';
-            tradeMeta.appendChild(separator);
-          }
-          const link = document.createElement('a');
-          link.className = 'item-link trade-link is-ready';
-          link.href = entry.url;
-          link.target = '_blank';
-          link.rel = 'noreferrer';
-          link.textContent = entry.label;
-          tradeMeta.appendChild(link);
-        });
-        label.appendChild(tradeMeta);
-      }
-      if (rowData.hiddenStates) {
-        const meta = document.createElement('span');
-        meta.className = 'item-meta gem-name-meta';
-        meta.textContent = `+${rowData.hiddenStates} additional state${rowData.hiddenStates === 1 ? '' : 's'}`;
-        if (Array.isArray(rowData.additionalStates) && rowData.additionalStates.length) {
-          meta.classList.add('has-tooltip');
-          meta.dataset.tooltip = rowData.additionalStates.join(', ');
-          meta.setAttribute('tabindex', '0');
-          meta.setAttribute('aria-label', `Additional states: ${rowData.additionalStates.join(', ')}`);
-        }
-        label.appendChild(meta);
-      }
-      nameWrap.appendChild(label);
-      nameCell.appendChild(nameWrap);
-      row.appendChild(nameCell);
-
-      for (const column of columns) {
-        const cell = document.createElement('td');
-        cell.className = 'gem-state-cell';
-        if (column.key === 'bestStep') cell.classList.add('gem-column-best-step');
-        if (column.isRaw) {
-          renderRawStateCell(cell, rowData, column);
-        } else {
-          renderMetricCell(cell, column.metric(rowData), { delta: true });
-        }
-        row.appendChild(cell);
-      }
-
-      tableBody.appendChild(row);
+      fragment.appendChild(buildTableRow(rowData, columns));
     }
+    tableBody.replaceChildren(fragment);
+  }
+
+  function rerenderRowInPlace(rowData) {
+    const existing = tableBody.querySelector(`tr[data-row-name=\"${CSS.escape(rowData.name)}\"]`);
+    if (!existing) return false;
+    const replacement = buildTableRow(rowData, getColumnDefs());
+    existing.replaceWith(replacement);
+    return true;
   }
 
   function updateDebugOutput() {
@@ -1341,7 +1443,10 @@
   }
 
   function render() {
-    state.visibleRows = sortRows(filterRows(state.rows));
+    const filteredRows = filterRows(state.rows);
+    state.visibleRows = state.sortFrozen
+      ? preserveVisibleRowOrder(filteredRows)
+      : sortRows(filteredRows);
     renderFilterBar();
     renderColumnToggleBar();
     renderSummary();
@@ -1352,11 +1457,27 @@
     updateDebugOutput();
   }
 
+  function scheduleSearchRender() {
+    window.clearTimeout(state.searchRenderTimer);
+    state.searchRenderTimer = window.setTimeout(() => {
+      state.searchRenderTimer = null;
+      render();
+    }, 90);
+  }
+
+  function scheduleGemcutterRender() {
+    window.clearTimeout(state.gemcutterRenderTimer);
+    state.gemcutterRenderTimer = window.setTimeout(() => {
+      state.gemcutterRenderTimer = null;
+      render();
+    }, 90);
+  }
+
   function hasEmptyViewFallbackState() {
     return Boolean(
       (state.search && state.search.trim())
       || Number.isFinite(state.startValueLimitChaos)
-      || state.filter !== 'main'
+      || state.filter !== 'all'
     );
   }
 
@@ -1369,8 +1490,9 @@
 
     state.startValueLimitChaos = null;
     state.search = '';
-    state.filter = 'main';
-    state.sortKey = DEFAULT_SORT_BY_FILTER.main;
+    state.filter = 'all';
+    state.sortFrozen = false;
+    state.sortKey = DEFAULT_SORT_BY_FILTER.all;
     state.sortDir = 'desc';
 
     searchInput.value = '';
@@ -1536,7 +1658,7 @@
     } else {
       localStorage.setItem(STORAGE_KEYS.gemcutterCost, String(value));
     }
-    render();
+    scheduleGemcutterRender();
   });
 
   ignoreLowConfidenceInput.addEventListener('change', () => {
@@ -1559,8 +1681,15 @@
   searchInput.addEventListener('input', () => {
     state.search = searchInput.value;
     localStorage.setItem(STORAGE_KEYS.search, state.search);
-    render();
+    scheduleSearchRender();
   });
+
+  tableBody.addEventListener('pointerdown', (event) => {
+    if (!(event.target instanceof Element)) return;
+    const link = event.target.closest('a');
+    if (!link) return;
+    state.pendingTableLinkActivationUntil = Date.now() + 250;
+  }, true);
 
   resetGemSettingsButton?.addEventListener('click', (event) => {
     event.preventDefault();
@@ -1581,12 +1710,16 @@
     state.startValueLimitChaos = null;
     state.rawOverrides = {};
     state.visibleCalcColumns = {
-      main: DEFAULT_VISIBLE_CALC_COLUMNS.main.slice(),
+      all: DEFAULT_VISIBLE_CALC_COLUMNS.all.slice(),
+      normal: DEFAULT_VISIBLE_CALC_COLUMNS.normal.slice(),
+      transfigured: DEFAULT_VISIBLE_CALC_COLUMNS.transfigured.slice(),
+      support: DEFAULT_VISIBLE_CALC_COLUMNS.support.slice(),
       exceptional: DEFAULT_VISIBLE_CALC_COLUMNS.exceptional.slice()
     };
     state.search = '';
-    state.filter = 'main';
-    state.sortKey = DEFAULT_SORT_BY_FILTER.main;
+    state.filter = 'all';
+    state.sortFrozen = false;
+    state.sortKey = DEFAULT_SORT_BY_FILTER.all;
     state.sortDir = 'desc';
 
     displayCurrencySelect.value = state.displayCurrency;
