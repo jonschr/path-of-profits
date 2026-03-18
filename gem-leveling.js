@@ -1,6 +1,10 @@
 (function initGemLevelingPage() {
   'use strict';
 
+  const APP_BUILD_VERSION = (document.getElementById('openChangelog')?.textContent || '').trim() || 'release-unknown';
+  const BUILD_VERSION_KEY = 'poeUiBuildVersion';
+  const DEPLOY_CACHE_KEYS = ['poeBossLeagueCacheV1', 'poeBossLeagueCacheV2', 'poeBossPriceCacheV1'];
+  const SHARED_BOSS_LEAGUE_KEY = 'poeBossLeague';
   const STORAGE_KEYS = {
     league: 'poeGemLeague',
     displayCurrency: 'poeGemDisplayCurrency',
@@ -15,6 +19,7 @@
     sortDir: 'poeGemSortDir'
   };
   const FALLBACK_LEAGUES = ['Standard', 'Hardcore', 'Mirage', 'Hardcore Mirage'];
+  const DEFAULT_LEAGUE = 'Mirage';
   const ETERNAL_LEAGUES = new Set(['standard', 'hardcore']);
   const FILTER_DEFS = [
     { key: 'all', label: 'All' },
@@ -119,6 +124,41 @@
     ]
   };
 
+  function clearCachesForCurrentBuild() {
+    try {
+      const previousVersion = localStorage.getItem(BUILD_VERSION_KEY);
+      if (previousVersion === APP_BUILD_VERSION) return;
+      DEPLOY_CACHE_KEYS.forEach((key) => {
+        localStorage.removeItem(key);
+      });
+      localStorage.setItem(BUILD_VERSION_KEY, APP_BUILD_VERSION);
+    } catch (_error) {
+      // Ignore storage failures.
+    }
+  }
+
+  function hydrateLeagueSelection() {
+    const sharedValue = localStorage.getItem(SHARED_BOSS_LEAGUE_KEY) || '';
+    if (sharedValue) return sharedValue;
+    return localStorage.getItem(STORAGE_KEYS.league) || '';
+  }
+
+  function persistLeagueSelection(leagueId) {
+    if (!leagueId) return;
+    try {
+      localStorage.setItem(STORAGE_KEYS.league, leagueId);
+    } catch (_error) {
+      // Ignore storage failures.
+    }
+    try {
+      localStorage.setItem(SHARED_BOSS_LEAGUE_KEY, leagueId);
+    } catch (_error) {
+      // Ignore storage failures.
+    }
+  }
+
+  clearCachesForCurrentBuild();
+
   const leagueSelect = document.getElementById('gemLeagueSelect');
   const displayCurrencySelect = document.getElementById('gemDisplayCurrency');
   const gemcutterCostInput = document.getElementById('gemcutterCostInput');
@@ -168,7 +208,7 @@
   }
 
   const state = {
-    leagueId: localStorage.getItem(STORAGE_KEYS.league) || '',
+    leagueId: hydrateLeagueSelection() || DEFAULT_LEAGUE,
     displayCurrency: localStorage.getItem(STORAGE_KEYS.displayCurrency) === 'divine' ? 'divine' : 'chaos',
     gemcutterCost: null,
     ignoreLowConfidence: localStorage.getItem(STORAGE_KEYS.ignoreLowConfidence) !== 'false',
@@ -1511,8 +1551,8 @@
       leagueSelect.appendChild(option);
     }
     if (!state.leagueId || !state.leagues.some((league) => league.id === state.leagueId)) {
-      state.leagueId = state.leagues[0]?.id || '';
-      localStorage.setItem(STORAGE_KEYS.league, state.leagueId);
+      state.leagueId = state.leagues.find((league) => league.id === DEFAULT_LEAGUE)?.id || state.leagues[0]?.id || '';
+      persistLeagueSelection(state.leagueId);
     }
     leagueSelect.value = state.leagueId;
   }
@@ -1639,7 +1679,7 @@
 
   leagueSelect.addEventListener('change', async () => {
     state.leagueId = leagueSelect.value;
-    localStorage.setItem(STORAGE_KEYS.league, state.leagueId);
+    persistLeagueSelection(state.leagueId);
     await refreshPageData();
   });
 

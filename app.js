@@ -1,4 +1,4 @@
-    const BASE_LEAGUE = '';
+    const BASE_LEAGUE = 'Mirage';
     const BASE_DISPLAY_CURRENCY = 'chaos';
     const BASE_MIN_VALUE_ENABLED = true;
     const BASE_MIN_VALUE_DIVINE = 0.5;
@@ -29,6 +29,7 @@
     const displayCurrencyKey = 'poeBossDisplayCurrency';
     const priceSourceKey = 'poeBossPriceSource';
     const leagueKey = 'poeBossLeague';
+    const gemLeagueKey = 'poeGemLeague';
     const debugKey = 'poeBossDebug';
     const sortKeyStorage = 'poeBossSortKey';
     const sortDirStorage = 'poeBossSortDir';
@@ -38,6 +39,9 @@
     const priceCacheTtlMs = 60 * 60 * 1000;
     const leagueCacheKey = 'poeBossLeagueCacheV2';
     const leagueCacheTtlMs = 6 * 60 * 60 * 1000;
+    const BUILD_VERSION_KEY = 'poeUiBuildVersion';
+    const APP_BUILD_VERSION = (document.getElementById('openChangelog')?.textContent || '').trim() || 'release-unknown';
+    const DEPLOY_CACHE_KEYS = ['poeBossLeagueCacheV1', 'poeBossLeagueCacheV2', 'poeBossPriceCacheV1'];
 
     let LEAGUES = [];
 
@@ -175,7 +179,9 @@
         })
       : null;
     const initialSettings = settingsStore ? settingsStore.getState() : {};
-    const storedLeagueLegacy = normalizeLeagueKey(localStorage.getItem(leagueKey) || '');
+    const storedLeagueLegacy = normalizeLeagueKey(
+      localStorage.getItem(leagueKey) || localStorage.getItem(gemLeagueKey) || ''
+    );
     const DEFAULT_LEAGUE = storedLeagueLegacy || BASE_LEAGUE;
     const DEFAULT_PRICE_SOURCE = normalizePriceSource(initialSettings.priceSource || BASE_PRICE_SOURCE);
     const DEFAULT_SEARCH_QUERY = localStorage.getItem(searchKeyStorage) || '';
@@ -191,6 +197,19 @@
     const pricingRepository = Repositories
       ? Repositories.createPricingRepository({ httpClient, cacheStore: priceCacheStore })
       : null;
+
+    function clearCachesForCurrentBuild() {
+      try {
+        const previousVersion = localStorage.getItem(BUILD_VERSION_KEY);
+        if (previousVersion === APP_BUILD_VERSION) return;
+        DEPLOY_CACHE_KEYS.forEach((key) => {
+          localStorage.removeItem(key);
+        });
+        localStorage.setItem(BUILD_VERSION_KEY, APP_BUILD_VERSION);
+      } catch (_error) {
+        // Ignore storage failures.
+      }
+    }
 
     function writeLegacySharedSetting(key, value) {
       const isQuotaExceeded = (err) => err?.name === 'QuotaExceededError' || err?.code === 22 || err?.code === 1014;
@@ -214,6 +233,7 @@
       };
       if (key === 'leagueId') {
         safeSetItem(leagueKey, String(value || ''));
+        safeSetItem(gemLeagueKey, String(value || ''));
         return;
       }
       if (key === 'displayCurrency') {
@@ -231,7 +251,7 @@
 
     function saveSharedSetting(key, value) {
       if (key === 'leagueId') {
-        // Keep league persistence simple and explicit: this key is owned by poeBossLeague.
+        // Keep league persistence canonical while mirroring to the gem page key for sync.
         writeLegacySharedSetting(key, value);
         return;
       }
@@ -2450,14 +2470,10 @@
     }
 
     async function init() {
+      clearCachesForCurrentBuild();
       renderLocalModeLinks();
       if (IS_FILE_ORIGIN) {
         setStatus('Open this page via a local server so the data files can be fetched.', true);
-      }
-      try {
-        localStorage.removeItem('poeBossLeagueCacheV1');
-      } catch (err) {
-        // Ignore storage failures.
       }
       BOSS_DATA = await loadBossData();
       rebuildUniqueDropNameKeys();
