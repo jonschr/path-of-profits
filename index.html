@@ -22,7 +22,7 @@
       <div class="top-nav-brand-block">
         <a class="top-nav-brand" href="./">Path of Profits</a>
         <div class="top-nav-subline">
-          <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.4</button>
+          <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.4.1</button>
           <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
         </div>
       </div>
@@ -163,6 +163,14 @@
         </div>
         <div class="lightbox-body">
           <div class="changelog-content">
+            <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.4.1</span><span>2026-04-03</span></div>
+            <ul class="changelog-list">
+              <li>Corrected Uber boss entry costs so fragment-based Uber encounters now require 4 fragments instead of 5, matching the 3.28 change.</li>
+              <li>Added 3.28 exceptional support gem drops to supported bosses in the bossing calculator, using pinned level 1 uncorrupted gem entries from the existing price data.</li>
+              <li>Refined Maven exceptional-gem modeling by removing the generic regular-Maven awakened-gem placeholder, keeping Invert the Rules Support at 2% on both Maven variants, and zeroing unconfirmed Uber Maven awakened gem rates.</li>
+            </ul>
+            </article>
             <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.4</span><span>2026-03-18</span></div>
             <ul class="changelog-list">

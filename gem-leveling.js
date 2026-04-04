@@ -507,6 +507,27 @@
     return xpEntry.xpTo20;
   }
 
+  function getXpToMax(row) {
+    const xpEntry = getXpEntry(row);
+    if (!xpEntry) return { value: null, maxLevel: null };
+    if (Number.isFinite(xpEntry.xpTo20) && xpEntry.xpTo20 > 0) {
+      return { value: xpEntry.xpTo20, maxLevel: 20 };
+    }
+    if (Number.isFinite(xpEntry.xpTo3) && xpEntry.xpTo3 > 0) {
+      return { value: xpEntry.xpTo3, maxLevel: 3 };
+    }
+    return { value: null, maxLevel: null };
+  }
+
+  function formatXpToMaxLabel(row) {
+    const { value, maxLevel } = getXpToMax(row);
+    if (!Number.isFinite(value) || value <= 0) return 'XP to max: —';
+    if (Number.isFinite(maxLevel)) {
+      return `XP to max (Lv ${maxLevel}): ${Math.round(value).toLocaleString()}`;
+    }
+    return `XP to max: ${Math.round(value).toLocaleString()}`;
+  }
+
   function buildGemTradeUrl(row, stateKey) {
     const record = getRecord(row, stateKey);
     if (!record || !state.leagueId) return null;
@@ -1072,6 +1093,10 @@
       primary.rel = 'noreferrer';
     }
     label.appendChild(primary);
+    const xpMeta = document.createElement('span');
+    xpMeta.className = 'item-meta gem-xp-meta';
+    xpMeta.textContent = formatXpToMaxLabel(rowData);
+    label.appendChild(xpMeta);
     if (rowData.hiddenStates) {
       const meta = document.createElement('span');
       meta.className = 'item-meta gem-name-meta';

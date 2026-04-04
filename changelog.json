@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "version": "0.4.1",
+      "date": "2026-04-03",
+      "changes": [
+        "Corrected Uber boss entry costs so fragment-based Uber encounters now require 4 fragments instead of 5, matching the 3.28 change.",
+        "Added 3.28 exceptional support gem drops to supported bosses in the bossing calculator, using pinned level-1 uncorrupted gem entries from the existing price data.",
+        "Refined Maven exceptional-gem modeling by removing the generic regular-Maven awakened-gem placeholder, keeping Invert the Rules at 2% on both Maven variants, and zeroing unconfirmed Uber Maven awakened gem rates."
+      ]
+    },
+    {
       "version": "0.4",
       "date": "2026-03-18",
       "changes": [

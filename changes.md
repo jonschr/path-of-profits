@@ -1,5 +1,10 @@
 # Changes
 
+## 0.4.1 - 2026-04-03
+- Corrected Uber boss entry costs so fragment-based Uber encounters now require 4 fragments instead of 5, matching the 3.28 change.
+- Added 3.28 exceptional support gem drops to supported bosses in the bossing calculator, using pinned level 1 uncorrupted gem entries from the existing price data.
+- Refined Maven exceptional-gem modeling by removing the generic regular-Maven awakened-gem placeholder, keeping `Invert the Rules Support` at 2% on both Maven variants, and zeroing unconfirmed Uber Maven awakened gem rates.
+
 ## 0.2.13 - 2026-03-09
 - Corrected Incarnation of Fear loot tables by moving `Woespike` to Uber Incarnation of Fear and restoring `The Unseen Hue` to the normal boss drop pool.
 

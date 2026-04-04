@@ -77,6 +77,20 @@
             ]
           }
         ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Overheat Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "overheat-support-1"
+          }
+        ]
       }
     ],
     "sources": [
@@ -93,7 +107,7 @@
     "entry": [
       {
         "name": "Blazing Fragment",
-        "qty": 5,
+        "qty": 4,
         "types": [
           "Fragment"
         ]
@@ -180,6 +194,20 @@
             "types": [
               "Fragment"
             ]
+          }
+        ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Overheat Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "overheat-support-1"
           }
         ]
       }
@@ -271,6 +299,20 @@
             ]
           }
         ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Gluttony Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "gluttony-support-1"
+          }
+        ]
       }
     ],
     "sources": [
@@ -287,7 +329,7 @@
     "entry": [
       {
         "name": "Devouring Fragment",
-        "qty": 5,
+        "qty": 4,
         "types": [
           "Fragment"
         ]
@@ -372,6 +414,20 @@
             ]
           }
         ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Gluttony Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "gluttony-support-1"
+          }
+        ]
       }
     ],
     "sources": [
@@ -444,18 +500,25 @@
         "type": "independent",
         "items": [
           {
-            "name": "Awakened Support Gem",
-            "p": 0.27,
-            "types": [],
-            "note": "Prices vary widely",
-            "noPrice": true
-          },
-          {
             "name": "Orb of Conflict",
             "p": 0.32,
             "types": [
               "Currency"
             ]
+          }
+        ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Invert the Rules Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "invert-the-rules-support-1"
           }
         ]
       }
@@ -472,7 +535,7 @@
     "entry": [
       {
         "name": "Reality Fragment",
-        "qty": 5,
+        "qty": 4,
         "types": [
           "Fragment"
         ]
@@ -530,6 +593,44 @@
             "types": [
               "Currency"
             ]
+          }
+        ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Invert the Rules Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "invert-the-rules-support-1"
+          },
+          {
+            "name": "Awakened Empower Support",
+            "p": 0,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "awakened-empower-support-1"
+          },
+          {
+            "name": "Awakened Enhance Support",
+            "p": 0,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "awakened-enhance-support-1"
+          },
+          {
+            "name": "Awakened Enlighten Support",
+            "p": 0,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "awakened-enlighten-support-1"
           }
         ]
       }
@@ -638,6 +739,20 @@
             ]
           }
         ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Annihilation Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "annihilation-support-1"
+          }
+        ]
       }
     ],
     "sources": [
@@ -655,7 +770,7 @@
     "entry": [
       {
         "name": "Awakening Fragment",
-        "qty": 5,
+        "qty": 4,
         "types": [
           "Fragment"
         ]
@@ -724,6 +839,20 @@
             "types": [
               "DivinationCard"
             ]
+          }
+        ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Annihilation Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "annihilation-support-1"
           }
         ]
       }
@@ -845,6 +974,20 @@
             ]
           }
         ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Voidstorm Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "voidstorm-support-1"
+          }
+        ]
       }
     ],
     "sources": [
@@ -861,7 +1004,7 @@
     "entry": [
       {
         "name": "Cosmic Fragment",
-        "qty": 5,
+        "qty": 4,
         "types": [
           "Fragment"
         ]
@@ -953,6 +1096,20 @@
             "types": [
               "Currency"
             ]
+          }
+        ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Voidstorm Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "voidstorm-support-1"
           }
         ]
       }
@@ -1095,6 +1252,20 @@
             ]
           }
         ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Void Shockwave Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "void-shockwave-support-1"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1111,7 +1282,7 @@
     "entry": [
       {
         "name": "Decaying Fragment",
-        "qty": 5,
+        "qty": 4,
         "types": [
           "Fragment"
         ]
@@ -1243,6 +1414,20 @@
             "types": [
               "DivinationCard"
             ]
+          }
+        ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Void Shockwave Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "void-shockwave-support-1"
           }
         ]
       }
@@ -1537,6 +1722,28 @@
             "note": "<0.1%"
           }
         ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Greater Spell Echo Support",
+            "p": 0.01,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "greater-spell-echo-support-1"
+          },
+          {
+            "name": "Vaal Sacrifice Support",
+            "p": 0.01,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "vaal-sacrifice-support-1"
+          }
+        ]
       }
     ],
     "sources": [
@@ -1594,7 +1801,7 @@
     "entry": [
       {
         "name": "Synthesising Fragment",
-        "qty": 5,
+        "qty": 4,
         "types": [
           "Fragment"
         ]
@@ -2217,6 +2424,20 @@
             ]
           }
         ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Congregation Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "congregation-support-1"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2234,7 +2455,7 @@
     "entry": [
       {
         "name": "Reverent Fragment",
-        "qty": 5
+        "qty": 4
       }
     ],
     "groups": [
@@ -2278,6 +2499,20 @@
           {
             "name": "Reverent Reliquary Key",
             "p": 0.01
+          }
+        ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Congregation Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "congregation-support-1"
           }
         ]
       }
@@ -2344,6 +2579,20 @@
             "p": 0.03
           }
         ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Frostmage Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "frostmage-support-1"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2360,7 +2609,7 @@
     "entry": [
       {
         "name": "Lonely Fragment",
-        "qty": 5
+        "qty": 4
       }
     ],
     "groups": [
@@ -2408,6 +2657,20 @@
           {
             "name": "Monochrome",
             "p": 0.03
+          }
+        ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Frostmage Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "frostmage-support-1"
           }
         ]
       }
@@ -2469,6 +2732,20 @@
             ]
           }
         ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Greater Devour Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "greater-devour-support-1"
+          }
+        ]
       }
     ],
     "sources": [
@@ -2485,7 +2762,7 @@
     "entry": [
       {
         "name": "Traumatic Fragment",
-        "qty": 5
+        "qty": 4
       }
     ],
     "groups": [
@@ -2529,6 +2806,20 @@
           {
             "name": "Traumatic Reliquary Key",
             "p": 0.01
+          }
+        ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Greater Devour Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "greater-devour-support-1"
           }
         ]
       }
@@ -2658,6 +2949,20 @@
             "types": [
               "DivinationCard"
             ]
+          }
+        ]
+      },
+      {
+        "label": "Exceptional Support Gems",
+        "type": "independent",
+        "items": [
+          {
+            "name": "Eldritch Blasphemy Support",
+            "p": 0.02,
+            "types": [
+              "SkillGem"
+            ],
+            "watchId": "eldritch-blasphemy-support-1"
           }
         ]
       }

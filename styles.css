@@ -1764,6 +1764,13 @@ button.has-tooltip:focus::after {
 	white-space: nowrap;
 }
 
+.gem-table .gem-xp-meta {
+	max-width: 300px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .gem-raw-input {
 	width: 50px;
 	min-width: 0;
@@ -1918,6 +1925,10 @@ a.gem-raw-stack-label:hover {
 .gem-name-meta {
 	margin-top: 2px;
 	cursor: help;
+}
+
+.gem-xp-meta {
+	font-variant-numeric: tabular-nums;
 }
 
 .gem-name-meta.has-tooltip::before,
