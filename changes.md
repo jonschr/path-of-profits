@@ -1,5 +1,9 @@
 # Changes
 
+## 0.4.2 - 2026-08-18
+- Corrected `Forbidden Flame` and `Forbidden Flesh` wiki and trade links to search for unidentified jewels, using separate item-level filters for normal and Uber boss drops.
+- Stopped applying identified poe.ninja jewel averages to unidentified `Forbidden Flame` and `Forbidden Flesh` drops; their prices remain manually editable until a reliable unidentified price source is integrated.
+
 ## 0.4.1 - 2026-04-03
 - Corrected Uber boss entry costs so fragment-based Uber encounters now require 4 fragments instead of 5, matching the 3.28 change.
 - Added 3.28 exceptional support gem drops to supported bosses in the bossing calculator, using pinned level 1 uncorrupted gem entries from the existing price data.

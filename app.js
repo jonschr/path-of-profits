@@ -1278,7 +1278,7 @@
     }
 
     function wikiUrlForItem(item) {
-      const name = String(item?.name || '').trim();
+      const name = String(item?.wikiName || item?.tradeName || item?.name || '').trim();
       if (!name) return null;
       const slug = name.replace(/\s+/g, '_');
       return `https://www.poewiki.net/wiki/${encodeURIComponent(slug)}`;

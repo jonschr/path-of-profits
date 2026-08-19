@@ -46,7 +46,11 @@
         "items": [
           {
             "name": "Forbidden Flame (ilvl 86-)",
-            "p": 0.05
+            "p": 0.05,
+            "noPrice": true,
+            "tradeName": "Forbidden Flame",
+            "tradeUnidentified": true,
+            "tradeIlvlMax": 86
           },
           {
             "name": "Exceptional Eldritch Ember",
@@ -154,7 +158,11 @@
         "items": [
           {
             "name": "Forbidden Flame (ilvl 87+)",
-            "p": 0.05
+            "p": 0.05,
+            "noPrice": true,
+            "tradeName": "Forbidden Flame",
+            "tradeUnidentified": true,
+            "tradeIlvlMin": 87
           },
           {
             "name": "Exceptional Eldritch Ember",
@@ -268,7 +276,11 @@
         "items": [
           {
             "name": "Forbidden Flesh (ilvl 86-)",
-            "p": 0.05
+            "p": 0.05,
+            "noPrice": true,
+            "tradeName": "Forbidden Flesh",
+            "tradeUnidentified": true,
+            "tradeIlvlMax": 86
           },
           {
             "name": "Exceptional Eldritch Ichor",
@@ -369,7 +381,11 @@
         "items": [
           {
             "name": "Forbidden Flesh (ilvl 87+)",
-            "p": 0.05
+            "p": 0.05,
+            "noPrice": true,
+            "tradeName": "Forbidden Flesh",
+            "tradeUnidentified": true,
+            "tradeIlvlMin": 87
           },
           {
             "name": "Exceptional Eldritch Ichor",

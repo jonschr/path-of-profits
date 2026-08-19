@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "version": "0.4.2",
+      "date": "2026-08-18",
+      "changes": [
+        "Corrected Forbidden Flame and Forbidden Flesh wiki and trade links to search for unidentified jewels, using separate item-level filters for normal and Uber boss drops.",
+        "Stopped applying identified poe.ninja jewel averages to unidentified Forbidden Flame and Forbidden Flesh drops; their prices remain manually editable until a reliable unidentified price source is integrated."
+      ]
+    },
+    {
       "version": "0.4.1",
       "date": "2026-04-03",
       "changes": [

@@ -53,16 +53,26 @@
       .trim();
   }
 
-  function buildTypedTradeSeedByName(name) {
+  function buildTypedTradeSeedByName(name, item = {}) {
     const sanitized = sanitizeTradeName(name);
     if (!sanitized) return null;
+    const miscFilters = {};
+    if (item.tradeUnidentified) miscFilters.identified = { option: 'false' };
+    const ilvl = {};
+    if (item.tradeIlvlMin != null && Number.isFinite(Number(item.tradeIlvlMin))) ilvl.min = Number(item.tradeIlvlMin);
+    if (item.tradeIlvlMax != null && Number.isFinite(Number(item.tradeIlvlMax))) ilvl.max = Number(item.tradeIlvlMax);
+    if (Object.keys(ilvl).length) miscFilters.ilvl = ilvl;
+    const filters = Object.keys(miscFilters).length
+      ? { misc_filters: { filters: miscFilters } }
+      : undefined;
     return {
       mode: 'search',
       q: JSON.stringify({
         query: {
-          status: { option: 'online' },
-          type: sanitized,
-          stats: [{ type: 'and', filters: [] }]
+          status: { option: item.tradeUnidentified ? 'available' : 'online' },
+          ...(item.tradeUnidentified ? { name: sanitized } : { type: sanitized }),
+          stats: [{ type: 'and', filters: [] }],
+          ...(filters ? { filters } : {})
         },
         sort: { price: 'asc' }
       })
@@ -170,6 +180,9 @@
     if (!name) return null;
     const explicit = tradeSeedForItemName(name, normalizeText, tradeLinkSeeds);
     if (explicit) return explicit;
+    if (item.tradeName || item.tradeUnidentified || item.tradeIlvlMin != null || item.tradeIlvlMax != null) {
+      return buildTypedTradeSeedByName(item.tradeName || name, item);
+    }
     if (shouldAutoTradeDivinationCard(item)) return buildDivinationCardTradeSeedByName(name);
     if (shouldAutoTradeTypedItem(item)) return buildTypedTradeSeedByName(name);
     if (shouldAutoTradeUniqueItem(item, normalizeText, uniqueDropNameKeys, nonUniqueTradeTypes)) {
