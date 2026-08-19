@@ -2,13 +2,18 @@
 const fs = require('fs/promises');
 const path = require('path');
 const NinjaTypes = require('../modules/ninja-types.js');
+const BossData = require('../boss-data.json');
 
 const NINJA_BASE = 'https://poe.ninja/poe1/api/economy/stash/current';
 const NINJA_EXCHANGE_BASE = 'https://poe.ninja/poe1/api/economy/exchange/current';
 const NINJA_ORIGIN = 'https://poe.ninja';
 const OFFICIAL_LEAGUES_URL = 'https://api.pathofexile.com/leagues';
+const TRADE_API_BASE = 'https://www.pathofexile.com/api/trade';
 const REQUEST_TIMEOUT_MS = 30000;
 const REQUEST_DELAY_MS = 120;
+const TRADE_SEARCH_DELAY_MS = 2200;
+const TRADE_SAMPLE_SIZE = 10;
+const USER_AGENT = 'PathOfProfits/0.4.3 (contact: https://pathofprofits.com)';
 const ASSUMED_LEAGUE_END_OVERRIDES = new Map([
   ['phrecia 2.0', '2026-04-23T21:00:00Z'],
   ['hardcore phrecia 2.0', '2026-04-23T21:00:00Z']
@@ -129,13 +134,14 @@ function extractLeagueList(data) {
   return [];
 }
 
-async function fetchJson(url) {
+async function fetchJson(url, options = {}) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
   try {
     const resp = await fetch(url, {
+      ...options,
       signal: controller.signal,
-      headers: { 'user-agent': 'pathofprofits-data-update' }
+      headers: { 'user-agent': USER_AGENT, ...(options.headers || {}) }
     });
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const data = await resp.json();
@@ -447,6 +453,91 @@ async function fetchItemOverview(league, { type, category }) {
   return { items, updatedAt: parseTimestamp(data?.updated), url, sourceType: type, sourceCategory: category };
 }
 
+function getForbiddenTradeItems(bossData = BossData) {
+  return (bossData || [])
+    .flatMap((boss) => (boss.groups || []).flatMap((group) => group.items || []))
+    .filter((item) => /^Forbidden (Flame|Flesh)$/.test(item.tradeName || ''));
+}
+
+function buildForbiddenTradeQuery(item) {
+  const ilvl = {};
+  if (item.tradeIlvlMin != null) ilvl.min = Number(item.tradeIlvlMin);
+  if (item.tradeIlvlMax != null) ilvl.max = Number(item.tradeIlvlMax);
+  return {
+    query: {
+      status: { option: 'securable' },
+      name: item.tradeName,
+      stats: [{ type: 'and', filters: [] }],
+      filters: {
+        misc_filters: {
+          filters: {
+            identified: { option: 'false' },
+            ilvl
+          }
+        }
+      }
+    },
+    sort: { price: 'asc' }
+  };
+}
+
+function summarizeTradePrices(results, chaosPerDivine) {
+  const prices = (results || []).map((result) => {
+    const amount = Number(result?.listing?.price?.amount);
+    const currency = String(result?.listing?.price?.currency || '').toLowerCase();
+    if (!Number.isFinite(amount)) return null;
+    if (currency === 'chaos') return amount;
+    if (currency === 'divine' && Number.isFinite(chaosPerDivine)) return amount * chaosPerDivine;
+    return null;
+  }).filter(Number.isFinite);
+  if (!prices.length) return null;
+  return {
+    mean: prices.reduce((sum, price) => sum + price, 0) / prices.length,
+    count: prices.length
+  };
+}
+
+async function fetchForbiddenTradePrices(league, chaosPerDivine) {
+  const items = [];
+  const errors = [];
+  let lastSearchAt = 0;
+  for (const item of getForbiddenTradeItems()) {
+    const waitMs = TRADE_SEARCH_DELAY_MS - (Date.now() - lastSearchAt);
+    if (waitMs > 0) await sleep(waitMs);
+    lastSearchAt = Date.now();
+    try {
+      const searchUrl = `${TRADE_API_BASE}/search/${encodeURIComponent(league)}`;
+      const { data: search } = await fetchJson(searchUrl, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(buildForbiddenTradeQuery(item))
+      });
+      const ids = Array.isArray(search?.result) ? search.result.slice(0, TRADE_SAMPLE_SIZE) : [];
+      if (!search?.id || !ids.length) throw new Error('No trade listings');
+      const fetchUrl = `${TRADE_API_BASE}/fetch/${ids.join(',')}?query=${encodeURIComponent(search.id)}`;
+      const { data: listings } = await fetchJson(fetchUrl);
+      const summary = summarizeTradePrices(listings?.result, chaosPerDivine);
+      if (!summary) throw new Error('No chaos or divine prices');
+      const priceItem = toItem({
+        name: item.name,
+        value: summary.mean,
+        category: 'jewels',
+        id: `trade-${slugifyLeague(item.name)}`,
+        sourceType: 'TradeSearch',
+        confidenceCount: summary.count,
+        listingCount: summary.count
+      });
+      if (priceItem) items.push(priceItem);
+      console.log(`Trade ${league} ${item.name}: ${summary.mean.toFixed(2)} chaos (${summary.count} listings)`);
+    } catch (err) {
+      const message = err?.message || 'unknown';
+      errors.push({ source: 'trade', type: item.name, error: message });
+      console.warn(`Trade ${item.name} failed for ${league}: ${message}`);
+    }
+  }
+  return { items, errors, updatedAt: items.length ? new Date() : null };
+}
+
 function pickLatestTimestamp(current, next) {
   if (!next) return current;
   if (!current) return next;
@@ -583,6 +674,10 @@ async function main() {
     throw new Error(`No usable leagues for poe.ninja update (source: ${leagueResolution.source})`);
   }
   console.log(`Using leagues source: ${leagueResolution.source} (${uniqueActive.length} active leagues)`);
+  // ponytail: keep undocumented trade traffic at 8 requests/run; expand to other leagues only if needed.
+  const tradePricingLeague = uniqueActive.find((league) => (
+    !league.hardcore && !ETERNAL_LEAGUE_KEYS.has(league.watch.toLowerCase())
+  ));
 
   const usedSlugs = new Set();
   for (const league of uniqueActive) {
@@ -656,6 +751,25 @@ async function main() {
       await sleep(REQUEST_DELAY_MS);
     }
 
+    if (tradePricingLeague && league.watch === tradePricingLeague.watch) {
+      const divine = Array.from(compactMap.values()).find((item) => item.name === 'Divine Orb');
+      const chaosPerDivine = Number(divine?.mean ?? divine?.min);
+      if (Number.isFinite(chaosPerDivine)) {
+        const tradeResult = await fetchForbiddenTradePrices(league.watch, chaosPerDivine);
+        mergeItems(compactMap, tradeResult.items);
+        const bucket = upsertCategoryBucket(categoryBuckets, 'jewels');
+        if (bucket) {
+          mergeItems(bucket.items, tradeResult.items);
+          bucket.updatedAt = pickLatestTimestamp(bucket.updatedAt, tradeResult.updatedAt);
+          bucket.sourceTypes.add('TradeSearch');
+        }
+        updatedAt = pickLatestTimestamp(updatedAt, tradeResult.updatedAt);
+        errors.push(...tradeResult.errors);
+      } else {
+        errors.push({ source: 'trade', type: 'Divine Orb', error: 'Missing chaos conversion rate' });
+      }
+    }
+
     const categories = Array.from(categoryBuckets.keys()).sort((a, b) => a.localeCompare(b));
     const categoriesPayload = {
       generatedAt,
@@ -723,7 +837,11 @@ async function main() {
   console.log(`Wrote ${PRICES_DIR}`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+module.exports = { buildForbiddenTradeQuery, getForbiddenTradeItems, summarizeTradePrices };

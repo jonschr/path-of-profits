@@ -1,5 +1,10 @@
 # Changes
 
+## 0.4.3 - 2026-08-18
+- Added 12-hour pricing for unidentified `Forbidden Flame` and `Forbidden Flesh` drops by averaging the first 10 instant-buyout trade listings for each normal and Uber item-level band.
+- Updated `The Light of Meaning` trade link to search for unidentified jewels without changing its existing price source.
+- Updated every app footer with Grinding Gear Games' required third-party disclaimer.
+
 ## 0.4.2 - 2026-08-18
 - Corrected `Forbidden Flame` and `Forbidden Flesh` wiki and trade links to search for unidentified jewels, using separate item-level filters for normal and Uber boss drops.
 - Stopped applying identified poe.ninja jewel averages to unidentified `Forbidden Flame` and `Forbidden Flesh` drops; their prices remain manually editable until a reliable unidentified price source is integrated.

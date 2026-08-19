@@ -22,7 +22,7 @@
       <div class="top-nav-brand-block">
         <a class="top-nav-brand" href="./">Path of Profits</a>
         <div class="top-nav-subline">
-          <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.4.2</button>
+          <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.4.3</button>
           <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
         </div>
       </div>
@@ -139,11 +139,11 @@
       <section class="footer-card" aria-labelledby="modelAssumptionsTitle">
         <div class="footer-card-kicker">Model Assumptions</div>
         <div id="modelAssumptionsTitle" class="footer-card-copy">
-          Drop rates are taken from PoE Wiki estimated tables (community data). Unique drops are modeled as exclusive pools when probabilities sum to 100, and additional drops are treated as independent rolls. Prices are from poe.ninja and can be manually overridden.
+          Drop rates are taken from PoE Wiki estimated tables (community data). Unique drops are modeled as exclusive pools when probabilities sum to 100, and additional drops are treated as independent rolls. Prices are from poe.ninja, with unidentified Forbidden jewels sampled from the first 10 instant-buyout trade listings every 12 hours, and can be manually overridden.
         </div>
       </section>
       <div class="footer-legal">
-        Path of Exile is a registered trademark of Grinding Gear Games Limited. poe.ninja and any related marks, names, and data services are the property of their respective owners. Path of Profits is an independent fan project and is not affiliated with, endorsed by, sponsored by, or associated with Grinding Gear Games Limited, poe.ninja, or any of their parent companies, subsidiaries, or affiliates.
+        Path of Exile is a registered trademark of Grinding Gear Games Limited. poe.ninja and any related marks, names, and data services are the property of their respective owners. This product isn't affiliated with or endorsed by Grinding Gear Games in any way.
       </div>
       <div class="site-footer-topline muted">
         <span>Tweet questions and complaints to <a class="link" href="https://x.com/jonschr" target="_blank" rel="noreferrer">@jonschr</a></span>
@@ -163,6 +163,14 @@
         </div>
         <div class="lightbox-body">
           <div class="changelog-content">
+            <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.4.3</span><span>2026-08-18</span></div>
+            <ul class="changelog-list">
+              <li>Added 12-hour pricing for unidentified Forbidden Flame and Forbidden Flesh drops by averaging the first 10 instant-buyout trade listings for each normal and Uber item-level band.</li>
+              <li>Updated The Light of Meaning trade link to search for unidentified jewels without changing its existing price source.</li>
+              <li>Updated every app footer with Grinding Gear Games' required third-party disclaimer.</li>
+            </ul>
+          </article>
             <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.4.2</span><span>2026-08-18</span></div>
             <ul class="changelog-list">
