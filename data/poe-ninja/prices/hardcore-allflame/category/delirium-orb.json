@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-09-06T12:05:56.414Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "category": "delirium-orb",
+  "sourceTypes": [
+    "DeliriumOrb",
+    "exchange:DeliriumOrb"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "blacksmiths-delirium-orb",
+      "detailsId": "blacksmiths-delirium-orb",
+      "name": "Blacksmith's Delirium Orb",
+      "category": "delirium-orb",
+      "sourceType": "DeliriumOrb",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsaXJpdW0vRGVsaXJpdW1PcmJXZWFwb25zIiwic2NhbGUiOjF9XQ/eaa6f85f6c/DeliriumOrbWeapons.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    },
+    {
+      "id": "fine-delirium-orb",
+      "detailsId": "fine-delirium-orb",
+      "name": "Fine Delirium Orb",
+      "category": "delirium-orb",
+      "sourceType": "DeliriumOrb",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsaXJpdW0vRGVsaXJpdW1PcmJDdXJyZW5jeSIsInNjYWxlIjoxfV0/a0ccb93233/DeliriumOrbCurrency.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    }
+  ]
+}

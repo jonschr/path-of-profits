@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-09-06T12:05:56.414Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "category": "fossil",
+  "sourceTypes": [
+    "exchange:Fossil",
+    "Fossil"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "jagged-fossil",
+      "detailsId": "jagged-fossil",
+      "name": "Jagged Fossil",
+      "category": "fossil",
+      "sourceType": "Fossil",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvSmFnZ2VkRm9zc2lsIiwic2NhbGUiOjF9XQ/ca9c17d7d9/JaggedFossil.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 12.93,
+      "mean": 12.93,
+      "max": 12.93
+    }
+  ]
+}

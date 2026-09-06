@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-09-06T12:05:56.414Z",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "errors": [
+    {
+      "source": "item",
+      "type": "DivinationCard",
+      "error": "HTTP 404"
+    },
+    {
+      "source": "item",
+      "type": "Tattoo",
+      "error": "HTTP 404"
+    },
+    {
+      "source": "item",
+      "type": "Omen",
+      "error": "HTTP 404"
+    }
+  ]
+}

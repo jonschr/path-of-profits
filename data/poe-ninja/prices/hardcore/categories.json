@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-09-06T12:05:56.414Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "categories": [
+    "accessory",
+    "armour",
+    "base-types",
+    "currency",
+    "delirium-orb",
+    "essence",
+    "flask",
+    "fossil",
+    "fragment",
+    "gems",
+    "incubator",
+    "invitation",
+    "jewels",
+    "maps",
+    "monsters",
+    "oil",
+    "resonator",
+    "scarab",
+    "weapon"
+  ]
+}

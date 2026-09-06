@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-09-06T12:05:56.414Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "fossil",
+  "sourceTypes": [
+    "exchange:Fossil",
+    "Fossil"
+  ],
+  "updatedAt": null,
+  "items": []
+}

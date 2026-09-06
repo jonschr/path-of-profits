@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-09-06T12:05:56.414Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "resonator",
+  "sourceTypes": [
+    "exchange:Resonator",
+    "Resonator"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "primitive-chaotic-resonator",
+      "detailsId": "primitive-chaotic-resonator",
+      "name": "Primitive Chaotic Resonator",
+      "category": "resonator",
+      "sourceType": "Resonator",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUmVyb2xsMXgxQSIsInNjYWxlIjoxfV0/9c7dcd6158/Reroll1x1A.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 0.5273,
+      "mean": 0.5273,
+      "max": 0.5273
+    }
+  ]
+}

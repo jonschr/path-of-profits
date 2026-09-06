@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-09-06T12:05:56.414Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "currency",
+  "sourceTypes": [
+    "Currency",
+    "exchange:Currency"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "orb-of-alteration",
+      "detailsId": "orb-of-alteration",
+      "name": "Orb of Alteration",
+      "category": "currency",
+      "sourceType": "Currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lSZXJvbGxNYWdpYyIsInNjYWxlIjoxfV0/6308fc8ca2/CurrencyRerollMagic.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 0.1429,
+      "mean": 0.1429,
+      "max": 0.1429
+    }
+  ]
+}
