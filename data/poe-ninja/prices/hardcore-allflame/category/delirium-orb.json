@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-09-12T12:05:59.018Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "category": "delirium-orb",
+  "sourceTypes": [
+    "DeliriumOrb",
+    "exchange:DeliriumOrb"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "fine-delirium-orb",
+      "detailsId": "fine-delirium-orb",
+      "name": "Fine Delirium Orb",
+      "category": "delirium-orb",
+      "sourceType": "DeliriumOrb",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsaXJpdW0vRGVsaXJpdW1PcmJDdXJyZW5jeSIsInNjYWxlIjoxfV0/a0ccb93233/DeliriumOrbCurrency.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 14,
+      "mean": 14,
+      "max": 14
+    },
+    {
+      "id": "whispering-delirium-orb",
+      "detailsId": "whispering-delirium-orb",
+      "name": "Whispering Delirium Orb",
+      "category": "delirium-orb",
+      "sourceType": "DeliriumOrb",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsaXJpdW0vRGVsaXJpdW1PcmJFc3NlbmNlIiwic2NhbGUiOjF9XQ/e9f784c467/DeliriumOrbEssence.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 12,
+      "mean": 12,
+      "max": 12
+    }
+  ]
+}
