@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-09-16T00:11:59.703Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "category": "resonator",
+  "sourceTypes": [
+    "exchange:Resonator",
+    "Resonator"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "prime-chaotic-resonator",
+      "detailsId": "prime-chaotic-resonator",
+      "name": "Prime Chaotic Resonator",
+      "category": "resonator",
+      "sourceType": "Resonator",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUmVyb2xsMngyQyIsInNjYWxlIjoxfV0/c624d45072/Reroll2x2C.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 194.2,
+      "mean": 194.2,
+      "max": 194.2
+    },
+    {
+      "id": "primitive-chaotic-resonator",
+      "detailsId": "primitive-chaotic-resonator",
+      "name": "Primitive Chaotic Resonator",
+      "category": "resonator",
+      "sourceType": "Resonator",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUmVyb2xsMXgxQSIsInNjYWxlIjoxfV0/9c7dcd6158/Reroll1x1A.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 0.5,
+      "mean": 0.5,
+      "max": 0.5
+    }
+  ]
+}

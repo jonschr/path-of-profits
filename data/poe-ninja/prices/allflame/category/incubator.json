@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-09-16T00:11:59.703Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Allflame",
+    "text": "Allflame",
+    "slug": "allflame"
+  },
+  "category": "incubator",
+  "sourceTypes": [
+    "exchange:Incubator",
+    "Incubator"
+  ],
+  "updatedAt": null,
+  "items": []
+}

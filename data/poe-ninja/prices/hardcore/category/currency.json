@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-09-16T00:11:59.703Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "currency",
+  "sourceTypes": [
+    "Currency",
+    "exchange:Currency"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "tainted-blacksmiths-whetstone",
+      "detailsId": "tainted-blacksmiths-whetstone",
+      "name": "Tainted Blacksmith's Whetstone",
+      "category": "currency",
+      "sourceType": "Currency",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSGVsbHNjYXBlL0hlbGxzY2FwZUJsYWNrc21pdGhXaGV0c3RvbmUiLCJzY2FsZSI6MX1d/0309648ccb/HellscapeBlacksmithWhetstone.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    }
+  ]
+}
