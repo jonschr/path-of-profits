@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-09-19T12:05:54.883Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "category": "delirium-orb",
+  "sourceTypes": [
+    "DeliriumOrb",
+    "exchange:DeliriumOrb"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "jewellers-delirium-orb",
+      "detailsId": "jewellers-delirium-orb",
+      "name": "Jeweller's Delirium Orb",
+      "category": "delirium-orb",
+      "sourceType": "DeliriumOrb",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsaXJpdW0vRGVsaXJpdW1PcmJUcmlua2V0cyIsInNjYWxlIjoxfV0/165e84bd2a/DeliriumOrbTrinkets.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2026-09-19T12:05:54.883Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "category": "oil",
+  "sourceTypes": [
+    "exchange:Oil",
+    "Oil"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "azure-oil",
+      "detailsId": "azure-oil",
+      "name": "Azure Oil",
+      "category": "oil",
+      "sourceType": "Oil",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9BenVyZU9pbCIsInNjYWxlIjoxfV0/a68235e8e8/AzureOil.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    },
+    {
+      "id": "opalescent-oil",
+      "detailsId": "opalescent-oil",
+      "name": "Opalescent Oil",
+      "category": "oil",
+      "sourceType": "Oil",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9PcGFsZXNjZW50T2lsIiwic2NhbGUiOjF9XQ/abd419a154/OpalescentOil.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 60,
+      "mean": 60,
+      "max": 60
+    },
+    {
+      "id": "silver-oil",
+      "detailsId": "silver-oil",
+      "name": "Silver Oil",
+      "category": "oil",
+      "sourceType": "Oil",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9TaWx2ZXJPaWwiLCJzY2FsZSI6MX1d/d6ad829c2f/SilverOil.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 200,
+      "mean": 200,
+      "max": 200
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2026-09-19T12:05:54.883Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "category": "fossil",
+  "sourceTypes": [
+    "exchange:Fossil",
+    "Fossil"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "gilded-fossil",
+      "detailsId": "gilded-fossil",
+      "name": "Gilded Fossil",
+      "category": "fossil",
+      "sourceType": "Fossil",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvU2FuY3RpZmllZEZvc3NpbCIsInNjYWxlIjoxfV0/7240f907f2/SanctifiedFossil.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": "pristine-fossil",
+      "detailsId": "pristine-fossil",
+      "name": "Pristine Fossil",
+      "category": "fossil",
+      "sourceType": "Fossil",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUHJpc3RpbmVGb3NzaWwiLCJzY2FsZSI6MX1d/bc91a1b44b/PristineFossil.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    },
+    {
+      "id": "hollow-fossil",
+      "detailsId": "hollow-fossil",
+      "name": "Hollow Fossil",
+      "category": "fossil",
+      "sourceType": "Fossil",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvQW1iZXJFeWUiLCJzY2FsZSI6MX1d/542a2b7b0a/AmberEye.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 201.1,
+      "mean": 201.1,
+      "max": 201.1
+    }
+  ]
+}
