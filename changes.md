@@ -1,5 +1,10 @@
 # Changes
 
+## 0.5.3 - 2026-10-03
+- Defaulted starting balances to enough whole Exalted Orbs for PoE1 or Chaos Orbs for PoE2 to buy one Divine Orb at the selected league’s saved hourly rate. Automatic amounts follow refreshed prices; clearing a custom amount restores the default.
+- Preserved custom starting balances and inline amount resets across data refreshes.
+- Fixed category and route clicks being lost after editing quantities or volume, retained category keyboard focus, and kept validation messages visible when toggling filters.
+
 ## 0.5.2 - 2026-10-03
 - Versioned shared styles and currency exchange scripts so browsers load matching assets after a release, fixing the exclusion dropdown for returning visitors.
 

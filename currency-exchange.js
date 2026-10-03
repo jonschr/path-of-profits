@@ -15,8 +15,10 @@
   let sortKey = 'returnPct';
   let selectedCategory = '';
   let originalAmount = null;
+  let amountIsCustom = false;
+  let originalAmountWasCustom = false;
   let pointerDown = false;
-  let pendingInlineRender = false;
+  let pendingRender = false;
   let overrides = {};
   let fees = {};
   let excludedItems = new Set();
@@ -91,14 +93,14 @@
     }
   }
 
-  function changeLeague() {
+  function changeLeague(event) {
+    if (event?.type === 'change') { amountIsCustom = false; originalAmount = null; }
     try { localStorage.setItem(leagueStorageKey, $('exchangeLeague').value); } catch (_) {}
     overrides = {};
     selectedKey = '';
     graph = X.buildGraph(snapshot.markets, $('exchangeLeague').value);
     const availableCategories = new Set([...graph.keys()].map((id) => X.item(id, snapshot.items).category));
     if (!availableCategories.has(selectedCategory)) selectedCategory = '';
-    originalAmount = null;
     const previousStart = $('exchangeStart').value;
     const priority = game === 'poe2' ? [X.CHAOS, X.DIVINE, X.EXALT] : [X.EXALT, X.DIVINE, X.CHAOS];
     const starts = [...graph.keys()].filter((id) => X.item(id, snapshot.items).category === 'currency').sort((a, b) => {
@@ -108,29 +110,40 @@
     $('exchangeStart').innerHTML = starts.map((id) => `<option value="${escape(id)}">${escape(name(id))}</option>`).join('');
     $('exchangeStart').value = starts.includes(previousStart) ? previousStart : starts[0] || '';
     $('exchangeStart').disabled = !starts.length;
+    if (previousStart && previousStart !== $('exchangeStart').value) { amountIsCustom = false; originalAmount = null; }
+    $('exchangeAmount').disabled = false;
+    applyDefaultStartingAmount();
     renderExcludedItems();
     recalculate();
   }
 
-  function recalculate({ deferTable = false } = {}) {
-    if (!$('exchangeAmount').checkValidity() || !$('exchangeVolume').checkValidity()) {
-      $('routeSummary').textContent = 'Enter a positive whole starting amount and a nonnegative volume threshold.';
-      routes = [];
-      $('selectedRoute').hidden = true;
-      $('exchangeRoutes').innerHTML = '<tr><td colspan="6">Check the amount and volume settings above.</td></tr>';
-      return;
-    }
+  function applyDefaultStartingAmount() {
+    if (amountIsCustom) return;
+    const amount = X.amountForDivine(graph, $('exchangeStart').value);
+    $('exchangeAmount').value = amount ?? '';
+    $('exchangeAmount').placeholder = amount === null ? 'No Divine pair' : '';
+  }
+
+  function recalculate({ deferRender = false } = {}) {
     const start = $('exchangeStart').value;
     $('exchangeStartIcon').innerHTML = icon(start);
     $('volumeUnit').textContent = `(${short(start)})`;
-    routes = X.findRoutes(graph, start, Number($('exchangeAmount').value), fees, overrides, snapshot.items);
-    if (deferTable) {
-      renderSelected(routes.find((route) => route.key === selectedKey));
-      pendingInlineRender = true;
+    routes = $('exchangeAmount').checkValidity() && $('exchangeVolume').checkValidity()
+      ? X.findRoutes(graph, start, Number($('exchangeAmount').value), fees, overrides, snapshot.items) : [];
+    if (deferRender) {
+      // Keep the clicked element and its position intact until its click is handled.
+      pendingRender = true;
     } else renderRoutes();
   }
 
   function renderRoutes() {
+    if (!$('exchangeAmount').checkValidity() || !$('exchangeVolume').checkValidity()) {
+      $('routeSummary').textContent = 'Enter a positive whole starting amount and a nonnegative volume threshold.';
+      $('selectedRoute').hidden = true;
+      $('exchangeRoutes').innerHTML = '<tr><td colspan="6">Check the amount and volume settings above.</td></tr>';
+      renderCategoryFilters();
+      return;
+    }
     const search = $('exchangeSearch').value.trim().toLowerCase();
     const sort = sortKey;
     for (const button of $('exchangeRouteHeaders').querySelectorAll('button[data-sort]')) {
@@ -189,6 +202,8 @@
   }
 
   function renderCategoryFilters() {
+    const focusedCategory = $('exchangeCategoryFilters').contains(document.activeElement)
+      ? document.activeElement.closest('button[data-category]')?.dataset.category : null;
     const representatives = new Map();
     for (const id of graph.keys()) {
       const type = X.item(id, snapshot.items).category;
@@ -198,6 +213,7 @@
       + Object.entries(X.categories).filter(([type]) => representatives.has(type)).map(([type, label]) => (
         `<button type="button" class="exchange-category-button" data-category="${type}" aria-pressed="${selectedCategory === type}">${icon(representatives.get(type))}${escape(label)}</button>`
       )).join('');
+    if (focusedCategory) $('exchangeCategoryFilters').querySelector(`button[data-category="${focusedCategory}"]`)?.focus({ preventScroll: true });
   }
 
   function renderSelected(route, outsideFilters = false) {
@@ -239,7 +255,7 @@
     return `<input id="step${side}${index}" class="exchange-order-amount exchange-inline-input${edited ? ' is-edited' : ''}" data-quantity="${side}" data-step="${index}" data-initial="${step[side]}" type="number" min="1" max="${side === 'pay' && index === 0 ? 1000000000 : Number.MAX_SAFE_INTEGER}" step="1" value="${step[side]}" aria-label="Step ${index + 1}: I ${side === 'pay' ? 'have' : 'want'} ${escape(name(id))}" aria-describedby="exchangeEditHelp" />`;
   }
 
-  function applyInlineEdit(input, nextFocusId, deferTable = false) {
+  function applyInlineEdit(input, nextFocusId, deferRender = false) {
     if (!input.matches('input.exchange-inline-input') || input.value === input.dataset.initial) return;
     if (!input.checkValidity()) { input.reportValidity(); return; }
     const route = routes.find((item) => item.key === selectedKey);
@@ -254,13 +270,20 @@
       const edit = X.quantityEdit(route, Number(input.dataset.step), input.dataset.quantity, value);
       if (!edit) return;
       if ('amount' in edit) {
-        if (value !== null && originalAmount === null) originalAmount = $('exchangeAmount').value;
+        if (value !== null && originalAmount === null) {
+          originalAmount = $('exchangeAmount').value;
+          originalAmountWasCustom = amountIsCustom;
+        }
         $('exchangeAmount').value = value === null ? originalAmount ?? route.amount : value;
-        if (value === null) originalAmount = null;
+        amountIsCustom = value !== null || originalAmountWasCustom;
+        if (value === null) {
+          originalAmount = null;
+          applyDefaultStartingAmount();
+        }
       } else if (edit.rate === null) delete overrides[edit.key];
       else overrides[edit.key] = edit.rate;
     }
-    recalculate({ deferTable });
+    recalculate({ deferRender });
     if (nextFocusId) $(nextFocusId)?.focus({ preventScroll: true });
   }
 
@@ -315,9 +338,21 @@
     recalculate();
   });
   $('exchangeLeague').addEventListener('change', changeLeague);
-  $('exchangeStart').addEventListener('change', () => { selectedKey = ''; originalAmount = null; recalculate(); });
-  for (const id of ['exchangeVolume', 'positiveOnly', 'volumeSupportedOnly']) $(id).addEventListener('change', recalculate);
-  $('exchangeAmount').addEventListener('change', () => { originalAmount = null; recalculate(); });
+  $('exchangeStart').addEventListener('change', () => {
+    selectedKey = ''; originalAmount = null; amountIsCustom = false;
+    applyDefaultStartingAmount();
+    recalculate();
+  });
+  for (const id of ['exchangeVolume', 'positiveOnly', 'volumeSupportedOnly']) {
+    $(id).addEventListener('change', () => recalculate({ deferRender: pointerDown }));
+  }
+  $('exchangeAmount').addEventListener('input', () => { amountIsCustom = true; });
+  $('exchangeAmount').addEventListener('change', () => {
+    originalAmount = null;
+    if ($('exchangeAmount').value === '') amountIsCustom = false;
+    applyDefaultStartingAmount();
+    recalculate({ deferRender: pointerDown });
+  });
   $('exchangeSearch').addEventListener('input', renderRoutes);
   $('excludedItemsSearch').addEventListener('input', renderExcludedItems);
   $('excludedItemsList').addEventListener('change', (event) => {
@@ -345,8 +380,8 @@
   document.addEventListener('pointerup', () => { pointerDown = false; }, true);
   document.addEventListener('pointercancel', () => { pointerDown = false; }, true);
   document.addEventListener('click', () => {
-    if (!pendingInlineRender) return;
-    pendingInlineRender = false;
+    if (!pendingRender) return;
+    pendingRender = false;
     renderRoutes();
   });
   $('refreshExchange').addEventListener('click', loadSnapshot);

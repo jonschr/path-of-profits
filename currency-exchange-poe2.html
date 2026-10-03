@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Path of Profits: PoE 2 Currency Arbitrage</title>
   <meta name="description" content="Find three-step PoE 2 currency exchange routes using hourly market data, with estimated profit and gold efficiency." />
-  <link rel="stylesheet" href="styles.css?v=0.5.2" />
+  <link rel="stylesheet" href="styles.css?v=0.5.3" />
 </head>
 <body class="exchange-page" data-game="poe2">
   <div class="site-header">
@@ -15,7 +15,7 @@
         <a class="game-tab is-active" href="currency-exchange-poe2.html" aria-current="true">PoE 2</a>
       </nav>
       <div class="pre-header-actions">
-        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.5.2</button>
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.5.3</button>
         <button id="refreshExchange" class="top-nav-inline-link" type="button">Refresh data</button>
       </div>
     </div>
@@ -43,7 +43,7 @@
       <div class="control-compact"><label for="exchangeStart">Starting currency</label><div class="exchange-start-control"><span id="exchangeStartIcon" aria-hidden="true"></span><select id="exchangeStart" disabled>
         <option value="">Loading…</option>
       </select></div></div>
-      <div class="control-compact"><label for="exchangeAmount">Starting amount <span class="info-dot has-tooltip" tabindex="0" data-tooltip="The quantity of your starting item put into the first trade. Later steps use what the previous trade received. This sets order sizes, rounded receipts, profit, gold fees, and the amount the hourly volume must support." aria-label="Starting amount is the quantity put into the first trade. It sets the route's order sizes, rounding, profit, gold fees, and required hourly volume.">?</span></label><input id="exchangeAmount" type="number" value="10" min="1" max="1000000000" step="1" required /></div>
+      <div class="control-compact"><label for="exchangeAmount">Starting amount <span class="info-dot has-tooltip" tabindex="0" data-tooltip="Defaults to enough whole starting items to buy one Divine Orb at the saved hourly rate. Updates with new data until you edit it; clear to restore the default. The quantity of your starting item put into the first trade. Later steps use what the previous trade received. This sets order sizes, rounded receipts, profit, gold fees, and the amount the hourly volume must support." aria-label="Starting amount defaults to enough whole items to buy one Divine Orb. Edit to set your own amount, or clear to restore the default. It sets the route's order sizes, rounding, profit, gold fees, and required hourly volume.">?</span></label><input id="exchangeAmount" type="number" placeholder="Loading…" disabled min="1" max="1000000000" step="1" required /></div>
     </section>
     <section id="selectedRoute" class="panel exchange-detail" aria-labelledby="selectedRouteTitle" hidden></section>
 
@@ -110,7 +110,7 @@
       </div>
     </div>
   </dialog>
-  <script src="modules/exchange.js?v=0.5.2" defer></script>
-  <script src="currency-exchange.js?v=0.5.2" defer></script>
+  <script src="modules/exchange.js?v=0.5.3" defer></script>
+  <script src="currency-exchange.js?v=0.5.3" defer></script>
 </body>
 </html>

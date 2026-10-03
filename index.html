@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Path of Profits: POE Mirage Bossing Profitability</title>
   <meta name="description" content="Path of Profits helps Path of Exile players estimate POE Mirage bossing profitability using community drop rates and live market prices." />
-  <link rel="stylesheet" href="styles.css?v=0.5.2" />
+  <link rel="stylesheet" href="styles.css?v=0.5.3" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSY4V2LS0X"></script>
   <script>
@@ -24,7 +24,7 @@
         <a class="game-tab" href="currency-exchange-poe2.html">PoE 2</a>
       </nav>
       <div class="pre-header-actions">
-        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.5.2</button>
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.5.3</button>
         <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
       </div>
     </div>
@@ -172,6 +172,14 @@
         </div>
         <div class="lightbox-body">
           <div class="changelog-content">
+            <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.5.3</span><span>2026-10-03</span></div>
+            <ul class="changelog-list">
+              <li>Defaulted starting balances to enough whole Exalted Orbs for PoE1 or Chaos Orbs for PoE2 to buy one Divine Orb at the selected league’s saved hourly rate. Automatic amounts follow refreshed prices; clearing a custom amount restores the default.</li>
+              <li>Preserved custom starting balances and inline amount resets across data refreshes.</li>
+              <li>Fixed category and route clicks being lost after editing quantities or volume, retained category keyboard focus, and kept validation messages visible when toggling filters.</li>
+            </ul>
+          </article>
             <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.5.2</span><span>2026-10-03</span></div>
             <ul class="changelog-list">

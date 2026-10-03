@@ -13,7 +13,7 @@ const REQUEST_TIMEOUT_MS = 30000;
 const REQUEST_DELAY_MS = 120;
 const TRADE_SEARCH_DELAY_MS = 2200;
 const TRADE_SAMPLE_SIZE = 10;
-const USER_AGENT = 'PathOfProfits/0.5.2 (contact: https://pathofprofits.com)';
+const USER_AGENT = 'PathOfProfits/0.5.3 (contact: https://pathofprofits.com)';
 const ASSUMED_LEAGUE_END_OVERRIDES = new Map([
   ['phrecia 2.0', '2026-04-23T21:00:00Z'],
   ['hardcore phrecia 2.0', '2026-04-23T21:00:00Z']

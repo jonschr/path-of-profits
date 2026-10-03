@@ -23,6 +23,19 @@ async function main() {
   assert.equal(X.findRoutes(graph, c, 101).find((r) => r.path[1] === e).steps[1].receive, 0);
   assert.equal(X.findRoutes(graph, c, 0).length, 0);
   assert.equal(X.findRoutes(graph, c, 1.5).length, 0);
+  assert.equal(X.amountForDivine(graph, c), 250);
+  assert.equal(X.amountForDivine(graph, e), 100);
+  assert.equal(X.amountForDivine(graph, d), 1);
+  const fractionalPrices = X.buildGraph([market(c, d, 53, 5), market(e, d, 211, 2)], 'Test');
+  for (const [start, expected] of [[c, 11], [e, 106]]) {
+    const amount = X.amountForDivine(fractionalPrices, start);
+    assert.equal(amount, expected);
+    const rate = fractionalPrices.get(start).get(d).rate;
+    assert.ok(Math.floor(amount * rate + 1e-9) >= 1);
+    assert.equal(Math.floor((amount - 1) * rate + 1e-9), 0);
+  }
+  assert.equal(X.amountForDivine(X.buildGraph([market(c, d, 61, 5)], 'Test'), c), 13);
+  assert.equal(X.amountForDivine(new Map(), c), null); // Missing pairs must not invent a price.
   const overridden = X.findRoutes(graph, c, 1000, { [e]: 1 }, { [X.rateKey(e, d)]: 0.012 }).find((r) => r.path[1] === e);
   assert.equal(overridden.end, 1500);
   assert.equal(overridden.gold, 24500);

@@ -192,6 +192,14 @@
     return routes;
   }
 
+  function amountForDivine(graph, start) {
+    if (start === DIVINE) return 1;
+    const rate = graph.get(start)?.get(DIVINE)?.rate;
+    if (!Number.isFinite(rate) || rate <= 0) return null;
+    const amount = Math.max(1, Math.ceil(1 / rate));
+    return Number.isSafeInteger(amount) ? amount : null;
+  }
+
   function quantityEdit(route, index, side, value) {
     if (!Number.isInteger(index) || index < 0 || index > 2 || !['pay', 'receive'].includes(side)
       || (value !== null && (!Number.isSafeInteger(value) || value <= 0))) return null;
@@ -202,7 +210,7 @@
     return { key: rateKey(step.from, step.to), rate: value === null ? null : value / step.pay };
   }
 
-  const api = { currencies, item, goldForItem, isItemId, categories, categoryForItem, routeCategories, CHAOS, DIVINE, EXALT, HOUR, rateKey, fetchLatestSnapshot, buildGraph, findRoutes, quantityEdit, supportsVolume };
+  const api = { currencies, item, goldForItem, isItemId, categories, categoryForItem, routeCategories, CHAOS, DIVINE, EXALT, HOUR, rateKey, fetchLatestSnapshot, buildGraph, findRoutes, quantityEdit, supportsVolume, amountForDivine };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else global.PoeExchange = api;
 })(typeof window !== 'undefined' ? window : globalThis);
