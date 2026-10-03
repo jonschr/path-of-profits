@@ -5,6 +5,7 @@
   const snapshotUrl = game === 'poe2' ? 'data/currency-exchange-poe2.json' : 'data/currency-exchange.json';
   const feeStorageKey = game === 'poe2' ? 'poe2ExchangeGoldFeesV1' : 'poeExchangeGoldFeesV1';
   const leagueStorageKey = game === 'poe2' ? 'poe2ExchangeLeague' : 'poeExchangeLeague';
+  const exclusionStorageKey = game === 'poe2' ? 'poe2ExchangeExcludedItemsV1' : 'poeExchangeExcludedItemsV1';
   const $ = (id) => document.getElementById(id);
   let snapshot = null;
   let graph = new Map();
@@ -18,6 +19,11 @@
   let pendingInlineRender = false;
   let overrides = {};
   let fees = {};
+  let excludedItems = new Set();
+  try {
+    const saved = JSON.parse(localStorage.getItem(exclusionStorageKey) || '[]');
+    if (Array.isArray(saved)) excludedItems = new Set(saved.filter(X.isItemId));
+  } catch (_) {}
   try { fees = JSON.parse(localStorage.getItem(feeStorageKey) || '{}') || {}; } catch (_) {}
   if (typeof fees !== 'object' || Array.isArray(fees)) fees = {};
   fees = Object.fromEntries(Object.entries(fees).filter(([id, value]) => X.isItemId(id) && Number.isFinite(value) && value >= 0));
@@ -102,6 +108,7 @@
     $('exchangeStart').innerHTML = starts.map((id) => `<option value="${escape(id)}">${escape(name(id))}</option>`).join('');
     $('exchangeStart').value = starts.includes(previousStart) ? previousStart : starts[0] || '';
     $('exchangeStart').disabled = !starts.length;
+    renderExcludedItems();
     recalculate();
   }
 
@@ -136,6 +143,7 @@
       && (!$('volumeSupportedOnly').checked || route.volumeSupported)
       && route.hourlyVolume >= Number($('exchangeVolume').value)
       && route.path.some((id) => name(id).toLowerCase().includes(search))
+      && !route.path.some((id) => excludedItems.has(id))
       && (!selectedCategory || X.routeCategories(route, snapshot.items).every((type) => type === selectedCategory))
     )).sort((a, b) => {
       const byName = routeName(a.path).localeCompare(routeName(b.path));
@@ -153,9 +161,31 @@
       <td class="${tone(route.profit)}">${signed(route.returnPct, 2)}%</td><td class="${tone(route.profit)}">${signed(route.profitDivine)}</td>
       <td>${number(route.gold, 0)}</td><td class="${tone(route.profit)}">${efficiency(route.perGold)}</td>
       <td title="Smallest leg's hourly traded volume, expressed in the starting item. Not currently available stock.">${number(route.hourlyVolume, 0)} ${escape(short(start))}</td>
-    </tr>`).join('') : '<tr><td colspan="6">No routes match these filters. Try a smaller starting amount, clear the search, or adjust the category, volume, and profit filters.</td></tr>';
+    </tr>`).join('') : '<tr><td colspan="6">No routes match these filters. Try a smaller starting amount, clear the search, or adjust the item exclusions, category, volume, and profit filters.</td></tr>';
     renderCategoryFilters();
     renderSelected(selected, selected && !visible.includes(selected));
+  }
+
+  function updateExclusionCount() {
+    $('excludedItemsSummary').textContent = `Exclude items${excludedItems.size ? ` (${excludedItems.size})` : ''}`;
+    $('clearExcludedItems').disabled = !excludedItems.size;
+  }
+
+  function renderExcludedItems() {
+    const search = $('excludedItemsSearch').value.trim().toLowerCase();
+    const ids = [...new Set([...graph.keys(), ...excludedItems])]
+      .filter((id) => name(id).toLowerCase().includes(search))
+      .sort((a, b) => Number(excludedItems.has(b)) - Number(excludedItems.has(a)) || name(a).localeCompare(name(b)));
+    $('excludedItemsList').innerHTML = ids.length ? ids.map((id) => (
+      `<label class="exchange-excluded-item"><input type="checkbox" data-excluded-item="${escape(id)}"${excludedItems.has(id) ? ' checked' : ''} />${itemLabel(id)}</label>`
+    )).join('') : '<p class="muted">No matching items.</p>';
+    updateExclusionCount();
+  }
+
+  function saveExclusions() {
+    try { localStorage.setItem(exclusionStorageKey, JSON.stringify([...excludedItems])); } catch (_) {}
+    updateExclusionCount();
+    renderRoutes();
   }
 
   function renderCategoryFilters() {
@@ -289,6 +319,28 @@
   for (const id of ['exchangeVolume', 'positiveOnly', 'volumeSupportedOnly']) $(id).addEventListener('change', recalculate);
   $('exchangeAmount').addEventListener('change', () => { originalAmount = null; recalculate(); });
   $('exchangeSearch').addEventListener('input', renderRoutes);
+  $('excludedItemsSearch').addEventListener('input', renderExcludedItems);
+  $('excludedItemsList').addEventListener('change', (event) => {
+    const input = event.target.closest('input[data-excluded-item]');
+    if (!input) return;
+    if (input.checked) excludedItems.add(input.dataset.excludedItem);
+    else excludedItems.delete(input.dataset.excludedItem);
+    saveExclusions();
+  });
+  $('clearExcludedItems').addEventListener('click', () => {
+    excludedItems.clear();
+    renderExcludedItems();
+    saveExclusions();
+  });
+  document.addEventListener('click', (event) => {
+    if (!$('excludedItemsDropdown').contains(event.target)) $('excludedItemsDropdown').open = false;
+  });
+  $('excludedItemsDropdown').addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    event.preventDefault();
+    $('excludedItemsDropdown').open = false;
+    $('excludedItemsSummary').focus();
+  });
   document.addEventListener('pointerdown', () => { pointerDown = true; }, true);
   document.addEventListener('pointerup', () => { pointerDown = false; }, true);
   document.addEventListener('pointercancel', () => { pointerDown = false; }, true);

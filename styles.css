@@ -2673,6 +2673,22 @@ a.gem-raw-stack-label:hover {
 .exchange-volume-control label { display: block; white-space: nowrap; }
 .exchange-volume-control input { display: block; width: 135px; }
 .exchange-volume-control #volumeUnit { color: var(--muted); font-size: 10px; }
+.exchange-exclusions { position: relative; flex: 0 0 auto; font: 12px var(--ui); }
+.exchange-exclusions summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; list-style: none; cursor: pointer; min-height: 33px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-1); }
+.exchange-exclusions summary::-webkit-details-marker { display: none; }
+.exchange-exclusions summary::after { content: ''; width: 6px; height: 6px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg); }
+.exchange-exclusions[open] summary { border-color: var(--accent-border); }
+.exchange-exclusions summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.exchange-exclusions-menu { position: absolute; top: calc(100% + 6px); left: 0; z-index: 20; width: min(340px, calc(100vw - 40px)); padding: 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); box-shadow: var(--shadow); }
+.exchange-exclusions-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 11px; }
+.exchange-exclusions-heading button { width: auto; padding: 4px; background: none; border: 0; box-shadow: none; color: var(--accent); font: inherit; white-space: nowrap; }
+.exchange-exclusions-heading button:disabled { cursor: default; }
+.exchange-exclusions-menu input[type="search"] { width: 100%; margin: 10px 0; }
+.exchange-exclusions-list { max-height: 280px; overflow-y: auto; overscroll-behavior: contain; }
+.exchange-exclusions-list .exchange-excluded-item { display: flex; align-items: center; gap: 8px; padding: 7px 4px; margin: 0; cursor: pointer; font: 12px/1.4 var(--ui); }
+.exchange-excluded-item:hover { background: var(--surface-2); }
+.exchange-excluded-item input[type="checkbox"] { width: 16px; height: 16px; flex-shrink: 0; margin: 0; padding: 0; accent-color: var(--accent); }
+.exchange-excluded-item .exchange-item-icon { width: 23px; height: 23px; }
 .exchange-table-options { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding-bottom: 5px; }
 .exchange-table-options .exchange-checkbox { min-height: 22px; margin: 0; white-space: nowrap; font: 11px/1.4 var(--ui); }
 .exchange-category-filters { display: flex; flex-direction: column; gap: 5px; }
@@ -2793,6 +2809,7 @@ a.gem-raw-stack-label:hover {
   .exchange-section-heading { align-items: stretch; flex-direction: column; }
   .exchange-filter-inputs { width: 100%; gap: 12px; flex-wrap: wrap; }
   .exchange-search { flex: 1 1 180px; }
+  .exchange-exclusions { flex: 1 0 100%; }
   .exchange-table-options { margin-left: auto; }
   .exchange-controls .control-compact { flex-basis: 40%; }
 }

@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "version": "0.5.1",
+      "date": "2026-10-03",
+      "changes": [
+        "Added a searchable Exclude items dropdown with checkboxes and item icons to both currency exchange calculators. Routes containing any checked item are hidden from the table.",
+        "Saved item exclusions separately for PoE1 and PoE2, with an exclusion count and Clear all control."
+      ]
+    },
+    {
       "version": "0.5.0",
       "date": "2026-10-03",
       "changes": [

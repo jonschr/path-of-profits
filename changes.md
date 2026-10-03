@@ -1,5 +1,9 @@
 # Changes
 
+## 0.5.1 - 2026-10-03
+- Added a searchable Exclude items dropdown with checkboxes and item icons to both currency exchange calculators. Routes containing any checked item are hidden from the table.
+- Saved item exclusions separately for PoE1 and PoE2, with an exclusion count and Clear all control.
+
 ## 0.5.0 - 2026-10-03
 - Added currency exchange triangle calculators for Path of Exile 1 and Path of Exile 2, using separate saved hourly market snapshots, league lists, item metadata, and gold fees.
 - Added sortable profit, return, gold cost, and divines per 100,000 gold estimates, with item search, single-category filters, and inline editing of each trade’s quantities and fees.
