@@ -17,19 +17,27 @@
   </script>
 </head>
 <body>
+  <div class="site-header">
+    <div class="pre-header">
+      <nav class="game-tabs" aria-label="Game">
+        <a class="game-tab is-active" href="gem-leveling.html" aria-current="true">PoE 1</a>
+        <a class="game-tab" href="currency-exchange-poe2.html">PoE 2</a>
+      </nav>
+      <div class="pre-header-actions">
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.5.0</button>
+        <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
+      </div>
+    </div>
   <nav class="top-nav" aria-label="Primary">
     <div class="top-nav-inner">
       <div class="top-nav-brand-block">
         <a class="top-nav-brand" href="./">Path of Profits</a>
-        <div class="top-nav-subline">
-          <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.4.3</button>
-          <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
-        </div>
       </div>
       <div class="top-nav-center">
         <div class="top-nav-links">
           <a class="top-nav-link" href="./">Bossing</a>
           <a class="top-nav-link is-active" href="gem-leveling.html">Gem Leveling</a>
+          <a class="top-nav-link" href="currency-exchange.html">Currency Exchange</a>
         </div>
       </div>
       <div class="top-nav-meta top-nav-settings" aria-label="Site settings">
@@ -47,6 +55,7 @@
       </div>
     </div>
   </nav>
+  </div>
 
   <header class="page-header">
     <div class="page-header-inner">

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Path of Profits: PoE 2 Currency Arbitrage</title>
+  <meta name="description" content="Find three-step PoE 2 currency exchange routes using hourly market data, with estimated profit and gold efficiency." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="exchange-page" data-game="poe2">
+  <div class="site-header">
+    <div class="pre-header">
+      <nav class="game-tabs" aria-label="Game">
+        <a class="game-tab" href="currency-exchange.html">PoE 1</a>
+        <a class="game-tab is-active" href="currency-exchange-poe2.html" aria-current="true">PoE 2</a>
+      </nav>
+      <div class="pre-header-actions">
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.5.0</button>
+        <button id="refreshExchange" class="top-nav-inline-link" type="button">Refresh data</button>
+      </div>
+    </div>
+  <nav class="top-nav" aria-label="Primary">
+    <div class="top-nav-inner">
+      <div class="top-nav-brand-block">
+        <a class="top-nav-brand" href="currency-exchange-poe2.html">Path of Profits</a>
+        <div id="exchangeStatus" class="status top-nav-snapshot" role="status" aria-live="polite">Loading saved exchange data…</div>
+      </div>
+      <div class="top-nav-center"><div class="top-nav-links">
+        <a class="top-nav-link is-active" href="currency-exchange-poe2.html" aria-current="page">Currency Exchange</a>
+      </div></div>
+      <div class="top-nav-meta top-nav-settings"><div class="top-nav-setting">
+        <label for="exchangeLeague">League</label><select id="exchangeLeague" disabled><option>Loading…</option></select>
+      </div></div>
+    </div>
+  </nav>
+  </div>
+  <header class="page-header"><div class="page-header-inner"><div class="header-left">
+    <h1>POE Currency Arbitrage</h1>
+    <div class="subtitle">Find the long way around. Compare three-step currency conversions by profit and the gold it takes to get there.</div>
+  </div></div></header>
+  <main class="wrap exchange-wrap">
+    <section class="exchange-controls exchange-balance-controls" aria-label="Starting balance">
+      <div class="control-compact"><label for="exchangeStart">Starting currency</label><div class="exchange-start-control"><span id="exchangeStartIcon" aria-hidden="true"></span><select id="exchangeStart" disabled>
+        <option value="">Loading…</option>
+      </select></div></div>
+      <div class="control-compact"><label for="exchangeAmount">Starting amount <span class="info-dot has-tooltip" tabindex="0" data-tooltip="The quantity of your starting item put into the first trade. Later steps use what the previous trade received. This sets order sizes, rounded receipts, profit, gold fees, and the amount the hourly volume must support." aria-label="Starting amount is the quantity put into the first trade. It sets the route's order sizes, rounding, profit, gold fees, and required hourly volume.">?</span></label><input id="exchangeAmount" type="number" value="10" min="1" max="1000000000" step="1" required /></div>
+    </section>
+    <section id="selectedRoute" class="panel exchange-detail" aria-labelledby="selectedRouteTitle" hidden></section>
+
+    <section class="exchange-results" aria-labelledby="routesTitle">
+      <div class="exchange-section-heading"><div><h2 id="routesTitle">Triangle routes</h2><p id="routeSummary" class="muted">Looking for independently traded item pairs…</p></div></div>
+      <div class="exchange-results-layout">
+        <aside class="exchange-category-sidebar" aria-label="Category filter">
+          <h3>Item categories</h3>
+          <div id="exchangeCategoryFilters" class="exchange-category-filters" role="group" aria-label="Item categories"></div>
+        </aside>
+        <div class="exchange-table-area">
+          <div class="exchange-table-controls" role="group" aria-label="Table filters">
+            <div class="exchange-filter-inputs">
+              <label class="exchange-search" for="exchangeSearch">Search items<input id="exchangeSearch" type="search" placeholder="Search an item…" /></label>
+              <div class="exchange-volume-control"><label for="exchangeVolume">Min. hourly volume <span id="volumeUnit">(Chaos)</span></label><input id="exchangeVolume" type="number" value="0" min="0" step="1" required /></div>
+            </div>
+            <div class="exchange-table-options">
+              <label class="exchange-checkbox"><input id="positiveOnly" type="checkbox" checked /> Profitable estimates only</label>
+              <label class="exchange-checkbox" title="Each step must have traded at least 10 times both its planned paid and received quantities in the saved hour."><input id="volumeSupportedOnly" type="checkbox" checked /> Enough hourly volume (10×)</label>
+            </div>
+          </div>
+      <div class="table-wrap exchange-table-wrap"><table class="table exchange-table">
+        <thead id="exchangeRouteHeaders"><tr>
+          <th scope="col" aria-sort="none"><button type="button" class="exchange-sort-button" data-sort="route">Route <span aria-hidden="true">↕</span></button></th>
+          <th scope="col" aria-sort="descending"><button type="button" class="exchange-sort-button" data-sort="returnPct">Return <span aria-hidden="true">↓</span></button></th>
+          <th scope="col" aria-sort="none"><button type="button" class="exchange-sort-button" data-sort="profitDivine">Profit (div) <span aria-hidden="true">↕</span></button></th>
+          <th scope="col" aria-sort="none"><button type="button" class="exchange-sort-button" data-sort="gold">Gold <span aria-hidden="true">↕</span></button></th>
+          <th scope="col" aria-sort="none"><button type="button" class="exchange-sort-button" data-sort="perGold">Div / 100k gold <span aria-hidden="true">↕</span></button></th>
+          <th scope="col" aria-sort="none"><button type="button" class="exchange-sort-button" data-sort="hourlyVolume">Bottleneck / hour <span aria-hidden="true">↕</span></button></th>
+        </tr></thead>
+        <tbody id="exchangeRoutes"><tr><td colspan="6">Loading routes…</td></tr></tbody>
+      </table></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="site-footer-inner">
+    <section class="footer-card"><div class="footer-card-kicker">How estimates work</div><div class="footer-card-copy">Each leg uses its own market's received volume divided by paid volume. Received quantities round down to whole items. Profit is valued in divines using the same hour's exchange rate. Hourly volume describes past trading activity, not available stock. Historical extremes may have occurred at different times. Gold is shown separately from currency profit.</div></section>
+    <div class="exchange-footer-sources">Sources: <a class="link" href="https://www.pathofexile.com/developer/docs/reference#currencyexchange" target="_blank" rel="noreferrer">GGG exchange feed</a> · <a class="link" href="https://repoe-fork.github.io/poe2/" target="_blank" rel="noreferrer">RePoE item names</a> · <a class="link" href="https://www.poe2wiki.net/wiki/Currency_exchange" target="_blank" rel="noreferrer">Gold fee estimates</a></div>
+    <div class="footer-legal">Path of Exile is a registered trademark of Grinding Gear Games Limited. This product isn't affiliated with or endorsed by Grinding Gear Games in any way.</div>
+  </div></footer>
+  <dialog id="changelogDialog" class="lightbox-dialog" aria-labelledby="changelogDialogTitle">
+    <div class="lightbox-shell">
+      <div class="lightbox-header">
+        <div>
+          <div class="lightbox-kicker">Changelog</div>
+          <h2 id="changelogDialogTitle" class="lightbox-title">Version history</h2>
+        </div>
+        <button type="button" id="closeChangelog" class="lightbox-close" aria-label="Close changelog">Close</button>
+      </div>
+      <div class="lightbox-body">
+        <div id="changelogContent" class="changelog-content">
+          <div class="muted">Loading changelog...</div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <script src="modules/exchange.js" defer></script>
+  <script src="currency-exchange.js" defer></script>
+</body>
+</html>

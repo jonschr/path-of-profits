@@ -17,19 +17,27 @@
   </script>
 </head>
 <body>
+  <div class="site-header">
+    <div class="pre-header">
+      <nav class="game-tabs" aria-label="Game">
+        <a class="game-tab is-active" href="./" aria-current="true">PoE 1</a>
+        <a class="game-tab" href="currency-exchange-poe2.html">PoE 2</a>
+      </nav>
+      <div class="pre-header-actions">
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.5.0</button>
+        <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
+      </div>
+    </div>
   <nav class="top-nav" aria-label="Primary">
     <div class="top-nav-inner">
       <div class="top-nav-brand-block">
         <a class="top-nav-brand" href="./">Path of Profits</a>
-        <div class="top-nav-subline">
-          <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.4.3</button>
-          <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
-        </div>
       </div>
       <div class="top-nav-center">
         <div class="top-nav-links">
           <a class="top-nav-link is-active" href="./">Bossing</a>
           <a class="top-nav-link" href="gem-leveling.html">Gem Leveling</a>
+          <a class="top-nav-link" href="currency-exchange.html">Currency Exchange</a>
         </div>
       </div>
       <div class="top-nav-meta top-nav-settings" aria-label="Site settings">
@@ -47,6 +55,7 @@
       </div>
     </div>
   </nav>
+  </div>
   <header class="page-header">
     <div class="page-header-inner">
       <div class="header-row">
@@ -163,6 +172,17 @@
         </div>
         <div class="lightbox-body">
           <div class="changelog-content">
+            <article class="changelog-entry">
+            <div class="changelog-meta"><span class="changelog-version">v0.5.0</span><span>2026-10-03</span></div>
+            <ul class="changelog-list">
+              <li>Added currency exchange triangle calculators for Path of Exile 1 and Path of Exile 2, using separate saved hourly market snapshots, league lists, item metadata, and gold fees.</li>
+              <li>Added sortable profit, return, gold cost, and divines per 100,000 gold estimates, with item search, single-category filters, and inline editing of each trade’s quantities and fees.</li>
+              <li>Enabled profitable routes and sufficient volume filters by default. Every trade must have hourly traded quantities covering at least 10 times both its planned paid and received amounts.</li>
+              <li>Set default starting balances to 100 Exalted Orbs for PoE1 and 10 Chaos Orbs for PoE2.</li>
+              <li>Added shared PoE1 and PoE2 tabs, moved version and refresh controls into the pre-header, and widened page content to 1450 pixels.</li>
+              <li>Added automated hourly exchange snapshot publishing while retaining the existing 12-hour refresh for boss and gem prices.</li>
+            </ul>
+          </article>
             <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.4.3</span><span>2026-08-18</span></div>
             <ul class="changelog-list">

@@ -8,12 +8,13 @@ const PORT = Number(process.env.PORT) || 5173;
 const ROOT = process.cwd();
 const TARGET_HOST = 'www.pathofexile.com';
 const POE_NINJA_HOST = 'poe.ninja';
-const BUILD_SCRIPT_SEQUENCE = ['scripts/update-data-ninja.js'];
+const BUILD_SCRIPT_SEQUENCE = ['scripts/update-data-ninja.js', 'scripts/update-exchange-data.js'];
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
+  '.json': 'application/json; charset=utf-8',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
