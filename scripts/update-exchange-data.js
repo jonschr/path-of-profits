@@ -7,7 +7,7 @@ async function updateGame(game) {
   const poe2 = game === 'poe2';
   const endpoint = `https://web.poecdn.com/api/currency-exchange${poe2 ? '/poe2' : ''}`;
   const data = await fetchLatestSnapshot(endpoint, (url, options) => (
-    fetch(url, { ...options, headers: { 'User-Agent': 'PathOfProfits/0.5.1 (contact: https://pathofprofits.com)' } })
+    fetch(url, { ...options, headers: { 'User-Agent': 'PathOfProfits/0.5.2 (contact: https://pathofprofits.com)' } })
   ));
   const target = path.join(__dirname, '..', 'data', poe2 ? 'currency-exchange-poe2.json' : 'currency-exchange.json');
   const itemSource = `https://repoe-fork.github.io/${poe2 ? 'poe2/' : ''}base_items.min.json`;

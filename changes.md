@@ -1,5 +1,8 @@
 # Changes
 
+## 0.5.2 - 2026-10-03
+- Versioned shared styles and currency exchange scripts so browsers load matching assets after a release, fixing the exclusion dropdown for returning visitors.
+
 ## 0.5.1 - 2026-10-03
 - Added a searchable Exclude items dropdown with checkboxes and item icons to both currency exchange calculators. Routes containing any checked item are hidden from the table.
 - Saved item exclusions separately for PoE1 and PoE2, with an exclusion count and Clear all control.

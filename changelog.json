@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "version": "0.5.2",
+      "date": "2026-10-03",
+      "changes": [
+        "Versioned shared styles and currency exchange scripts so browsers load matching assets after a release, fixing the exclusion dropdown for returning visitors."
+      ]
+    },
+    {
       "version": "0.5.1",
       "date": "2026-10-03",
       "changes": [
