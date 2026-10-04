@@ -8,7 +8,7 @@ const PORT = Number(process.env.PORT) || 5173;
 const ROOT = process.cwd();
 const TARGET_HOST = 'www.pathofexile.com';
 const POE_NINJA_HOST = 'poe.ninja';
-const BUILD_SCRIPT_SEQUENCE = ['scripts/update-data-ninja.js', 'scripts/update-exchange-data.js'];
+const BUILD_SCRIPT_SEQUENCE = ['scripts/update-data-ninja.js', 'scripts/update-exchange-data.js', 'scripts/update-breachstone-data.js'];
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -89,10 +89,10 @@ function tailLines(text, maxLines = 60) {
   return lines.slice(lines.length - maxLines);
 }
 
-function runNodeScript(scriptPath) {
+function runNodeScript(scriptPath, args = []) {
   return new Promise((resolve, reject) => {
     const fullPath = path.join(ROOT, scriptPath);
-    const child = spawn(process.execPath, [fullPath], {
+    const child = spawn(process.execPath, [fullPath, ...args], {
       cwd: ROOT,
       env: process.env
     });
@@ -134,6 +134,7 @@ function runNodeScript(scriptPath) {
 }
 
 let activeBuild = null;
+let activeBreachRefresh = null;
 
 async function runStaticBuild() {
   const startedAt = Date.now();
@@ -162,6 +163,24 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  if (reqPath === '/api/local/breachstone-prices' && req.method === 'POST') {
+    const league = new URL(req.url, 'http://localhost').searchParams.get('league');
+    const reply = (status, data) => {
+      res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' });
+      res.end(JSON.stringify(data));
+    };
+    if (!league) { reply(400, { error: 'Choose a PoE2 league.' }); return; }
+    if (activeBuild || activeBreachRefresh) { reply(409, { error: 'A data refresh is already running. Try again after it finishes.' }); return; }
+    activeBreachRefresh = (async () => {
+      await runNodeScript('scripts/update-exchange-data.js', ['--game=poe2']);
+      await runNodeScript('scripts/update-breachstone-data.js', [`--league=${league}`]);
+    })();
+    activeBreachRefresh.then(() => {
+      reply(200, JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'breachstone-prices-poe2.json'), 'utf8')));
+    }).catch((error) => reply(502, { error: error.message })).finally(() => { activeBreachRefresh = null; });
+    return;
+  }
+
   if (reqPath === '/api/local/build-static') {
     if (req.method === 'GET') {
       res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
@@ -181,6 +200,11 @@ const server = http.createServer((req, res) => {
     if (activeBuild) {
       res.writeHead(409, { 'Content-Type': 'application/json; charset=utf-8' });
       res.end(JSON.stringify({ ok: false, error: 'Build already in progress.' }));
+      return;
+    }
+    if (activeBreachRefresh) {
+      res.writeHead(409, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Breachstone prices are currently refreshing.' }));
       return;
     }
     activeBuild = runStaticBuild();

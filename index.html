@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Path of Profits: POE Mirage Bossing Profitability</title>
   <meta name="description" content="Path of Profits helps Path of Exile players estimate POE Mirage bossing profitability using community drop rates and live market prices." />
-  <link rel="stylesheet" href="styles.css?v=0.5.3" />
+  <link rel="stylesheet" href="styles.css?v=0.6.2" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSY4V2LS0X"></script>
   <script>
@@ -24,7 +24,7 @@
         <a class="game-tab" href="currency-exchange-poe2.html">PoE 2</a>
       </nav>
       <div class="pre-header-actions">
-        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.5.3</button>
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.6.2</button>
         <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
       </div>
     </div>
@@ -172,6 +172,17 @@
         </div>
         <div class="lightbox-body">
           <div class="changelog-content">
+            <article class="changelog-entry">
+              <div class="changelog-meta"><span class="changelog-version">v0.6.2</span><span>2026-10-03</span></div>
+              <ul class="changelog-list">
+                <li>Added the PoE2 Breachstone Flip Calculator with all nine purchase paths: level 65 and 80 Revelatory Wombgifts or 300 Breach Splinters, priced in Divines, Chaos, and Exalts. The six-column table includes profit per stone, percentage return, and Profit / 1k blood in Divines, without a separate cost-per-blood column.</li>
+                <li>Added hourly instant-buyout Wombgift quotes at exact item levels, direct trade-search links, price-check timestamps, and local price refresh. Splinter and Breachstone prices use independent exchange currency pairs; unavailable and stale quotes are identified.</li>
+                <li>Automatically selected the highest-value sale currency, with compact selectable Divines, Chaos, and Exalts prices above the table. A custom sale currency updates every row and is highlighted in yellow.</li>
+                <li>Added editable buy and sell prices with highlighted overrides saved per league. Edits recalculate profit and table ordering; clearing prices or resetting overrides restores saved quotes. Applied the same input and override styling to both arbitrage calculators.</li>
+                <li>Added Wombgift, Breach Splinter, Breachstone, and currency icons; scaled positive profits from yellow to green while keeping losses red. Displayed whole Exalts, two-decimal Divines, and one-decimal Chaos.</li>
+                <li>Widened the sale-currency controls and kept the comparison heading and table stationary when switching currencies or showing Reset overrides.</li>
+              </ul>
+            </article>
             <article class="changelog-entry">
             <div class="changelog-meta"><span class="changelog-version">v0.5.3</span><span>2026-10-03</span></div>
             <ul class="changelog-list">

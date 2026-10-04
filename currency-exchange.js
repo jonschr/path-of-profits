@@ -125,6 +125,7 @@
   }
 
   function recalculate({ deferRender = false } = {}) {
+    $('exchangeAmount').classList.toggle('input-custom', amountIsCustom);
     const start = $('exchangeStart').value;
     $('exchangeStartIcon').innerHTML = icon(start);
     $('volumeUnit').textContent = `(${short(start)})`;
@@ -239,7 +240,7 @@
             <div class="exchange-order-side exchange-order-have"><h3>I have</h3><div class="exchange-order-item">${itemLabel(step.from)}${quantityInput(route, i, "pay")}</div></div>
           </div>
           <div class="exchange-step-gold">${step.gold === null ? 'Gold total unknown' : `${number(step.gold, 0)} gold`}
-            <label class="exchange-fee-label" for="quoteFee${i}"><input id="quoteFee${i}" class="exchange-inline-input${fees[step.to] !== undefined ? ' is-edited' : ''}" data-fee="${i}" data-initial="${step.fee ?? ''}" type="number" min="0" max="1000000" step="any" value="${step.fee ?? ''}" placeholder="Fee?" aria-label="Step ${i + 1}: gold per ${escape(name(step.to))} received" aria-describedby="exchangeEditHelp" /> per item received</label>
+            <label class="exchange-fee-label" for="quoteFee${i}"><input id="quoteFee${i}" class="editable-input exchange-inline-input${fees[step.to] !== undefined ? ' input-custom' : ''}" data-fee="${i}" data-initial="${step.fee ?? ''}" type="number" min="0" max="1000000" step="any" value="${step.fee ?? ''}" placeholder="Fee?" aria-label="Step ${i + 1}: gold per ${escape(name(step.to))} received" aria-describedby="exchangeEditHelp" /> per item received</label>
           </div>
           <div class="exchange-step-volume">Hourly traded: ${number(step.volume, 0)} ${itemLabel(step.from, true)} <span class="${supported ? 'muted' : 'exchange-negative'}" title="Hourly traded quantities must cover at least 10 times both the paid and received amounts.">· ${supported ? 'Meets 10× volume' : 'Below 10× volume'}</span></div>
         </div>`;
@@ -252,7 +253,7 @@
     const id = side === 'pay' ? step.from : step.to;
     const rateStep = route.steps[side === 'pay' ? index - 1 : index];
     const edited = rateStep ? overrides[X.rateKey(rateStep.from, rateStep.to)] !== undefined : originalAmount !== null;
-    return `<input id="step${side}${index}" class="exchange-order-amount exchange-inline-input${edited ? ' is-edited' : ''}" data-quantity="${side}" data-step="${index}" data-initial="${step[side]}" type="number" min="1" max="${side === 'pay' && index === 0 ? 1000000000 : Number.MAX_SAFE_INTEGER}" step="1" value="${step[side]}" aria-label="Step ${index + 1}: I ${side === 'pay' ? 'have' : 'want'} ${escape(name(id))}" aria-describedby="exchangeEditHelp" />`;
+    return `<input id="step${side}${index}" class="editable-input exchange-order-amount exchange-inline-input${edited ? ' input-custom' : ''}" data-quantity="${side}" data-step="${index}" data-initial="${step[side]}" type="number" min="1" max="${side === 'pay' && index === 0 ? 1000000000 : Number.MAX_SAFE_INTEGER}" step="1" value="${step[side]}" aria-label="Step ${index + 1}: I ${side === 'pay' ? 'have' : 'want'} ${escape(name(id))}" aria-describedby="exchangeEditHelp" />`;
   }
 
   function applyInlineEdit(input, nextFocusId, deferRender = false) {
@@ -346,7 +347,7 @@
   for (const id of ['exchangeVolume', 'positiveOnly', 'volumeSupportedOnly']) {
     $(id).addEventListener('change', () => recalculate({ deferRender: pointerDown }));
   }
-  $('exchangeAmount').addEventListener('input', () => { amountIsCustom = true; });
+  $('exchangeAmount').addEventListener('input', () => { amountIsCustom = true; $('exchangeAmount').classList.add('input-custom'); });
   $('exchangeAmount').addEventListener('change', () => {
     originalAmount = null;
     if ($('exchangeAmount').value === '') amountIsCustom = false;

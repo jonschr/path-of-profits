@@ -1,5 +1,13 @@
 # Changes
 
+## 0.6.2 - 2026-10-03
+- Added the PoE2 Breachstone Flip Calculator with all nine purchase paths: level 65 and 80 Revelatory Wombgifts or 300 Breach Splinters, priced in Divines, Chaos, and Exalts. The six-column table includes profit per stone, percentage return, and Profit / 1k blood in Divines, without a separate cost-per-blood column.
+- Added hourly instant-buyout Wombgift quotes at exact item levels, direct trade-search links, price-check timestamps, and local price refresh. Splinter and Breachstone prices use independent exchange currency pairs; unavailable and stale quotes are identified.
+- Automatically selected the highest-value sale currency, with compact selectable Divines, Chaos, and Exalts prices above the table. A custom sale currency updates every row and is highlighted in yellow.
+- Added editable buy and sell prices with highlighted overrides saved per league. Edits recalculate profit and table ordering; clearing prices or resetting overrides restores saved quotes. Applied the same input and override styling to both arbitrage calculators.
+- Added Wombgift, Breach Splinter, Breachstone, and currency icons; scaled positive profits from yellow to green while keeping losses red. Displayed whole Exalts, two-decimal Divines, and one-decimal Chaos.
+- Widened the sale-currency controls and kept the comparison heading and table stationary when switching currencies or showing Reset overrides.
+
 ## 0.5.3 - 2026-10-03
 - Defaulted starting balances to enough whole Exalted Orbs for PoE1 or Chaos Orbs for PoE2 to buy one Divine Orb at the selected league’s saved hourly rate. Automatic amounts follow refreshed prices; clearing a custom amount restores the default.
 - Preserved custom starting balances and inline amount resets across data refreshes.

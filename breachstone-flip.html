@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Path of Profits: PoE 2 Breachstone Flip Calculator</title>
+  <meta name="description" content="Compare instant-buyout level 65 and 80 Revelatory Wombgifts and 300 Breach Splinters by profit and divines earned per Hiveblood." />
+  <link rel="stylesheet" href="styles.css?v=0.6.2" />
+</head>
+<body class="exchange-page breach-page" data-game="poe2">
+  <div class="site-header">
+    <div class="pre-header">
+      <nav class="game-tabs" aria-label="Game">
+        <a class="game-tab" href="currency-exchange.html">PoE 1</a>
+        <a class="game-tab is-active" href="breachstone-flip.html" aria-current="true">PoE 2</a>
+      </nav>
+      <div class="pre-header-actions">
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.6.2</button>
+        <button type="button" id="refreshBreach" class="top-nav-inline-link">Refresh prices</button>
+      </div>
+    </div>
+    <nav class="top-nav" aria-label="Primary"><div class="top-nav-inner">
+      <div class="top-nav-brand-block">
+        <a class="top-nav-brand" href="currency-exchange-poe2.html">Path of Profits</a>
+        <div id="breachStatus" class="status top-nav-snapshot" role="status" aria-live="polite">Loading prices…</div>
+      </div>
+      <div class="top-nav-center"><div class="top-nav-links">
+        <a class="top-nav-link" href="currency-exchange-poe2.html">Currency Exchange</a>
+        <a class="top-nav-link is-active" href="breachstone-flip.html" aria-current="page">Breachstone Flip</a>
+      </div></div>
+      <div class="top-nav-meta top-nav-settings"><div class="top-nav-setting">
+        <label for="breachLeague">League</label><select id="breachLeague" disabled><option>Loading…</option></select>
+      </div></div>
+    </nav>
+  </div>
+  <header class="page-header"><div class="page-header-inner"><div class="header-left">
+    <h1>Breachstone Flip Calculator</h1>
+    <div class="subtitle">Buy a Wombgift or 300 splinters. Add Hiveblood. Sell a Breachstone.</div>
+  </div></div></header>
+  <main class="wrap exchange-wrap">
+    <section aria-labelledby="comparisonTitle">
+      <div class="exchange-section-heading breach-table-heading">
+        <div class="breach-heading-title"><h2 id="comparisonTitle">Compare all nine paths</h2><button id="resetBreachPrices" class="top-nav-inline-link" type="button" hidden>Reset overrides</button></div>
+        <div class="breach-sale-controls"><span id="salePricesTitle">Sell for</span><div id="breachSalePrices" class="breach-sale-prices" role="radiogroup" aria-labelledby="salePricesTitle">Loading sale prices…</div></div>
+      </div>
+      <div class="table-wrap exchange-table-wrap"><table class="table exchange-table breach-comparison">
+        <thead id="breachRouteHeaders"><tr>
+          <th scope="col" aria-sort="none"><button class="exchange-sort-button" type="button" data-sort="name">Input <span aria-hidden="true">↕</span></button></th>
+          <th scope="col" aria-sort="none"><button class="exchange-sort-button" type="button" data-sort="cost">Buy input <span aria-hidden="true">↕</span></button></th>
+          <th scope="col" aria-sort="none"><button class="exchange-sort-button" type="button" data-sort="revenue"><span id="breachStoneIcon" class="breach-header-icon" aria-hidden="true"></span>Sell Breachstone <span class="breach-sort-arrow" aria-hidden="true">↕</span></button></th>
+          <th scope="col" aria-sort="none"><button class="exchange-sort-button" type="button" data-sort="profit">Profit / stone <span aria-hidden="true">↕</span></button></th>
+          <th scope="col" aria-sort="none"><button class="exchange-sort-button" type="button" data-sort="returnPct">Return <span aria-hidden="true">↕</span></button></th>
+          <th scope="col" aria-sort="descending"><button class="exchange-sort-button" type="button" data-sort="per1000Blood">Profit / 1k blood <span aria-hidden="true">↓</span></button></th>
+        </tr></thead>
+        <tbody id="breachRoutes"><tr><td colspan="6">Loading prices…</td></tr></tbody>
+      </table></div>
+      <p id="pathSummary" class="breach-caption"></p>
+      <p class="breach-caption">Profit / 1k blood is Divines earned after buying the input. Positive values scale from yellow to green within each profit column; losses are red.</p>
+      <p class="breach-caption">Edit a buy or sell price, then press Enter or leave the field to recalculate and sort. Edited prices are highlighted; clear a field to restore its saved price.</p>
+      <p id="priceSchedule" class="breach-caption"></p>
+      <details id="unavailablePrices" class="breach-unavailable" hidden><summary id="unavailableSummary">Unavailable prices</summary><ul id="unavailableList"></ul></details>
+      <p id="priceHealth" class="breach-caption" role="status"></p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="site-footer-inner">
+    <section class="footer-card"><div class="footer-card-kicker">How estimates work</div><div class="footer-card-copy">Gift prices are the cheapest sampled instant-buyout listings at exactly item level 65 or 80, queried separately in each currency. Splinter and Breachstone prices use each currency pair’s hourly traded volumes. Currency values use the same exchange hour’s Divine rates. Exchange prices are historical estimates. Gold fees are separate and are not deducted from profit.</div></section>
+    <div class="exchange-footer-sources">Sources: <a class="link" href="https://www.pathofexile.com/trade2/search/poe2" target="_blank" rel="noreferrer">PoE 2 instant buyout</a> · <a class="link" href="https://www.pathofexile.com/developer/docs/reference#currencyexchange" target="_blank" rel="noreferrer">GGG exchange history</a></div>
+    <div class="footer-legal">Path of Exile is a registered trademark of Grinding Gear Games Limited. This product isn't affiliated with or endorsed by Grinding Gear Games in any way.</div>
+  </div></footer>
+  <dialog id="changelogDialog" class="lightbox-dialog" aria-labelledby="changelogDialogTitle"><div class="lightbox-shell">
+    <div class="lightbox-header"><div><div class="lightbox-kicker">Changelog</div><h2 id="changelogDialogTitle" class="lightbox-title">Version history</h2></div><button id="closeChangelog" type="button" class="lightbox-close" aria-label="Close changelog">Close</button></div>
+    <div class="lightbox-body"><div id="changelogContent" class="changelog-content">Loading changelog…</div></div>
+  </div></dialog>
+  <script src="modules/breachstone.js?v=0.6.2" defer></script>
+  <script src="breachstone-flip.js?v=0.6.2" defer></script>
+</body>
+</html>

@@ -2654,6 +2654,43 @@ a.gem-raw-stack-label:hover {
 /* Currency exchange */
 .exchange-wrap { display: grid; gap: 22px; }
 .exchange-wrap > * { min-width: 0; }
+.breach-caption { margin: 12px 0 0; font: 12px/1.7 var(--ui); color: var(--muted); }
+.breach-table-heading { align-items: end; flex-wrap: wrap; }
+.breach-heading-title { position: relative; }
+.breach-heading-title #resetBreachPrices { position: absolute; top: calc(100% + 6px); left: 0; width: auto; padding: 0; border: 0; background: none; box-shadow: none; font: 10px/1.4 var(--ui); white-space: nowrap; }
+.breach-sale-controls { display: flex; align-items: center; gap: 10px; margin-left: auto; max-width: 100%; }
+.breach-sale-controls > span { color: var(--muted); font: 11px var(--ui); }
+.breach-sale-prices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 420px; max-width: 100%; gap: 6px; }
+.breach-sale-price { min-width: 0; padding: 7px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface-1); }
+.breach-sale-price.is-auto-sale { border-color: var(--accent-2); background: rgba(34, 197, 94, 0.07); }
+.breach-sale-price.is-manual-sale { border-color: #facc15; background: rgba(250, 204, 21, 0.07); }
+.breach-sale-heading { display: flex; align-items: center; gap: 4px; margin: 0 0 6px; font: 10px var(--ui); cursor: pointer; }
+.breach-sale-radio { width: 12px; height: 12px; margin: 0; padding: 0; flex-shrink: 0; appearance: auto; box-shadow: none; accent-color: var(--accent-2); }
+.is-manual-sale .breach-sale-radio { accent-color: #facc15; }
+.breach-sale-badge { color: var(--accent-2); font: 9px var(--ui); margin-left: auto; }
+.breach-sale-equivalent { margin-top: 5px; color: var(--muted); font: 10px/1.4 var(--ui); }
+.breach-sale-price .breach-price-input { width: 72px; min-width: 72px; max-width: 72px; height: 24px; padding: 3px 5px; font-size: 11px; }
+.breach-sale-price .field-unit { font-size: 9px; gap: 3px; }
+.breach-sale-price .breach-item-icon { width: 14px; height: 14px; }
+@media (max-width: 600px) {
+  .breach-sale-controls { flex-direction: column; align-items: flex-end; gap: 6px; max-width: 100%; }
+  .breach-sale-price .breach-price-input { width: 48px; min-width: 48px; max-width: 48px; }
+}
+.breach-page .exchange-table small { display: block; margin-top: 7px; font: 10px/1.5 var(--ui); color: var(--muted); }
+.breach-page .exchange-table .breach-price-checked { margin-top: 3px; font-size: 8px; line-height: 1.4; }
+.breach-page .exchange-table td strong { font: 500 13px var(--display); color: var(--ink); }
+.breach-comparison { min-width: 850px; }
+.breach-comparison td { vertical-align: top; }
+.breach-price-input { width: 88px; min-width: 88px; max-width: 88px; }
+.breach-page .table-edit-wrap { justify-content: flex-start; }
+.breach-item-icon { object-fit: contain; flex-shrink: 0; }
+.breach-input-label, .breach-value, .breach-page .field-unit { display: inline-flex; align-items: center; gap: 5px; }
+.breach-value { white-space: nowrap; }
+.breach-header-icon { display: inline-flex; vertical-align: middle; margin-right: 5px; }
+.breach-item-icon[hidden] { display: none; }
+.breach-unavailable summary { cursor: pointer; }
+.breach-unavailable { margin-top: 14px; color: var(--muted); font: 12px/1.7 var(--ui); }
+.breach-unavailable ul { margin: 8px 0 0; padding-left: 20px; }
 .exchange-kicker { color: var(--muted); font: 11px var(--ui); letter-spacing: 0.03em; }
 .exchange-controls { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; }
 .exchange-controls .control-compact { flex: 1 1 155px; }
@@ -2747,11 +2784,8 @@ a.gem-raw-stack-label:hover {
 .exchange-order-ratio { grid-column: 1 / -1; grid-row: 2; display: flex; gap: 8px; justify-content: center; align-items: center; min-height: 24px; }
 .exchange-step-gold { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 8px; text-align: center; font: 12px/1.5 var(--ui); color: var(--accent-3); margin: 8px 0 0; }
 .exchange-fee-label { display: flex; justify-content: center; align-items: center; gap: 4px; color: var(--muted); font: 10px/1.4 var(--ui); margin: 0; }
-.exchange-step input.exchange-inline-input { margin: 0; padding: 4px; min-width: 0; border: 1px solid transparent; border-radius: 4px; background: transparent; box-shadow: none; cursor: text; appearance: textfield; }
+.exchange-step input.exchange-inline-input { margin: 0; min-width: 0; max-width: none; cursor: text; appearance: textfield; }
 .exchange-inline-input::-webkit-inner-spin-button, .exchange-inline-input::-webkit-outer-spin-button { appearance: none; margin: 0; }
-.exchange-step input.exchange-inline-input:hover { border-color: var(--border); background: var(--surface-2); }
-.exchange-step input.exchange-inline-input:focus { border-color: var(--accent-border); outline: 1px solid var(--accent); background: var(--surface-2); }
-.exchange-step input.exchange-inline-input.is-edited { color: var(--accent); border-bottom-color: var(--accent-border-soft); }
 .exchange-step input[data-fee] { width: 65px; text-align: right; font: 12px var(--mono); }
 .exchange-step-volume { text-align: center; color: var(--muted); font: 11px/1.6 var(--ui); margin: 8px 0 0; }
 .exchange-step-volume .exchange-item-icon { width: 16px; height: 16px; }

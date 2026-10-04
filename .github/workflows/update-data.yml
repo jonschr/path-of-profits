@@ -41,9 +41,18 @@ jobs:
         run: |
           node scripts/update-data-ninja.js
       - name: Check currency exchange calculations
-        run: node scripts/test-exchange.js
+        run: |
+          node scripts/test-exchange.js
+          node scripts/test-breachstone.js
       - name: Update hourly currency exchange data
         run: node scripts/update-exchange-data.js
+      - name: Restore previously published Breachstone quotes
+        run: |
+          if git cat-file -e origin/gh-pages:data/breachstone-prices-poe2.json 2>/dev/null; then
+            git restore --source=origin/gh-pages --worktree -- data/breachstone-prices-poe2.json
+          fi
+      - name: Update instant-buyout Wombgift prices
+        run: node scripts/update-breachstone-data.js
       - name: Commit and push to gh-pages
         run: |
           git config user.name "github-actions[bot]"
@@ -55,6 +64,7 @@ jobs:
             git add -f data/poe-ninja
           fi
           git add -f data/currency-exchange.json data/currency-exchange-poe2.json
+          git add -f data/breachstone-prices-poe2.json
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
