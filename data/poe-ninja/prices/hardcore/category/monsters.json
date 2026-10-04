@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-10-04T03:30:10.164Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "monsters",
+  "sourceTypes": [
+    "Beast"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "farrul-first-of-the-plains",
+      "detailsId": "farrul-first-of-the-plains",
+      "name": "Farrul, First of the Plains",
+      "category": "monsters",
+      "sourceType": "Beast",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "tradeTag": null,
+      "itemClass": 3,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": 1,
+      "lowConfidence": true,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": 5,
+      "min": 30,
+      "mean": 30,
+      "max": 30
+    },
+    {
+      "id": "hill-devil",
+      "detailsId": "hill-devil",
+      "name": "Hill Devil",
+      "category": "monsters",
+      "sourceType": "Beast",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "tradeTag": null,
+      "baseType": "Goatmen|Primates|The Wilds",
+      "itemClass": 2,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": 1,
+      "lowConfidence": true,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": 3,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    }
+  ]
+}

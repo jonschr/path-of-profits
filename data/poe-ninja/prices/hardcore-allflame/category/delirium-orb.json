@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-10-04T03:30:10.164Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "category": "delirium-orb",
+  "sourceTypes": [
+    "DeliriumOrb",
+    "exchange:DeliriumOrb"
+  ],
+  "updatedAt": null,
+  "items": []
+}
