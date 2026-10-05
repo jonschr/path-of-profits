@@ -44,6 +44,7 @@ jobs:
         run: |
           node scripts/test-exchange.js
           node scripts/test-breachstone.js
+          node scripts/test-site-pages.js
       - name: Update hourly currency exchange data
         run: node scripts/update-exchange-data.js
       - name: Restore previously published Breachstone quotes
@@ -53,21 +54,21 @@ jobs:
           fi
       - name: Update instant-buyout Wombgift prices
         run: node scripts/update-breachstone-data.js
+      - name: Build published pages only
+        run: node scripts/build-public-site.js
       - name: Commit and push to gh-pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -B gh-pages
-          git add -A
-          # Generated dataset is ignored on master; force-add it for gh-pages publishing.
-          if [ -d data/poe-ninja ]; then
-            git add -f data/poe-ninja
-          fi
-          git add -f data/currency-exchange.json data/currency-exchange-poe2.json
-          git add -f data/breachstone-prices-poe2.json
-          if git diff --cached --quiet; then
+          publish_dir="$(mktemp -d)"
+          git worktree add --detach "$publish_dir" HEAD
+          git -C "$publish_dir" checkout -B gh-pages
+          git -C "$publish_dir" rm -rf --ignore-unmatch .
+          cp -a .public-site/. "$publish_dir/"
+          git -C "$publish_dir" add -A
+          if git -C "$publish_dir" diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Update data $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            git -C "$publish_dir" commit -m "Update data $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           fi
-          git push -f origin gh-pages
+          git -C "$publish_dir" push -f origin gh-pages

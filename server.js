@@ -9,6 +9,21 @@ const ROOT = process.cwd();
 const TARGET_HOST = 'www.pathofexile.com';
 const POE_NINJA_HOST = 'poe.ninja';
 const BUILD_SCRIPT_SEQUENCE = ['scripts/update-data-ninja.js', 'scripts/update-exchange-data.js', 'scripts/update-breachstone-data.js'];
+const PAGE_FLAGS_PATH = path.join(ROOT, 'site-pages.json');
+
+function readPageFlags() {
+  const pages = JSON.parse(fs.readFileSync(PAGE_FLAGS_PATH, 'utf8'));
+  // New pages are local-only until explicitly marked for publishing.
+  for (const name of fs.readdirSync(ROOT).filter((name) => name.endsWith('.html'))) {
+    if (!Object.hasOwn(pages, name)) pages[name] = { label: name.replace('.html', ''), published: false };
+  }
+  return pages;
+}
+
+function replyJson(res, status, data) {
+  res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' });
+  res.end(JSON.stringify(data));
+}
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -16,6 +31,7 @@ const MIME = {
   '.css': 'text/css; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
   '.png': 'image/png',
+  '.webp': 'image/webp',
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
   '.svg': 'image/svg+xml'
@@ -153,6 +169,40 @@ async function runStaticBuild() {
 const server = http.createServer((req, res) => {
   const reqPath = req.url.split('?')[0];
 
+  if (reqPath === '/api/local/pages') {
+    if (req.method === 'GET') {
+      replyJson(res, 200, { available: true, pages: readPageFlags() });
+      return;
+    }
+    if (req.method !== 'POST') { replyJson(res, 405, { error: 'Use GET or POST.' }); return; }
+    if (req.headers['content-type']?.split(';')[0] !== 'application/json'
+      || (req.headers.origin && req.headers.origin !== `http://${req.headers.host}`)) {
+      replyJson(res, 403, { error: 'Save page flags from the local preview.' }); return;
+    }
+    let body = '';
+    req.on('data', (chunk) => {
+      body += chunk;
+      if (body.length > 8192) req.destroy();
+    });
+    req.on('end', () => {
+      try {
+        const { page, published } = JSON.parse(body);
+        const pages = readPageFlags();
+        if (!Object.hasOwn(pages, page) || typeof published !== 'boolean') {
+          replyJson(res, 400, { error: 'Choose an existing page and a publication flag.' }); return;
+        }
+        if (page === 'index.html' && !published) {
+          replyJson(res, 400, { error: 'Keep the homepage published so the public site has an entry page.' }); return;
+        }
+        pages[page].published = published;
+        fs.writeFileSync(`${PAGE_FLAGS_PATH}.tmp`, `${JSON.stringify(pages, null, 2)}\n`);
+        fs.renameSync(`${PAGE_FLAGS_PATH}.tmp`, PAGE_FLAGS_PATH);
+        replyJson(res, 200, { pages });
+      } catch (error) { replyJson(res, 400, { error: error.message }); }
+    });
+    return;
+  }
+
   if (req.method === 'OPTIONS') {
     res.writeHead(204, {
       'access-control-allow-origin': '*',
@@ -252,6 +302,16 @@ const server = http.createServer((req, res) => {
   if (!filePath.startsWith(ROOT)) {
     res.writeHead(403, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end('Forbidden');
+    return;
+  }
+
+  const publicOnly = String(req.headers.cookie || '').split(';').some((part) => part.trim() === 'popPageView=public');
+  if (publicOnly && path.extname(filePath) === '.html' && readPageFlags()[path.relative(ROOT, filePath)]?.published !== true) {
+    res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' });
+    res.end(`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Local-only page · Path of Profits</title><link rel="stylesheet" href="/styles.css?v=0.7.0">
+      <main class="wrap"><h1>This page is local-only</h1><p>It is hidden in the public preview and excluded from publishing.</p>
+      <p><a class="link" href="/">Return to the public site</a></p><button type="button" style="width:auto" onclick="document.cookie='popPageView=all; Path=/; Max-Age=31536000; SameSite=Lax'; location.reload()">View all pages</button></main></html>`);
     return;
   }
 

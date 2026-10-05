@@ -1,0 +1,76 @@
+.conversion-categories { display: flex; gap: 12px; flex-wrap: wrap; }
+.conversion-category { width: auto; padding: 4px 0; border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: none; box-shadow: none; color: var(--muted); font: 12px var(--ui); }
+.conversion-category.is-active { color: var(--ink); border-bottom-color: var(--accent); }
+.conversion-page .wrap { width: min(1450px, calc(100% - 40px)); margin: 0 auto; }
+.conversion-page main { padding-bottom: 50px; }
+.conversion-page .page-header-inner { padding-bottom: 20px; }
+.conversion-table { min-width: 950px; }
+.conversion-table td { vertical-align: top; font: 13px/1.6 var(--ui); }
+.conversion-table th { font: 11px var(--ui); }
+.conversion-table small { display: block; font: 10px/1.6 var(--ui); color: var(--muted); }
+.conversion-table td:first-child { width: 30%; min-width: 280px; }
+.conversion-item { display: flex; align-items: center; gap: 7px; }
+.conversion-item img, .conversion-price img { width: 23px; height: 23px; object-fit: contain; flex-shrink: 0; }
+.conversion-arrow { padding-left: 30px; color: var(--muted); font-size: 11px; }
+.conversion-table .editable-input { width: 78px; min-width: 78px; max-width: 78px; }
+.conversion-price { display: flex; align-items: center; justify-content: flex-start; gap: 6px; margin-bottom: 4px; }
+.conversion-price .field-unit { display: inline-flex; align-items: center; gap: 4px; }
+.conversion-price .field-unit img { width: 18px; height: 18px; }
+.conversion-profit { font: 14px var(--mono); white-space: nowrap; }
+.conversion-note { margin: 10px 0; color: var(--muted); font: 12px/1.7 var(--ui); }
+.conversion-empty { padding: 30px !important; text-align: center; }
+.conversion-page a:focus-visible, .conversion-page button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.conversion-links-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.conversion-link-card { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: start; gap: 18px; padding: 20px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-1); }
+.conversion-link-preview { display: block; aspect-ratio: 8 / 5; overflow: hidden; border: 1px solid var(--border); border-radius: 6px; background: #070a0f; }
+.conversion-link-preview.is-video { aspect-ratio: 16 / 9; }
+.conversion-link-preview img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.conversion-link-preview:hover { border-color: var(--accent); }
+.conversion-link-copy { min-width: 0; }
+.conversion-link-card h2 { margin: 0 0 10px; font-size: 19px; }
+.conversion-link-card p { color: var(--muted); font: 13px/1.7 var(--ui); margin: 8px 0; }
+.conversion-link-card .tag { color: var(--accent); font: 10px var(--ui); text-transform: uppercase; letter-spacing: .1em; }
+.conversion-links-heading { margin: 25px 0 14px; font-size: 21px; }
+.conversion-status.error { color: #f87171; }
+.conversion-muted-row { opacity: .65; }
+.conversion-volume-thin { color: #facc15 !important; }
+.gambling-cheap-inputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 18px; }
+.gambling-cheap { width: 100%; padding: 13px 15px; border: 1px solid var(--border); background: var(--surface-1); border-radius: 6px; text-align: left; color: var(--ink); box-shadow: none; font: 12px/1.6 var(--ui); }
+.gambling-cheap > span:not(.conversion-item), .gambling-cheap small { display: block; color: var(--muted); margin-top: 6px; }
+.gambling-cheap small { font-size: 10px; }
+.gambling-cheap.is-auto { border-color: var(--accent-2); }
+.gambling-cheap.is-custom { border-color: var(--accent-3); }
+.gambling-odds-title { font: 13px var(--ui); margin: 18px 0 12px; }
+.gambling-bands { display: flex; flex-wrap: wrap; gap: 20px; margin: 0 0 12px; }
+.gambling-band { width: 150px; display: grid; grid-template-columns: 1fr auto; gap: 7px; font: 11px var(--ui); color: var(--muted); }
+.gambling-band strong { color: var(--ink); font: 12px var(--mono); }
+.gambling-band-bar { grid-column: 1 / -1; height: 3px; border-radius: 2px; background: var(--border); overflow: hidden; }
+.gambling-band-bar i { display: block; height: 100%; background: var(--accent); }
+.gambling-action { font: 12px var(--ui); color: var(--ink); }
+.gambling-action.is-reroll { color: var(--accent-3); }
+#modelNote { max-width: 1150px; }
+@media (max-width: 980px) {
+  .conversion-links-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .conversion-page .wrap { width: calc(100% - 24px); }
+  .conversion-page .page-header-inner { padding: 22px 12px 18px; }
+  .conversion-page h1 { font-size: 27px; }
+  .conversion-link-card { grid-template-columns: 1fr; gap: 16px; }
+  .gambling-cheap-inputs { grid-template-columns: 1fr; gap: 8px; }
+  .gambling-cheap { padding: 10px 12px; }
+  .gambling-bands { gap: 16px; }
+}
+
+#cheapTitle { font-size: 21px; }
+.conversion-currency { width: auto; padding: 2px 3px; border: 0; background: none; box-shadow: none; color: var(--muted); font: 11px var(--ui); }
+.conversion-currency.is-custom { color: #facc15; }
+.gambling-row-select { width: auto; padding: 0; margin: 0; border: 0; background: none; box-shadow: none; color: var(--ink); text-align: left; font: inherit; }
+.gambling-row-select.is-selected { color: #facc15; }
+.gambling-risk-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 10px; }
+.gambling-risk-card { padding: 13px 15px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface-1); font: 12px/1.8 var(--ui); }
+.gambling-risk-card strong, .gambling-risk-card span, .gambling-risk-card small { display: block; }
+.gambling-risk-card small { color: var(--muted); font-size: 10px; }
+.extraction-cost { display: flex; align-items: center; justify-content: flex-end; gap: 12px; flex-wrap: wrap; margin: 12px 0; }
+.extraction-sell { margin-bottom: 12px; }
+@media (max-width: 680px) { .gambling-risk-grid { grid-template-columns: 1fr; gap: 8px; } }

@@ -1,0 +1,58 @@
+{
+  "index.html": {
+    "label": "Bossing",
+    "published": true
+  },
+  "gem-leveling.html": {
+    "label": "Gem Leveling",
+    "published": true
+  },
+  "currency-exchange.html": {
+    "label": "Triangle Arbitrage · PoE 1",
+    "published": true
+  },
+  "currency-exchange-poe2.html": {
+    "label": "Triangle Arbitrage · PoE 2",
+    "published": true
+  },
+  "breachstone-flip.html": {
+    "label": "Breachstone Flip",
+    "published": true
+  },
+  "conversions.html": {
+    "label": "Conversion Flips · PoE 1",
+    "published": false
+  },
+  "conversions-poe2.html": {
+    "label": "Conversion Flips · PoE 2",
+    "published": false
+  },
+  "harvest-flips.html": {
+    "label": "Harvest Flips",
+    "published": false
+  },
+  "scarab-flips.html": {
+    "label": "Scarab Flips",
+    "published": false
+  },
+  "unique-assembly.html": {
+    "label": "Unique Assembly",
+    "published": false
+  },
+  "recycling-flips.html": {
+    "label": "Runegrafts & Tattoos",
+    "published": false
+  },
+  "socket-extraction.html": {
+    "label": "Socket Extraction",
+    "published": false
+  },
+  "legacy-crafting.html": {
+    "label": "Legacy Crafting",
+    "published": false
+  },
+  "links.html": {
+    "label": "Links",
+    "published": false
+  }
+}

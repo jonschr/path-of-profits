@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Path of Profits: PoE 2 Breachstone Flip Calculator</title>
   <meta name="description" content="Compare instant-buyout level 65 and 80 Revelatory Wombgifts and 300 Breach Splinters by profit and divines earned per Hiveblood." />
-  <link rel="stylesheet" href="styles.css?v=0.6.2" />
+  <link rel="stylesheet" href="styles.css?v=0.7.0" />
 </head>
 <body class="exchange-page breach-page" data-game="poe2">
   <div class="site-header">
@@ -14,23 +14,27 @@
         <a class="game-tab" href="currency-exchange.html">PoE 1</a>
         <a class="game-tab is-active" href="breachstone-flip.html" aria-current="true">PoE 2</a>
       </nav>
-      <div class="pre-header-actions">
-        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.6.2</button>
-        <button type="button" id="refreshBreach" class="top-nav-inline-link">Refresh prices</button>
-      </div>
+      <div class="pre-header-settings top-nav-settings"><div class="top-nav-setting league-setting">
+        <label class="league-label" for="breachLeague">League</label><select id="breachLeague" disabled><option>Loading…</option></select>
+      </div></div>
+      <div class="pre-header-status"><div id="breachStatus" class="status top-nav-snapshot" role="status" aria-live="polite">Loading prices…</div></div>
     </div>
     <nav class="top-nav" aria-label="Primary"><div class="top-nav-inner">
       <div class="top-nav-brand-block">
         <a class="top-nav-brand" href="currency-exchange-poe2.html">Path of Profits</a>
-        <div id="breachStatus" class="status top-nav-snapshot" role="status" aria-live="polite">Loading prices…</div>
+        <div class="top-nav-subline">
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.7.0</button>
+        <button type="button" id="refreshBreach" class="top-nav-inline-link">Refresh prices</button>
+      </div>
       </div>
       <div class="top-nav-center"><div class="top-nav-links">
-        <a class="top-nav-link" href="currency-exchange-poe2.html">Currency Exchange</a>
+        <a class="top-nav-link" href="currency-exchange-poe2.html">Triangle Arbitrage</a>
         <a class="top-nav-link is-active" href="breachstone-flip.html" aria-current="page">Breachstone Flip</a>
+        <a class="top-nav-link" href="conversions-poe2.html">Conversion Flips</a>
+        <a class="top-nav-link" href="links.html?game=poe2">Links</a>
       </div></div>
-      <div class="top-nav-meta top-nav-settings"><div class="top-nav-setting">
-        <label for="breachLeague">League</label><select id="breachLeague" disabled><option>Loading…</option></select>
-      </div></div>
+
+    </div>
     </nav>
   </div>
   <header class="page-header"><div class="page-header-inner"><div class="header-left">
@@ -71,7 +75,8 @@
     <div class="lightbox-header"><div><div class="lightbox-kicker">Changelog</div><h2 id="changelogDialogTitle" class="lightbox-title">Version history</h2></div><button id="closeChangelog" type="button" class="lightbox-close" aria-label="Close changelog">Close</button></div>
     <div class="lightbox-body"><div id="changelogContent" class="changelog-content">Loading changelog…</div></div>
   </div></dialog>
-  <script src="modules/breachstone.js?v=0.6.2" defer></script>
-  <script src="breachstone-flip.js?v=0.6.2" defer></script>
+  <script src="modules/breachstone.js?v=0.7.0" defer></script>
+  <script src="breachstone-flip.js?v=0.7.0" defer></script>
+<script src="modules/site-pages.js?v=0.7.0" defer></script><script src="modules/mobile-nav.js?v=0.7.0" defer></script>
 </body>
 </html>

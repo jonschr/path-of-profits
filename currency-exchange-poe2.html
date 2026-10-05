@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Path of Profits: PoE 2 Currency Arbitrage</title>
-  <meta name="description" content="Find three-step PoE 2 currency exchange routes using hourly market data, with estimated profit and gold efficiency." />
-  <link rel="stylesheet" href="styles.css?v=0.6.2" />
+  <title>Path of Profits: PoE 2 Triangle Arbitrage</title>
+  <meta name="description" content="Find PoE 2 triangle arbitrage routes across three currency trades using hourly market data, with estimated profit and gold efficiency." />
+  <link rel="stylesheet" href="styles.css?v=0.7.0" />
 </head>
 <body class="exchange-page" data-game="poe2">
   <div class="site-header">
@@ -14,29 +14,32 @@
         <a class="game-tab" href="currency-exchange.html">PoE 1</a>
         <a class="game-tab is-active" href="currency-exchange-poe2.html" aria-current="true">PoE 2</a>
       </nav>
-      <div class="pre-header-actions">
-        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.6.2</button>
-        <button id="refreshExchange" class="top-nav-inline-link" type="button">Refresh data</button>
-      </div>
+      <div class="pre-header-settings top-nav-settings"><div class="top-nav-setting league-setting">
+        <label class="league-label" for="exchangeLeague">League</label><select id="exchangeLeague" disabled><option>Loading…</option></select>
+      </div></div>
+      <div class="pre-header-status"><div id="exchangeStatus" class="status top-nav-snapshot" role="status" aria-live="polite">Loading saved exchange data…</div></div>
     </div>
   <nav class="top-nav" aria-label="Primary">
     <div class="top-nav-inner">
       <div class="top-nav-brand-block">
         <a class="top-nav-brand" href="currency-exchange-poe2.html">Path of Profits</a>
-        <div id="exchangeStatus" class="status top-nav-snapshot" role="status" aria-live="polite">Loading saved exchange data…</div>
+        <div class="top-nav-subline">
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.7.0</button>
+        <button id="refreshExchange" class="top-nav-inline-link" type="button">Refresh data</button>
+      </div>
       </div>
       <div class="top-nav-center"><div class="top-nav-links">
-        <a class="top-nav-link is-active" href="currency-exchange-poe2.html" aria-current="page">Currency Exchange</a>
+        <a class="top-nav-link is-active" href="currency-exchange-poe2.html" aria-current="page">Triangle Arbitrage</a>
         <a class="top-nav-link" href="breachstone-flip.html">Breachstone Flip</a>
+        <a class="top-nav-link" href="conversions-poe2.html">Conversion Flips</a>
+        <a class="top-nav-link" href="links.html?game=poe2">Links</a>
       </div></div>
-      <div class="top-nav-meta top-nav-settings"><div class="top-nav-setting">
-        <label for="exchangeLeague">League</label><select id="exchangeLeague" disabled><option>Loading…</option></select>
-      </div></div>
+
     </div>
   </nav>
   </div>
   <header class="page-header"><div class="page-header-inner"><div class="header-left">
-    <h1>POE Currency Arbitrage</h1>
+    <h1>PoE 2 Triangle Arbitrage</h1>
     <div class="subtitle">Find the long way around. Compare three-step currency conversions by profit and the gold it takes to get there.</div>
   </div></div></header>
   <main class="wrap exchange-wrap">
@@ -111,7 +114,8 @@
       </div>
     </div>
   </dialog>
-  <script src="modules/exchange.js?v=0.6.2" defer></script>
-  <script src="currency-exchange.js?v=0.6.2" defer></script>
+  <script src="modules/exchange.js?v=0.7.0" defer></script>
+  <script src="currency-exchange.js?v=0.7.0" defer></script>
+<script src="modules/site-pages.js?v=0.7.0" defer></script><script src="modules/mobile-nav.js?v=0.7.0" defer></script>
 </body>
 </html>

@@ -1,6 +1,17 @@
 {
   "entries": [
     {
+      "version": "0.7.0",
+      "date": "2026-10-05",
+      "changes": [
+        "Renamed both currency exchange calculators to Triangle Arbitrage, including navigation labels, page headings, browser titles, and descriptions.",
+        "Compacted league and display-currency selectors to 28 pixels, moved their labels into the options, and retained accessible labels. Divine-to-Chaos rates are available on hover.",
+        "Unified the site header with game tabs, compact settings, price status, and version/refresh controls; added a collapsible mobile navigation menu.",
+        "Added saved Published and Local only page flags, an All pages / Public only local preview toggle, and markers for local-only links. Public-only previews block direct visits to draft pages.",
+        "Changed publishing to build only published pages and remove links to local-only pages. Kept nine in-progress tool and resource pages as local-only drafts, with the five existing public pages ready for release."
+      ]
+    },
+    {
       "version": "0.6.2",
       "date": "2026-10-03",
       "changes": [

@@ -77,7 +77,7 @@
       if (!leagues.includes(preferred)) {
         try { preferred = localStorage.getItem(leagueStorageKey) || (game === 'poe1' ? localStorage.getItem('poeBossLeague') : null); } catch (_) {}
       }
-      $('exchangeLeague').innerHTML = leagues.map((league) => `<option value="${escape(league)}">${escape(league)}</option>`).join('');
+      $('exchangeLeague').innerHTML = leagues.map((league) => `<option value="${escape(league)}">${escape(league)} league</option>`).join('');
       $('exchangeLeague').value = leagues.includes(preferred) ? preferred : leagues.find((league) => !/hardcore|ruthless|standard|^HC\b/i.test(league)) || leagues[0];
       $('exchangeLeague').disabled = false;
       const stale = Date.now() / 1000 - (data.hour + X.HOUR) > 2 * X.HOUR;

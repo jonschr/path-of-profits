@@ -103,7 +103,7 @@
         groupDef.options.forEach((league) => {
           const option = document.createElement('option');
           option.value = league.id;
-          option.textContent = league.text;
+          option.textContent = `${league.text} league`;
           option.dataset.watch = league.watch || league.id;
           group.appendChild(option);
         });

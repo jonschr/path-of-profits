@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Path of Profits: POE Mirage Bossing Profitability</title>
   <meta name="description" content="Path of Profits helps Path of Exile players estimate POE Mirage bossing profitability using community drop rates and live market prices." />
-  <link rel="stylesheet" href="styles.css?v=0.6.2" />
+  <link rel="stylesheet" href="styles.css?v=0.7.0" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSY4V2LS0X"></script>
   <script>
@@ -23,36 +23,42 @@
         <a class="game-tab is-active" href="./" aria-current="true">PoE 1</a>
         <a class="game-tab" href="currency-exchange-poe2.html">PoE 2</a>
       </nav>
-      <div class="pre-header-actions">
-        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.6.2</button>
-        <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
+      <div class="pre-header-settings top-nav-settings" aria-label="Site settings">
+        <div class="top-nav-setting league-setting">
+          <label class="league-label" for="leagueSelect">League</label>
+          <select id="leagueSelect"></select>
+        </div>
+        <div class="top-nav-setting">
+          <label class="currency-label" for="displayCurrency">Currency</label>
+          <select id="displayCurrency">
+            <option value="chaos" selected>Chaos currency</option>
+            <option value="divine">Divine currency</option>
+          </select>
+        </div>
       </div>
+      <div class="pre-header-status"><div id="status" class="status top-nav-snapshot" role="status" aria-live="polite">Ready.</div></div>
     </div>
   <nav class="top-nav" aria-label="Primary">
     <div class="top-nav-inner">
       <div class="top-nav-brand-block">
         <a class="top-nav-brand" href="./">Path of Profits</a>
+        <div class="top-nav-subline">
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.7.0</button>
+        <button id="refresh" class="top-nav-inline-link has-tooltip" type="button" data-tooltip="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh." aria-label="Refresh reloads cached data or refetches live poe.ninja data, depending on the current mode. Updated timestamps reflect the upstream data timestamp, not when you click refresh.">Refresh prices</button>
+      </div>
       </div>
       <div class="top-nav-center">
         <div class="top-nav-links">
-          <a class="top-nav-link is-active" href="./">Bossing</a>
+          <a class="top-nav-link is-active" href="./" aria-current="page">Bossing</a>
           <a class="top-nav-link" href="gem-leveling.html">Gem Leveling</a>
-          <a class="top-nav-link" href="currency-exchange.html">Currency Exchange</a>
+          <a class="top-nav-link" href="currency-exchange.html">Triangle Arbitrage</a>
+          <a class="top-nav-link" href="conversions.html">Conversion Flips</a>
+          <a class="top-nav-link" href="harvest-flips.html">Harvest Flips</a>
+        <a class="top-nav-link" href="scarab-flips.html">Scarab Flips</a>
+          <a class="top-nav-link" href="links.html">Links</a>
         </div>
       </div>
-      <div class="top-nav-meta top-nav-settings" aria-label="Site settings">
-        <div class="top-nav-setting">
-          <label for="leagueSelect">League</label>
-          <select id="leagueSelect"></select>
-        </div>
-        <div class="top-nav-setting">
-          <label for="displayCurrency">Currency</label>
-          <select id="displayCurrency">
-            <option value="chaos" selected>Chaos</option>
-            <option value="divine">Divine</option>
-          </select>
-        </div>
-      </div>
+
     </div>
   </nav>
   </div>
@@ -122,7 +128,7 @@
           <button id="resetAll" class="button-secondary" type="button">Reset</button>
         </div>
       </div>
-      <div id="status" class="status">Ready.</div>
+
     </section>
 
     <section class="sort-search" aria-label="Search and sort bosses">
@@ -172,6 +178,16 @@
         </div>
         <div class="lightbox-body">
           <div class="changelog-content">
+            <article class="changelog-entry">
+              <div class="changelog-meta"><span class="changelog-version">v0.7.0</span><span>2026-10-05</span></div>
+              <ul class="changelog-list">
+                <li>Renamed both currency exchange calculators to Triangle Arbitrage, including navigation labels, page headings, browser titles, and descriptions.</li>
+                <li>Compacted league and display-currency selectors to 28 pixels, moved their labels into the options, and retained accessible labels. Divine-to-Chaos rates are available on hover.</li>
+                <li>Unified the site header with game tabs, compact settings, price status, and version/refresh controls; added a collapsible mobile navigation menu.</li>
+                <li>Added saved Published and Local only page flags, an All pages / Public only local preview toggle, and markers for local-only links. Public-only previews block direct visits to draft pages.</li>
+                <li>Changed publishing to build only published pages and remove links to local-only pages. Kept nine in-progress tool and resource pages as local-only drafts, with the five existing public pages ready for release.</li>
+              </ul>
+            </article>
             <article class="changelog-entry">
               <div class="changelog-meta"><span class="changelog-version">v0.6.2</span><span>2026-10-03</span></div>
               <ul class="changelog-list">
@@ -405,14 +421,15 @@
       </div>
   </dialog>
 
-  <script src="modules/trade.js" defer></script>
-  <script src="modules/ninja-types.js" defer></script>
-  <script src="modules/settings-store.js" defer></script>
-  <script src="modules/http-client.js" defer></script>
-  <script src="modules/cache-store.js" defer></script>
-  <script src="modules/repositories.js" defer></script>
-  <script src="modules/leagues.js" defer></script>
-  <script src="modules/pricing.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="modules/trade.js?v=0.7.0" defer></script>
+  <script src="modules/ninja-types.js?v=0.7.0" defer></script>
+  <script src="modules/settings-store.js?v=0.7.0" defer></script>
+  <script src="modules/http-client.js?v=0.7.0" defer></script>
+  <script src="modules/cache-store.js?v=0.7.0" defer></script>
+  <script src="modules/repositories.js?v=0.7.0" defer></script>
+  <script src="modules/leagues.js?v=0.7.0" defer></script>
+  <script src="modules/pricing.js?v=0.7.0" defer></script>
+  <script src="app.js?v=0.7.0" defer></script>
+<script src="modules/site-pages.js?v=0.7.0" defer></script><script src="modules/mobile-nav.js?v=0.7.0" defer></script>
 </body>
 </html>

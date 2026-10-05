@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Path of Profits: PoE 1 Harvest Flip Calculator</title><meta name="description" content="Compare rerolls, lifeforce costs, outcome odds, and expected profit."><link rel="stylesheet" href="styles.css?v=0.7.0"><link rel="stylesheet" href="conversion-tools.css?v=0.7.0"></head>
+<body class="exchange-page conversion-page" data-game="poe1" data-mode="harvest">
+  <div class="site-header">
+    <div class="pre-header">
+      <nav class="game-tabs" aria-label="Game">
+        <a class="game-tab is-active" href="harvest-flips.html" aria-current="true">PoE 1</a>
+        <a class="game-tab" href="currency-exchange-poe2.html">PoE 2</a>
+      </nav>
+      <div class="pre-header-settings top-nav-settings"><div class="top-nav-setting league-setting">
+        <label class="league-label" for="league">League</label><select id="league" disabled><option>Loading…</option></select>
+      </div></div>
+      <div class="pre-header-status"><div id="status" class="status top-nav-snapshot" role="status" aria-live="polite">Loading prices…</div></div>
+    </div>
+    <nav class="top-nav" aria-label="Primary"><div class="top-nav-inner">
+      <div class="top-nav-brand-block">
+        <a class="top-nav-brand" href="./">Path of Profits</a>
+        <div class="top-nav-subline">
+        <button type="button" id="openChangelog" class="top-nav-version-link" aria-haspopup="dialog" aria-controls="changelogDialog">v0.7.0</button>
+        <button type="button" id="refresh" class="top-nav-inline-link">Refresh prices</button>
+      </div>
+      </div>
+      <div class="top-nav-center"><div class="top-nav-links">
+        <a class="top-nav-link" href="./">Bossing</a>
+        <a class="top-nav-link" href="gem-leveling.html">Gem Leveling</a>
+        <a class="top-nav-link" href="currency-exchange.html">Triangle Arbitrage</a>
+        <a class="top-nav-link" href="conversions.html">Conversion Flips</a>
+        <a class="top-nav-link is-active" href="harvest-flips.html" aria-current="page">Harvest Flips</a>
+        <a class="top-nav-link" href="scarab-flips.html">Scarab Flips</a>
+        <a class="top-nav-link" href="links.html">Links</a>
+      </div></div>
+
+    </div>
+    </nav>
+  </div>
+<header class="page-header"><div class="page-header-inner"><div class="header-left"><h1>Harvest Flip Calculator</h1><div class="subtitle">Compare rerolls, lifeforce costs, outcome odds, and expected profit.</div></div></div></header><main class="wrap exchange-wrap"><section id="cheapSection" hidden aria-labelledby="cheapTitle"><h2 id="cheapTitle">Three cheapest bulk inputs</h2><div id="cheapInputs" class="gambling-cheap-inputs"></div><p id="cheapCaption" class="breach-caption"></p></section><p id="modelNote" class="conversion-note" role="status"></p><section id="oddsSection" aria-labelledby="oddsTitle"><h2 id="oddsTitle" class="gambling-odds-title">One-roll value odds</h2><div id="odds" class="gambling-bands"></div><p id="oddsCaption" class="breach-caption"></p></section><section id="riskSection" aria-labelledby="riskTitle"><h2 id="riskTitle" class="gambling-odds-title">Batch risk</h2><div id="risk" class="gambling-risk-grid"></div><p id="riskCaption" class="breach-caption"></p></section><section aria-labelledby="comparisonTitle"><div class="exchange-section-heading breach-table-heading"><div><h2 id="comparisonTitle">Compare Harvest paths</h2><button id="reset" class="top-nav-inline-link" type="button" hidden>Reset overrides</button></div><div id="conversionCategories" class="conversion-categories" role="group" aria-label="Conversion type"></div></div>
+ <div class="table-wrap exchange-table-wrap"><table class="table exchange-table conversion-table"><thead id="headers"><tr><th scope="col" aria-sort="none"><button type="button" class="exchange-sort-button" data-sort="name">Input / recipe <span aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" class="exchange-sort-button" data-sort="cost">Buy inputs <span aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" class="exchange-sort-button" data-sort="sale">Sell now / output <span aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="descending"><button type="button" class="exchange-sort-button" data-sort="profit">Expected profit / craft <span aria-hidden="true">↓</span></button></th><th scope="col" aria-sort="none"><button type="button" class="exchange-sort-button" data-sort="returnPct">Return <span aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="none"><button type="button" class="exchange-sort-button" data-sort="winChance">Chance of profit <span aria-hidden="true">↕</span></button></th></tr></thead><tbody id="routes"><tr><td colspan="6">Loading prices…</td></tr></tbody></table></div><p id="summary" class="breach-caption" role="status"></p><p class="breach-caption">Buy and sell currencies are chosen automatically across Divines, Chaos, and Exalts. Edit a price, then press Enter or leave the field to recalculate and sort. Yellow fields mark your overrides; clear a field to restore its saved price.</p><p id="checked" class="breach-caption"></p></section><p class="breach-caption">Fossil rerolls can shrink the output stack. Until we have reliable yield data, use <a class="link" href="https://gains-of-exile.vercel.app/fossils" target="_blank" rel="noreferrer">Gains of Exile ↗</a> for that model. <a class="link" href="https://poedb.tw/us/Horticrafting" target="_blank" rel="noreferrer">Bench recipes and costs ↗</a>.</p></main>  <footer class="site-footer"><div class="site-footer-inner">
+    <section class="footer-card"><div class="footer-card-kicker">How estimates work</div><div class="footer-card-copy">Expected output is the probability-weighted sale value of all eligible outcomes. Expected profit subtracts the input and lifeforce. Harvest rows model one roll, then selling the result; the held-item decision compares rerolling with selling now. Outcome weights carry their source dates and assumptions. A positive expectation can still lose money.</div></section>
+    <div class="exchange-footer-sources">Sources: <a class="link" href="https://www.pathofexile.com/trade/search" target="_blank" rel="noreferrer">PoE 1 instant buyout</a> · <a class="link" href="https://www.pathofexile.com/developer/docs/reference#currencyexchange" target="_blank" rel="noreferrer">GGG exchange history</a></div>
+    <div class="footer-legal">Path of Exile is a registered trademark of Grinding Gear Games Limited. This product isn't affiliated with or endorsed by Grinding Gear Games in any way.</div>
+  </div></footer>
+  <dialog id="changelogDialog" class="lightbox-dialog" aria-labelledby="changelogDialogTitle"><div class="lightbox-shell">
+    <div class="lightbox-header"><div><div class="lightbox-kicker">Changelog</div><h2 id="changelogDialogTitle" class="lightbox-title">Version history</h2></div><button id="closeChangelog" type="button" class="lightbox-close" aria-label="Close changelog">Close</button></div>
+    <div class="lightbox-body"><div id="changelogContent" class="changelog-content">Loading changelog…</div></div>
+  </div></dialog>
+<script src="modules/exchange.js?v=0.7.0" defer></script><script src="modules/conversions.js?v=0.7.0" defer></script><script src="modules/reroll-data.js?v=0.7.0" defer></script><script src="modules/recycling-data.js?v=0.7.0" defer></script><script src="modules/gambling-risk.js?v=0.7.0" defer></script><script src="modules/gambling.js?v=0.7.0" defer></script><script src="gambling-tools.js?v=0.7.0" defer></script><script src="modules/tool-changelog.js?v=0.7.0" defer></script><script src="modules/site-pages.js?v=0.7.0" defer></script><script src="modules/mobile-nav.js?v=0.7.0" defer></script>
+</body></html>

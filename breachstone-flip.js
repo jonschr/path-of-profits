@@ -177,7 +177,7 @@
     if (!leagues.length) throw new Error('No Breach markets in the saved exchange hour.');
     let preferred = $('breachLeague').value;
     if (!leagues.includes(preferred)) { try { preferred = localStorage.getItem('poe2ExchangeLeague'); } catch (_) {} }
-    $('breachLeague').innerHTML = leagues.map((l) => `<option>${escape(l)}</option>`).join('');
+    $('breachLeague').innerHTML = leagues.map((l) => `<option value="${escape(l)}">${escape(l)} league</option>`).join('');
     $('breachLeague').value = leagues.includes(preferred) ? preferred : leagues[0];
     $('breachLeague').disabled = false;
     render();

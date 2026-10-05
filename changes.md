@@ -1,5 +1,12 @@
 # Changes
 
+## 0.7.0 - 2026-10-05
+- Renamed both currency exchange calculators to Triangle Arbitrage, including navigation labels, page headings, browser titles, and descriptions.
+- Compacted league and display-currency selectors to 28 pixels, moved their labels into the options, and retained accessible labels. Divine-to-Chaos rates are available on hover.
+- Unified the site header with game tabs, compact settings, price status, and version/refresh controls; added a collapsible mobile navigation menu.
+- Added saved Published and Local only page flags, an All pages / Public only local preview toggle, and markers for local-only links. Public-only previews block direct visits to draft pages.
+- Changed publishing to build only published pages and remove links to local-only pages. Kept nine in-progress tool and resource pages as local-only drafts, with the five existing public pages ready for release.
+
 ## 0.6.2 - 2026-10-03
 - Added the PoE2 Breachstone Flip Calculator with all nine purchase paths: level 65 and 80 Revelatory Wombgifts or 300 Breach Splinters, priced in Divines, Chaos, and Exalts. The six-column table includes profit per stone, percentage return, and Profit / 1k blood in Divines, without a separate cost-per-blood column.
 - Added hourly instant-buyout Wombgift quotes at exact item levels, direct trade-search links, price-check timestamps, and local price refresh. Splinter and Breachstone prices use independent exchange currency pairs; unavailable and stale quotes are identified.

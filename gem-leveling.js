@@ -306,15 +306,14 @@
     const chaosOption = displayCurrencySelect.querySelector('option[value="chaos"]');
     const divineOption = displayCurrencySelect.querySelector('option[value="divine"]');
     if (!chaosOption || !divineOption) return;
+    chaosOption.textContent = 'Chaos currency';
+    divineOption.textContent = 'Divine currency';
     if (!Number.isFinite(state.divineRate) || state.divineRate <= 0) {
-      chaosOption.textContent = 'Chaos';
-      divineOption.textContent = 'Divine';
+      displayCurrencySelect.title = 'Display currency';
       return;
     }
     const rateLabel = formatChaosValue(state.divineRate).replace(/\.0c$/, 'c');
-    const perDivLabel = rateLabel.replace(/c$/, '/div');
-    chaosOption.textContent = `Chaos (${perDivLabel})`;
-    divineOption.textContent = `Divine (${rateLabel})`;
+    displayCurrencySelect.title = `1 Divine = ${rateLabel.replace(/c$/, '')} Chaos`;
   }
 
   function gemStateKey(item) {
@@ -1240,7 +1239,7 @@
     for (const league of state.leagues) {
       const option = document.createElement('option');
       option.value = league.id;
-      option.textContent = league.text;
+      option.textContent = `${league.text} league`;
       leagueSelect.appendChild(option);
     }
     if (!state.leagueId || !state.leagues.some((league) => league.id === state.leagueId)) {

@@ -585,7 +585,7 @@
         groupDef.options.forEach((league) => {
           const option = document.createElement('option');
           option.value = league.id;
-          option.textContent = league.text;
+          option.textContent = `${league.text} league`;
           option.dataset.watch = league.watch || league.id;
           group.appendChild(option);
         });
@@ -712,11 +712,12 @@
       const divineOption = currencyInput.querySelector('option[value="divine"]');
       const rate = getChaosPerDivine();
       const label = formatChaosPerDivineLabel(rate);
+      currencyInput.title = label ? `1 Divine = ${label} Chaos` : 'Display currency';
       if (chaosOption) {
-        chaosOption.textContent = label ? `Chaos (${label}/div)` : 'Chaos';
+        chaosOption.textContent = 'Chaos currency';
       }
       if (divineOption) {
-        divineOption.textContent = label ? `Divine (${label}c)` : 'Divine';
+        divineOption.textContent = 'Divine currency';
       }
     }
 

@@ -5,7 +5,7 @@ const B = require('../modules/breachstone.js');
 const ROOT = path.resolve(__dirname, '..');
 const TARGET = path.join(ROOT, 'data', 'breachstone-prices-poe2.json');
 const API = 'https://www.pathofexile.com/api/trade2';
-const USER_AGENT = 'PathOfProfits/0.6.2 (contact: https://pathofprofits.com)';
+const USER_AGENT = 'PathOfProfits/0.7.0 (contact: https://pathofprofits.com)';
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function publicLeagues(snapshot) {
