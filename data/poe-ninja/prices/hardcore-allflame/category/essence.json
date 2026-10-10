@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-10-10T12:06:46.753Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "category": "essence",
+  "sourceTypes": [
+    "Essence",
+    "exchange:Essence"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "shrieking-essence-of-envy",
+      "detailsId": "shrieking-essence-of-envy",
+      "name": "Shrieking Essence of Envy",
+      "category": "essence",
+      "sourceType": "Essence",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXNzZW5jZS9FbnZ5NiIsInNjYWxlIjoxfV0/58075e71ff/Envy6.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    }
+  ]
+}

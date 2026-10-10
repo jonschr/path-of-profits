@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-10-10T12:06:46.753Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "scarab",
+  "sourceTypes": [
+    "exchange:Scarab",
+    "Scarab"
+  ],
+  "updatedAt": null,
+  "items": []
+}

@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-10-10T12:06:46.753Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "fragment",
+  "sourceTypes": [
+    "exchange:Fragment",
+    "Fragment"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "divine-vessel",
+      "detailsId": "divine-vessel",
+      "name": "Divine Vessel",
+      "category": "fragment",
+      "sourceType": "Fragment",
+      "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9TaW5GbGFza0VtcHR5Iiwic2NhbGUiOjF9XQ/3a2d49608a/SinFlaskEmpty.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    }
+  ]
+}

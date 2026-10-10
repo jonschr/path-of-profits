@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-10-10T12:06:46.753Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "maps",
+  "sourceTypes": [
+    "Map",
+    "UniqueMap"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "map-tier-11-t0-gen-23",
+      "detailsId": "map-tier-11-t0-gen-23",
+      "name": "Map (Tier 11)",
+      "category": "maps",
+      "sourceType": "Map",
+      "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EcnlXb29kcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MjMsIm10IjowfV0/a508e2cc3f/DryWoods.png",
+      "tradeTag": null,
+      "variant": ", Gen-23",
+      "itemClass": 0,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": 1,
+      "lowConfidence": true,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": 69,
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    }
+  ]
+}
