@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-10-17T12:06:02.809Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "invitation",
+  "sourceTypes": [
+    "Invitation"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "polaric-invitation",
+      "detailsId": "polaric-invitation",
+      "name": "Polaric Invitation",
+      "category": "invitation",
+      "sourceType": "Invitation",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVlc3RJdGVtcy9DbGVhbnNpbmdGaXJlT3JiUXVlc3QwIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b2cc512e70/CleansingFireOrbQuest0.png",
+      "tradeTag": null,
+      "itemClass": 0,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": 1,
+      "lowConfidence": true,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": 92,
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    }
+  ]
+}

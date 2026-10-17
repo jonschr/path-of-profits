@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-10-17T12:06:02.809Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "fragment",
+  "sourceTypes": [
+    "exchange:Fragment",
+    "Fragment"
+  ],
+  "updatedAt": null,
+  "items": []
+}

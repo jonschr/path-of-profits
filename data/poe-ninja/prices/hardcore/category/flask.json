@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-10-17T12:06:02.809Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "flask",
+  "sourceTypes": [
+    "UniqueFlask"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "the-overflowing-chalice",
+      "detailsId": "the-overflowing-chalice",
+      "name": "The Overflowing Chalice",
+      "category": "flask",
+      "sourceType": "UniqueFlask",
+      "icon": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvT3ZlcmZsb3dpbmdDaGFsaWNlIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxLCJmaSI6dHJ1ZX1d/04190cae85/OverflowingChalice.png",
+      "tradeTag": null,
+      "baseType": "Sulphur Flask",
+      "itemClass": 3,
+      "levelRequired": 27,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": 1,
+      "lowConfidence": true,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": 32,
+      "min": 1,
+      "mean": 1,
+      "max": 1
+    }
+  ]
+}
