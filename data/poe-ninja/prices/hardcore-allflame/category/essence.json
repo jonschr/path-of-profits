@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-10-31T12:04:00.241Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "category": "essence",
+  "sourceTypes": [
+    "Essence",
+    "exchange:Essence"
+  ],
+  "updatedAt": null,
+  "items": []
+}

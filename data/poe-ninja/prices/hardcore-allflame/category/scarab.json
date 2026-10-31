@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2026-10-31T12:04:00.241Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "category": "scarab",
+  "sourceTypes": [
+    "exchange:Scarab",
+    "Scarab"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "harvest-scarab",
+      "detailsId": "harvest-scarab",
+      "name": "Harvest Scarab",
+      "category": "scarab",
+      "sourceType": "Scarab",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJIYXJ2ZXN0Iiwic2NhbGUiOjF9XQ/976dcf6526/LesserScarabHarvest.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 2,
+      "mean": 2,
+      "max": 2
+    },
+    {
+      "id": "harvest-scarab-of-doubling",
+      "detailsId": "harvest-scarab-of-doubling",
+      "name": "Harvest Scarab of Doubling",
+      "category": "scarab",
+      "sourceType": "Scarab",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiSGFydmVzdCIsInNjYWxlIjoxfV0/6077972903/GreaterScarabHarvest.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 15,
+      "mean": 15,
+      "max": 15
+    },
+    {
+      "id": "harvest-scarab-of-cornucopia",
+      "detailsId": "harvest-scarab-of-cornucopia",
+      "name": "Harvest Scarab of Cornucopia",
+      "category": "scarab",
+      "sourceType": "Scarab",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkhhcnZlc3QiLCJzY2FsZSI6MX1d/35e8847de2/Tier4ScarabHarvest.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 41,
+      "mean": 41,
+      "max": 41
+    }
+  ]
+}

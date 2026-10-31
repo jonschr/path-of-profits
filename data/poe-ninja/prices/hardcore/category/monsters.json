@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-10-31T12:04:00.241Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "monsters",
+  "sourceTypes": [
+    "Beast"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "farric-wolf-alpha",
+      "detailsId": "farric-wolf-alpha",
+      "name": "Farric Wolf Alpha",
+      "category": "monsters",
+      "sourceType": "Beast",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "tradeTag": null,
+      "baseType": "Wolves|Canines|The Wilds",
+      "itemClass": 2,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": 44,
+      "lowConfidence": false,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": 71,
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": "primal-crushclaw",
+      "detailsId": "primal-crushclaw",
+      "name": "Primal Crushclaw",
+      "category": "monsters",
+      "sourceType": "Beast",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQmVzdGlhcnlPcmJGdWxsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/3214b44360/BestiaryOrbFull.png",
+      "tradeTag": null,
+      "baseType": "Crabs|Crustaceans|The Deep",
+      "itemClass": 2,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": 1,
+      "lowConfidence": true,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": 50,
+      "min": 3,
+      "mean": 3,
+      "max": 3
+    }
+  ]
+}

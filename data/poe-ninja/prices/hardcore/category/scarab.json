@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-10-31T12:04:00.241Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "scarab",
+  "sourceTypes": [
+    "exchange:Scarab",
+    "Scarab"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "divination-scarab-of-the-cloister",
+      "detailsId": "divination-scarab-of-the-cloister",
+      "name": "Divination Scarab of The Cloister",
+      "category": "scarab",
+      "sourceType": "Scarab",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEaXZpbmF0aW9uIiwic2NhbGUiOjF9XQ/20ff060a8d/LesserScarabDivination.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    }
+  ]
+}
