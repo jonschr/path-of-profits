@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-11-07T12:04:14.324Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Allflame",
+    "text": "Hardcore Allflame",
+    "slug": "hardcore-allflame"
+  },
+  "category": "fragment",
+  "sourceTypes": [
+    "exchange:Fragment",
+    "Fragment"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "devouring-fragment",
+      "detailsId": "devouring-fragment",
+      "name": "Devouring Fragment",
+      "category": "fragment",
+      "sourceType": "Fragment",
+      "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleUVhdGVyT2ZXb3JsZHMiLCJzY2FsZSI6MX1d/6022aa0897/UberBossKeyEaterOfWorlds.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    },
+    {
+      "id": "offering-to-the-goddess",
+      "detailsId": "offering-to-the-goddess",
+      "name": "Offering to the Goddess",
+      "category": "fragment",
+      "sourceType": "Fragment",
+      "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9MYWJ5cmludGgiLCJzY2FsZSI6MX1d/24fe6dc261/Labyrinth.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 20,
+      "mean": 20,
+      "max": 20
+    }
+  ]
+}

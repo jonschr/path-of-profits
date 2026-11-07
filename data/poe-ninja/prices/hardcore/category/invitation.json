@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-11-07T12:04:14.324Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "invitation",
+  "sourceTypes": [
+    "Invitation"
+  ],
+  "updatedAt": null,
+  "items": []
+}
