@@ -1,0 +1,385 @@
+{
+  "generatedAt": "2026-11-14T12:03:57.450Z",
+  "source": "poe.ninja",
+  "leagueSource": "official pathofexile API (https://api.pathofexile.com/leagues)",
+  "leagues": [
+    {
+      "id": "Standard",
+      "name": "Standard",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/Standard",
+      "startAt": "2013-01-23T21:00:00Z",
+      "endAt": null,
+      "description": "The default game mode.",
+      "category": {
+        "id": "Standard"
+      },
+      "registerAt": "2019-09-06T19:00:00Z",
+      "delveEvent": true,
+      "rules": []
+    },
+    {
+      "id": "Hardcore",
+      "name": "Hardcore",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/Hardcore",
+      "startAt": "2013-01-23T21:00:00Z",
+      "endAt": null,
+      "description": "A character killed in the Hardcore league is moved to the Standard league.",
+      "category": {
+        "id": "Standard"
+      },
+      "registerAt": "2019-09-06T19:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        }
+      ]
+    },
+    {
+      "id": "Solo Self-Found",
+      "name": "Solo Self-Found",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/Solo+Self-Found",
+      "startAt": "2013-01-23T21:00:00Z",
+      "endAt": null,
+      "description": "SSF Standard",
+      "category": {
+        "id": "Standard"
+      },
+      "registerAt": "2019-09-06T19:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        }
+      ]
+    },
+    {
+      "id": "Hardcore SSF",
+      "name": "Hardcore SSF",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/Hardcore+SSF",
+      "startAt": "2013-01-23T21:00:00Z",
+      "endAt": null,
+      "description": "SSF Hardcore",
+      "category": {
+        "id": "Standard"
+      },
+      "registerAt": "2019-09-06T19:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        },
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        }
+      ]
+    },
+    {
+      "id": "Ruthless",
+      "name": "Ruthless",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/Ruthless",
+      "startAt": null,
+      "endAt": null,
+      "description": "Ruthless",
+      "category": {
+        "id": "Standard"
+      },
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "HardMode",
+          "name": "Ruthless",
+          "description": "A significantly different game experience with extreme item scarcity, among other changes."
+        }
+      ]
+    },
+    {
+      "id": "Hardcore Ruthless",
+      "name": "Hardcore Ruthless",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/Hardcore+Ruthless",
+      "startAt": null,
+      "endAt": null,
+      "description": "Hardcore Ruthless",
+      "category": {
+        "id": "Standard"
+      },
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        },
+        {
+          "id": "HardMode",
+          "name": "Ruthless",
+          "description": "A significantly different game experience with extreme item scarcity, among other changes."
+        }
+      ]
+    },
+    {
+      "id": "SSF Ruthless",
+      "name": "SSF Ruthless",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/SSF+Ruthless",
+      "startAt": null,
+      "endAt": null,
+      "description": "SSF Ruthless",
+      "category": {
+        "id": "Standard"
+      },
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        },
+        {
+          "id": "HardMode",
+          "name": "Ruthless",
+          "description": "A significantly different game experience with extreme item scarcity, among other changes."
+        }
+      ]
+    },
+    {
+      "id": "Hardcore SSF Ruthless",
+      "name": "Hardcore SSF Ruthless",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/Hardcore+SSF+Ruthless",
+      "startAt": null,
+      "endAt": null,
+      "description": "Hardcore SSF Ruthless",
+      "category": {
+        "id": "Standard"
+      },
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        },
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        },
+        {
+          "id": "HardMode",
+          "name": "Ruthless",
+          "description": "A significantly different game experience with extreme item scarcity, among other changes."
+        }
+      ]
+    },
+    {
+      "id": "Covens",
+      "name": "Covens",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/Covens",
+      "startAt": "2026-11-13T19:00:00Z",
+      "endAt": null,
+      "description": "Defeat witches of the Coven to claim their powers for yourself.\n\nThis is the default Path of Exile league.",
+      "category": {
+        "id": "Coven",
+        "current": true
+      },
+      "registerAt": "2026-11-13T16:00:00Z",
+      "delveEvent": true,
+      "rules": []
+    },
+    {
+      "id": "Hardcore Covens",
+      "name": "Hardcore Covens",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/Hardcore+Covens",
+      "startAt": "2026-11-13T19:00:00Z",
+      "endAt": null,
+      "description": "Defeat witches of the Coven to claim their powers for yourself.\n\nA character killed in Hardcore Coven is moved to Coven League.",
+      "category": {
+        "id": "Coven",
+        "current": true
+      },
+      "registerAt": "2026-11-13T16:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        }
+      ]
+    },
+    {
+      "id": "SSF Covens",
+      "name": "SSF Covens",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/SSF+Covens",
+      "startAt": "2026-11-13T19:00:00Z",
+      "endAt": null,
+      "description": "SSF Coven",
+      "category": {
+        "id": "Coven",
+        "current": true
+      },
+      "registerAt": "2026-11-13T16:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        }
+      ]
+    },
+    {
+      "id": "HC SSF Covens",
+      "name": "HC SSF Covens",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/HC+SSF+Covens",
+      "startAt": "2026-11-13T19:00:00Z",
+      "endAt": null,
+      "description": "SSF HC Coven",
+      "category": {
+        "id": "Coven",
+        "current": true
+      },
+      "registerAt": "2026-11-13T16:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        },
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        }
+      ]
+    },
+    {
+      "id": "Ruthless Covens",
+      "name": "Ruthless Covens",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/Ruthless+Covens",
+      "startAt": "2026-11-13T19:00:00Z",
+      "endAt": null,
+      "description": "Defeat witches of the Coven to claim their powers for yourself.\n\nThis is the default Path of Exile league.",
+      "category": {
+        "id": "Coven",
+        "current": true
+      },
+      "registerAt": "2026-11-13T16:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "HardMode",
+          "name": "Ruthless",
+          "description": "A significantly different game experience with extreme item scarcity, among other changes."
+        }
+      ]
+    },
+    {
+      "id": "HC Ruthless Covens",
+      "name": "HC Ruthless Covens",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/HC+Ruthless+Covens",
+      "startAt": "2026-11-13T19:00:00Z",
+      "endAt": null,
+      "description": "Defeat witches of the Coven to claim their powers for yourself.\n\nA character killed in Hardcore Coven is moved to Coven League.",
+      "category": {
+        "id": "Coven",
+        "current": true
+      },
+      "registerAt": "2026-11-13T16:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        },
+        {
+          "id": "HardMode",
+          "name": "Ruthless",
+          "description": "A significantly different game experience with extreme item scarcity, among other changes."
+        }
+      ]
+    },
+    {
+      "id": "SSF R Covens",
+      "name": "SSF R Covens",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/SSF+R+Covens",
+      "startAt": "2026-11-13T19:00:00Z",
+      "endAt": null,
+      "description": "SSF Coven",
+      "category": {
+        "id": "Coven",
+        "current": true
+      },
+      "registerAt": "2026-11-13T16:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        },
+        {
+          "id": "HardMode",
+          "name": "Ruthless",
+          "description": "A significantly different game experience with extreme item scarcity, among other changes."
+        }
+      ]
+    },
+    {
+      "id": "HC SSF R Covens",
+      "name": "HC SSF R Covens",
+      "realm": "pc",
+      "url": "https://www.pathofexile.com/ladders/league/HC+SSF+R+Covens",
+      "startAt": "2026-11-13T19:00:00Z",
+      "endAt": null,
+      "description": "SSF HC Coven",
+      "category": {
+        "id": "Coven",
+        "current": true
+      },
+      "registerAt": "2026-11-13T16:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        },
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        },
+        {
+          "id": "HardMode",
+          "name": "Ruthless",
+          "description": "A significantly different game experience with extreme item scarcity, among other changes."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-11-14T12:03:57.450Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Covens",
+    "text": "Hardcore Covens",
+    "slug": "hardcore-covens"
+  },
+  "category": "fossil",
+  "sourceTypes": [
+    "exchange:Fossil",
+    "Fossil"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "dense-fossil",
+      "detailsId": "dense-fossil",
+      "name": "Dense Fossil",
+      "category": "fossil",
+      "sourceType": "Fossil",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvRGVuc2VGb3NzaWwiLCJzY2FsZSI6MX1d/ac39aaf3cd/DenseFossil.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 10,
+      "mean": 10,
+      "max": 10
+    }
+  ]
+}

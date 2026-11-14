@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-11-14T12:03:57.450Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Covens",
+    "text": "Covens",
+    "slug": "covens"
+  },
+  "category": "scarab",
+  "sourceTypes": [
+    "exchange:Scarab",
+    "Scarab"
+  ],
+  "updatedAt": null,
+  "items": []
+}
