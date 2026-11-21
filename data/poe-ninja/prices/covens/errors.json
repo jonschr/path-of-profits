@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-11-21T12:04:03.252Z",
+  "league": {
+    "watch": "Covens",
+    "text": "Covens",
+    "slug": "covens"
+  },
+  "errors": [
+    {
+      "source": "item",
+      "type": "DivinationCard",
+      "error": "HTTP 404"
+    },
+    {
+      "source": "item",
+      "type": "Tattoo",
+      "error": "HTTP 404"
+    },
+    {
+      "source": "item",
+      "type": "Omen",
+      "error": "HTTP 404"
+    },
+    {
+      "source": "trade",
+      "type": "Forbidden Flame (ilvl 86-)",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "trade",
+      "type": "Forbidden Flame (ilvl 87+)",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "trade",
+      "type": "Forbidden Flesh (ilvl 86-)",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "trade",
+      "type": "Forbidden Flesh (ilvl 87+)",
+      "error": "HTTP 403"
+    }
+  ]
+}

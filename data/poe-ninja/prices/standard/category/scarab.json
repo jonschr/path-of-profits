@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-11-21T12:04:03.252Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Standard",
+    "text": "Standard",
+    "slug": "standard"
+  },
+  "category": "scarab",
+  "sourceTypes": [
+    "exchange:Scarab",
+    "Scarab"
+  ],
+  "updatedAt": null,
+  "items": []
+}

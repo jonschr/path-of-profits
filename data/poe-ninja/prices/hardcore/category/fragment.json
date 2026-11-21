@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-11-21T12:04:03.252Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore",
+    "text": "Hardcore",
+    "slug": "hardcore"
+  },
+  "category": "fragment",
+  "sourceTypes": [
+    "exchange:Fragment",
+    "Fragment"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "voidborn-reliquary-key",
+      "detailsId": "voidborn-reliquary-key",
+      "name": "Voidborn Reliquary Key",
+      "category": "fragment",
+      "sourceType": "Fragment",
+      "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9Db3NtaWNDb3JlU3VwcG9ydGVyVmF1bHRLZXkiLCJzY2FsZSI6MX1d/1f2d34a36d/CosmicCoreSupporterVaultKey.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 444,
+      "mean": 444,
+      "max": 444
+    }
+  ]
+}
