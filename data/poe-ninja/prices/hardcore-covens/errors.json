@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-11-28T12:03:52.101Z",
+  "league": {
+    "watch": "Hardcore Covens",
+    "text": "Hardcore Covens",
+    "slug": "hardcore-covens"
+  },
+  "errors": [
+    {
+      "source": "item",
+      "type": "DivinationCard",
+      "error": "HTTP 404"
+    },
+    {
+      "source": "item",
+      "type": "Tattoo",
+      "error": "HTTP 404"
+    },
+    {
+      "source": "item",
+      "type": "Omen",
+      "error": "HTTP 404"
+    }
+  ]
+}

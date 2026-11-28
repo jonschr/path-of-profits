@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-11-28T12:03:52.101Z",
+  "source": "poe.ninja",
+  "league": {
+    "watch": "Hardcore Covens",
+    "text": "Hardcore Covens",
+    "slug": "hardcore-covens"
+  },
+  "category": "delirium-orb",
+  "sourceTypes": [
+    "DeliriumOrb",
+    "exchange:DeliriumOrb"
+  ],
+  "updatedAt": null,
+  "items": [
+    {
+      "id": "jewellers-delirium-orb",
+      "detailsId": "jewellers-delirium-orb",
+      "name": "Jeweller's Delirium Orb",
+      "category": "delirium-orb",
+      "sourceType": "DeliriumOrb",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsaXJpdW0vRGVsaXJpdW1PcmJUcmlua2V0cyIsInNjYWxlIjoxfV0/165e84bd2a/DeliriumOrbTrinkets.png",
+      "tradeTag": null,
+      "levelRequired": null,
+      "gemLevel": null,
+      "gemQuality": null,
+      "corrupted": null,
+      "confidenceCount": null,
+      "lowConfidence": null,
+      "tradeTypeDiscriminator": null,
+      "tradeTypeOption": null,
+      "links": null,
+      "listingCount": null,
+      "min": 4,
+      "mean": 4,
+      "max": 4
+    }
+  ]
+}
